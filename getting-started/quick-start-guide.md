@@ -3,7 +3,7 @@
 This guide will try to get you from not knowing what **Frontity** is, to feeling amazed about the things you can do with it!
 
 {% hint style="info" %}
-**Frontity framework** is in **beta**. Once you test it out, please [let us know](https://community.frontity.org/) how it goes! Your feedback will be highly appreciated.
+**Frontity framework** is in **release candidate**. Once you test it out, please [let us know](https://community.frontity.org/) how it goes! Your feedback will be highly appreciated.
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=wC7-3lMDuiU" %}
@@ -25,7 +25,7 @@ This command will create a new directory with the following structure:
 my-app/
 |__ node_modules/
 |__ package.json
-|__ frontity.settings.ts
+|__ frontity.settings.js
 |__ favicon.ico
 |__ packages/
     |__ mars-theme/
@@ -54,7 +54,7 @@ to create a production-ready bundle.
 It will create a `/build` folder with a `server.js` file and a `/static` folder with all your javascript files and other assets. You can either
 
 * Use `npx frontity serve` to run it like a normal Node app.
-* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](https://zeit.co/now?ref=frontity) or [Netlify](https://www.netlify.com/?ref=frontity).
+* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](../installation-and-deploy/deploy-on-now.md) or [Netlify](https://www.netlify.com/?ref=frontity).
 
 ## Custom setup
 
@@ -63,12 +63,7 @@ Once installed, Frontity will connect to our starter blog, but you can change th
 {% code-tabs %}
 {% code-tabs-item title="frontity.settings.ts" %}
 ```typescript
-import { Settings } from "@frontiy/file-settings";
-import WpSource from "@frontity/wp-source";
-import TinyRouter from "@frontity/tiny-router";
-import MarsTheme from "@frontity/mars-theme";
-
-const settings: Settings<WpSource | TinyRouter | MarsTheme> = {
+const settings = {
   ...,
   packages: [
     ...,
@@ -76,8 +71,8 @@ const settings: Settings<WpSource | TinyRouter | MarsTheme> = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          // Here you should write the entry point of your WordPress API.
-          apiUrl: "https://test.frontity.io/wp-json/",
+          // Here you should write the url point of your WordPress API.
+          api: "https://test.frontity.io/wp-json/",
           // Also, if your blog is hosted on WordPress.com you can set:
           // isWPCom: true
         }

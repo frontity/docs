@@ -19,7 +19,7 @@ module.exports = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          apiUrl: "https://site.com/wp-json"
+          api: "https://site.com/wp-json"
           isWPCom: false
         }
       }  
@@ -36,38 +36,38 @@ There are only two settings you can change in your `frontity.settings.js` file:
 
 Set it to `true` if your site is a wordpress.com site. It's `false` by default.
 
-#### state.source.apiUrl
+#### state.source.api
 
 This is the url of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a wordpress.com site, like `https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`
 
 ### How to use
 
-Let’s start by explaining how the state data is used and then how that data is requested and stored. The state works with two main concepts: **paths** and **entities**.
+Let’s start by explaining how the state data is used and then how that data is requested and stored. The state works with two main concepts: **links** and **entities**.
 
-The state is designed so that you can know which entities correspond to which path, and then access the data of these entities in a simple way.
+The state is designed so that you can know which entities correspond to which link, and then access the data of these entities in a simple way.
 
 > **NOTE:** for the data to exist, it will be necessary to request them previously using the `fetch` action.
 
 ```jsx
 import React from "react";
-import { connect } from "@frontity/connect";
+import { connect } from "frontity";
 
 // In a React component that uses "connect":
-const CategoryNature = connect(({ state, actions }) => {
+const CategoryNature = ({ state, actions }) => {
 
   // 1. fetch data related to a path
   actions.source.fetch("/category/nature/");
   
   // 2. get data from frontity state
-  const data = state.source.data("/category/nature/");
+  const data = state.source.get("/category/nature/");
   
   // 3. get entities from frontity state
   if (data.isCategory) {
     // the category entity
     const category = state.source.category[data.id];
     
-    // first page of posts from that category
-    const posts = data.pages[1].map(
+    // posts from that category
+    const posts = data.items.map(
       ({ type, id }) => state.source[type][id]
     );
     
@@ -81,6 +81,8 @@ const CategoryNature = connect(({ state, actions }) => {
     
   return null;
 }
+
+export default connect(CategoryNature);
 ```
 
 ## API
@@ -89,26 +91,22 @@ const CategoryNature = connect(({ state, actions }) => {
 
 #### source.fetch
 
-This action fetch all entities related to a `path`, i.e. the pathname of a URL in your site. That `path` could be passed as a single argument or inside an object with the property `page` for URLs that allow pagination.
+This action fetch all entities related to a `link`, i.e. the pathname of a URL in your site.
 
 All received data are populated in `state.source` and is accessible using the methods explained in the next section.
 
 ```javascript
-// just the path
 actions.source.fetch("/category/nature/");
-
-// path and page
-actions.source.fetch({ path: "/category/nature/", page: 2 });
 ```
 
 ### State
 
-#### `source.data`
+#### `source.get`
 
-Returns an object that gives you info about the type of that path and related entities. For example,
+Returns an object that gives you info about the type of that link and related entities. For example:
 
 ```javascript
-state.source.data("/category/nature/");
+state.source.get("/category/nature/");
 ```
 
 will return something like
@@ -129,13 +127,13 @@ will return something like
   isReady: true
   
   // list of posts (if it's an archive)
-  pages: [[{ type: "post", id: 60, link: "..." }, ...]]
+  items: [{ type: "post", id: 60, link: "..." }, ...]
   total: 10
   totalPages: 1
 }
 ```
 
-The information to distinguish each type of path is based on the [WP Template Hierarchy](https://wphierarchy.com/) and is as follows:
+The information to distinguish each type of link is based on the [WP Template Hierarchy](https://wphierarchy.com/) and is as follows:
 
 * archives: `isArchive`
   * taxonomy: `isTaxonomy`
@@ -202,13 +200,13 @@ source.author[4]
 
 ### Libraries
 
-#### `api.set({ apiUrl, isWpCom })`
+#### `api.set({ api, isWpCom })`
 
 Request entity to the WordPress REST API.
 
 **arguments**
 
-* `apiUrl`: URL pointing to a valid WP REST route.
+* `api`: URL pointing to a valid WP REST route.
 * `isWPCom`: a boolean indicating if the WP REST route is from a WordPress.com hosted site.
 
 **example**
@@ -218,20 +216,20 @@ const { api } = libraries.source;
 
 // for wp.org
 api.init({
-  apiUrl: "https://test.frontity.io/wp-json",
+  api: "https://test.frontity.io/wp-json",
   isWPCom: false
 });
 
 // for wp.com
 api.init({
-  apiUrl: "https://public-api.wordpress.com/wp/v2/sites/test.frontity.io",
+  api: "https://public-api.wordpress.com/wp/v2/sites/test.frontity.io",
   isWPCom: false
 });
 ```
 
 
 
-#### `api.get({ endpoint, params, apiUrl?, isWpCom? })`
+#### `api.get({ endpoint, params, api?, isWpCom? })`
 
 Request entity to the WordPress REST API.
 
@@ -239,7 +237,7 @@ Request entity to the WordPress REST API.
 
 * `endpoint`: name of the endpoint if is a `/wp/v2` endpoint \(e.g. `posts`\), or the full path of other REST endpoints \(e.g. `/frontity/v1/discovery`\)
 * `params`: any parameter that will be included in the query params.
-* `apiUrl` \(optional\): overrides the value set with `api.set`
+* `api` \(optional\): overrides the value set with `api.set`
 * `isWpCom` \(optional\): overrides the value set with `api.set`
 
 For more info, visit the [WP REST API reference](https://developer.wordpress.org/rest-api/reference).
@@ -258,7 +256,7 @@ api.get({ endpoint: "pages", params: { _embed: true, include: '14' } });
 // Other endpoints: 
 api.get({ 
   endpoint: "/frontity/v1/discovery",
-  params: { path: "/the-beauties-of-gullfoss" }
+  params: { slug: "/the-beauties-of-gullfoss" }
 });
 ```
 

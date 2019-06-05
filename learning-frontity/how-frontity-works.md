@@ -108,7 +108,7 @@ export default [
         active: true,
         state: {  // Some settings for this package.
           source: {
-            apiUrl: "https://my-site.com/wp-json"
+            api: "https://my-site.com/wp-json"
           }
         }
       }
@@ -153,7 +153,7 @@ export default [
         name: "@frontity/wp-source",
         state: {  // Some settings for this package.
           source: {
-            apiUrl: "https://my-site.com/wp-json"
+            api: "https://my-site.com/wp-json"
           }
         }
       }

@@ -99,7 +99,7 @@ module.exports = {
       state: {
         source: {
           // These is state for the `source` namespace.
-          apiUrl: "https://site.com/wp-json"
+          api: "https://site.com/wp-json"
           isWPCom: false
         }
       }  

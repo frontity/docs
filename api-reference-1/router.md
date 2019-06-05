@@ -22,7 +22,13 @@ module.exports = {
 
 ## Settings
 
-Tiny Router doesn't need any setting :\)
+### autoFetch
+
+When `autoFetch` is activated, tiny-router does a `actions.source.fetch(link)` each time the action `actions.router.set(link)` is triggered. This ensures that the data you need for the current page is always available. 
+
+It also does a `actions.source.fetch(link)` in the `beforeSSR` action to ensure that the data needed for SSR is also available.
+
+It's `true` by default.
 
 ## How to use
 
@@ -30,15 +36,11 @@ Tiny Router doesn't need any setting :\)
 
 Tiny router has the following state:
 
-#### state.router.path
+#### state.router.link
 
-This is the path the site is in, but without the page. For example, `/category/nature/`. 
+This is the path the site is in. For example, `/category/nature/`. 
 
-#### state.router.page
-
-This is the current page of the path, for example `2`. By default it is `1`.
-
-These are some examples of urls:
+These are some examples of links:
 
 * `/`: You are in the home, path is `/` and page is `1`.
 * `/page/2`: You are in the page 2 of the home, path is `/` and page is `2`.
@@ -54,29 +56,25 @@ Tiny router is very simple, it only has one action: `actions.router.set()` .
 For example, this is could be your React component for the links:
 
 ```javascript
-const Link = ({ actions, children, href }) => {
+const Link = ({ actions, children, link }) => {
   const onClick = event => {
     event.preventDefault();
-    actions.router.set(href);
+    actions.router.set(link);
   };
 
   return (
-    <a href={href} onClick={onClick}>
+    <a href={link} onClick={onClick}>
       {children}
     </a>
   );
 };
 ```
 
-`actions.router.set()` accepts either a string with the `url` or an object with `path` and `page`.
+`actions.router.set()` accepts a string with the `url`.
 
 #### actions.router.set\("/category/nature/page/2"\)
 
 You can pass any url and router will set the new path. It doesn't matter if it's just a path like `/category/nature/`, a path that includes the page `/category/nature/page/2` or the full url `https://site.com/category/nature`.
-
-#### actions.router.set\({ path: "/category/nature", page: 2  \)
-
-Sometimes it's easier to let it now the path you want along with the page, so you can do so as well.
 
 
 
