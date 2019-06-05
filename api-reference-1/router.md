@@ -22,7 +22,7 @@ module.exports = {
 
 ## Settings
 
-### autoFetch
+#### state.router.autoFetch
 
 When `autoFetch` is activated, tiny-router does a `actions.source.fetch(link)` each time the action `actions.router.set(link)` is triggered. This ensures that the data you need for the current page is always available. 
 
