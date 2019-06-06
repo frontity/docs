@@ -3,7 +3,7 @@
 This guide will try to get you from not knowing what **Frontity** is, to feeling amazed about the things you can do with it!
 
 {% hint style="info" %}
-**Frontity framework** is in **release candidate**. Once you test it out, please [let us know](https://community.frontity.org/) how it goes! Your feedback will be highly appreciated.
+Frontity v1 **Release Candidate** is now **available**. Please try it out and [give us](https://community.frontity.org/?utm_source=docs&utm_medium=rc-notification&utm_campaign=rc-launch) your feedback. [Bug reports](https://github.com/frontity/frontity/issues) will be also highly appreciated.
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=wC7-3lMDuiU" %}

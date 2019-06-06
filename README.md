@@ -13,7 +13,7 @@ There are several ways to **get in touch** with the community and reach out to u
 » Now, let's [try it out](getting-started/quick-start-guide.md)! 
 
 {% hint style="info" %}
-Frontity framework is in **beta**. Please test it out and [let us know](https://community.frontity.org/) how it goes! Your feedback is extremely valuable in this phase.
+Frontity v1 **Release Candidate** is now **available**. Please try it out and [give us](https://community.frontity.org/?utm_source=docs&utm_medium=rc-notification&utm_campaign=rc-launch) your feedback!
 {% endhint %}
 
 
