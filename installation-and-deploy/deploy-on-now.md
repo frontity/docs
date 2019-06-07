@@ -22,7 +22,7 @@ If you don't have one, you can signup [here](https://zeit.co/signup).
 npm install --save-dev now
 ```
 
-**4. In your `my-app` folder, create this  `now.json`  file, setting your site ur**
+**4. In your `my-app` folder, create this  `now.json`  file, setting your site url**
 
 You should create a .json file with your preferred text editor and save it in your project folder with name **now.json** .
 
