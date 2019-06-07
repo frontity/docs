@@ -4,18 +4,29 @@ According to Zeit: _"_[_Now_](https://zeit.co/now) _is a global deployment netwo
 
 We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. __It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://zeit.co/blog/serverless-pre-rendering)\), a powerful way to improve your website speed.
 
-These are the instructions to deploy Now on Frontity:
+{% hint style="info" %}
+First of all, you have to develop your project following the steps at [Quick start guide](../getting-started/quick-start-guide.md). This deploy is supposed to be made once you have finished and you want to deploy it on production.
+{% endhint %}
 
-**1. Install the  `now`  package in your project:**
+These are the instructions to deploy Now on Frontity, once you have finished your project:
+
+**1. Make sure you have an account on Now**
+
+If you don't have one, you can signup [here](https://zeit.co/signup).
+
+**2. Make sure you are in `my-app` folder in the command line**
+
+**3. Install the  `now`  package in your project:**
 
 ```bash
 npm install --save-dev now
 ```
 
-**2. Add this  `now.json`  file, changing your url:**
+**4. In your `my-app` folder, create this  `now.json`  file, setting your site ur**
+
+You should create a .json file with your preferred text editor and save it in your project folder with name **now.json** .
 
 ```javascript
-{
   "version": 2,
   "alias": ["www.your-site.com"], // CHANGE THIS!
   "builds": [
@@ -50,9 +61,13 @@ npm install --save-dev now
 }
 ```
 
-**3. Add a CNAME of `www.your-site.com` to `alias.zeit.co` in your domain DNS settings.**
+**5. Add a CNAME of `www.your-site.com` to `alias.zeit.co` in your domain DNS settings.**
 
-**4. Deploy Frontity using this command**
+{% hint style="info" %}
+If you don't know how to do this, contact your domain provider \(GoDaddy, CloudFlare, etc\)
+{% endhint %}
+
+**6. Deploy Frontity using this command**
 
 ```text
 npx frontity build && npx now --target production
