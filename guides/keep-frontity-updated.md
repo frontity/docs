@@ -1,52 +1,30 @@
 # Keep Frontity updated
 
-As in most projects, keeping Frontity and its packages updated is always a good practice. Not only you could use new features added, but also some security issues are usually detected and solved during these updates. 
+As in most projects, keeping Frontity and its packages updated is always a good practice. Not only you could use new features added, but also some security issues are usually detected and solved during these updates.
 
-With Frontity, just one command is needed to update all your packages at once, although you can also update just one package.
+At this point, it is important to distinguish between your **dependencies** \(npm packages you won't modify and reside in `node_modules`folder\) and your **local packages** \(packages you create or change at your will, and reside in `packages`folder\). For more info you can check the page [Learning Frontity - Packages](../learning-frontity/packages.md).
 
-* [Check outdated packages](keep-frontity-updated.md#check-outdated-packages)
-* [Update the whole project](keep-frontity-updated.md#update-the-whole-project)
-* [Update just one package](keep-frontity-updated.md#update-just-one-package)
+### Update dependencies
 
-### Check outdated packages
-
-At Frontity CLI, you can check if your packages are outdated with a single command:
-
-```text
-npm outdated
-```
-
-This command will generate a list of all your packages out of date:
-
-![](../.gitbook/assets/outdate.png)
-
-### Update the whole project
-
-You can update your project and all the packages running this command:
+Essential packages such as `frontity` ,  `@frontity/core`  or  `@frontity/tiny-router` ,  and all your dependencies, are included in this part. These can be treated as common npm packages, so you can use the following command:
 
 ```text
 npm update
 ```
 
-This command will update the `package.json` with the latest compatible versions.
+With this, **you will update all your dependencies at `node_modules`**, including Frontity, which means all your project will be updated except your local packages.
 
-![](../.gitbook/assets/update.png)
-
-### Update just one package
-
-Although it is recommended to keep all your packages updated, you can update just one if you need it by running this command:
+If you want to update just one package you can do it with this other command:
 
 ```text
 npm update my-package
 ```
 
-{% hint style="warning" %}
-Note that **this command is not included in current Beta**, it will be released for the 1.0.0. At this moment, you can do it with:
+### Update local packages
 
-`npm install my-package@latest`
+These local packages, included in `packages` folder, are supposed to be modified by the users, so they won't be updated with `npm update`, because changes would be lost.
 
-Be careful, as this can include breaking changes and broke your code if it’s not properly updated. **That won’t happen once we release the `1.0.0` version.**
-{% endhint %}
+We are working in other ways to let you update these packages too without affecting your changes, or show what has been modified from your version.
 
 
 
