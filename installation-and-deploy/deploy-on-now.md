@@ -8,13 +8,13 @@ We strongly recommend this service as it is serverless, cheap, includes CDN, and
 First of all, you have to develop your project following the steps at [Quick start guide](../getting-started/quick-start-guide.md). This deploy is supposed to be made once you have finished and you want to deploy it on production.
 {% endhint %}
 
-These are the instructions to deploy Now on Frontity, once you have finished your project:
+These are the instructions to deploy Now on Frontity, once you are ready to deploy your project:
 
 **1. Make sure you have an account on Now**
 
 If you don't have one, you can signup [here](https://zeit.co/signup).
 
-**2. Make sure you are in `my-app` folder in the command line**
+**2. Make sure you are in your Frontity folder in the command line**
 
 **3. Install the  `now`  package in your project:**
 
@@ -22,9 +22,9 @@ If you don't have one, you can signup [here](https://zeit.co/signup).
 npm install --save-dev now
 ```
 
-**4. In your `my-app` folder, create this  `now.json`  file, setting your site url**
+**4. In your Frontity folder, create this  `now.json`  file and change your site url**
 
-You should create a .json file with your preferred text editor and save it in your project folder with name **now.json** .
+You should create a JSON file with your preferred text editor and save it in your project folder with name **now.json** .
 
 ```javascript
   "version": 2,
@@ -73,7 +73,15 @@ If you don't know how to do this, contact your domain provider \(GoDaddy, CloudF
 npx frontity build && npx now --target production
 ```
 
+### EXTRA: Deploy without having a real domain yet
 
+If you don't want to setup your domain yet, just skip point 6 and deploy your site using:
+
+```text
+npx frontity build && npx now
+```
+
+**Now** will assign you a domain \(something like **your-site.now.sh**\) that works exactly like your real domain would once you use the `--target production` command.
 
 {% hint style="info" %}
 Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊
