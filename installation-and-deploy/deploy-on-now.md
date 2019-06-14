@@ -27,7 +27,7 @@ npm install --save-dev now
 You should create a JSON file with your preferred text editor and save it in your project folder with name **now.json** .
 
 ```javascript
-  {
+{
   "version": 2,
   "alias": ["www.your-site.com"], // CHANGE THIS!
   "builds": [
