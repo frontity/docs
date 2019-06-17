@@ -26,6 +26,10 @@ npm install --save-dev now
 
 You should create a JSON file with your preferred text editor and save it in your project folder with name **now.json** .
 
+{% hint style="info" %}
+Delete the comment `//CHANGE THIS!` after changing the alias.
+{% endhint %}
+
 ```javascript
 {
   "version": 2,
@@ -76,7 +80,7 @@ npx frontity build && npx now --target production
 
 ### EXTRA: Deploy without having a real domain yet
 
-If you don't want to setup your domain yet, just skip point 6 and deploy your site using:
+If you don't want to setup your domain yet, just skip point 5 and 6 and deploy your site using:
 
 ```text
 npx frontity build && npx now
