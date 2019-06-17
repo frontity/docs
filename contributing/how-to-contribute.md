@@ -50,7 +50,7 @@ If you come up with other ways to participate or to help spread the word, please
 
 ## 👏 **Show off your work**
 
-* Share what you're **building with Frontity** [to the community](https://community.frontity.org/c/showcases) to inspire others.
+* Share what you're **building** with [the community](https://community.frontity.org/c/showcases) to inspire others.
 * Submit your extension to npm to help others build their webs.
 * Show your work to the world with the hashtag \#Frontity and be proud of it!
 
