@@ -139,7 +139,7 @@ Our themes work with the WordPress manifest to get full PWA compatibility out of
 
 ### 🌎 Perfect accessibility
 
-As part of our mission to make building websites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity will be perfectly **accesible by default** and will provide tools that let the developers know if they break it. 
+As part of our mission to make building websites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity will be perfectly **accessible by default** and will provide tools that let the developers know if they break it. 
 
 {% hint style="warning" %}
 🛠 Feature still under construction. [Feel free to ask](https://community.frontity.org/) any questions you might have.
