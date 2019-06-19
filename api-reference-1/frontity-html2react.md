@@ -1,6 +1,10 @@
 # @frontity/html2react
 
-Usage and reference of the `@frontity/html2react` package.Ï
+{% hint style="warning" %}
+This reference is a **work in progress** until we have time to improve it. For the time being, if you have any doubt on how to use `html2react` , the `processors` or anything else, please don't hesitate to ask in our community, we'll be more than glad to answer your questions.
+{% endhint %}
+
+Usage and reference of the `@frontity/html2react` package.
 
 ## Usage
 
@@ -29,14 +33,19 @@ const Post = ({ state, libraries }) => {
 
 ### Processors
 
-Here you can see how to load the processors from your theme into `html2react`.
+The `processors` field is of type `Processor[]`. Here you can see how to load the processors from your theme into `html2react`.
 
 ```jsx
 import Theme from "./components/theme";
-import processors from "./processors";
+import image from "./processors/image";
 
 const before = ({ libraries }) => {
-  libraries.html2react.processors = libraries.html2react.processors.concat(processors);
+  libraries.html2react.processors = libraries
+    .html2react
+    .processors
+    .concat([
+      image
+    ]);
 };
 
 const marsTheme = {
@@ -64,7 +73,9 @@ const marsTheme = {
 export default marsTheme;
 ```
 
-And here how a `processor` is structured:
+And here is how a `processor` is structured:
+
+The `test` function will evaluate the node, and depending on the result, this node will be passed to the `process` function in order to apply the processor.
 
 ```typescript
 interface Processor {
