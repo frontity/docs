@@ -2,19 +2,18 @@
 
 There are several ways to support the project and get involved. Don't know how to code? Don't worry! You can contribute in many other ways to make Frontity awesome! 🚀
 
-* \*\*\*\*[**Help build up the community**](how-to-contribute.md#help-build-up-the-community)\*\*\*\*
-* \*\*\*\*[**Spread the word**](how-to-contribute.md#spread-the-word)\*\*\*\*
 * \*\*\*\*[**Let's get the best framework ever**](how-to-contribute.md#lets-get-the-best-framework-ever)\*\*\*\*
+* \*\*\*\*[**Spread the word**](how-to-contribute.md#spread-the-word)\*\*\*\*
+* \*\*\*\*[**Help build up the community**](how-to-contribute.md#help-build-up-the-community)\*\*\*\*
 * \*\*\*\*[**Improve the documentation**](how-to-contribute.md#improve-the-documentation)\*\*\*\*
 * \*\*\*\*[**Show off your work**](how-to-contribute.md#show-off-your-work)\*\*\*\*
 
-## 👨‍👩‍👧‍👦 Help build up the community 
+## » Let's get the best framework ever 
 
-* Community users have many questions. [Let's help them!](https://community.frontity.org/)
-* Teach others about Frontity, WordPress and/or React.
-* We're researching what challenges developers face with web development and how they make decisions when starting a project like this. You can help by filling [this survey](https://docs.google.com/forms/d/e/1FAIpQLSf_kJo1A29_Ko0vpbT1oxgImrl9nHMOY94p0-jUWzphLC641A/viewform).
-* Did you find an event interesting for the community or would you like to organize one? Do not hesitate to [suggest it to the community.](https://community.frontity.org/c/community)
-* Feel free to share any other knowledge or ideas with the community.
+* [Try Frontity out](../getting-started/quick-start-guide.md) and share your **feedback** and **doubts** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic \(thread\) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _\[Feedback\] I found difficult to..._ If you ask a question, the title can be the question itself.
+* [Report bugs](https://github.com/frontity/frontity/issues) or issues. 🐞
+* New feature ideas? Feel free to suggest them [to the community](https://community.frontity.org/c/framework-design) or even open a [Pull Request](https://github.com/frontity/frontity/pulls).
+* If you want to help fixing bugs or contribute to Frontity's code, [ask us how](https://community.frontity.org/) and we'll let you know the best way to proceed \(we'll be working soon on a guide for code contributions\).
 
 ## 🗣 Spread the word
 
@@ -36,12 +35,13 @@ There are several ways to support the project and get involved. Don't know how t
 
 If you come up with other ways to participate or to help spread the word, please feel free to [share them with the community](https://community.frontity.org/c/communication) as well. New ideas are always welcome!
 
-## » Let's get the best framework ever 
+## 👨‍👩‍👧‍👦 Help build up the community 
 
-* [Test Frontity's beta](../getting-started/) and share your **feedback** and **doubts** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic \(thread\) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _\[Feedback\] I found difficult to..._ If you ask a question, the title can be the question itself.
-* [Report **bugs**](https://github.com/frontity/frontity/issues) or issues. 🐞
-* New feature ideas? Feel free to suggest them [to the community](https://community.frontity.org/c/framework-design) or even open a [Pull Request](https://github.com/frontity/frontity/pulls).
-* If you want to help fixing bugs or contribute to Frontity's code, [ask us how](https://community.frontity.org/) and we'll let you know the best way to proceed \(we'll be working soon on a guide for code contributions\).
+* Community users have many questions. [Let's help them!](https://community.frontity.org/)
+* Teach others about Frontity, WordPress and/or React.
+* We're researching what challenges developers face with web development and how they make decisions when starting a project like this. You can help by filling [this survey](https://docs.google.com/forms/d/e/1FAIpQLSf_kJo1A29_Ko0vpbT1oxgImrl9nHMOY94p0-jUWzphLC641A/viewform).
+* Did you find an event interesting for the community or would you like to organize one? Do not hesitate to [suggest it to the community.](https://community.frontity.org/c/community)
+* Feel free to share any other knowledge or ideas with the community.
 
 ## 📖 Improve the documentation
 
