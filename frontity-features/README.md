@@ -17,6 +17,8 @@ Here's a list of the main features included in Frontity's core:
 * [Google AMP with the same codebase](./#google-amp-support-with-the-same-codebase)
 * [Server Side Rendering](./#server-side-rendering)
 * [Extensible](./#less-than-greater-than-extensible)
+* [Best Lighthouse score](./#best-lighthouse-score)
+* [Perfect accessibility](./#perfect-accessibility)
 * [Battle-tested](./#battle-tested-framework)
 * [Serverless and horizontal scaling](./#serverless-and-horizontal-scaling)
 * [First class TypeScript support](./#first-class-typescript-support)
@@ -29,10 +31,7 @@ Here's a list of the main features included in Frontity's core:
 
 ### 🔜 Coming soon
 
-* [Best Lighthouse score](./#best-lighthouse-score)
 * [PWA and offline support](./#pwa-and-offline-support)
-* [Perfect accessibility](./#perfect-accessibility)
-* [Fallback to AMP on really old browsers](./#fallback-to-amp-on-really-old-browsers)
 
 ## Frontity features
 
@@ -69,6 +68,14 @@ We have already been working on a lot of Frontity extensions which will be **ava
 Apart from these extensions, there are many other **interface tools** specifically created for Frontity: context routing, swipe navigation, infinite scrolling, html-to-react, gutenberg-to-react, etc.
 
 Our themes can also use any of the 80.000 React packages currently available in NPM.
+
+### 💯 Best Lighthouse score
+
+Frontity is optimized to get the maximum score in Lighthouse, including performance, SEO and accessibility. Theme developers start with **100/100** and they just need to maintain it while they add features to their theme.
+
+### 🌎 Perfect accessibility
+
+As part of our mission to make building websites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity is perfectly **accessible by default** and will provide tools that let the developers know if they break it. 
 
 ### 🎖 Battle-tested framework
 
@@ -121,33 +128,9 @@ The React team is working hard to release an async, “no-CPU-blocking” versio
 
 Frontity is continuously looking to improve, so we are already working on some major \(and awesome\) features which will be available very soon.
 
-### 💯 Best Lighthouse score
-
-Frontity is optimized to get the maximum score in Lighthouse, including performance, SEO and accessibility. Theme developers start with **100/100** and they just need to maintain it while they add features to their theme.
-
-{% hint style="warning" %}
-🛠 Feature still under construction. [Feel free to ask](https://community.frontity.org/) any questions you might have.
-{% endhint %}
-
 ### ✨ PWA and offline support
 
 Our themes work with the WordPress manifest to get full PWA compatibility out of the box. Frontity also uses **service workers** for caching assets, which allows your users to access previously visited content even when they are disconnected from the internet **without** any **extra configuration**.
-
-{% hint style="warning" %}
-🛠 Feature still under construction. [Feel free to ask](https://community.frontity.org/) any questions you might have.
-{% endhint %}
-
-### 🌎 Perfect accessibility
-
-As part of our mission to make building websites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity will be perfectly **accessible by default** and will provide tools that let the developers know if they break it. 
-
-{% hint style="warning" %}
-🛠 Feature still under construction. [Feel free to ask](https://community.frontity.org/) any questions you might have.
-{% endhint %}
-
-### **☂️ Fallback to AMP on really old browsers**
-
-Browsers like Internet Explorer or Android 2-3 are not ready for modern web technologies but with Frontity, as you use the same code for AMP, this will work as a fallback.
 
 {% hint style="warning" %}
 🛠 Feature still under construction. [Feel free to ask](https://community.frontity.org/) any questions you might have.
