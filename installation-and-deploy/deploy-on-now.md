@@ -33,7 +33,7 @@ Delete the comment `//CHANGE THIS!` after changing the alias.
 ```javascript
 {
   "version": 2,
-  "alias": ["www.your-site.com"], // CHANGE THIS!
+  "alias": ["www.your-site.com"],
   "builds": [
     {
       "src": "build/static/*",
