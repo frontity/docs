@@ -28,7 +28,7 @@ As you can see, our `mars-theme` dependency has no version but a path. This is h
 
 ### The `frontity.settings.js` file
 
-In this file we define our project settings. We also define the extensions needed to successfully run a Frontity app. You can learn more about this file in the [Settings reference](../api-reference-1/file-settings.md).
+In this file we define our project settings. We also define the extensions needed to successfully run a Frontity app. You can learn more about this file in the [Settings reference]().
 
 ### The `packages` folder
 

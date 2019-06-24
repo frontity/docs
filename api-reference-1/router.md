@@ -1,4 +1,4 @@
-# Tiny Router
+# @frontity/tiny-router
 
 ## Installation
 
@@ -76,7 +76,9 @@ const Link = ({ actions, children, link }) => {
 
 You can pass any url and router will set the new path. It doesn't matter if it's just a path like `/category/nature/`, a path that includes the page `/category/nature/page/2` or the full url `https://site.com/category/nature`.
 
+## API Reference
 
+## TypeScript
 
 {% hint style="info" %}
 Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊

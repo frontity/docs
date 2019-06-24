@@ -1,6 +1,6 @@
-# WordPress Source
+# @frontity/wp-source
 
-### Installation
+## Installation
 
 Add the `wp-source` package to your project:
 
@@ -28,7 +28,7 @@ module.exports = {
 }
 ```
 
-### Settings
+## Settings
 
 There are only two settings you can change in your `frontity.settings.js` file:
 
@@ -40,7 +40,7 @@ Set it to `true` if your site is a wordpress.com site. It's `false` by default.
 
 This is the url of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a wordpress.com site, like `https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`
 
-### How to use
+## How to use
 
 Let’s start by explaining how the state data is used and then how that data is requested and stored. The state works with two main concepts: **links** and **entities**.
 
@@ -85,7 +85,7 @@ const CategoryNature = ({ state, actions }) => {
 export default connect(CategoryNature);
 ```
 
-## API
+## API Reference
 
 ### Actions
 
@@ -275,7 +275,7 @@ resolver.add("/category/:slug", categoryHandler);
 const { handler, params } = resolver.match("/category/nature/");
 ```
 
-
+## TypeScript
 
 {% hint style="info" %}
 Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊

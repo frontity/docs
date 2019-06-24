@@ -129,9 +129,9 @@ That's pretty much it about packages for now.
 
 The last thing you need to know to work with your `frontity.settings.js` file are the settings.
 
-As you have probably already noticed, you don't use `settings`, we use `state`. That's on purpose as well. 
+As you have probably already noticed, we don't use `settings`, we use `state`. That's on purpose as well. 
 
-If you come from a WordPress background, you can think of **Frontity** `state`as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or Mobx. That `state` is accessible by your packages at run time. 
+If you come from a WordPress background, you can think of **Frontity** `state`as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or MobX. That `state` is accessible by your packages at run time. 
 
 You have the opportunity to modify the initial `state` of your site in the `frontity.settings.js` file. You can do it in a general `state` object or inside packages.
 
