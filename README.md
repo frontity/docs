@@ -9,6 +9,14 @@ There are two main ways to get started with Frontity:
 1. [**Quick start guide:**](getting-started/quick-start-guide.md) Learn how to install Frontity and get your site ready.
 2. [**Community forum**](https://community.frontity.org)**:** Tell us your project and get any help you may need.
 
+## About Frontity framework
+
+* [What is Frontity?](./#what-is-frontity)
+* [Why WordPress and React?](./#why-wordpress-and-react)
+* [How does Frontity work?](./#how-does-frontity-work)
+* [Frontity features](./#frontity-features)
+* [Key differences with GatsbyJS](./#key-differences-with-gatsbyjs)
+
 ## What is Frontity?
 
 ### **A React framework to create WordPress themes**
@@ -53,7 +61,7 @@ We believe this JavaScript-based approach is already accelerating things in the 
 Frontity apps live in a Node.js server tailored for WordPress.
 
 * It uses the WP REST API to retrieve content and generate the final HTML.
-* It is also capable of generating AMP pages with the same React code and CSS
+* It is also capable of generating AMP pages with the same React code and CSS.
 
 ![](.gitbook/assets/frontity-architecture.png)
 
@@ -65,7 +73,9 @@ We are working in other possible installations, although we strongly recommend t
 
 ## **Frontity features**
 
-Frontity and its extensions will help save you a lot of development time while enjoying of all of the latest technology trends, already configured for you. ****You can check them in detail at [Frontity Features page](frontity-features/). Here there are the main ones:
+Frontity and its extensions will help save you a lot of development time while enjoying of all of the latest technology trends, already configured for you. ****You can check them in detail at [Frontity Features page](frontity-features/). 
+
+Here are the main ones:
 
 * [Zero setup development](frontity-features/#zero-setup-development)
 * [Lightning-fast loading](frontity-features/#lightning-fast-loading)
@@ -96,11 +106,9 @@ Frontity is in a sense similar to GatsbyJS, but there are some key differences:
 * It’s **rendered dynamically**. This means people don’t have to rebuild the HTML each time they modify or publish something. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are many ways to configure it.
 * It can output Google AMP html created with the same React codebase.
 
+If you still have any doubts about Frontity or just want to share your thoughts, please feel free to post them on our [community forum](https://community.frontity.org). One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
 
-
-I hope this post gives you a better understanding of what Frontity is and how it works.
-
-If you still have any doubts or just want to share your thoughts, please feel free to post them as a new topic in our [community forum](https://community.frontity.org). One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
-
-To get notified of the latest framework updates and releases, please subscribe to newsletter [here](https://frontity.org).
+{% hint style="info" %}
+To **get notified** of the latest framework updates and releases, **subscribe** to newsletter [**here**](https://frontity.org).
+{% endhint %}
 
