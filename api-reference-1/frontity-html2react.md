@@ -1,7 +1,7 @@
 # @frontity/html2react
 
 {% hint style="warning" %}
-This reference is a **work in progress** until we have time to improve it. For the time being, if you have any doubt on how to use `html2react` , the `processors` or anything else, please don't hesitate to ask in our community, we'll be more than glad to answer your questions.
+This reference is a **work in progress** until we have time to improve it. For the time being, if you have any doubts on how to use `html2react` , the `processors` or anything else, please don't hesitate to ask in our community forum, we'll be happy to answer your questions.
 {% endhint %}
 
 ## Installation

@@ -2,11 +2,11 @@
 
 There are several ways to support the project and get involved. Don't know how to code? Don't worry! You can contribute in many other ways to make Frontity awesome! 🚀
 
-* \*\*\*\*[**Let's get the best framework ever**](how-to-contribute.md#lets-get-the-best-framework-ever)\*\*\*\*
-* \*\*\*\*[**Spread the word**](how-to-contribute.md#spread-the-word)\*\*\*\*
-* \*\*\*\*[**Help build up the community**](how-to-contribute.md#help-build-up-the-community)\*\*\*\*
-* \*\*\*\*[**Improve the documentation**](how-to-contribute.md#improve-the-documentation)\*\*\*\*
-* \*\*\*\*[**Show off your work**](how-to-contribute.md#show-off-your-work)\*\*\*\*
+* [Let's get the best framework ever](how-to-contribute.md#lets-get-the-best-framework-ever)
+* [Spread the word](how-to-contribute.md#spread-the-word)
+* [Help build up the community](how-to-contribute.md#help-build-up-the-community)
+* [Improve the documentation](how-to-contribute.md#improve-the-documentation)
+* [Show off your work](how-to-contribute.md#show-off-your-work)
 
 ## » Let's get the best framework ever 
 
@@ -21,12 +21,12 @@ There are several ways to support the project and get involved. Don't know how t
 
 * The easiest way \(but not less important\) to help us spread the word about the project can be posting something on your social media pages. Why not start with a [tweet](https://twitter.com/intent/tweet?text=This%20is%20amazing%21%20%40Frontity%20has%20launched%20an%20open-source%20framework%20for%20building%20%23WordPress%20themes%20with%20%23React.%20%E2%9A%9B%EF%B8%8F%20Check%20how%20easy%20it%20is:%20&url=https%3A%2F%2Ffrontity.org)? 😉
 * Tweet about things you build with Frontity \(make sure to mention @Frontity or use the hashtag **\#Frontity** so we can be notified and share it as well\).
-* If you read a post in Reddit, Quora or other blogs where Frontity could be relevant, let them know.
+* If you read a post on Reddit, Quora or other blogs where Frontity could be relevant, let them know.
 
 **Blogging**
 
 * Create **tutorials** or any other relevant content about Frontity. [Let us know](https://community.frontity.org/c/communication) if we can help and don't forget to share your posts [here](https://community.frontity.org/c/communication).
-* Would you prefer to write for Frontity's blog? We are always looking for contributors and **guest posts** from the community. Feel free to share your ideas by opening a new topic in the [Communication category](https://community.frontity.org/c/communication) of the forum and mention @Reyes. The more descriptive the title of the topic the better: E.g. _\[Guest post idea\] Best resources to learn React_.
+* Would you prefer to write for Frontity's blog? We are looking for contributors and **guest posts** from the community. Feel free to share your ideas by opening a new topic in the [Communication category](https://community.frontity.org/c/communication) of the forum and mention @Reyes. The more descriptive the title of the topic the better: E.g. _\[Guest post idea\] Best resources to learn React_.
 
 **Speaking about Frontity in events**
 
