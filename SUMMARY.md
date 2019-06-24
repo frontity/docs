@@ -26,5 +26,5 @@
   * [Why to contribute?](contributing/why-contributing.md)
 * [⚛ Frontity features](frontity-features/README.md)
   * [Extensions](frontity-features/extensions.md)
-* [🤔 FAQ](faq.md)
+* [�� FAQ](faq.md)
 

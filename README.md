@@ -6,8 +6,8 @@ Welcome to Frontity Documentation **👋** Here you will find all the necessary 
 
 There are two main ways to get started with Frontity:
 
-1. [**Quick start guide:**](getting-started/quick-start-guide.md) Learn how to install Frontity and get your site ready.
-2. [**Community forum**](https://community.frontity.org)**:** Tell us your project and get any help you may need.
+1. [**Quick start guide:**](getting-started/quick-start-guide.md) learn how to install Frontity and get your site ready.
+2. [**Community forum**](https://community.frontity.org)**:** tell us about your project and get any help you may need.
 
 ## About Frontity framework
 
