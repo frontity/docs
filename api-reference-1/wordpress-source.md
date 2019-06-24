@@ -20,7 +20,6 @@ module.exports = {
       state: {
         source: {
           api: "https://site.com/wp-json"
-          isWPCom: false
         }
       }  
     }
@@ -30,15 +29,35 @@ module.exports = {
 
 ## Settings
 
-There are only two settings you can change in your `frontity.settings.js` file:
+These are the settings you can change in your `frontity.settings.js` file:
 
-#### state.source.isWPCom
+#### state.source.api \(required\)
 
-Set it to `true` if your site is a wordpress.com site. It's `false` by default.
+The url of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
 
-#### state.source.api
+#### state.source.subdirectory
 
-This is the url of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a wordpress.com site, like `https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`
+A name or path indicating in which subdirectory of your domain is your Frontity site. For example, if your site is in https://mysite.com/blog, you have to use it with value `blog` or `/blog`. It also transform links of the entities that come from the REST API.
+
+#### state.source.homepage
+
+This option allows you to show a specific page when accessing to the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access to `/`.
+
+#### state.source.postsPage
+
+This option allows you to show the posts archive when accessing to a specific page of your site.  For example, if you set this value to `/latest` then the posts archive will be shown if you acess to that page.
+
+#### state.source.categoryBase
+
+Change the base prefix of URLs for category pages by the indicated one.
+
+> **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
+
+#### state.source.tagBase
+
+Change the base prefix of URLs for tag pages by the indicated one.
+
+> **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
 
 ## How to use
 
@@ -207,7 +226,7 @@ Request entity to the WordPress REST API.
 **arguments**
 
 * `api`: URL pointing to a valid WP REST route.
-* `isWPCom`: a boolean indicating if the WP REST route is from a WordPress.com hosted site.
+* `isWpCom`: a boolean indicating if the WP REST route is from a WordPress.com hosted site.
 
 **example**
 
@@ -217,13 +236,13 @@ const { api } = libraries.source;
 // for wp.org
 api.init({
   api: "https://test.frontity.io/wp-json",
-  isWPCom: false
+  isWpCom: false
 });
 
 // for wp.com
 api.init({
   api: "https://public-api.wordpress.com/wp/v2/sites/test.frontity.io",
-  isWPCom: false
+  isWpCom: false
 });
 ```
 
