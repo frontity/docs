@@ -2,7 +2,7 @@
 
 Welcome! 👋
 
-Frontity ****is a **React framework** to create **WordPress themes**. It allows you to easily build a React frontend for the WordPress backend, which serves its data via the WP REST API. Frontity framework is open source and free to use.
+Frontity ****is a **React framework** to create **WordPress themes**. It allows you to easily build a React frontend for a headless WordPress site, which serves its data via the WP REST API. Frontity framework is open source and free to use.
 
 ## Get started
 
