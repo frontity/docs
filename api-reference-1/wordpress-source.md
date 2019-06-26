@@ -41,11 +41,13 @@ A name or path indicating in which subdirectory of your domain is your Frontity 
 
 #### state.source.homepage
 
-This option allows you to show a specific page when accessing to the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access to `/`.
+This option allows you to show a specific page when accessing to the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access to `/`. 
+
+> **NOTE:** As this option overrides the `/` route, you should set `state.source.postsPage` as well to be able to access the posts archive in a different route.
 
 #### state.source.postsPage
 
-This option allows you to show the posts archive when accessing to a specific page of your site.  For example, if you set this value to `/latest` then the posts archive will be shown if you acess to that page.
+This option allows you to show the posts archive when accessing to a specific page of your site.  For example, if you set this value to `/latest` then the posts archive will be shown if you access to that page.
 
 #### state.source.categoryBase
 
