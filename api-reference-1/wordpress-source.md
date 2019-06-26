@@ -254,10 +254,14 @@ Request entity to the WordPress REST API.
 
 **arguments**
 
-* `endpoint`: name of the endpoint if is a `/wp/v2` endpoint \(e.g. `posts`\), or the full path of other REST endpoints \(e.g. `/frontity/v1/discovery`\)
+* `endpoint`: name of the endpoint if is a `/wp/v2` endpoint \(e.g. `posts`\), or the full path of other REST endpoints \(e.g. `/frontity/v1/discovery`\).
 * `params`: any parameter that will be included in the query params.
-* `api` \(optional\): overrides the value set with `api.set`
-* `isWpCom` \(optional\): overrides the value set with `api.set`
+* `api` \(optional\): overrides the value set with `api.set.`
+* `isWpCom` \(optional\): overrides the value set with `api.set.`
+
+#### return
+
+* A promise of type `Response`
 
 For more info, visit the [WP REST API reference](https://developer.wordpress.org/rest-api/reference).
 
@@ -279,20 +283,145 @@ api.get({
 });
 ```
 
-#### `populate(state, response)`
+
+
+#### `populate({ response, state, subdirectory? })`
+
+Add entities to the Frontity state.
+
+**arguments**
+
+* `response`: the response object returned by `api.get().`
+* `state`: the state object from the Frontity store.
+* `subdirectory` \(optional\): domain's subdirectory where your Frontity site is accessible. When this options is passed, this subdirectory is added to the entities' links. By default, it takes the value defined in `state.source.subdirectory`.
+
+#### return
+
+* An array of objects with attributes `type`, `id` and `link` representing the added entities.
+
+#### example
 
 ```javascript
-libraries.source.populate(state, response);
+const response = libraries.source.api.get({ endpoint: "posts" });
+libraries.source.populate({ response, state });
 ```
 
-#### resolver
+#### 
+
+#### `handlers`
+
+Handlers are objects that associate a path pattern with a function that gets the entities contained in that path. These `handlers` are used when `actions.source.fetch` is executed. 
+
+* `name`: string that identify this handler.
+* `priority`: number that lets `fetch` to know in which order handlers should be evaluated.
+* `pattern`: pattern which paths are compared with.
+* `func`:  function that retrieves entities and adds all info to the state. It receives the following arguments:
+  * `route`: the route that are being fetched
+  * `params`: values obtained from the pattern after a match
+  * `state`: Frontity state
+  * `libraries`: Frontity libraries
+
+#### example
 
 ```javascript
-const { resolver } = libraries.source;
-
-resolver.add("/category/:slug", categoryHandler);
-const { handler, params } = resolver.match("/category/nature/");
+// A handler example to retrieve products
+libraries.source.handlers.push({
+  name: "product",
+  priority: 10,
+  pattern: "/product/:slug",
+  func: ({ route, params, state, libraries }) => {
+    const { api, populate } libraries.source;
+    const { slug } = params;
+    
+    // 1. get product
+    const response = api.get({
+      endpoint: "products",
+      params: { slug: params.slug }
+    });
+    
+    // 2. add product to state
+    const [product] = populate({ response, state });
+    
+    // 3. add route to data
+    Object.assign(state.source.data[route], {
+      id: product.id,
+      type: product.type,
+      isPostType: true,
+      isProduct: true
+    });
+  }
+});
 ```
+
+
+
+#### `redirections`
+
+Redirections are objects that associate a path pattern with a function that returns a new path. These `redirections` are used when `actions.source.fetch` is executed, before `handlers`. 
+
+* `name`: string that identify this redirection.
+* `priority`: number that lets `fetch` to know in which order redirections should be evaluated.
+* `pattern`: pattern which paths are compared with.
+* `func`:  function that returns a new path. It receives an object with the params obtained after a match.
+
+#### example
+
+```javascript
+// A redirection example to change tag base prefix
+libraries.source.redirections.push({
+  name: "tags",
+  priority: 10,
+  pattern: "/tag/:slug/",
+  func: ({ slug }) => `/label/${slug}/`
+});
+```
+
+
+
+#### `parse(route)`
+
+Utility for parsing routes. 
+
+**arguments**
+
+* `route`: any route that points to entities in your site \(links, custom lists, etc.\)
+
+#### return
+
+* An object with the following attributes:
+  * `path`: pathname without the page
+  * `page`: the page number
+  * `query`: object with query parameters
+  * `hash`: the hash value \(with `#`\).
+
+
+
+#### `stringify({ path, page?, query?, hash? })`
+
+Utility for building routes from its attributes. 
+
+**arguments**
+
+* `path`: pathname without the page
+* `page` \(optional\): the page number
+* `query` \(optional\): object with query parameters
+* `hash` \(optional\): the hash value \(with `#`\).
+
+#### return
+
+* `route`: normalized route 
+
+
+
+#### `normalize(route)`
+
+**arguments**
+
+* `route`: any route that points to entities in your site \(links, custom lists, etc.\)
+
+#### return
+
+* `route`: normalized route 
 
 ## TypeScript
 
