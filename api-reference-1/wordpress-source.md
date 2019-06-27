@@ -331,19 +331,16 @@ libraries.source.handlers.push({
   name: "product",
   priority: 10,
   pattern: "/product/:slug",
-  func: ({ route, params, state, libraries }) => {
-    const { api, populate } libraries.source;
-    const { slug } = params;
-    
+  func: async ({ route, params, state, libraries }) => {
     // 1. get product
-    const response = api.get({
+    const response = await libraries.source.api.get({
       endpoint: "products",
       params: { slug: params.slug }
     });
-    
+
     // 2. add product to state
-    const [product] = populate({ response, state });
-    
+    const [product] = await libraries.source.populate({ response, state });
+
     // 3. add route to data
     Object.assign(state.source.data[route], {
       id: product.id,
