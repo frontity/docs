@@ -24,6 +24,7 @@
 * [👏 Contributing](contributing/README.md)
   * [How to contribute?](contributing/how-to-contribute.md)
   * [Why to contribute?](contributing/why-contributing.md)
+  * [Code Contributions](contributing/code-contributions.md)
 * [⚛ Frontity features](frontity-features/README.md)
   * [Extensions](frontity-features/extensions.md)
 * [🤔 FAQ](faq.md)
