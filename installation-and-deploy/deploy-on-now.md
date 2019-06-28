@@ -26,10 +26,6 @@ npm install --save-dev now
 
 You should create a JSON file with your preferred text editor and save it in your project folder with name **now.json** .
 
-{% hint style="info" %}
-Delete the comment `//CHANGE THIS!` after changing the alias.
-{% endhint %}
-
 ```javascript
 {
   "version": 2,
