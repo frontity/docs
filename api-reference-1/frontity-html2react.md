@@ -45,12 +45,14 @@ const Post = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   
+  // Component exposed by html2react.
+  const Html2React = libraries.html2react.Component; 
+  
   return (
     <div>
       <Title />
-      <Content>
-        // Here you have the component exposed by html2react.
-        <libraries.html2react.Component html={post.content.rendered} />
+      <Content>        
+        <Html2React html={post.content.rendered} />
       </Content>
     </div>
   );
@@ -61,7 +63,7 @@ const Post = ({ state, libraries }) => {
 
 ### Load a processor
 
-The `processors` field is an array where you can push all the processors you want to use with `html2react`. You need to do this in the `beforeSSR` and `beforeCSR` functions of your theme, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
+The `processors` field is an array where you can push all the processors you want to use with `html2react`. You need to do this in the `beforeSSR` and `beforeCSR` functions of your theme or extension, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
 
 {% code-tabs %}
 {% code-tabs-item title="index.js" %}
@@ -76,24 +78,13 @@ const before = ({ libraries }) => {
 
 const marsTheme = {
   name: "@frontity/mars-theme",
-  roots: {
-    theme: Theme
-  },
-  state: {
-    theme: {
-      menu: [],
-      featured: {
-        showOnList: false,
-        showOnPost: false
-      }
-    }
-  },
   actions: {
     theme: {
       beforeSSR: before,
       beforeCSR: before
     }
-  }
+  },
+  ...
 };
 
 export default marsTheme;
@@ -103,7 +94,7 @@ export default marsTheme;
 
 ### Create a processor
 
-A processor is an object with two functions: `test` and `process`. The `test` function will evaluate the node, and if it returns `true`, this node will be passed to the `process` function in order to apply the processor.
+A processor is an object with two functions: `test` and `process`, a `name` and a `priority`.  The `test` function will evaluate the node, and if it returns `true`, this node will be passed to the `process` function in order to apply the processor.
 
 As an example, this is how the `image` processor is implemented in `html2react`:
 
@@ -113,16 +104,26 @@ As an example, this is how the `image` processor is implemented in `html2react`:
 import Image from "@frontity/components/image";
 
 const image: Processor = {
-  test: node => node.type === "element" && node.component === "img",
+  // We can add a name to identify it later.
+  name: "image",
+
+  // We can add a priority so it executes before or after other processors.
+  priority: 10,
+
+  // Only process it if it's an image.
+  test: node => node.component === "img",
+  
   process: node => {
+    // If it's inside a noscript tag, we don't wont to process it.
     if (node.parent.component === "noscript") return null;
 
-    if (node.props["data-src"]) {
+    // Many WP lazy load plugins move the src to the data-src, so we fix that.
+    if (node.props["data-src"])
       node.props.src = node.props["data-src"];
-    }
-    if (node.props["data-srcset"]) {
+    if (node.props["data-srcset"])
       node.props.srcSet = node.props["data-srcset"];
-    }
+      
+    // We tell html2react that it should use the <Image /> component.
     node.component = Image;
 
     return node;
@@ -138,7 +139,41 @@ export default image;
 
 ### Libraries
 
-#### `html2react.parse(html, decode) => htmlTree`
+#### `libraries.html2react.processors`
+
+An array of the `processor`s that will be used by `html2react`. 
+
+You should can add, remove or mutate any processor from the array:
+
+{% code-tabs %}
+{% code-tabs-item title="index.js" %}
+```jsx
+// Add a processor.
+libraries.html2react.processors.push(image);
+
+// Remove a processor.
+const i = libraries.html2react.processors.findIndex(pr => pr.name === "image");
+libraries.html2react.processors.splice(i, 1);
+
+// Change processor priority.
+const pr = libraries.html2react.processors.find(pr => pr.name === "image");
+pr.priority = 20;
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### `libraries.html2react.Component`
+
+A React component used to render the parsed HTML.
+
+**Props**
+
+* **`decodedText`** : `String` The decoded text.
+* **`html`** : `String` The HTML that needs to be rendered.
+
+### Other internal APIs
+
+#### `libraries.html2react.parse(html, decode) => htmlTree`
 
 Parses the HTML passed as a string into an AST ready to be used by `html2react.Component`.
 
@@ -151,7 +186,7 @@ Parses the HTML passed as a string into an AST ready to be used by `html2react.C
 
 * **`htmlTree`** : `Array` A AST structure of the HTML passed into the function.
 
-#### `html2react.decode(text) => decodedText`
+#### `libraries.html2react.decode(text) => decodedText`
 
 Decode any HTML character found in the string passed and returns another string with the characters decoded.
 
@@ -161,23 +196,9 @@ Decode any HTML character found in the string passed and returns another string 
 
 **Return**
 
-* **`decodedText`** : `String` The decoded text.
-
-#### `html2react.processors`
-
-An array of the `processor`s that will be used by `html2react`.
-
-#### `html2react.Component`
-
-A React component used to render the parsed HTML.
-
-**Props**
-
-* **`html`** : `String` The HTML that needs to be rendered.
-
 ## TypeScript
 
-You can import the `html2react` types from `@frontity/html2react/types`. The main package type is the fault export, and the other types are named exports:
+You can import the types from `@frontity/html2react/types`. The main package type is the default export, and the other types are named exports:
 
 ```javascript
 import Html2React, { Processor } from '@frontity/html2react/types';
