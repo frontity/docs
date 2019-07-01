@@ -13,7 +13,7 @@ There are several ways to support the project and get involved. Don't know how t
 * [Try Frontity out](../getting-started/quick-start-guide.md) and share your **feedback** and **doubts** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic \(thread\) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _\[Feedback\] I found difficult to..._ If you ask a question, the title can be the question itself.
 * [Report bugs](https://github.com/frontity/frontity/issues) or issues. 🐞
 * New feature ideas? Feel free to suggest them [to the community](https://community.frontity.org/c/framework-design) or even open a [Pull Request](https://github.com/frontity/frontity/pulls).
-* If you want to help fixing bugs or contribute to Frontity's code, [ask us how](https://community.frontity.org/) and we'll let you know the best way to proceed \(we'll be working soon on a guide for code contributions\).
+* If you want to help fixing bugs or contributing code, please refer to this [Code Contributions guide](code-contributions.md).
 
 ## 🗣 Spread the word
 
