@@ -2,7 +2,7 @@
 
 Frontity, as an open-source project, welcomes everyone to contribute coding, so we have tried to make it as easy as possible.
 
-For suggesting improvements to Frontity \(and most of the projects\), the common way is copying the Frontity project to your own repository, making there all the changes you want and once you consider it is okay, you make a pull request to include these modifications in Frontity.
+The most common way for suggesting improvements to Frontity \(and most of the projects\) is to copy the Frontity project to your own repository and make there all the changes you want. Once you consider they are okay, make a pull request to include them in Frontity.
 
 {% hint style="info" %}
 Before starting, the only **prerequisite is to have Node 10 installed in your computer**.
