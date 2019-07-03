@@ -1,6 +1,6 @@
 # Code Contributions
 
-Frontity, as an open-source project, welcomes everyone to contribute coding, so we have tried to make it as easy as possible.
+Frontity, as an open source project, welcomes everyone to contribute with code, so we have tried to make it as easy as possible.
 
 The most common way for suggesting improvements to Frontity \(and most of the projects\) is to copy the Frontity project to your own repository and make there all the changes you want. Once you consider they are okay, make a pull request to include them in Frontity.
 

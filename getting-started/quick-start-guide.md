@@ -68,9 +68,7 @@ const settings = {
       state: {
         source: {
           // Here you should write the url point of your WordPress API.
-          api: "https://test.frontity.io/wp-json/",
-          // Also, if your blog is hosted on WordPress.com you can set:
-          // isWPCom: true
+          api: "https://test.frontity.io/wp-json/"
         }
       }
     }
