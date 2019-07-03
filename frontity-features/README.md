@@ -14,7 +14,6 @@ Here's a list of the main features included in Frontity's core:
 * [Zero setup development](./#zero-setup-development)
 * [Lightning-fast loading](./#lightning-fast-loading)
 * [Instant in-app navigation](./#instant-in-app-navigation)
-* [Google AMP with the same codebase](./#google-amp-support-with-the-same-codebase)
 * [Server Side Rendering](./#server-side-rendering)
 * [Extensible](./#less-than-greater-than-extensible)
 * [Best Lighthouse score](./#best-lighthouse-score)
@@ -32,6 +31,7 @@ Here's a list of the main features included in Frontity's core:
 ### 🔜 Coming soon
 
 * [PWA and offline support](./#pwa-and-offline-support)
+* [Google AMP with the same codebase](./#google-amp-support-with-the-same-codebase)
 
 ## Frontity features
 
@@ -48,10 +48,6 @@ This HTML is fully **functional** and **navigable** without Javascript. Once Rea
 ### ⚡️ Instant in-app navigation
 
 Once React has loaded, our router prefetches other routes and data automatically. Users never have to wait when they navigate inside the app.
-
-###  📱 Google AMP support with the same codebase
-
-Themes made with Frontity are able to render an AMP compatible version with the same React code and CSS used for the HTML version.
 
 ### 🗄 Server Side Rendering
 
@@ -127,6 +123,10 @@ The React team is working hard to release an async, “no-CPU-blocking” versio
 ## 🔜 Coming soon
 
 Frontity is continuously looking to improve, so we are already working on some major \(and awesome\) features which will be available very soon.
+
+### 📱 Google AMP support with the same codebase
+
+Themes made with Frontity are able to render an AMP compatible version with the same React code and CSS used for the HTML version.
 
 ### ✨ PWA and offline support
 
