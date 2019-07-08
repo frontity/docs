@@ -32,7 +32,7 @@ You should create a JSON file with your preferred text editor and save it in you
   "alias": ["www.your-site.com"],
   "builds": [
     {
-      "src": "build/static/*",
+      "src": "build/static/**/*",
       "use": "@now/static"
     },
     {
