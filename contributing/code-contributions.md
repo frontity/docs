@@ -52,9 +52,9 @@ At this point, before starting your work, it is a good practice to have a place 
 
 To access an example to test your changes you should run the command `cd examples/mars-theme-example/`.
 
-**5. Run your local server:**
-
 To check your modifications, being in the folder previously mentioned, run **`npx frontity dev`** and it will start Frontity with mars-theme on [localhost:3000](http://localhost:3000/). It will open automatically a new tab on your browser.
+
+**5. Run your local server:**
 
 **6. Make any changes you consider**:
 
