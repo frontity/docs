@@ -34,7 +34,7 @@ After doing this, you will create Frontity project at your own repository so you
 
 **2. Clone your own fork:**
 
-This should be made to work on it on a local environment. If you are not using a Git Graphical User Interface like GitKraken \(as we strongly recommend\), you can clone your fork on the console by changing the current working directory to the location where you want the cloned directory to be made and running the following command:
+This should be made to work on it on a local environment. If you are not using a Git Graphical User Interface \(like GitKraken or SourceTree\), you can clone your fork on the console by changing the current working directory to the location where you want the cloned directory to be made and running the following command:
 
 ```text
 git clone https://github.com/YOURUSERNAME/frontity.git
@@ -46,11 +46,11 @@ It will create a folder named “frontity” inside your current directory, and 
 
 Make sure you are at the root folder of Frontity project and run `npm install`, don't do it on the packages.
 
-At this point, before starting working, it is a good practice to have a place to see all the changes you are making, and check if your new code is working properly. For doing so, we have provided some tools to run mars-theme in your local server: 
+At this point, before starting your work, it is a good practice to have a place to see all the changes you are making, and check if your new code is working properly. For doing so, we have provided some tools to run mars-theme in your local server: 
 
 **4. Go to /examples/mars-theme-example/** :
 
-To access an example to test your changes you should run the command **`cd examples/mars-theme-example/`**`.`
+To access an example to test your changes you should run the command `cd examples/mars-theme-example/`.
 
 **5. Run your local server:**
 
@@ -58,7 +58,7 @@ To check your modifications, being in the folder previously mentioned, run **`np
 
 **6. Make any changes you consider**:
 
-At this point, you are able to make any improvements you want to the packages, and after saving your code changes, you should check if they are working by refreshing _localhost:3000_. For managing the files and the code, we strongly recommend to use a code editor like Visual Studio Code.
+At this point, you are able to make any improvements you want to any of the packages \(not only **mars-theme**\), and after saving your code changes, you should check if they are working by refreshing _localhost:3000_. For managing the files and the code, we strongly recommend to use a code editor like Visual Studio Code.
 
 {% hint style="warning" %}
 _**WARNING: After adding/removing dependencies to a package, you must go back to the root and do `npm install` again**_
@@ -75,7 +75,7 @@ If you find some errors, you can try:
 
 **8. Commit and push to your fork:**
 
-Again, we strongly recommend you to use a Git Graphical User Interface like GitKraken, but it can also be done in the console if wanted.
+Again, we recommend you to use a Git Graphical User Interface like GitKraken, but it can also be done in the console if wanted.
 
 **9. Open a Pull Request**
 
@@ -85,7 +85,7 @@ For opening one you have to go to [Frontity's pull requests](https://github.com/
 
 ![](../.gitbook/assets/compare_-_frontity_frontity.png)
 
-**Select your own repository and the branch** you want to merge and **create the pull request**.
+Select your own repository and **the dev branch** on Frontity, and **create the pull request**.
 
 ![](../.gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
 
