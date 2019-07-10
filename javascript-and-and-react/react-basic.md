@@ -326,56 +326,6 @@ Defining a key with a unique id, React would be able to understand that the titl
 
 This is just an example, for more info about it you can visit [React docs](https://reactjs.org/docs/lists-and-keys.html).
 
-### Frontity State, Actions & Libraries
-
-State could be defined as an object that includes the parts of the app that can change after render. It is really similar to props, the main difference is that **state is changeable** while props are not. The state starts with an initial value when the Component renders and then changes \(usually from user events\) and updates the DOM.
-
-Usually in React, there is a global state for the whole app \(that can be used in all the components\) and you can define local state for each Component. In Frontity core, we just use a global state, but you could find local state in some packages.
-
-Let's see an example. You should imagine the state as an object with info about the app:
-
-```javascript
-{
- state: {
-    frontity: {
-        title: "My awesome blog",
-        description: "The best place to read about awesome things",
-        ...
-    },
-    theme: {
-        menu: ["Home", "Nature", "Travel"],
-        ...
-    },
-    ...
-}
-```
-
-With this in mind, you can use all this info in your components, and change it depending on different events. In order to use the global state inside a component, you have to pass it as a variable:
-
-```jsx
-import { connect } from "frontity";
-
-const Component = ({ state, actions, libraries }) => (
-    <h1>{state.frontity.title}</h1>
-);
-
-const ConnectedComponent = connect(Component);
-```
-
-It's common to use `connect` only on the export of the file:
-
-```jsx
-const Component = ({ state }) => (
-    <h1>{state.frontity.title}</h1>
-);
-
-export default connect(Component);
-```
-
-Now, if for example you program an event to change the title after any user interaction, the component will re-render and updates with the new one.
-
-You can also define local state that can only be used inside that component and works exactly the same way as the global one, but you don't have to pass it as a variable. This could prevent possible conflicts with other components. For creating them you can use the hook [useState](react-basic.md#usestate) \(explained later\).
-
 
 
 {% hint style="info" %}
