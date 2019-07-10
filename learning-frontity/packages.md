@@ -1,7 +1,7 @@
 # 2. Packages
 
 {% hint style="info" %}
-This "Learning Frontity" guide is intended to be read in order so please start from the [first section](how-frontity-works.md) if you haven't done so already.
+This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
 {% endhint %}
 
 All the **Frontity** code lives inside packages. There is no "app code", like in other frameworks.
@@ -24,7 +24,7 @@ my-frontity-project/
     |__ my-custom-extension/
 ```
 
-* `frontity.settings.js` is explained in [the previous section](how-frontity-works.md).
+* `frontity.settings.js` is explained in [the previous section](settings.md).
 * `package.json` is the file used for configuration in any Node project. There are many great articles about it like [this one](https://medium.com/beginners-guide-to-mobile-web-development/why-package-json-npm-basics-cab3e8cd150), [this one](https://flaviocopes.com/package-json/) or [this one](https://alligator.io/nodejs/package-json/).
 * `node_modules` is the folder where all your dependencies are installed. For example, the core of Frontity \(`@frontity/core`\) is installed there. If you install external packages like `@frontity/tiny-router` or `@frontity/wp-source` they will be there as well.
 * `packages` is the folder where your **local packages** live.
