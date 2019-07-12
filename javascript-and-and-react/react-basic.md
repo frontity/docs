@@ -125,7 +125,7 @@ _**Create the component with props**_
 const Example = (props) => <h1>Hi {props.name}, nice to meet you!</h1>;
 ```
 
-You can also use ES6 destructuring to extract the props directly in the function definition:
+You can also use [ES6 destructuring](javascript-basics.md#destructuring-assignment) to extract the props directly in the function definition:
 
 ```jsx
 const Example = ({ name }) => <h1>Hi {name}, nice to meet you!</h1>;
@@ -195,7 +195,7 @@ const value = state[0];
 const setValue = state[1];
 ```
 
-You can also use ES6 destructuring to get the first and second value of the array directly in the assignment.
+You can also use [ES6 destructuring](javascript-basics.md#destructuring-assignment) to get the first and second value of the array directly in the assignment.
 
 ```jsx
 const [value, setValue] = useState(initialValue);
@@ -320,7 +320,7 @@ const items = [
 {items.map(item => <Item key={item.id} item={item} />)}
 ```
 
-Imagine that after that we reorder the titles and the third object, with id 72, moves to the second place. If we don't define a key, React would interpret that both elements titles \(ids 45 and 72\) have changed, when they have just reordered, and it would re-render.
+Imagine that after that we reorder the titles and the third object, with id 72, moves to the second place. If we don't define a key, React would interpret that both elements titles \(ids 45 and 72\) have changed, when they have just reordered, and they would re-render.
 
 Defining a key with a unique id, React would be able to understand that the title of id 45 is still the same, as well as id 72, and they have just reordered. This can seem not useful, but if you are working with big objects, it can save a lot of resources.
 
