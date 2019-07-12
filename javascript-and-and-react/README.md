@@ -6,6 +6,6 @@ In order to understand Frontity, you will need to know basic concepts of other t
 * [React](react-basic.md)
 
 {% hint style="info" %}
-We are planning to add new guides about other important topics as command line or npm. If you have any suggestion feel free to suggest it at [our community](https://community.frontity.org/c/docs-and-tutorials).
+We are planning to add new guides on other important topics such as command line or npm. If you have other suggestions, let us know about them at [our community](https://community.frontity.org/c/docs-and-tutorials).
 {% endhint %}
 
