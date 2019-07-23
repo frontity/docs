@@ -1,4 +1,4 @@
-# Keep Frontity updated
+# Keep Frontity Updated
 
 As in most projects, keeping Frontity and its packages updated is always a good practice. Not only you could use new features added, but also some security issues are usually detected and solved during these updates.
 

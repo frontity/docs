@@ -12,6 +12,7 @@ These are the concepts you should familiarize with:
 * [Props](react-basic.md#props)
 * [Hooks](react-basic.md#hooks)
 * [Special cases](react-basic.md#special-cases)
+* [State manager - Frontity Connect](react-basic.md#state-manager-frontity-connect)
 
 {% hint style="info" %}
 Note that this guide purpose is to give you a better understanding of which React concepts you need to learn to understand Frontity, and a brief explanation of them. If you want a more detailed way of learning React you can check their own docs: [React docs](https://reactjs.org/docs/hello-world.html).
@@ -298,6 +299,8 @@ const Example = ({ value }) => (
         {value > 20 ? <p>It is right!</p> : null}
     </div>
 );
+
+<Example value={3} />
 ```
 
 _This is actually the same behaviour than the first example._
@@ -324,11 +327,85 @@ Imagine that after that we reorder the titles and the third object, with id 72, 
 
 Defining a key with a unique id, React would be able to understand that the title of id 45 is still the same, as well as id 72, and they have just reordered. This can seem not useful, but if you are working with big objects, it can save a lot of resources.
 
-This is just an example, for more info about it you can visit [React docs](https://reactjs.org/docs/lists-and-keys.html).
-
-
+This is just an example of how important could be to assign keys properly to arrays, for more info about it you can visit [React docs](https://reactjs.org/docs/lists-and-keys.html).
 
 {% hint style="info" %}
 These are the main React concepts used in Frontity, if you understand them, you will be able to understand Frontity code. If you want to go deeper in learning React, you should check [their docs](https://reactjs.org/docs/hello-world.html), and if you have any doubts don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️. 
 {% endhint %}
+
+### State Manager - Frontity Connect
+
+Usually React is used with a State Manager that exposes a global `state` tree which can be accessed from any component of the app. This helps you keep different components in sync, and it is also a medium to communicate between them.
+
+There are many state managers, like Redux or Mobx, but in **Frontity** we have created our own state manager named **Frontity Connect.** For more info you can check [Learning Frontity - State](../learning-frontity/4.-state.md).
+
+Let's see an example of how `state` is used and how easy is to manage with **Frontity Connect**. As said before, you should imagine the state as an object with info about the app:
+
+```javascript
+{
+ state: {
+    frontity: {
+        title: "My awesome blog",
+        description: "The best place to read about awesome things",
+        ...
+    },
+    theme: {
+        menu: ["Home", "Nature", "Travel"],
+        ...
+    },
+    ...
+}
+```
+
+With this in mind, you can use all this info in your components, and change it depending on different events. In order to use properly the global state inside a component, you have to:
+
+* Import `connect` from the `"frontity"` package.
+* Pass `state` as a prop in the component.
+* Connect the component after defining it with `connect(Component)` .
+
+```jsx
+import { connect } from "frontity";
+
+const Component = ({ state }) => (
+    <h1>{state.frontity.title}</h1>
+);
+
+const ConnectedComponent = connect(Component);
+```
+
+It's common to use `connect` only on the default export of the file:
+
+```jsx
+import { connect } from "frontity";
+
+const Component = ({ state }) => (
+    <h1>{state.frontity.title}</h1>
+);
+
+export default connect(Component);
+```
+
+Now, if you create an action that changes the title after a user interaction, this component will be updated with the new title.
+
+**Frontity Connect** can also be used to pass `actions` and `libraries` to the components, like this:
+
+```jsx
+import { connect } from "frontity";
+
+const Component = ({ actions, libraries, content }) => {
+    const HTML2React = libraries.html2react.Component;
+    const changeTitle = () => actions.theme.changeTitle("Other Title");
+    
+    return (
+        <>
+            <button onClick={changeTitle}>
+                Change title
+            </button>
+            <HTML2React html={content} />
+        </>
+    );
+};
+
+export default connect(Component);
+```
 

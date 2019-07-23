@@ -359,7 +359,7 @@ const person = {
     lastName: "Snow",
     age: 30
 };
-const { name, surname } = person;
+const { name, lastName } = person;
 
 // You are assigning the value of person.name to a new variable called "name".
 console.log(name); // Returns Jon.

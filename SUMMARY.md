@@ -16,7 +16,7 @@
 * [📖 Guides](guides/README.md)
   * [Understanding a Frontity project](guides/understanding-mars-theme.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
-  * [Keep Frontity updated](guides/keep-frontity-updated.md)
+  * [Keep Frontity Updated](guides/keep-frontity-updated.md)
 * [🏗 Installation & Deploy](installation-and-deploy/README.md)
   * [Possible Installations](installation-and-deploy/possible-architectures.md)
   * [Deploy Frontity on Now](installation-and-deploy/deploy-on-now.md)
