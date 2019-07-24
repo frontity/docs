@@ -330,7 +330,7 @@ Defining a key with a unique id, React would be able to understand that the titl
 This is just an example of how important could be to assign keys properly to arrays, for more info about it you can visit [React docs](https://reactjs.org/docs/lists-and-keys.html).
 
 {% hint style="info" %}
-These are the main React concepts used in Frontity, if you understand them, you will be able to understand Frontity code. If you want to go deeper in learning React, you should check [their docs](https://reactjs.org/docs/hello-world.html), and if you have any doubts don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️. 
+These are the main React concepts used in Frontity, if you understand them, you will be able to understand Frontity code. If you want to go deeper in learning React, you should check [their docs](https://reactjs.org/docs/hello-world.html), and if you have questions don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️. 
 {% endhint %}
 
 ### State Manager - Frontity Connect

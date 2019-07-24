@@ -85,6 +85,6 @@ npx frontity build && npx now
 **Now** will assign you a domain \(something like **your-site.now.sh**\) that works exactly like your real domain would once you use the `--target production` command.
 
 {% hint style="info" %}
-Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
 

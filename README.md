@@ -106,7 +106,7 @@ Frontity is in a sense similar to GatsbyJS, but there are some key differences:
 * It’s **rendered dynamically**. This means people don’t have to rebuild the HTML each time they modify or publish something. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are many ways to configure it.
 * It can output Google AMP html created with the same React codebase.
 
-If you still have any doubts about Frontity or just want to share your thoughts, please feel free to post them on our [community forum](https://community.frontity.org). One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
+If you still have any questions about Frontity or just want to share your thoughts, please feel free to post them on our [community forum](https://community.frontity.org). One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
 
 {% hint style="info" %}
 To **get notified** of the latest framework updates and releases, **subscribe** to newsletter [**here**](https://frontity.org).

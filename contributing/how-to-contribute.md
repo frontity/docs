@@ -10,7 +10,7 @@ There are several ways to support the project and get involved. Don't know how t
 
 ## » Let's get the best framework ever 
 
-* [Try Frontity out](../getting-started/quick-start-guide.md) and share your **feedback** and **doubts** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic \(thread\) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _\[Feedback\] I found difficult to..._ If you ask a question, the title can be the question itself.
+* [Try Frontity out](../getting-started/quick-start-guide.md) and share your **feedback** and **questions** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic \(thread\) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _\[Feedback\] I found difficult to..._ If you ask a question, the title can be the question itself.
 * [Report bugs](https://github.com/frontity/frontity/issues) or issues. 🐞
 * New feature ideas? Feel free to suggest them [to the community](https://community.frontity.org/c/framework-design) or even open a [Pull Request](https://github.com/frontity/frontity/pulls).
 * If you want to help fixing bugs or contributing code, please refer to this [Code Contributions guide](code-contributions.md).
@@ -61,6 +61,6 @@ You can also make your suggestions to add other ways of contributing.
 
 
 {% hint style="info" %}
-Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
 

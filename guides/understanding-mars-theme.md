@@ -41,6 +41,6 @@ When starting `frontity`, all the packages defined in `frontity.settings.js` are
 
 
 {% hint style="info" %}
-Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
 

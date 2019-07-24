@@ -25,7 +25,7 @@ Sure! Our framework has support for both WordPress.com and WordPress.org sites a
 
 
 {% hint style="info" %}
-Do you have another doubt not included in this page? You can [ask the community](https://community.frontity.org) 👨‍👩‍👧‍👦
+Do you have another question not included in this page? You can [ask the community](https://community.frontity.org) 👨‍👩‍👧‍👦
 {% endhint %}
 
 

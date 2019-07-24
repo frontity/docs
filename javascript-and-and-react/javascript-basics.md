@@ -432,7 +432,7 @@ console.log(c); // Returns 55.
 
 As `items` has just two elements they are assigned to the first variables and `c` gets its default value.
 
-If you have any doubts, or you want more information about arrays and objects destructuring, it is well explained at the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+If you have any questions, or you want more information about arrays and objects destructuring, it is well explained at the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ### Template strings
 
@@ -543,7 +543,7 @@ For more detailed guides about these concepts, including classes, you can visit 
 
 
 {% hint style="info" %}
-These are the main JavaScript concepts used in Frontity, if you understand them, you will be able to continue with [React basics](react-basic.md) to master Frontity. If you want to go deeper in learning JavaScript, there are a lot of resources out there, and if you have any doubts don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️. 
+These are the main JavaScript concepts used in Frontity, if you understand them, you will be able to continue with [React basics](react-basic.md) to master Frontity. If you want to go deeper in learning JavaScript, there are a lot of resources out there, and if you have questions don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️. 
 {% endhint %}
 
 

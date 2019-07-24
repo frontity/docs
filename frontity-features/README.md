@@ -139,6 +139,6 @@ Our themes work with the WordPress manifest to get full PWA compatibility out of
 ### \*\*\*\*
 
 {% hint style="info" %}
-Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
 

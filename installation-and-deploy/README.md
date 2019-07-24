@@ -85,6 +85,6 @@ If you want more detail about each solution, you can check the previous section 
 \*\*\*\*
 
 {% hint style="info" %}
-Still any doubts? Ask the community! We are here to help 😊
+Still have questions? Ask the community! We are here to help 😊
 {% endhint %}
 

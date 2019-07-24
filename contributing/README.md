@@ -11,6 +11,6 @@ You will find different pages below which explain the different ways to make con
 
 
 {% hint style="info" %}
-Still any doubts? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
 
