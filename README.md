@@ -109,6 +109,6 @@ Frontity is in a sense similar to GatsbyJS, but there are some key differences:
 If you still have any questions about Frontity, please feel free to ask in our [community forum](https://community.frontity.org). One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
 
 {% hint style="info" %}
-To **get notified** of the latest framework updates, **subscribe** to our newsletter [**here**](https://frontity.org).
+**Subscribe** to our newsletter [**here**](https://frontity.org/#newsletter) ****to get notified of the **latest framework updates.**
 {% endhint %}
 
