@@ -14,72 +14,43 @@ These are the instructions to deploy Now on Frontity, once you are ready to depl
 
 If you don't have one, you can signup [here](https://zeit.co/signup).
 
-**2. Make sure you are in your Frontity folder in the command line**
-
-**3. Install the  `now`  package in your project:**
-
-```bash
-npm install --save-dev now
-```
-
-**4. In your Frontity folder, create this  `now.json`  file and change your site url**
+**2. In your Frontity folder, create this  `now.json`  file and change your site url**
 
 You should create a JSON file with your preferred text editor and save it in your project folder with name **now.json** .
 
 ```javascript
 {
-  "version": 2,
   "alias": ["www.your-site.com"],
+  "version": 2,
   "builds": [
     {
-      "src": "build/static/**/*",
-      "use": "@now/static"
-    },
-    {
-      "src": "favicon.ico",
-      "use": "@now/static"
-    },
-    {
-      "src": "build/server.js",
-      "use": "@now/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "headers": {
-        "cache-control": "max-age=31536000,s-maxage=31536000,immutable"
-      },
-      "dest": "/build/static/$1"
-    },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    {
-      "src": "/(.*)",
-      "headers": { "cache-control": "s-maxage=1,stale-while-revalidate" },
-      "dest": "/build/server.js"
+      "src": "package.json",
+      "use": "@frontity/now"
     }
   ]
 }
 ```
 
-**5. Add a CNAME of `www.your-site.com` to `alias.zeit.co` in your domain DNS settings.**
+**3. Add a CNAME of `www.your-site.com` to `alias.zeit.co` in your domain DNS settings.**
 
 {% hint style="info" %}
 If you don't know how to do this, contact your domain provider \(GoDaddy, CloudFlare, etc\)
 {% endhint %}
 
-**6. Deploy Frontity using this command**
+**4. Deploy Frontity using this command**
+
+Make sure you are in your Frontity folder and run:
 
 ```text
-npx frontity build && npx now --target production
+npx now --target production
 ```
 
 ### EXTRA: Deploy without having a real domain yet
 
-If you don't want to setup your domain yet, just skip point 5 and 6 and deploy your site using:
+If you don't want to setup your domain yet, just skip point 3 and 4 and deploy your site using:
 
 ```text
-npx frontity build && npx now
+npx now
 ```
 
 **Now** will assign you a domain \(something like **your-site.now.sh**\) that works exactly like your real domain would once you use the `--target production` command.
