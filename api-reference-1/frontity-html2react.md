@@ -170,7 +170,6 @@ An `Element` is an HTML tag or a React component.
 * **`component`** : `string | React.ComponentType` If it's a string, it's an HTML tag and if it's a function is a React component. You can change it at will and it is what you would usually do when you want to convert HTML tags to React components.
 * **`props`**: `object`  An object containing all the HTML attributes of that node or props of that React component. You can also change them at will.
 * **`children?`**: `array of nodes` An array containing other nodes, children to this one. If you want to get rid of the children, just overwrite it with `null` or an empty array.
-* afsafas asdfa
 
 **Node: `Text`**
 
