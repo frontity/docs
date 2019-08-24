@@ -51,9 +51,10 @@ const Post = ({ state, libraries }) => {
   return (
     <div>
       <Title />
-      <Content>        
-        <Html2React html={post.content.rendered} />
-      </Content>
+      <AuthorAndDate />
+      <FeaturedImage />
+      {/* Use Html2React to render the post HTML content */}
+      <Html2React html={post.content.rendered} />
     </div>
   );
 };
@@ -61,9 +62,9 @@ const Post = ({ state, libraries }) => {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Load a processor
+### Load processors
 
-The `processors` field is an array where you can push all the processors you want to use with `html2react`. You need to do this in the `beforeSSR` and `beforeCSR` functions of your theme or extension, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
+The `processors` field is an _array_ where you can push all the processors you want to use with `html2react`. You need to do this in the `init` function of your theme or extension, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
 
 {% code-tabs %}
 {% code-tabs-item title="index.js" %}
@@ -71,19 +72,16 @@ The `processors` field is an array where you can push all the processors you wan
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 
-const before = ({ libraries }) => {
-  // We use html2react to process the <img> tags inside the content HTML.
-  libraries.html2react.processors.push(image);
-};
-
 const marsTheme = {
-  name: "@frontity/mars-theme",
+  ...
   actions: {
     theme: {
-      beforeSSR: before,
-      beforeCSR: before
+      init: ({ libraries }) => {
+        // Add an Html2React processor for the <img> tags.
+        libraries.html2react.processors.push(image);
+      }
     }
-  },
+  }
   ...
 };
 
@@ -92,38 +90,41 @@ export default marsTheme;
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Create a processor
+### Create your own processors
 
-A processor is an object with two functions: `test` and `process`, a `name` and a `priority`.  The `test` function will evaluate the node, and if it returns `true`, this node will be passed to the `process` function in order to apply the processor.
+A processor is an object with four properties: `test`, `process`, `name` and `priority`.  
 
-As an example, this is how the `image` processor is implemented in `html2react`:
+The `test` function will evaluate the node, and if it returns `true`, this node will be passed down to the `process` function in order to apply the processor.
+
+For example, this is how the `image` processor is implemented in `html2react`:
 
 {% code-tabs %}
 {% code-tabs-item title="processors/image.js" %}
 ```typescript
 import Image from "@frontity/components/image";
 
-const image: Processor = {
+const image = {
   // We can add a name to identify it later.
   name: "image",
 
   // We can add a priority so it executes before or after other processors.
   priority: 10,
 
-  // Only process it if it's an image.
+  // Only process the node it if it's an image.
   test: node => node.component === "img",
   
   process: node => {
-    // If it's inside a noscript tag, we don't wont to process it.
+    // If the image is inside a <noscript> tag, we don't want to process it.
     if (node.parent.component === "noscript") return null;
 
-    // Many WP lazy load plugins move the src to the data-src, so we fix that.
+    // Many WP lazy load plugins move the real "src" to "data-src", so we move it back.
     if (node.props["data-src"])
       node.props.src = node.props["data-src"];
     if (node.props["data-srcset"])
       node.props.srcSet = node.props["data-srcset"];
       
-    // We tell html2react that it should use the <Image /> component.
+    // We tell Html2React that it should use the <Image /> component
+    // from @frontity/components, which includes lazy loading support.
     node.component = Image;
 
     return node;
@@ -134,6 +135,56 @@ export default image;
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+You don't need to return a React component, you can also modify the attributes \(props\) of the node. For example, this processor adds `target="_blank"` to the `<a>` tags with href starting with `http`:
+
+```typescript
+const extAnchors = {
+  name: "external anchors",
+  priority: 10,
+  // Only process the node it if it's an anchor and href starts with http.
+  test: node => node.component === "a" && node.props.href.startsWith("http"),
+  // Add the target attribute.
+  process: node => {
+    node.props.target = "_blank";
+    return node;
+  }
+};
+```
+
+### Nodes
+
+The object `node` received by both `test` and `process`can be an `Element`, a `Text` or a `Comment`. You can distinguish between them using `node.type`.
+
+The common properties are:
+
+* **`type`** : `"element" | "text" | "comment"`
+* **`parent?`**: `Element` The parent of this node, which is always an `element` \(`text` or `comment` can't have children\).
+* **`ignore?`**: `boolean` If you set `ignore` to `true` for a node, it won't pass any `test`. This is useful in some situations when you don't want additional processors applied to this node. 
+
+**Node: `Element`**
+
+An `Element` is an HTML tag or a React component.
+
+* **`type`** : `"element"`
+* **`component`** : `string | React.ComponentType` If it's a string, it's an HTML tag and if it's a function is a React component. You can change it at will and it is what you would usually do when you want to convert HTML tags to React components.
+* **`props`**: `object`  An object containing all the HTML attributes of that node or props of that React component. You can also change them at will.
+* **`children?`**: `array of nodes` An array containing other nodes, children to this one. If you want to get rid of the children, just overwrite it with `null` or an empty array.
+* afsafas asdfa
+
+**Node: `Text`**
+
+An `Text` is a text content. For example, the text inside a `<p>` tag.
+
+* **`type`** : `"text"`
+* **`content`** : `string`
+
+**Node: `Comment`**
+
+An **`Comment`** is just an HTML comment. Like this `<!-- comment -->`.
+
+* **`type`** : `"comment"`
+* **`content`** : `string`
 
 ## API Reference
 
@@ -155,7 +206,7 @@ libraries.html2react.processors.push(image);
 const i = libraries.html2react.processors.findIndex(pr => pr.name === "image");
 libraries.html2react.processors.splice(i, 1);
 
-// Change processor priority.
+// Change a processor priority.
 const pr = libraries.html2react.processors.find(pr => pr.name === "image");
 pr.priority = 20;
 ```
@@ -164,7 +215,7 @@ pr.priority = 20;
 
 #### `libraries.html2react.Component`
 
-A React component used to render the parsed HTML.
+The React component used to render the parsed HTML.
 
 **Props**
 
