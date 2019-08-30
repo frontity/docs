@@ -111,7 +111,7 @@ Now that we have the data we need to render our app, we can start writing some R
 
 ### Theme component
 
-Our main React component will be `Theme`, where we are deciding what kind of view to render, and in order for that component to access the store, we need to wrap it with the `connect` function. Once it's wrapped, we can access `state` and `actions` directly from the props. In this case, we are using `state.source.get()` to retrieve info about what kind of content should be rendered in the current path. If it happens to be an archive, we will render the `<List />` component, if a post type, the `<Post />` and if for some reason `wp-souce` couldn't retrieve the data from our WP, we will render a 404 page.
+Our main React component will be `Theme`, where we are deciding what kind of view to render, and in order for that component to access the store, we need to wrap it with the `connect` function. Once it's wrapped, we can access `state` and `actions` directly from the props. In this case, we are using `state.source.get()` to retrieve info about what kind of content should be rendered in the current path. If it happens to be an archive, we will render the `<List />` component, if a post type, the `<Post />` and if for some reason `wp-source` couldn't retrieve the data from our WP, we will render a 404 page.
 
 Here you have the code of `Theme` with some comments:
 
