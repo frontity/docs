@@ -49,6 +49,10 @@ This option allows you to show a specific page when accessing to the homepage of
 
 This option allows you to show the posts archive when accessing to a specific URL of your site, instead of the homepage. For example, if you set this value to `/latest`, then the posts archive will be shown if you access `/latest` instead of `/`. It is useful when used in combination with `state.source.homepage`.
 
+Think about **state.source.homepage** and **state.source.postsPage** as the equivalents in Frontity of the **Your homepage displays** setting of WordPress:
+
+![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35.png)
+
 #### state.source.categoryBase
 
 Change the base prefix of URLs for category pages by the indicated one.
