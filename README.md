@@ -65,7 +65,7 @@ Frontity apps live in a Node.js server tailored for WordPress.
 
 ![](.gitbook/assets/frontity-architecture.png)
 
-Frontity is prepared to be hosted either in a regular Node.js server or in serverless services like [AWS Lambda](https://aws.amazon.com/lambda), [Now](https://zeit.co/now), [Netlify](https://www.netlify.com/), [Google Functions](https://cloud.google.com/functions/), and so on. That makes it super cheap and infinitely scalable.
+Frontity is prepared to be hosted either in a regular Node.js server or in serverless services. That makes it super cheap and infinitely scalable.
 
 {% hint style="info" %}
 We are working in other possible installations, although we strongly recommend this one. You can check them at [possible installations page](installation-and-deploy/possible-architectures.md).
