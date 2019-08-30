@@ -47,7 +47,7 @@ This option allows you to show a specific page when accessing to the homepage of
 
 #### state.source.postsPage
 
-This option allows you to show the posts archive when accessing to a specific page of your site.  For example, if you set this value to `/latest` then the posts archive will be shown if you access to that page.
+This option allows you to show the posts archive when accessing to a specific URL of your site, instead of the homepage. For example, if you set this value to `/latest`, then the posts archive will be shown if you access `/latest` instead of `/`. It is useful when used in combination with `state.source.homepage`.
 
 #### state.source.categoryBase
 

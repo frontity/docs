@@ -198,12 +198,12 @@ const List = ({ state }) => {
           {data.taxonomy}: {state.source[data.taxonomy][data.id].name}
         </Header>
       )}
-      
+
       {/* If the list is an author, we render a title. */}
       {data.isAuthor && (
         <Header>Author: {state.source.author[data.id].name}</Header>
       )}
-      
+
       {/* Iterate over the items of the list. */}
       {data.items.map(({ type, id }) => {
         const item = state.source[type][id];
@@ -404,8 +404,6 @@ const settings = {
   ]
 };
 ```
-
-
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
