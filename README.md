@@ -73,7 +73,7 @@ We are working in other possible installations, although we strongly recommend t
 
 ## **Frontity features**
 
-Frontity and its extensions will help save you a lot of development time while enjoying of all of the latest technology trends, already configured for you. ****You can check them in detail at [Frontity Features page](frontity-features/). 
+Frontity and its extensions will help save you a lot of development time while enjoying of all of the latest technology trends, already configured for you. ****You can check them in detail here: [Frontity Features page](frontity-features/). 
 
 Here are the main ones:
 
