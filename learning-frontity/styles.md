@@ -244,6 +244,42 @@ const StyledDiv = styled.div`
 `;
 ```
 
+### External CSS files
+
+External CSS files should be imported using the `<Global>` component. 
+
+{% hint style="info" %}
+When you import a CSS file in Frontity, it is just a string of CSS.
+{% endhint %}
+
+Add the `<Global>` component with the external styles to your theme:
+
+```jsx
+import { Global, css } from "frontity";
+import externalCss from "some-library/styles.css";
+
+const Theme = ({ state }) => {
+  ...
+
+  return (
+    <>
+      <Head>
+        ...
+      </Head>
+      <Body>
+        ...
+      </Body>
+      
+      <Global styles={css(externalCss)} />
+    </>
+  );
+};
+```
+
+{% hint style="warning" %}
+**Using `<Global>` for other than html tags is not recommended** because Frontity is not able to optimize it. That means you can use it to import external styles but if you really want Frontity to able to optimize it, you should extract that CSS and move it styled components instead.
+{% endhint %}
+
 ### Keyframes
 
 Finally, the last import you may need it is `keyframes` . This one is used to define and use animations in your CSS.
