@@ -14,6 +14,7 @@
   * [4. State](learning-frontity/4.-state.md)
   * [5. Actions](learning-frontity/5.-actions.md)
   * [6. Namespaces](learning-frontity/6.-namespaces.md)
+  * [7. Libraries](learning-frontity/7.-libraries.md)
 * [🏗 Installation & Deploy](installation-and-deploy/README.md)
   * [Possible Installations](installation-and-deploy/possible-architectures.md)
   * [Deploy Frontity on Now](installation-and-deploy/deploy-on-now.md)
