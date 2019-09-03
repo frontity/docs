@@ -325,3 +325,36 @@ If you want to go deeper, you should take a look at their docs. You don't need t
 
 That's it! You are now a master of CSS-in-JS.
 
+### From SASS to CSS-in-JS
+
+#### Why cannot I use SASS?
+
+Frontity is an "opinionated framework" because it comes with its own State Manager and CSS solution.
+
+That's not common among the JS framework space, but it gives Frontity some advantages we deem crucial for its success: all the Frontity packages use the same system for state managing and styling. That means things like:
+
+* They are able to communicate between each other. 
+* They all use the same modules so the bundle size it not increased when you add a new package.
+* We can offer out-of-the-box optimizations other frameworks can't.
+
+#### SASS to CSS-in-JS resources
+
+CSS-in-JS supports all the SASS features. If you are used to SASS, our recommendation is to learn CSS-in-JS. It won't take you more than 30 minutes to learn how to do the very same things you are used to do in SASS.
+
+These are some resource you might find useful to make the transition to CSS-in-JS:
+
+{% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8" %}
+
+{% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js" %}
+
+{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html" %}
+
+#### Migrating from SASS to CSS-in-JS
+
+If you already have a base of SASS you want to migrate, you can use these tools to extract your variables and use them directly in JavaScript:
+
+* [https://github.com/adamgruber/sass-extract-js](https://github.com/adamgruber/sass-extract-js)
+* [https://github.com/jgranstrom/sass-extract](https://github.com/jgranstrom/sass-extract)
+
+
+
