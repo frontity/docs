@@ -1,6 +1,6 @@
-# 1. Settings
+# 2. Settings
 
-The first thing you should do when you start a new **Frontity** project is to create a `frontity.settings.js`file. Let's see each concept you need to understand in order to use it properly.
+The first thing you should do when you start a new **Frontity** project is to configure your `frontity.settings.js`file. Let's see each concept you need to understand in order to use it properly.
 
 ## Site
 

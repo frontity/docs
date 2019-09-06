@@ -337,7 +337,7 @@ These are the main React concepts used in Frontity, if you understand them, you 
 
 Usually React is used with a State Manager that exposes a global `state` tree which can be accessed from any component of the app. This helps you keep different components in sync, and it is also a medium to communicate between them.
 
-There are many state managers, like Redux or Mobx, but in **Frontity** we have created our own state manager named **Frontity Connect.** For more info you can check [Learning Frontity - State](../learning-frontity/4.-state.md).
+There are many state managers, like Redux or Mobx, but in **Frontity** we have created our own state manager named **Frontity Connect.** For more info you can check [Learning Frontity - State](../learning-frontity/state.md).
 
 Let's see an example of how `state` is used and how easy is to manage with **Frontity Connect**. As said before, you should imagine the state as an object with info about the app:
 

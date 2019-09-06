@@ -4,7 +4,7 @@
 This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
 {% endhint %}
 
-Do you remember [Actions](5.-actions.md) right? Libraries are pretty similar. Actions have been defined as a reusable set of functions aimed to change the state of the application. So **libraries** are a reusable set of tools too, NOT aimed to change the state but other parts of the application, and be available for many packages.
+Do you remember [Actions](actions.md) right? Libraries are pretty similar. Actions have been defined as a reusable set of functions aimed to change the state of the application. So **libraries** are a reusable set of tools too, NOT aimed to change the state but other parts of the application, and be available for many packages.
 
 Let's see two different examples: `stringify` and the array of processors of `html2react`. 
 

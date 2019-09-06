@@ -1,4 +1,4 @@
-# 3. Roots and Fills
+# 4. Roots and Fills
 
 {% hint style="info" %}
 This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
@@ -60,17 +60,17 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it. For example, let's imagine a _ShareModal_ package that has a modal like this:
+Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it. For example, let's image a _ShareModal_ package that has a modal like this:
 
 ![](../.gitbook/assets/blog-frontity-org.jpg)
 
-This package can include the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme. The **root** could be something like this:
+This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme. The **root** could be something like this:
 
 {% code-tabs %}
 {% code-tabs-item title="/packages/my-share-modal-package/src/components/index.js" %}
 ```jsx
 const ShareRoot = ({ state }) => (
-  state.share.isModalOpen && <ShareModal />
+  state.share.isModalOpen & <ShareModal />
 ); 
 export default ShareRoot;
 ```
@@ -108,7 +108,7 @@ export default {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and it it is, use it's `actions.share.openModal()` action when appropriate. For example in these buttons:
+Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if it is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
 
 ![](../.gitbook/assets/blog.jpg)
 
@@ -128,7 +128,7 @@ const MyPackage = () => (
 );
 ```
 
-So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` adding tags inside a `<Head>`.
+So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page]().
 
 ## Fills
 

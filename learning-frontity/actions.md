@@ -1,4 +1,4 @@
-# 5. Actions
+# 6. Actions
 
 {% hint style="info" %}
 This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.

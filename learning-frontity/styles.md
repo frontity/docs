@@ -1,4 +1,4 @@
-# 8. Styles
+# 9. Styles
 
 So far you should know all the concepts needed to master **Frontity**, so let's see how you can customize your theme.
 

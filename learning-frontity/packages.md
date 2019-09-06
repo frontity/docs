@@ -1,33 +1,10 @@
-# 2. Packages
+# 3. Packages
+
+
 
 {% hint style="info" %}
 This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
 {% endhint %}
-
-All the **Frontity** code lives inside packages. There is no "app code", like in other frameworks.
-
-For those of you coming from WordPress, that's no surprise. All the WordPress code, _except WordPress itself obviously_, is contained in either the theme or the plugins.
-
-If you come from React this may be less intuitive but it only means that the files of your project are always inside a **package**, either your theme or any other extension. 
-
-## Project Folder Structure
-
-This is the folder structure of a **Frontity** project:
-
-```text
-my-frontity-project/
-|__ node_modules/
-|__ package.json
-|__ frontity.settings.js
-|__ packages/
-    |__ my-theme/
-    |__ my-custom-extension/
-```
-
-* `frontity.settings.js` is explained in [the previous section](settings.md).
-* `package.json` is the file used for configuration in any Node project. There are many great articles about it like [this one](https://medium.com/beginners-guide-to-mobile-web-development/why-package-json-npm-basics-cab3e8cd150), [this one](https://flaviocopes.com/package-json/) or [this one](https://alligator.io/nodejs/package-json/).
-* `node_modules` is the folder where all your dependencies are installed. For example, the core of Frontity \(`@frontity/core`\) is installed there. If you install external packages like `@frontity/tiny-router` or `@frontity/wp-source` they will be there as well.
-* `packages` is the folder where your **local packages** live.
 
 ## Local Packages
 
@@ -155,7 +132,7 @@ Yes, it is **that simple** :\)
 
 ## Package exports
 
-Packages can export any of these elements:
+Packages can export any of these elements in their `index.js` file:
 
 * **Roots:** React components that will be included in the app.
 * **Fills**: React components that will be included in the app, but injected after the roots.
@@ -202,7 +179,7 @@ export default {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-By the way, it's probably good to point out here that in Frontity all packages are equal. Frontity doesn't which one represents a `theme` or which one represents a `source`. It treats all of them equally.
+By the way, it's probably good to point out here that in Frontity all packages are equal. Frontity doesn't know which one represents a `theme` or which one represents a `source`. It treats all of them equally.
 
 Let's explore the **Roots** and **Fills** in the next section.
 
