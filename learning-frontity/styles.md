@@ -337,6 +337,8 @@ That's not common among the JS framework space, but it gives Frontity some advan
 * They all use the same modules so the bundle size it not increased when you add a new package.
 * We can offer out-of-the-box optimizations other frameworks can't.
 
+For a more in-depth explanation about the reasons we believe it's a good approach to stick to CSS-in-JS vs other CSS solutions, please take a look at this [community thread](https://community.frontity.org/t/use-css-or-scss-instead-of-emotion/451/9?u=luisherranz).
+
 #### SASS to CSS-in-JS resources
 
 CSS-in-JS supports all the SASS features. If you are used to SASS, our recommendation is to learn CSS-in-JS. It won't take you more than 30 minutes to learn how to do the very same things you are used to do in SASS.
