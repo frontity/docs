@@ -6,7 +6,7 @@ For those of you coming from WordPress, that's no surprise. All the WordPress co
 
 At this point, it is important to understand and differentiate between two types of packages:
 
-* **Core packages**:  – `frontity` and `@frontity/core` These are packages contain the core of Frontity and need to be installed in any Frontity project.
+* **Core packages**:  – `frontity` and `@frontity/core` These packages contain the core of Frontity and need to be installed in any Frontity project.
 * **Frontity packages**:  – For example `@frontity/wp-source` ,  `@frontity/tiny-router` or `@frontity/my-theme` These are like the equivalent to the WordPress theme and plugins. You can change them if you want, add more, create new ones...
 
 Both core and Frontity packages are _npm packages_ and need to be installed with `npm install the-package-name`. Don't worry, if you have used `npx frontity create`, the first packages were already installed for you.
@@ -44,7 +44,7 @@ If you want to change these, you should move them first to `/packages/` folder, 
 
 ### The `/packages/` folder
 
-This is the folder where your **local packages** live. These are the packages where you will add code and functionality to your site. It will include your theme, the Frontity packages you moved from `node_modules` folder to adapt their code and the custom packages you create. They are core in Frontity, so they are explained in detail later at [Packages](packages.md).
+This is the folder where your **local packages** live. These are the packages where you will add code and functionality to your site. It will include your theme, the Frontity packages you moved from `node_modules` folder to adapt their code, and the custom packages you create. They are core in Frontity, so they are explained in detail later at [Packages](packages.md).
 
 ### The `package.json` file
 
