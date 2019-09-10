@@ -65,6 +65,33 @@ Change the base prefix of URLs for tag pages by the indicated one.
 
 > **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
 
+#### state.source.postEndpoint
+
+Set the endpoint against which calls to the REST API are made **when posts are requested**, i.e. a single post or a list like the post archive, date archives, categories, tags, authors, etc. This allows you to request other post types apart from `post` \(for example, using `"multiple-post-type"`\).
+
+The default value is `"posts"`.
+
+#### state.source.params
+
+Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. For example, if you set this value to 
+
+```javascript
+{
+  params: {
+    per_page: 5,
+    type: ["post", "page"]
+  }
+}
+```
+
+and then you do, for example
+
+```javascript
+actions.source.fetch("/");
+```
+
+the query part of the REST API call will have `per_page=5&ype[]=post&type[]=page`.
+
 ## How to use
 
 Let’s start by explaining how the state data is used and then how that data is requested and stored. The state works with two main concepts: **links** and **entities**.
