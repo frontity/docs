@@ -67,13 +67,13 @@ Change the base prefix of URLs for tag pages by the indicated one.
 
 #### state.source.postEndpoint
 
-Set the endpoint against which calls to the REST API are made **when posts are requested**, i.e. a single post or a list like the post archive, date archives, categories, tags, authors, etc. This allows you to request other post types apart from `post` \(for example, using `"multiple-post-type"`\).
+Set the endpoint against which calls to the REST API are made **when posts are requested**, i.e. when fetching a single post, the post archive, date archives, categories, tags, authors, etc. This is useful when you want to use another post type as your default, for example “products”.
 
 The default value is `"posts"`.
 
 #### state.source.params
 
-Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. For example, if you set this value to 
+Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. This is useful to filter fields from the REST API, change the default `per_page` value and so on. For example, if you set this value to 
 
 ```javascript
 {
@@ -90,7 +90,7 @@ and then you do, for example
 actions.source.fetch("/");
 ```
 
-the query part of the REST API call will have `per_page=5&ype[]=post&type[]=page`.
+the query part of the HTTP call to the REST API will have `per_page=5&ype[]=post&type[]=page`.
 
 ## How to use
 
