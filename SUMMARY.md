@@ -23,6 +23,7 @@
   * [Possible Installations](installation-and-deploy/possible-architectures.md)
   * [Deploy Frontity on Now](installation-and-deploy/deploy-on-now.md)
 * [⚙ Frontity Packages](api-reference-1/README.md)
+  * [frontity](api-reference-1/frontity.md)
   * [@frontity/tiny-router](api-reference-1/router.md)
   * [@frontity/wp-source](api-reference-1/wordpress-source.md)
   * [@frontity/html2react](api-reference-1/frontity-html2react.md)
