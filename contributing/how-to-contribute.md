@@ -23,10 +23,10 @@ There are several ways to support the project and get involved. Don't know how t
 * Tweet about things you build with Frontity \(make sure to mention @Frontity or use the hashtag **\#Frontity** so we can be notified and share it as well\).
 * If you read a post on Reddit, Quora or other blogs where Frontity could be relevant, let them know.
 
-**Blogging**
+**Writing content**
 
-* Create **tutorials** or any other relevant content about Frontity. [Let us know](https://community.frontity.org/c/communication) if we can help and don't forget to share your posts [here](https://community.frontity.org/c/communication).
-* Would you prefer to write for Frontity's blog? We are looking for contributors and **guest posts** from the community. Feel free to share your ideas by opening a new topic in the [Communication category](https://community.frontity.org/c/communication) of the forum and mention @Reyes. The more descriptive the title of the topic the better: E.g. _\[Guest post idea\] Best resources to learn React_.
+* We're always looking for contributors to help with adding more content and better documentation. You can create **guides**, **tutorials,** or any other relevant content about Frontity. [Let us know](https://community.frontity.org/c/communication) if we can help and don't forget to share them [here](https://community.frontity.org/c/communication) so we can be notified.
+* Would you prefer to write for Frontity's blog? Feel free to share your ideas by opening a new topic in the [Communication category](https://community.frontity.org/c/communication) of the forum and mention @Reyes. The more descriptive the title of the topic the better: E.g. _\[Guest post idea\] Best resources to learn React_.
 
 **Speaking about Frontity in events**
 
