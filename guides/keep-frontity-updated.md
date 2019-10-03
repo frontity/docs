@@ -42,13 +42,24 @@ cd ../.. # Go back to the root folder
 npm install
 ```
 
-{% hint style="danger" %}
-Make sure there doesn't exist any `node_modules` folder inside `/packages`. It should be only one`node_modules`, in your root folder.
+## Troubleshooting
 
-If you find additional node\_modules folders inside your `/packages`, delete them, delete the `package-lock.json` file and do an `npm install` from the root folder again.
-{% endhint %}
+### Delete all the dependencies and start over
 
+If you are having problems, follow these steps to install everything from scratch:
 
+1. Make sure you have updated all your dependencies in:
+   * The root `package.json` of your project.
+   * All the `package.json` files of your local packages.
+2. Delete all the `node_modules` folders of:
+   * The root of your project.
+   * All your local packages.
+3. Delete all the `package-lock.json` file of:
+   * The root of your project.
+   * All your local packages.
+4. Run `npm install` again.
+
+Everything should work after this.
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
