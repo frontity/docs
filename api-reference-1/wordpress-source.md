@@ -92,6 +92,59 @@ actions.source.fetch("/");
 
 the query part of the HTTP call to the REST API will have `per_page=5&ype[]=post&type[]=page`.
 
+#### state.source.postTypes
+
+This option allows you to show the Custom Post Types you create at WordPress when accessing to their URLs. It is an array of objects, each object being a different CPT. It has three arguments:
+
+* `type` : Type slug. The slug you configured for your Custom Post Type. e.g. `movies`
+* `endpoint` : REST API endpoint from where this post type can be fetched. e.g. `movies`
+* `archive` \(optional\): the URL of the archive of this Custom Post Type, e.g. where all the movies are listed.
+
+Differentiating `type` and `endpoint`may be confusing as they are usually the same. You can confirm you are doing it okay going to the CPT `endpoint` :
+
+![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_movies.png)
+
+So in this case, the settings would be:
+
+```javascript
+postTypes: [
+  {
+    type: "movies",
+    endpoint: "movies",
+    archive: "/movies_archive"
+  }
+]
+```
+
+#### state.source.taxonomies
+
+Similar to `postTypes`setting, this one allows you to show the lists of posts of a Custom Taxonomies you create at WordPress when accessing to their URLs. It is an array of objects, each object being a different Custom Taxonomy. It has four arguments:
+
+* `taxonomy` : Taxonomy slug. The slug you configured for your Custom Taxonomy. 
+* `endpoint` : REST API endpoint from where this taxonomy can be fetched.
+* `postTypeEndpoint` \(optional\): REST API endpoint from where posts of this taxonomy can be fetched. Default is "posts", but if the Custom Taxonomy is meant to load Custom Post Types instead, you have to add its endpoint here.
+* `params` \(optional\): Extra params to be used while fetching the list of posts.
+
+Again, differentiating `taxonomy` and `endpoint`may be confusing as they usually are the same too. You can confirm you are doing it okay going to the Custom Taxonomy `endpoint` :
+
+![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_actor.png)
+
+Note that in this case `taxonomy`and `endpoint`are different. In the next example, we will fetch CPT "movies" instead of "posts", and add some params. It would be something like this:
+
+```javascript
+taxonomies: [
+  {
+    taxonomy: "actors",
+    endpoint: "actor",
+    postTypeEndpoint: "movies",
+    params: {
+      per_page: 5,
+      _embed: true
+    }
+  }
+]
+```
+
 ## How to use
 
 Let’s start by explaining how the state data is used and then how that data is requested and stored. The state works with two main concepts: **links** and **entities**.
