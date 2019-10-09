@@ -98,7 +98,7 @@ This option allows you to show the Custom Post Types you create at WordPress whe
 
 * `type` : Type slug. The slug you configured for your Custom Post Type. e.g. `movies`
 * `endpoint` : REST API endpoint from where this post type can be fetched. e.g. `movies`
-* `archive` \(optional\): the URL of the archive of this Custom Post Type, e.g. where all the movies are listed.
+* `archive` \(optional\): the URL of the archive of this Custom Post Type, where all of them are listed. e.g. `/movies_archive` .
 
 Differentiating `type` and `endpoint`may be confusing as they are usually the same. You can confirm you are doing it okay going to the CPT `endpoint` :
 
