@@ -6,6 +6,20 @@ This "Learning Frontity" guide is intended to be read in order so please start f
 
 Let's talk now about **namespaces** and how we, as a community, can use them to extend Frontity and create a better tool for everyone. 
 
+In **Frontity** `state`, `actions` and `libraries` belong to a shared space among all packages, so each package needs to use its own namespace.
+
+To avoid conflicts between packages we could simply use the name of the package, but we use **namespaces** instead because some packages are interchangeable. For example, no matter if you install `wp-comments` \(native WordPress comments\) or `disqus-comments` \(Disqus comments\) in your Frontity project because the theme is going to access it using the common `comments` namespace and everything is going to work. Another person could create a third `comments` package in the future, based on a new service, and as long as it respects the same structure \(written in TypeScript\), all the themes \(even the old ones!\) will work perfectly.
+
+More examples of **namespaces** are:
+
+* `source`: for example `wp-source`, `wpgrahql-source` or even `drupal-source`…
+* `analytics`: for example `google-analytics`, `gtm-analytics`, `mixpanel-analytics`…
+* `notifications`: for example `onesignal-notifications`, `pushwoosh-notifications`…
+* `share`: for example `modal-share`, `native-share`…
+* `router`: for example `tiny-router`, `3d-router`…
+
+But let's start from the beginning.
+
 ## Using namespaces in package exports
 
 As we've already seen, this could be a typical `theme` package:
@@ -90,22 +104,9 @@ actions: {
 }
 ```
 
-and not like this:
-
-```javascript
-state: {
-  isMenuOpen: false,
-},
-actions: {
-  toggleMenu: ({ state }) => {
-    state.isMenuOpen = !state.isMenuOpen; // <- Be aware, this is wrong!!
-  }
-}
-```
-
 ### 2. It's easier for TypeScript
 
-Even tho TypeScript is optional in Frontity, we make sure it has excellent support in case you want to use it. TypeScript gets really complex when you try to modify the structure of your objects, and in order to make it as simple as possible, it's good to create objects with the same structure that they will be consumed later. So yes, TypeScript just works :\) 
+Even tho TypeScript is optional in **Frontity**, we make sure it has excellent support in case you want to use it. TypeScript gets really complex when you try to modify the structure of your objects, and in order to make it as simple as possible, it's good to create objects with the same structure that they will be consumed later. So yes, TypeScript just works :\) 
 
 ### 3. Multiple namespaces per package
 
@@ -173,7 +174,7 @@ export default {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Now, all the `theme`  packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If it is, they can include its React component after the Post content. 
+Now, all the `theme`  packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If it is, they can include its React component after the post content. 
 
 {% code-tabs %}
 {% code-tabs-item title="/packages/my-awesome-theme/src/components/Post.js" %}
@@ -182,14 +183,14 @@ const Post = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source.post[data.id];
   
-  // Check if libraries.comments exist and if it does get the Comment component.
-  const Comment = libraries.comments ? libraries.comments.Comment : null;
+  // Check if libraries.comments exist and if it does get the Comments component.
+  const Comments = libraries.comments ? libraries.comments.Comments : null;
   
   return (
     <Container>
       <Title title={post.title.rendered} />
       <Content html={post.content.rendered} />
-      <Comment /> // <- Insert the Comment component in its place.
+      <Comments /> // <- Insert the Comments component in its place.
     </Container>
   );
 };
@@ -216,9 +217,9 @@ export default {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-But what if \(and now it is when this become interesting\) some user doesn't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
+But what if \(and now it is when this become interesting\) users don't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
 
-Then he/she just have to install `disqus-comments` instead:
+Then they just have to install `disqus-comments` instead:
 
 {% code-tabs %}
 {% code-tabs-item title="frontity.settings.js" %}
@@ -228,14 +229,16 @@ export default {
     "my-awesome-theme",
     "@frontity/tiny-router",
     "@frontity/wp-source",
-    "@frontity/disqus-comments" // <- That's it again. You have disqus now.
+    "@frontity/disqus-comments" // <- That's it. You have disqus now.
   ]
 }
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-The `disqus-comments` package also exports a `Comment` component in `libraries.comments.Comment` so the theme inserts that instead. Actually, the `theme` has no idea about what specific implementation of `comments` you have installed. 
+The `disqus-comments` package also exports a `Comments` component in `libraries.comments.Comments` so the theme inserts that instead. 
+
+Actually, the `theme` has no idea about what specific implementation of `comments` you have installed. Everything works and the theme didn't need to change.
 
 ### Example: `analytics`
 
@@ -277,7 +280,9 @@ export default {
         theme: {
             openShareModal: ({ state, actions }) => {
                 state.theme.shareOpen = true;
-                actions.analytics.sendEvent("share-modal-open");
+                if (actions.analytics) {
+                  actions.analytics.sendEvent("share-modal-open");
+                }
             }
         }
     }
@@ -286,5 +291,5 @@ export default {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-When users open the share modal, a new event is sent to the analytics service installed.
+When users open the share modal, a new event is sent to the analytics service of the `analytics` package which is installed in this **Frontity** project, not matter which one it is 🎉🎉
 
