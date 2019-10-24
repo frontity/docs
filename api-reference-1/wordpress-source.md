@@ -400,7 +400,7 @@ Handlers are objects that associate a path pattern with a function that gets the
 
 * `name`: string that identify this handler.
 * `priority`: number that lets `fetch` to know in which order handlers should be evaluated.
-* `pattern`: pattern which paths are compared with.
+* `pattern`: pattern which paths are compared with. We use [path-to-regexp](https://github.com/pillarjs/path-to-regexp) under the hood, so check its documentation to know how to write patterns.
 * `func`:  function that retrieves entities and adds all info to the state. It receives the following arguments:
   * `route`: the route that are being fetched
   * `params`: values obtained from the pattern after a match
