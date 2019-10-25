@@ -76,11 +76,21 @@ The default value is `"posts"`.
 Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. This is useful to filter fields from the REST API, change the default `per_page` value and so on. For example, if you set this value to 
 
 ```javascript
-{
-  params: {
-    per_page: 5,
-    type: ["post", "page"]
-  }
+module.exports = {
+  packages: [
+    {
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          api: "https://site.com/wp-json",
+          params: {
+            per_page: 5,
+            type: ["post", "page"]
+          }
+        }
+      }  
+    }
+  ]
 }
 ```
 
@@ -90,7 +100,7 @@ and then you do, for example
 actions.source.fetch("/");
 ```
 
-the query part of the HTTP call to the REST API will have `per_page=5&ype[]=post&type[]=page`.
+the query part of the HTTP call to the REST API will be `per_page=5&type[]=post&type[]=page`.
 
 #### state.source.postTypes
 
