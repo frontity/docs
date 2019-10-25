@@ -94,13 +94,7 @@ module.exports = {
 }
 ```
 
-and then you do, for example
-
-```javascript
-actions.source.fetch("/");
-```
-
-the query part of the HTTP call to the REST API will be `per_page=5&type[]=post&type[]=page`.
+and then you visit a URL \(or use `actions.source.fetch`\), the query part of the HTTP call to the REST API will be `per_page=5&type[]=post&type[]=page`.
 
 #### state.source.postTypes
 
