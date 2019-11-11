@@ -6,8 +6,8 @@ The first thing you should do when you start a new **Frontity** project is to co
 
 A **site** is a set of packages and settings. For example, this is a site:
 
-{% code-tabs %}
-{% code-tabs-item title="frontity.settings.js" %}
+{% tabs %}
+{% tab title="frontity.settings.js" %}
 ```javascript
 export default [
   {
@@ -25,8 +25,8 @@ export default [
   }
 ]
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Multiple Sites
 
@@ -95,8 +95,8 @@ For now let's leave it here. We'll talk later about how you can use this mode in
 
 You can specify a different set of **packages** for each site. They can be either strings or objects:
 
-{% code-tabs %}
-{% code-tabs-item title="frontity.settings.js" %}
+{% tabs %}
+{% tab title="frontity.settings.js" %}
 ```javascript
 export default [
   {
@@ -116,8 +116,8 @@ export default [
   }
 ]
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 As you can see, they have an `active` prop. That means you can deactivate a package without having to delete it from your settings file.
 
@@ -135,8 +135,8 @@ If you come from a WordPress background, you can think of **Frontity** `state`as
 
 You have the opportunity to modify the initial `state` of your site in the `frontity.settings.js` file. You can do it in a general `state` object or inside packages.
 
-{% code-tabs %}
-{% code-tabs-item title="frontity.settings.js" %}
+{% tabs %}
+{% tab title="frontity.settings.js" %}
 ```javascript
 export default [
   {
@@ -161,15 +161,15 @@ export default [
   }
 ]
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 In **Frontity**, the `state` is  organized in what we call **namespaces**. It means that each package uses a specific part of the state: a **namespace**. For example, our `wp-source` package uses of the `source` namespace to store its settings. 
 
 And our `tiny-router` package uses the `router` namespace:
 
-{% code-tabs %}
-{% code-tabs-item title="frontity.settings.js" %}
+{% tabs %}
+{% tab title="frontity.settings.js" %}
 ```javascript
 packages: [
   {
@@ -182,8 +182,8 @@ packages: [
   }
 ]
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 For now, let's leave it here. We will explain why the namespaces are important later.
 

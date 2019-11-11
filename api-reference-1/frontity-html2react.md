@@ -14,8 +14,8 @@ npm i @frontity/html2react
 
 And include it in your `frontity.settings.js` file:
 
-{% code-tabs %}
-{% code-tabs-item title="frontity.settings.js" %}
+{% tabs %}
+{% tab title="frontity.settings.js" %}
 ```javascript
 module.exports = {
   packages: [
@@ -23,8 +23,8 @@ module.exports = {
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Settings
 
@@ -36,8 +36,8 @@ You don't need to configure any settings for this package.
 
 This is how you need to include the Component that will render the parsed content. The only prop it takes is `html`, and you'll usually pass `post.content.rendered` to it:
 
-{% code-tabs %}
-{% code-tabs-item title="post.js" %}
+{% tabs %}
+{% tab title="post.js" %}
 ```jsx
 import React from 'react'
 
@@ -59,15 +59,15 @@ const Post = ({ state, libraries }) => {
   );
 };
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Load processors
 
 The `processors` field is an _array_ where you can push all the processors you want to use with `html2react`. You need to do this in the `init` function of your theme or extension, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
 
-{% code-tabs %}
-{% code-tabs-item title="index.js" %}
+{% tabs %}
+{% tab title="index.js" %}
 ```jsx
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
@@ -87,8 +87,8 @@ const marsTheme = {
 
 export default marsTheme;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Create your own processors
 
@@ -98,8 +98,8 @@ The `test` function will evaluate the node, and if it returns `true`, this node 
 
 For example, this is how the `image` processor is implemented in `html2react`:
 
-{% code-tabs %}
-{% code-tabs-item title="processors/image.js" %}
+{% tabs %}
+{% tab title="processors/image.js" %}
 ```typescript
 import Image from "@frontity/components/image";
 
@@ -133,11 +133,13 @@ const image = {
 
 export default image;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 You don't need to return a React component, you can also modify the attributes \(props\) of the node. For example, this processor adds `target="_blank"` to the `<a>` tags with href starting with `http`:
 
+{% tabs %}
+{% tab title="" %}
 ```typescript
 const extAnchors = {
   name: "external anchors",
@@ -151,6 +153,8 @@ const extAnchors = {
   }
 };
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Nodes
 
@@ -200,8 +204,8 @@ An array of the `processor`s that will be used by `html2react`.
 
 You should can add, remove or mutate any processor from the array:
 
-{% code-tabs %}
-{% code-tabs-item title="index.js" %}
+{% tabs %}
+{% tab title="index.js" %}
 ```jsx
 // Add a processor.
 libraries.html2react.processors.push(image);
@@ -214,8 +218,8 @@ libraries.html2react.processors.splice(i, 1);
 const pr = libraries.html2react.processors.find(pr => pr.name === "image");
 pr.priority = 20;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 #### `libraries.html2react.Component`
 

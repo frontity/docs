@@ -65,7 +65,13 @@ Frontity apps live in a Node.js server tailored for WordPress.
 
 ![](.gitbook/assets/frontity-architecture.png)
 
-Frontity is prepared to be hosted either in a regular Node.js server or in serverless services. That makes it super cheap and infinitely scalable.
+**Why a different Node.js server?**
+
+React is a JavaScript library. In order to generate HTML for the visitors or Google, the server needs to be able to run JavaScript as well.
+
+> _In theory a PHP server can send an empty HTML with the JavaScript files and the visitor will see the page after the JavaScript has loaded, but it is not a good user experience and certainly not recommended if your site needs to rank in Google._
+
+**Frontity** is prepared to be hosted either in a regular Node.js server or in **serverless** services. That makes it super cheap and infinitely scalable.
 
 {% hint style="info" %}
 We are working in other possible installations, although we strongly recommend this one. You can check them at [possible installations page](installation-and-deploy/possible-architectures.md).

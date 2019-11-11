@@ -41,6 +41,8 @@ For example, there is a processor for the images that each time it finds an `<im
 
 You could add a new one that each time it finds a `<blockquote>`, it runs the processor and transforms it to a new `<Blockquote />` component with your own logic.
 
+{% tabs %}
+{% tab title="" %}
 ```jsx
 import image from "@frontity/html2react/processors/image";
 import blockquote from "./processors/blockquote";
@@ -61,6 +63,8 @@ const myTheme = {
 
 export default myTheme;
 ```
+{% endtab %}
+{% endtabs %}
 
 And that's basically all you need to know about libraries, a powerful way of reusing tools in Frontity. Oh, and you can access the available libraries in the client console using:
 

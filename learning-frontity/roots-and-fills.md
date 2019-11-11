@@ -10,8 +10,8 @@ Each package has the opportunity to include any number of React nodes in the fin
 
 We finished the [Packages](packages.md) section with an example of package export that contained a `root` like this:
 
-{% code-tabs %}
-{% code-tabs-item title="/packages/my-awesome-theme/src/index.js" %}
+{% tabs %}
+{% tab title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
 import MyAwesomeTheme from "./components";
 
@@ -21,13 +21,13 @@ export default {
   },
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Usually, a React app injects it's code in a `<div>` of the body, like this:
 
-{% code-tabs %}
-{% code-tabs-item title="/index.html \(rendered by Frontity\)" %}
+{% tabs %}
+{% tab title="/index.html \(rendered by Frontity\)" %}
 ```markup
 <html>
   <head>...</head>
@@ -38,13 +38,13 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
   </body>
 </html>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **Frontity** uses that `<div id="root">` to inject there all the roots of all the packages that are installed:
 
-{% code-tabs %}
-{% code-tabs-item title="/index.html \(rendered by Frontity\)" %}
+{% tabs %}
+{% tab title="/index.html \(rendered by Frontity\)" %}
 ```jsx
 <html>
   <head>...</head>
@@ -57,8 +57,8 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
   </body>
 </html>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it. For example, let's image a _ShareModal_ package that has a modal like this:
 
@@ -66,21 +66,21 @@ Most of the time only your `theme` will export a **root**, but if any other pack
 
 This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme. The **root** could be something like this:
 
-{% code-tabs %}
-{% code-tabs-item title="/packages/my-share-modal-package/src/components/index.js" %}
+{% tabs %}
+{% tab title="/packages/my-share-modal-package/src/components/index.js" %}
 ```jsx
 const ShareRoot = ({ state }) => (
   state.share.isModalOpen & <ShareModal />
 ); 
 export default ShareRoot;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 And the rest of the package something like this:
 
-{% code-tabs %}
-{% code-tabs-item title="/packages/my-share-modal-package/src/index.js" %}
+{% tabs %}
+{% tab title="/packages/my-share-modal-package/src/index.js" %}
 ```javascript
 import ShareRoot from "./components/";
 
@@ -105,8 +105,8 @@ export default {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if it is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
 
@@ -168,8 +168,8 @@ const AdSenseFills = () => (
 
 Finally, export the **Fills** in your package export like this:
 
-{% code-tabs %}
-{% code-tabs-item title="/packages/my-adsense-ads/src/index.js" %}
+{% tabs %}
+{% tab title="/packages/my-adsense-ads/src/index.js" %}
 ```javascript
 import AdSenseFills from "./components/fills";
 
@@ -179,13 +179,13 @@ export default {
   },
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Frontity will insert them after the **roots** to ensure they work correctly:
 
-{% code-tabs %}
-{% code-tabs-item title="/index.html \(rendered by Frontity\)" %}
+{% tabs %}
+{% tab title="/index.html \(rendered by Frontity\)" %}
 ```markup
 <html>
   <head>...</head>
@@ -199,8 +199,8 @@ Frontity will insert them after the **roots** to ensure they work correctly:
   </body>
 </html>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 The components `<Slot>` and `<Fill>` know about each other so everything ends up in the correct place once the final HTML is generated :\)
 

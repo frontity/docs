@@ -75,8 +75,8 @@ It's a function that receives a React component an returns the same component bu
 
 #### Example
 
-{% code-tabs %}
-{% code-tabs-item title="Page.js" %}
+{% tabs %}
+{% tab title="Page.js" %}
 ```jsx
 import React from "react";
 import { connect } from "connect";
@@ -100,8 +100,8 @@ const Page = ({ state }) => {
 // Connect Page to the Frontity state.
 export default connect(Page);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 #### 
 
