@@ -58,6 +58,8 @@ We believe this JavaScript-based approach is already accelerating things in the 
 
 ## **How does Frontity work?**
 
+With Frontity, you can use your WordPress dashboard to edit and manage your content as you usually do. If you make changes, content will automatically update on Frontity.
+
 Frontity apps live in a Node.js server tailored for WordPress.
 
 * It uses the WP REST API to retrieve content and generate the final HTML.
@@ -105,14 +107,16 @@ Here are the main ones:
 
 Frontity is in a sense similar to GatsbyJS, but there are some key differences:
 
-* **100%** **focused** on **WordPress**: this means the number of concepts to learn are minimal, it doesn’t need any complex configuration to get you started and the APIs that WordPress developers use to create themes are tailored for the things they usually need.
-* **Opinionated**: it has its own state manager and it uses Emotion for the CSS. Thanks to that people don’t need to learn things like Redux and at the same time it powers a very flexible extensibility pattern, more similar to the one of WordPress itself than to the rest of JS frameworks.
-* **Extensible** like WordPress: themes and extensions can be activated and deactivated without code changes.
+* **100% focused on WordPress**: this means the number of concepts to learn are minimal, it doesn’t need any complex configuration to get you started and the APIs that WordPress developers use to create themes are tailored for the things they usually need.
+* **Opinionated: i**t has its own state manager and it uses Emotion for the CSS. Thanks to that people don’t need to learn things like Redux and at the same time it powers a very flexible extensibility pattern, more similar to the one of WordPress itself than to the rest of JS frameworks.
+* It’s **rendered dynamically:** this means people don’t have to rebuild the HTML each time they edit or publish something. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are many ways to configure it.
+* **Extensible like WordPress**: themes and extensions can be activated and deactivated without code changes.
 * No need to learn GraphQL or the REST API, you get the data using the state manager.
-* It’s **rendered dynamically**. This means people don’t have to rebuild the HTML each time they modify or publish something. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are many ways to configure it.
 * It can output Google AMP html created with the same React codebase.
 
-If you still have any questions about Frontity, please feel free to ask in our [community forum](https://community.frontity.org). One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
+If you still have any questions about Frontity, please feel free to ask in our [community forum](https://community.frontity.org). 
+
+One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
 
 {% hint style="info" %}
 **Subscribe** to our newsletter [**here**](https://frontity.org/#newsletter) ****to get notified of the **latest framework updates.**
