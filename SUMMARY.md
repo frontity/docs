@@ -2,6 +2,7 @@
 
 * [» Frontity Framework](README.md)
 * [🚀 Getting started](getting-started/README.md)
+  * [Untitled](getting-started/untitled.md)
   * [Installation requirements](getting-started/installation-requirements.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
 * [💻 JavaScript && React](javascript-and-and-react/README.md)

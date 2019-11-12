@@ -58,7 +58,7 @@ We believe this JavaScript-based approach is already accelerating things in the 
 
 ## **How does Frontity work?**
 
-With Frontity, you can use your WordPress dashboard to edit and manage your content as you usually do. If you make changes, content will automatically update on Frontity.
+With Frontity, you can still use your WordPress dashboard to edit and manage your content as you usually do. If you make changes, content will automatically update on Frontity.
 
 Frontity apps live in a Node.js server tailored for WordPress.
 
