@@ -57,9 +57,9 @@ The content is retrieved using the WordPress REST API. Once React is loaded in t
 
 ### &lt;&gt; Extensible
 
-One of the most amazing things about Frontity is its extensibility: it allows you to easily add new features to your theme via **extensions** and **NPM packages**. 
+One of the most amazing things about Frontity is its extensibility: it allows you to easily add new features to your theme via **extensions** and **NPM packages** without having to create them from scratch.
 
-We have already been working on a lot of Frontity extensions which will be **available soon**. You can check them all [at this page](extensions.md). Some examples are AdSense, SmartAds, DoubleClick for Publishers, OneSignal Push Notifications, Disqus, Google Analytics, Google Tag Manager, ComScore, or Yoast SEO.
+We are working on a lot of Frontity extensions which will be available soon. You can check them out [here](extensions.md). Some examples are Yoast SEO, AdSense, SmartAds, DoubleClick for Publishers, OneSignal Push Notifications, Disqus, Google Analytics, Google Tag Manager, or ComScore.
 
 Apart from these extensions, there are many other **interface tools** specifically created for Frontity: context routing, swipe navigation, infinite scrolling, html-to-react, gutenberg-to-react, etc.
 
