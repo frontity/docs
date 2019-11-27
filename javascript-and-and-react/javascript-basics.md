@@ -178,7 +178,7 @@ if (condition1) {
 You can add as many `else if` \(each one with it condition\) as you want, and it will run the code of the first one that match true. Moreover, you can use `if-else` without any `else if`, or even without the `else` statement, and it will continue with the rest of the code if `condition1` is false.
 
 {% hint style="info" %}
-At React, `if-else` statements don't work, and instead we have to use operators and ternary expressions. It is more detailed at [React basics - Special cases](react-basic.md#if-else-statements-dont-work).
+In React, `if-else` statements don't work, and instead we have to use operators and ternary expressions. It is more detailed at [React basics - Special cases](react-basic.md#if-else-statements-dont-work).
 {% endhint %}
 
 ### Ternary operator
