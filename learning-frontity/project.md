@@ -56,8 +56,7 @@ It is the file used for configuration in any Node project. There are many great 
 * **`@frontity/tiny-router`** : this is a small package that handles `window.history` and helps us with the routing. You can also use a different Router.
 * **`@frontity/mars-theme`** : this is our starter theme, where we build our site with React, but you could install a different one.
 
-{% tabs %}
-{% tab title="package.json" %}
+{% code title="package.json" %}
 ```javascript
 {
   "name": "my-frontity-project",
@@ -71,8 +70,7 @@ It is the file used for configuration in any Node project. There are many great 
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 As you can see, our `mars-theme` dependency has no version but a path. This is how we need to add our local packages to our `package.json` so they will be treated as if they were living in `node_modules`.
 

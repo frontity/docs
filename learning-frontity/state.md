@@ -8,8 +8,7 @@ The next thing we should look at is the `state`.
 
 We have defined it previously as _**"**A javascript object containing all the state exposed by your package"_. For example:
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme/src/index.js" %}
+{% code title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
 export default {
   state: {
@@ -27,8 +26,7 @@ export default {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 As you can see here, this theme needs some settings like the `menu` or settings to define if it should show featured images or not, and then some state that is useful while the app is running, like `isMenuOpen`. 
 
@@ -46,8 +44,7 @@ State is a proxy, so you can see the original object clicking on `[[Target]]` :
 
 First, here at Frontity we think the less concepts the better. Second, imagine a `notifications` package wants to add an item to the `menu` only when the browser actually supports notifications. That's super easy to do by just using the `state`:
 
-{% tabs %}
-{% tab title="/packages/my-notifications-package/src/index.js" %}
+{% code title="/packages/my-notifications-package/src/index.js" %}
 ```javascript
 export default {
   actions: {
@@ -64,8 +61,7 @@ export default {
     }
   } 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 As you can see, packages can access the state exposed by other packages.
 
@@ -73,8 +69,7 @@ Finally, what if you decide that the app should be run with the menu open by def
 
 Another good example of `state` is `tiny-router`. It exposes three props:
 
-{% tabs %}
-{% tab title="/packages/tiny-router/src/index.js" %}
+{% code title="/packages/tiny-router/src/index.js" %}
 ```javascript
 export default {
   state: {
@@ -85,15 +80,13 @@ export default {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Here `link` represents the current url of your app and they change when you use the action `actions.router.set("/other-url")`in your theme.
 
 If we were to create an analytics package, we could use `state.router.link` when sending pageviews:
 
-{% tabs %}
-{% tab title="/packages/my-analytics-package/src/index.js" %}
+{% code title="/packages/my-analytics-package/src/index.js" %}
 ```javascript
 export default {
   actions: {
@@ -107,15 +100,13 @@ export default {
     }
   } 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Finally, `tiny-router` exposes a third prop called `autoFetch`. This is a setting and by default is `true`. If it's active, it fetches the data you need each time you navigate to a new route using: `actions.router.set(link)`.
 
 Here the most common scenario is that you will use your `frontity.settings.js` file to set `autoFetch`  to `false` when you want to control the fetching yourself:
 
-{% tabs %}
-{% tab title="frontity.settings.js" %}
+{% code title="frontity.settings.js" %}
 ```javascript
 export default {
   packages: [
@@ -131,8 +122,7 @@ export default {
   ]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 These are most important things you need to know about the **Frontity** state:
 
@@ -164,8 +154,7 @@ As we've seen in the previous point, all the state from either `frontity.setting
 
 Let's imagine we have this setting file:
 
-{% tabs %}
-{% tab title="frontity.settings.js" %}
+{% code title="frontity.settings.js" %}
 ```javascript
 export default {
   state: {
@@ -196,13 +185,11 @@ export default {
   ]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 First, `my-awesome-theme`, `tiny-router` and `wp-source` state get merged:
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```javascript
 state: {
   theme: {
@@ -223,13 +210,11 @@ state: {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Then, the state from `frontity.settings.js` file gets merged:
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```javascript
 state: {
   frontity: {
@@ -253,13 +238,11 @@ state: {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Then Frontity executes `beforeSSR` to give the opportunity to each package to modify the state. For example, the theme could use it to fetch content from the REST API:
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme/src/index.js" %}
+{% code title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
 actions: {
     theme: {
@@ -269,13 +252,11 @@ actions: {
     }
   }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 This populates `source` with some data. For example, if the url is `/my-post`:
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```javascript
 state: {
   ...,
@@ -300,8 +281,7 @@ state: {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Now everything is ready for the React render in the server!
 

@@ -56,8 +56,7 @@ It will create a `/build` folder with a `server.js` file and a `/static` folder 
 
 Once installed, Frontity will connect to our starter blog, but you can change this in the file `frontity.settings.js`, inside the `@frontity/wp-source`settings:
 
-{% tabs %}
-{% tab title="frontity.settings.ts" %}
+{% code title="frontity.settings.ts" %}
 ```typescript
 const settings = {
   ...,
@@ -77,8 +76,7 @@ const settings = {
 
 export default settings;
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Now you can run it again with `npx frontity dev` and the theme should be now populated with your own WordPress content.
 

@@ -22,8 +22,7 @@ Be aware, you should not change anything inside `node_modules` because that fold
 
 Finally, it's worth noting that **Frontity** doesn't know which packages are local and which are external. The only difference between them is the way the are installed in the `package.json`. When they are local, they are referenced by folder and when they are external, by the version number:
 
-{% tabs %}
-{% tab title="package.json" %}
+{% code title="package.json" %}
 ```javascript
 "dependencies": {
   "frontity": "^0.2.11", // installed in node_modules
@@ -33,8 +32,7 @@ Finally, it's worth noting that **Frontity** doesn't know which packages are loc
   "@frontity/mars-theme": "./packages/mars-theme" // installed in packages
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Package Folder Structure
 
@@ -63,8 +61,7 @@ cd packages/my-awesome-theme
 npm install some-npm-package
 ```
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme/package.json" %}
+{% code title="/packages/my-awesome-theme/package.json" %}
 ```javascript
 {
   "name": "my-awesome-theme",
@@ -75,8 +72,7 @@ npm install some-npm-package
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Packages need their own `package.json` file because:
 
@@ -140,8 +136,7 @@ Packages can export any of these elements in their `index.js` file:
 
 For example, a simple theme could be like this:
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme/src/index.js" %}
+{% code title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
 import Theme from "./components";
 
@@ -174,8 +169,7 @@ export default {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 By the way, it's probably good to point out here that in Frontity all packages are equal. Frontity doesn't know which one represents a `theme` or which one represents a `source`. It treats all of them equally.
 

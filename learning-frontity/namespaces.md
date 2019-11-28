@@ -24,8 +24,7 @@ But let's start from the beginning.
 
 As we've already seen, this could be a typical `theme` package:
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme/src/index.js" %}
+{% code title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
 import Theme from "./components";
 
@@ -52,13 +51,11 @@ export default {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 One thing you can notice is that `roots`, `state`, and `actions` have a namespace called `theme`. It seems like it is not adding much value because it is the only namespace. Then, why not write it like this instead?
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme/src/index.js" %}
+{% code title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
 import Theme from "./components";
 
@@ -80,8 +77,7 @@ export default {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Several reasons:
 
@@ -89,8 +85,7 @@ Several reasons:
 
 When you access state or actions, it's much easier to see what you need when you write it like this:
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```javascript
 state: {
   theme: {
@@ -105,8 +100,7 @@ actions: {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### 2. It's easier for TypeScript
 
@@ -118,8 +112,7 @@ Packages can export multiple namespaces and that's good. It makes **Frontity** m
 
 For example, imagine we want to create a theme that implements its own share:
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme-with-share/src/index.js" %}
+{% code title="/packages/my-awesome-theme-with-share/src/index.js" %}
 ```javascript
 import Theme from "./components/theme";
 import Share from "./components/share";
@@ -147,8 +140,7 @@ export default {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Making Frontity extensible through namespaces
 
@@ -162,8 +154,7 @@ It's easier to understand with some examples.
 
 Imagine a Frontity package for WordPress native comments that exports a `Comment` in its libraries. It is called `wp-comments` but its namespaces is `comments`. It may be something like this:
 
-{% tabs %}
-{% tab title="/packages/wp-comments/src/index.js" %}
+{% code title="/packages/wp-comments/src/index.js" %}
 ```javascript
 import Comment from "./components/Comment";
 
@@ -175,13 +166,11 @@ export default {
     }
 };
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Now, all the `theme`  packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If it is, they can include its React component after the post content. 
 
-{% tabs %}
-{% tab title="/packages/my-awesome-theme/src/components/Post.js" %}
+{% code title="/packages/my-awesome-theme/src/components/Post.js" %}
 ```jsx
 const Post = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -201,13 +190,11 @@ const Post = ({ state, actions, libraries }) => {
 
 export default connect(Post);
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Final users can use their `frontity.settings.js` to install and configure `wp-comments`:
 
-{% tabs %}
-{% tab title="frontity.settings.js" %}
+{% code title="frontity.settings.js" %}
 ```javascript
 export default {
   packages: [
@@ -218,15 +205,13 @@ export default {
   ]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 But what if \(and now it is when this become interesting\) users don't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
 
 Then they just have to install `disqus-comments` instead:
 
-{% tabs %}
-{% tab title="frontity.settings.js" %}
+{% code title="frontity.settings.js" %}
 ```javascript
 export default {
   packages: [
@@ -237,8 +222,7 @@ export default {
   ]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 The `disqus-comments` package also exports a `Comments` component in `libraries.comments.Comments` so the theme inserts that instead. 
 
@@ -255,8 +239,7 @@ The first one, `actions.analytics.sendPageview`, is used by packages that implem
 
 The second one, `actions.analytics.sendEvent`, is used by the theme when something interesting happens. For example:
 
-{% tabs %}
-{% tab title="Post.js" %}
+{% code title="Post.js" %}
 ```jsx
 const Post = ({ actions }) => (
   <Post>
@@ -268,11 +251,9 @@ const Post = ({ actions }) => (
 
 export default connect(Post);
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="/packages/theme/src/index.js" %}
+{% code title="/packages/theme/src/index.js" %}
 ```jsx
 export default {
     state: {
@@ -292,8 +273,7 @@ export default {
     }
 };
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 When users open the share modal, a new event is sent to the analytics service of the `analytics` package which is installed in this **Frontity** project, not matter which one it is 🎉🎉
 

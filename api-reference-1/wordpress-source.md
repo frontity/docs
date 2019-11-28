@@ -45,11 +45,19 @@ This option allows you to show a specific page when accessing to the homepage of
 
 > **NOTE:** As this option overrides the `/` route, you should set `state.source.postsPage` as well to be able to access the posts archive in a different route.
 
+{% hint style="warning" %}
+You have to configure your WordPress with the same setting.
+{% endhint %}
+
+![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35.png)
+
 #### state.source.postsPage
 
-This option allows you to show the posts archive when accessing to a specific URL of your site, instead of the homepage. For example, if you set this value to `/latest`, then the posts archive will be shown if you access `/latest` instead of `/`. It is useful when used in combination with `state.source.homepage`.
+This option allows you to show the posts archive when accessing to a specific URL of your site, instead of the homepage. For example, if you set this value to `/blog`, then the posts archive will be shown if you access `/blog` instead of `/`. It is useful when used in combination with `state.source.homepage`.
 
-Think about **state.source.homepage** and **state.source.postsPage** as the equivalents in Frontity of the **Your homepage displays** setting of WordPress:
+{% hint style="warning" %}
+You have to configure your WordPress with the same setting.
+{% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35.png)
 

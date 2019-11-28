@@ -43,7 +43,7 @@ Multi-line comment.
 
 ### **Variables**
 
-You can store data inside variables in order to be used later. ****For creating one you just have to define it and assign a value.
+You can store data inside variables in order to be used later. _\*\*_For creating one you just have to define it and assign a value.
 
 ```javascript
 var number1 = 3;
@@ -57,7 +57,7 @@ Since the [ES6 update](https://www.freecodecamp.org/news/write-less-do-more-with
 
 ### Strings
 
- Strings are used for storing text and can be defined between double or single quotes.
+Strings are used for storing text and can be defined between double or single quotes.
 
 ```javascript
 var text1 = "This is a string";
@@ -157,9 +157,9 @@ In JavaScript, there are many types of operators. We could divide them this way:
 * **Comparison Operators:** To test if a condition is true/false. It could be `x === y`, `x < 5`, `x > 20`...
 * **Logical Operators:** To add some logic to the comparison statement.  For example in this statement`x < 5` **`&&`** `y > 25`  "x" must be less than 5 **AND** "y" must be more than 25**.**
 
-These are just some examples of JavaScript operators, there is a good summary at [**w3schools JavaScript Operators**](https://www.w3schools.com/js/js_operators.asp) ****to fully understand them.
+These are just some examples of JavaScript operators, there is a good summary at [**w3schools JavaScript Operators**](https://www.w3schools.com/js/js_operators.asp) _\*\*_to fully understand them.
 
-In JavaScript the `==` and `!=` operator exist, but they are never used because sometimes they don't behave properly \(i.e.  `0 == ""` is true!\). For that reason everybody always use three equals: `===` and `!==` for comparisons.
+In JavaScript the `==` and `!=` operator exist, but they are never used because sometimes they don't behave properly \(i.e. `0 == ""` is true!\). For that reason everybody always use three equals: `===` and `!==` for comparisons.
 
 ### If-else
 
@@ -390,7 +390,7 @@ console.log(a); // Returns person.name.
 console.log(b); // Returns person.lastName.
 ```
 
-This way you are getting the value of `person.name`  and storing it in a variable called "a".
+This way you are getting the value of `person.name` and storing it in a variable called "a".
 
 Moreover, you can define a default value for a variable as mentioned [before](javascript-basics.md#default-parameters), just in case the object doesn't have that property defined.
 
@@ -436,7 +436,7 @@ If you have any questions, or you want more information about arrays and objects
 
 ### Template strings
 
-Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \(``` ```\), and these are they main advantages:
+Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \( ``\), and these are they main advantages:
 
 * They allow embedded expressions.
 * You can use multi-line strings, just by adding a line-break.
@@ -461,9 +461,9 @@ The import and export statements are exactly for this. If you want anything from
 
 #### _Export_
 
-There are two different types of export, **named** and **default**, and depending on each one, the corresponding import will be different. 
+There are two different types of export, **named** and **default**, and depending on each one, the corresponding import will be different.
 
-* **Named export:** You ****can have multiple named exports per module. It is useful to export many values, and import after just the ones you need.
+* **Named export:** You _\*\*_can have multiple named exports per module. It is useful to export many values, and import after just the ones you need.
 
 ```javascript
 export const Component1 = () => { /* Code of Component1. */ };
@@ -534,17 +534,11 @@ When you import stuff from npm packages \(the ones you install with `npm install
 import Component from "some-package-name"
 ```
 
-
-
 There are other important ES6 aspects, but understanding them will give you a wide understanding of Frontity code. Another important concept that is commonly used in React are classes, but since introduction of hooks they are no longer needed, and in Frontity core are not used at all. You may want to take a look at them because they could be used by other packages, but it is not a must to get started.
 
 For more detailed guides about these concepts, including classes, you can visit [https://www.w3schools.com/react/react\_es6.asp](https://www.w3schools.com/react/react_es6.asp).
 
-
-
 {% hint style="info" %}
-These are the main JavaScript concepts used in Frontity, if you understand them, you will be able to continue with [React basics](react-basic.md) to master Frontity. If you want to go deeper in learning JavaScript, there are a lot of resources out there, and if you have questions don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️. 
+These are the main JavaScript concepts used in Frontity, if you understand them, you will be able to continue with [React basics](react-basic.md) to master Frontity. If you want to go deeper in learning JavaScript, there are a lot of resources out there, and if you have questions don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️.
 {% endhint %}
-
-
 
