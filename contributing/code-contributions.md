@@ -52,9 +52,9 @@ At this point, before starting your work, it is a good practice to have a place 
 
 To access an example to test your changes you should run the command `cd examples/mars-theme-example/`.
 
-To check your modifications, being in the folder previously mentioned, run **`npx frontity dev`** and it will start Frontity with mars-theme on [localhost:3000](http://localhost:3000/). It will open automatically a new tab on your browser.
-
 **5. Run your local server:**
+
+To check your modifications, being in the folder previously mentioned, run **`npx frontity dev`** and it will start Frontity with mars-theme on [localhost:3000](http://localhost:3000/). It will open automatically a new tab on your browser.
 
 **6. Make any changes you consider**:
 
@@ -64,6 +64,10 @@ At this point, you are able to make any improvements you want to any of the pack
 _**WARNING: After adding/removing dependencies to a package, you must go back to the root and do `npm install` again**_
 {% endhint %}
 
+{% hint style="info" %}
+If you are doing modifications to the packages that run before webpack, like `file-settings`, `babel-plugin-frontity` or the scripts of `core`, you need to run `npm run build` in that package folder after each change.
+{% endhint %}
+
 **7. Run the tests:**
 
 Once you have finished, for adding your changes to Frontity project, your fork must pass all the tests. For checking it you should run `npm test` **in the root folder**. This will tell you if the tests are okay and in case they are not, they will tell you which ones aren't.
@@ -71,7 +75,7 @@ Once you have finished, for adding your changes to Frontity project, your fork m
 If you find some errors, you can try:
 
 * Run `npm test` on a package to detect where is the problem.
-* Run `npm run test:push`in the root to pass all tests without cache. It is useful for typescript tests.
+* Run `npm run test` in the root to pass all tests without cache. It is useful for typescript tests.
 
 **8. Commit and push to your fork:**
 
