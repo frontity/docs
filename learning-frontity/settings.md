@@ -1,6 +1,6 @@
 # 2. Settings
 
-The first thing you should do when you start a new **Frontity** project is to configure your `frontity.settings.js`file. Let's see each concept you need to understand in order to use it properly.
+The first thing you should do when you start a new **Frontity** project is to configure your `frontity.settings.js` file. Let's take a look at each concept you need to understand in order to use it properly.
 
 ## Site
 
@@ -28,7 +28,7 @@ export default [
 
 ## Multiple Sites
 
-One **Frontity** installation can serve content for multiple sites. This is useful if you have severals blogs and want to manage all the same with the same installation. Both the packages and settings of each site are independent. 
+One **Frontity** installation can serve content for multiple sites. This is useful if you have severals blogs and want to manage all of them with the same installation. Both the packages and settings of each site are independent. 
 
 To distinguish between different sites, you must use a `match` setting. Each time a new request is received by **Frontity**, it tests the url against the `match` field to know which site it should load:
 
@@ -87,7 +87,7 @@ You can use  `match` to tell **Frontity** which set of urls should be loaded wit
 
 In this example, we are telling **Frontity** to use the `my-site-amp` settings each time it finds a url that ends with `/amp`. If the url is `https://site.com/my-post` the `"my-site"` settings are loaded and if the url is `https://site.com/my-post/amp` the `"my-site-amp"` settings are loaded.
 
-For now let's leave it here. We'll talk later about how you can use this mode in your **Frontity** code to render different things.
+For now let's leave it here. We'll talk more about how you can use this mode in your **Frontity** code to render different things later.
 
 ## Packages
 
@@ -117,7 +117,7 @@ export default [
 
 As you can see, they have an `active` prop. That means you can deactivate a package without having to delete it from your settings file.
 
-In **Frontity**, all the code is contained in packages. In a sense it is more similar to WordPress, where all the code is contained in your theme and plugins, than to other javascript frameworks. This is obviously on purpose but we will explain the reasons later when we talk about packages and namespaces :\)
+In **Frontity**, all the code is contained in packages. In a sense it is more similar to WordPress, where all the code is contained in your theme and plugins, than to other javascript frameworks. This is obviously on purpose, but we will explain the reasons later when we talk about packages and namespaces :\)
 
 That's pretty much it about packages for now.
 
@@ -158,7 +158,7 @@ export default [
 ```
 {% endcode %}
 
-In **Frontity**, the `state` is  organized in what we call **namespaces**. It means that each package uses a specific part of the state: a **namespace**. For example, our `wp-source` package uses of the `source` namespace to store its settings. 
+In **Frontity**, the `state` is  organized in what we call **namespaces**. It means that each package uses a specific part of the state: a **namespace**. For example, our `wp-source` package uses the `source` namespace to store its settings. 
 
 And our `tiny-router` package uses the `router` namespace:
 
@@ -179,5 +179,5 @@ packages: [
 
 For now, let's leave it here. We will explain why the namespaces are important later.
 
-The important takeaway here is: _In the settings file you have the opportunity to change the `state` of **Frontity**. Most of the time you will use this to configure the settings of each package._
+The important takeaway here is: _in the settings file you have the opportunity to change the `state` of **Frontity**. Most of the time you will use this to configure the settings of each package._
 
