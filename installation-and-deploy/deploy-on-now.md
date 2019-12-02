@@ -5,7 +5,7 @@ According to Zeit: _"_[_Now_](https://zeit.co/now) _is a global deployment netwo
 We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. __It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://zeit.co/blog/serverless-pre-rendering)\), a powerful way to improve your website speed.
 
 {% hint style="info" %}
-First of all, you have to develop your project following the steps at [Quick start guide](../getting-started/quick-start-guide.md). This deploy is supposed to be made once you have finished and you want to deploy it on production.
+First of all, you have to develop your project following the steps in the [Quick start guide](../getting-started/quick-start-guide.md). This deploy is supposed to be made once you have finished and you want to deploy it on production.
 {% endhint %}
 
 These are the instructions to deploy Now on Frontity, once you are ready to deploy your project:
@@ -43,7 +43,7 @@ Deploy Frontity using this command:
 > npx now
 ```
 
-**Now** will assign you a domain \(something like **your-site.now.sh**\) that works exactly like your real domain would where you can check that everything is ok.
+**Now** will assign you a domain \(something like **your-site.now.sh**\) that works exactly like your real domain and allows you to check and make sure that everything is ok.
 
 ### Deploy a production site
 
@@ -59,7 +59,7 @@ Then, deploy Frontity using this command:
 > npx now --target production
 ```
 
-That will create a a deploy and assign it to your real site url.
+This will create a deploy and assign it to your real site url.
 
 
 
