@@ -1,0 +1,83 @@
+# @frontity/head-tags
+
+## Description
+
+This package is designed to get automatically all the data that the [REST API Head Tags plugin](../frontity-plugins/rest-api-head-tags.md) exposes in the REST API, depending on the url. Basically, this plugin adds all the tags in the `<head>` section of a website to WordPress REST API responses, what is pretty useful for plugins like Yoast SEO or All in One SEO.
+
+This package doesn't make sense without the mentioned plugin, so before installing the package you have to install the plugin in your WordPress backend.
+
+## Installation
+
+Add the `head-tags` package to your project:
+
+```text
+npm i @frontity/wp-source
+```
+
+Do this in your root and include it in your `frontity.settings.js` file:
+
+```javascript
+...
+packages: [
+    "@frontity/mars-theme",
+    "@frontity/tiny-router",
+    ...
+    "@frontity/head-tags"
+]
+...
+```
+
+## Settings
+
+As it works automatically, It doesn't have settings itself, but you it requires two Frontity parameters to work:
+
+* `state.frontity.url` : The url of your site. Usually defined at `frontity.settngs.js` file.
+* `state.source.api`: The api where your project is pointing. Defined at [@frontity/wp-source](https://docs.frontity.org/api-reference-1/wordpress-source#state-source-api-required) if you haven't changed your Source.
+
+## How to use
+
+As mentioned before, it doesn't require any configuration. Just install it and everything will work out of the box. Note that you'll need the [REST API Head Tags plugin](../frontity-plugins/rest-api-head-tags.md) installed in your WordPress.
+
+## API Reference
+
+### State
+
+#### `headTags.get`
+
+It is a function that accepts a `link`as a parameter and it return an array with the `head_tags` field of that url.
+
+```javascript
+state.headTags.get("/blog/hello-world/");
+```
+
+will return something like
+
+```javascript
+[
+  {
+    "tag": "title",
+    "content": "Hello world! - My Site"
+  },
+  {
+    "tag": "meta",
+    "attributes": {
+      "name": "robots",
+      "content": "max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    }
+  },
+  {
+    "tag": "link",
+    "attributes": {
+      "rel": "canonical",
+      "href": "http://mysite.com/hello-world/"
+    }
+  }
+]
+```
+
+
+
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+

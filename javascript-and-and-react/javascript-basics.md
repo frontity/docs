@@ -20,7 +20,7 @@ Note this guide purpose is to give you a better understanding of which JavaScrip
   * [For loops](javascript-basics.md#for-loops)
   * [While loops](javascript-basics.md#while-loops)
   * [RegExp](javascript-basics.md#regexp)
-* \*\*\*\*[**ES6 concepts**](javascript-basics.md#es6-concepts)\*\*\*\*
+* [**ES6 concepts**](javascript-basics.md#es6-concepts)
   * [Variables \(let & const\)](javascript-basics.md#variables-let-and-const)
   * [Arrow functions](javascript-basics.md#arrow-functions)
   * [Default parameters](javascript-basics.md#default-parameters)
