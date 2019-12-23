@@ -82,7 +82,7 @@ export default {
 ```
 {% endcode %}
 
-Here `link` represents the current url of your app and they change when you use the action `actions.router.set("/other-url")`in your theme.
+Here `link` represents the current url of your app and it changes when you use the action `actions.router.set("/other-url")`in your theme.
 
 If we were to create an analytics package, we could use `state.router.link` when sending pageviews:
 
@@ -102,7 +102,7 @@ export default {
 ```
 {% endcode %}
 
-Finally, `tiny-router` exposes a third prop called `autoFetch`. This is a setting and by default is `true`. If it's active, it fetches the data you need each time you navigate to a new route using: `actions.router.set(link)`.
+Finally, `tiny-router` exposes a third prop called `autoFetch`. This is a setting and, by default, is `true`. If it's active, it fetches the data you need each time you navigate to a new route using: `actions.router.set(link)`.
 
 Here the most common scenario is that you will use your `frontity.settings.js` file to set `autoFetch`  to `false` when you want to control the fetching yourself:
 
@@ -124,7 +124,7 @@ export default {
 ```
 {% endcode %}
 
-These are most important things you need to know about the **Frontity** state:
+These are the most important things you need to know about the **Frontity** state:
 
 ### 1. State should be serializable
 
@@ -146,11 +146,11 @@ The client browser paints the HTML received from the server. Then, this is what 
 
 1. It loads the `state` in the client using the initial state received from the server. This guarantees that when we render React again we will be in very same place where we left on the server.
 2. It renders React again. It should produce the very same HTML we've sent from the server.
-3. It gives each package the opportunity to run code with a `afterCSR` action. CSR stands for Client Side Rendering.
+3. It gives each package the opportunity to run code with an `afterCSR` action. CSR stands for Client Side Rendering.
 
 ### 2. All the state is merged together
 
-As we've seen in the previous point, all the state from either `frontity.settings.js` and your packages is merged together. 
+As we've seen in the previous point, the states from `frontity.settings.js` and your packages are merged together. 
 
 Let's imagine we have this setting file:
 
@@ -187,7 +187,7 @@ export default {
 ```
 {% endcode %}
 
-First, `my-awesome-theme`, `tiny-router` and `wp-source` state get merged:
+First, the states from `my-awesome-theme`, `tiny-router` and `wp-source` get merged:
 
 {% code title="" %}
 ```javascript
@@ -240,7 +240,7 @@ state: {
 ```
 {% endcode %}
 
-Then Frontity executes `beforeSSR` to give the opportunity to each package to modify the state. For example, the theme could use it to fetch content from the REST API:
+Then Frontity executes `beforeSSR` to give each package the opportunity to modify the state. For example, the theme could use it to fetch content from the REST API:
 
 {% code title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
@@ -294,7 +294,7 @@ There are two reasons for this:
 
 For that reason, Frontity supports **derived state**. 
 
-Remember I told you that `state` must be serializable and cannot contain functions? Well, that's still technically true, but you can include **derived state** functions. Let's see them with an example:
+Remember I told you that `state` must be serializable and cannot contain functions? Well, that's still technically true, but you can include **derived state** functions. Let's take a look at an example:
 
 ```javascript
 state: {
@@ -365,7 +365,7 @@ state: {
 }
 ```
 
-That's it, now when you use `state.share.totalCount` in React everything will be always updated without anything else to do on your side.
+That's it! Now when you use `state.share.totalCount` in React everything will be updated without having to do anything additional on your end.
 
 You can also use them with parameters like this:  
 

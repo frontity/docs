@@ -76,12 +76,12 @@ React is a JavaScript library. In order to generate HTML for the visitors or Goo
 **Frontity** is prepared to be hosted either in a regular Node.js server or in **serverless** services. That makes it super cheap and infinitely scalable.
 
 {% hint style="info" %}
-We are working in other possible installations, although we strongly recommend this one. You can check them at [possible installations page](installation-and-deploy/possible-architectures.md).
+We are working on other possible installations, although we strongly recommend this one. You can check them at [possible installations page](installation-and-deploy/possible-architectures.md).
 {% endhint %}
 
 ## **Frontity features**
 
-Frontity and its extensions will help save you a lot of development time while enjoying of all of the latest technology trends, already configured for you. ****You can check them in detail here: [Frontity Features page](frontity-features/). 
+Frontity and its extensions will help save you a lot of development time while allowing you to enjoy all of the latest technology trends that are already configured for you. ****You can check them out in detail here: [Frontity Features page](frontity-features/). 
 
 Here are the main ones:
 

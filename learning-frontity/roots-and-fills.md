@@ -37,7 +37,7 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 ```
 {% endcode %}
 
-**Frontity** uses that `<div id="root">` to inject there all the roots of all the packages that are installed:
+**Frontity** uses that `<div id="root">` to inject the roots of all the packages that are installed:
 
 {% code title="/index.html \(rendered by Frontity\)" %}
 ```jsx
@@ -54,7 +54,7 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 ```
 {% endcode %}
 
-Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it. For example, let's image a _ShareModal_ package that has a modal like this:
+Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it also. For example, let's imagine a _ShareModal_ package that has a modal like this:
 
 ![](../.gitbook/assets/blog-frontity-org.jpg)
 
@@ -98,11 +98,11 @@ export default {
 ```
 {% endcode %}
 
-Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if it is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
+Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if there is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
 
 ![](../.gitbook/assets/blog.jpg)
 
-I hope you start to see an advance on how extensibility works in **Frontity**, but don't worry too much now, we'll talk in more detail later.
+I hope you're starting to see how extensibility works in **Frontity**, but don't worry too much now, we'll talk in more detail later.
 
 By the way, **Frontity** has an API to modify the `<head>` element inside React using the `<Head>` component like this:
 
@@ -118,7 +118,7 @@ const MyPackage = () => (
 );
 ```
 
-So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page]().
+So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page]().
 
 ## Fills
 

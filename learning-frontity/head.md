@@ -1,8 +1,8 @@
 # 11. Head
 
-Taking control over your `<head>` tags is easy with Frontity, because we have already configured it for you. It uses internally [React Helmet](https://github.com/nfl/react-helmet), so you can work as if you were working with common HTML.
+Taking control over your `<head>` tags is easy with Frontity because we have already configured it for you. It uses [React Helmet](https://github.com/nfl/react-helmet) internally, so you can work as if you were working with common HTML.
 
-For doing so, you just have to import `Head` from `frontity` and write inside `<Head>` all the tags you want. Usually, you will want to import it at the `index.js` of your theme, in order to be loaded in all your pages.
+To adjust the `<head>`, you just have to import `Head` from `frontity` and write inside `<Head>` all the tags you want. Usually, you will want to import it at the `index.js` of your theme, in order for it to be loaded on all your pages.
 
 ```jsx
 import { Head } from "frontity";
@@ -17,7 +17,7 @@ const Theme = () => (
 );
 ```
 
-You can of course use variables or include code outside `<Head>` that will be rendered normally.
+You can, of course, use variables or include code outside `<Head>` that will be rendered normally.
 
 ```jsx
 import { Head, connect } from "frontity";
@@ -46,5 +46,5 @@ const Theme = ({ state }) => {
 export default connect(Theme);
 ```
 
-That's all, you just have to configure it at your will. Frontity uses internally [React Helmet](https://github.com/nfl/react-helmet). You should check its docs in case you want to understand it better.
+That's all, you just have to configure it at your will. Frontity uses [React Helmet](https://github.com/nfl/react-helmet) internally. You should check its docs out in case you want to understand it better.
 
