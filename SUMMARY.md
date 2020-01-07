@@ -29,7 +29,7 @@
   * [@frontity/html2react](api-reference-1/frontity-html2react.md)
   * [@frontity/head-tags](api-reference-1/frontity-head-tags.md)
 * [🔌 Frontity Plugins](frontity-plugins/README.md)
-  * [REST API - Head Tags of SEO Plugins](frontity-plugins/rest-api-head-tags.md)
+  * [REST API - Head Tags](frontity-plugins/rest-api-head-tags.md)
 * [📖 Guides](guides/README.md)
   * [Understanding a Frontity project](guides/understanding-mars-theme.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)

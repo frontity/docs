@@ -1,4 +1,4 @@
-# REST API - Head Tags of SEO Plugins
+# REST API - Head Tags
 
 ## Description
 
@@ -93,7 +93,7 @@ For example, with the output disabled, `https://mysite.com/wp-json/wp/v2/posts` 
 
 1. First of all you have to install the plugin. You can do it:
 
-   * **Automatic**: from within WordPress dashboard go to Plugins, click `Add New` button, search for `REST API - Head Tags of SEO Plugins` \(by Frontity\) and click `Install Now`.
+   * **Automatic**: from within WordPress dashboard go to Plugins, click `Add New` button, search for `REST API - Head Tags` \(by Frontity\) and click `Install Now`.
    * **Manual**: this method requires to download the plugin and upload it to your web server via FTP. For a more detailed explanation, WordPress explains how to do this [on this guide](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation).
 
 2. Once installed, you have to activate it and it will be running! The `head_tags` field is cached and enabled by default, but you can purge the cache or disable the output as explained on the [Settings](rest-api-head-tags.md#settings) section.
