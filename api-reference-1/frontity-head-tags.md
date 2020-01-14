@@ -34,9 +34,13 @@ As it works automatically, It doesn't have settings itself, but you it requires 
 * `state.frontity.url` : The url of your site. Usually defined at `frontity.settngs.js` file.
 * `state.source.api`: The api where your project is pointing. Defined at [@frontity/wp-source](https://docs.frontity.org/api-reference-1/wordpress-source#state-source-api-required) if you haven't changed your Source.
 
+It needs `@frontity/wp-source` installed and updated to at least the `1.5.0` version.
+
 ## How to use
 
 As mentioned before, it doesn't require any configuration. Just install it and everything will work out of the box. Note that you'll need the [REST API Head Tags plugin](https://wordpress.org/plugins/rest-api-head-tags/) installed in your WordPress.
+
+This package needs these other Frontity packages:
 
 ## API Reference
 
