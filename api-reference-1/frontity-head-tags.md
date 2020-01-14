@@ -28,7 +28,8 @@ packages: [
 ```
 
 {% hint style="warning" %}
-If you install this package in an existing project, you may need to update [@frontity/wp-source](wordpress-source.md) to at least 1.5.0 version  using `npm i @frontity/wp-source@latest` command.
+If you have an existing project make sure your [@frontity/wp-source](wordpress-source.md) package is at least on the 1.5.0 version. If not, update it using this command:  
+`> npm install @frontity/wp-source@latest`
 {% endhint %}
 
 ## Settings
