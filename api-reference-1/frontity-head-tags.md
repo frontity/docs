@@ -2,7 +2,7 @@
 
 ## Description
 
-This package is designed to get automatically all the data that the [REST API Head Tags plugin](../frontity-plugins/rest-api-head-tags.md) exposes in the REST API, depending on the url. Basically, this plugin adds all the tags in the `<head>` section of a website to WordPress REST API responses, what is pretty useful for plugins like Yoast SEO or All in One SEO.
+This package is designed to get automatically all the data that the [REST API Head Tags plugin](https://wordpress.org/plugins/rest-api-head-tags/) exposes in the REST API, depending on the url. Basically, this plugin adds all the tags in the `<head>` section of a website to WordPress REST API responses, what is pretty useful for plugins like Yoast SEO or All in One SEO.
 
 This package doesn't make sense without the mentioned plugin, so before installing the package you have to install the plugin in your WordPress backend.
 
@@ -36,7 +36,7 @@ As it works automatically, It doesn't have settings itself, but you it requires 
 
 ## How to use
 
-As mentioned before, it doesn't require any configuration. Just install it and everything will work out of the box. Note that you'll need the [REST API Head Tags plugin](../frontity-plugins/rest-api-head-tags.md) installed in your WordPress.
+As mentioned before, it doesn't require any configuration. Just install it and everything will work out of the box. Note that you'll need the [REST API Head Tags plugin](https://wordpress.org/plugins/rest-api-head-tags/) installed in your WordPress.
 
 ## API Reference
 
