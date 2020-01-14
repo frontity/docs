@@ -11,7 +11,7 @@ This package doesn't make sense without the mentioned plugin, so before installi
 Add the `head-tags` package to your project:
 
 ```text
-npm i @frontity/wp-source
+npm i @frontity/head-tags
 ```
 
 Do this in your root and include it in your `frontity.settings.js` file:
