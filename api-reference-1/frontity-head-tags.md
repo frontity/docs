@@ -44,7 +44,7 @@ As mentioned before, it doesn't require any configuration. Just install it and e
 
 #### `headTags.get`
 
-It is a function that accepts a `link`as a parameter and it return an array with the `head_tags` field of that url.
+It is a function that accepts a `link`as parameter and it returns an array with the `head_tags` field of that link.
 
 ```javascript
 state.headTags.get("/blog/hello-world/");
