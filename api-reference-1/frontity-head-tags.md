@@ -27,6 +27,10 @@ packages: [
 ...
 ```
 
+{% hint style="warning" %}
+If you install this package in an existing project, you may need to update [@frontity/wp-source](wordpress-source.md) to at least 1.5.0 version  using `npm i @frontity/wp-source@latest` command.
+{% endhint %}
+
 ## Settings
 
 As it works automatically, It doesn't have settings itself, but you it requires two Frontity parameters to work:
