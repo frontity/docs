@@ -1,5 +1,5 @@
 ---
-description: Guide to understand how our starter them works.
+description: Guide to understand how our starter theme works.
 ---
 
 # Understanding Mars Theme
