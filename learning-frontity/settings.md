@@ -13,7 +13,7 @@ export default [
     name: "my-site", // The name of your site.
     state: {
       frontity: {
-        url: "https://my-site.com", // Some settings.
+        url: "https://www.site.com", // Some settings.
       }
     },
     packages: [
@@ -28,7 +28,7 @@ export default [
 
 ## Multiple Sites
 
-One **Frontity** installation can serve content for multiple sites. This is useful if you have severals blogs and want to manage all of them with the same installation. Both the packages and settings of each site are independent. 
+One **Frontity** installation can serve content for multiple sites. This is useful if you have severals blogs and want to manage all of them with the same installation. Both the packages and settings of each site are independent.
 
 To distinguish between different sites, you must use a `match` setting. Each time a new request is received by **Frontity**, it tests the url against the `match` field to know which site it should load:
 
@@ -36,18 +36,18 @@ To distinguish between different sites, you must use a `match` setting. Each tim
 export default [
   {
     name: "site-1",
-    match: ["https://site-1.com"],
+    match: ["https://www.site-1.com"],
     packages: [...]
   },
   {
     name: "site-2",
-    match: ["https://site-2.com"],
+    match: ["https://www.site-2.com"],
     packages: [...]
   }
 ]
 ```
 
-For example, if the url is `https://site-1.com/my-post` the `"site-1"` settings are loaded and if the url is `https://site-2.com/category/some-cat` the `"site-2"` settings are loaded.
+For example, if the url is `https://www.site-1.com/my-post` the `"site-1"` settings are loaded and if the url is `https://www.site-2.com/category/some-cat` the `"site-2"` settings are loaded.
 
 In development, you can access a specific site using the `?name=` query:
 
@@ -56,38 +56,6 @@ https://localhost:3000/?name=site-2
 ```
 
 More information about how to configure your `frontity.settings.js` file can be found here: [Settings API Reference](https://docs.frontity.org/api-reference-1/file-settings).
-
-## Modes
-
-The next concept we need to explore is the **mode**.
-
-**Frontity** not only supports several sites, but it also supports different types of render. 
-
-The default mode is called `default` and at this time, the only additional render supported is `amp`. But **Frontity** is prepared to easily support more in the future if necessary. 
-
-If you want to use a **mode**, you just need to add a new site to your `frontity.settings.js` file and specify a mode. For example:
-
-```javascript
-export default [
-  {
-    name: "my-site",
-    mode: "default", // <- this is optional, "default" is the default :)
-    packages: [...]
-  },
-  {
-    name: "my-site-amp",
-    mode: "amp", // <- add the new mode here.
-    match: ["\/amp$"],
-    packages: [...]
-  }
-]
-```
-
-You can use  `match` to tell **Frontity** which set of urls should be loaded with this new mode. 
-
-In this example, we are telling **Frontity** to use the `my-site-amp` settings each time it finds a url that ends with `/amp`. If the url is `https://site.com/my-post` the `"my-site"` settings are loaded and if the url is `https://site.com/my-post/amp` the `"my-site-amp"` settings are loaded.
-
-For now let's leave it here. We'll talk more about how you can use this mode in your **Frontity** code to render different things later.
 
 ## Packages
 
@@ -105,7 +73,7 @@ export default [
         active: true,
         state: {  // Some settings for this package.
           source: {
-            api: "https://my-site.com/wp-json"
+            api: "https://wp.site.com/wp-json"
           }
         }
       }
@@ -125,9 +93,9 @@ That's pretty much it about packages for now.
 
 The last thing you need to know to work with your `frontity.settings.js` file are the settings.
 
-As you have probably already noticed, we don't use `settings`, we use `state`. That's on purpose as well. 
+As you have probably already noticed, we don't use `settings`, we use `state`. That's on purpose as well.
 
-If you come from a WordPress background, you can think of **Frontity** `state`as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or MobX. That `state` is accessible by your packages at run time. 
+If you come from a WordPress background, you can think of **Frontity** `state`as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or MobX. That `state` is accessible by your packages at run time.
 
 You have the opportunity to modify the initial `state` of your site in the `frontity.settings.js` file. You can do it in a general `state` object or inside packages.
 
@@ -138,7 +106,7 @@ export default [
     name: "my-site",
     state: {
       frontity: {
-        url: "https://my-site.com", // Some settings of the site.
+        url: "https://www.site.com", // Some settings of the site.
       }
     },
     packages: [
@@ -148,7 +116,7 @@ export default [
         name: "@frontity/wp-source",
         state: {  // Some settings for this package.
           source: {
-            api: "https://my-site.com/wp-json"
+            api: "https://wp.site.com/wp-json"
           }
         }
       }
@@ -158,7 +126,7 @@ export default [
 ```
 {% endcode %}
 
-In **Frontity**, the `state` is  organized in what we call **namespaces**. It means that each package uses a specific part of the state: a **namespace**. For example, our `wp-source` package uses the `source` namespace to store its settings. 
+In **Frontity**, the `state` is organized in what we call **namespaces**. It means that each package uses a specific part of the state: a **namespace**. For example, our `wp-source` package uses the `source` namespace to store its settings.
 
 And our `tiny-router` package uses the `router` namespace:
 
