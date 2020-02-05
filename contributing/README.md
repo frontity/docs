@@ -1,8 +1,8 @@
 # 👏 Contributing
 
-Want to contribute to the project? We are very happy to hear so!
+Want to contribute to the project? That's great to hear!
 
-You will find different pages below which explain the different ways to make contributions and why it is so important to contribute to open source projects.
+You can find more information in the following pages:
 
 {% page-ref page="how-to-contribute.md" %}
 
