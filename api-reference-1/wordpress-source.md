@@ -269,6 +269,21 @@ The information to distinguish each type of link is based on the [WP Template Hi
   * media: `isMedia`, `isAttachment`
 * 404: `is404`
 
+Additionally, if calling `get()` has returned a status code higher than 400, we add information about the error to the state. For example, if an error code was `500`, the state will include the following properties:
+
+```js
+{
+  isError: true,
+  is500: true,
+  errorStatus: 500,
+  errorStatusText: "Some string describing the error",
+
+  // booleans that describe the fetch status
+  isReady: true,
+  isFetching: false,
+}
+```
+
 Properties added to each type are also based in the [WP REST API](https://developer.wordpress.org/rest-api/reference/):
 
 * taxonomy: `taxonomy`, `id`
