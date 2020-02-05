@@ -55,8 +55,6 @@ In development, you can access a specific site using the `?name=` query:
 https://localhost:3000/?name=site-2
 ```
 
-More information about how to configure your `frontity.settings.js` file can be found here: [Settings API Reference](https://docs.frontity.org/api-reference-1/file-settings).
-
 ## Packages
 
 You can specify a different set of **packages** for each site. They can be either strings or objects:
