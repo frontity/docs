@@ -16,11 +16,11 @@ When you do a `npx frontity create`, we install three packages for you:
 
 We do this because the most likely situation is that you want to modify the theme, but you don't want to modify the router or source packages. 
 
-Once we move a package from `node_modules` to `packages` it becomes a **local package** and you can change it at will. If you use `git`, its code is also included in your project and you can commit any change. If you want to use that package in other projects or you want to contribute to the community you can publish it to npm using `npm publish`.
+Once we move a package from `node_modules` to `packages` it becomes a **local package** and you can change it at will. If you use `git`, its code is also included in your project and you can commit any change. If you want to use that package in other projects or you want to contribute to the community, you can publish it to npm using `npm publish`.
 
 Be aware, you should not change anything inside `node_modules` because that folder is not committed to git and it is thrown away each time you move, reinstall or deploy your project.
 
-Finally, it's worth noting that **Frontity** doesn't know which packages are local and which are external. The only difference between them is the way the are installed in the `package.json`. When they are local, they are referenced by folder and when they are external, by the version number:
+Finally, it's worth noting that **Frontity** doesn't know which packages are local and which are external. The only difference between them is the way they are installed in the `package.json`. When they are local, they are referenced by folder and when they are external, by the version number:
 
 {% code title="package.json" %}
 ```javascript
@@ -54,7 +54,7 @@ Let's review this in detail.
 
 The `package.json` file is where you can write the info \(name, description, author, repository, version...\) of the package. It's just a regular `package.json` file, so nothing fancy here.
 
-It also lists the npm `dependencies` of the package. The `"dependencies"` field gets automatically populated when you do run `npm install some-npm-package` in the package folder.
+It also lists the npm `dependencies` for the package. The `"dependencies"` field gets automatically populated when you run `npm install some-npm-package` in the package folder.
 
 ```text
 cd packages/my-awesome-theme
@@ -131,7 +131,7 @@ Packages can export any of these elements in their `index.js` file:
 * **Roots:** React components that will be included in the app.
 * **Fills**: React components that will be included in the app, but injected after the roots.
 * **State:** A javascript object containing all the state exposed by your package.
-* **Actions:** A set of actions that your package need to work or exposes for other packages. 
+* **Actions:** A set of actions that your package needs to work or expose for other packages. 
 * **Libraries:** Any additional tools that your package exposes for other packages.
 
 For example, a simple theme could be like this:

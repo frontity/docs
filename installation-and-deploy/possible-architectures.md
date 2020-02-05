@@ -1,6 +1,6 @@
 # Possible Installations
 
-As you may know, in order to have Frontity running you will need to adapt your configuration as it requires to use Node. We strongly recommend what we named "**Direct to Frontity**" installation as it matches most of user needs, but we are developing new options in case it doesn't fit yours.
+As you may know, in order to have Frontity running, you will need to adapt your configuration since it requires you to use Node. We strongly recommend the "**Direct to Frontity**" installation as it matches most user's needs, but we are developing new options in case it doesn't fit yours.
 
 ### Installations
 
@@ -20,7 +20,7 @@ As you may know, in order to have Frontity running you will need to adapt your c
 In this solution, WordPress is used as a headless CMS and we use Frontity to generate and show the final HTML. This means that WordPress is used just for managing the content.
 
 * Frontity uses the WP API to retrieve content and generate the final HTML.
-* Frontity is also capable to generate AMP pages with the same React code and CSS.
+* Frontity is also able to generate AMP pages with the same React code and CSS.
 
 ![](../.gitbook/assets/direct-to-frontity.png)
 
@@ -33,7 +33,7 @@ This solution requires a PHP Server for WordPress and a Node Server for Frontity
 |  | The server side rendering is still slow if the WordPress site is slow, so it may need a cache layer on top. |
 
 {% hint style="info" %}
-If you choose this solution, you may want to check our recommendations about selecting a server, your domains and the cache technique at "[Decisions you should take](./#decisions-you-should-take)".
+If you choose this solution, you may want to check out our recommendations about selecting a server, your domains and the cache technique at "[Decisions you should take](./#decisions-you-should-take)".
 {% endhint %}
 
 ## 🔜 Coming soon
@@ -57,7 +57,7 @@ With this solution, you won't need a new domain for your WordPress site, but you
 |  | Users **must** use a cache plugin or it will be very slow. |
 
 {% hint style="info" %}
-If you choose this solution, you may want to check our recommendations about selecting a server at "[Decisions you should take](./#decisions-you-should-take)".
+If you choose this solution, you may want to check out our recommendations about selecting a server at "[Decisions you should take](./#decisions-you-should-take)".
 {% endhint %}
 
 ### Static Rendered HTML

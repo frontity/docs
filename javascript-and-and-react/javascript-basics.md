@@ -3,7 +3,7 @@
 In order to understand how **Frontity** works and be able to modify its files and develop your own project, it would be necessary to understand the main JavaScript concepts that we use in our code. The number of them could seem overwhelming, but most of them are pretty simple.
 
 {% hint style="info" %}
-Note this guide purpose is to give you a better understanding of which JavaScript concepts we use at **Frontity**, and a brief explanation of them. If you want a more detailed way of learning JavaScript you can check other guides like [freeCodeCamp](https://www.freecodecamp.org/) or [w3schools](https://www.w3schools.com/js/default.asp).
+Note this guide's purpose is to give you a better understanding of which JavaScript concepts we use at **Frontity** and a brief explanation of them. If you want a more detailed way of learning JavaScript, you can check other guides like [freeCodeCamp](https://www.freecodecamp.org/) or [w3schools](https://www.w3schools.com/js/default.asp).
 {% endhint %}
 
 * \*\*\*\*[**Javascript concepts**](javascript-basics.md#javascript-concepts)\*\*\*\*
@@ -20,7 +20,7 @@ Note this guide purpose is to give you a better understanding of which JavaScrip
   * [For loops](javascript-basics.md#for-loops)
   * [While loops](javascript-basics.md#while-loops)
   * [RegExp](javascript-basics.md#regexp)
-* \*\*\*\*[**ES6 concepts**](javascript-basics.md#es6-concepts)\*\*\*\*
+* [**ES6 concepts**](javascript-basics.md#es6-concepts)
   * [Variables \(let & const\)](javascript-basics.md#variables-let-and-const)
   * [Arrow functions](javascript-basics.md#arrow-functions)
   * [Default parameters](javascript-basics.md#default-parameters)
@@ -32,7 +32,7 @@ Note this guide purpose is to give you a better understanding of which JavaScrip
 
 ### Comments
 
-As in most of programming languages, you are able to include comments in your code. You can write single-line comments with `//` and multi-line comments between `/*...*/`
+As with most programming languages, you are able to include comments in your code. You can write single-line comments with `//` and multi-line comments between `/*...*/`
 
 ```javascript
 // Single-line comment.
@@ -43,7 +43,7 @@ Multi-line comment.
 
 ### **Variables**
 
-You can store data inside variables in order to be used later. _\*\*_For creating one you just have to define it and assign a value.
+You can store data inside variables in order for it to be used later. _\*\*_For creating one you just have to define it and assign a value.
 
 ```javascript
 var number1 = 3;
@@ -81,7 +81,7 @@ There are some specific methods to work with numbers too. Although not needed to
 
 ### Objects
 
-Objects are also variables and they can store multiple values, assigning values to properties. You define objects this way:
+Objects are also variables, and they can store multiple values by assigning values to properties. You define objects this way:
 
 ```javascript
 var person = {
@@ -98,7 +98,7 @@ var name1 = person.firstName;
 var name2 = person["firstName"]; // Both return the same value.
 ```
 
-Object properties can also store other objets, like this:
+Object properties can also store other objects, like this:
 
 ```javascript
 var person = {
@@ -126,7 +126,7 @@ var item2 = pets[1]; // Returns 'cat'.
 var item3 = pets[2]; // Returns 'turtle'.
 ```
 
-Arrays are an important part of JavaScript and there are lots of array methods that will simplify your logic. You can check a extended list of them at [w3schools array reference](https://www.w3schools.com/jsref/jsref_obj_array.asp). We consider specially interesting:
+Arrays are an important part of JavaScript and there are lots of array methods that will simplify your logic. You can check out an extended list of them at [w3schools array reference](https://www.w3schools.com/jsref/jsref_obj_array.asp). We consider the following especially interesting:
 
 * [myArray.forEach\(\)](https://www.w3schools.com/jsref/jsref_foreach.asp): to run a function for each array element.
 * [myArray.filter\(\)](https://www.w3schools.com/jsref/jsref_filter.asp): to create a new array with every element in an array that pass a test.
@@ -159,7 +159,7 @@ In JavaScript, there are many types of operators. We could divide them this way:
 
 These are just some examples of JavaScript operators, there is a good summary at [**w3schools JavaScript Operators**](https://www.w3schools.com/js/js_operators.asp) _\*\*_to fully understand them.
 
-In JavaScript the `==` and `!=` operator exist, but they are never used because sometimes they don't behave properly \(i.e. `0 == ""` is true!\). For that reason everybody always use three equals: `===` and `!==` for comparisons.
+In JavaScript the `==` and `!=` operators exist, but they are never used because sometimes they don't behave properly \(i.e. `0 == ""` is true!\). For that reason everybody always uses three equals: `===` and `!==` for comparisons.
 
 ### If-else
 
@@ -175,10 +175,10 @@ if (condition1) {
 }
 ```
 
-You can add as many `else if` \(each one with it condition\) as you want, and it will run the code of the first one that match true. Moreover, you can use `if-else` without any `else if`, or even without the `else` statement, and it will continue with the rest of the code if `condition1` is false.
+You can add as many `else if` \(each one with a condition\) as you want, and it will run the code of the first one that matches true. Moreover, you can use `if-else` without any `else if`, or even without the `else` statement, and it will continue with the rest of the code if `condition1` is false.
 
 {% hint style="info" %}
-In React, `if-else` statements don't work, and instead we have to use operators and ternary expressions. It is more detailed at [React basics - Special cases](react-basic.md#if-else-statements-dont-work).
+In React, `if-else` statements don't work. Instead, we have to use operators and ternary expressions. For more details, refer to [React basics - Special cases](react-basic.md#if-else-statements-dont-work).
 {% endhint %}
 
 ### Ternary operator
@@ -200,7 +200,7 @@ They are also useful in React, but we'll see that later.
 
 ### Switch
 
-Switch statements are similar to `if-else`, and they let you run different code depending on a condition. This is the way to define them.
+Switch statements are similar to `if-else`, and they let you run different code depending on a condition. This is the way to define them:
 
 ```javascript
 switch(value) {
@@ -232,12 +232,12 @@ for (i = 0; i < 5; i += 1) {
 * **Statement 3** \(`i += 1`\): This is optional and is executed after each loop iteration. Usually used to change the value before running the next loop iteration.
 
 {% hint style="info" %}
-It is common to use `for loops` to run the same code at every array item. For doing so, we strongly recommend to use the [forEach\(\) method](https://www.w3schools.com/jsref/jsref_foreach.asp) instead of it.
+It is common to use `for loops` to run the same code for every array item. In these cases, we strongly recommend using the [forEach\(\) method](https://www.w3schools.com/jsref/jsref_foreach.asp) instead.
 {% endhint %}
 
 ### While loops
 
-It is related to `for loops`, and it performs the same code while a condition is true. You have to make sure that you change the condition in the code to not create infinite loops.
+Related to `for loops`, `while loops` perform the same code while a condition is true. You have to make sure that you change the condition in the code to not create infinite loops.
 
 ```javascript
 while (condition1) {
@@ -245,7 +245,7 @@ while (condition1) {
 }
 ```
 
-There is a similar loop called `do/while` which is a variant of the while loop. The only difference is that it will execute the code block once, before checking if the condition is true, and continue until the condition is `true`.
+There is a similar loop called `do/while` which is a variant of the `while loop`. The only difference is that it will execute the code block once, before checking if the condition is true, and continue while the condition is `true`.
 
 ```javascript
 do {
@@ -256,11 +256,11 @@ while (condition);
 
 ### RegExp
 
-The Regular Expressions \(RegExp\) are really useful in JavaScript as they let you match a pattern, and it can be used for example for defining a more complex condition.
+The Regular Expressions \(RegExp\) are really useful in JavaScript as they let you match a pattern, and it can be used, for example, for defining a more complex condition.
 
-They can be overwhelming, so if you are not familiar with them don't worry. We would recommend you to try to understand each particular case once you find them in our code, and know they exist as they could be useful in your code. Again, don't worry and just learn the concepts once you need them. This way, you will learn step by step and it will be easier.
+They can be overwhelming, so if you are not familiar with them don't worry. We would recommend you to try to understand each particular case once you find them in our code and know they exist as they could be useful in your code. Again, don't worry and just learn the concepts once you need them. This way, you will learn step by step and it will be easier.
 
-For learning the basics and help you understand or create some RegExps, you can use [w3schools guide](https://www.w3schools.com/js/js_regexp.asp), [freeCodeCamp regExp](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions) and also [RegExr](https://regexr.com/) to test them.
+To learn the basics and help you understand or create some RegExps, you can use [w3schools guide](https://www.w3schools.com/js/js_regexp.asp), [freeCodeCamp regExp](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions) and also [RegExr](https://regexr.com/) to test them.
 
 ## ES6 concepts
 
@@ -268,12 +268,12 @@ There are some features introduced with [ES6 update](https://www.freecodecamp.or
 
 ### Variables \(let and const\)
 
-We previously defined variables with the statement `var`, however, since ES6, it is not used at all. Instead, people use `let` and `const` :
+We previously defined variables with the statement `var`; however, since ES6, it is not used at all. Instead, people use `let` and `const` :
 
 * **Const** is used in almost 100% of the cases in Frontity, and it implies that the variable can't be reassigned, it has a constant value.
 * **Let** is used when you want to iterate through that variable and you would like to reassign its value.
 
-There are lightly differences between `let` and `var` too and you can check them [here](https://www.w3schools.com/jS/js_let.asp), but they are not that important and `var` is not commonly used anymore.
+There are slight differences between `let` and `var` too, and you can check them [here](https://www.w3schools.com/jS/js_let.asp), but they are not that important and `var` is not commonly used anymore.
 
 ### Arrow functions
 
@@ -299,7 +299,7 @@ hello('Jon');
 
 As you can see, the common way of using them is deleting the word `function` and adding `=>` just after it.
 
-However, sometimes the syntax can be even smaller. If your function is just composed of a `return` statement, you can change the curly braces `{ }` for parentheses `( )`, delete the `return` statement and it will interpret it must return the whole function.
+Sometimes the syntax can be even smaller. If your function is just composed of a `return` statement, you can change the curly braces `{ }` for parentheses `( )`, delete the `return` statement, and it will interpret that it must return the whole function.
 
 ```javascript
 const hello = (name) => (
@@ -315,7 +315,7 @@ const hello = (name) => 'Hi ' + name + ', nice to meet you!';
 hello('Jon');
 ```
 
-But if you return an object, the parentheses are required:
+However, if you return an object, the parentheses are required:
 
 ```javascript
 const hello = (name) => ({ firstName: name, lastName: "Snow" });
@@ -336,7 +336,7 @@ const hello2 = (name, surname) => "Hi " + name + surname + ", nice to meet you!"
 
 ### Default parameters
 
-You can create a default value for one parameter and it will be used if no other value is passed. For doing so, you can use the operator `=` while defining the parameter.
+You can set a default value for a parameter and it will be used if no other value is passed. To do so, you can use the operator `=` while defining the parameter.
 
 ```javascript
 const hello = (name = "there") => "Hi " + name + ", nice to meet you" ;
@@ -347,11 +347,11 @@ hello(); // It will return "Hi there, nice to meet you".
 
 ### Destructuring assignment
 
-This Javascript expression is used to unpack values from arrays or objects properties. It can seem a bit weird at the beginning, but if you get used, it will reduce a lot the lines of code of your project.
+This Javascript expression is used to unpack values from arrays or objects properties. It can seem a bit weird at the beginning, but once you get used, it will reduce a lot of lines of code from your project.
 
 #### _Object destructuring_
 
-As mentioned before, destructuring an object lets you assign to a variable the value of one property.
+As mentioned before, destructuring an object lets you assign the value of one property to a variable.
 
 ```javascript
 const person = {
@@ -367,7 +367,7 @@ console.log(lastName); // Returns Snow.
 console.log(age); // ERROR: age is not defined.
 ```
 
-As you can see, you select all the variables you want to create using curly braces `{ }`, and equals them to the object properties you want to get the values from. Yes, at the beginning it seems weird, but it is much easier than before ES6. Here you have an example of how to do it with/without destructuring:
+As you can see above, you select all the variables you want to create using curly braces `{ }` which equates them to the object properties you want to get the values from. Yes, at the beginning it seems weird, but it is much easier than before ES6. Here you have an example of how to assign values with/without destructuring:
 
 ```javascript
 // With destructuring.
@@ -379,7 +379,7 @@ const lastName = person.lastName;
 const age = person.age;
 ```
 
-We are just defining three variables, but imagine doing it with more, you would write much less code.
+We are only defining three variables above, but imagine if you had to define many variables. You would be writing much less code!
 
 **You can also assign a different name to the variables** if you want. For example:
 
@@ -417,7 +417,7 @@ console.log(a); // Returns 10.
 console.log(b); // Returns 20.
 ```
 
-Again, it is the same as object destructuring, instead of using curly braces we use `[ ]`, because we are working with arrays, and it will get values depending on the position.
+Again, it is the same as object destructuring, but instead of using curly braces we use `[ ]` because we are working with arrays, and it will get values depending on the position.
 
 You can also use default values in case the array length is smaller than the variables defined.
 
@@ -430,13 +430,13 @@ console.log(b); // Returns 20.
 console.log(c); // Returns 55.
 ```
 
-As `items` has just two elements they are assigned to the first variables and `c` gets its default value.
+Since `items` has just two elements, the first two variables are assigned values from the array while `c` gets its default value.
 
-If you have any questions, or you want more information about arrays and objects destructuring, it is well explained at the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+If you have any questions or you want more information about array and object destructuring, refer to [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) for a more detailed explanation.
 
 ### Template strings
 
-Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \( ``\), and these are they main advantages:
+Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \( ``\) and these are their main advantages:
 
 * They allow embedded expressions.
 * You can use multi-line strings, just by adding a line-break.
@@ -451,7 +451,7 @@ I am ${name},
 and I have killed ${43 + 57} white walkers`;
 ```
 
-There are more advantages of working with template strings, you can check them in guides like [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) or [Google docs](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings). In Frontity, we will mainly use them for the styles, but you can find them in other parts of the code.
+There are more advantages of working with template strings, and you can check them out in guides like [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) or [Google docs](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings). In Frontity, we will mainly use them for the styles, but you can find them in other parts of the code.
 
 ### Import and export
 
@@ -463,7 +463,7 @@ The import and export statements are exactly for this. If you want anything from
 
 There are two different types of export, **named** and **default**, and depending on each one, the corresponding import will be different.
 
-* **Named export:** You _\*\*_can have multiple named exports per module. It is useful to export many values, and import after just the ones you need.
+* **Named export:** You _\*\*_can have multiple named exports per module. It is useful to export many values, and import just the ones you need.
 
 ```javascript
 export const Component1 = () => { /* Code of Component1. */ };
@@ -534,11 +534,11 @@ When you import stuff from npm packages \(the ones you install with `npm install
 import Component from "some-package-name"
 ```
 
-There are other important ES6 aspects, but understanding them will give you a wide understanding of Frontity code. Another important concept that is commonly used in React are classes, but since introduction of hooks they are no longer needed, and in Frontity core are not used at all. You may want to take a look at them because they could be used by other packages, but it is not a must to get started.
+There are other important ES6 aspects, but understanding the ones above will give you a wide understanding of Frontity's code. Another important concept that is commonly used in React are classes, but since introduction of hooks, they are no longer needed and are not used at all in Frontity core. You may want to take a look at them because they could be used by other packages, but it is not a must to get started.
 
 For more detailed guides about these concepts, including classes, you can visit [https://www.w3schools.com/react/react\_es6.asp](https://www.w3schools.com/react/react_es6.asp).
 
 {% hint style="info" %}
-These are the main JavaScript concepts used in Frontity, if you understand them, you will be able to continue with [React basics](react-basic.md) to master Frontity. If you want to go deeper in learning JavaScript, there are a lot of resources out there, and if you have questions don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️.
+These are the main JavaScript concepts used in Frontity. If you understand them, you will be able to continue with [React basics](react-basic.md) to master Frontity. If you want to delve deeper into learning JavaScript, there are a lot of resources out there, and if you have questions don't hesitate to ask them at [our community](https://community.frontity.org/c/dev-talk-questions) ☺️.
 {% endhint %}
 

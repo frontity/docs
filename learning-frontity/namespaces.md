@@ -4,11 +4,11 @@
 This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
 {% endhint %}
 
-Let's talk now about **namespaces** and how we, as a community, can use them to extend Frontity and create a better tool for everyone. 
+Now, let's talk about **namespaces** and how we, as a community, can use them to extend Frontity and create a better tool for everyone. 
 
 In **Frontity** `state`, `actions` and `libraries` belong to a shared space among all packages, so each package needs to use its own namespace.
 
-To avoid conflicts between packages we could simply use the name of the package, but we use **namespaces** instead because some packages are interchangeable. For example, no matter if you install `wp-comments` \(native WordPress comments\) or `disqus-comments` \(Disqus comments\) in your Frontity project because the theme is going to access it using the common `comments` namespace and everything is going to work. Another person could create a third `comments` package in the future, based on a new service, and as long as it respects the same structure \(written in TypeScript\), all the themes \(even the old ones!\) will work perfectly.
+To avoid conflicts between packages we could simply use the name of the package, but we use **namespaces** instead because some packages are interchangeable. For example, it doesn't matter if you install `wp-comments` \(native WordPress comments\) or `disqus-comments` \(Disqus comments\) in your Frontity project because the theme is going to access it using the common `comments` namespace and everything is going to work. In the future, another person could create a third `comments` package, based on a new service, and as long as it respects the same structure \(written in TypeScript\), all the themes \(even the old ones!\) will work perfectly.
 
 More examples of **namespaces** are:
 
@@ -53,7 +53,7 @@ export default {
 ```
 {% endcode %}
 
-One thing you can notice is that `roots`, `state`, and `actions` have a namespace called `theme`. It seems like it is not adding much value because it is the only namespace. Then, why not write it like this instead?
+One thing you might notice is that `roots`, `state`, and `actions` have a namespace called `theme`. It may seem like it is not adding much value because it is the only namespace. Why not write it like this instead?
 
 {% code title="/packages/my-awesome-theme/src/index.js" %}
 ```javascript
@@ -79,7 +79,7 @@ export default {
 ```
 {% endcode %}
 
-Several reasons:
+There are several reasons:
 
 ### 1. It's easier to be aware of the final structure
 
@@ -104,7 +104,7 @@ actions: {
 
 ### 2. It's easier for TypeScript
 
-Even tho TypeScript is optional in **Frontity**, we make sure it has excellent support in case you want to use it. TypeScript gets really complex when you try to modify the structure of your objects, and in order to make it as simple as possible, it's good to create objects with the same structure that they will be consumed later. So yes, TypeScript just works :\) 
+Even though TypeScript is optional in **Frontity**, we make sure it has excellent support in case you want to use it. TypeScript gets really complex when you try to modify the structure of your objects, and in order to make it as simple as possible, it's good to create objects with the same structure that they will be consumed later. So yes, TypeScript just works :\) 
 
 ### 3. Multiple namespaces per package
 
@@ -144,9 +144,9 @@ export default {
 
 ## Making Frontity extensible through namespaces
 
-This is the main reason namespaces exist in **Frontity**, and a big part of how Frontity itself works. 
+This is the main reason namespaces exist in **Frontity** and a big part of how Frontity itself works. 
 
-We use namespaces to create abstractions on top of packages and so they can communicate between each other without really knowing the specific implementation.
+We use namespaces to create abstractions on top of packages and, by doing so, they can communicate between each other without really knowing the specific implementation.
 
 It's easier to understand with some examples. 
 
@@ -230,7 +230,7 @@ Actually, the `theme` has no idea about what specific implementation of `comment
 
 ### Example: `analytics`
 
-Let's see another example: two actions in the `analytics` namespace. All the packages that want to implement analytics need to have these two actions:
+Let's take a look at another example: two actions in the `analytics` namespace. All the packages that want to implement analytics need to have these two actions:
 
 * `actions.analytics.sendPageview`:  send a pageview to the analytics service.
 * `actions.analytics.sendEvent`: send an event to the analytics service.
@@ -275,5 +275,5 @@ export default {
 ```
 {% endcode %}
 
-When users open the share modal, a new event is sent to the analytics service of the `analytics` package which is installed in this **Frontity** project, not matter which one it is 🎉🎉
+When users open the share modal, a new event is sent to the analytics service of the `analytics` package that is installed in the **Frontity** project, no matter which one it is 🎉🎉
 
