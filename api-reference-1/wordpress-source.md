@@ -37,13 +37,13 @@ The url of your API. It can be from a self-hosted WordPress, like `https://site.
 
 #### state.source.subdirectory
 
-A name or path indicating in which subdirectory of your domain is your Frontity site. For example, if your site is in https://mysite.com/blog, you have to use it with value `blog` or `/blog`. It also transform links of the entities that come from the REST API.
+A name or path indicating the subdirectory of your domain where your Frontity site lives. For example, if your site is in https://mysite.com/blog, you have to use it with the value of `blog` or `/blog`. It also transform links of the entities that come from the REST API.
 
 #### state.source.homepage
 
-This option allows you to show a specific page when accessing to the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access to `/`. 
+This option allows you to show a specific page when accessing the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access `/`. 
 
-> **NOTE:** As this option overrides the `/` route, you should set `state.source.postsPage` as well to be able to access the posts archive in a different route.
+> **NOTE:** As this option overrides the `/` route, you should set `state.source.postsPage` as well in order to be able to access the posts archive in a different route.
 
 {% hint style="warning" %}
 You have to configure your WordPress with the same setting.
@@ -53,7 +53,7 @@ You have to configure your WordPress with the same setting.
 
 #### state.source.postsPage
 
-This option allows you to show the posts archive when accessing to a specific URL of your site, instead of the homepage. For example, if you set this value to `/blog`, then the posts archive will be shown if you access `/blog` instead of `/`. It is useful when used in combination with `state.source.homepage`.
+This option allows you to show the posts archive when accessing a specific URL of your site, instead of the homepage. For example, if you set this value to `/blog`, then the posts archive will be shown if you access `/blog` instead of `/`. It is useful when used in combination with `state.source.homepage`.
 
 {% hint style="warning" %}
 You have to configure your WordPress with the same setting.
@@ -63,13 +63,13 @@ You have to configure your WordPress with the same setting.
 
 #### state.source.categoryBase
 
-Change the base prefix of URLs for category pages by the indicated one.
+Change the base prefix of URLs for category pages with the indicated one.
 
 > **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
 
 #### state.source.tagBase
 
-Change the base prefix of URLs for tag pages by the indicated one.
+Change the base prefix of URLs for tag pages with the indicated one.
 
 > **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
 
@@ -106,13 +106,13 @@ and then you visit a URL \(or use `actions.source.fetch`\), the query part of th
 
 #### state.source.postTypes
 
-This option allows you to show the Custom Post Types you create at WordPress when accessing to their URLs. It is an array of objects, each object being a different CPT. It has three arguments:
+This option allows you to show the Custom Post Types you create at WordPress when accessing their URLs. It is an array of objects, each object being a different CPT. It has three arguments:
 
 * `type` : Type slug. The slug you configured for your Custom Post Type. e.g. `movies`
 * `endpoint` : REST API endpoint from where this post type can be fetched. e.g. `movies`
 * `archive` \(optional\): the URL of the archive of this Custom Post Type, where all of them are listed. e.g. `/movies_archive` .
 
-Differentiating `type` and `endpoint`may be confusing as they are usually the same. You can confirm you are doing it okay going to the CPT `endpoint` :
+Differentiating `type` and `endpoint` may be confusing as they are usually the same. You can confirm you are doing it correctly going to the CPT `endpoint` :
 
 ![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_movies.png)
 
@@ -130,14 +130,14 @@ postTypes: [
 
 #### state.source.taxonomies
 
-Similar to `postTypes`setting, this one allows you to show the lists of posts of a Custom Taxonomies you create at WordPress when accessing to their URLs. It is an array of objects, each object being a different Custom Taxonomy. It has four arguments:
+Similar to `postTypes`setting, this one allows you to show the lists of posts of a Custom Taxonomies you create at WordPress when accessing their URLs. It is an array of objects, each object being a different Custom Taxonomy. It has four arguments:
 
 * `taxonomy` : Taxonomy slug. The slug you configured for your Custom Taxonomy. 
-* `endpoint` : REST API endpoint from where this taxonomy can be fetched.
-* `postTypeEndpoint` \(optional\): REST API endpoint from where posts of this taxonomy can be fetched. Default is "posts", but if the Custom Taxonomy is meant to load Custom Post Types instead, you have to add its endpoint here.
+* `endpoint` : REST API endpoint from which this taxonomy can be fetched.
+* `postTypeEndpoint` \(optional\): REST API endpoint from which posts of this taxonomy can be fetched. Default is "posts", but if the Custom Taxonomy is meant to load Custom Post Types instead, you have to add its endpoint here.
 * `params` \(optional\): Extra params to be used while fetching the list of posts.
 
-Again, differentiating `taxonomy` and `endpoint`may be confusing as they usually are the same too. You can confirm you are doing it okay going to the Custom Taxonomy `endpoint` :
+Again, differentiating `taxonomy` and `endpoint`may be confusing as they usually are the same too. You can confirm you are doing it correctly by going to the Custom Taxonomy `endpoint` :
 
 ![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_actor.png)
 
@@ -208,9 +208,9 @@ export default connect(CategoryNature);
 
 #### source.fetch
 
-This action fetch all entities related to a `link`, i.e. the pathname of a URL in your site.
+This action fetches all entities related to a `link`, i.e. the pathname of a URL in your site.
 
-All received data are populated in `state.source` and is accessible using the methods explained in the next section.
+All received data are populated in `state.source` and are accessible using the methods explained in the next section.
 
 ```javascript
 actions.source.fetch("/category/nature/");
@@ -269,7 +269,22 @@ The information to distinguish each type of link is based on the [WP Template Hi
   * media: `isMedia`, `isAttachment`
 * 404: `is404`
 
-Properties added to each type are also based in the [WP REST API](https://developer.wordpress.org/rest-api/reference/):
+Additionally, if calling `get()` has returned a status code higher than `400`, we add information about the error to the state. For example, if an error code was `500`, the state will include the following properties:
+
+```js
+{
+  isError: true,
+  is500: true,
+  errorStatus: 500,
+  errorStatusText: "Some string describing the error",
+
+  // booleans that describe the fetch status
+  isReady: true,
+  isFetching: false
+}
+```
+
+Properties added to each type are also based on the [WP REST API](https://developer.wordpress.org/rest-api/reference/):
 
 * taxonomy: `taxonomy`, `id`
 * author: `id`
@@ -281,7 +296,7 @@ Properties added to each type are also based in the [WP REST API](https://develo
 
 #### `source[taxonomy][id]`
 
-Access category, tag, or custom taxonomy’s entities. This entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
+Access category, tag, or custom taxonomy’s entities. These entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
 > NOTE: we are actually changing the WP REST API response, but **only for tags**, in which we are replacing the `taxonomy` value from `post_tag` to `tag`.
 
@@ -295,7 +310,7 @@ source.deal[3]
 
 #### `source[type][id]`
 
-Access posts, pages, attachments or custom post type’s entities. This entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
+Access posts, pages, attachments or custom post type’s entities. These entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
 ```text
 source.post[60]
@@ -307,7 +322,7 @@ source.product[36]
 
 #### `source.author[id]`
 
-Access author entities. This entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
+Access author entities. These entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
 ```text
 source.author[4]
