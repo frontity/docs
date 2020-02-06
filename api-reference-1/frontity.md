@@ -53,6 +53,12 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 * [fetch](frontity.md#fetch)
 * [URL](frontity.md#url)
 
+### Helpers
+
+#### API reference:
+
+* [decode](frontity.md#decode)
+
 ## Api Reference
 
 ### `connect`
@@ -412,4 +418,30 @@ const getApiPathname = ({ state }) => {
 ```
 
 
+
+### `decode`
+
+#### Syntax
+
+```jsx
+const decodedText = decode(text);
+```
+
+#### Arguments
+
+* **`text`**: a string representing the html to be escaped.
+
+#### Return value
+
+* `string`
+
+#### Example
+
+```jsx
+import { decode } from "frontity";
+
+const decodedText = decode("milk &amp; cookies");
+
+console.log(decodedText); // "milk and cookies"
+```
 
