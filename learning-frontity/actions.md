@@ -58,15 +58,48 @@ By the way, you can access the actions in the client console using:
 > frontity.actions
 ```
 
-### Actions triggered by Frontity
+## Actions triggered by Frontity
 
 There are a set of special actions that Frontity runs at appropriate moments:
 
 ![](../.gitbook/assets/screen-shot-2019-06-03-at-17.19.03.png)
 
-* `init` _– client and server – async_ Packages can use this action to initialize their internal libraries. Packages should not use actions or libraries from other packages as they may not be properly initialized.
-* `beforeSSR`: _– server only – async_ The main purpose of this action is to prepare the state for the React render made in the server. Packages can populate it with content fetched from external APIs, like the WP REST API. They can also interact with other packages if necessary.
-* `afterSSR`: _– server only_ This action runs when the HTML has been sent to the client. Packages should not rely on this action except for logging purposes because serverless providers sometimes kill the server after the HTML has been sent.
-* `beforeCSR`: _– client only – async_ This action is run before React is hydrated. It's not widely used because here the state that React needs for the hydration is already received from the server.
-* `afterCSR`: _– client only_ This action is run after React has been hydrated in the client and it has taken control of the page. This is where packages with client side logic can start doing their thing.
+#### `init` \(client & server\) 
+
+Packages can use this action to initialize their internal libraries. Packages should not use actions or libraries from other packages as they may not be properly initialized.
+
+#### **`beforeSSR`** \(server only\) __
+
+The purpose of this action is to prepare the state for the React render made in the server. Packages can populate it with content fetched from external APIs, like the WP REST API. They can also interact with other packages if necessary.  
+  
+You can _optionally_ use the [curried](https://en.wikipedia.org/wiki/Currying) version of `beforeSSR` which is called with an object that contains the [Koa Context](https://koajs.com/#context) in the `ctx` parameter. You can use this `ctx` to modify things like status codes, headers and so on.
+
+```javascript
+// Without the context
+{
+  beforeSSR: ({ state, libraries }) => {
+    console.log('Gonna SSR this page');
+  }
+}
+
+// The optional curried version using the context
+{
+  beforeSSR: ({ state, libraries }) => async ({ ctx }) => {
+    // ctx is koa context: https://koajs.com/#context
+    console.log('SSR all day long', ctx.status);
+  }
+}
+```
+
+#### `afterSSR` \(server only\) 
+
+This action runs when the HTML has been sent to the client. Packages should not rely on this action except for logging purposes because serverless providers sometimes kill the function after the HTML has been sent
+
+#### `beforeCSR`  \(client only\) 
+
+This action is run before React is hydrated. Be aware that the state that React needs for the hydration is already received from the server so you don't need to replicate the fetching done in `beforeSSR`.
+
+#### `afterCSR`  __\(client only\) __
+
+This action is run after React has been hydrated in the client and it has taken control of the page. This is where packages with client side logic can start doing their thing.
 
