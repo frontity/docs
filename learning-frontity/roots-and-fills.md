@@ -63,7 +63,7 @@ This package can export the React elements it needs in its **root** and expose a
 {% code title="/packages/my-share-modal-package/src/components/index.js" %}
 ```jsx
 const ShareRoot = ({ state }) => (
-  state.share.isModalOpen & <ShareModal />
+  state.share.isModalOpen && <ShareModal />
 ); 
 export default ShareRoot;
 ```
