@@ -198,6 +198,28 @@ The script processor, with a priority of `20`, processes `<script>` tags found i
 
 **Usage:** The script processor is included by default in html2react. Therefore, no extra procedure is required to use the processor.
 
+### Iframe
+
+Iframes can impact the loading time and performance of a site. The iframe processor adds lazy-loading to the `<iframe>` tags found in the html. 
+
+**Usage:**
+
+Add `iframe` to the `processors` array in your package `index.js` file.
+
+```javascript
+import iframe from "@frontity/html2react/processors/image";
+
+const themeName = {
+    name: "theme-name",
+    ...
+    libraries: {
+        html2react: {
+            processors: [iframe]
+        }
+    }
+}
+```
+
 ## API Reference
 
 ### Libraries

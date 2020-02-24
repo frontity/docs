@@ -60,6 +60,52 @@ const MyComponent = () => (
 )
 ```
 
+### Iframe
+
+`<Iframe />` is a React component that implement lazy-load on iframe components. The approach taken in implementing this component is based off the edge cases in the table below.
+
+| Intersection Observer | Native Lazy | Height &gt; 0 | Output |
+| :--- | :--- | :--- | :--- |
+| true | true | true | Native Lazy Load |
+| true | true | false | Intersection Observer |
+| true | false | true | Intersection Observer |
+| true | false | false | Intersection Observer |
+| false | true | true | \(not possible\) |
+| false | true | false | \(not possible\) |
+| false | false | true | Normal Load \(eager\) |
+| false | false | false | Normal Load \(eager\) |
+
+{% hint style="info" %}
+Native Lazy needs a height attribute. For that reason, we use the Intersection Observer when a height is not provided.
+{% endhint %}
+
+#### Props
+
+| Name | Type | Default | Optional | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `src` | string | `null` | `true` | `URL` to an external `JavaScript`  file. |
+| `title` | string | `null` | false | internal `JavaScript` code |
+| `width` | string | `null` | `true` | width of the iframe component |
+| `height` | string | null | true | height of the iframe component |
+| `className` | string | null | true | class name for the component |
+| `loading` | string | lazy | true | lazy \| eager \| auto |
+| `rootMargin` | string | null | true | margin around root element |
+
+#### Usage
+
+```javascript
+import Iframe from "@frontity/components/iframe";
+
+const MyComponent = () => (
+    <Iframe
+        src="https://frontity.org"
+        title="Frontity"
+        height="500"
+        width="500" 
+    />
+);
+```
+
 
 
 {% hint style="info" %}
