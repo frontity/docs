@@ -207,7 +207,7 @@ Iframes can impact the loading time and performance of a site. The iframe proces
 Add `iframe` to the `processors` array in your package `index.js` file.
 
 ```javascript
-import iframe from "@frontity/html2react/processors/image";
+import iframe from "@frontity/html2react/processors/iframe";
 
 const themeName = {
     name: "theme-name",
