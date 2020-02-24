@@ -37,11 +37,11 @@ The url of your API. It can be from a self-hosted WordPress, like `https://site.
 
 #### state.source.subdirectory
 
-A name or path indicating the subdirectory of your domain where your Frontity site lives. For example, if your site is in https://mysite.com/blog, you have to use it with the value of `blog` or `/blog`. It also transform links of the entities that come from the REST API.
+A name or path indicating the subdirectory of your domain where your Frontity site lives. For example, if your site is in [https://mysite.com/blog](https://mysite.com/blog), you have to use it with the value of `blog` or `/blog`. It also transform links of the entities that come from the REST API.
 
 #### state.source.homepage
 
-This option allows you to show a specific page when accessing the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access `/`. 
+This option allows you to show a specific page when accessing the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access `/`.
 
 > **NOTE:** As this option overrides the `/` route, you should set `state.source.postsPage` as well in order to be able to access the posts archive in a different route.
 
@@ -81,7 +81,7 @@ The default value is `"posts"`.
 
 #### state.source.params
 
-Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. This is useful to filter fields from the REST API, change the default `per_page` value and so on. For example, if you set this value to 
+Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. This is useful to filter fields from the REST API, change the default `per_page` value and so on. For example, if you set this value to
 
 ```javascript
 module.exports = {
@@ -174,20 +174,20 @@ const CategoryNature = ({ state, actions }) => {
 
   // 1. fetch data related to a path
   actions.source.fetch("/category/nature/");
-  
+
   // 2. get data from frontity state
   const data = state.source.get("/category/nature/");
-  
+
   // 3. get entities from frontity state
   if (data.isCategory) {
     // the category entity
     const category = state.source.category[data.id];
-    
+
     // posts from that category
     const posts = data.items.map(
       ({ type, id }) => state.source[type][id]
     );
-    
+
     // 4. render!
     return (
       <>
@@ -195,7 +195,7 @@ const CategoryNature = ({ state, actions }) => {
         {posts.map(p => <a href={p.link}>{p.title.rendered}</a>)}
       </>
     );
-    
+
   return null;
 }
 
@@ -206,7 +206,7 @@ export default connect(CategoryNature);
 
 ### Actions
 
-#### source.fetch
+#### `source.fetch`
 
 This action fetches all entities related to a `link`, i.e. the pathname of a URL in your site.
 
@@ -214,6 +214,14 @@ All received data are populated in `state.source` and are accessible using the m
 
 ```javascript
 actions.source.fetch("/category/nature/");
+```
+
+When `fetch` is called _again_ for the same `link` it does nothing, as all the entities have already been fetched and there is no need to request them again. If you do want to fetch them again, you can pass an options object to `source.fetch` with the following properties:
+
+* `force`: a boolean indicating if the entities should be fetched again.
+
+```javascript
+actions.source.fetch("/category/nature/", { force: true });
 ```
 
 ### State
@@ -233,16 +241,16 @@ will return something like
   // entity properties
   taxonomy: "category"
   id: 7
-  
+
   // booleans that identify the type of path
   isArchive: true
   isCategory: true
   isTaxonomy: true
-  
+
   // booleans that show the fetch status
   isFetching: false
   isReady: true
-  
+
   // list of posts (if it's an archive)
   items: [{ type: "post", id: 60, link: "..." }, ...]
   total: 10
@@ -271,7 +279,7 @@ The information to distinguish each type of link is based on the [WP Template Hi
 
 Additionally, if calling `get()` has returned a status code higher than `400`, we add information about the error to the state. For example, if an error code was `500`, the state will include the following properties:
 
-```js
+```javascript
 {
   isError: true,
   is500: true,
@@ -292,11 +300,9 @@ Properties added to each type are also based on the [WP REST API](https://develo
 * date: `year`, `month`, `date`
 * postType: `type`, `id`
 
-
-
 #### `source[taxonomy][id]`
 
-Access category, tag, or custom taxonomy’s entities. These entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
+Access category, tag, or custom taxonomy’s entities. These entities have the same schema as specified in the [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
 > NOTE: we are actually changing the WP REST API response, but **only for tags**, in which we are replacing the `taxonomy` value from `post_tag` to `tag`.
 
@@ -306,11 +312,9 @@ source.tag[13]
 source.deal[3]
 ```
 
-
-
 #### `source[type][id]`
 
-Access posts, pages, attachments or custom post type’s entities. These entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
+Access posts, pages, attachments or custom post type’s entities. These entities have the same schema as specified in the [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
 ```text
 source.post[60]
@@ -318,17 +322,13 @@ source.page[7]
 source.product[36]
 ```
 
-
-
 #### `source.author[id]`
 
-Access author entities. These entities have the same schema as specified in the  [WP REST API](https://developer.wordpress.org/rest-api/reference/).
+Access author entities. These entities have the same schema as specified in the [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
 ```text
 source.author[4]
 ```
-
-
 
 ### Libraries
 
@@ -358,8 +358,6 @@ api.init({
   isWpCom: false
 });
 ```
-
-
 
 #### `api.get({ endpoint, params, api?, isWpCom? })`
 
@@ -396,17 +394,18 @@ api.get({
 });
 ```
 
-
-
-#### `populate({ response, state, subdirectory? })`
+#### `populate({ response, state, subdirectory?, force? })`
 
 Add entities to the Frontity state.
+
+Entities are normally never overwritten. So, if an entity already exists in the state and a new one is fetched, the one in the state will prevail. If you want to overwrite them, `populate` should be called with `force: true`.
 
 **arguments**
 
 * `response`: the response object returned by `api.get().`
 * `state`: the state object from the Frontity store.
 * `subdirectory` \(optional\): domain's subdirectory where your Frontity site is accessible. When this options is passed, this subdirectory is added to the entities' links. By default, it takes the value defined in `state.source.subdirectory`.
+* `force`: boolean value indicating if the entities should be overwritten.`false` by default.
 
 #### return
 
@@ -419,20 +418,19 @@ const response = libraries.source.api.get({ endpoint: "posts" });
 libraries.source.populate({ response, state });
 ```
 
-#### 
-
 #### `handlers`
 
-Handlers are objects that associate a path pattern with a function that gets the entities contained in that path. These `handlers` are used when `actions.source.fetch` is executed. 
+Handlers are objects that associate a path pattern with a function that gets the entities contained in that path. These `handlers` are used when `actions.source.fetch` is executed.
 
 * `name`: string that identify this handler.
 * `priority`: number that lets `fetch` to know in which order handlers should be evaluated.
 * `pattern`: pattern which paths are compared with. We use [path-to-regexp](https://github.com/pillarjs/path-to-regexp) under the hood, so check its documentation to know how to write patterns.
 * `func`:  function that retrieves entities and adds all info to the state. It receives the following arguments:
-  * `route`: the route that are being fetched
+  * `route`: the route that are being fetched.
   * `params`: values obtained from the pattern after a match
-  * `state`: Frontity state
-  * `libraries`: Frontity libraries
+  * `state`: Frontity state.
+  * `libraries`: Frontity libraries.
+  * `force`: a boolean indicating if the entities should be fetched again. Internally, this parameter will be passed to the `actions.source.fetch` call.
 
 #### example
 
@@ -442,7 +440,7 @@ libraries.source.handlers.push({
   name: "product",
   priority: 10,
   pattern: "/product/:slug",
-  func: async ({ route, params, state, libraries }) => {
+  func: async ({ route, params, state, libraries, force }) => {
     // 1. get product
     const response = await libraries.source.api.get({
       endpoint: "products",
@@ -450,7 +448,7 @@ libraries.source.handlers.push({
     });
 
     // 2. add product to state
-    const [product] = await libraries.source.populate({ response, state });
+    const [product] = await libraries.source.populate({ response, state, force });
 
     // 3. add route to data
     Object.assign(state.source.data[route], {
@@ -463,11 +461,9 @@ libraries.source.handlers.push({
 });
 ```
 
-
-
 #### `redirections`
 
-Redirections are objects that associate a path pattern with a function that returns a new path. These `redirections` are used when `actions.source.fetch` is executed, before `handlers`. 
+Redirections are objects that associate a path pattern with a function that returns a new path. These `redirections` are used when `actions.source.fetch` is executed, before `handlers`.
 
 * `name`: string that identify this redirection.
 * `priority`: number that lets `fetch` to know in which order redirections should be evaluated.
@@ -486,11 +482,9 @@ libraries.source.redirections.push({
 });
 ```
 
-
-
 #### `parse(route)`
 
-Utility for parsing routes. 
+Utility for parsing routes.
 
 **arguments**
 
@@ -504,11 +498,9 @@ Utility for parsing routes.
   * `query`: object with query parameters
   * `hash`: the hash value \(with `#`\).
 
-
-
 #### `stringify({ path, page?, query?, hash? })`
 
-Utility for building routes from its attributes. 
+Utility for building routes from its attributes.
 
 **arguments**
 
@@ -520,8 +512,6 @@ Utility for building routes from its attributes.
 #### return
 
 * `route`: normalized route 
-
-
 
 #### `normalize(route)`
 
