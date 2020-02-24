@@ -60,7 +60,9 @@ const Post = ({ state, libraries }) => {
 
 ### Load processors
 
-The `processors` field is an _array_ where you can push all the processors you want to use with `html2react`. You need to do this in the `init` function of your theme or extension, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
+The `processors` field is an _array_ where you can push all the processors you want to use with `html2react`. You can check the default processors [here](frontity-html2react.md#processors).
+
+You need to do this in the `init` function of your theme or extension, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
 
 {% code title="index.js" %}
 ```jsx
@@ -90,7 +92,7 @@ A processor is an object with four properties: `test`, `process`, `name` and `pr
 
 The `test` function will evaluate the node, and if it returns `true`, this node will be passed down to the `process` function in order to apply the processor.
 
-For example, this is how the `image` processor is implemented in `html2react`:
+For example, this is how the `image` processor is implemnted in `html2react`:
 
 {% code title="processors/image.js" %}
 ```typescript
@@ -172,17 +174,29 @@ An `Element` is an HTML tag or a React component.
 
 **Node: `Text`**
 
-An `Text` is a text content. For example, the text inside a `<p>` tag.
+A `Text` is a text content. For example, the text inside a `<p>` tag.
 
 * **`type`** : `"text"`
 * **`content`** : `string`
 
 **Node: `Comment`**
 
-An **`Comment`** is just an HTML comment. Like this `<!-- comment -->`.
+A **`Comment`** is just an HTML comment. Like this `<!-- comment -->`.
 
 * **`type`** : `"comment"`
 * **`content`** : `string`
+
+## Processors
+
+This are the current processors exposed in this package:
+
+### Script
+
+React doesn’t execute the code inside a `<script>` tags. For that reason, html2react doesn’t execute the script tags included in the contents. 
+
+The script processor, with a priority of `20`, processes `<script>` tags found in the html for execution. `<script>` type must either be `application/javascript`, `text/javascript` or `application/ecmascript` to pass the test of the processor.
+
+**Usage:** The script processor is included by default in html2react. Therefore, no extra procedure is required to use the processor.
 
 ## API Reference
 

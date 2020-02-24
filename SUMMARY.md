@@ -26,6 +26,7 @@
   * [frontity](api-reference-1/frontity.md)
   * [@frontity/tiny-router](api-reference-1/router.md)
   * [@frontity/wp-source](api-reference-1/wordpress-source.md)
+  * [@frontity/components](api-reference-1/frontity-components.md)
   * [@frontity/html2react](api-reference-1/frontity-html2react.md)
   * [@frontity/head-tags](api-reference-1/frontity-head-tags.md)
 * [🔌 Frontity WordPress Plugins](frontity-plugins/README.md)
