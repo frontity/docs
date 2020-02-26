@@ -43,7 +43,7 @@ Multi-line comment.
 
 ### **Variables**
 
-You can store data inside variables in order for it to be used later. _\*\*_For creating one you just have to define it and assign a value.
+You can store data inside variables in order for it to be used later. \_\*\*\_For creating one you just have to define it and assign a value.
 
 ```javascript
 var number1 = 3;
@@ -157,7 +157,7 @@ In JavaScript, there are many types of operators. We could divide them this way:
 * **Comparison Operators:** To test if a condition is true/false. It could be `x === y`, `x < 5`, `x > 20`...
 * **Logical Operators:** To add some logic to the comparison statement.  For example in this statement`x < 5` **`&&`** `y > 25`  "x" must be less than 5 **AND** "y" must be more than 25**.**
 
-These are just some examples of JavaScript operators, there is a good summary at [**w3schools JavaScript Operators**](https://www.w3schools.com/js/js_operators.asp) _\*\*_to fully understand them.
+These are just some examples of JavaScript operators, there is a good summary at [**w3schools JavaScript Operators**](https://www.w3schools.com/js/js_operators.asp) \_\*\*\_to fully understand them.
 
 In JavaScript the `==` and `!=` operators exist, but they are never used because sometimes they don't behave properly \(i.e. `0 == ""` is true!\). For that reason everybody always uses three equals: `===` and `!==` for comparisons.
 
@@ -436,7 +436,7 @@ If you have any questions or you want more information about array and object de
 
 ### Template strings
 
-Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \( ``\) and these are their main advantages:
+Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \( \`\`\) and these are their main advantages:
 
 * They allow embedded expressions.
 * You can use multi-line strings, just by adding a line-break.
@@ -463,7 +463,7 @@ The import and export statements are exactly for this. If you want anything from
 
 There are two different types of export, **named** and **default**, and depending on each one, the corresponding import will be different.
 
-* **Named export:** You _\*\*_can have multiple named exports per module. It is useful to export many values, and import just the ones you need.
+* **Named export:** You \_\*\*\_can have multiple named exports per module. It is useful to export many values, and import just the ones you need.
 
 ```javascript
 export const Component1 = () => { /* Code of Component1. */ };

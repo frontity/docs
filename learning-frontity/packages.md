@@ -14,7 +14,7 @@ When you do a `npx frontity create`, we install three packages for you:
 * `@frontity/wp-source` as an external package. It ends up in the `node_modules` folder.
 * `@frontity/mars-theme` as a **local package**. It ends up in the `packages` folder.
 
-We do this because the most likely situation is that you want to modify the theme, but you don't want to modify the router or source packages. 
+We do this because the most likely situation is that you want to modify the theme, but you don't want to modify the router or source packages.
 
 Once we move a package from `node_modules` to `packages` it becomes a **local package** and you can change it at will. If you use `git`, its code is also included in your project and you can commit any change. If you want to use that package in other projects or you want to contribute to the community, you can publish it to npm using `npm publish`.
 
@@ -92,7 +92,7 @@ Guess what? You can also use client and server files inside modes like this: `/s
 
 ## Publishing Local Packages
 
-One thing we wanted to make sure in **Frontity** is that publishing packages was really easy. 
+One thing we wanted to make sure in **Frontity** is that publishing packages was really easy.
 
 For that reason, **Frontity** packages don't need to be transpiled. They can be written in either JavaScript or TypeScript. _So, look ma, no build step!_
 
@@ -103,7 +103,7 @@ cd packages/my-awesome-theme
 npm publish
 ```
 
- Now `my-theme` is available in npm! Any other **Frontity** user can install it using:
+Now `my-theme` is available in npm! Any other **Frontity** user can install it using:
 
 ```text
 npm install my-awesome-theme
