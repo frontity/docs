@@ -34,6 +34,8 @@ Finally, it's worth noting that **Frontity** doesn't know which packages are loc
 ```
 {% endcode %}
 
+If you want to install a new Frontity package you can follow this guide: [Install a new Frontity package](../guides/install-a-new-package.md).
+
 ## Package Folder Structure
 
 Packages have their own `package.json` file. Its code is inside the `/src` folder.
