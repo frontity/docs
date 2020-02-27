@@ -8,7 +8,7 @@ The most common way to suggest improvements or changes to Frontity \(and most of
 Before starting, the only **prerequisite is to have Node 10 installed in your computer**.
 {% endhint %}
 
-### Quick guide
+## Quick guide
 
 1. Fork this [repository](https://github.com/frontity/frontity) and clone your fork.
 2. Run `npm install` in the root folder.
@@ -22,7 +22,7 @@ Before starting, the only **prerequisite is to have Node 10 installed in your co
 7. Commit and push to your fork.
 8. Open a Pull Request detailing the changes.
 
-### Step by step guide
+## Step by step guide
 
 **1. Fork this** [**repository**](https://github.com/frontity/frontity)**:**
 
@@ -93,7 +93,120 @@ Select your own repository and **the dev branch** on Frontity, and **create the 
 
 ![](../.gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
 
+## Commit messages
 
+Commit messages are one of the most common ways developers communicate with other developers so it’s important that your commit message clearly communicate changes with everybody else.
+
+In Frontity, we follow [the seven rules of Chris Beams](https://chris.beams.io/posts/git-commit/#seven-rules):
+
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+6. Wrap the body at 72 characters
+7. Use the body to explain what and why vs. how
+
+Additionally, you can add a scope followed by a colon. Sometimes it may help clarify and shorten the message:
+
+```text
+Decode: Fix regexp for numeric entities
+--versus--
+Fix the decode regexp for numeric entities
+```
+
+Remember to capitalize the subject again after the colon.
+
+For a more detailed explanation please read the excellent article of [Chris Beams](https://github.com/cbeams) and the guide of WordPress VIP:
+
+* [https://chris.beams.io/posts/git-commit](https://chris.beams.io/posts/git-commit/#seven-rules)
+* [https://wpvip.com/documentation/commit-messages](https://wpvip.com/documentation/commit-messages/)
+
+## Code comments
+
+For code comments, we follow these rules:
+
+1. Write your comments in plain, valid English.
+2. Capitalize the first word.
+3. End with a period.
+4. Break the line at 80 characters.
+
+```text
+// This is a bad comment because is longer than 80 characters and people need to scroll right to read it. Don't do this.
+
+// This is a good comment. You can create different phrases. Then, break
+// the line if it is too long so people do not have to scroll to the right
+// to read everything.
+
+----
+
+// Bad comment. Too Cryptic. Please talk English.
+
+// This is a good comment. It is not cryptic and it's easy to read.
+// Please, talk in proper English, like when you talk to a person.
+
+----
+
+// this is a bad comment
+
+// Remember to capitalize the first word and end with a period.
+```
+
+## Changelogs
+
+We use [Changesets](https://github.com/atlassian/changesets/) to manage our versioning and changelogs.
+
+### What is a changeset
+
+A changeset is a piece of information about changes made in a branch or commit. It holds three bits of information:
+
+* What we need to release.
+* What version we are releasing packages at \(using a [semver bump type](https://semver.org/)\).
+* A changelog entry for the released packages.
+
+If you pull request has changes that need to be released in a new version of some of the packages, you need to include a changeset file in the pull request.
+
+### How to create a changeset
+
+1. Run the command line script `npx changeset`.
+2. Select the packages you want to include in the changeset using ↑ and ↓ to navigate to packages, and hit `space` to select a package. Hit `enter` when all desired packages are selected.
+3. You will be prompted to select a bump type for each selected package. Select an appropriate bump type for the changes made. Those are:  
+    - **Major version**: when you make incompatible API changes.
+
+    - **Minor version:** when you add functionality in a backwards compatible manner.
+
+    - **Patch version:** when you make backwards compatible bug fixes.  
+   See [here](https://semver.org/) for information on semver versioning.
+
+4. Your final prompt will be to provide a message to go alongside the changeset. This will be written into the changelog when the next release occurs.
+
+After this, a new changeset file will be added, which is a markdown file with YAML front matter.
+
+```text
+-| .changeset/
+-|-| some-unique-name.md
+```
+
+#### **You can write as much markdown as you want**
+
+The message you typed can be found in the markdown file. If you want to expand on it, you can write as much markdown as you want, which will all be added to the changelog on publish. If you want to add more packages or change the bump types of any packages, that's also fine.
+
+A good idea of what should be in a changeset is:
+
+* **What** the change is.
+* **Why** the change was made.
+* **How** a consumer should update their code.
+
+Once you are happy with the changeset, commit the file to your branch.
+
+#### You can add more than one changeset to a pull request
+
+Changesets are designed to stack, so there's no problem with adding multiple. You might want to add more than one changeset when:
+
+* You want to release multiple packages with different changelog entries.
+* You have made multiple changes to a package that should each be called out separately.
+
+For a more [detailed information on changesets please read their guide](https://github.com/atlassian/changesets/blob/master/docs/detailed-explanation.md).
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
