@@ -421,7 +421,7 @@ const getApiPathname = ({ state }) => {
 
 ### `decode`
 
-An entity decoder that supports [all standardized named character references as per HTML](https://html.spec.whatwg.org/multipage/syntax.html#named-character-references). It works both in the server and the client and it's optimized to be lightweight and performant.
+An entity decoder that decodes HTML numeric entities and [XML named entities](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references). It works both in the server and the client and it's optimized to be both lightweight and performant.
 
 #### Syntax
 
