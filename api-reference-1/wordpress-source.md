@@ -239,22 +239,31 @@ will return something like
 ```javascript
 {
   // entity properties
-  taxonomy: "category"
-  id: 7
+  taxonomy: "category",
+  id: 7,
 
   // booleans that identify the type of path
-  isArchive: true
-  isCategory: true
-  isTaxonomy: true
+  isArchive: true,
+  isCategory: true,
+  isTaxonomy: true,
 
   // booleans that show the fetch status
-  isFetching: false
-  isReady: true
+  isFetching: false,
+  isReady: true,
 
   // list of posts (if it's an archive)
-  items: [{ type: "post", id: 60, link: "..." }, ...]
-  total: 10
-  totalPages: 1
+  items: [{ type: "post", id: 60, link: "..." }, ...],
+  total: 10,
+  totalPages: 1,
+  
+  link: "/category/nature",
+  query: "",
+  
+  
+  // pagination atributes (for Archive)
+  page: 1,
+  path: "/category/nature",
+  next: "category/page/1",
 }
 ```
 

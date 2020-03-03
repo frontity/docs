@@ -4,7 +4,7 @@
 This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
 {% endhint %}
 
-Now, let's talk about **namespaces** and how we, as a community, can use them to extend Frontity and create a better tool for everyone.
+Now, let's talk about **namespaces** and how we, as a community, can use them to extend Frontity and create a better tool for everyone. 
 
 In **Frontity** `state`, `actions` and `libraries` belong to a shared space among all packages, so each package needs to use its own namespace.
 
@@ -104,7 +104,7 @@ actions: {
 
 ### 2. It's easier for TypeScript
 
-Even though TypeScript is optional in **Frontity**, we make sure it has excellent support in case you want to use it. TypeScript gets really complex when you try to modify the structure of your objects, and in order to make it as simple as possible, it's good to create objects with the same structure that they will be consumed later. So yes, TypeScript just works :\)
+Even though TypeScript is optional in **Frontity**, we make sure it has excellent support in case you want to use it. TypeScript gets really complex when you try to modify the structure of your objects, and in order to make it as simple as possible, it's good to create objects with the same structure that they will be consumed later. So yes, TypeScript just works :\) 
 
 ### 3. Multiple namespaces per package
 
@@ -144,11 +144,11 @@ export default {
 
 ## Making Frontity extensible through namespaces
 
-This is the main reason namespaces exist in **Frontity** and a big part of how Frontity itself works.
+This is the main reason namespaces exist in **Frontity** and a big part of how Frontity itself works. 
 
 We use namespaces to create abstractions on top of packages and, by doing so, they can communicate between each other without really knowing the specific implementation.
 
-It's easier to understand with some examples.
+It's easier to understand with some examples. 
 
 ### Example: `comments`
 
@@ -168,17 +168,17 @@ export default {
 ```
 {% endcode %}
 
-Now, all the `theme` packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If it is, they can include its React component after the post content.
+Now, all the `theme`  packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If it is, they can include its React component after the post content. 
 
 {% code title="/packages/my-awesome-theme/src/components/Post.js" %}
 ```jsx
 const Post = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source.post[data.id];
-
+  
   // Check if libraries.comments exist and if it does get the Comments component.
   const Comments = libraries.comments ? libraries.comments.Comments : null;
-
+  
   return (
     <Container>
       <Title title={post.title.rendered} />
@@ -224,7 +224,7 @@ export default {
 ```
 {% endcode %}
 
-The `disqus-comments` package also exports a `Comments` component in `libraries.comments.Comments` so the theme inserts that instead.
+The `disqus-comments` package also exports a `Comments` component in `libraries.comments.Comments` so the theme inserts that instead. 
 
 Actually, the `theme` has no idea about what specific implementation of `comments` you have installed. Everything works and the theme didn't need to change.
 

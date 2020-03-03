@@ -2,7 +2,7 @@
 
 This guide will try to get you from not knowing what **Frontity** is, to feeling amazed about the things you can do with it!
 
-{% embed url="https://www.youtube.com/watch?v=wC7-3lMDuiU" caption="" %}
+{% embed url="https://www.youtube.com/watch?v=wC7-3lMDuiU" %}
 
 ## Create a new Frontity project
 
@@ -87,6 +87,8 @@ With Frontity you won't have your site code in the root folder like you would ha
 The installed theme with `npx frontity create` is `@frontity/mars-theme` and you can find it in `packages/mars-theme/`. You can edit any of its files while running Frontity and the site will refresh automatically.
 
 > `npx frontity create` will install the `mars-theme` in `packages/` so the theme can be edited by the developer. However, this theme doesn't need to reside in `packages/` if you don't want to edit it. It can be installed directly with `npm` inside `node_modules/` and it will work exactly the same.
+
+
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊

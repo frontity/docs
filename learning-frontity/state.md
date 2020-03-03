@@ -28,7 +28,7 @@ export default {
 ```
 {% endcode %}
 
-As you can see here, this theme needs some settings like the `menu` or settings to define if it should show featured images or not, and then some state that is useful while the app is running, like `isMenuOpen`.
+As you can see here, this theme needs some settings like the `menu` or settings to define if it should show featured images or not, and then some state that is useful while the app is running, like `isMenuOpen`. 
 
 You can access the state in the client console with:
 
@@ -40,7 +40,7 @@ State is a proxy, so you can see the original object clicking on `[[Target]]` :
 
 ![Expand \[\[Target\]\] to see the real object behind the proxy.](../.gitbook/assets/screen-shot-2019-07-03-at-10.56.34.png)
 
-## Why not separate settings and state?
+### Why not separate settings and state?
 
 First, here at Frontity we think the less concepts the better. Second, imagine a `notifications` package wants to add an item to the `menu` only when the browser actually supports notifications. That's super easy to do by just using the `state`:
 
@@ -59,7 +59,7 @@ export default {
         }
       }
     }
-  }
+  } 
 ```
 {% endcode %}
 
@@ -98,13 +98,13 @@ export default {
         });    
       }
     }
-  }
+  } 
 ```
 {% endcode %}
 
 Finally, `tiny-router` exposes a third prop called `autoFetch`. This is a setting and, by default, is `true`. If it's active, it fetches the data you need each time you navigate to a new route using: `actions.router.set(link)`.
 
-Here the most common scenario is that you will use your `frontity.settings.js` file to set `autoFetch` to `false` when you want to control the fetching yourself:
+Here the most common scenario is that you will use your `frontity.settings.js` file to set `autoFetch`  to `false` when you want to control the fetching yourself:
 
 {% code title="frontity.settings.js" %}
 ```javascript
@@ -126,7 +126,7 @@ export default {
 
 These are the most important things you need to know about the **Frontity** state:
 
-## 1. State should be serializable
+### 1. State should be serializable
 
 Only objects, arrays and primitives \(strings, numbers...\) are allowed in the `state` because it must be serializable. No circular dependencies are allowed either. The best way to think about it is: **it's a JSON**.
 
@@ -148,9 +148,9 @@ The client browser paints the HTML received from the server. Then, this is what 
 2. It renders React again. It should produce the very same HTML we've sent from the server.
 3. It gives each package the opportunity to run code with an `afterCSR` action. CSR stands for Client Side Rendering.
 
-## 2. All the state is merged together
+### 2. All the state is merged together
 
-As we've seen in the previous point, the states from `frontity.settings.js` and your packages are merged together.
+As we've seen in the previous point, the states from `frontity.settings.js` and your packages are merged together. 
 
 Let's imagine we have this setting file:
 
@@ -285,14 +285,14 @@ state: {
 
 Now everything is ready for the React render in the server!
 
-## 3. State should be minimal
+### 3. State should be minimal
 
 There are two reasons for this:
 
 1. The initial state is sent to the client, so the smaller the better.
 2. It's easier to cause out-of-sync bugs when the state exists in two different places.
 
-For that reason, Frontity supports **derived state**.
+For that reason, Frontity supports **derived state**. 
 
 Remember I told you that `state` must be serializable and cannot contain functions? Well, that's still technically true, but you can include **derived state** functions. Let's take a look at an example:
 
@@ -367,7 +367,7 @@ state: {
 
 That's it! Now when you use `state.share.totalCount` in React everything will be updated without having to do anything additional on your end.
 
-You can also use them with parameters like this:
+You can also use them with parameters like this:  
 
 ```javascript
 state: {

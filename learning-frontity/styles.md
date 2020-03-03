@@ -2,7 +2,7 @@
 
 You should now know all the concepts needed to master **Frontity**, so let's see how you can customize your theme.
 
-Frontity takes a different approach than WordPress when customizing themes. While in WordPress you have different `style.css` files and you add classes to your elements, **Frontity** uses **CSS-in-JS** instead. But don't worry, you don't have to learn a new language, it is CSS at the end.
+Frontity takes a different approach than WordPress when customizing themes. While in WordPress you have different `style.css` files and you add classes to your elements, **Frontity** uses **CSS-in-JS** instead. But don't worry, you don't have to learn a new language, it is CSS at the end. 
 
 CSS-in-JS, apart from having a better developer experience while working with React, has many other advantages like:
 
@@ -13,9 +13,9 @@ CSS-in-JS, apart from having a better developer experience while working with Re
 
 Let's learn some of the CSS-in-JS concepts to be able to use it with Frontity:
 
-## Styled
+### Styled
 
-In order to style your app, you will usually create new React components from HTML tags \(or even other React components\) with new styles attached to them. To do so, we will import `styled` from `frontity`, and create Styled Components.
+In order to style your app, you will usually create new React components from HTML tags \(or even other React components\) with new styles attached to them. To do so, we will import `styled`  from `frontity`, and create Styled Components.
 
 When styling html tags, you just use `style` followed by the html tag, and then a template string with the CSS, like this:
 
@@ -34,7 +34,7 @@ If you want to style another React component, you use `styled` like a function. 
 ```jsx
 import { styled } from "frontity";
 
-const Link = ({ className, href, children }) => (
+const Link = ({ className, href, children }) => (
     <a href={href} className={className}>
         {children}
     </a>
@@ -82,7 +82,7 @@ As you can see, it is really easy to work with, and you are still using common C
 * You can create Styled Components from HTML tags or React components, although the syntax is slightly different.
 * You can use JavaScript inside the template strings. In this case we are using a variable `linkColor` but you can do anything you want.
 
-## The \`css\` prop
+### The \`css\` prop
 
 Sometimes, you won't need to create a new component, and you will just want to add some css to an element. This is similar to inline styles, and you can do this by importing `css` from `frontity` .
 
@@ -98,7 +98,7 @@ const Component = () => (
 
 This way, we will be styling just that div.
 
-## Dynamic CSS using props
+### Dynamic CSS using props
 
 You can pass a function to a styled component's template string to adapt it based on its props. This `button` component has a `color` prop that changes, well, its color.
 
@@ -115,7 +115,7 @@ const Component = () => (
 );
 ```
 
-## React's \`style\` prop
+### React's \`style\` prop
 
 {% hint style="warning" %}
 React has its own way of adding inline style, using the `style` prop, but **you should not use it** because the CSS you write there won't be optimized by Frontity!
@@ -160,7 +160,7 @@ const StyledDiv = styled.div`
 `;
 ```
 
-## &lt;Global&gt;
+### &lt;Global&gt;
 
 There will be times when you want to add styles for the whole app. For example defining styles for the `h1` , `h2` or `body` tags. In Frontity, this can be done with the `Global` component.
 
@@ -244,9 +244,9 @@ const StyledDiv = styled.div`
 `;
 ```
 
-## External CSS files
+### External CSS files
 
-External CSS files should be imported using the `<Global>` component.
+External CSS files should be imported using the `<Global>` component. 
 
 {% hint style="info" %}
 When you import a CSS file in Frontity, it is just a string of CSS.
@@ -269,7 +269,7 @@ const Theme = ({ state }) => {
       <Body>
         ...
       </Body>
-
+      
       <Global styles={css(externalCss)} />
     </>
   );
@@ -280,7 +280,7 @@ const Theme = ({ state }) => {
 **Using `<Global>` for anything other than html tags is not recommended** because Frontity is not able to optimize it. That means you can use it to import external styles, but if you really want Frontity to be able to optimize it, you should extract that CSS and move it to styled components instead.
 {% endhint %}
 
-## Keyframes
+### Keyframes
 
 Finally, the last import you may need is `keyframes`. This one is used to define and use animations in your CSS.
 
@@ -310,9 +310,9 @@ const Component = () => (
 
 And that's all you need to style your theme!
 
-## Emotion Documentation
+### Emotion Documentation
 
-For managing the styles shown above, Frontity has integrated and configured [Emotion](https://emotion.sh/docs/styled).
+For managing the styles shown above, Frontity has integrated and configured [Emotion](https://emotion.sh/docs/styled). 
 
 If you want to go deeper, you should take a look at their docs. You don't need to read the docs on how to install and configure Emotion, we have already done that work for you. The items below are particularly useful to learn more about:
 
@@ -325,9 +325,9 @@ If you want to go deeper, you should take a look at their docs. You don't need t
 
 That's it! You are now a master of CSS-in-JS.
 
-## From SASS to CSS-in-JS
+### From SASS to CSS-in-JS
 
-### Why can I not use SASS?
+#### Why can I not use SASS?
 
 Frontity is an "opinionated framework" because it comes with its own State Manager and CSS solution.
 
@@ -339,22 +339,24 @@ That's not common among the JS framework space, but it gives Frontity some advan
 
 For a more in-depth explanation about the reasons we believe it's a good approach to stick to CSS-in-JS vs other CSS solutions, please take a look at this [community thread](https://community.frontity.org/t/use-css-or-scss-instead-of-emotion/451/9?u=luisherranz).
 
-### SASS to CSS-in-JS resources
+#### SASS to CSS-in-JS resources
 
 CSS-in-JS supports all the SASS features. If you are used to SASS, our recommendation is to learn CSS-in-JS. It won't take you more than 30 minutes to learn how to do the very same things you are used to doing in SASS.
 
 These are some resource you might find useful to make the transition to CSS-in-JS:
 
-{% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8" caption="" %}
+{% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8" %}
 
-{% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js" caption="" %}
+{% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js" %}
 
-{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html" caption="" %}
+{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html" %}
 
-### Migrating from SASS to CSS-in-JS
+#### Migrating from SASS to CSS-in-JS
 
 If you already have a base of SASS you want to migrate, you can use these tools to extract your variables and use them directly in JavaScript:
 
 * [https://github.com/adamgruber/sass-extract-js](https://github.com/adamgruber/sass-extract-js)
 * [https://github.com/jgranstrom/sass-extract](https://github.com/jgranstrom/sass-extract)
+
+
 

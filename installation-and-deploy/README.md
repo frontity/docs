@@ -2,13 +2,13 @@
 
 In order to fully understand how you will get the most of Frontity, and everything you need to get it running, you may want to check these aspects:
 
-* [Why will you need to adapt your configuration?](./#why-will-you-need-to-adapt-your-configuration)
-* [Decisions you should take](./#decisions-you-should-take)
+* \*\*\*\*[**Why will you need to adapt your configuration?**](./#why-will-you-need-to-adapt-your-configuration)\*\*\*\*
+* \*\*\*\*[**Decisions you should take**](./#decisions-you-should-take)\*\*\*\*
   * [Select Frontity installation](./#select-frontity-installation)
   * [Select your server hostings](./#select-your-server-hostings)
   * [Select your domains](./#select-your-domains)
   * [Add a cache layer on top](./#add-a-cache-layer-on-top)
-* [Our recommended solution](./#our-recommended-solution)
+* \*\*\*\*[**Our recommended solution**](./#our-recommended-solution)\*\*\*\*
 
 ## Why will you need to adapt your configuration?
 
@@ -16,7 +16,7 @@ In order to use Frontity, a Node installation is required. This means that the W
 
 We are aware that this could be a burden, so Frontity is designed to make it as simple as possible:
 
-1. Frontity works really well with serverless hostings like [Now](https://zeit.co/now), [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/) and so on, which makes it super cheap, really easy, and infinitely scalable.
+1.  Frontity works really well with serverless hostings like [Now](https://zeit.co/now), [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/) and so on, which makes it super cheap, really easy, and infinitely scalable.
 2. We are working on different solutions to adapt to all user needs. You should check out all the possibilities we are thinking of, with their pros and cons, at [Possible installations](possible-architectures.md).
 
 ## Decisions you should take
@@ -25,7 +25,7 @@ As mentioned, in order to use Frontity, you will need to adapt your configuratio
 
 ### Select Frontity installation
 
-Frontity aims to match all user needs, and for this reason, we are working on different installation solutions, each one with pros and cons. You can check out all the possibilities in detail _\*\*_at the page [Possible installations](possible-architectures.md).
+Frontity aims to match all user needs, and for this reason, we are working on different installation solutions, each one with pros and cons. You can check out all the possibilities in detail ****at the page [Possible installations](possible-architectures.md).
 
 **💡 Recommendation:**
 
@@ -65,7 +65,7 @@ If your hosting service doesn't provide cache, you may want to look for an addit
 
 Furthermore, according to our experience working with media publishers, we suggest you to look for a service offering [**stale-while-revalidate**](https://www.keycdn.com/blog/keycdn-supports-stale-while-revalidate), the best cache technique for this type of architecture.
 
-**💡 Recommendation:**
+**💡 Recommendation:** 
 
 We have tested many solutions for CDN and stale-while-revalidate, and we consider that the best options for this approach are [KeyCDN](https://www.keycdn.com) and [StackPath](https://www.stackpath.com/).
 
@@ -82,7 +82,7 @@ If you have read the "Decisions you should take" section, you might already know
 
 If you want more detail about each solution, you can check out the previous section [Decisions you should take](./#decisions-you-should-take)**.**
 
-
+\*\*\*\*
 
 {% hint style="info" %}
 Still have questions? Ask the community! We are here to help 😊
