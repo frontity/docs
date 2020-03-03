@@ -34,7 +34,6 @@ You don't need to configure any settings for this package.
 
 This is how you need to include the Component that will render the parsed content. The only prop it takes is `html`, and you'll usually pass `post.content.rendered` to it:
 
-{% code title="post.js" %}
 ```jsx
 import React from 'react'
 
@@ -56,45 +55,49 @@ const Post = ({ state, libraries }) => {
   );
 };
 ```
-{% endcode %}
 
 ### Load processors
 
 The `processors` field is an _array_ where you can push all the processors you want to use with `html2react`. You can check the default processors [here](frontity-html2react.md#processors).
 
-You need to do this in the `init` function of your theme or extension, in order for the processors to be loaded before the React render. Here you can see as an example how this is done in `mars-theme`:
+You can add your processors directly in `libraries.html2react.processors`. Here you can see as an example how this is done in `mars-theme`:
 
-{% code title="index.js" %}
 ```jsx
-import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
+import customProcessor from "./processors/custom";
 
-const marsTheme = {
-  ...
-  actions: {
-    theme: {
-      init: ({ libraries }) => {
-        // Add an Html2React processor for the <img> tags.
-        libraries.html2react.processors.push(image);
-      }
+const myPackage = {
+  roots: { ... },
+  state: { ... },
+  actions: { ... },
+  libraries: {
+    html2react: {
+      processors: [image, customProcessor]
     }
   }
-  ...
 };
 
-export default marsTheme;
+export default myPackage;
 ```
-{% endcode %}
 
 ### Create your own processors
 
-A processor is an object with four properties: `test`, `process`, `name` and `priority`.  
+A processor is an object with four properties: `name` , `priority` , `test`,and `processor`.
 
-The `test` function will evaluate the node, and if it returns `true`, this node will be passed down to the `process` function in order to apply the processor.
+* `name` : Just the name of your processor.
+* `priority` : number that lets the package know in which order processors should be evaluated.
+* `test` : It's a function that evaluate each [node](frontity-html2react.md#nodes), and if it returns `true`, this node will be passed down to the `processor` function.
+* `processor` : A function to apply some logic to the [node](frontity-html2react.md#nodes) that we want to modify. It could be substituting html tags for React component with some logic, as adding `lazy-loading` to images, or just modifying some attributes, like adding `target="_blank"` to the links.
 
-For example, this is how the `image` processor is implemnted in `html2react`:
+Both the `test` and the `processor` functions receive the same params `({ node, root, state, libraries })` :
 
-{% code title="processors/image.js" %}
+* `node` : It's the html node tag the processor is evaluating.
+* `root` : The top node of the node tree.
+* `state` : Access to Frontity's `state`  . This could be useful to use some parts of the `state` inside your processor. For example, using your `state.theme.colors` .
+* `libraries` : Access to Frontity's `libraries`. As it happens with the `state`, sometimes could be useful to access your `libraries` as well.
+
+Let's see some examples. This is how the `image` processor is implemented in `html2react`:
+
 ```typescript
 import Image from "@frontity/components/image";
 
@@ -106,9 +109,9 @@ const image = {
   priority: 10,
 
   // Only process the node it if it's an image.
-  test: node => node.component === "img",
+  test: ({ node }) => node.component === "img",
   
-  process: node => {
+  processor: ({ node }) => {
     // If the image is inside a <noscript> tag, we don't want to process it.
     if (node.parent.component === "noscript") return null;
 
@@ -128,29 +131,26 @@ const image = {
 
 export default image;
 ```
-{% endcode %}
 
 You don't need to return a React component, you can also modify the attributes \(props\) of the node. For example, this processor adds `target="_blank"` to the `<a>` tags with href starting with `http`:
 
-{% code title="" %}
 ```typescript
 const extAnchors = {
   name: "external anchors",
   priority: 10,
   // Only process the node it if it's an anchor and href starts with http.
-  test: node => node.component === "a" && node.props.href.startsWith("http"),
+  test: ({ node }) => node.component === "a" && node.props.href.startsWith("http"),
   // Add the target attribute.
-  process: node => {
+  processor: ({ node }) => {
     node.props.target = "_blank";
     return node;
   }
 };
 ```
-{% endcode %}
 
 ### Nodes
 
-The object `node` received by both `test` and `process`can be an `Element`, a `Text` or a `Comment`. You can distinguish between them using `node.type`.
+The object `node` received by both `test` and `processor`can be an `Element`, a `Text` or a `Comment`. You can distinguish between them using `node.type`.
 
 The common properties are:
 
@@ -230,20 +230,18 @@ An array of the `processor`s that will be used by `html2react`.
 
 You should can add, remove or mutate any processor from the array:
 
-{% code title="index.js" %}
 ```jsx
 // Add a processor.
 libraries.html2react.processors.push(image);
 
 // Remove a processor.
-const i = libraries.html2react.processors.findIndex(pr => pr.name === "image");
-libraries.html2react.processors.splice(i, 1);
+const index = libraries.html2react.processors.findIndex(pr => pr.name === "image");
+libraries.html2react.processors.splice(index, 1);
 
 // Change a processor priority.
-const pr = libraries.html2react.processors.find(pr => pr.name === "image");
-pr.priority = 20;
+const processor = libraries.html2react.processors.find(pr => pr.name === "image");
+processor.priority = 20;
 ```
-{% endcode %}
 
 #### `libraries.html2react.Component`
 
@@ -251,101 +249,21 @@ The React component used to render the parsed HTML.
 
 **Props**
 
-* **`decodedText`** : `String` The decoded text.
 * **`html`** : `String` The HTML that needs to be rendered.
 
-### Other internal APIs
+```jsx
+import React from 'react'
 
-#### `libraries.html2react.parse(html, decode) => htmlTree`
-
-Parses the HTML passed as a string into an AST ready to be used by `html2react.Component`.
-
-**Arguments**
-
-* **`html`** : `String`  The HTML content to be parsed.
-* **`decode`**: `Function`  A function used by `html2react.Component` to decode HTML characters.
-
-**Return**
-
-* **`htmlTree`** : `Array` A AST structure of the HTML passed into the function.
-
-#### `libraries.html2react.decode(text) => decodedText`
-
-Decode any HTML character found in the string passed and returns another string with the characters decoded.
-
-**Arguments**
-
-* **`text`** : `String` The text that we want to decode.
-
-**Return**
-
-## TypeScript
-
-You can import the types from `@frontity/html2react/types`. The main package type is the default export, and the other types are named exports:
-
-```javascript
-import Html2React, { Processor } from '@frontity/html2react/types';
+const Post = ({ libraries }) => {
+  // Get the component exposed by html2react.
+  const Html2React = libraries.html2react.Component; 
+  
+  return (
+    <>
+      {/* Use it to render the HTML. */}
+      <Html2React html={html} />
+    </>
+  );
+};
 ```
-
-The following types are exposed:
-
-```typescript
-interface Html2React extends Package {
-  name: "@frontity/html2react";
-  libraries: {
-    html2react: {
-      parse: Parse;
-      decode: Decode;
-      processors: Processor[];
-      Component: Component;
-    };
-  };
-}
-
-interface Processor {
-  name?: string;
-  priority?: number;
-  test: Test;
-  process: Process;
-}
-
-interface Test {
-  (node: Node): boolean;
-}
-
-interface Process {
-  (node: Node, payload: { root: Node[] }): Node;
-}
-
-interface Element {
-  type: "element";
-  component: string | React.ComponentType;
-  props: {
-    css?: Emotion.SerializedStyles;
-  } & {
-    [key: string]: string | number | boolean;
-  };
-  children?: Node[];
-  parent?: Element;
-  ignore?: boolean;
-}
-
-interface Text {
-  type: "text";
-  content: string;
-  parent?: Element;
-  ignore?: boolean;
-}
-
-interface Comment {
-  type: "comment";
-  content: string;
-  parent?: Element;
-  ignore?: boolean;
-}
-
-type Node = Element | Text | Comment;
-```
-
-### 
 
