@@ -60,6 +60,8 @@ const MyComponent = () => (
 )
 ```
 
+### 
+
 ### Iframe
 
 `<Iframe />` is a React component that implement lazy-load on iframe components. The approach taken in implementing this component is based off the edge cases in the table below.
@@ -104,6 +106,69 @@ const MyComponent = () => (
         width="500" 
     />
 );
+```
+
+
+
+### Switch
+
+The `<Switch />`  renders the first child component that returns `true` as the value of its `when` prop. 
+
+The last child component \(which should not have a `when` prop\) will be rendered if no other component matches the condition.
+
+You can use it for routing to different components in your theme:
+
+```javascript
+import Switch from "@frontity/components/switch";
+
+const Theme = ({ state }) => {
+    const data = state.source.get(state.router.link);
+    
+    return (
+        <Switch>
+            <Loading when={data.isFetching} />
+            <Home when={data.isHome} />
+            <Archive when={data.isArchive} />
+            <Post when={data.isPostType} />
+            <ErrorPage /> {/* rendered by default */}
+        </Switch>
+    );
+}
+```
+
+But also inside any other component. For example, in a `<Header>` component that has a different menu for the home:
+
+```javascript
+import Switch from "@frontity/components/switch";
+
+const Header = ({ state }) => {
+    const data = state.source.get(state.router.link);
+    
+    return (
+        <Switch>
+            <MenuHome when={data.isHome} />
+            <Menu /> // rendered by default
+        </Switch>
+    );
+}
+```
+
+This component is an alternative to applying plain JavaScript logic in React:
+
+```javascript
+const Theme = ({ state }) => {
+    const data = state.source.get(state.router.link);
+    
+    return (
+        <>
+          {(data.isFetching && <Loading />) ||
+           (data.isHome && <Home />) ||
+           (data.isArchive && <Archive />) ||
+           (data.isPostType && <Post />) ||
+           <ErrorPage />}
+        </>    
+    );
+}
 ```
 
 
