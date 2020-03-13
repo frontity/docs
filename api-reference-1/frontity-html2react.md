@@ -85,7 +85,7 @@ export default myPackage;
 A processor is an object with four properties: `name` , `priority` , `test`,and `processor`.
 
 * `name` : Just the name of your processor.
-* `priority` : number that lets the package know in which order processors should be evaluated.
+* `priority` : A number that lets the package know in which order processors should be evaluated. The processors are evaluated in numeric order. For example, a processor with `priority` of `10` will be applied **before** a  processor with a `priority` of `20`.
 * `test` : It's a function that evaluate each [node](frontity-html2react.md#nodes), and if it returns `true`, this node will be passed down to the `processor` function.
 * `processor` : A function to apply some logic to the [node](frontity-html2react.md#nodes) that we want to modify. It could be substituting html tags for React component with some logic, as adding `lazy-loading` to images, or just modifying some attributes, like adding `target="_blank"` to the links.
 
