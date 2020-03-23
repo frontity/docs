@@ -1,6 +1,6 @@
 # JavaScript
 
-In order to understand how **Frontity** works and be able to modify its files and develop your own project, it would be necessary to understand the main JavaScript concepts that we use in our code. The number of them could seem overwhelming, but most of them are pretty simple.
+In order to understand how **Frontity** works and be able to modify its files and develop your own project, it is necessary to understand the main JavaScript concepts that we use in our code. The number of concepts can seem overwhelming, but most of them are pretty simple.
 
 {% hint style="info" %}
 Note this guide's purpose is to give you a better understanding of which JavaScript concepts we use at **Frontity** and a brief explanation of them. If you want a more detailed way of learning JavaScript, you can check other guides like [freeCodeCamp](https://www.freecodecamp.org/) or [w3schools](https://www.w3schools.com/js/default.asp).
