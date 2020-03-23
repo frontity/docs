@@ -2,13 +2,13 @@
 
 In order to fully understand how you will get the most of Frontity, and everything you need to get it running, you may want to check these aspects:
 
-* \*\*\*\*[**Why will you need to adapt your configuration?**](./#why-will-you-need-to-adapt-your-configuration)\*\*\*\*
-* \*\*\*\*[**Decisions you should take**](./#decisions-you-should-take)\*\*\*\*
+* [**Why will you need to adapt your configuration?**](./#why-will-you-need-to-adapt-your-configuration)
+* [**Decisions you should take**](./#decisions-you-should-take)
   * [Select Frontity installation](./#select-frontity-installation)
   * [Select your server hostings](./#select-your-server-hostings)
   * [Select your domains](./#select-your-domains)
   * [Add a cache layer on top](./#add-a-cache-layer-on-top)
-* \*\*\*\*[**Our recommended solution**](./#our-recommended-solution)\*\*\*\*
+* [**Our recommended solution**](./#our-recommended-solution)
 
 ## Why will you need to adapt your configuration?
 
