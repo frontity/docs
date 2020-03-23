@@ -82,8 +82,6 @@ If you have read the "Decisions you should take" section, you might already know
 
 If you want more detail about each solution, you can check out the previous section [Decisions you should take](./#decisions-you-should-take)**.**
 
-\*\*\*\*
-
 {% hint style="info" %}
 Still have questions? Ask the community! We are here to help 😊
 {% endhint %}
