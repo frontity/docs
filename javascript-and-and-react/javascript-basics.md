@@ -225,7 +225,7 @@ Again, you can define as many cases as you want, and if none of them match, the 
 
 ### For loops
 
-This statement is really useful if you want to perform the same codea lot of times but with different values. To do so you have to define 3 statements:
+This statement is really useful if you want to perform the same code a number of times but with different values. To do so you have to define 3 statements:
 
 ```javascript
 for (i = 0; i < 5; i += 1) {
