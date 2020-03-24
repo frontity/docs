@@ -6,7 +6,7 @@ In order to understand how **Frontity** works and be able to modify its files an
 Note this guide's purpose is to give you a better understanding of which JavaScript concepts we use at **Frontity** and a brief explanation of them. If you want a more detailed way of learning JavaScript, you can check other guides like [freeCodeCamp](https://www.freecodecamp.org/) or [w3schools](https://www.w3schools.com/js/default.asp).
 {% endhint %}
 
-* \*\*\*\*[**Javascript concepts**](javascript-basics.md#javascript-concepts)\*\*\*\*
+* [**Javascript concepts**](javascript-basics.md#javascript-concepts)
   * [Comments](javascript-basics.md#comments)
   * [Variables](javascript-basics.md#variables)
   * [Strings](javascript-basics.md#strings)
@@ -260,7 +260,7 @@ do {
 while (condition);
 ```
 
-### Regular Expressions (RegExp)
+### Regular Expressions \(RegExp\)
 
 The Regular Expressions \(RegExp\) are really useful in JavaScript as they let you match a pattern. They can be used, for example, for defining a more complex condition.
 
@@ -448,7 +448,7 @@ If you have any questions or you want more information about array and object de
 
 ### Template strings
 
-Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \( \`\` \).  The main advantages of template strings are:
+Template strings \(also called template literals\) are just an easier way to work with strings. To define them you have to use back-ticks \( \`\` \). The main advantages of template strings are:
 
 * They allow embedded expressions.
 * You can use multi-line strings, just by adding a line-break.
@@ -524,7 +524,7 @@ import { Component1, Component2 } from "./file-name"
 import Component from "./file-name"
 ```
 
-Note that in both methods you have to specify the file you are importing from. 
+Note that in both methods you have to specify the file you are importing from.
 
 {% hint style="info" %}
 For more info about these statements you can visit the [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export) documentation.
