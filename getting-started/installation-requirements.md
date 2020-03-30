@@ -21,4 +21,3 @@ If your **/wp-json** URL is not working, visit [our community forum](https://com
 You can get **Node** from [the official site](https://nodejs.org/). Alternatively, you can install Node using **nvm** \([node version manager](https://github.com/creationix/nvm)\). Any of these methods will install **NPM** and **NPX** along with Node.
 
 > For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server).
-
