@@ -2,13 +2,13 @@
 
 In order to fully understand how you will get the most of Frontity, and everything you need to get it running, you may want to check these aspects:
 
-* \*\*\*\*[**Why will you need to adapt your configuration?**](./#why-will-you-need-to-adapt-your-configuration)\*\*\*\*
-* \*\*\*\*[**Decisions you should take**](./#decisions-you-should-take)\*\*\*\*
+* [**Why will you need to adapt your configuration?**](./#why-will-you-need-to-adapt-your-configuration)
+* [**Decisions you should take**](./#decisions-you-should-take)
   * [Select Frontity installation](./#select-frontity-installation)
   * [Select your server hostings](./#select-your-server-hostings)
   * [Select your domains](./#select-your-domains)
   * [Add a cache layer on top](./#add-a-cache-layer-on-top)
-* \*\*\*\*[**Our recommended solution**](./#our-recommended-solution)\*\*\*\*
+* [**Our recommended solution**](./#our-recommended-solution)
 
 ## Why will you need to adapt your configuration?
 
@@ -81,8 +81,6 @@ If you have read the "Decisions you should take" section, you might already know
 4. If you have selected Now as your Node server solution, you won't need to worry about this, as it offers a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://zeit.co/blog/serverless-pre-rendering) as they name it\). If you selected another solution, we would recommend you to use [KeyCDN](https://www.keycdn.com) or [StackPath](https://www.stackpath.com/) as additional services.
 
 If you want more detail about each solution, you can check out the previous section [Decisions you should take](./#decisions-you-should-take)**.**
-
-\*\*\*\*
 
 {% hint style="info" %}
 Still have questions? Ask the community! We are here to help 😊

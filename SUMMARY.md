@@ -4,7 +4,7 @@
 * [🚀 Getting started](getting-started/README.md)
   * [Installation requirements](getting-started/installation-requirements.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
-* [💻 JavaScript && React](javascript-and-and-react/README.md)
+* [💻 JavaScript & React](javascript-and-and-react/README.md)
   * [JavaScript](javascript-and-and-react/javascript-basics.md)
   * [React](javascript-and-and-react/react-basic.md)
 * [📚 Learning Frontity](learning-frontity/README.md)
