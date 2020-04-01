@@ -25,8 +25,6 @@ There are different channels where you can find information about the project an
 * **🗣  Social media**: a more informal place to interact with Frontity users. Reach out to us on [Twitter](https://twitter.com/frontity).
 * 💌  **Newsletter:** do you want to receive the latest framework updates and news? Subscribe [here](https://frontity.org/#newsletter).
 
-
-
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
