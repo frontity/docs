@@ -30,13 +30,11 @@ available at [http://contributor-covenant.org/version/1/4](http://contributor-co
 
 ## Platform
 
-To suggest changes in the official documentation of Frontity **you'll need a Github account** (so create it if you don't have already one)
-
 We use [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our [`gitbook-docs`](https://github.com/frontity/gitbook-docs/) repository (every time the `master` branch is updated the whole [documentation site](https://docs.frontity.org/) is rebuilt).
 
 ![github-gitbook-connection](.gitbook/assets/github-gitbook-connection.png)
 
-This `gitbook-docs` repository is the "source of truth" for Frontity's documentation, so any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/gitbook-docs/tree/master) branch).
+This `gitbook-docs` repository is the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/gitbook-docs/tree/master) branch).
 
  
 ## Documentation Format
@@ -47,6 +45,8 @@ The documents in the `gitbook-docs` repository use [**Markdown syntax**](https:/
 > - https://commonmark.org/help/
 > - https://daringfireball.net/projects/markdown/syntax
 > - https://markdown-guide.readthedocs.io/en/latest/basics.html
+
+These markdown documents are [used by gitbook](#platform) to generate the final HTML you can see in our [documentation site](https://docs.frontity.org/)
 
 ## Reporting Issues
 
@@ -59,6 +59,8 @@ Our staff will review your suggestions and will promote the required actions to 
 
 ## Contributions Workfows
 
+To suggest changes in Frontity's documentation **you'll need a Github account** (so create it if you don't have already one)
+
 There are several workflows you can use to suggest changes. All of them finish with the creation of a Pull Request. 
 
 > If you want to know more about Pull Requests you can take a look at:
@@ -69,21 +71,21 @@ Your changes will not be visible right away, the *Frontity Team* will first revi
 
 Here you have the most important workflows you can use to suggest changes in our documentation:
 
-#### • **[`Edit on Github`](https://github.com/frontity/gitbook-docs/wiki/Edit-on-Github)**  📝
+#### • [`Edit on Github`](https://github.com/frontity/gitbook-docs/wiki/Edit-on-Github)  📝 <a name="Edit-on-Github" />
 
 This workflow is recommended for minor changes in just one file and for those who doesn't have experience with git or github
 With this workflow you can edit documentation directly online in your browser.
 
 Learn more about this workflow [here](https://github.com/frontity/gitbook-docs/wiki/Edit-on-Github).
 
-#### • **[`Fork & Edit on Github`](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Edit-on-Github)** 📝📝
+#### • [`Fork & Edit on Github`](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Edit-on-Github) 📝📝 <a name="Fork-&-Edit-on-Github" />
 
 This workflow is recommended for changes in several files and for those who have some experience with git or github
 With this workflow you can also edit documentation directly online in your browser.
 
 Learn more about this workflow [here](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Edit-on-Github).
 
-#### • **[`Fork, Local Edit & Push`](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Local-Edit-&-Push)**  📝📝📝
+#### • [`Fork, Local Edit & Push`](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Local-Edit-&-Push)  📝📝📝 <a name="Fork-&-Local-Edit-&-Push" />
 
 If you are familiar with Git, you can use the `Fork, Local Edit & Push` workflow. This, in fact, is the preferred method for all but very minor changes.
 If you've previously contributed to other projects on GitHub via pull requests, you should already be familiar with this workflow.
