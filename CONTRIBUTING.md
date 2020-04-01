@@ -16,9 +16,10 @@ This document contains all the required information and links to resources neede
 - [Documentation Format](#documentation-format) - syntax of the documentation docs in this repository
 - [Reporting Issues](#reporting-issues) - guidance on how to report an issue or provide feedback on the Frontity documentation
 - [Contributions Workfows](#contributions-workfows) - a collection of workflows available for contributing
-  - [Edit on Github](#edit-on-github) - recommended to suggest small changes
-  - [Fork & Edit on Github](#fork-&-edit-on-github) - recommended to suggest several changes (in several files)
-  - [Fork, Local Edit & Push](#Fork-&-Local-Edit-&-Push) - recommended if you're familiar with git
+  - [Edit on Github](#edit-on-github) - the recommended way to suggest small changes
+  - [Fork & Edit on Github](#fork-&-edit-on-github) - the recommended way to suggest several changes (in several files)
+  - [Fork, Local Edit & Push](#Fork-&-Local-Edit-&-Push) - the recommended way if you're already familiar with git
+
 
 
 ## Code of Conduct
@@ -46,16 +47,16 @@ The documents in the `gitbook-docs` repository use [**Markdown syntax**](https:/
 > - https://daringfireball.net/projects/markdown/syntax
 > - https://markdown-guide.readthedocs.io/en/latest/basics.html
 
-These markdown documents are [used by gitbook](#platform) to generate the final HTML you can see in our [documentation site](https://docs.frontity.org/)
+These markdown documents are [used by gitbook](#platform) to generate the final HTML you can see in our [documentation site](https://docs.frontity.org/).
 
 ## Reporting Issues
 
-If you have found a bug, spelling mistake, missing information, improvements to be done or anything related to the Frontity documentation that you feel is an issue that should be reported, you can:
+If you have found a bug or a spelling mistake, or if you consider that information is missing or that improvements can be made, or if you find anything related to the Frontity documentation that you feel is an issue that should be reported, you can:
 
-- directly create a Pull Request with your suggested changes using one of the [Contribution Worflows](#contributions-workfows) explained below
-- use our [Community Forum](https://community.frontity.org/c/docs-and-tutorials) to inform about it
+- directly create a Pull Request with your suggested changes using one of the [Contribution Worflows](#contributions-workfows) as explained below
+- use our [Community Forum](https://community.frontity.org/c/docs-and-tutorials) to tell us about it
 
-Our staff will review your suggestions and will promote the required actions to improve our documentation taking your feedback into consideration 
+Our staff will review your suggestions and will take any actions necessary to improve our documentation taking your feedback into consideration.
 
 ## Contributions Workfows
 
@@ -73,7 +74,7 @@ Here you have the most important workflows you can use to suggest changes in our
 
 #### • [`Edit on Github`](https://github.com/frontity/gitbook-docs/wiki/Edit-on-Github)  📝 <a name="Edit-on-Github" />
 
-This workflow is recommended for minor changes in just one file and for those who doesn't have experience with git or github
+This workflow is recommended for minor changes in just one file and for those who have little or no experience with git or github.
 With this workflow you can edit documentation directly online in your browser.
 
 Learn more about this workflow [here](https://github.com/frontity/gitbook-docs/wiki/Edit-on-Github).
