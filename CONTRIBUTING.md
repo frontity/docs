@@ -12,8 +12,8 @@ If you're stuck at any point, **don't hesitate to use our [Community Forum](http
 This document contains all the required information and links to resources needed to contribute to the Frontity documentation:
 
 - [Code of Conduct](#code-of-conduct) - our Code of Conduct
-- [Platform](#platform) - How do we get the online documentation site from these repository docs
-- [Documentation Format](#documentation-format) - Syntax of the documentation docs in this repository
+- [Platform](#platform) - how do we get the online documentation site from these repository docs
+- [Documentation Format](#documentation-format) - syntax of the documentation docs in this repository
 - [Reporting Issues](#reporting-issues) - guidance on how to report an issue or provide feedback on the Frontity documentation
 - [Contributions Workfows](#contributions-workfows) - a collection of workflows available for contributing
   - [Edit on Github](#edit-on-github) - recommended to suggest small changes
@@ -52,8 +52,8 @@ These markdown documents are [used by gitbook](#platform) to generate the final 
 
 If you have found a bug, spelling mistake, missing information, improvements to be done or anything related to the Frontity documentation that you feel is an issue that should be reported, you can:
 
+- directly create a Pull Request with your suggested changes using one of the [Contribution Worflows](#contributions-workfows) explained below
 - use our [Community Forum](https://community.frontity.org/c/docs-and-tutorials) to inform about it
-- directly create a Pull Request with your suggested changes using one of the [Contribution Worflows](#contributions-workfows) we explain below
 
 Our staff will review your suggestions and will promote the required actions to improve our documentation taking your feedback into consideration 
 
