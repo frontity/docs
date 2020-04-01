@@ -23,7 +23,7 @@ We have tried to make contributing to the Frontity documentation as easy as poss
 
 ## License
 
-The ZEIT Now documentation is an open source project released under the [Apache License 2.0](https://github.com/frontity/gitbook-docs/tree/master/LICENSE.md).
+The Frontity documentation is an open source project released under the [Apache License 2.0](https://github.com/frontity/gitbook-docs/tree/master/LICENSE.md).
 
 ## Get In Touch
 
