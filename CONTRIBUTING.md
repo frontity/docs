@@ -21,7 +21,6 @@ This document contains all the required information and links to resources neede
   - [Fork, Local Edit & Push](#Fork-&-Local-Edit-&-Push) - the recommended way if you're already familiar with git
 
 
-
 ## Code of Conduct
 
 We provide a [**Code of Conduct**](https://github.com/frontity/gitbook-docs/tree/master/CODE_OF_CONDUCT.md) to make clear the behavior we expect from contributors and maintainers alike. We are committed to providing a welcoming and supportive environment and kindly request that you participate in these values also.
@@ -53,7 +52,7 @@ These markdown documents are [used by gitbook](#platform) to generate the final 
 
 If you have found a bug or a spelling mistake, or if you consider that information is missing or that improvements can be made, or if you find anything related to the Frontity documentation that you feel is an issue that should be reported, you can:
 
-- directly create a Pull Request with your suggested changes using one of the [Contribution Worflows](#contributions-workfows) as explained below
+- directly create a Pull Request with your suggested changes using one of the [Contributions Worflows](#contributions-workfows) as explained below
 - use our [Community Forum](https://community.frontity.org/c/docs-and-tutorials) to tell us about it
 
 Our staff will review your suggestions and will take any actions necessary to improve our documentation taking your feedback into consideration.
