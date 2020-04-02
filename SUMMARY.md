@@ -4,9 +4,6 @@
 * [🚀 Getting started](getting-started/README.md)
   * [Installation requirements](getting-started/installation-requirements.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
-* [💻 JavaScript & React](javascript-and-and-react/README.md)
-  * [JavaScript](javascript-and-and-react/javascript-basics.md)
-  * [React](javascript-and-and-react/react-basic.md)
 * [📚 Learning Frontity](learning-frontity/README.md)
   * [1. Project](learning-frontity/project.md)
   * [2. Settings](learning-frontity/settings.md)
@@ -45,5 +42,8 @@
   * [Why to contribute?](contributing/why-contributing.md)
 * [⚛ Frontity features](frontity-features/README.md)
   * [Extensions](frontity-features/extensions.md)
+* [💻 Transitioning to Frontity](javascript-and-and-react/README.md)
+  * [JavaScript](javascript-and-and-react/javascript-basics.md)
+  * [React](javascript-and-and-react/react-basic.md)
 * [🤔 FAQ](faq.md)
 
