@@ -38,7 +38,7 @@ You can access the state in the client console with:
 
 State is a proxy, so you can see the original object clicking on `[[Target]]` :
 
-![Expand \[\[Target\]\] to see the real object behind the proxy.](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/screen-shot-2019-07-03-at-10.56.34.png)
+![Expand \[\[Target\]\] to see the real object behind the proxy.](../gitbook/assets/screen-shot-2019-07-03-at-10.56.34.png)
 
 ### Why not separate settings and state?
 
@@ -132,7 +132,7 @@ Only objects, arrays and primitives \(strings, numbers...\) are allowed in the `
 
 Actually, it is converted to a JSON when it's sent to the client. We'll talk later about how Server Side Rendering works, but it is something like this:
 
-![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/screen-shot-2019-06-03-at-12.37.12.png)
+![](../gitbook/assets/screen-shot-2019-06-03-at-12.37.12.png)
 
 First, this is what Frontity does in the server:
 

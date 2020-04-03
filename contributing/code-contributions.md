@@ -28,7 +28,7 @@ Before starting, the only **prerequisite is to have Node 10 installed in your co
 
 You can go to [our repository](https://github.com/frontity/frontity/), click on **"Fork"** at the right-top corner and select your user.
 
-![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/frontity_frontity__-_frontity_-_create_amazing_sites_using_wordpress___react.png)
+![](../gitbook/assets/frontity_frontity__-_frontity_-_create_amazing_sites_using_wordpress___react.png)
 
 After doing this, you will create Frontity project at your own repository so you can access and modify it at: https://github.com/_{YOURUSERNAME}_/frontity/.
 
@@ -87,11 +87,11 @@ At this point, your fork should be ready to be merged to Frontity, so you can op
 
 For opening one you have to go to [Frontity's pull requests](https://github.com/frontity/frontity/compare) page and select **compare across forks.**
 
-![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/compare_-_frontity_frontity.png)
+![](../gitbook/assets/compare_-_frontity_frontity.png)
 
 Select your own repository and **the dev branch** on Frontity, and **create the pull request**.
 
-![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
+![](../gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
 
 ## Commit messages
 

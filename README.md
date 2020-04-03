@@ -48,7 +48,7 @@ One of those possibilities is to create WordPress themes using React. That’s w
 
 As of April, WordPress powers over [33% of the web](https://wordpress.org/news/2019/03/one-third-of-the-web/).  Its **market share** has been growing over the last years and it shows no signs of slowing down.
 
-![Source: w3techs.com](https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/wp-react.png)
+![Source: w3techs.com](gitbook/assets/wp-react.png)
 
 With the shift to Gutenberg as well as the rise of [headless CMS](https://css-tricks.com/what-is-a-headless-cms/) approaches, the WordPress community has started considering React for their projects. Beside this, modern libraries like React are growing popularity and becoming essential to rich user experiences.
 
@@ -65,7 +65,7 @@ Frontity apps live in a Node.js server tailored for WordPress.
 * It uses the WP REST API to retrieve content and generate the final HTML.
 * It is also capable of generating AMP pages with the same React code and CSS.
 
-![](https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/frontity-architecture.png)
+![](gitbook/assets/frontity-architecture.png)
 
 **Why a different Node.js server?**
 
