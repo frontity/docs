@@ -6,8 +6,6 @@ You can find more information in the following pages.
 
 {% page-ref page="how-to-contribute.md" %}
 
-{% page-ref page="code-contributions.md" %}
-
 {% page-ref page="why-contributing.md" %}
 
 {% hint style="info" %}

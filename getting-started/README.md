@@ -11,7 +11,7 @@ You can get started right now, it will be really easy! You may check:
 * 📘 [**Quick start guide**](quick-start-guide.md)**:** here you will find how to create a website with Frontity, step by step.
 * 👨‍👩‍👧‍👦 [**Community forum**](https://community.frontity.org/)**:** the perfect place to ask any questions and share your feedback.
 
-Frontity also welcomes contributions. There are many ways to support the project and get involved. Plus, you can get **free swag**! Please refer to the guide below to learn more about it: 
+Frontity also welcomes contributions. There are many ways to support the project and get involved. Plus, you can get **free swag**! Please refer to the guide below to learn more about it:
 
 * 🙌 [**How to contribute**](../contributing/how-to-contribute.md)
 
@@ -21,7 +21,7 @@ There are different channels where you can find information about the project an
 
 * **📖  Docs:** this is the place to learn how to build amazing sites with Frontity. [Get started](quick-start-guide.md)!
 * **👨‍👩‍👧‍👦  Community forum:** use our forum to ask any questions, share feedback and meet great people. This is your place too to share [how are you planning to use Frontity](https://community.frontity.org/c/dev-talk-questions)!
-* **🐞  GitHub:** we use ****[GitHub](https://github.com/frontity/frontity) for bugs and pull requests, questions are answered in the community forum.
+* **🐞  GitHub:** we use _\*\*_[GitHub](https://github.com/frontity/frontity) for bugs and pull requests, questions are answered in the community forum.
 * **🗣  Social media**: a more informal place to interact with Frontity users. Reach out to us on [Twitter](https://twitter.com/frontity).
 * 💌  **Newsletter:** do you want to receive the latest framework updates and news? Subscribe [here](https://frontity.org/#newsletter).
 

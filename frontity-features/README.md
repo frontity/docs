@@ -71,7 +71,7 @@ Frontity is optimized to get the maximum score in Lighthouse, including performa
 
 ### 🌎 Perfect accessibility
 
-As part of our mission to make building websites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity is perfectly **accessible by default** and will provide tools that let the developers know if they break it. 
+As part of our mission to make building websites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity is perfectly **accessible by default** and will provide tools that let the developers know if they break it.
 
 ### 🎖 Battle-tested framework
 
@@ -85,7 +85,7 @@ All the server code is bundled in one file, ready to work with serverless servic
 
 ### {  } First class TypeScript support
 
-Frontity has amazing TypeScript support. Actually, we like it so much that Frontity itself is built using TypeScript. But don’t worry, it’s ****absolutely optional: if you don’t know or don’t want to learn it you can use regular JavaScript without problems!
+Frontity has amazing TypeScript support. Actually, we like it so much that Frontity itself is built using TypeScript. But don’t worry, it’s _\*\*_absolutely optional: if you don’t know or don’t want to learn it you can use regular JavaScript without problems!
 
 ### **💻 Support for ES6 in modern browsers**
 
@@ -117,8 +117,6 @@ Frontity helps build websites which are fast to deliver better user experiences.
 ### **✅ Ready for React Concurrent and Suspense**
 
 The React team is working hard to release an async, “no-CPU-blocking” version and Frontity will be compatible with it. It is expected for Q2 2019. Once it is released, we expect to see a rise in the use of the React animation libraries available that will get the user experience to the next level.
-
-
 
 ## 🔜 Coming soon
 

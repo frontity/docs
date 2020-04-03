@@ -40,10 +40,10 @@ import React from 'react'
 const Post = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
-  
+
   // Component exposed by html2react.
   const Html2React = libraries.html2react.Component; 
-  
+
   return (
     <div>
       <Title />
@@ -110,7 +110,7 @@ const image = {
 
   // Only process the node it if it's an image.
   test: ({ node }) => node.component === "img",
-  
+
   processor: ({ node }) => {
     // If the image is inside a <noscript> tag, we don't want to process it.
     if (node.parent.component === "noscript") return null;
@@ -120,7 +120,7 @@ const image = {
       node.props.src = node.props["data-src"];
     if (node.props["data-srcset"])
       node.props.srcSet = node.props["data-srcset"];
-      
+
     // We tell Html2React that it should use the <Image /> component
     // from @frontity/components, which includes lazy loading support.
     node.component = Image;
@@ -192,7 +192,7 @@ This are the current processors exposed in this package:
 
 ### Script
 
-React doesn’t execute the code inside a `<script>` tags. For that reason, html2react doesn’t execute the script tags included in the contents. 
+React doesn’t execute the code inside a `<script>` tags. For that reason, html2react doesn’t execute the script tags included in the contents.
 
 The script processor, with a priority of `20`, processes `<script>` tags found in the html for execution. `<script>` type must either be `application/javascript`, `text/javascript` or `application/ecmascript` to pass the test of the processor.
 
@@ -200,7 +200,7 @@ The script processor, with a priority of `20`, processes `<script>` tags found i
 
 ### Iframe
 
-Iframes can impact the loading time and performance of a site. The iframe processor adds lazy-loading to the `<iframe>` tags found in the html. 
+Iframes can impact the loading time and performance of a site. The iframe processor adds lazy-loading to the `<iframe>` tags found in the html.
 
 **Usage:**
 
@@ -226,7 +226,7 @@ const themeName = {
 
 #### `libraries.html2react.processors`
 
-An array of the `processor`s that will be used by `html2react`. 
+An array of the `processor`s that will be used by `html2react`.
 
 You should can add, remove or mutate any processor from the array:
 
@@ -257,7 +257,7 @@ import React from 'react'
 const Post = ({ libraries }) => {
   // Get the component exposed by html2react.
   const Html2React = libraries.html2react.Component; 
-  
+
   return (
     <>
       {/* Use it to render the HTML. */}

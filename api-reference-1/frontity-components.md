@@ -50,7 +50,7 @@ import Script from "@frontity/components/script";
 const MyComponent = () => (
     <Script code={`
         const body = document.querySelector('body');
-        
+
         // Triggers anytime anywhere in the body of the page is clicked
         body.addEventListener('click', e => {
             e.preventDefault();
@@ -59,8 +59,6 @@ const MyComponent = () => (
     `} />
 )
 ```
-
-### 
 
 ### Iframe
 
@@ -108,11 +106,9 @@ const MyComponent = () => (
 );
 ```
 
-
-
 ### Switch
 
-The `<Switch />`  renders the first child component that returns `true` as the value of its `when` prop. 
+The `<Switch />` renders the first child component that returns `true` as the value of its `when` prop.
 
 The last child component \(which should not have a `when` prop\) will be rendered if no other component matches the condition.
 
@@ -123,7 +119,7 @@ import Switch from "@frontity/components/switch";
 
 const Theme = ({ state }) => {
     const data = state.source.get(state.router.link);
-    
+
     return (
         <Switch>
             <Loading when={data.isFetching} />
@@ -143,7 +139,7 @@ import Switch from "@frontity/components/switch";
 
 const Header = ({ state }) => {
     const data = state.source.get(state.router.link);
-    
+
     return (
         <Switch>
             <MenuHome when={data.isHome} />
@@ -158,7 +154,7 @@ This component is an alternative to applying plain JavaScript logic in React:
 ```javascript
 const Theme = ({ state }) => {
     const data = state.source.get(state.router.link);
-    
+
     return (
         <>
           {(data.isFetching && <Loading />) ||
@@ -170,8 +166,6 @@ const Theme = ({ state }) => {
     );
 }
 ```
-
-
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
