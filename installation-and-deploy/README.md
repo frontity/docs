@@ -1,27 +1,39 @@
 # 🏗 Installation & Deploy
 
-The
+In order to fully understand how you will get the most of Frontity, and everything you need to get it running, you may want to check these aspects:
 
-## The Frontity Architecture
+* [**Why will you need to adapt your configuration?**](./#why-will-you-need-to-adapt-your-configuration)
+* [**Decisions you should take**](./#decisions-you-should-take)
+  * [Select Frontity installation](./#select-frontity-installation)
+  * [Select your server hostings](./#select-your-server-hostings)
+  * [Select your domains](./#select-your-domains)
+  * [Add a cache layer on top](./#add-a-cache-layer-on-top)
+* [**Our recommended solution**](./#our-recommended-solution)
 
-In the Frontity Architecture, WordPress is used as a headless CMS and we use Frontity to generate the final HTML that is displayed in the browser. This means that WordPress is used just for managing the content.
+## Why will you need to adapt your configuration?
 
-* Frontity uses the WP API to retrieve content and generate the final HTML.
-* Frontity is also able to generate AMP pages with the same React code and CSS.
+In order to use Frontity, a Node installation is required. This means that the WordPress default configuration won’t be enough, and you will need to adapt it to Frontity. But don’t worry, it will be very easy and will improve your web substantially 🚀.
 
-![](../.gitbook/assets/direct-to-frontity.png)
+We are aware that this could be a burden, so Frontity is designed to make it as simple as possible:
 
-This architecture requires **a PHP Server for WordPress and a Node Server for Frontity**, as well as a new domain for your WordPress site as the main one will be used by Frontity.
+1.  Frontity works really well with serverless hostings like [Now](https://zeit.co/now), [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/) and so on, which makes it super cheap, really easy, and infinitely scalable.
+2. We are working on different solutions to adapt to all user needs. You should check out all the possibilities we are thinking of, with their pros and cons, at [Possible installations](possible-architectures.md).
 
-| **✅ Pros** | ❌ **Cons** |
-| :--- | :--- |
-| Perfect fit for users with free WP.com blogs \(myblog.wordpress.com\). | Users need to change their WordPress domain. |
-| Fastest server side rendering \(no useless WordPress request needed\). | A Frontity server is needed. |
-|  | The server side rendering is still slow if the WordPress site is slow, so it may need a cache layer on top. |
+## Decisions you should take
 
-### Server hostings
+As mentioned, in order to use Frontity, you will need to adapt your configuration a bit and there are some aspects you should consider before.
 
-You will need to have one or two servers. At the very least, you will need a PHP server to run your WordPress and, in most of the cases, you will also need a Node server to run Frontity.
+### Select Frontity installation
+
+Frontity aims to match all user needs, and for this reason, we are working on different installation solutions, each one with pros and cons. You can check out all the possibilities in detail ****at the page [Possible installations](possible-architectures.md).
+
+**💡 Recommendation:**
+
+For most of the webs, we would recommend the solution "[**Direct to Frontity**](possible-architectures.md#direct-to-frontity)", as it has proven to be a great solution. You will need to configure a Node Server and a new domain, but it is really easy and it will improve your performance substantially.
+
+### **Select your server hostings**
+
+Depending on the installation solution you choose, you will need to have one or two servers. At the very least, you will need a PHP server to run your WordPress and, in most of the cases, you will also need a Node server to run Frontity.
 
 **💡 Recommendation:**
 
@@ -34,12 +46,9 @@ You can check out our documentation [how to deploy Frontity on Now](deploy-on-no
 If you want to know more about what Serverless means you should check out [this article](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9).
 {% endhint %}
 
-### Domains
+### Select your domains
 
-You will need to have two different domains:
-
-* one for the WordPress dashboard
-* and the other one to show the content retrieved from the API. 
+In some solutions, you will need to have two different domains, one for the WordPress dashboard, and the other one to show the content retrieved from the API. If you are using a solution that requires just one domain, you can keep your actual one, if not, you should create a subdomain.
 
 **💡 Recommendation:**
 
@@ -56,7 +65,7 @@ If your hosting service doesn't provide cache, you may want to look for an addit
 
 Furthermore, according to our experience working with media publishers, we suggest you to look for a service offering [**stale-while-revalidate**](https://www.keycdn.com/blog/keycdn-supports-stale-while-revalidate), the best cache technique for this type of architecture.
 
-**💡 Recommendation:**
+**💡 Recommendation:** 
 
 We have tested many solutions for CDN and stale-while-revalidate, and we consider that the best options for this approach are [KeyCDN](https://www.keycdn.com) and [StackPath](https://www.stackpath.com/).
 
@@ -72,6 +81,8 @@ If you have read the "Decisions you should take" section, you might already know
 4. If you have selected Now as your Node server solution, you won't need to worry about this, as it offers a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://zeit.co/blog/serverless-pre-rendering) as they name it\). If you selected another solution, we would recommend you to use [KeyCDN](https://www.keycdn.com) or [StackPath](https://www.stackpath.com/) as additional services.
 
 If you want more detail about each solution, you can check out the previous section [Decisions you should take](./#decisions-you-should-take)**.**
+
+
 
 {% hint style="info" %}
 Still have questions? Ask the community! We are here to help 😊

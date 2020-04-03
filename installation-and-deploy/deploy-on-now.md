@@ -66,4 +66,3 @@ This will create a deploy and assign it to your real site url.
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
-
