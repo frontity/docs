@@ -23,7 +23,7 @@ Use the **`Head`**component whenever you want to add HTML tags inside the `<head
 
 ### CSS-in-JS
 
-**`styled`**creates new React components from HTML tags, or other React components, with styles attached to them. **`css`** lets you to add inline styles to an element if you don't want to create a new component. If you want to add styles for the whole app, use **`Global`**. And **`keyframes`** is used to define and use animations in your CSS. 
+**`styled`**creates new React components from HTML tags, or other React components, with styles attached to them. **`css`** lets you to add inline styles to an element if you don't want to create a new component. If you want to add styles for the whole app, use **`Global`**. And **`keyframes`** is used to define and use animations in your CSS.
 
 You can read more in the [Styles](../learning-frontity/styles.md) page of our **Learning Frontity** section.
 
@@ -91,7 +91,7 @@ const Page = ({ state }) => {
   // The next line will trigger a re-render whenever
   // the value of "state.router.link" changes.
   const data = state.source.get(state.router.link);
-  
+
   return (
     <>
       {(data.isFetching && <Loading />) ||
@@ -106,8 +106,6 @@ const Page = ({ state }) => {
 export default connect(Page);
 ```
 {% endcode %}
-
-#### 
 
 ### `styled`
 
@@ -157,8 +155,6 @@ const StyledPage = styled(Page)`
 `;
 ```
 
-
-
 ### `css`
 
 #### Syntax
@@ -190,8 +186,6 @@ const Component = () => (
   </div>
 );
 ```
-
-
 
 ### `Global`
 
@@ -230,8 +224,6 @@ const Page = () => (
     </>
 );
 ```
-
-
 
 ### `keyframes`
 
@@ -279,8 +271,6 @@ const Component = () => (
 );
 ```
 
-
-
 ### `loadable`
 
 #### Syntax
@@ -321,8 +311,6 @@ const Post = ({ state }) => (
 export default connect(Post);
 ```
 
-
-
 ### `Head`
 
 #### Syntax
@@ -331,7 +319,7 @@ export default connect(Post);
 <Head>{children}</Head>
 ```
 
-It's a React component that injects their children in the HTML `<head>` tag. It allows you to change the title while navigating, add meta tags, scripts, etc. As we use `react-helmet` under the hood, you may check its [reference guide](https://github.com/nfl/react-helmet#reference-guide). 
+It's a React component that injects their children in the HTML `<head>` tag. It allows you to change the title while navigating, add meta tags, scripts, etc. As we use `react-helmet` under the hood, you may check its [reference guide](https://github.com/nfl/react-helmet#reference-guide).
 
 #### Props
 
@@ -351,8 +339,6 @@ const Theme = () => (
   </Head>
 );
 ```
-
-
 
 ### `fetch`
 
@@ -385,8 +371,6 @@ const getFromSomeAPI = async (resource) => {
 };
 ```
 
-
-
 ### `URL`
 
 #### Syntax
@@ -416,8 +400,6 @@ const getApiPathname = ({ state }) => {
   return pathname;
 };
 ```
-
-
 
 ### `decode`
 

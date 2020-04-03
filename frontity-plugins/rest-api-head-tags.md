@@ -36,7 +36,7 @@ You need to understand better how it works and **add the data manually**.
 
 #### How to fetch the head\_tags field manually
 
-You have to get each entity from its respective REST API endpoint. For example, for fetching the posts you should go to `/wp-json/wp/v2/posts&id=123` endpoint, for fetching the categories you have to go to `wp-json/wp/v2/categories&id=123,` and for custom post types or custom taxonomies would be a different url in each case. 
+You have to get each entity from its respective REST API endpoint. For example, for fetching the posts you should go to `/wp-json/wp/v2/posts&id=123` endpoint, for fetching the categories you have to go to `wp-json/wp/v2/categories&id=123,` and for custom post types or custom taxonomies would be a different url in each case.
 
 In the case of the homepage, it could be less intuitive and you should go to `/wp-json/wp/v2/types/post.` As previously said, each entity has a different endpoint so if you aren't familiar with this, you should check the [WordPress REST API reference](https://developer.wordpress.org/rest-api/reference/) for more info.
 
@@ -87,7 +87,7 @@ In order to not affect the performance of your web, the `head_tags` field is cac
 
 By default, the `head_tags` field is included in the common endpoint of each entity. You can configure it so it doesn't appear by default and to be shown when you include the `head_tags=true` query.
 
-For example, with the output disabled, `https://mysite.com/wp-json/wp/v2/posts`  won't show the `head_tags` field unless you have the query `?head_tags=true` at the end.
+For example, with the output disabled, `https://mysite.com/wp-json/wp/v2/posts` won't show the `head_tags` field unless you have the query `?head_tags=true` at the end.
 
 ### Skip cache
 
@@ -98,10 +98,8 @@ There are some cache plugins for the REST API that also use the same parameter. 
 ## WordPress installation
 
 1. First of all you have to [install the plugin](https://wordpress.org/plugins/rest-api-head-tags/). You can do it:
-
    * **Automatic**: from within WordPress dashboard go to Plugins, click `Add New` button, search for `REST API - Head Tags` \(by Frontity\) and click `Install Now`.
    * **Manual**: this method requires to download the plugin and upload it to your web server via FTP. For a more detailed explanation, WordPress explains how to do this [on this guide](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation).
-
 2. Once installed, you have to activate it and it will be running! The `head_tags` field is cached and enabled by default, but you can purge the cache or disable the output as explained on the [Settings](rest-api-head-tags.md#settings) section.
 
 {% hint style="info" %}

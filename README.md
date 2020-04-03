@@ -46,7 +46,7 @@ One of those possibilities is to create WordPress themes using React. That’s w
 
 ## **Why WordPress and React?**
 
-As of April, WordPress powers over [33% of the web](https://wordpress.org/news/2019/03/one-third-of-the-web/).  Its **market share** has been growing over the last years and it shows no signs of slowing down.
+As of April, WordPress powers over [33% of the web](https://wordpress.org/news/2019/03/one-third-of-the-web/). Its **market share** has been growing over the last years and it shows no signs of slowing down.
 
 ![Source: w3techs.com](https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/wp-react.png)
 
@@ -81,7 +81,7 @@ We are working on other possible installations, although we strongly recommend t
 
 ## **Frontity features**
 
-Frontity and its extensions will help save you a lot of development time while allowing you to enjoy all of the latest technology trends that are already configured for you. ****You can check them out in detail here: [Frontity Features page](frontity-features/). 
+Frontity and its extensions will help save you a lot of development time while allowing you to enjoy all of the latest technology trends that are already configured for you. _\*\*_You can check them out in detail here: [Frontity Features page](frontity-features/).
 
 Here are the main ones:
 
@@ -114,10 +114,11 @@ Frontity is in a sense similar to GatsbyJS, but there are some key differences:
 * No need to learn GraphQL or the REST API, you get the data using the state manager.
 * It can output Google AMP html created with the same React codebase.
 
-If you still have any questions about Frontity, please feel free to ask in our [community forum](https://community.frontity.org). 
+If you still have any questions about Frontity, please feel free to ask in our [community forum](https://community.frontity.org).
 
 One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
 
 {% hint style="info" %}
-**Subscribe** to our newsletter [**here**](https://frontity.org/#newsletter) ****to get notified of the **latest framework updates.**
+**Subscribe** to our newsletter [**here**](https://frontity.org/#newsletter) **\*\*to get notified of the** latest framework updates.\*\*
 {% endhint %}
+

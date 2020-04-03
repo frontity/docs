@@ -6,7 +6,7 @@ At this point, it is important to distinguish between your **dependencies** \(np
 
 ### Update project dependencies
 
-Essential packages such as `frontity`,  `@frontity/core`  or  `@frontity/tiny-router`,  and all your dependencies, are included in this part. These can be treated as common npm packages, so you can use the following command to update your `package.json` to the latest versions:
+Essential packages such as `frontity`, `@frontity/core` or `@frontity/tiny-router`, and all your dependencies, are included in this part. These can be treated as common npm packages, so you can use the following command to update your `package.json` to the latest versions:
 
 ```bash
 npx npm-check-updates -u

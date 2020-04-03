@@ -56,7 +56,7 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 
 Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it also. For example, let's imagine a _ShareModal_ package that has a modal like this:
 
-![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/blog-frontity-org.jpg)
+![](https://github.com/github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/blog-frontity-org.jpg)
 
 This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme. The **root** could be something like this:
 
@@ -100,7 +100,7 @@ export default {
 
 Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if there is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
 
-![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/blog.jpg)
+![](https://github.com/github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/blog.jpg)
 
 I hope you're starting to see how extensibility works in **Frontity**, but don't worry too much now, we'll talk in more detail later.
 
@@ -118,7 +118,7 @@ const MyPackage = () => (
 );
 ```
 
-So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page]().
+So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page](roots-and-fills.md).
 
 ## Fills
 
@@ -190,5 +190,5 @@ Frontity will insert them after the **roots** to ensure they work correctly:
 
 The components `<Slot>` and `<Fill>` know about each other so everything ends up in the correct place once the final HTML is generated :\)
 
-![Fills get inserted where they find a Slot with the same name.](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/screen-shot-2019-06-03-at-12.08.01.png)
+![Fills get inserted where they find a Slot with the same name.](https://github.com/github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/screen-shot-2019-06-03-at-12.08.01.png)
 
