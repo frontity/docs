@@ -32,7 +32,7 @@ const Theme = ({ state }) => {
                 <html lang="en" />
                 <link rel="canonical" href={state.router.link} />
             </Head>
-
+            
             <div>
                 {data.isFetching && <Loading />}
                 {data.isArchive && <List />}

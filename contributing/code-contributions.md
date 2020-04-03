@@ -28,9 +28,9 @@ Before starting, the only **prerequisite is to have Node 10 installed in your co
 
 You can go to [our repository](https://github.com/frontity/frontity/), click on **"Fork"** at the right-top corner and select your user.
 
-![](https://github.com/github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/frontity_frontity__-_frontity_-_create_amazing_sites_using_wordpress___react.png)
+![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/frontity_frontity__-_frontity_-_create_amazing_sites_using_wordpress___react.png)
 
-After doing this, you will create Frontity project at your own repository so you can access and modify it at: [https://github.com/\_{YOURUSERNAME}\_/frontity/](https://github.com/_{YOURUSERNAME}_/frontity/).
+After doing this, you will create Frontity project at your own repository so you can access and modify it at: https://github.com/_{YOURUSERNAME}_/frontity/.
 
 **2. Clone your own fork:**
 
@@ -46,7 +46,7 @@ It will create a folder named “frontity” inside your current directory, and 
 
 Make sure you are at the root folder of Frontity project and run `npm install`, don't do it on the packages.
 
-At this point, before starting your work, it is a good practice to have a place to see all the changes you are making, and check if your new code is working properly. For doing so, we have provided some tools to run mars-theme in your local server:
+At this point, before starting your work, it is a good practice to have a place to see all the changes you are making, and check if your new code is working properly. For doing so, we have provided some tools to run mars-theme in your local server: 
 
 **4. Go to /examples/mars-theme-example/** :
 
@@ -87,11 +87,11 @@ At this point, your fork should be ready to be merged to Frontity, so you can op
 
 For opening one you have to go to [Frontity's pull requests](https://github.com/frontity/frontity/compare) page and select **compare across forks.**
 
-![](https://github.com/github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/compare_-_frontity_frontity.png)
+![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/compare_-_frontity_frontity.png)
 
 Select your own repository and **the dev branch** on Frontity, and **create the pull request**.
 
-![](https://github.com/github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
+![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
 
 ## Commit messages
 
@@ -170,10 +170,14 @@ If you pull request has changes that need to be released in a new version of som
 
 1. Run the command line script `npx changeset`.
 2. Select the packages you want to include in the changeset using ↑ and ↓ to navigate to packages, and hit `space` to select a package. Hit `enter` when all desired packages are selected.
-3. You will be prompted to select a bump type for each selected package. Select an appropriate bump type for the changes made. Those are:
-   * **Major version**: when you make incompatible API changes.
-   * **Minor version:** when you add functionality in a backwards compatible manner.
-   * **Patch version:** when you make backwards compatible bug fixes. See [here](https://semver.org/) for information on semver versioning.
+3. You will be prompted to select a bump type for each selected package. Select an appropriate bump type for the changes made. Those are:  
+    - **Major version**: when you make incompatible API changes.
+
+    - **Minor version:** when you add functionality in a backwards compatible manner.
+
+    - **Patch version:** when you make backwards compatible bug fixes.  
+   See [here](https://semver.org/) for information on semver versioning.
+
 4. Your final prompt will be to provide a message to go alongside the changeset. This will be written into the changelog when the next release occurs.
 
 After this, a new changeset file will be added, which is a markdown file with YAML front matter.
@@ -207,4 +211,6 @@ For a more [detailed information on changesets please read their guide](https://
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
+
+
 

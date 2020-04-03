@@ -1,6 +1,6 @@
 # React
 
-In order to master Frontity and the React aspects needed for it, you should first understand HTML and [JavaScript's](javascript-basics.md) basic concepts.
+In order to master Frontity and the React aspects needed for it, you should first understand HTML and [JavaScript's](javascript-basics.md) basic concepts. 
 
 As you may know, React is a JavaScript library that lets you build amazing user interfaces in an easy way, while having outstanding web performance. It has a lot of functionalities, but just the key concepts are needed in order to understand and use it with Frontity. We take care of the rest.
 
@@ -18,7 +18,7 @@ These are the concepts you should familiarize yourself with:
 Note that this guide's purpose is to give you a better understanding of React concepts you need to learn in order to understand Frontity by providing a brief explanation. If you want a more detailed explanation or want to learn more about React, you can check out their own docs: [React docs](https://reactjs.org/docs/hello-world.html).
 {% endhint %}
 
-## JSX
+### JSX
 
 JSX \(JavaScript XML\) is an extension to the JavaScript language syntax. This allows you to use JavaScript logic within HTML, which makes your coding experience better and your code more readable. However, there are some differences we have to keep in mind:
 
@@ -37,14 +37,14 @@ const Example = () => (
 );
 ```
 
-## Elements
+### Elements
 
 Elements are the smallest building blocks of React. They should not be confused with [components](react-basic.md#components). Elements are what components are made of.
 
 * **All elements must be closed**. For example, line breaks must be coded as `<br />` . `<br>` is not valid.
 * Any element **can be written with a self-closing tag**. For example, a `<div>`can be written as `<div />` or `<div>something inside</div>`. The difference is that in the first syntax version there is no way to include anything inside it.
 
-## Components
+### Components
 
 Components are the core of React. They are reusable pieces of code intended for one specific job, usually to render some HTML. There are some aspects you should take into account:
 
@@ -82,7 +82,7 @@ const Example = () => (
 * You can differentiate React components from common HTML because they start with Capital letters.
 
 ```jsx
-import { Div } from "./components";
+import { Div } from "./components";
 
 const Example = () => (
   <>
@@ -106,7 +106,7 @@ function Example() {
 const Example = () => <div><h1>Website title</h1></div>;
 ```
 
-_**Class components:**_ They are created using JavaScript classes. All the things that required classes in the past can now easily be done with [React hooks](react-basic.md#hooks) \(explained later\) so we won't explain classes in detail.
+_**Class components:**_ They are created using JavaScript classes. All the things that required classes in the past can now easily be done with [React hooks](react-basic.md#hooks) \(explained later\) so we won't explain classes in detail. 
 
 {% hint style="info" %}
 If you want, you can take a look at [React docs](https://reactjs.org/docs/components-and-props.html), since some other tutorials or external npm packages may still use them.
@@ -120,7 +120,7 @@ class Example extends React.Component {
 }
 ```
 
-## Props
+### Props
 
 If we think about React components as functions, props would be the parameters. Depending on the props you pass to the component, the result will be different. This lets you reuse your components depending on the input. Here you have an example of how to define a component with props and how to use it with specific values:
 
@@ -181,11 +181,11 @@ This will place the `<h1>` where we defined the `children`, so the final HTML wo
 </div>
 ```
 
-## Hooks
+### Hooks
 
 Hooks are a new concept introduced by React that lets you reuse logic between components in an easy way. There are lots of hooks created already, and you can also create your own hooks. For now, we will focus on understanding two basic ones:
 
-### useState
+#### useState
 
 React components can have their own internal state.
 
@@ -229,7 +229,7 @@ const Example = () => {
 
 This is the basic functionality of this hook, and it is enough to understand how we use it in Frontity. It has more features which you can check out at [React docs](https://reactjs.org/docs/hooks-state.html).
 
-### useEffect
+#### useEffect
 
 This hook lets you run code after the component has been mounted to the DOM and each time it is rendered again. A good example of where to use this hook could be subscriptions or data fetch.
 
@@ -259,16 +259,16 @@ const Example = ({ name }) => {
         // Whatever you want to perform on the first render and
         // each time `name` changes.
     }, [name]);
-
+    
     return <h1>Hi {name}, nice to meet you!</h1>;
 }
 ```
 
 This is the basic functionality of this hook, and it is enough to understand how we use it in Frontity. It has more features which you can check out at [React docs](https://reactjs.org/docs/hooks-effect.html).
 
-## Special cases
+### Special cases
 
-### If-else statements don't work
+#### If-else statements don't work
 
 In JSX, we can't use if-else statements, but don't worry, we can use operators and ternary expressions:
 
@@ -309,9 +309,9 @@ const Example = ({ value }) => (
 
 _This is actually the same behaviour as the first example._
 
-### **Arrays must have keys**
+#### **Arrays must have keys**
 
-One of the benefits of React is that it only updates DOM elements that have changed which improves the performance of the web. This is important in order to understand why **while iterating through an array, its elements must have a key**. If you don't define a key, it may cause some trouble.
+One of the benefits of React is that it only updates DOM elements that have changed which improves the performance of the web. This is important in order to understand why **while iterating through an array, its elements must have a key**. If you don't define a key, it may cause some trouble. 
 
 Keys help React identify which items have changed, are added, or are removed. We can see keys as unique identifiers for each element.
 
@@ -334,14 +334,14 @@ By defining a key with an unique id, React would be able to understand that the 
 This is just an example of why it is important to assign keys properly to arrays. To learn more you can visit [React docs](https://reactjs.org/docs/lists-and-keys.html).
 
 {% hint style="info" %}
-These are the main React concepts used in Frontity. If you understand them, you will be able to understand Frontity code. If you want to delve deeper into learning React, we recommend you refer to [their docs](https://reactjs.org/docs/hello-world.html), and if you have questions don't hesitate to ask them of [our community](https://community.frontity.org/c/dev-talk-questions) ☺️.
+These are the main React concepts used in Frontity. If you understand them, you will be able to understand Frontity code. If you want to delve deeper into learning React, we recommend you refer to [their docs](https://reactjs.org/docs/hello-world.html), and if you have questions don't hesitate to ask them of [our community](https://community.frontity.org/c/dev-talk-questions) ☺️. 
 {% endhint %}
 
-## State Manager - Frontity Connect
+### State Manager - Frontity Connect
 
 Usually React is used with a State Manager that exposes a global `state` tree which can be accessed from any component of the app. This helps you keep different components in sync, and it is also a medium to communicate between them.
 
-There are many state managers, like Redux or Mobx, but in **Frontity** we have created our own state manager named **Frontity Connect.** To learn more see [Learning Frontity - State]().
+There are many state managers, like Redux or Mobx, but in **Frontity** we have created our own state manager named **Frontity Connect.** To learn more see [Learning Frontity - State](../learning-frontity/state.md).
 
 Here is an example of how `state` is used and how easy it is to manage it with **Frontity Connect**. As said before, you should imagine the state as an object with info about the app:
 
@@ -368,7 +368,7 @@ With this in mind, you can use all this info in your components and change it de
 * Connect the component after defining it with `connect(Component)` .
 
 ```jsx
-import { connect } from "frontity";
+import { connect } from "frontity";
 
 const Component = ({ state }) => (
     <h1>{state.frontity.title}</h1>
@@ -380,7 +380,7 @@ const ConnectedComponent = connect(Component);
 It's common to use `connect` only on the default export of the file:
 
 ```jsx
-import { connect } from "frontity";
+import { connect } from "frontity";
 
 const Component = ({ state }) => (
     <h1>{state.frontity.title}</h1>
@@ -394,12 +394,12 @@ Now, if you create an action that changes the title after a user interaction, th
 **Frontity Connect** can also be used to pass `actions` and `libraries` to the components, like this:
 
 ```jsx
-import { connect } from "frontity";
+import { connect } from "frontity";
 
 const Component = ({ actions, libraries, content }) => {
     const HTML2React = libraries.html2react.Component;
     const changeTitle = () => actions.theme.changeTitle("Other Title");
-
+    
     return (
         <>
             <button onClick={changeTitle}>

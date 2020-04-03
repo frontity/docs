@@ -8,12 +8,12 @@ There are several ways to support the project and get involved. Don't know how t
 * [Improve the documentation](how-to-contribute.md#improve-the-documentation)
 * [Show off your work](how-to-contribute.md#show-off-your-work)
 
-## » Let's get the best framework ever
+## » Let's get the best framework ever 
 
 * [Try Frontity out](../getting-started/quick-start-guide.md) and share your **feedback** and **questions** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic \(thread\) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _\[Feedback\] I found difficult to..._ If you ask a question, the title can be the question itself.
 * [Report bugs](https://github.com/frontity/frontity/issues) or issues. 🐞
 * New feature ideas? Feel free to suggest them [to the community](https://community.frontity.org/c/framework-design) or even open a [Pull Request](https://github.com/frontity/frontity/pulls).
-* If you want to **help fixing bugs** or **contributing code**, please refer to this [Code Contributions guide](). You can also [connect with us](https://community.frontity.org/) on the community forum and ask how you can contribute or what you want to work on.
+* If you want to **help fixing bugs** or **contributing code**, please refer to this [Code Contributions guide](code-contributions.md). You can also [connect with us](https://community.frontity.org/) on the community forum and ask how you can contribute or what you want to work on.
 
 ## 🗣 Spread the word
 
@@ -35,7 +35,7 @@ There are several ways to support the project and get involved. Don't know how t
 
 If you come up with other ways to participate or to help spread the word, please feel free to [share them with the community](https://community.frontity.org/c/communication) as well. New ideas are always welcome!
 
-## 👨‍👩‍👧‍👦 Help build up the community
+## 👨‍👩‍👧‍👦 Help build up the community 
 
 * Community users have many questions. [Let's help them!](https://community.frontity.org/)
 * Teach others about Frontity, WordPress and/or React.
@@ -57,6 +57,8 @@ If you come up with other ways to participate or to help spread the word, please
 If you want to contribute but still don't know how after reading these guidelines, don't hesitate to [share your expertise](https://community.frontity.org/c/community) with us and we'll figure out how you can help! 😊
 
 You can also make your suggestions to add other ways of contributing.
+
+
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
