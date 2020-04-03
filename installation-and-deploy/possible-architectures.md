@@ -18,7 +18,7 @@ With this architecture, WordPress is used as a headless CMS and we use Frontity 
 * Frontity uses the WP API to retrieve content and generate the final HTML.
 * Frontity is also able to generate AMP pages with the same React code and CSS.
 
-![](../.gitbook/assets/direct-to-frontity.png)
+![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/direct-to-frontity.png)
 
 This solution requires a PHP Server for WordPress and a Node Server for Frontity, as well as a new domain for your WordPress site as the main one will be used by Frontity.
 
@@ -36,7 +36,7 @@ This solution requires a PHP Server for WordPress and a Node Server for Frontity
 
 This is a PHP theme that doesn’t generate any HTML. Instead, it does an HTTP call to the Frontity server to retrieve the HTML and outputs that.
 
-![](../.gitbook/assets/php-theme-bridge.png)
+![](../https://github.com/frontity/gitbook-docs/blob/gitbook/.gitbook/assets/php-theme-bridge.png)
 
 With this solution, you won't need a new domain for your WordPress site, but you will still need a PHP Server for WordPress and a Node Server for Frontity.
 
