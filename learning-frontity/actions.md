@@ -62,7 +62,7 @@ By the way, you can access the actions in the client console using:
 
 There are a set of special actions that Frontity runs at appropriate moments:
 
-![](../gitbook/assets/screen-shot-2019-06-03-at-17.19.03.png)
+![](../.gitbook/assets/screen-shot-2019-06-03-at-17.19.03.png)
 
 ### `init` \(client & server\)
 
