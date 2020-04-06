@@ -24,7 +24,7 @@ There are several ways to support the project and get involved. Don't know how t
 ## 📖 Improve the documentation
 
 * Is something missing or not clear enough? Did you find any spelling mistakes?
-  - You can directly *suggest your changes by following our [documentation contributing guidellines](https://github.com/frontity/gitbook-docs/wiki/Contributing-to-the-Frontity-Documentation)* 
+  - You can directly *suggest your changes by following our [documentation contributing guidelines](https://github.com/frontity/gitbook-docs/wiki/Contributing-to-the-Frontity-Documentation)* 
   - Or you can *report them using our [community forum](https://community.frontity.org/c/docs-and-tutorials)*. 
 * Help **translating** our documentation. Frontity is designed to be available for everyone, so if you think you can help on this, just let us know! 
 
