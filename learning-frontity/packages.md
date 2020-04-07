@@ -82,15 +82,11 @@ Packages need their own `package.json` file because:
 * They can be published to npm independently  🚀
 * They have their own name, version, authors and license.
 
-### Modes and Entry Points
+### Entry Points
 
 By default only one file is needed: `/src/index.js`.
 
 In some cases you may want to use different code in your client than in your server. Then you can use two files, `/src/client.js` and `/src/server.js`.
-
-In other cases, you may want to use different code for different modes. Then you can create a folder with the name of the mode. For example `/src/amp/index.js`.
-
-Guess what? You can also use client and server files inside modes like this: `/src/amp/client.js` and `/src/amp/server.js` 🤗
 
 ## Publishing Local Packages
 
