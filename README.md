@@ -46,9 +46,9 @@ One of those possibilities is to create WordPress themes using React. That’s w
 
 ## **Why WordPress and React?**
 
-As of April, WordPress powers over [33% of the web](https://wordpress.org/news/2019/03/one-third-of-the-web/). Its **market share** has been growing over the last years and it shows no signs of slowing down.
+As of April 2020, WordPress powers [35% of all the websites](https://w3techs.com/technologies/details/cm-wordpress) on the Internet. Its **market share** has been growing over the last years and it shows no signs of slowing down.
 
-![](.gitbook/assets/wp-react.png)
+![](https://w3techs.com/diagram/history_technology/cm-wordpress)
 
 With the shift to Gutenberg as well as the rise of [headless CMS](https://css-tricks.com/what-is-a-headless-cms/) approaches, the WordPress community has started considering React for their projects. Beside this, modern libraries like React are growing popularity and becoming essential to rich user experiences.
 
@@ -81,7 +81,7 @@ We are working on other possible installations, although we strongly recommend t
 
 ## **Frontity features**
 
-Frontity and its extensions will help save you a lot of development time while allowing you to enjoy all of the latest technology trends that are already configured for you. _\*\*_You can check them out in detail here: [Frontity Features page](frontity-features/).
+Frontity and its extensions will help save you a lot of development time while allowing you to enjoy all of the latest technology trends that are already configured for you. _You can check them out in detail here: [Frontity Features page](frontity-features/)._
 
 Here are the main ones:
 
@@ -108,8 +108,8 @@ Here are the main ones:
 Frontity is in a sense similar to GatsbyJS, but there are some key differences:
 
 * **100% focused on WordPress**: this means the number of concepts to learn are minimal, it doesn’t need any complex configuration to get you started and the APIs that WordPress developers use to create themes are tailored for the things they usually need.
-* **Opinionated: i**t has its own state manager and it uses Emotion for the CSS. Thanks to that people don’t need to learn things like Redux and at the same time it powers a very flexible extensibility pattern, more similar to the one of WordPress itself than to the rest of JS frameworks.
-* It’s **rendered dynamically:** this means people don’t have to rebuild the HTML each time they edit or publish something. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are many ways to configure it.
+* **Opinionated**: it has its own state manager and it uses Emotion for the CSS. Thanks to that people don’t need to learn things like Redux and at the same time it powers a very flexible extensibility pattern, more similar to the one of WordPress itself than to the rest of JS frameworks.
+* It’s **rendered dynamically**: this means people don’t have to rebuild the HTML each time they edit or publish something. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are many ways to configure it.
 * **Extensible like WordPress**: themes and extensions can be activated and deactivated without code changes.
 * No need to learn GraphQL or the REST API, you get the data using the state manager.
 * It can output Google AMP html created with the same React codebase.
@@ -119,6 +119,6 @@ If you still have any questions about Frontity, please feel free to ask in our [
 One of our goals is to build a **community** of people interested in WordPress and React, so we’d love to meet you and learn how Frontity can help your project\(s\).
 
 {% hint style="info" %}
-**Subscribe** to our newsletter [**here**](https://frontity.org/#newsletter) **\*\*to get notified of the** latest framework updates.\*\*
+**Subscribe** to our newsletter [here](https://frontity.org/#newsletter) to **get notified** of the latest framework updates.
 {% endhint %}
 
