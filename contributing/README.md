@@ -5,9 +5,7 @@ Want to contribute to the project? That's great to hear!
 You can find more information in the following pages.
 
 {% page-ref page="how-to-contribute.md" %}
-
 {% page-ref page="code-contribution-guide.md" %}
-
 
 ## Why to contribute?
 
