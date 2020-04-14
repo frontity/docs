@@ -34,7 +34,7 @@ Frontity's theme has the same pagination as the original WordPress theme. This w
 
 ![Homepage view in Twenty Twenty Frontity Theme.](../.gitbook/assets/homepage-view-twentytwenty-frontity-theme.png)
 
-You can check out all the features in this [**theme demo**](https://twentytwenty.frontity.org/), ****or even in our [Frontity blog](https://blog.frontity.org/).
+You can check out all the features in this [**theme demo**](https://twentytwenty.frontity.org/), _\*\*_or even in our [Frontity blog](https://blog.frontity.org/).
 
 ## Settings
 
@@ -75,79 +75,52 @@ Here you have an example of a possible configuration \(each setting is explained
 
 All the settings and their description:
 
+| Key | Description | Default value |
+| :--- | :--- | :--- |
+
+
+| **menu** | Menu links to display in the header | \[\] |
+| :--- | :--- | :--- |
+
+
+| _colors_.**primary** | Used throughout most of the application to style links and other common elements. | `#cd2653` |
+| :--- | :--- | :--- |
+
+
+| _colors_.**headerBg** | Color of the header background. | `#ffffff` |
+| :--- | :--- | :--- |
+
+
+| _colors_.**footerBg** | Color of the footer background. | `#ffffff` |
+| :--- | :--- | :--- |
+
+
+| _colors_.**bodyBg** | Color of the body background. | `#f5efe0` |
+| :--- | :--- | :--- |
+
+
+| **showSearchInHeader** | Whether to show the search button in page header | true |
+| :--- | :--- | :--- |
+
+
+| **showAllContentOnArchive** | Whether to show all post content or only excerpt in archive view | false |
+| :--- | :--- | :--- |
+
+
+| _featuredMedia_.**showOnArchive** | Whether to show featured image on archive view | true |
+| :--- | :--- | :--- |
+
+
+| _featuredMedia_.**showOnPost** | Whether to show featured media on post view | true |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Key</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>menu</b>
-      </td>
-      <td style="text-align:left">Menu links to display in the header</td>
-      <td style="text-align:left">[]</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><em>colors</em>.<b>primary</b>
-      </td>
-      <td style="text-align:left">Used throughout most of the application to style links and other common
-        elements.</td>
-      <td style="text-align:left"><code>#cd2653</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><em>colors</em>.<b>headerBg</b>
-      </td>
-      <td style="text-align:left">Color of the header background.</td>
-      <td style="text-align:left"><code>#ffffff</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><em>colors</em>.<b>footerBg</b>
-      </td>
-      <td style="text-align:left">Color of the footer background.</td>
-      <td style="text-align:left"><code>#ffffff</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><em>colors</em>.<b>bodyBg</b>
-      </td>
-      <td style="text-align:left">Color of the body background.</td>
-      <td style="text-align:left"><code>#f5efe0</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>showSearchInHeader</b>
-      </td>
-      <td style="text-align:left">Whether to show the search button in page header</td>
-      <td style="text-align:left">true</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>showAllContentOnArchive</b>
-      </td>
-      <td style="text-align:left">Whether to show all post content or only excerpt in archive view</td>
-      <td
-      style="text-align:left">false</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><em>featuredMedia</em>.<b>showOnArchive</b>
-      </td>
-      <td style="text-align:left">Whether to show featured image on archive view</td>
-      <td style="text-align:left">true</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><em>featuredMedia</em>.<b>showOnPost</b>
-      </td>
-      <td style="text-align:left">Whether to show featured media on post view</td>
-      <td style="text-align:left">true</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>autoPreFetch</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>autoPreFetch</b>
+      </th>
+      <th style="text-align:left">
         <p>Whether to auto-fetch links on a page. Possible values:</p>
         <ul>
           <li><code>no</code>: don&apos;t auto-tech any links</li>
@@ -155,29 +128,32 @@ All the settings and their description:
           <li><code>in-view</code> : auto-fetch just the links that are in-view</li>
           <li><code>hover</code> : auto-fetch links when hover</li>
         </ul>
-      </td>
-      <td style="text-align:left">no</td>
+      </th>
+      <th style="text-align:left">no</th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left"><b>fontSets</b>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><b>fontSets</b>
+      </th>
+      <th style="text-align:left">
         <p>Which font set to use:</p>
         <ul>
           <li><code>us-ascii</code>
           </li>
           <li><code>latin</code>
           </li>
-          <li><code>all</code> 
+          <li><code>all</code>
           </li>
         </ul>
-      </td>
-      <td style="text-align:left">all</td>
+      </th>
+      <th style="text-align:left">all</th>
     </tr>
-  </tbody>
-</table>## API Reference
-
-### Actions
+  </thead>
+  <tbody></tbody>
+</table>### Actions
 
 There are some actions used along the theme that you may need useful:
 

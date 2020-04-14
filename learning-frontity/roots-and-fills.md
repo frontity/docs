@@ -118,7 +118,7 @@ const MyPackage = () => (
 );
 ```
 
-So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page]().
+So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page](roots-and-fills.md).
 
 ## Fills
 

@@ -1,4 +1,4 @@
-# Code Contributions
+# Code Contribution Guide
 
 Frontity, as an open source project, welcomes everyone to contribute to code, so we are trying to make it as easy as possible.
 

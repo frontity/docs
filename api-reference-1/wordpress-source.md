@@ -255,11 +255,11 @@ will return something like
   items: [{ type: "post", id: 60, link: "..." }, ...],
   total: 10,
   totalPages: 1,
-  
+
   link: "/category/nature",
   query: "",
-  
-  
+
+
   // pagination atributes (for Archive)
   page: 1,
   path: "/category/nature",

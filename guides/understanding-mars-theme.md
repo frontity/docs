@@ -38,8 +38,6 @@ In this folder is where we create all the custom extensions we want to develop f
 
 When starting `frontity`, all the packages defined in `frontity.settings.js` are imported by `@frontity/file-settings` and the settings and exports from each package are merged by `@frontity/core` into a single `store` where you can access the `state` and `actions` of the different packages during development using `@frontity/connect` \(our state manager\).
 
-
-
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}

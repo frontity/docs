@@ -44,7 +44,7 @@ The process to install a local package is pretty similar, but you'll have to mak
 }
 ```
 
-4. Once changed, run `npm install` at the root of your project and it will work as `local` package.
+1. Once changed, run `npm install` at the root of your project and it will work as `local` package.
 
 {% hint style="info" %}
 We are planning to release a new command, that will take care of all these steps.
@@ -54,7 +54,7 @@ We are planning to release a new command, that will take care of all these steps
 
 Once installed, the process it's the same for both external and local packages.
 
-You have to include it in your `frontity.settings.js` , inside the `packages` array to  make it work. Remember to check if any settings are needed and include them as well \(You can check that at each specific [Frontity Package](../api-reference-1/) or [Frontity Theme](../frontity-themes/)\).
+You have to include it in your `frontity.settings.js` , inside the `packages` array to make it work. Remember to check if any settings are needed and include them as well \(You can check that at each specific [Frontity Package](../api-reference-1/) or [Frontity Theme](../frontity-themes/)\).
 
 ```javascript
 const settings = {
@@ -63,7 +63,7 @@ const settings = {
     ...
     //If the package has no settings
     "new-frontity-package",
-    
+
     //If you want to add settings to your package
     {
       "name": "new-frontity-package",

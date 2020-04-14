@@ -24,7 +24,7 @@ module.exports = {
 
 #### state.router.autoFetch
 
-When `autoFetch` is activated, tiny-router does a `actions.source.fetch(link)` each time the action `actions.router.set(link)` is triggered. This ensures that the data you need for the current page is always available. 
+When `autoFetch` is activated, tiny-router does a `actions.source.fetch(link)` each time the action `actions.router.set(link)` is triggered. This ensures that the data you need for the current page is always available.
 
 It also does a `actions.source.fetch(link)` in the `beforeSSR` action to ensure that the data needed for SSR is also available.
 
@@ -38,7 +38,7 @@ Tiny router has the following state:
 
 #### state.router.link
 
-This is the path the site is in. For example, `/category/nature/`. 
+This is the path the site is in. For example, `/category/nature/`.
 
 These are some examples of links:
 
