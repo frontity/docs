@@ -41,7 +41,7 @@
   * [Contributing Guide](contributing/code-contribution-guide.md)
 * [⚛ Frontity features](frontity-features/README.md)
   * [Extensions](frontity-features/extensions.md)
-* [💻 Resources](resources/README.md)
+* [💻 Community Resources](resources/README.md)
   * [JavaScript](resources/javascript-basics.md)
   * [React](resources/react-basic.md)
 * [🤔 FAQ](faq.md)
