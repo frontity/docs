@@ -29,7 +29,7 @@ Create an app on Heroku from the root of your project
 Heroku generates a random name for your app (`shielded-gorge-51896` in the example), or you can pass a parameter to specify your own app name.
 
 ```text
-⬢  demo-frontity-env-variables-server  master ⦾ heroku create
+⬢  my-frontity-project  master ⦾ heroku create
  ›   Warning: heroku update available from 7.25.0 to 7.38.2.
 Creating app... done, ⬢ shielded-gorge-51896
 https://shielded-gorge-51896.herokuapp.com/ | https://git.heroku.com/shielded-gorge-51896.git
@@ -38,22 +38,16 @@ https://shielded-gorge-51896.herokuapp.com/ | https://git.heroku.com/shielded-go
 When you create an app, a git remote (called `heroku`) is also created and associated with your local git repository.
 
 ```
-⬢  demo-frontity-env-variables-server  master ⦾ git remote -v
+⬢  my-frontity-project  master ⦾ git remote -v
 heroku	https://git.heroku.com/shielded-gorge-51896.git (fetch)
 heroku	https://git.heroku.com/shielded-gorge-51896.git (push)
-origin	git@github.com:frontity-juanmaguitar/demo-frontity-env-variables-server.git (fetch)
-origin	git@github.com:frontity-juanmaguitar/demo-frontity-env-variables-server.git (push)
+origin	git@github.com:frontity-demos/my-frontity-project.git (fetch)
+origin	git@github.com:frontity-demos/my-frontity-project.git (push)
 ```
 
 ### Add a `start` script
 
-Heroku will execute automatically the content of your `start` script so add the following one
-
-```
-"start": "frontity serve --port ",
-```
-
-to your `scripts` section in your main `package.json`
+Heroku will execute automatically the content of your `start` script so add the following one to your `scripts` section in your main `package.json`
 
 ```
 "scripts": {
@@ -85,7 +79,7 @@ git heroku master
 You should get something like this 
 
 ```sh
-⬢  demo-frontity-env-variables-server  master ⦾ git push heroku master
+⬢  my-frontity-project  master ⦾ git push heroku master
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
@@ -145,7 +139,7 @@ remote:
 remote: -----> Build
 remote:        Running build
 remote:
-remote:        > demo-frontity-env-variables-server@1.0.0 build /tmp/build_b933e664b540038ab273610a62a1b000
+remote:        > my-frontity-project@1.0.0 build /tmp/build_b933e664b540038ab273610a62a1b000
 remote:        > frontity build
 remote:
 remote:        mode: production
@@ -209,7 +203,7 @@ heroku domains:add heroku domains:add www.variables-demo.com
 
 you should get something like this
 ```
-⬢  demo-frontity-env-variables-server  master ⦾ heroku domains:add www.variables-demo.com
+⬢  my-frontity-project  master ⦾ heroku domains:add www.variables-demo.com
  ›   Warning: heroku update available from 7.25.0 to 7.38.2.
 Adding www.variables-demo.com to ⬢ shielded-gorge-51896... done
  ▸    Configure your app's DNS provider to point to the DNS Target damp-whale-rln632baq4jdhcj5aw495bst.herokudns.com.
@@ -224,7 +218,7 @@ The domain www.variables-demo.com has been enqueued for addition
 Once you have added your domain to your Heroku app you can use the command `heroku domains` to see the value for the `CNAME` record you have to set in your domain settings
 
 ```
-⬢  demo-frontity-env-variables-server  master ⦾ heroku domains
+⬢  my-frontity-project  master ⦾ heroku domains
  ›   Warning: heroku update available from 7.25.0 to 7.38.2.
 === shielded-gorge-51896 Heroku Domain
 shielded-gorge-51896.herokuapp.com
@@ -252,8 +246,7 @@ Then, deploy Frontity using this command (from the root of your project):
 
 > If no changes are detected you may have to do:
 > `npx frontity build` → to generate a new build
-> `git add -A` → to prepare these new changes to be comitted
-> `git commit -m "new build"` → to commit this new build
+> `git commit --allow-empty` → to force a empty commit
 > `git push heroku master` → to push this lateste build into heroku and launch its deploy process
 
 

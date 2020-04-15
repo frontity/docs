@@ -1,6 +1,6 @@
 # 🏗 The Frontity Architecture 
 
-In the Frontity Architecture, WordPress is used as a headless CMS and we use Frontity to generate the final HTML that is displayed in the browser. This means that WordPress is used just for managing the content.
+In the Frontity Architecture, WordPress is used as a [headless CMS](https://css-tricks.com/what-is-a-headless-cms/) and we use Frontity to generate the final HTML that is displayed in the browser. This means that WordPress is used just for managing the content.
 
 * Frontity uses the WP API to retrieve content and generate the final HTML.
 * Frontity is also able to generate AMP pages with the same React code and CSS.
@@ -27,7 +27,7 @@ You will need to have one or two servers. At the very least, you will need a PHP
 **💡 Recommendation:**
 
 1. PHP Server: In this case, we recommend to **continue using your actual server** for WordPress site or select your preferred hosting service such as [Siteground](https://www.siteground.com), [Raiola Networks](https://raiolanetworks.es/), [Webempresa](https://www.webempresa.com/) or any other.
-2. Node Server: In case you need this one, we would recommend to choose a **serverless solution** as it will make it cheap, easy and infinitely scalable. We would select [Zeit Now](https://zeit.co/now) because it is really easy to set up and includes a CDN too, but there are other good options like [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/).
+2. Node Server: In case you need this one, we would recommend to choose a **[serverless](https://about.gitlab.com/topics/serverless/) solution** as it will make it cheap, easy and infinitely scalable. We would select [Zeit Now](https://zeit.co/now) because it is really easy to set up and includes a CDN too, but there are other good options like [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/).
 
 You can check out our documentation [how to deploy Frontity on Now](deploy-on-now.md).
 
@@ -47,7 +47,7 @@ You will need to have two different domains:
 2. **Create a new subdomain** for your admin dashboard, where you will access the UI to edit your content. Using a subdomain will prevent you from buying a new one. You could use, for example, **wp.mydomain.com**.
 
 {% hint style="info" %}
-In case you use WordPress.com, you can use **www.mydomain.wordpress.com** to manage your content and point Frontity to **www.mydomain.com**.
+In case you use WordPress.com, you can use **mydomain.wordpress.com** to manage your content and point Frontity to **www.mydomain.com**.
 {% endhint %}
 
 ### Add a cache layer on top
