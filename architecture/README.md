@@ -2,22 +2,22 @@
 
 In the Frontity Architecture, WordPress is used as a [headless CMS](https://css-tricks.com/what-is-a-headless-cms/) and we use Frontity to generate the final HTML that is displayed in the browser. This means that WordPress is used just for managing the content.
 
-* Frontity uses the WP API to retrieve content and generate the final HTML.
+* Frontity uses the WordPress REST-API to retrieve content and it then generates the final HTML.
 * Frontity is also able to generate AMP pages with the same React code and CSS.
 
 ![](../.gitbook/assets/direct-to-frontity.png)
 
-This architecture requires **a PHP Server for WordPress and a Node Server for Frontity**, as well as a new domain for your WordPress site as the main one will be used by Frontity.
+This solution requires **a PHP Server for WordPress and a Node Server for Frontity**, as well as a new domain for your WordPress site as the main one will be used by Frontity, although you can use a sub-domain on your existing domain.
 
 Some advantages of this approach:
 
-- Perfect fit for users with free WP.com blogs (myblog.wordpress.com)
+- Perfect fit for users with free wordpress.com blogs (e.g. myblog.wordpress.com)
 - Fastest server side rendering (no useless WordPress request needed).
 
 
 Some things to take into account:
 - Users need to change their WordPress domain.
-- A Frontity server is needed (besides the WP one)
+- A node server to run Frontity is needed (besides the WP one)
 - The server side rendering is still slow if the WordPress site is slow, so it may need a cache layer on top.
 
 ### Server hostings
@@ -37,7 +37,7 @@ If you want to know more about what Serverless means you should check out [this 
 
 ### Domains
 
-You will need to have two different domains:
+You will need to have two different domains, or a separate sub-domain on your existing domain:
 - one for the WordPress dashboard
 - and the other one to show the content retrieved from the API. 
 
@@ -52,15 +52,15 @@ In case you use WordPress.com, you can use **mydomain.wordpress.com** to manage 
 
 ### Add a cache layer on top
 
-If your hosting service doesn't provide cache, you may want to look for an additional solution (it could be a CDN), as it is key to improve your web performance.
+If your hosting service doesn't provide cache, you may want to look for an additional solution (it could be a CDN), as it is key to improving your web performance.
 
-Furthermore, according to our experience working with media publishers, we suggest you to look for a service offering [**stale-while-revalidate**](https://www.keycdn.com/blog/keycdn-supports-stale-while-revalidate), the best cache technique for this type of architecture.
+Furthermore, according to our experience working with media publishers, we suggest that you to look for a service offering [**stale-while-revalidate**](https://www.keycdn.com/blog/keycdn-supports-stale-while-revalidate), which is the best cache technique for this type of architecture.
 
 **💡 Recommendation:** 
 
 We have tested many solutions for CDN and stale-while-revalidate, and we consider that the best options for this approach are [KeyCDN](https://www.keycdn.com) and [StackPath](https://www.stackpath.com/).
 
-If you use Zeit Now, the serverless option we recommend, you won't have to worry about these as it offers both things: a CDN and the stale-while-revalidate technique (or [Serverless Pre-Rendering](https://zeit.co/blog/serverless-pre-rendering) as they name it). This way, you don't have to add anything else.
+If you use Zeit Now, the serverless option we recommend, you won't have to worry about these as it offers both things: a CDN and the stale-while-revalidate technique (or [Serverless Pre-Rendering](https://zeit.co/blog/serverless-pre-rendering) as they call it). This way, you won't have to add anything else.
 
 ## Our recommended solution
 
@@ -73,6 +73,6 @@ Although there are some other ways to have a have a Frontity site running in pro
 
 
 {% hint style="info" %}
-Still have questions? Ask the community! We are here to help 😊
+Still have questions? Ask in the [community](https://community.frontity.org)! We are here to help 😊
 {% endhint %}
 
