@@ -22,7 +22,6 @@
 * [🏗 Architecture](architecture/README.md)
 * [🌎 Deployment](deployment/README.md)
   * [Deploy Frontity on Now](deployment/deploy-on-now.md)
-  * [Deploy Frontity on Heroku](deployment/deploy-on-heroku.md)
 * [⚙ Frontity Packages](api-reference-1/README.md)
   * [frontity](api-reference-1/frontity.md)
   * [@frontity/tiny-router](api-reference-1/router.md)
