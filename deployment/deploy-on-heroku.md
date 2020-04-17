@@ -45,7 +45,7 @@ origin	git@github.com:frontity-demos/my-frontity-project.git (fetch)
 origin	git@github.com:frontity-demos/my-frontity-project.git (push)
 ```
 
-### Add a `start` script
+### Add a `start` script
 
 Heroku will execute automatically the content of your `start` script so add the following one to your `scripts` section in your main `package.json`
 
@@ -58,15 +58,10 @@ Heroku will execute automatically the content of your `start` script so add the 
 },
 ```
 
+Heroku will execute automatically the content of your `build` script before starting your app. You should have this one already defined.
+
+
 > Notice how we're using $PORT to take this value from an environment variable. This is done in this way because Heroku will set a different port for each process and that port will be stored in a `PORT` environment variable
-
-### Make sure your `build` folder is tracked by git
-
-As a general rule you don't usually need to track the `build` folder (so it can be added to your `.gitignore` file)
-
-But as Heroku uses an extra git server and deploys are done by pushing to that extra server, we need to make sure that this `build` folder is included in that `push`
-
-So if your `build` folder was in your `.gitignore`, remove it from there and [`git add`](https://git-scm.com/docs/git-add) and [`git commit`](https://git-scm.com/docs/git-commit) this `build` folder to start tracking it in the git repository
 
 ### Deploy
 
@@ -84,7 +79,7 @@ Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0)
 remote: Compressing source files... done.
 remote: Building source:
@@ -107,28 +102,11 @@ remote:        Downloading and installing node 12.16.2...
 remote:        Using default npm version: 6.14.4
 remote:
 remote: -----> Restoring cache
-remote:        Cached directories were not restored due to a change in version of node, npm, yarn or stack
-remote:        Module installation may take longer for this build
+remote:        - node_modules
 remote:
 remote: -----> Installing dependencies
 remote:        Installing node modules (package.json + package-lock)
-remote:
-remote:        > core-js@2.6.11 postinstall /tmp/build_b933e664b540038ab273610a62a1b000/node_modules/babel-polyfill/node_modules/core-js
-remote:        > node -e "try{require('./postinstall')}catch(e){}"
-remote:
-remote:
-remote:        > core-js@2.6.11 postinstall /tmp/build_b933e664b540038ab273610a62a1b000/node_modules/babel-runtime/node_modules/core-js
-remote:        > node -e "try{require('./postinstall')}catch(e){}"
-remote:
-remote:
-remote:        > core-js@3.6.5 postinstall /tmp/build_b933e664b540038ab273610a62a1b000/node_modules/core-js
-remote:        > node -e "try{require('./postinstall')}catch(e){}"
-remote:
-remote:
-remote:        > ejs@2.7.4 postinstall /tmp/build_b933e664b540038ab273610a62a1b000/node_modules/ejs
-remote:        > node ./postinstall.js
-remote:
-remote:        added 771 packages from 453 contributors and audited 10234 packages in 21.583s
+remote:        audited 10234 packages in 7.144s
 remote:
 remote:        15 packages are looking for funding
 remote:          run `npm fund` for details
@@ -139,7 +117,7 @@ remote:
 remote: -----> Build
 remote:        Running build
 remote:
-remote:        > my-frontity-project@1.0.0 build /tmp/build_b933e664b540038ab273610a62a1b000
+remote:        > my-frontity-project@1.0.0 build /tmp/build_00b81abd8c2a36d3f2525857753e0188
 remote:        > frontity build
 remote:
 remote:        mode: production
@@ -153,7 +131,7 @@ remote: -----> Caching build
 remote:        - node_modules
 remote:
 remote: -----> Pruning devDependencies
-remote:        audited 10234 packages in 6.409s
+remote:        audited 10234 packages in 6.44s
 remote:
 remote:        15 packages are looking for funding
 remote:          run `npm fund` for details
@@ -167,14 +145,14 @@ remote:        Procfile declares types     -> (none)
 remote:        Default types for buildpack -> web
 remote:
 remote: -----> Compressing...
-remote:        Done: 46.5M
+remote:        Done: 52.3M
 remote: -----> Launching...
-remote:        Released v7
+remote:        Released v14
 remote:        https://shielded-gorge-51896.herokuapp.com/ deployed to Heroku
 remote:
 remote: Verifying deploy... done.
 To https://git.heroku.com/shielded-gorge-51896.git
-   7b0cc85..da3bf7c  master -> master
+   ee9c4d2..ab9b152  master -> master
 ```
 
 *Heroku* will assign you a domain (something like *your-project-name.herokuapp.com*) that will allow you to check your site online
