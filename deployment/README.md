@@ -23,3 +23,4 @@ which we can be used to launch our Frontity app in production
 Here you have some guides about how to deploy a Frontity app in some popular hostings:
 
 - [Deploy on Now](deploy-on-now.md)
+- [Deploy on Heroku](deploy-on-heroku.md)
