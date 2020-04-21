@@ -32,7 +32,7 @@ available at [http://contributor-covenant.org/version/1/4](http://contributor-co
 
 We use [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our [`gitbook-docs`](https://github.com/frontity/gitbook-docs/) repository (every time the `master` branch is updated the whole [documentation site](https://docs.frontity.org/) is rebuilt).
 
-![github-gitbook-connection](.gitbook/assets/github-gitbook-connection.png)
+![github-gitbook-connection](docs/.gitbook/assets/github-gitbook-connection.png)
 
 This `gitbook-docs` repository is the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/gitbook-docs/tree/master) branch).
 
