@@ -1,0 +1,9 @@
+root: ./docs/
+
+​structure:  
+    readme: README.md  
+    summary: SUMMARY.md​
+    
+redirects:  
+    javascript-and-and-react: ./resources/README.md
+    javascript-and-react: ./resources/README.md
