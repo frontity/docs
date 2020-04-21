@@ -6,4 +6,6 @@ root: ./docs/
     
 redirects:  
     javascript-and-and-react: ./resources/README.md
+    javascript-and-and-react/: ./resources/README.md
     javascript-and-react: ./resources/README.md
+    javascript-and-react/: ./resources/README.md
