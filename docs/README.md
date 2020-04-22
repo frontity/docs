@@ -4,7 +4,7 @@ Welcome to Frontity, and to our documentation pages **👋**. This is where you 
 
 ## **Quick Start Guide**
 
-No time to waste? Head straight over to our [**Quick Start Guide:**](getting-started/quick-start-guide.md) to get up and running quickly.
+No time to waste? Head straight over to our [**Quick Start Guide**](getting-started/quick-start-guide.md) to get up and running quickly.
 
 By the way, we'd love to hear about what you're building with Frontity. Join us in our [**Community Forum**](https://community.frontity.org) and tell us about your project. You can also ask questions and get help and support from our growing community of users and developers there.
 
@@ -45,7 +45,7 @@ One of those possibilities is to create frontend sites based on React. That’s 
 
 ## **Why WordPress and React?**
 
-At time of writing (April 2020), WordPress powers [35% of all the websites](https://w3techs.com/technologies/details/cm-wordpress) on the Internet. Its **market share** has been growing over the last few years and it shows no sign of slowing down.
+As at time of writing (April 2020), WordPress powers [35% of all the websites](https://w3techs.com/technologies/details/cm-wordpress) on the Internet. Its **market share** has been growing over the last few years and it shows no sign of slowing down.
 
 ![](https://w3techs.com/diagram/history_technology/cm-wordpress)
 
@@ -57,7 +57,7 @@ We believe this JavaScript-based approach is gaining traction in the WordPress e
 
 ## **How does Frontity work?**
 
-With Frontity you still use your WordPress dashboard to edit and manage your content in exactly the same way that you are accustomed to. As you make changes, content will automatically update on Frontity.
+With Frontity you still use your WordPress dashboard to edit and manage your content in exactly the same way that you are accustomed to. As you make changes content is automatically updated in your Frontity site, just as it is when using a traditional WordPress theme.
 
 Frontity apps require a Node.js server to run on. This runs in tandem with the WordPress site which is now relegated to providing content to the frontend that is based on Frontity.
 
@@ -106,14 +106,14 @@ Here are the main ones:
 
 Frontity is in a way similar to, and can be compared with, Gatsby.js. However, there are some key differences, i.e. Frontity is:
 
-* **100% focused on WordPress**: this means the number of concepts that you as a developer need to learn are minimal. No complex configuration is necessary to get started, and the APIs that developers use to request content are pre-configured for the things that they most frequently need.
+* **100% focused on WordPress**: this means the number of concepts that you as a developer need to learn are minimal. No complex configuration is necessary to get started, and the queries to the APIs that deliver the content are pre-configured for the things that developers most frequently need.
 * **Opinionated**: Frontity has its own state manager and it uses Emotion for the CSS. Thanks to that developers do not need to learn the complexities of such technologies as Redux. At the same time it powers a very flexible extensibility pattern, more similar to that of WordPress itself, rather than that of other JavaScript frameworks.
-* **Rendered dynamically**: this means the HTML does not have to be rebuilt each time the content is edited or new content is published. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are other ways to configure it.
+* **Rendered dynamically**: the HTML does not have to be rebuilt each time the content is edited or new content is published. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are other ways to configure it.
 * **Extensible like WordPress**: themes and extensions can be activated and deactivated without code changes.
 
 In addition: 
-* There is no need to learn GraphQL or the REST API. The data is available to you using the state manager.
-* Frontity can output HTML suitable for Google AMP with the same React codebase.
+* There is no need to learn GraphQL or the REST API. The data is available to you using Frontity's built in State Manager.
+* Frontity can output HTML suitable for Google AMP with exactly the same React codebase.
 
 If you still have any questions about Frontity, do please join us in our [community forum](https://community.frontity.org) and feel free to ask them there. Our growing community of users and developers will be more than happy to help you out.
 
