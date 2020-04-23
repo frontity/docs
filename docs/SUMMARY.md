@@ -16,7 +16,7 @@
   * [9. Styles](learning-frontity/styles.md)
   * [10. Code Splitting](learning-frontity/code-splitting.md)
   * [11. Head](learning-frontity/head.md)
-* [🏗 Architecture](architecture/README.md)
+* [🏗 Architecture](architecture.md)
 * [🌎 Deployment](deployment/README.md)
   * [Deploy Frontity on Now](deployment/deploy-on-now.md)
 * [⚙ Frontity Packages](api-reference-1/README.md)

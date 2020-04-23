@@ -34,7 +34,7 @@ Frontity's theme has the same pagination as the original WordPress theme. This w
 
 ![Homepage view in Twenty Twenty Frontity Theme.](../.gitbook/assets/homepage-view-twentytwenty-frontity-theme.png)
 
-You can check out all the features in this [**theme demo**](https://twentytwenty.frontity.org/), _\*\*_or even in our [Frontity blog](https://blog.frontity.org/).
+You can check out all the features in this [**theme demo**](https://twentytwenty.frontity.org/), \_\*\*\_or even in our [Frontity blog](https://blog.frontity.org/).
 
 ## Settings
 
@@ -153,9 +153,7 @@ All the settings and their description:
     </tr>
   </thead>
   <tbody></tbody>
-</table>### Actions
-
-There are some actions used along the theme that you may need useful:
+</table>There are some actions used along the theme that you may need useful:
 
 #### actions.theme.openMobileMenu
 
