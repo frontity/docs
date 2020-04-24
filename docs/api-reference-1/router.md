@@ -15,9 +15,9 @@ module.exports = {
   packages: [
     "@frontity/mars-theme",
     "@frontity/wp-source",
-    "@frontity/tiny-router"
-  ]
-}
+    "@frontity/tiny-router",
+  ],
+};
 ```
 
 ## Settings
@@ -42,22 +42,52 @@ This is the path the site is in. For example, `/category/nature/`.
 
 These are some examples of links:
 
-* `/`: You are in the home, path is `/` and page is `1`.
-* `/page/2`: You are in the page 2 of the home, path is `/` and page is `2`.
-* `/category/nature:` You are in the category `nature`, path is `/` and page is `1`.
-* `/category/nature/page/2`: You are in page 2 of category `nature`, path is `/` and page is `2`.
-* `/some-post`: You are a post, path is `/some-post`. 
-* `/some-page`: You are in a page, path is `/some-page`.
+- `/`: You are in the home, path is `/` and page is `1`.
+- `/page/2`: You are in the page 2 of the home, path is `/` and page is `2`.
+- `/category/nature:` You are in the category `nature`, path is `/` and page is `1`.
+- `/category/nature/page/2`: You are in page 2 of category `nature`, path is `/` and page is `2`.
+- `/some-post`: You are a post, path is `/some-post`.
+- `/some-page`: You are in a page, path is `/some-page`.
+
+#### state.router.state
+
+This is the object that was saved in [`window.history.state`](https://developer.mozilla.org/en-US/docs/Web/API/History/state) when the route was changed.
 
 ### Actions
 
-Tiny router is very simple, it only has one action: `actions.router.set()` .
+#### actions.router.set
 
-For example, this is could be your React component for the links:
+Tiny Router is very simple, it only has one action: `actions.router.set` .
+
+##### Parameters
+
+- **link** `string`
+  - The URL that will replace the current one.
+  - It doesn't matter if it's just a path like `/category/nature/`, a path that includes the page `/category/nature/page/2` or the full URL `https://site.com/category/nature`.
+  - _`link` is short for permalink_.
+- **options** `object` (optional)
+  An optional object that can contain:
+  - **method** `"pull" | "replace"` (default: `"pull"`)
+    The method used in the action. `"push"` corresponds to [`window.history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) and `"replace"` to [`window.history.replaceState`](https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState)
+  - **state** `object`
+    An object that will be saved in `window.history.state`. This object is recovered when the user go back and forward using the browser buttons.
+
+##### TypeScript
+
+```ts
+actions.router.set = async (link: string, options: {
+  method: "push" | "replace",
+  state: object
+}): Promise<void>;
+```
+
+##### Examples
+
+This is a very simple, but functional `Link` component created with `actions.router.set`:
 
 ```javascript
 const Link = ({ actions, children, link }) => {
-  const onClick = event => {
+  const onClick = (event) => {
     event.preventDefault();
     actions.router.set(link);
   };
@@ -70,17 +100,6 @@ const Link = ({ actions, children, link }) => {
 };
 ```
 
-`actions.router.set()` accepts a string with the `url`.
-
-#### actions.router.set\("/category/nature/page/2"\)
-
-You can pass any url and router will set the new path. It doesn't matter if it's just a path like `/category/nature/`, a path that includes the page `/category/nature/page/2` or the full url `https://site.com/category/nature`.
-
-## API Reference
-
-## TypeScript
-
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
-
