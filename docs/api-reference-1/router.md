@@ -67,7 +67,7 @@ Tiny Router is very simple, it only has one action: `actions.router.set` .
   - _`link` is short for permalink_.
 - **options** `object` (optional)
   An optional object that can contain:
-  - **method** `"pull" | "replace"` (default: `"pull"`)
+  - **method** `"push" | "replace"` (default: `"push"`)
     The method used in the action. `"push"` corresponds to [`window.history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) and `"replace"` to [`window.history.replaceState`](https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState)
   - **state** `object`
     An object that will be saved in `window.history.state`. This object is recovered when the user go back and forward using the browser buttons.
