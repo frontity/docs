@@ -75,7 +75,7 @@ React is a JavaScript library. In order to generate HTML for site visitors or fo
 **Frontity** can be hosted either on a regular Node.js server or in a **serverless** environment. That makes it both super cheap and infinitely scalable.
 
 {% hint style="info" %}
-We are working on other possible installations, although this is the one that we most strongly recommend. You can learn more about them at [possible installations page](installation-and-deploy/possible-architectures.md).
+We are working on other possible installations, although for the time being this is the one that we most strongly recommend.
 {% endhint %}
 
 ## **Frontity features**
