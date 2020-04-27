@@ -1,6 +1,6 @@
 # Table of contents
 
-* [» Frontity Framework](README.md)
+* [Welcome to » Frontity](README.md)
 * [🚀 Getting started](getting-started/README.md)
   * [Installation requirements](getting-started/installation-requirements.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
