@@ -3,6 +3,7 @@
 * [» Welcome to Frontity](README.md)
   * [About the Frontity Framework](about/README.md)
   * [Frontity features](frontity-features/README.md)
+  * [Get involved](about/get-involved.md)
 * [🚀 Getting started](getting-started/README.md)
   * [Installation requirements](getting-started/installation-requirements.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
