@@ -1,4 +1,4 @@
-#Get Involved
+# **Get Involved**
 
 We'd love for you to be part of our ever-growing community. There are a variety of different ways in which you can find information about the project, discuss about it, and contribute to it.
 
