@@ -42,7 +42,7 @@ There's yet more to the Frontity documentation.
 
 [Frontity's WordPress Plugins](frontity-plugins/README.md) are plugins built by the team here at Frontity that you install and activate in your WordPress site and that will enhance your Frontity site. 
 
-[Key Concepts](key-concepts/README.md) will help you with some foundational knowledge that will help you when working with Frontity. Here we even provide you with introductions to JavaScript/ES6 and React, just in case you need them.
+[Key Concepts](resources/README.md) will help you with some foundational knowledge that will help you when working with Frontity. Here we even provide you with introductions to JavaScript/ES6 and React, just in case you need them.
 
 [FAQ](faq.md) Frequently Asked Questions - but you already knew that, didn't you?! 😀
 
