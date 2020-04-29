@@ -4,7 +4,7 @@
 * [Why WordPress and React?](./#why-wordpress-and-react)
 * [How does Frontity work?](./#how-does-frontity-work)
 * [Frontity features](./#frontity-features)
-* [Key differences with GatsbyJS](./#key-differences-with-gatsbyjs)
+* [Key differences with GatsbyJS](./#key-differences-from-gatsbyjs)
 
 ## What is Frontity?
 
