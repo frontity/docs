@@ -36,12 +36,10 @@ https://public-api.wordpress.com/wp/v2/sites/your-wp-site.wordpress.com
 
 To test if you have Node installed open your terminal and run:
 ~~~~
-~ node -v
-v10.15.3
+node -v
 ~~~~
 ~~~~
-~ npm -v
-6.13.1
+npm -v
 ~~~~
 
 Once you have a WordPress site and Node you're good to go and all set to get up and running....
