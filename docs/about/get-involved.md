@@ -7,3 +7,5 @@ We'd love for you to be part of our ever-growing community. There are a variety 
 * **🐞  Contribute:** we use [GitHub](https://github.com/frontity/frontity) for bugs and pull requests. See our [Contributing](contributing/README.md) section to find out how you can help develop Frontity, or improve this documentation.
 * **🗣  Social media**: interact with other Frontity users. Reach out to us on [Twitter](https://twitter.com/frontity).
 * 💌  **Newsletter:** do you want to receive the latest framework updates and news? Subscribe [here](https://frontity.org/#newsletter).
+
+Wondering why should get involved? Read [**this article**](https://opensource.guide/how-to-contribute/#why-contribute-to-open-source) about contributing to open source software.
