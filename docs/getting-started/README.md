@@ -34,7 +34,7 @@ Want all the gen before you get started? Then read through our [**Learning Front
 
 Need more info? Our [**Community forum**](https://community.frontity.org/) is the perfect place to ask any questions and share your feedback. We look forward to seeing you there.
 
-Frontity is open source and welcomes contributions. There are many ways to support the project and get involved. Plus, you can get **free swag**! Please see the [**Contributing**](contributing/README.md) section for more info.
+Frontity is open source and welcomes contributions. There are many ways to support the project and get involved. Please see the [**Contributing**](contributing/README.md) section for more info.
 
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
