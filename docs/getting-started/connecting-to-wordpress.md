@@ -103,7 +103,7 @@ It will create a `/build` folder with a `server.js` file and a `/static` folder 
 * Use `npx frontity serve` to run it like a normal Node app.
 * Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](../installation-and-deploy/deploy-on-now.md) or [Netlify](https://www.netlify.com/?ref=frontity).
 
-For more info on deploying your site please refer to the [Deployment](deployment/README.md) section.
+For more info on deploying your site please refer to the [Deployment](./deployment/README.md) section.
 
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
