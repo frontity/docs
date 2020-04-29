@@ -10,7 +10,17 @@ To get started with Frontity you will need:
 
 * **A WordPress installation** - This can be hosted locally, on a web-server, or you can also use a site hosted on wordpress.com. However, when you spin up your first Frontity project you will initially be connected to our test site so you won't be without content when you first try Frontity.
 
-* **Node installed in your computer** - If you don't already have it you can get **Node** from [the official site](https://nodejs.org/). Alternatively, you can install Node using **nvm** \([node version manager](https://github.com/creationix/nvm)\). Any of these methods will also install **npm** and **npx** along with Node. You will use these to run Frontity commands during the set-up and development of your project.
+* **Node installed in your computer** - If you don't already have it you can get **Node** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node. You will use these to run Frontity commands during the set-up and development of your project.
+
+To test if you have Node installed open your terminal and run:
+~~~~
+~ node -v
+v10.15.3
+~~~~
+~~~~
+~ npm -v
+6.13.1
+~~~~
 
 > For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](architecture/README.md) section of these docs.
 
