@@ -1,6 +1,6 @@
 # Frontity Documentation
 
-This is the public documentation for **Frontity**
+This_____ is the public documentation for **Frontity**
 
 You can view this documentation at [Frontity Docs](https://docs.frontity.org/).
 

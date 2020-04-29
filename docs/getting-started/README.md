@@ -11,7 +11,7 @@ You can get started right now, it will be really easy! You may check:
 * 📘 [**Quick start guide**](quick-start-guide.md)**:** here you will find how to create a website with Frontity, step by step.
 * 👨‍👩‍👧‍👦 [**Community forum**](https://community.frontity.org/)**:** the perfect place to ask any questions and share your feedback.
 
-Frontity also welcomes contributions. There are many ways to support the project and get involved. Plus, you can get **free swag**! Please refer to the guide below to learn more about it:
+Frontity also welcomes contributions. There are many ways to support the project and get involved. Please refer to the guide below to learn more about it:
 
 * 🙌 [**How to contribute**](../contributing/how-to-contribute.md)
 
