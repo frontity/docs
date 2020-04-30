@@ -8,7 +8,7 @@ Let's kick things off by providing you with a roadmap so that you can find your 
 
 If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/README.md) section.
 
-This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will you get up and running with Frontity quickly.
+This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly.
 
 Once you've followed the Quick Start Guide and have a working Frontity installation we'll show you how to [**connect Frontity up to your own WordPress site**](getting-started/connecting-to-wordpress.md) and also how to customise the menu to reflect the structure of your WordPress site.
 
@@ -30,7 +30,7 @@ The included themes, namely Mars and TwentyTwenty, are dealt with separately fro
 
 ## **Guides**
 
-This is where you'll find an ever-growing series of [guides](guides/README.md). Some will help you in working with Frontity. Others will give you ideas for projects and provide you with the help you need to guide you from first steps to fully working project. This is where you can really have fun with Frontity and work toward your stretch goals.
+This is where you'll find an ever-growing series of [**Guides**](guides/README.md). Some will help you in working with Frontity. Others will give you ideas for projects and provide you with the help you need to guide you from first steps to fully working project. This is where you can really have fun with Frontity and work toward your stretch goals.
 
 ## **Contributing**
 
@@ -40,11 +40,11 @@ Frontity is an open source project and we welcome contributions from the communi
 
 There's yet more to the Frontity documentation.
 
-[Frontity's WordPress Plugins](frontity-plugins/README.md) are plugins built by the team here at Frontity that you install and activate in your WordPress site and that will enhance your Frontity site. 
+[**Frontity's WordPress Plugins**](frontity-plugins/README.md) are plugins built by the team here at Frontity that you install and activate in your WordPress site and that will enhance your Frontity site. 
 
-[Key Concepts](resources/README.md) will help you with some foundational knowledge that will help you when working with Frontity. Here we even provide you with introductions to JavaScript/ES6 and React, just in case you need them.
+[**Key Concepts**](resources/README.md) will help you with some foundational knowledge that will assist you when working with Frontity. Here we even provide you with introductions to JavaScript/ES6 and React, just in case you need them.
 
-[FAQ](faq.md) Frequently Asked Questions - but you already knew that, didn't you?! 😀
+[**FAQ**](faq.md) Frequently Asked Questions - but you already knew that, didn't you?! 😀
 
 
 
