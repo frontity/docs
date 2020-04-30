@@ -1,4 +1,4 @@
-# 💻 Resources
+# 💻 Key Concepts
 
 If you are coming to Frontity from a different background, perhaps from the WordPress/PHP world, then there are some concepts that you will need to understand first. In order to start using Frontity you will need to know some of the basic concepts of JavaScript and React.
 
