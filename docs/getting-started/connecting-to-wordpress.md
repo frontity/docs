@@ -84,7 +84,7 @@ With Frontity you won't have your site code in the root folder as you would with
 
 If you're just starting out with Frontity then the theme you should have selected when you ran `npx frontity create` will be `@frontity/mars-theme`. You can find it in `packages/mars-theme/`. Go ahead and edit any of its files while running Frontity and the site will refresh automatically.
 
-Move onto the [**Learning Frontity**](learning-frontity/README.md) section to dig in to the details of Frontity and how you can work with it.
+Move onto the [**Learning Frontity**](../learning-frontity/README.md) section to dig in to the details of Frontity and how you can work with it.
 
 > `npx frontity create` will install the `mars-theme` in `packages/` so the theme can be edited by the developer. However, this theme doesn't need to reside in `packages/` if you don't want to edit it. It can be installed directly with `npm` inside `node_modules/` and it will work exactly the same.
 
