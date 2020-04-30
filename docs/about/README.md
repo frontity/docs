@@ -1,4 +1,4 @@
-# About the Frontity framework
+# 💫 About Frontity
 
 * [What is Frontity?](./#what-is-frontity)
 * [Why WordPress and React?](./#why-wordpress-and-react)

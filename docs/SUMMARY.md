@@ -1,11 +1,10 @@
 # Table of contents
 
 * [» Welcome to Frontity](README.md)
-* [About Frontity](about/README.md)
+* [📃 About Frontity](about/README.md)
   * [Frontity features](frontity-features/README.md)
   * [Get involved](about/get-involved.md)
 * [🚀 Getting started](getting-started/README.md)
-  * [Installation requirements](getting-started/installation-requirements.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
   * [Connect Frontity to Your WordPress Site](getting-started/connecting-to-wordpress.md)
   * [Next steps](getting-started/next-steps.md)
@@ -44,7 +43,7 @@
 * [👏 Contributing](contributing/README.md)
   * [How to contribute?](contributing/how-to-contribute.md)
   * [Contributing Guide](contributing/code-contribution-guide.md)
-* [💻 Resources](resources/README.md)
+* [💻 Key Concepts](resources/README.md)
   * [JavaScript](resources/javascript-basics.md)
   * [React](resources/react-basic.md)
 * [🤔 FAQ](faq.md)
