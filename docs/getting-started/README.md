@@ -12,7 +12,7 @@ To get started with Frontity you will need:
 
 * **Node installed in your computer** - If you don't already have it you can get **Node** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node. You will use these to run Frontity commands during the set-up and development of your project.
 
-> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](architecture/README.md) section of these docs.
+> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture/README.md) section of these docs.
 
 ## Initial checks
 
@@ -48,11 +48,11 @@ Once you have a WordPress site and Node you're good to go and all set to get up 
 
 No time to waste? Then head straight over to our [**Quick start guide**](quick-start-guide.md) to get up and running right away.
 
-Want all the gen before you get started? Then read through our [**Learning Frontity**](learning-frontity/README.md) section for in-depth insights into working with Frontity.
+Want all the gen before you get started? Then read through our [**Learning Frontity**](../learning-frontity/README.md) section for in-depth insights into working with Frontity.
 
 Need more info? Our [**Community forum**](https://community.frontity.org/) is the perfect place to ask any questions and share your feedback. We look forward to seeing you there.
 
-Frontity is open source and welcomes contributions. There are many ways to support the project and get involved. Please see the [**Contributing**](contributing/README.md) section for more info.
+Frontity is open source and welcomes contributions. There are many ways to support the project and get involved. Please see the [**Contributing**](../contributing/README.md) section for more info.
 
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
