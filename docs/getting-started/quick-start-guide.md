@@ -51,7 +51,7 @@ Now you can start a development server with:
 npx frontity dev
 ```
 
-This server will be listening on `http://localhost:3000` and watching for any changes inside the `packages` folder.
+This server will be listening to `http://localhost:3000` and watching for any changes inside the `packages` folder.
 
 The page should open automatically in your browser. At first Frontity will connect to our starter blog and so you will initially see our demo content. 
 

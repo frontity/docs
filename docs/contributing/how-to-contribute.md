@@ -8,24 +8,24 @@ There are several ways to support the project and get involved. Don't know how t
 * [Improve the documentation](how-to-contribute.md#improve-the-documentation)
 * [Show off your work](how-to-contribute.md#show-off-your-work)
 
-## » Let's get the best framework ever 
+## » Let's get the best framework ever
 
-* [Try Frontity out](../getting-started/quick-start-guide.md) and share your **feedback** and **questions** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic (thread) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _[Feedback] I found difficult to..._ If you ask a question, the title can be the question itself.
+* [Try Frontity out](../getting-started/quick-start-guide.md) and share your **feedback** and **questions** [in our forum](https://community.frontity.org/). You can join an existing conversation or open a new topic \(thread\) in its relevant category. If you open a new topic, make sure its title is descriptive enough. E.g. _\[Feedback\] I found difficult to..._ If you ask a question, the title can be the question itself.
 * [Report bugs](https://github.com/frontity/frontity/issues) or issues. 🐞
 * New feature ideas? Feel free to suggest them [to the community](https://community.frontity.org/c/framework-design) or even open a [Pull Request](https://github.com/frontity/frontity/pulls).
-* If you want to **help fixing bugs** or **contributing code**, please refer to this [Code Contributions guide](code-contributions.md). You can also [connect with us](https://community.frontity.org/) on the community forum and ask how you can contribute or what you want to work on.
+* If you want to **help fixing bugs** or **contributing code**, please refer to this [Code Contributions guide](https://github.com/frontity/gitbook-docs/tree/81ea171a76d259e12ca6fabb4443786cd806ea42/contributing/code-contributions.md). You can also [connect with us](https://community.frontity.org/) on the community forum and ask how you can contribute or what you want to work on.
 
 ## 👏 **Show off your work**
 
 * Share what you're **building** with [the community](https://community.frontity.org/c/showcases) to inspire others.
 * Submit your extension to npm to help others build their webs.
-* Show your work to the world with the hashtag #Frontity and be proud of it!
+* Show your work to the world with the hashtag \#Frontity and be proud of it!
 
 ## 📖 Improve the documentation
 
 * Is something missing or not clear enough? Did you find any spelling mistakes?
-  - You can directly *suggest your changes by following our [documentation contributing guidelines](https://github.com/frontity/gitbook-docs/wiki/Contributing-to-the-Frontity-Documentation)* 
-  - Or you can *report them using our [community forum](https://community.frontity.org/c/docs-and-tutorials)*. 
+  * You can directly _suggest your changes by following our_ [_documentation contributing guidelines_](https://github.com/frontity/gitbook-docs/wiki/Contributing-to-the-Frontity-Documentation) 
+  * Or you can _report them using our_ [_community forum_](https://community.frontity.org/c/docs-and-tutorials). 
 * Help **translating** our documentation. Frontity is designed to be available for everyone, so if you think you can help on this, just let us know! 
 
 Feel free to suggest any improvements.
@@ -34,14 +34,14 @@ Feel free to suggest any improvements.
 
 **Social media and other platforms**
 
-* The easiest way (but not less important) to help us spread the word about the project can be posting something on your social media pages. Why not start with a [tweet](https://twitter.com/intent/tweet?text=This%20is%20amazing%21%20%40Frontity%20has%20launched%20an%20open-source%20framework%20for%20building%20%23WordPress%20themes%20with%20%23React.%20%E2%9A%9B%EF%B8%8F%20Check%20how%20easy%20it%20is:%20&url=https%3A%2F%2Ffrontity.org)? 😉
-* Tweet about things you build with Frontity (make sure to mention @Frontity or use the hashtag **#Frontity** so we can be notified and share it as well).
+* The easiest way \(but not less important\) to help us spread the word about the project can be posting something on your social media pages. Why not start with a [tweet](https://twitter.com/intent/tweet?text=This%20is%20amazing%21%20%40Frontity%20has%20launched%20an%20open-source%20framework%20for%20building%20%23WordPress%20themes%20with%20%23React.%20%E2%9A%9B%EF%B8%8F%20Check%20how%20easy%20it%20is:%20&url=https%3A%2F%2Ffrontity.org)? 😉
+* Tweet about things you build with Frontity \(make sure to mention @Frontity or use the hashtag **\#Frontity** so we can be notified and share it as well\).
 * If you read a post on Reddit, Quora or other blogs where Frontity could be relevant, let them know.
 
 **Writing content**
 
 * We're always looking for contributors to help with adding more content and better documentation. You can create **guides**, **tutorials,** or any other relevant content about Frontity. [Let us know](https://community.frontity.org/c/communication) if we can help and don't forget to share them [here](https://community.frontity.org/c/communication) so we can be notified.
-* Would you prefer to write for Frontity's blog? Feel free to share your ideas by opening a new topic in the [Communication category](https://community.frontity.org/c/communication) of the forum and mention @Reyes. The more descriptive the title of the topic the better: E.g. _[Guest post idea] Best resources to learn React_.
+* Would you prefer to write for Frontity's blog? Feel free to share your ideas by opening a new topic in the [Communication category](https://community.frontity.org/c/communication) of the forum and mention @Reyes. The more descriptive the title of the topic the better: E.g. _\[Guest post idea\] Best resources to learn React_.
 
 **Speaking about Frontity in events**
 
@@ -50,7 +50,7 @@ Feel free to suggest any improvements.
 
 If you come up with other ways to participate or to help spread the word, please feel free to [share them with the community](https://community.frontity.org/c/communication) as well. New ideas are always welcome!
 
-## 👨‍👩‍👧‍👦 Help build up the community 
+## 👨‍👩‍👧‍👦 Help build up the community
 
 * Community users have many questions. [Let's help them!](https://community.frontity.org/)
 * Teach others about Frontity, WordPress and/or React.
