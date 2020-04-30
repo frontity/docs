@@ -8,6 +8,7 @@
   * [Installation requirements](getting-started/installation-requirements.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
   * [Connect Frontity to Your WordPress Site](getting-started/connecting-to-wordpress.md)
+  * [Next steps](getting-started/next-steps.md)
 * [📚 Learning Frontity](learning-frontity/README.md)
   * [1. Project](learning-frontity/project.md)
   * [2. Settings](learning-frontity/settings.md)
