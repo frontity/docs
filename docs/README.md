@@ -108,7 +108,7 @@ Frontity is in a way similar to, and can be compared with, Gatsby.js. However, t
 
 * **100% focused on WordPress**: this means the number of concepts that you as a developer need to learn are minimal. No complex configuration is necessary to get started, and the queries to the APIs that deliver the content are pre-configured for the things that developers most frequently need.
 * **Opinionated**: Frontity has its own state manager and it uses Emotion for the CSS. Thanks to that developers do not need to learn the complexities of such technologies as Redux. At the same time it powers a very flexible extensibility pattern, more similar to that of WordPress itself, rather than that of other JavaScript frameworks.
-* **Rendered dynamically**: the HTML does not have to be rebuilt each time the content is edited or new content is published. Our preferred approach is [SPR](https://zeit.co/blog/serverless-pre-rendering), although there are other ways to configure it.
+* **Rendered dynamically**: the HTML does not have to be rebuilt each time the content is edited or new content is published. Our preferred approach is [SPR](https://vercel.com/blog/serverless-pre-rendering), although there are other ways to configure it.
 * **Extensible like WordPress**: themes and extensions can be activated and deactivated without code changes.
 
 In addition: 

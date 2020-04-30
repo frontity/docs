@@ -2,7 +2,7 @@
 
 According to Zeit: _"_[_Now_](https://zeit.co/now) _is a global deployment network built on top of all existing cloud providers. It makes teams productive by removing servers and configuration, makes serverless application deployment easy."_
 
-We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. \_It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://zeit.co/blog/serverless-pre-rendering)\), a powerful way to improve your website speed.
+We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. \_It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your website speed.
 
 To be able to deploy with now you need to have a Now account. You can [signup here](https://zeit.co/signup).
 
