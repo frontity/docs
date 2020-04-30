@@ -12,7 +12,7 @@ To get started with Frontity you will need:
 
 * **Node installed in your computer** - If you don't already have it you can get **Node** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node. You will use these to run Frontity commands during the set-up and development of your project.
 
-> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture/README.md) section of these docs.
+> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture.md) section of these docs.
 
 ## Initial checks
 
@@ -22,7 +22,7 @@ Frontity depends on the WordPress REST-API. If you have a recent version of Word
 
 To check that the WordPress REST-API is working you can type one of the following into your browser's address bar. You should get a lot of complicated looking stuff in your browser. Don't worry, this is JSON and Frontity is very happy with this.
 
-For a self-hosted WordPress (i.e. local or web based):
+For a self-hosted WordPress site (i.e. local or web based):
 ~~~~
 http://your-wp-domain.com/wp-json
 ~~~~
