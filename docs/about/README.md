@@ -68,27 +68,27 @@ We are working on other possible installations, although for the time being this
 
 ## **Frontity features**
 
-Frontity and its extensions will help save you a lot of development time and effort, whilst also allowing you to enjoy all of the latest technology trends that come pre-configured for you out of the box. _You can check them out in more detail here: [Frontity Features page](frontity-features/)._
+Frontity and its extensions will help save you a lot of development time and effort, whilst also allowing you to enjoy all of the latest technology trends that come pre-configured for you out of the box. _You can check them out in more detail here: [Frontity Features page](../frontity-features/)._
 
 Here are the main ones:
 
-* [Zero setup development](frontity-features/#zero-setup-development)
-* [Lightning-fast loading](frontity-features/#lightning-fast-loading)
-* [Instant in-app navigation](frontity-features/#instant-in-app-navigation)
-* [Google AMP with the same codebase](frontity-features/#google-amp-support-with-the-same-codebase)
-* [Server Side Rendering](frontity-features/#server-side-rendering)
-* [Extensible](frontity-features/#less-than-greater-than-extensible)
-* [Best Lighthouse score](frontity-features/#best-lighthouse-score)
-* [Perfect accessibility](frontity-features/#perfect-accessibility)
-* [Battle-tested](frontity-features/#battle-tested-framework)
-* [Serverless and horizontal scaling](frontity-features/#serverless-and-horizontal-scaling)
-* [First class TypeScript support](frontity-features/#first-class-typescript-support)
-* [Support for ES6 in modern browsers](frontity-features/#support-for-es6-in-modern-browsers)
-* [Support for Wordpress.com & WordPress.org](frontity-features/#support-for-wordpress-com-and-wordpress-org)
-* [Support for multiple sites with a single installation](frontity-features/#support-for-multiple-sites-with-a-single-installation)
-* [Code Splitting](frontity-features/#code-splitting)
-* [Smallest React bundle possible](frontity-features/#smallest-react-bundle-possible)
-* [Ready for React Concurrent and Suspense](frontity-features/#ready-for-react-concurrent-and-suspense)
+* [Zero setup development](../frontity-features/#zero-setup-development)
+* [Lightning-fast loading](../frontity-features/#lightning-fast-loading)
+* [Instant in-app navigation](../frontity-features/#instant-in-app-navigation)
+* [Google AMP with the same codebase](../frontity-features/#google-amp-support-with-the-same-codebase)
+* [Server Side Rendering](../frontity-features/#server-side-rendering)
+* [Extensible](../frontity-features/#less-than-greater-than-extensible)
+* [Best Lighthouse score](../frontity-features/#best-lighthouse-score)
+* [Perfect accessibility](../frontity-features/#perfect-accessibility)
+* [Battle-tested](../frontity-features/#battle-tested-framework)
+* [Serverless and horizontal scaling](../frontity-features/#serverless-and-horizontal-scaling)
+* [First class TypeScript support](../frontity-features/#first-class-typescript-support)
+* [Support for ES6 in modern browsers](../frontity-features/#support-for-es6-in-modern-browsers)
+* [Support for Wordpress.com & WordPress.org](../frontity-features/#support-for-wordpress-com-and-wordpress-org)
+* [Support for multiple sites with a single installation](../frontity-features/#support-for-multiple-sites-with-a-single-installation)
+* [Code Splitting](../frontity-features/#code-splitting)
+* [Smallest React bundle possible](../frontity-features/#smallest-react-bundle-possible)
+* [Ready for React Concurrent and Suspense](../frontity-features/#ready-for-react-concurrent-and-suspense)
 
 ## **Key differences from GatsbyJS**
 
