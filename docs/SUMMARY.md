@@ -1,7 +1,7 @@
 # Table of contents
 
 * [» Welcome to Frontity](README.md)
-  * [About the Frontity Framework](about/README.md)
+* [About Frontity](about/README.md)
   * [Frontity features](frontity-features/README.md)
   * [Get involved](about/get-involved.md)
 * [🚀 Getting started](getting-started/README.md)
