@@ -17,7 +17,7 @@ Let's learn some of the CSS-in-JS concepts to be able to use it with Frontity:
 
 In order to style your app, you will usually create new React components from HTML tags \(or even other React components\) with new styles attached to them. To do so, we will import `styled` from `frontity`, and create Styled Components.
 
-When styling html tags, you just use `style` followed by the html tag, and then a template string with the CSS, like this:
+When styling html tags, you just use `styled` followed by the html tag, and then a template string with the CSS, like this:
 
 ```jsx
 import { styled } from "frontity";
