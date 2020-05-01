@@ -46,10 +46,7 @@ There's yet more to the Frontity documentation.
 
 [**FAQ**](faq.md) Frequently Asked Questions - but you already knew that, didn't you?! 😀
 
-
-
 By the way, we'd love to hear about what you're building with Frontity. Join us in our [**Community Forum**](https://community.frontity.org) and tell us about your project. You can also ask questions and get help and support from our growing community of users and developers there.
-
 
 {% hint style="info" %}
 **Subscribe** to our newsletter [here](https://frontity.org/#newsletter) to **get notified** of the latest news and updates.

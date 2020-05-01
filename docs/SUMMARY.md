@@ -22,7 +22,7 @@
   * [11. Head](learning-frontity/head.md)
 * [🏗 Architecture](architecture.md)
 * [🌎 Deployment](deployment/README.md)
-  * [Deploy Frontity on Now](deployment/deploy-on-now.md)
+  * [Deploy Frontity using `now` (Vercel)](deployment/deploy-using-now-vercel.md)
 * [⚙ Frontity Packages](api-reference-1/README.md)
   * [frontity](api-reference-1/frontity.md)
   * [@frontity/tiny-router](api-reference-1/router.md)

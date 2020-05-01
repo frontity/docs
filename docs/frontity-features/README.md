@@ -81,7 +81,7 @@ We’re open sourcing the internal framework we’ve been using to power big Wor
 
 The Frontity server is so small it suits perfectly the serverless requirements. That means infinite scaling for the front-end.
 
-All the server code is bundled in one file, ready to work with serverless services like [Now](https://zeit.co/now) or [AWS Lambda](https://aws.amazon.com/es/lambda/). Frontity is also prepared to scale horizontally in any Node server.
+All the server code is bundled in one file, ready to work with serverless services like [Vercel](https://vercel.com/docs) (using its CLI `now`) or [AWS Lambda](https://aws.amazon.com/es/lambda/). Frontity is also prepared to scale horizontally in any Node server.
 
 ### {  } First class TypeScript support
 
