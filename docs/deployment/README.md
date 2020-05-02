@@ -20,5 +20,5 @@ which we can be used to launch our Frontity app in production
 
 Here you have some guides about how to deploy a Frontity app in some popular hostings:
 
-* [Deploy Frontity using `now` (Vercel)](deployment/deploy-using-now-vercel.md)
+* [Deploy Frontity using `now` (Vercel)](deploy-using-now-vercel.md)
 
