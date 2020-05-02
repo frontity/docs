@@ -16,7 +16,7 @@ To get started with Frontity you will need:
 
 ## Initial checks
 
-#### Wordpress
+#### WordPress
 
 Frontity depends on the WordPress REST-API. If you have a recent version of WordPress installed, or if you're using wordpress.com then you should be good to go.
 
