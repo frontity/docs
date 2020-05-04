@@ -69,7 +69,7 @@ To deploy your site under a custom domain you have to
 
 * configure your Frontity app to point to that custom domain 
 * configure your custom domain for your project in the Vercel settings
-* add ZEIT nameservers for your custom domain from your domain provider 
+* add Vercel nameservers for your custom domain from your domain provider 
 
 ...before deploying it
 
@@ -83,9 +83,9 @@ Add it, and you will be provided by a [set a nameservers](https://vercel.com/doc
 
 ![vercel nameservers](../.gitbook/assets/vercel-nameservers.png)
 
-### Add ZEIT nameservers in your domain provider
+### Add Vercel nameservers in your domain provider
 
-You need to set [ZEIT nameservers](https://vercel.com/docs/v2/custom-domains/#option-2:-using-external-nameservers) as custom DNS of your custom domain from your domain provider site
+You need to set [Vercel nameservers](https://vercel.com/docs/v2/custom-domains/#option-2:-using-external-nameservers) as custom DNS of your custom domain from your domain provider site
 
 {% hint style="info" %}
 If you don't know how to do this, contact your domain provider \(GoDaddy, CloudFlare, etc\)
@@ -109,7 +109,7 @@ You should get something like this
 
 This will create a deploy and assign it to your real site url.
 
-> More about Zeit [deployments](https://vercel.com/docs/v2/platform/deployments)
+> More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 ```
 
 {% hint style="info" %}
