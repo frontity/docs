@@ -241,6 +241,8 @@ will return something like
   // entity properties
   taxonomy: "category",
   id: 7,
+  link: "/category/nature/page/3",
+  query: "",
 
   // booleans that identify the type of path
   isArchive: true,
@@ -255,15 +257,10 @@ will return something like
   items: [{ type: "post", id: 60, link: "..." }, ...],
   total: 10,
   totalPages: 1,
-
-  link: "/category/nature",
-  query: "",
-
-
-  // pagination atributes (for Archive)
-  page: 1,
-  path: "/category/nature",
-  next: "category/page/1",
+  page: 3,
+  route: "/category/nature",
+  next: "/category/nature/page/4",
+  previous: "/category/nature/page/2",
 }
 ```
 

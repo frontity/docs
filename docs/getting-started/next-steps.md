@@ -8,7 +8,7 @@ With Frontity you won't have your site code in the root folder as you would with
 
 If you're just starting out with Frontity then the theme you should have selected when you ran `npx frontity create` will be `@frontity/mars-theme`. You can find it in `packages/mars-theme/`. Go ahead and edit any of its files while running Frontity and the site will refresh automatically.
 
-Move onto the [**Learning Frontity**](../learning-frontity/README.md) section to dig in to the details of Frontity and how you can work with it.
+Move onto the [**Learning Frontity**](../learning-frontity/) section to dig in to the details of Frontity and how you can work with it.
 
 > `npx frontity create` will install the `mars-theme` in `packages/` so the theme can be edited by the developer. However, this theme doesn't need to reside in `packages/` if you don't want to edit it. It can be installed directly with `npm` inside `node_modules/` and it will work exactly the same.
 
@@ -25,10 +25,11 @@ to create a production-ready bundle.
 It will create a `/build` folder with a `server.js` file and a `/static` folder with all your javascript files and other assets. You can either
 
 * Use `npx frontity serve` to run it like a normal Node app.
-* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](../installation-and-deploy/deploy-on-now.md) or [Netlify](https://www.netlify.com/?ref=frontity).
+* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](https://github.com/frontity/gitbook-docs/tree/33bf814a531faac9b997b67c7d0557ba67116189/docs/installation-and-deploy/deploy-on-now.md) or [Netlify](https://www.netlify.com/?ref=frontity).
 
-For more info on deploying your site please refer to the [Deployment](../deployment/README.md) section.
+For more info on deploying your site please refer to the [Deployment](../deployment/) section.
 
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
 {% endhint %}
+

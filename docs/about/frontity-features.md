@@ -5,33 +5,33 @@ description: >-
   for you.
 ---
 
-# ⚛ Frontity features
+# Frontity features
 
 Here's a list of the main features included in Frontity's core:
 
 ### **Frontity features**
 
-* [Zero setup development](./#zero-setup-development)
-* [Lightning-fast loading](./#lightning-fast-loading)
-* [Instant in-app navigation](./#instant-in-app-navigation)
-* [Server Side Rendering](./#server-side-rendering)
-* [Extensible](./#less-than-greater-than-extensible)
-* [Best Lighthouse score](./#best-lighthouse-score)
-* [Perfect accessibility](./#perfect-accessibility)
-* [Battle-tested](./#battle-tested-framework)
-* [Serverless and horizontal scaling](./#serverless-and-horizontal-scaling)
-* [First class TypeScript support](./#first-class-typescript-support)
-* [Support for ES6 in modern browsers](./#support-for-es6-in-modern-browsers)
-* [Support for Wordpress.com & WordPress.org](./#support-for-wordpress-com-and-wordpress-org)
-* [Support for multiple sites with a single installation](./#support-for-multiple-sites-with-a-single-installation)
-* [Code Splitting](./#code-splitting)
-* [Smallest React bundle possible](./#smallest-react-bundle-possible)
-* [Ready for React Concurrent and Suspense](./#ready-for-react-concurrent-and-suspense)
+* [Zero setup development](frontity-features.md#zero-setup-development)
+* [Lightning-fast loading](frontity-features.md#lightning-fast-loading)
+* [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
+* [Server Side Rendering](frontity-features.md#server-side-rendering)
+* [Extensible](frontity-features.md#less-than-greater-than-extensible)
+* [Best Lighthouse score](frontity-features.md#best-lighthouse-score)
+* [Perfect accessibility](frontity-features.md#perfect-accessibility)
+* [Battle-tested](frontity-features.md#battle-tested-framework)
+* [Serverless and horizontal scaling](frontity-features.md#serverless-and-horizontal-scaling)
+* [First class TypeScript support](frontity-features.md#first-class-typescript-support)
+* [Support for ES6 in modern browsers](frontity-features.md#support-for-es6-in-modern-browsers)
+* [Support for Wordpress.com & WordPress.org](frontity-features.md#support-for-wordpress-com-and-wordpress-org)
+* [Support for multiple sites with a single installation](frontity-features.md#support-for-multiple-sites-with-a-single-installation)
+* [Code Splitting](frontity-features.md#code-splitting)
+* [Smallest React bundle possible](frontity-features.md#smallest-react-bundle-possible)
+* [Ready for React Concurrent and Suspense](frontity-features.md#ready-for-react-concurrent-and-suspense)
 
 ### 🔜 Coming soon
 
-* [PWA and offline support](./#pwa-and-offline-support)
-* [Google AMP with the same codebase](./#google-amp-support-with-the-same-codebase)
+* [PWA and offline support](frontity-features.md#pwa-and-offline-support)
+* [Google AMP with the same codebase](frontity-features.md#google-amp-support-with-the-same-codebase)
 
 ## Frontity features
 
@@ -59,7 +59,7 @@ The content is retrieved using the WordPress REST API. Once React is loaded in t
 
 One of the most amazing things about Frontity is its extensibility: it allows you to easily add new features to your theme via **extensions** and **NPM packages** without having to create them from scratch.
 
-We are working on a lot of Frontity extensions which will be available soon. You can check them out [here](extensions.md). Some examples are Yoast SEO, AdSense, SmartAds, DoubleClick for Publishers, OneSignal Push Notifications, Disqus, Google Analytics, Google Tag Manager, or ComScore.
+We are working on a lot of Frontity extensions which will be available soon. You can check them out [here](https://github.com/frontity/gitbook-docs/tree/a6a79476ae299fdebf52cf13ddeaca9ede179f24/docs/frontity-features/extensions.md). Some examples are Yoast SEO, AdSense, SmartAds, DoubleClick for Publishers, OneSignal Push Notifications, Disqus, Google Analytics, Google Tag Manager, or ComScore.
 
 Apart from these extensions, there are many other **interface tools** specifically created for Frontity: context routing, swipe navigation, infinite scrolling, html-to-react, gutenberg-to-react, etc.
 
@@ -81,11 +81,11 @@ We’re open sourcing the internal framework we’ve been using to power big Wor
 
 The Frontity server is so small it suits perfectly the serverless requirements. That means infinite scaling for the front-end.
 
-All the server code is bundled in one file, ready to work with serverless services like [Vercel](https://vercel.com/docs) (using its CLI `now`) or [AWS Lambda](https://aws.amazon.com/es/lambda/). Frontity is also prepared to scale horizontally in any Node server.
+All the server code is bundled in one file, ready to work with serverless services like [Vercel](https://vercel.com/docs) \(using its CLI `now`\) or [AWS Lambda](https://aws.amazon.com/es/lambda/). Frontity is also prepared to scale horizontally in any Node server.
 
 ### {  } First class TypeScript support
 
-Frontity has amazing TypeScript support. Actually, we like it so much that Frontity itself is built using TypeScript. But don’t worry, it’s _\*\*_absolutely optional: if you don’t know or don’t want to learn it you can use regular JavaScript without problems!
+Frontity has amazing TypeScript support. Actually, we like it so much that Frontity itself is built using TypeScript. But don’t worry, it’s \_\*\*\_absolutely optional: if you don’t know or don’t want to learn it you can use regular JavaScript without problems!
 
 ### **💻 Support for ES6 in modern browsers**
 
