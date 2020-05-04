@@ -242,7 +242,9 @@ will return something like
   taxonomy: "category",
   id: 7,
   link: "/category/nature/page/3?s=park",
-  query: "",
+  query: {
+    s: "park"
+  },
 
   // Booleans that identify the type of link.
   isArchive: true,
