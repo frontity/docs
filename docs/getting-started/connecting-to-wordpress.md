@@ -4,7 +4,7 @@ Once you've run the initial setup [**outlined here**](quick-start-guide.md) you'
 
 ## Making the connection
 
-Once setup, Frontity initially connects to our starter blog. You can change this to connect to your own WordPress site in the `frontity.settings.js` file which you'll find in the root of your project directory. In this file locate the `@frontity/wp-source` settings object _(hint - it's near the bottom of the file)_ and change the `api` property to the address of your own site:
+Once setup, Frontity initially connects to our starter blog. You can change this to connect to your own WordPress site in the `frontity.settings.js` file which you'll find in the root of your project directory. In this file locate the `@frontity/wp-source` settings object _\(hint - it's near the bottom of the file\)_ and change the `api` property to the address of your own site:
 
 {% code title="frontity.settings.js" %}
 ```typescript
@@ -26,7 +26,7 @@ const settings = {
 ```
 {% endcode %}
 
-Your site at http://localhost:3000 won't auto-update on this occasion as auto-updates only occur when you make a change to a file in the `packages` folder, so you will need to manually refresh the page in your browser.
+Your site at [http://localhost:3000](http://localhost:3000) won't auto-update on this occasion as auto-updates only occur when you make a change to a file in the `packages` folder, so you will need to manually refresh the page in your browser.
 
 You should now see your own posts in the browser.
 
@@ -83,3 +83,4 @@ You're doing great! See our [**Next steps**](next-steps.md) page to see what you
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
 {% endhint %}
+

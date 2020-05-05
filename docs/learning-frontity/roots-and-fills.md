@@ -56,7 +56,7 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 
 Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it also. For example, let's imagine a _ShareModal_ package that has a modal like this:
 
-![](../.gitbook/assets/blog-frontity-org.jpg)
+![](../.gitbook/assets/blog-frontity-org%20%281%29.jpg)
 
 This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme. The **root** could be something like this:
 
@@ -100,7 +100,7 @@ export default {
 
 Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if there is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
 
-![](../.gitbook/assets/blog.jpg)
+![](../.gitbook/assets/blog%20%282%29.jpg)
 
 I hope you're starting to see how extensibility works in **Frontity**, but don't worry too much now, we'll talk in more detail later.
 
@@ -190,5 +190,5 @@ Frontity will insert them after the **roots** to ensure they work correctly:
 
 The components `<Slot>` and `<Fill>` know about each other so everything ends up in the correct place once the final HTML is generated :\)
 
-![Fills get inserted where they find a Slot with the same name.](../.gitbook/assets/screen-shot-2019-06-03-at-12.08.01.png)
+![Fills get inserted where they find a Slot with the same name.](../.gitbook/assets/screen-shot-2019-06-03-at-12.08.01%20%282%29.png)
 

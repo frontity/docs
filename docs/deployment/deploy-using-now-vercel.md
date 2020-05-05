@@ -1,8 +1,8 @@
-# Deploy Frontity using `now` (Vercel)
+# Deploy Frontity using now \(Vercel\)
 
-In [their own words](https://vercel.com/docs) : *Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow. It enables developers to host Jamstack websites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**.*
+In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow. It enables developers to host Jamstack websites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
 
-We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. It also supports the cache technique stale-while-revalidate (they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)), a powerful way to improve your website speed.
+We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your website speed.
 
 To be able to deploy with now you need to have a Vercel account. You can [signup here](https://vercel.com/signup).
 
@@ -32,7 +32,7 @@ These are the instructions to deploy a Frontity project on Vercel using `now`, o
 
 ### Deploy
 
-Deploy Frontity using the [`now` command](https://vercel.com/docs/now-cli#getting-started) (from the root of your project):
+Deploy Frontity using the [`now` command](https://vercel.com/docs/now-cli#getting-started) \(from the root of your project\):
 
 ```text
 > npx now
@@ -55,13 +55,13 @@ You should get something like this
 
 > More about Vercel [scopes ](https://vercel.com/docs/v2/platform/users-and-teams)
 
-Vercel (through its `now` command) will assign you a domain (something like _your-project-name.now.sh_) that that will allow you to check your site online
+Vercel \(through its `now` command\) will assign you a domain \(something like _your-project-name.now.sh_\) that that will allow you to check your site online
 
 From this deploy example we have got the following URL's:
 
-* **Live URL** ([https://my-frontity-project.now.sh](https://my-frontity-project.now.sh)) → Our temporary URL assigned automatically by Now, We can check (and share) our site online from this URL 
-* **Inspect** ([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings)) → Here we can check the status of our site and check the logs among other things
-* **Project Settings** ([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings)) → Here we can change domain and build settings among other things
+* **Live URL** \([https://my-frontity-project.now.sh](https://my-frontity-project.now.sh)\) → Our temporary URL assigned automatically by Now, We can check \(and share\) our site online from this URL 
+* **Inspect** \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings)\) → Here we can check the status of our site and check the logs among other things
+* **Project Settings** \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings)\) → Here we can change domain and build settings among other things
 
 ## Deploy your site under a custom domain
 
@@ -69,31 +69,31 @@ To deploy your site under a custom domain you have to
 
 * configure your Frontity app to point to that custom domain 
 * configure your custom domain for your project in the Vercel settings
-* add ZEIT nameservers for your custom domain from your domain provider 
+* add Vercel nameservers for your custom domain from your domain provider 
 
 ...before deploying it
 
 ### Add your custom domain in your project settings
 
-From the project settings URL provided in our previous deploy ([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings) in our example) we can set a custom domain
+From the project settings URL provided in our previous deploy \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings) in our example\) we can set a custom domain
 
-![](../.gitbook/assets/now-projects-settings.png)
+![](../.gitbook/assets/now-projects-settings%20%281%29.png)
 
 Add it, and you will be provided by a [set a nameservers](https://vercel.com/docs/v2/custom-domains#step-4:-configuring-the-domain) you can use in your domain provider to point your custom domain to the Vercel nameservers
 
 ![vercel nameservers](../.gitbook/assets/vercel-nameservers.png)
 
-### Add ZEIT nameservers in your domain provider
+### Add Vercel nameservers in your domain provider
 
-You need to set [ZEIT nameservers](https://vercel.com/docs/v2/custom-domains/#option-2:-using-external-nameservers) as custom DNS of your custom domain from your domain provider site
+You need to set [Vercel nameservers](https://vercel.com/docs/v2/custom-domains/#option-2:-using-external-nameservers) as custom DNS of your custom domain from your domain provider site
 
 {% hint style="info" %}
-If you don't know how to do this, contact your domain provider (GoDaddy, CloudFlare, etc)
+If you don't know how to do this, contact your domain provider \(GoDaddy, CloudFlare, etc\)
 {% endhint %}
 
 ### Deploy
 
-Then, deploy Frontity using this command (from the root of your project):
+Then, deploy Frontity using this command \(from the root of your project\):
 
 ```text
 > npx now --prod
@@ -109,7 +109,7 @@ You should get something like this
 
 This will create a deploy and assign it to your real site url.
 
-> More about Zeit [deployments](https://vercel.com/docs/v2/platform/deployments)
+> More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 ```
 
 {% hint style="info" %}
