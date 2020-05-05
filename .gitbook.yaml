@@ -11,3 +11,5 @@ redirects:
     javascript-and-react/: ./resources/README.md
     deployment/deploy-on-now: ./deployment/deploy-using-now-vercel.md
     deployment/deploy-on-now/: ./deployment/deploy-using-now-vercel.md
+    installation-and-deploy/deploy-on-now: ./deployment/deploy-using-now-vercel.md
+    installation-and-deploy/deploy-on-now/: ./deployment/deploy-using-now-vercel.md
