@@ -13,3 +13,5 @@ redirects:
     deployment/deploy-on-now/: ./deployment/deploy-using-now-vercel.md
     installation-and-deploy/deploy-on-now: ./deployment/deploy-using-now-vercel.md
     installation-and-deploy/deploy-on-now/: ./deployment/deploy-using-now-vercel.md
+    installation-and-deploy: ./deployment/README.md
+    installation-and-deploy/: ./deployment/README.md
