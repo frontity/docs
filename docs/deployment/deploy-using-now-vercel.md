@@ -77,7 +77,7 @@ To deploy your site under a custom domain you have to
 
 From the project settings URL provided in our previous deploy \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings) in our example\) we can set a custom domain
 
-![](../.gitbook/assets/now-projects-settings%20%281%29.png)
+![](../.gitbook/assets/now-projects-settings.png)
 
 Add it, and you will be provided by a [set a nameservers](https://vercel.com/docs/v2/custom-domains#step-4:-configuring-the-domain) you can use in your domain provider to point your custom domain to the Vercel nameservers
 
