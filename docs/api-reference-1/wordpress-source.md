@@ -342,9 +342,9 @@ source.author[4]
 
 ### Libraries
 
-#### `api.set({ api, isWpCom })`
+#### `api.init({ api, isWpCom })`
 
-Request entity to the WordPress REST API.
+Set the URL to the WordPress REST API.
 
 **arguments**
 
@@ -371,7 +371,7 @@ api.init({
 
 #### `api.get({ endpoint, params, api?, isWpCom? })`
 
-Request entity to the WordPress REST API.
+Request entity from the WordPress REST API.
 
 **arguments**
 
