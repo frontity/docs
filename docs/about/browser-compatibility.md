@@ -13,4 +13,6 @@ The approach adopted by Frontity is as follows:
 
 We don’t expect feature parity between the SSR-only version and the fully hydrated version. You can think of the SSR-only version as an alternative version of your page, without the enhanced experience provided by React.
 
-> _If you need to provide the feature parity in IE11, then Frontity is probably not the best option for you._
+{% hint style="warning" %}
+If you need to provide the feature parity in IE11, then Frontity is probably not the best option for you.
+{% endhint %}
