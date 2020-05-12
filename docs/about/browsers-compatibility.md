@@ -1,4 +1,4 @@
-# Browsers compatibility
+# Browser compatibility
 
 The approach adopted by Frontity is as follows:
 - Prioritize the performance and user experience for the large majority of users that run modern browsers.
