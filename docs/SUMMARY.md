@@ -3,6 +3,7 @@
 * [» Welcome to Frontity](README.md)
 * [📃 About Frontity](about/README.md)
   * [Frontity features](about/frontity-features.md)
+  * [Browser compatibility](about/browser-compatibility.md)
   * [Get involved](about/get-involved.md)
 * [🚀 Getting started](getting-started/README.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
