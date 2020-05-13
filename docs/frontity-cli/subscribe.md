@@ -1,9 +1,9 @@
-# `build`
+# `subscribe`
 
-Builds the project for production.
+Subscribe to Frontity newsletter.
 
 ```shell
-npx frontity build [options]
+npx frontity subscribe [options] [email]
 ```
 
 ## Arguments
@@ -12,7 +12,7 @@ npx frontity build [options]
 
 |            Option            | Description                                                                                                                                  |
 | :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
-|       `-d`, `--development`       | Builds the project for development.                                                                          |
-|        `--target <target>`         | create bundles with "es5" or "module". Default target is "module".                                                                                      |
 | `-h`, `--help`  | output usage information                                                                                                             |
+### **`[email]`**
 
+The _email_ where the Frontity newsletter will be sent
