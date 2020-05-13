@@ -36,6 +36,7 @@
 * [🔌 Frontity WordPress Plugins](frontity-plugins/README.md)
   * [REST API - Head Tags](frontity-plugins/rest-api-head-tags.md)
 * [📖 Guides](guides/README.md)
+  * [Creating a custom theme for Frontity](guides/how-to-create-a-custom-theme.md)
   * [Install a new Frontity package](guides/install-a-new-package.md)
   * [Understanding a Frontity project](guides/understanding-mars-theme.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
