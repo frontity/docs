@@ -18,12 +18,10 @@ jobs:
       - name: Get file changes
         id: get_file_changes
         uses: trilom/file-changes-action@v1.2.3
-        with:
-          output: ' '
       - name: Echo file changes
         run: |
           echo Changed files: ${{ steps.get_file_changes.outputs.files }}
       - name: Run TextLint
-        uses: place-labs/orthograph-err@v1
+        uses: place-labs/orthograph-err@master
         with:
           path: ${{ steps.get_file_changes.outputs.files}}
