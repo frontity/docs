@@ -1,6 +1,6 @@
 # 💻 Commands (Frontity CLI)
 
-The Frontity command line tool (CLI) is the main entry point for getting up and running with a Frontity application and for using functionality including like running a development server and building out your Frontity application for deployment.
+The Frontity command line tool (CLI) is the main entry point for getting up and running with a Frontity application and for using functionality like running a development server and building your Frontity application for deployment.
 
 ## How to use Frontity CLI
 
@@ -10,7 +10,7 @@ Run `npx frontity --help` for full help.
 
 ## Commands
 
-The `frontity` commands that are currently avaliable are
+The `frontity` commands that are currently available are
 
 - [`create`](create.md)
 - [`create-package`](create-package.md)
@@ -21,4 +21,3 @@ The `frontity` commands that are currently avaliable are
 - [`info`](info.md)
 
 > You can also use `--help` with each one of these commands to get more info about them: `npx frontity dev --help`
-
