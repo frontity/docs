@@ -1,19 +1,7 @@
 {
   "rules": {
-    "alex": {
-      "allow": []
-    },
     "common-misspellings": {
       "ignore": []
-    },
-    "en-capitalization": true,
-    "no-empty-section": true,
-    "no-exclamation-question-mark": true,
-    "one-sentence-per-line": true,
-    "period-in-list-item": true,
-    "rousseau": {
-      "showLevels": ["suggestion", "warning", "error"],
-       "ignoreInlineNodeTypes": ["Code", "Html"]
     },
     "spelling": {
       "language": "en-au",
@@ -23,9 +11,8 @@
     "terminology": {
       "defaultTerms": true,
       "terms": [
-        "PlaceOS"
+        "Frontity"
       ]
-    },
-    "write-good": true
+    }
   }
 }
