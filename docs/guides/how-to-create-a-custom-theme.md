@@ -184,3 +184,4 @@ npm publish
 ```
 
 > Take into account that there cannot be two packages with the same name (property `name` in your `package.json`) so if you try to publish a package that is already published you will get an error
+
