@@ -1,0 +1,13 @@
+{
+  "name": "frontity-docs",
+  "version": "1.0.0",
+  "description": "This repository contains the human-created technical docs, guides and reference material for Frontity.",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontity/gitbook-docs.git"
+  },
+  "homepage": "https://github.com/frontity/gitbook-docs#readme"
+}

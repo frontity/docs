@@ -242,7 +242,9 @@ will return something like
   taxonomy: "category",
   id: 7,
   link: "/category/nature/page/3?s=park",
-  query: "",
+  query: {
+    s: "park"
+  },
 
   // Booleans that identify the type of link.
   isArchive: true,
@@ -342,9 +344,9 @@ source.author[4]
 
 ### Libraries
 
-#### `api.set({ api, isWpCom })`
+#### `api.init({ api, isWpCom })`
 
-Request entity to the WordPress REST API.
+Set the URL to the WordPress REST API.
 
 **arguments**
 
@@ -371,7 +373,7 @@ api.init({
 
 #### `api.get({ endpoint, params, api?, isWpCom? })`
 
-Request entity to the WordPress REST API.
+Request entity from the WordPress REST API.
 
 **arguments**
 

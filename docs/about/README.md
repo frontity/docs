@@ -6,7 +6,7 @@ Frontity is a free and open source framework. It enables you to easily build a *
 
 The above approach, as exemplified by Frontity, has many advantages. But in order to build a website in this way without Frontity there are a lot of things that developers need to learn and configure: _bundling_, _transpiling_, _routing_, _server rendering_, _retrieving data from WordPress_, _managing state_, or _managing css_, among many others.
 
-Next.js and Gatbsy.js are two great React frameworks that can work with WordPress in this way but none of them is exclusively focused on WordPress. Therefore, there’s still some complex configuration and additional tooling that the developer has to do.
+Next.js and Gatsby.js are two great React frameworks that can work with WordPress in this way but none of them is exclusively focused on WordPress. Therefore, there’s still some complex configuration and additional tooling that the developer has to do.
 
 Frontity, on the other hand, is an opinionated framework based on React and focused on WordPress. It aims to make everything simpler, even for developers who are not familiar with React:
 
@@ -46,7 +46,7 @@ Frontity apps require a Node.js server to run on. This runs in tandem with the W
 * Frontity requests content from the WordPress REST-API and uses it to generate the final HTML that is displayed in the browser.
 * Frontity is also capable of generating AMP pages using the same React code and CSS.
 
-![](../.gitbook/assets/frontity-architecture-1.png)
+![](../.gitbook/assets/frontity-architecture.png)
 
 **Why a different Node.js server?**
 

@@ -1,0 +1,17 @@
+name: Proofread
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  proofread:
+    name: Proofread
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: place-labs/orthograph-err@master
