@@ -1,0 +1,30 @@
+name: reviewdog
+
+on: [pull_request]
+
+jobs:
+  textlint:
+    name: runner / textlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+      - name: textlint-github-pr-check
+        uses: tsuyoshicho/action-textlint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-check
+          textlint_flags: "docs/**"
+      - name: textlint-github-check
+        uses: tsuyoshicho/action-textlint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
+          textlint_flags: "docs/**"
+      - name: textlint-github-pr-review
+        uses: tsuyoshicho/action-textlint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          textlint_flags: "docs/**"
