@@ -6,8 +6,14 @@
     "terminology": {
       "defaultTerms": true,
       "terms": [
-        "Frontity"
+        "Frontity",
+        "--https"
       ]
-    }
+    },
+    "rousseau": {
+      "showLevels": ["suggestion", "warning", "error"],
+       "ignoreInlineNodeTypes": ["Code", "Html"]
+    },
+    "write-good": true
   }
 }
