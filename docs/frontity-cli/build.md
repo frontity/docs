@@ -16,3 +16,4 @@ npx frontity build [options]
 |        `--target <target>`         | create bundles with "es5" or "module". Default target is "module".                                                                                      |
 | `-h`, `--help`  | output usage information                                                                                                             |
 
+

@@ -34,3 +34,4 @@ The _name_ of your Frontity package. This command will create a `[package-name]`
 
 New package "my-custom-theme" created.
 ```
+
