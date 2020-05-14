@@ -9,7 +9,6 @@ Whatever the case is, you may want the community:
 - to be able to install it locally so it can be debugged → this will help the community to help you with any issue you may have with your project/theme
 - to be able to install it as an NPM package (eventually) so it can be easily reused in some other projects
 
-
 So, there are a few things to consider to ease contributions and support from the community to your theme
 
 ## A Frontity _theme_ project structure
