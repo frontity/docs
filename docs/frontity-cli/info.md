@@ -43,8 +43,4 @@ npx frontity info [options]
 
   System info copied in the clipboard!
   You can now paste it in the Frontity Community or GitHub issue.
-
-
 ```
-
-    

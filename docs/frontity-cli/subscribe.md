@@ -16,3 +16,4 @@ npx frontity subscribe [options] [email]
 ### **`[email]`**
 
 The _email_ where the Frontity newsletter will be sent
+

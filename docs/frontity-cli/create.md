@@ -62,5 +62,3 @@ Run cd awesome project && npx frontity dev and have fun! 🎉
 You can find docs at https://docs.frontity.org/.
 For technical support and assistance please join our community at https://community.frontity.org/.
 ```
-
-    
