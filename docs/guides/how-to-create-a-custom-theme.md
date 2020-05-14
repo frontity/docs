@@ -42,7 +42,6 @@ In  this structure, the theme you're developing is a local dependency of the mai
 
 > This type of dependency is automatically defined if you create the package (theme) w/ the frontity command `npx frontity create-package awesome-theme`
 
-
 This structure implies having a main Frontity project (root `package.json`) and some packages (each one with its own `package.json`) under the `packages` folder
 
 ```text
