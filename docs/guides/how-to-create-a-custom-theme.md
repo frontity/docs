@@ -11,7 +11,6 @@ Whatever the case is, you may want the community:
 
 So, there are a few things to consider to ease contributions and support from the community to your theme
 
-
 ## A Frontity _theme_ project structure
 
 In Frontity, _themes_ are packages that can be published in NPM so they can be installed and used in any other Frontity project
