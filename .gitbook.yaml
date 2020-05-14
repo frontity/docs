@@ -15,3 +15,7 @@ redirects:
     installation-and-deploy/deploy-on-now/: ./deployment/deploy-using-now-vercel.md
     installation-and-deploy: ./deployment/README.md
     installation-and-deploy/: ./deployment/README.md
+    key-differences-with-gatsbyjs: ./about/README.md
+    key-differences-with-gatsbyjs/: ./about/README.md
+    installation-and-deploy/possible-architectures: ./architecture.md
+    installation-and-deploy/possible-architectures/: ./architecture.md
