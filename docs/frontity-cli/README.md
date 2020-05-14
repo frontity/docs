@@ -21,3 +21,4 @@ The `frontity` commands that are currently avaliable are
 - [`info`](info.md)
 
 > You can also use `--help` with each one of these commands to get more info about them: `npx frontity dev --help`
+
