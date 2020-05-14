@@ -55,7 +55,7 @@ Frontity project created.
 ? Do you want to receive framework updates by email? No
 
 Ok, that's fine! 😉
-You can subscribe at any point with npx frontity subscribe <email>.
+You can subscribe at any poin with npx frontity subscribe <email>.
 
 Run cd awesome project && npx frontity dev and have fun! 🎉
 

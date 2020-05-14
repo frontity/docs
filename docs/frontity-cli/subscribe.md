@@ -1,6 +1,6 @@
 # `subscribe`
 
-Subscribe to Frontity newsletter.
+Suscribe to Frontity newsleter.
 
 ```shell
 npx frontity subscribe [options] [email]
