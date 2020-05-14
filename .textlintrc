@@ -3,11 +3,17 @@
     "common-misspellings": {
       "ignore": []
     },
+    "spelling": {
+      "language": "en-au",
+      "wordDefinitionRegexp": "/[\\w']+/g",
+      "suggestCorrections": true,
+    },
     "terminology": {
       "defaultTerms": true,
       "terms": [
         "Frontity"
       ]
-    }
+    },
+    "write-good": true
   }
 }
