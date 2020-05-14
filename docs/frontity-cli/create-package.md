@@ -20,7 +20,6 @@ The _name_ of your Frontity package. This command will create a `[package-name]`
 | `--no-prompt`  | Skips prompting the user for options          |
 | `-h`, `--open`  | output usage information |
 
-
 ## Examples
 
 - Create a custom theme package named `my-custom-project`
