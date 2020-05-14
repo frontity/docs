@@ -24,6 +24,6 @@ jobs:
         run: |
           echo Changed files: ${{ steps.get_file_changes.outputs.files }}
       - name: Run TextLint
-        uses: place-labs/orthograph-err@latest
+        uses: place-labs/orthograph-err@v1
         with:
           path: ${{ steps.get_file_changes.outputs.files}}
