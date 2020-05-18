@@ -3,10 +3,15 @@
 Creates a new Frontity project.
 
 ```shell
-npx frontity create [options] [project-name]
+npx frontity create [project-name] [options]
 ```
 
 ## Arguments
+
+### **`[project-name]`**
+
+The _name_ of your Frontity project.
+It will also be the name of the folder that this command will create for you with the files of your Frontity project inside
 
 ### **`[options]`**
 
@@ -18,10 +23,11 @@ npx frontity create [options] [project-name]
 | `-n`, `--no-prompt` | Skips prompting the user for options                                       |
 | `-h`, `--help` | Output usage information                                       |
 
-### **`[project-name]`**
 
-The _name_ of your Frontity project.
-It will also be the name of the folder that this command will create for you with the files of your Frontity project inside
+
+##### the `--theme` option
+
+You can pick one of Frontity's "official" two themes ([`mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)) but you can also use any custom theme as long as it's published on npm by passing the theme name on the command-line like `--theme ThemesPackageNameInNPM`
 
 ## Examples
 
@@ -34,7 +40,7 @@ npx frontity create my-awesome-project
 - Create a Frontity project named `my-awesome-project` using [Frontity Chakra theme](https://www.npmjs.com/package/frontity-chakra-theme)
 
 ```shell
-npx frontity create -h frontity-chakra-theme cool-project
+npx frontity create --theme frontity-chakra-theme cool-project
 ```
 
 - If you leave out both of the arguments, the CLI will run an interactive shell asking for these inputs:
@@ -56,7 +62,7 @@ Frontity project created.
 ? Do you want to receive framework updates by email? No
 
 Ok, that's fine! 😉
-You can subscribe at any poin with npx frontity subscribe <email>.
+You can subscribe at any point with npx frontity subscribe <email>.
 
 Run cd awesome project && npx frontity dev and have fun! 🎉
 

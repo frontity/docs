@@ -22,6 +22,19 @@ This command will create a `[package-name]` folder under `packages` and will add
 | `--no-prompt`  | Skips prompting the user for options          |
 | `-h`, `--open`  | Output usage information |
 
+##### `--no-prompt`
+
+This flag is intended for programmatic use of the CLI.
+
+The name of the package [can also be set as an environmental variable called `FRONTITY_NAME`](https://github.com/frontity/frontity/blob/107d3543ce5463186809b7e6f50ca31ffbdc107d/packages/frontity/src/cli/create-package.ts#L32). In this case, if you pass the `--no-prompt` flag, the CLI will use the name from that variable.
+
+If no `FRONTITY_NAME` is set, the CLI will prompt you for the name of the package
+
+This is the scheme followed by the CLI to get the name of the package 
+
+![](../.gitbook/assets/cli-arguments.png)
+
+
 ## Examples
 
 - Create a custom theme package named `my-custom-project`
