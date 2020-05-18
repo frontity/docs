@@ -23,8 +23,6 @@ It will also be the name of the folder that this command will create for you wit
 | `-n`, `--no-prompt` | Skips prompting the user for options                                       |
 | `-h`, `--help` | Output usage information                                       |
 
-
-
 ##### The `--theme` option
 
 You can pick one of Frontity's "official" two themes ([`--theme mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`--theme twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)).
