@@ -12,7 +12,7 @@ npx frontity info [options]
 
 |            Option            | Description                                                                                                                                  |
 | :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-h`, `--help`  | Output usage information
+| `-h`, `--help`  | Output usage information                                                                                                             
 ## Examples
 
 - Display info about my specific environment
