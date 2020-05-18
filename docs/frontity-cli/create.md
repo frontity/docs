@@ -20,7 +20,7 @@ npx frontity create [options] [project-name]
 
 ### **`[project-name]`**
 
-The _name_ of your Frontity project, which will also be the name of a folder that this command will create for you with the files of your Frontity project inside
+The _name_ of your Frontity project. This _name_ will also be the name of a folder that this command will create for you with the files of your Frontity project inside
 
 ## Examples
 
