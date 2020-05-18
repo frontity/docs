@@ -1,7 +1,7 @@
 # `create`
 
 Creates a new Frontity project.
-git push o
+
 ```shell
 npx frontity create [options] [project-name]
 ```
