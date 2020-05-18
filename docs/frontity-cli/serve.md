@@ -14,7 +14,7 @@ npx frontity serve [options]
 | :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
 |        `--port <port>`         | Runs the server on a custom port. Default is 3000.                                                                                      |
 |         `-s`, `--https`          | Runs the server using https. |
-| `-h`, `--help`  | output usage information                                                                                                             |
+| `-h`, `--help`  | Output usage information                                                                                                             |
 
 ## Examples
 

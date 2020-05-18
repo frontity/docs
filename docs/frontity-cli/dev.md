@@ -17,7 +17,7 @@ npx frontity dev [options]
 |         `-s`, `--https`          | Runs the server using https. |
 | `--dont-open-browser` | Don't open a browser window with the localhost.                                    |
 |     `--target <target>`      | create bundles with "es5" or "module". Default target is "module".                                                                 |
-| `-h`, `--help`  | output usage information                                                                                                             |
+| `-h`, `--help`  | Output usage information                                                                                                             |
 
 ## Examples
 

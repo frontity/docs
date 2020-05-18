@@ -1,7 +1,7 @@
 # `create`
 
 Creates a new Frontity project.
-
+git push o
 ```shell
 npx frontity create [options] [project-name]
 ```
@@ -16,7 +16,7 @@ npx frontity create [options] [project-name]
 | `-t`, `--typescript`  | Adds support for TypeScript          |
 | `-c`, `--use-cwd`  | Generates the project in the current directory |
 | `-n`, `--no-prompt` | Skips prompting the user for options                                       |
-| `-h`, `--help` | output usage information                                       |
+| `-h`, `--help` | Output usage information                                       |
 
 ### **`[project-name]`**
 

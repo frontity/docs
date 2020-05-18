@@ -14,4 +14,4 @@ npx frontity build [options]
 | :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
 |       `-d`, `--development`       | Builds the project for development.                                                                          |
 |        `--target <target>`         | Create bundles with "es5" or "module". Default target is "module".                                                                                      |
-| `-h`, `--help`  | output usage information                                                                                                             |
+| `-h`, `--help`  | Output usage information                                                                                                             |

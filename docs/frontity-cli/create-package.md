@@ -20,7 +20,7 @@ This command will create a `[package-name]` folder under `packages` and will add
 | :-------------: | ----------------------------------------------- |
 | `-n <value>`, `--namespace <value>`  | Sets the [namespace](https://docs.frontity.org/learning-frontity/namespaces) for this package                 |
 | `--no-prompt`  | Skips prompting the user for options          |
-| `-h`, `--open`  | output usage information |
+| `-h`, `--open`  | Output usage information |
 
 ## Examples
 
