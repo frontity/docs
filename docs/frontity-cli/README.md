@@ -1,6 +1,6 @@
 # 💻 Commands (Frontity CLI)
 
-The Frontity command line tool (CLI) is the main entry point for getting up and running with a Frontity application and for using functionality like running a development server and building your Frontity application for deployment.
+The Frontity command-line tool (CLI) is the main entry point for getting up and running with a Frontity application and for using functionality like running a development server and building your Frontity application for deployment.
 
 ## How to use Frontity CLI
 
@@ -8,6 +8,7 @@ The Frontity CLI (Frontity commands) is available via [npm](https://www.npmjs.co
 
 Run `npx frontity --help` for full help.
 
+this is a wordpress thing
 ## Commands
 
 The `frontity` commands that are currently available are
