@@ -8,7 +8,6 @@ The Frontity CLI (Frontity commands) is available via [npm](https://www.npmjs.co
 
 Run `npx frontity --help` for full help.
 
-this is a wordpress thing
 ## Commands
 
 The `frontity` commands that are currently available are
