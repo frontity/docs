@@ -15,5 +15,5 @@ npx frontity subscribe [options] [email]
 | `-h`, `--help`  | Output usage information                                                                                                             |
 ### **`[email]`**
 
-The _email_ where the Frontity newsletter will be sent
+The Frontity newsletter will be sent to this _email_
 
