@@ -21,3 +21,5 @@ redirects:
     installation-and-deploy/possible-architectures/: ./architecture/architecture.md
     architecture: ./architecture/architecture.md
     architecture/: ./architecture/architecture.md
+    faq: ./faq/faq.md
+    faq/: .faq/faq.md
