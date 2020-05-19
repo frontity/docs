@@ -30,7 +30,7 @@
     "textlint-rule-write-good": "^1.6.2"
   },
   "lint-staged": {
-    "*.md": ["textlint", "pre-commit"]
+    "*.md": "textlint"
   },
   "husky": {
     "hooks": {
