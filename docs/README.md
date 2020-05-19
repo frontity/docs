@@ -18,7 +18,7 @@ This section is the heart of our documentation. Once you've nailed the basics in
 
 ## **Architecture and Deployment**
 
-Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](https://github.com/frontity/gitbook-docs/tree/a6a79476ae299fdebf52cf13ddeaca9ede179f24/docs/architecture/README.md) section and, once you have a working application that you're happy with, how to deploy to live in the [**Deployment**](deployment/) section.
+Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](architecture/) section and, once you have a working application that you're happy with, how to deploy to live in the [**Deployment**](deployment/) section.
 
 ## **Packages and Themes**
 
@@ -44,7 +44,7 @@ There's yet more to the Frontity documentation.
 
 [**Key Concepts**](resources/) will help you with some foundational knowledge that will assist you when working with Frontity. Here we even provide you with introductions to JavaScript/ES6 and React, just in case you need them.
 
-[**FAQ**](faq.md) Frequently Asked Questions - but you already knew that, didn't you?! 😀
+[**FAQ**](faq/) Frequently Asked Questions - but you already knew that, didn't you?! 😀
 
 By the way, we'd love to hear about what you're building with Frontity. Join us in our [**Community Forum**](https://community.frontity.org) and tell us about your project. You can also ask questions and get help and support from our growing community of users and developers there.
 
