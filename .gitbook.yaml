@@ -17,9 +17,9 @@ redirects:
     installation-and-deploy/: ./deployment/README.md
     key-differences-with-gatsbyjs: ./about/README.md
     key-differences-with-gatsbyjs/: ./about/README.md
-    installation-and-deploy/possible-architectures: ./architecture/architecture.md
-    installation-and-deploy/possible-architectures/: ./architecture/architecture.md
-    architecture: ./architecture/architecture.md
-    architecture/: ./architecture/architecture.md
-    faq: ./faq/faq.md
-    faq/: .faq/faq.md
+    installation-and-deploy/possible-architectures: ./architecture/README.md
+    installation-and-deploy/possible-architectures/: ./architecture/README.md
+    architecture: ./architecture/README.md
+    architecture/: ./architecture/README.md
+    faq: ./faq/README.md
+    faq/: .faq/README.md
