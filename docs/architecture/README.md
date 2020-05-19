@@ -43,7 +43,7 @@ If you want to know more about what Serverless means you should check out [this 
 You will need to have two different domains, or a separate sub-domain on your existing domain:
 
 * One for the WordPress dashboard
-* And the other one to show the content retrieved from the API.
+* And the other one to show the content retrieved from the API. 
 
 **💡 Recommendation:**
 
