@@ -8,7 +8,8 @@ You can view this documentation at [Frontity Docs](https://docs.frontity.org/).
 
 ## What is Frontity?
 
-[Frontity](https://frontity.org/) is a free and [open source framework](https://github.com/frontity/frontity) to develop WordPress themes based on React. In other words, it allows to build a **React frontend** for a headless WordPress site, which serves its data via the WordPress REST API.
+[Frontity](https://frontity.org/) is a free and [open source framework](https://github.com/frontity/frontity) to develop WordPress themes based on React.
+In other words, it allows to build a **React frontend** for a headless WordPress site, which serves its data via the WordPress REST API.
 
 ## What Does this Repository Contain?
 
