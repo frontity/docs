@@ -28,9 +28,7 @@ You can also [connect with us](https://community.frontity.org/) on the community
 
 ## 📖 Improve the documentation
 
-* Is something missing or not clear enough?
-Did you find any spelling mistakes?
-Here's how you can help:
+* Is something missing or not clear enough? Did you find any spelling mistakes?
   * You can directly _suggest your changes by following our_ [_documentation contributing guidelines_](https://github.com/frontity/gitbook-docs/blob/master/CONTRIBUTING.md) 
   * Or you can _report them using our_ [_community forum_](https://community.frontity.org/c/docs-and-tutorials). 
 * You can also help **translating** our documentation.
