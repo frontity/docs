@@ -1,6 +1,6 @@
 # Frontity Documentation
 
-![Check Markdown links](https://github.com/frontity/gitbook-docs/workflows/Check%20Markdown%20links/badge.svg)
+[![Check Markdown links](https://github.com/frontity/gitbook-docs/workflows/Check%20Markdown%20links/badge.svg)](https://github.com/frontity/gitbook-docs/actions?query=workflow%3A%22Check+Markdown+links%22)
 
 This is the public documentation for **Frontity**
 
