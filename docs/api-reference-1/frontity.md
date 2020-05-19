@@ -12,14 +12,15 @@ import { connect, styled, Head, ... } from "frontity";
 
 ### React
 
-Use **`connect`** to inject `state`, `actions` and `libraries` in your React components.
+Use **`connect`** to inject `state`, `actions` and `libraries` in your React components. If you are familiar with React hooks, you can use also **`useConnect`** to do the same.
 
 Use the **`Head`**component whenever you want to add HTML tags inside the `<head>` of any of your site's pages. You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
 
 #### **API reference:**
 
-* [connect](frontity.md#connect)
-* [Head](frontity.md#head)
+- [connect](frontity.md#connect)
+- [useConnect](frontity.md#useConnect)
+- [Head](frontity.md#head)
 
 ### CSS-in-JS
 
@@ -29,10 +30,10 @@ You can read more in the [Styles](../learning-frontity/styles.md) page of our **
 
 #### **API reference:**
 
-* [styled](frontity.md#styled)
-* [css](frontity.md#css)
-* [Global](frontity.md#global)
-* [keyframes](frontity.md#keyframes)
+- [styled](frontity.md#styled)
+- [css](frontity.md#css)
+- [Global](frontity.md#global)
+- [keyframes](frontity.md#keyframes)
 
 ### Code Splitting
 
@@ -42,7 +43,7 @@ You can read more in the [Code Splitting](../learning-frontity/code-splitting.md
 
 #### **API reference:**
 
-* [loadable](frontity.md#loadable)
+- [loadable](frontity.md#loadable)
 
 ### `fetch` and `URL`
 
@@ -50,14 +51,14 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 
 #### **API reference:**
 
-* [fetch](frontity.md#fetch)
-* [URL](frontity.md#url)
+- [fetch](frontity.md#fetch)
+- [URL](frontity.md#url)
 
 ### Helpers
 
 #### API reference:
 
-* [decode](frontity.md#decode)
+- [decode](frontity.md#decode)
 
 ## Api Reference
 
@@ -66,22 +67,27 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 #### Syntax
 
 ```javascript
-ConnectedComponent = connect(Component);
+ConnectedComponent = connect(Component, options?);
 ```
 
 It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries. Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries. Also, that instance will re-render automatically whenever the value of `state` which the component is using is changed.
 
+If you don't want to inject new props in your components, you can use the `injectProps` option set to `false`. That will make your component reactive to changes in the state but without passing new props. For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
+
 **Arguments**
 
-* `Component`: a React component.
+- `Component`: a React component.
+- `options` (optional): object with the following properties:
+  - `injectProps`: Boolean. If `false`, the `state`, `actions` and `libraries` won't be passed as props to the component. Default is `true`.
 
 #### Return value
 
-* The same component but connected to `state`, `actions` and `libraries`.
+- Same component connected to the Frontity state.
 
 #### Example
 
 {% code title="Page.js" %}
+
 ```jsx
 import React from "react";
 import { connect } from "connect";
@@ -95,9 +101,9 @@ const Page = ({ state }) => {
   return (
     <>
       {(data.isFetching && <Loading />) ||
-       (data.isArchive && <List />) ||
-       (data.isPostType && <Post />) ||
-       (data.is404 && <Page404 />)}
+        (data.isArchive && <List />) ||
+        (data.isPostType && <Post />) ||
+        (data.is404 && <Page404 />)}
     </>
   );
 };
@@ -105,6 +111,56 @@ const Page = ({ state }) => {
 // Connect Page to the Frontity state.
 export default connect(Page);
 ```
+
+{% endcode %}
+
+### `useConnect`
+
+#### Syntax
+
+```javascript
+const { state, actions, libraries } = useConnect();
+```
+
+It's a React hook that returns the Frontity state, allowing the component to to consume `state`, `actions` and `libraries` in components without passing them as props.
+
+Note that `useConnect` must be used inside components connected to Frontity using [`connect`](frontity.md#connect) with the `injectProps` option set to `false`.
+
+#### Return value
+
+- The Frontity state (`state`, `actions` and `libraries`).
+
+#### Example
+
+{% code title="Page.js" %}
+
+```jsx
+import React from "react";
+import { connect, useConnect } from "connect";
+import { Loading, List, Post, Page404 } from "./components";
+
+const Page = () => {
+  // Get state using useConnect hook.
+  const { state } = useConnect();
+
+  // The next line will trigger a re-render whenever
+  // the value of "state.router.link" changes.
+  const data = state.source.get(state.router.link);
+
+  return (
+    <>
+      {(data.isFetching && <Loading />) ||
+        (data.isArchive && <List />) ||
+        (data.isPostType && <Post />) ||
+        (data.is404 && <Page404 />)}
+    </>
+  );
+};
+
+// Connect Page to the Frontity state, without injecting props.
+export default connect(Page, { injectProps: false });
+```
+
 {% endcode %}
 
 ### `styled`
@@ -114,12 +170,12 @@ export default connect(Page);
 ```jsx
 // You can use an HTML tag like this.
 const StyledDiv = styled.div`
-    font-size: 24px;
+  font-size: 24px;
 `;
 
 // Or use it like a function and pass a React component.
 const StyledComponent = styled(Component)`
-    background: aliceblue;
+  background: aliceblue;
 `;
 ```
 
@@ -127,11 +183,11 @@ It's a function that receives an HTML tag or a React component as argument and r
 
 #### Arguments
 
-* A template literal containing CSS code.
+- A template literal containing CSS code.
 
 #### Return value
 
-* A React component with the styles defined.
+- A React component with the styles defined.
 
 #### Example
 
@@ -151,7 +207,7 @@ const Container = styled.div`
 `;
 
 const StyledPage = styled(Page)`
-  background: ${props => props.background};
+  background: ${(props) => props.background};
 `;
 ```
 
@@ -161,7 +217,7 @@ const StyledPage = styled(Page)`
 
 ```javascript
 const styleObject = css`
-    background: pink;
+  background: pink;
 `;
 ```
 
@@ -169,11 +225,11 @@ It's a tagged template literal to add inline style to React Components. The usag
 
 #### Arguments
 
-* A template literal containing CSS code.
+- A template literal containing CSS code.
 
 #### Return value
 
-* A style object to be passed to a **`css`** prop or to the **`<Global>`**'s **`styles`** prop.
+- A style object to be passed to a **`css`** prop or to the **`<Global>`**'s **`styles`** prop.
 
 #### Example
 
@@ -181,7 +237,11 @@ It's a tagged template literal to add inline style to React Components. The usag
 import { css } from "frontity";
 
 const Component = () => (
-  <div css={css`background: pink;`}>
+  <div
+    css={css`
+      background: pink;
+    `}
+  >
     Styling my theme
   </div>
 );
@@ -203,7 +263,7 @@ It's a React component that creates global styles for the whole Frontity site.
 
 #### Props
 
-* **`styles`**: an style object created with [`css`](frontity.md#css)
+- **`styles`**: an style object created with [`css`](frontity.md#css)
 
 #### Example
 
@@ -211,17 +271,17 @@ It's a React component that creates global styles for the whole Frontity site.
 import { Global, css } from "frontity";
 
 const Page = () => (
-    <>
-        <Global
-          styles={css`
-            body {
-                margin: 0;
-                font-family: "Roboto";
-            }
-          `}
-        />
-        <OtherContent />
-    </>
+  <>
+    <Global
+      styles={css`
+        body {
+          margin: 0;
+          font-family: "Roboto";
+        }
+      `}
+    />
+    <OtherContent />
+  </>
 );
 ```
 
@@ -239,11 +299,11 @@ It's a function used to define and use animations in your CSS.
 
 #### Arguments
 
-* A template literal containing [CSS @keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) code.
+- A template literal containing [CSS @keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) code.
 
 #### Return value
 
-* An animation object to be used inside a template literal passed to [`styled`](frontity.md#styled) or [`css`](frontity.md#css).
+- An animation object to be used inside a template literal passed to [`styled`](frontity.md#styled) or [`css`](frontity.md#css).
 
 #### Example
 
@@ -266,9 +326,7 @@ const Button = styled.button`
   animation: ${rotate} 2s linear infinite;
 `;
 
-const Component = () => (
-  <Button>Styling my theme</Button>
-);
+const Component = () => <Button>Styling my theme</Button>;
 ```
 
 ### `loadable`
@@ -283,14 +341,14 @@ It's a function that loads a component asynchronously generating a different bun
 
 #### Arguments
 
-* **`importFunction`**: a function that executes a [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Import) and returns a `Promise` that will contain the imported module.
-* **`options`**: an object with any of the following properties:
-  * `fallback`: component displayed until the `Promise` resolves.
-  * `ssr`: if `false`, it will not be processed server-side \(default to `true`\).
+- **`importFunction`**: a function that executes a [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Import) and returns a `Promise` that will contain the imported module.
+- **`options`**: an object with any of the following properties:
+  - `fallback`: component displayed until the `Promise` resolves.
+  - `ssr`: if `false`, it will not be processed server-side \(default to `true`\).
 
 #### Return value
 
-* A React component.
+- A React component.
 
 #### Example
 
@@ -299,7 +357,7 @@ import { loadable } from "frontity";
 import Content from "./components/content";
 
 // Thanks to loadable we prevent comments from loading until it's needed.
-const HeavyComments = loadable(() => import('./components/comments'));
+const HeavyComments = loadable(() => import("./components/comments"));
 
 const Post = ({ state }) => (
   <>
@@ -323,7 +381,7 @@ It's a React component that injects their children in the HTML `<head>` tag. It 
 
 #### Props
 
-* **`children`**: the HTML tags you want to appear inside `<head>`.
+- **`children`**: the HTML tags you want to appear inside `<head>`.
 
 #### Example
 
@@ -352,12 +410,12 @@ It's a function with the [WHATWG API](https://developer.mozilla.org/en-US/docs/W
 
 #### Arguments
 
-* **`resource`**: a string containing the direct URL of the resource you want to fetch.
-* **`init`**: an options object containing any custom settings that you want to apply to the request \(go to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) for the complete list of available settings\).
+- **`resource`**: a string containing the direct URL of the resource you want to fetch.
+- **`init`**: an options object containing any custom settings that you want to apply to the request \(go to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) for the complete list of available settings\).
 
 #### Return value
 
-* A `Promise` that resolves to a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object.
+- A `Promise` that resolves to a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object.
 
 #### Example
 
@@ -383,12 +441,12 @@ It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/doc
 
 #### Arguments
 
-* **`url`**: a string representing an absolute or relative URL. If `url` is a relative URL, `base` is required.
-* **`base`**: a string representing the base URL to use in case `url` is a relative URL.
+- **`url`**: a string representing an absolute or relative URL. If `url` is a relative URL, `base` is required.
+- **`base`**: a string representing the base URL to use in case `url` is a relative URL.
 
 #### Return value
 
-* A [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)object.
+- A [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)object.
 
 #### Example
 
@@ -413,11 +471,11 @@ const decodedText = decode(text);
 
 #### Arguments
 
-* **`text`**: a string representing the html to be escaped.
+- **`text`**: a string representing the html to be escaped.
 
 #### Return value
 
-* `string`
+- `string`
 
 #### Example
 
@@ -428,4 +486,3 @@ const decodedText = decode("milk &amp; cookies");
 
 console.log(decodedText); // "milk and cookies"
 ```
-
