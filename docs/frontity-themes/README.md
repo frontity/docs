@@ -6,8 +6,8 @@ You can find all the Frontity themes looking for the tag [`frontity-theme`](http
 
 ## Frontity themes
 
-* [@frontity/twentytwenty-theme]()
-* [@frontity/mars-theme]()
+* [@frontity/twentytwenty-theme](frontity-twentytwenty-theme.md)
+* [@frontity/mars-theme](frontity-mars-theme.md)
 
 ## **Third Party themes**
 
