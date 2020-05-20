@@ -82,7 +82,7 @@ If you don't want to inject new props in your components, you can use the `injec
 
 #### Return value
 
-- Same component connected to the Frontity state.
+- The same component as passed in as the first argument but connected to the Frontity state.
 
 #### Example
 
@@ -122,7 +122,7 @@ export default connect(Page);
 const { state, actions, libraries } = useConnect();
 ```
 
-It's a React hook that returns the Frontity state, allowing the component to to consume `state`, `actions` and `libraries` in components without passing them as props.
+It's a React hook that returns the Frontity state, allowing the component to consume `state`, `actions` and `libraries` in components without passing them as props.
 
 Note that `useConnect` must be used inside components connected to Frontity using [`connect`](frontity.md#connect) with the `injectProps` option set to `false`.
 
