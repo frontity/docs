@@ -13,7 +13,7 @@ You can find all the Frontity themes looking for the tag [`frontity-theme`](http
 
 ## **Third Party themes**
 
+* [frontity-starter-theme](https://github.com/alexadark/frontity-starter-theme)
 * [frontity-chakra-theme](https://github.com/chakra-ui/frontity-chakra-ui-theme)
 * [twentynineteen-theme](https://github.com/imranhsayed/frontity-twentynineteen)
 * [primitiveone](https://www.npmjs.com/package/primitiveone)
-
