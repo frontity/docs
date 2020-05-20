@@ -28,3 +28,7 @@ In order to do that you use:
 ## `robots.txt`
 
 A [`robots.txt`](https://support.google.com/webmasters/answer/6062608) file tells search engine crawlers which pages or files the crawler should or shouldn't request from your site.
+
+You can add the `robots.txt` file at the root of your theme (next to the `frontity.settings.js` file) and when you build and deploy your app for production, it will be automatically picked up by the frontity server and served at `https://your-site-url.xyx/robots.txt`.
+
+You can also [check out our example](https://github.com/frontity/frontity/blob/1460e7c03ce3600f4f8ece0d6cf8fadb2bf9b526/examples/mars-theme-example/robots.txt)  of a theme that is using a `robots.txt` file.
