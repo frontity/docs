@@ -27,4 +27,4 @@ In order to do that you use:
 
 ## `robots.txt`
 
-A [`robots.txt`](https://support.google.com/webmasters/answer/6062608?hl=en&ref_topic=6061961&visit_id=637255580970870848-1263401344&rd=1) file tells search engine crawlers which pages or files the crawler should or shouldn't request from your site.
+A [`robots.txt`](https://support.google.com/webmasters/answer/6062608) file tells search engine crawlers which pages or files the crawler should or shouldn't request from your site.
