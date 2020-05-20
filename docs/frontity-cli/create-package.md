@@ -23,7 +23,7 @@ It will also add the proper dependency in the `package.json` of your Frontity pr
 | `--no-prompt`  | Skips prompting the user for options          |
 | `-h`, `--open`  | Output usage information |
 
-##### `--no-prompt`
+##### The `--no-prompt` option
 
 You can set the name of the package [as an environmental variable called `FRONTITY_NAME`](https://github.com/frontity/frontity/blob/107d3543ce5463186809b7e6f50ca31ffbdc107d/packages/frontity/src/cli/create-package.ts#L32).
 

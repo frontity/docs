@@ -18,7 +18,8 @@ npx frontity dev [options]
 | `--dont-open-browser` | Don't open a browser window with the localhost.                                                                   |
 |  `--target <target>`  | create bundles with "es5" or "module". Default target is "module".                                                |
 | `--publicPath <path>` | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". |
-|    `-h`, `--help`     | Output usage information                                                                                          |
+|    `-h`, `--help`     | Output usage information                                                                                         
+> More info about the `--publicPath` option can be found in the [`frontity build` page](build.md)
 
 ## Examples
 
@@ -26,4 +27,10 @@ npx frontity dev [options]
 
 ```shell
 npx frontity dev --https --port 3002
+```
+
+- Starts a server in development mode using the folder `assets` as the path for statics
+
+```shell
+npx frontity dev --publicPath="/assets"
 ```
