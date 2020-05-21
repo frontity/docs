@@ -70,9 +70,9 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 ConnectedComponent = connect(Component, options?);
 ```
 
-It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries. Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries. Also, that instance will re-render automatically whenever the value of `state` which the component is using is changed.
+It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries. Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries. Also, that instance will re-render automatically whenever any value from the `state` which the component is using is changed.
 
-If you don't want to inject new props in your components, you can use the `injectProps` option set to `false`. That will make your component reactive to changes in the state but without passing new props. For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
+If you don't want to inject the Frontity state props in your connected components, you can use the `injectProps` option set to `false`. Components will still be reactive to changes in the state but without reciving more props. For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
 
 **Arguments**
 
