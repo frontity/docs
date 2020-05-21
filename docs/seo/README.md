@@ -2,12 +2,14 @@
 
 Frontity allows you to optimize the SEO performance of your site and customize how your site is indexed by search engine crawlers. 
 
-By default, Frontity will deliver to your browser a fully populated and well-formed HTML file generated from your React code.
+By default, Frontity will deliver to your browser a fully populated and well-formed [HTML file generated from your React code](../architecture/).
 This reduces the time required for the first contentful paint and ensures a good SEO score.
 
 {% hint style="info" %}
-Read more about Frontity's architecture [here](../architecture/) 
+Have doubts about Frontity & SEO? Come and join us in [the community](https://community.frontity.org/) and ask there!
+Our SEO expert may provide [some advice](https://community.frontity.org/t/deploying-frontity-wordpress-on-the-same-domain/1124/4).
 {% endhint %}
+
 
 But that's not all.
 With Frontity you can also customize:
@@ -34,3 +36,7 @@ A [`robots.txt`](https://support.google.com/webmasters/answer/6062608) file tell
 You can add the `robots.txt` file at the root of your theme (next to the `frontity.settings.js` file) and when you build and deploy your app for production, it will be automatically picked up by the Frontity server and served at `https://your-site-url.xyx/robots.txt`.
 
 You can also [check out our example](https://github.com/frontity/frontity/blob/1460e7c03ce3600f4f8ece0d6cf8fadb2bf9b526/examples/mars-theme-example/robots.txt)  of a theme that is using a `robots.txt` file.
+
+{% hint style="info" %}
+Want to know more about **SEO & Headless WordPress**? Have a look at this [post](https://frontity.org/blog/seo-for-headless-wordpress-themes/) 
+{% endhint %}
