@@ -9,8 +9,8 @@ It is perfect if you are using WordPress for a headless set-up and you would lik
 
 ### Requisites 
 
-This package depends on the [php DOM library](https://www.php.net/manual/en/book.dom.php).
-It looks like not all php servers include it by default, so make sure you have it installed before using this plugin
+This package depends on the [PHP DOM library](https://www.php.net/manual/en/book.dom.php).
+It looks like not all PHP servers include it by default, so make sure you have it installed before using this plugin
 
 > If you get some errors regarding this dependency have a look a this [thread](https://github.com/frontity/wp-plugins/issues/35)
 
@@ -23,7 +23,8 @@ These are the ones that we have tested:
 * **Yoast SEO**
 * **All in One SEO Pack**
 
-Are you using a different SEO plugin and want to know if it's compatible? Feel free to ask in our [community forum.](https://community.frontity.org/) If you tested any other plugin, please let us know as well so we can update the list.
+Are you using a different SEO plugin and want to know if it's compatible?
+Feel free to ask in our [community forum.](https://community.frontity.org/) If you tested any other plugin, please let us know as well so we can update the list.
 
 ## How to use this plugin
 
