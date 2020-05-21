@@ -32,6 +32,7 @@
 * [🏗 Architecture](architecture/README.md)
 * [🌎 Deployment](deployment/README.md)
   * [Deploy Frontity using now \(Vercel\)](deployment/deploy-using-now-vercel.md)
+* [👌 SEO](seo/README.md)
 * [⚙ Frontity Packages](api-reference-1/README.md)
   <!-- textlint-disable terminology -->
   * [frontity](api-reference-1/frontity.md)
