@@ -5,12 +5,6 @@ Frontity allows you to optimize the SEO performance of your site and customize h
 By default, Frontity will deliver to your browser a fully populated and well-formed [HTML file generated from your React code](../architecture/).
 This reduces the time required for the first contentful paint and ensures a good SEO score.
 
-{% hint style="info" %}
-Have doubts about Frontity & SEO? Come and join us in [the community](https://community.frontity.org/) and ask there!
-Our SEO expert may provide [some advice](https://community.frontity.org/t/deploying-frontity-wordpress-on-the-same-domain/1124/4).
-{% endhint %}
-
-
 But that's not all.
 With Frontity you can also customize:
 
@@ -39,4 +33,9 @@ You can also [check out our example](https://github.com/frontity/frontity/blob/1
 
 {% hint style="info" %}
 Want to know more about **SEO & Headless WordPress**? Have a look at this [post](https://frontity.org/blog/seo-for-headless-wordpress-themes/) 
+{% endhint %}
+
+{% hint style="info" %}
+If you have any questions about Frontity & SEO then please come and join us in [the community](https://community.frontity.org/) and ask there!
+Our SEO expert will be able to provide [some advice](https://community.frontity.org/t/deploying-frontity-wordpress-on-the-same-domain/1124/4) to help you improve the SEO of your Frontity site.
 {% endhint %}
