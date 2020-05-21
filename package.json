@@ -93,7 +93,8 @@
       "terminology": {
         "defaultTerms": true,
         "terms": [
-          "Frontity"
+          "Frontity",
+          "PHP"
         ],
         "exclude": [
           "HTTPS"
