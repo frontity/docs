@@ -7,9 +7,10 @@
   },
   "scripts": {
     "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config mlc_config.json ';'",
-    "textlint": "textlint",
-    "textlint:fix": "npm run textlint -- --fix",
-    "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec npm run textlint '{}' ';'"
+    "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint '{}' ';'",
+    "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-terminology '{}' ';'",
+    "textlint:all:rousseau": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-rousseau '{}' ';'",
+    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'"
   },
   "repository": {
     "type": "git",
