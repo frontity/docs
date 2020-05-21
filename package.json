@@ -6,7 +6,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config mlc_config.json ';'"
+    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config mlc_config.json ';'",
+    "textlint": "textlint",
+    "textlint:fix": "npm run textlint -- --fix",
+    "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec npm run textlint '{}' ';'"
   },
   "repository": {
     "type": "git",
