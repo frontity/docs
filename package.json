@@ -5,6 +5,9 @@
   "directories": {
     "doc": "docs"
   },
+  "scripts": {
+    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config mlc_config.json ';'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontity/gitbook-docs.git"
