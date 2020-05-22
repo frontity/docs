@@ -6,10 +6,10 @@ This package is a collection of React hooks that have proven to be pretty useful
 
 ## How to use
 
-In order to use it, you just have to import the hook you want to use in your theme from `@frontity/hooks/` and place it wherever needed. For example, if we want to use the `useInView` hook:
+In order to use it, you just have to import the hook you want to use in your theme from `@frontity/hooks` and place it wherever needed. For example, if we want to use the `useInView` hook:
 
 ```javascript
-import useInView from "@frontity/hooks/useInView";
+import useInView from "@frontity/hooks/use-in-view";
 ```
 
 ## Hooks
@@ -44,7 +44,7 @@ An object with the following properties:
 #### Usage
 
 ```javascript
-import useInView from "@frontity/hooks/useInView";
+import useInView from "@frontity/hooks/use-in-view";
 
 const MyLazyElement = ({ children }) => {
   // Get the reference and the visibility status.
