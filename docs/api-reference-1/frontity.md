@@ -103,7 +103,7 @@ Default is `true`
 ```jsx
 import React from "react";
 import { connect } from "connect";
-import { Loading, List, Post, Page404 } from "./components";
+import { Loading, List, Post, PageError } from "./components";
 
 const Page = ({ state }) => {
   // The next line will trigger a re-render whenever
@@ -111,12 +111,12 @@ const Page = ({ state }) => {
   const data = state.source.get(state.router.link);
 
   return (
-    <>
-      {(data.isFetching && <Loading />) ||
-        (data.isArchive && <List />) ||
-        (data.isPostType && <Post />) ||
-        (data.is404 && <Page404 />)}
-    </>
+    <Switch>
+      <Loading when={data.isFetching} />
+      <List when={data.isArchive} />
+      <Post when={data.isPostType} />
+      <PageError when={data.isError} />
+    </Switch>
   );
 };
 
