@@ -59,4 +59,7 @@
 - [💻 Key Concepts](resources/README.md)
   - [JavaScript](resources/javascript-basics.md)
   - [React](resources/react-basic.md)
-- [🤔 FAQ](faq/README.md)
+    <<<<<<< HEAD
+- # [🤔 FAQ](faq/README.md)
+- [🤔 FAQ](faq.md)
+  > > > > > > > origin/code
