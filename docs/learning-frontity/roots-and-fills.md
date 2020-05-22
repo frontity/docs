@@ -11,20 +11,23 @@ Each package has the opportunity to include any number of React nodes in the fin
 We finished the [Packages](packages.md) section with an example of package export that contained a `root` like this:
 
 {% code title="/packages/my-awesome-theme/src/index.js" %}
+
 ```javascript
 import MyAwesomeTheme from "./components";
 
 export default {
   roots: {
-    theme: MyAwesomeTheme
+    theme: MyAwesomeTheme,
   },
-}
+};
 ```
+
 {% endcode %}
 
 Usually, a React app injects it's code in a `<div>` of the body, like this:
 
-{% code title="/index.html \(rendered by Frontity\)" %}
+{% code title="/index.HTML (rendered by Frontity)" %}
+
 ```markup
 <html>
   <head>...</head>
@@ -35,11 +38,13 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
   </body>
 </html>
 ```
+
 {% endcode %}
 
 **Frontity** uses that `<div id="root">` to inject the roots of all the packages that are installed:
 
-{% code title="/index.html \(rendered by Frontity\)" %}
+{% code title="/index.HTML (rendered by Frontity)" %}
+
 ```jsx
 <html>
   <head>...</head>
@@ -52,26 +57,31 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
   </body>
 </html>
 ```
+
 {% endcode %}
 
-Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it also. For example, let's imagine a _ShareModal_ package that has a modal like this:
+Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it also.
+For example, let's imagine a _ShareModal_ package that has a modal like this:
 
 ![](../.gitbook/assets/blog-frontity-org%20%281%29.jpg)
 
-This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme. The **root** could be something like this:
+This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme.
+
+The **root** could be something like this:
 
 {% code title="/packages/my-share-modal-package/src/components/index.js" %}
+
 ```jsx
-const ShareRoot = ({ state }) => (
-  state.share.isModalOpen && <ShareModal />
-); 
+const ShareRoot = ({ state }) => state.share.isModalOpen && <ShareModal />;
 export default ShareRoot;
 ```
+
 {% endcode %}
 
 And the rest of the package something like this:
 
 {% code title="/packages/my-share-modal-package/src/index.js" %}
+
 ```javascript
 import ShareRoot from "./components/";
 
@@ -91,16 +101,18 @@ export default {
             },
             closeModal: ({ state }) => {
                 state.share.isModalOpen = false;
-            } 
+            }
         }
     }
 }
 ```
+
 {% endcode %}
 
-Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if there is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
+Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if there is, use its `actions.share.openModal()` action when appropriate.
+For example in these buttons:
 
-![](../.gitbook/assets/blog%20%282%29.jpg)
+![](../.gitbook/assets/blog%20%281%29.jpg)
 
 I hope you're starting to see how extensibility works in **Frontity**, but don't worry too much now, we'll talk in more detail later.
 
@@ -118,13 +130,16 @@ const MyPackage = () => (
 );
 ```
 
-So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page](head.md).
+So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`.
+
+For a more detailed explanation you can check [Head page](head.md).
 
 ## Fills
 
-**Frontity** uses an extensibility pattern called **Slot and Fill** to extend your themes. It works like this:
+**Frontity** uses an extensibility pattern called **Slot and Fill** to extend your themes.
+It works like this:
 
-1. In your theme, you include **Slots** where other packages can place content.
+1. In your theme, you include **Slots** where other packages can place content
 
 ```jsx
 import { Slot } from "frontity";
@@ -138,7 +153,7 @@ const Menu = () => (
 );
 ```
 
-1. In your packages, export **Fills** to fill up those spaces:
+2. In your packages, export **Fills** to fill up those spaces:
 
 ```jsx
 import { Fill } from "frontity";
@@ -146,33 +161,36 @@ import { Fill } from "frontity";
 const AdSenseFills = () => (
   <>
     <Fill name="before menu">
-      <AdSense slot="1234" />    
+      <AdSense slot="1234" />
     </Fill>
 
     <Fill name="after menu">
-      <AdSense slot="5678" />    
+      <AdSense slot="5678" />
     </Fill>
   </>
-  );
+);
 ```
 
 Finally, export the **Fills** in your package export like this:
 
 {% code title="/packages/my-adsense-ads/src/index.js" %}
+
 ```javascript
 import AdSenseFills from "./components/fills";
 
 export default {
   fills: {
-    adsense: <AdSenseFills />
+    adsense: <AdSenseFills />,
   },
-}
+};
 ```
+
 {% endcode %}
 
 Frontity will insert them after the **roots** to ensure they work correctly:
 
-{% code title="/index.html \(rendered by Frontity\)" %}
+{% code title="/index.HTML (rendered by Frontity)" %}
+
 ```markup
 <html>
   <head>...</head>
@@ -186,9 +204,52 @@ Frontity will insert them after the **roots** to ensure they work correctly:
   </body>
 </html>
 ```
+
 {% endcode %}
 
-The components `<Slot>` and `<Fill>` know about each other so everything ends up in the correct place once the final HTML is generated :\)
+The components `<Slot>` and `<Fill>` know about each other so everything ends up in the correct place once the final HTML is generated :)
 
-![Fills get inserted where they find a Slot with the same name.](../.gitbook/assets/screen-shot-2019-06-03-at-12.08.01%20%282%29.png)
+![Fills get inserted where they find a Slot with the same name.](../.gitbook/assets/screen-shot-2019-06-03-at-12.08.01.png)
 
+## `useFills` hook
+
+In order to simplify the usage of the Slot and Fill pattern, Frontity also provides a [react hooks](https://reactjs.org/docs/hooks-intro.html) API for creating slot components and "filling" them.
+
+As a Frontity theme creator, you can create **"Slots"** that the users of your theme can later fill in with their own content.
+Here's an example:
+
+Let's say that you want to create a theme where your users can place cat pictures in-between a list of menuItems.
+Your users will put their `Cat` components in the state like:
+
+{% code title="/my-frontity-package/index.js" %}
+
+```js
+export default {
+  name: "my-frontity-package",
+  state: {
+    fills: {
+      // The name of the fill has to be unique!
+      "cat fill 1": {
+        slot: "cat slot",
+        library: "RegularCatComponent",
+        props: {
+          likesBoxes: true,
+        },
+      },
+
+      "cat fill 2": {
+        // This is the same name as for `cat fill 1` because
+        // we can have more than one fill for the same slot!
+        slot: "cat slot",
+        library: "WeirdCatComponent",
+        priority: 20, // Optional, Default priority is 10.
+        props: {
+          likesBoxes: false,
+        },
+      },
+    },
+  },
+};
+```
+
+{% endcode %}
