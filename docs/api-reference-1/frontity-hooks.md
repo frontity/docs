@@ -12,7 +12,8 @@ npm i @frontity/hooks
 
 ## How to use
 
-In order to use it, you just have to import the hook you want to use in your theme from `@frontity/hooks/` and place it wherever needed. For example, if we want to use the `useInView` hook:
+In order to use it, you just have to import the hook you want to use in your theme from `@frontity/hooks/` and place it wherever needed.
+For example, if we want to use the `useInView` hook:
 
 ```javascript
 import useInView from "@frontity/hooks/useInView";
@@ -24,7 +25,8 @@ import useInView from "@frontity/hooks/useInView";
 
 It tracks when an element enters or leaves the viewport.
 
-The hook just wraps the [`react-intersection-observer`](https://github.com/thebuilder/react-intersection-observer) library which uses internally the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) API. As some old browsers don't support it, `useInView` also returns a `supported` prop indicating if it's supported or not.
+The hook just wraps the [`react-intersection-observer`](https://github.com/thebuilder/react-intersection-observer) library which uses internally the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) API.
+As some old browsers don't support it, `useInView` also returns a `supported` prop indicating if it's supported or not.
 
 #### Parameters
 
@@ -78,7 +80,11 @@ const fills = useFills("someNamedSlot");
 
 `Object[]`
 
-A list of objects that you can use to create the fills. The values in those objects will come from the fills defined by the user of the slot in `state.fills`. Mind that a user might define more than one fill for a particular slot. Because of this, we always return a list of slots sorted in **ascending order** by their `priority`. Each object is of structure:
+A list of objects that you can use to create the fills.
+The values in those objects will come from the fills defined by the user of the slot in `state.fills`.
+Mind that a user might define more than one fill for a particular slot.
+Because of this, we always return a list of slots sorted in **ascending order** by their `priority`.
+Each object is of structure:
 
 | Name           | Type           | Description                                                                                                                                                                                                 |
 | -------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
