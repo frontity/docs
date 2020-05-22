@@ -193,30 +193,31 @@ export default connect(Input);
 But if you want to pass down props to a HTML tag, like in this case:
 
 ```jsx
-const Input = ({ state, ...restProps}) => {
+const Input = ({ name, type, ...props }) => {
+   const { state } = useConnect();
    // Do something with `state`.
 
-  return <input {...restProps} />
+  return <input name={name} type={type} {...props} />
 };
 
 export default connect(Input);
 ```
 
-You'll end up passing `actions` and `libraries` as well. 
+You'll end up passing `actions` and `libraries` to `<input>` as well, because they are injected by `connect`.
 
-To avoid this you can use:
-- `{ injectProps: false }` with `connect`
-- `{ state } = useConnect();` to manage the state
+To avoid this you can:
+- Add `{ injectProps: false }` to `connect`.
+- Use `const { state, actions, libraries } = useConnect();`.
 
 ```jsx
 const Input = (props) => {
     const { state } = useConnect();
-   // Do something with `state`.
+   // Do something with `state` (or `actions` and `libraries`).
 
   return <input {...props} />
 };
 
-// In this case, avoid injecting `state`, `actions` and `libraries` so they are not in `...props`.
+// Avoid injecting `state`, `actions` and `libraries` so they are not present in `...props`.
 export default connect(Input, { injectProps: false });
 ```
 
