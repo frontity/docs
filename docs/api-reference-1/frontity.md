@@ -139,9 +139,11 @@ It's a React hook that returns the Frontity state, allowing the component to con
 
 {% hint style="warning" %}
 
-You still need to use `connect` to using `useConnect` properly. By using `connect`:
-- Your components get optimized with _memo_, so they won't re-render whenever a parent component re-renders.
-- Your components get reactive, so they will re-render when the parts of state they use are changed.
+You still need to use `connect` to using `useConnect` properly.
+
+By using `connect`:
+- Your components get optimized with _memo_, so they won't re-render whenever a parent component re-renders
+- Your components get reactive, so they will re-render when the parts of state they use are changed
 
 {% endhint %}
 
@@ -214,8 +216,8 @@ export default connect(Input);
 You'll end up passing `actions` and `libraries` to `<input>` as well, because they are injected by `connect`.
 
 To avoid this you can:
-- Add `{ injectProps: false }` to `connect`.
-- Use `const { state, actions, libraries } = useConnect();`.
+- Add `{ injectProps: false }` to `connect`
+- Use `const { state, actions, libraries } = useConnect();`
 
 ```jsx
 const Input = (props) => {
