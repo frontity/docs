@@ -3,13 +3,13 @@
 Want to see what the community is building with Frontity? Here you have some examples!
 
 {% hint style="info" %}
-If you have created a Frontity site, for a client or just your personal site, help us by sharing it in this [**Showcases section**](https://community.frontity.org/c/showcases/19) so others can learn, get inspired and see what can be accomplished with Frontity. Sometimes, an example is worth a thousand words. :slight\_smile:
+If you have created a Frontity site, for a client or just your personal site, help us by sharing it in this [**Showcases section**](https://community.frontity.org/c/showcases/19) so others can learn, get inspired and see what can be accomplished with Frontity. Sometimes, an example is worth a thousand words. 🙂
 {% endhint %}
 
 ## I’m Oriol
 
 * Site: [https://www.oriol.im/](https://www.oriol.im/)
-* Source: [https://github.com/oegea/oriol-im](https://github.com/oegea/oriol-im)
+* [Source code](https://github.com/oegea/oriol-im)
 
 [![I&#x2019;m Oriol](.gitbook/assets/oriol-showcase.png)](https://www.oriol.im/)
 
@@ -18,7 +18,7 @@ If you have created a Frontity site, for a client or just your personal site, he
 ## Aslan French
 
 * Site: [https://aslanfrench.work/](https://aslanfrench.work/)
-* Source: [https://github.com/jcklpe/desert-jackalope](https://github.com/jcklpe/desert-jackalope)
+* [Source code](https://github.com/jcklpe/desert-jackalope)
 
 [![Aslan French](.gitbook/assets/aslanfrench-showcase.png)](https://aslanfrench.work/)
 
@@ -27,13 +27,19 @@ If you have created a Frontity site, for a client or just your personal site, he
 ## 403page.com
 
 * Site: [https://403page.com/](https://403page.com/)
-* Source: [https://github.com/403pagelabs/403page\_live/tree/master/packages/fourothree](https://github.com/403pagelabs/403page_live/tree/master/packages/fourothree)
+* [Source code](https://github.com/403pagelabs/403page_live/tree/master/packages/fourothree)
 
 [![403page](.gitbook/assets/403page-showcase.png)](https://403page.com/)
 
 > My first Frontity project \(though plenty of Frankensteining different components from Mars and TwentyTwenty\). Just wanted to share it here though it's in a very early version - just super pumped to have a somewhat workable version. [Read more](https://community.frontity.org/t/first-frontity-jobby/1102).
 
-## Fort Studio
+## Színház Online
+
+* Site: https://szinhaz.online/
+
+[![Szinhaz Online](../.gitbook/assets/showcases/szinhazonline-showcase.png)](https://szinhaz.online/
+
+## FORT
 
 * Site: [https://fortstudio.com/](https://fortstudio.com/)
 
@@ -44,7 +50,7 @@ If you have created a Frontity site, for a client or just your personal site, he
 ## Goiblas
 
 * Site: [https://goiblas.com/](https://goiblas.com/)
-* Source: [https://github.com/goiblas/personal-blog](https://github.com/goiblas/personal-blog)
+* [Source code](https://github.com/goiblas/personal-blog)
 
 [![Goiblas](.gitbook/assets/goiblas-showcase.png)](https://goiblas.com/)
 
@@ -61,11 +67,10 @@ If you have created a Frontity site, for a client or just your personal site, he
 ## Primitive Digital
 
 * Site: [https://primitivedigital.co.uk/](https://primitivedigital.co.uk/)
-* Source: [https://github.com/primitiveshaun/primitiveone](https://github.com/primitiveshaun/primitiveone)
+* [Source code](https://github.com/primitiveshaun/primitiveone)
 
 [![Primitive Digital](.gitbook/assets/primitivedigital-showcase.png)](https://primitivedigital.co.uk/)
 
 > I must admit I’m impressed with Frontity, I’ve hit hardly any errors, which for a brand new framework is quite an achievement. [Read more](https://community.frontity.org/t/some-frontity-based-monkey-business/655).
 
 ## [Add your Frontity site](https://community.frontity.org/c/showcases/19)
-
