@@ -12,7 +12,7 @@ Sometimes, an example is worth a thousand words. :slight_smile:
 
 ## [Primitive Digital](https://primitivedigital.co.uk/)
 
-[![Primitive Digital](../.gitbook/assets/showcases/primitivedigital_co_uk.png)](https://primitivedigital.co.uk/)
+[![Primitive Digital](../.gitbook/assets/showcases/primitivedigital-showcase.png)](https://primitivedigital.co.uk/)
 
 {% page-ref page="https://community.frontity.org/t/some-frontity-based-monkey-business/655/13" %}
 
@@ -20,7 +20,7 @@ Sometimes, an example is worth a thousand words. :slight_smile:
 
 ## [Jesus Olazagoitia personal's blog](https://personal-blog.goiblas.now.sh/)
 
-[![Jesus Olazagoitia personal's blog](../.gitbook/assets/showcases/personal-blog_goiblas_now_sh.png)](https://personal-blog.goiblas.now.sh/)
+[![Jesus Olazagoitia personal's blog](../.gitbook/assets/showcases/goiblas-showcase.png)](https://personal-blog.goiblas.now.sh/)
 
 {% page-ref page="https://community.frontity.org/t/personal-blog/360" %}
 
@@ -28,7 +28,7 @@ Sometimes, an example is worth a thousand words. :slight_smile:
 
 ## [Fort Studio](https://fortstudio.com/)
 
-[![Jesus Olazagoitia personal's blog](../.gitbook/assets/showcases/personal-blog_goiblas_now_sh.png)](https://fortstudio.com/)
+[![Jesus Olazagoitia personal's blog](../.gitbook/assets/showcases/fortstudio_showcase.png)](https://fortstudio.com/)
 
 {% page-ref page="https://community.frontity.org/t/i-redid-my-companys-website-in-frontity-here-it-is/1037" %}
 
@@ -36,7 +36,7 @@ Sometimes, an example is worth a thousand words. :slight_smile:
 
 ## [Tus Juegos IO](http://tusjuegos.io/)
 
-[![Tus Juegos IO](../.gitbook/assets/showcases/tusjuegos_io.png)](http://tusjuegos.io/)
+[![Tus Juegos IO](../.gitbook/assets/showcases/tusjuegosio-showcase.png)](http://tusjuegos.io/)
 
 {% page-ref page="https://community.frontity.org/t/frontity-is-more-than-just-blogs/1165" %}
 
@@ -44,7 +44,7 @@ Sometimes, an example is worth a thousand words. :slight_smile:
 
 ## [403Page.com](https://403page.com/)
 
-[![403page.com](../.gitbook/assets/showcases/403page_com.png)](https://403page.com/)
+[![403page.com](../.gitbook/assets/showcases/403page-showcase.png)](https://403page.com/)
 
 {% page-ref page="https://community.frontity.org/t/first-frontity-jobby/1102" %}
 
@@ -52,7 +52,7 @@ Sometimes, an example is worth a thousand words. :slight_smile:
 
 ## [I'm Oriol](https://www.oriol.im/)
 
-[![I'm Oriol](../.gitbook/assets/showcases/oriol_im.png)](https://www.oriol.im/)
+[![I'm Oriol](../.gitbook/assets/showcases/oriol-showcase.png)](https://www.oriol.im/)
 
 {% page-ref page="https://community.frontity.org/t/just-migrated-my-personal-blog-to-frontity/1778" %}
 
@@ -60,7 +60,7 @@ Sometimes, an example is worth a thousand words. :slight_smile:
 
 ## [Aslan French](https://www.jackalope.tech/)
 
-[![Aslan French](../.gitbook/assets/showcases/jackalope_tech.png)](https://www.jackalope.tech/)
+[![Aslan French](../.gitbook/assets/showcases/aslanfrench-showcase.png)](https://www.jackalope.tech/)
 
 {% page-ref page="https://community.frontity.org/t/frontity-blog-portfolio-theme-desert-jackalope/1504/6" %}
 
