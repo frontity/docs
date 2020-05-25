@@ -1,10 +1,13 @@
 # Deploy Frontity using now \(Vercel\)
 
-In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow. It enables developers to host Jamstack websites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
+In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow.
+It enables developers to host Jamstack sites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
 
-We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your website speed.
+We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up.
+It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your site speed.
 
-To be able to deploy with now you need to have a Vercel account. You can [signup here](https://vercel.com/signup).
+To be able to deploy with now you need to have a Vercel account.
+You can [signup here](https://vercel.com/signup).
 
 Once you have an account you have to [login](https://vercel.com/docs/now-cli#commands/login) to Vercel from the terminal
 
@@ -16,7 +19,7 @@ These are the instructions to deploy a Frontity project on Vercel using `now`, o
 
 ### Create a [`now.json`](https://vercel.com/docs/configuration?query=now.json#introduction/configuration-reference)
 
-1. Create this `now.json` file and save it in the r oot your Frontity project.
+1. Create this `now.json` file and save it in the r oot your Frontity project
 
 ```text
 {
@@ -67,9 +70,9 @@ From this deploy example we have got the following URL's:
 
 To deploy your site under a custom domain you have to
 
-* configure your Frontity app to point to that custom domain 
-* configure your custom domain for your project in the Vercel settings
-* add Vercel nameservers for your custom domain from your domain provider 
+* Configure your Frontity app to point to that custom domain 
+* Configure your custom domain for your project in the Vercel settings
+* Add Vercel nameservers for your custom domain from your domain provider 
 
 ...before deploying it
 
@@ -113,6 +116,7 @@ This will create a deploy and assign it to your real site url.
 ```
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+Still have questions?
+Ask [the community](https://community.frontity.org/)!
+We are here to help 😊
 {% endhint %}
-
