@@ -1,4 +1,4 @@
-# frontity
+# `frontity`
 
 ## Overview
 
@@ -12,9 +12,11 @@ import { connect, styled, Head, ... } from "frontity";
 
 ### React
 
-Use **`connect`** to inject `state`, `actions` and `libraries` in your React components. If you are familiar with React hooks, you can use also **`useConnect`** to do the same.
+Use **`connect`** to inject `state`, `actions` and `libraries` in your React components.
+If you are familiar with React hooks, you can use also **`useConnect`** to do the same.
 
-Use the **`Head`**component whenever you want to add HTML tags inside the `<head>` of any of your site's pages. You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
+Use the **`Head`** component whenever you want to add HTML tags inside the `<head>` of any of your site's pages.
+You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
 
 #### **API reference:**
 
@@ -22,22 +24,26 @@ Use the **`Head`**component whenever you want to add HTML tags inside the `<head
 - [useConnect](frontity.md#useConnect)
 - [Head](frontity.md#head)
 
-### CSS-in-JS
+### CSS in JS
 
-**`styled`**creates new React components from HTML tags, or other React components, with styles attached to them. **`css`** lets you to add inline styles to an element if you don't want to create a new component. If you want to add styles for the whole app, use **`Global`**. And **`keyframes`** is used to define and use animations in your CSS.
+**`styled`** creates new React components from HTML tags, or other React components, with styles attached to them.
+**`css`** lets you to add inline styles to an element if you don't want to create a new component.
+If you want to add styles for the whole app, use **`Global`**.
+And **`keyframes`** is used to define and use animations in your CSS.
 
 You can read more in the [Styles](../learning-frontity/styles.md) page of our **Learning Frontity** section.
 
 #### **API reference:**
 
 - [styled](frontity.md#styled)
-- [css](frontity.md#css)
+- [CSS](frontity.md#css)
 - [Global](frontity.md#global)
 - [keyframes](frontity.md#keyframes)
 
 ### Code Splitting
 
-Use **`loadable`** in order to separate you code into different bundles that will be dynamically loaded at runtime. This helps you to reduce your page size.
+Use **`loadable`** in order to separate you code into different bundles that will be dynamically loaded at runtime.
+This helps you to reduce your page size.
 
 You can read more in the [Code Splitting](../learning-frontity/code-splitting.md) page of our **Learning Frontity** section.
 
@@ -60,7 +66,7 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 
 - [decode](frontity.md#decode)
 
-## Api Reference
+## API Reference
 
 ### `connect`
 
@@ -70,19 +76,25 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 ConnectedComponent = connect(Component, options?);
 ```
 
-It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries. Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries. Also, that instance will re-render automatically whenever any value from the `state` which the component is using is changed.
+It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries.
+Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries.
+Also, that instance will re-render automatically whenever any value from the `state` which the component is using is changed.
 
-If you don't want to inject the Frontity state props in your connected components, you can use the `injectProps` option set to `false`. Components will still be reactive to changes in the state but without receiving more props. For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
+If you don't want to inject the Frontity state props in your connected components, you can use the `injectProps` option set to `false`.
+Components will still be reactive to changes in the state but without receiving more props.
+For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
 
 **Arguments**
 
-- `Component`: a React component.
+- `Component`: a React component
 - `options` (optional): object with the following properties:
-  - `injectProps`: Boolean. If `false`, the `state`, `actions` and `libraries` won't be passed as props to the component. Default is `true`.
+  - `injectProps`: Boolean.
+If `false`, the `state`, `actions` and `libraries` won't be passed as props to the component.
+Default is `true`
 
 #### Return value
 
-- The same component as passed in as the first argument but connected to the Frontity state.
+- The same component as passed in as the first argument but connected to the Frontity state
 
 #### Example
 
@@ -91,7 +103,7 @@ If you don't want to inject the Frontity state props in your connected component
 ```jsx
 import React from "react";
 import { connect } from "connect";
-import { Loading, List, Post, Page404 } from "./components";
+import { Loading, List, Post, PageError } from "./components";
 
 const Page = ({ state }) => {
   // The next line will trigger a re-render whenever
@@ -99,12 +111,12 @@ const Page = ({ state }) => {
   const data = state.source.get(state.router.link);
 
   return (
-    <>
-      {(data.isFetching && <Loading />) ||
-        (data.isArchive && <List />) ||
-        (data.isPostType && <Post />) ||
-        (data.is404 && <Page404 />)}
-    </>
+    <Switch>
+      <Loading when={data.isFetching} />
+      <List when={data.isArchive} />
+      <Post when={data.isPostType} />
+      <PageError when={data.isError} />
+    </Switch>
   );
 };
 
@@ -124,11 +136,20 @@ const { state, actions, libraries } = useConnect();
 
 It's a React hook that returns the Frontity state, allowing the component to consume `state`, `actions` and `libraries` in components without passing them as props.
 
-Note that `useConnect` must be used inside components connected to Frontity using [`connect`](frontity.md#connect) with the `injectProps` option set to `false`.
+
+{% hint style="warning" %}
+
+You still need to use `connect` when using `useConnect` properly.
+
+By using `connect`:
+- Your components get optimized with _memo_, so they won't re-render whenever a parent component re-renders
+- Your components get reactive, so they will re-render when the parts of state they use are changed
+
+{% endhint %}
 
 #### Return value
 
-- The Frontity state (`state`, `actions` and `libraries`).
+- The Frontity state (`state`, `actions` and `libraries`)
 
 #### Example
 
@@ -137,7 +158,7 @@ Note that `useConnect` must be used inside components connected to Frontity usin
 ```jsx
 import React from "react";
 import { connect, useConnect } from "connect";
-import { Loading, List, Post, Page404 } from "./components";
+import { Loading, List, Post, PageError } from "./components";
 
 const Page = () => {
   // Get state using useConnect hook.
@@ -148,20 +169,68 @@ const Page = () => {
   const data = state.source.get(state.router.link);
 
   return (
-    <>
-      {(data.isFetching && <Loading />) ||
-        (data.isArchive && <List />) ||
-        (data.isPostType && <Post />) ||
-        (data.is404 && <Page404 />)}
-    </>
+    <Switch>
+      <Loading when={data.isFetching} />
+      <List when={data.isArchive} />
+      <Post when={data.isPostType} />
+      <PageError when={data.isError} />
+    </Switch>
   );
 };
 
-// Connect Page to the Frontity state, without injecting props.
-export default connect(Page, { injectProps: false });
+// Connect Page to the Frontity state.
+export default connect(Page);
 ```
 
 {% endcode %}
+
+#### Use Case of `{ injectProps: false }` with `connect`
+
+Most of the times you'll use `useConnect` in this way:
+
+```jsx
+const Input = ({ name, type }) => {
+    const { state } = useConnect();
+   // Do something with `state`.
+
+  return <input name={name} type={type} />
+};
+
+export default connect(Input);
+```
+
+
+But if you want to pass down props to a HTML tag, like in this case:
+
+```jsx
+const Input = ({ name, type, ...props }) => {
+   const { state } = useConnect();
+   // Do something with `state`.
+
+  return <input name={name} type={type} {...props} />
+};
+
+export default connect(Input);
+```
+
+You'll end up passing `actions` and `libraries` to `<input>` as well, because they are injected by `connect`.
+
+To avoid this you can:
+- Add `{ injectProps: false }` to `connect`
+- Use `const { state, actions, libraries } = useConnect();`
+
+```jsx
+const Input = (props) => {
+    const { state } = useConnect();
+   // Do something with `state` (or `actions` and `libraries`).
+
+  return <input {...props} />
+};
+
+// Avoid injecting `state`, `actions` and `libraries` so they are not present in `...props`.
+export default connect(Input, { injectProps: false });
+```
+
 
 ### `styled`
 
@@ -179,15 +248,18 @@ const StyledComponent = styled(Component)`
 `;
 ```
 
-It's a function that receives an HTML tag or a React component as argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates). Inside, you write the CSS code for your component. The tag function returns a styled component with the CSS you wrote. Also, `styled` has built-in tag functions for every HTML tag so in those cases it is not necessary to call `styled` directly.
+It's a function that receives an HTML tag or a React component as argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
+Inside, you write the CSS code for your component.
+The tag function returns a styled component with the CSS you wrote.
+Also, `styled` has built-in tag functions for every HTML tag so in those cases it is not necessary to call `styled` directly.
 
 #### Arguments
 
-- A template literal containing CSS code.
+- A template literal containing CSS code
 
 #### Return value
 
-- A React component with the styles defined.
+- A React component with the styles defined
 
 #### Example
 
@@ -221,15 +293,16 @@ const styleObject = css`
 `;
 ```
 
-It's a tagged template literal to add inline style to React Components. The usage is quite similar to **`styled`** except that **`css`** doesn't return a React Component but a special object that can be passed to a component through the **`css`** prop.
+It's a tagged template literal to add inline style to React Components.
+The usage is quite similar to **`styled`** except that **`css`** doesn't return a React Component but a special object that can be passed to a component through the **`css`** prop.
 
 #### Arguments
 
-- A template literal containing CSS code.
+- A template literal containing CSS code
 
 #### Return value
 
-- A style object to be passed to a **`css`** prop or to the **`<Global>`**'s **`styles`** prop.
+- A style object to be passed to a **`css`** prop or to the **`<Global>`**'s **`styles`** prop
 
 #### Example
 
@@ -258,7 +331,10 @@ const Component = () => (
 It's a React component that creates global styles for the whole Frontity site.
 
 {% hint style="warning" %}
-**Using `<Global>` for other than html tags is not recommended** because Frontity is not able to optimize it. That means you can use it for tags like `html`, `body` , `a`, `img`, and so on... but **avoid it for classes**. Use either the css prop or styled components instead.
+**Using `<Global>` for other than HTML tags is not recommended** because Frontity is not able to optimize it.
+That means you can use it for tags like `html`, `body` , `a`, `img`, and so on...
+But **avoid it for classes**.
+Use either the CSS prop or styled-components instead.
 {% endhint %}
 
 #### Props
@@ -299,11 +375,11 @@ It's a function used to define and use animations in your CSS.
 
 #### Arguments
 
-- A template literal containing [CSS @keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) code.
+- A template literal containing [CSS @keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) code
 
 #### Return value
 
-- An animation object to be used inside a template literal passed to [`styled`](frontity.md#styled) or [`css`](frontity.md#css).
+- An animation object to be used inside a template literal passed to [`styled`](frontity.md#styled) or [`css`](frontity.md#css)
 
 #### Example
 
@@ -337,18 +413,20 @@ const Component = () => <Button>Styling my theme</Button>;
 const HeavyComponent = loadable(importFunction, options);
 ```
 
-It's a function that loads a component asynchronously generating a different bundle for it. Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/), in case you want to check its docs. You can also take a look at the [Code Splitting](../learning-frontity/code-splitting.md) page inside the Learning Frontity section.
+It's a function that loads a component asynchronously generating a different bundle for it.
+Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/), in case you want to check its docs.
+You can also take a look at the [Code Splitting](../learning-frontity/code-splitting.md) page inside the Learning Frontity section.
 
 #### Arguments
 
-- **`importFunction`**: a function that executes a [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Import) and returns a `Promise` that will contain the imported module.
+- **`importFunction`**: a function that executes a [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Import) and returns a `Promise` that will contain the imported module
 - **`options`**: an object with any of the following properties:
-  - `fallback`: component displayed until the `Promise` resolves.
-  - `ssr`: if `false`, it will not be processed server-side \(default to `true`\).
+  - `fallback`: component displayed until the `Promise` resolves
+  - `ssr`: if `false`, it will not be processed server-side \(default to `true`\)
 
 #### Return value
 
-- A React component.
+- A React component
 
 #### Example
 
@@ -377,11 +455,13 @@ export default connect(Post);
 <Head>{children}</Head>
 ```
 
-It's a React component that injects their children in the HTML `<head>` tag. It allows you to change the title while navigating, add meta tags, scripts, etc. As we use `react-helmet` under the hood, you may check its [reference guide](https://github.com/nfl/react-helmet#reference-guide).
+It's a React component that injects their children in the HTML `<head>` tag.
+It allows you to change the title while navigating, add meta tags, scripts, etc.
+As we use `react-helmet` under the hood, you may check its [reference guide](https://github.com/nfl/react-helmet#reference-guide).
 
 #### Props
 
-- **`children`**: the HTML tags you want to appear inside `<head>`.
+- **`children`**: the HTML tags you want to appear inside `<head>`
 
 #### Example
 
@@ -406,16 +486,17 @@ const Theme = () => (
 const fetchResponsePromise = fetch(resource, init);
 ```
 
-It's a function with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for fetching a resource from the network. This function is safe to use both server and client side, but you have to import it first.
+It's a function with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for fetching a resource from the network.
+This function is safe to use both server and client side, but you have to import it first.
 
 #### Arguments
 
-- **`resource`**: a string containing the direct URL of the resource you want to fetch.
-- **`init`**: an options object containing any custom settings that you want to apply to the request \(go to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) for the complete list of available settings\).
+- **`resource`**: a string containing the direct URL of the resource you want to fetch
+- **`init`**: an options object containing any custom settings that you want to apply to the request \(go to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) for the complete list of available settings\)
 
 #### Return value
 
-- A `Promise` that resolves to a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object.
+- A `Promise` that resolves to a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object
 
 #### Example
 
@@ -437,16 +518,18 @@ const getFromSomeAPI = async (resource) => {
 const url = new URL(url, base);
 ```
 
-It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)objects. This constructor is safe to use both server and client side, but you have to import it first.
+It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)objects.
+This constructor is safe to use both server and client side, but you have to import it first.
 
 #### Arguments
 
-- **`url`**: a string representing an absolute or relative URL. If `url` is a relative URL, `base` is required.
-- **`base`**: a string representing the base URL to use in case `url` is a relative URL.
+- **`url`**: a string representing an absolute or relative URL.
+If `url` is a relative URL, `base` is required
+- **`base`**: a string representing the base URL to use in case `url` is a relative URL
 
 #### Return value
 
-- A [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)object.
+- A [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)object
 
 #### Example
 
@@ -461,7 +544,8 @@ const getApiPathname = ({ state }) => {
 
 ### `decode`
 
-An entity decoder that decodes HTML numeric entities and [XML named entities](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references). It works both in the server and the client and it's optimized to be both lightweight and performant.
+An entity decoder that decodes HTML numeric entities and [XML named entities](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+It works both in the server and the client and it's optimized to be both lightweight and performant.
 
 #### Syntax
 
@@ -471,7 +555,7 @@ const decodedText = decode(text);
 
 #### Arguments
 
-- **`text`**: a string representing the html to be escaped.
+- **`text`**: a string representing the HTML to be escaped
 
 #### Return value
 
