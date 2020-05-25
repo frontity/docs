@@ -28,7 +28,7 @@ packages: [
 ```
 
 {% hint style="warning" %}
-If you have an existing project make sure your [@frontity/wp-source]() package is at least on the 1.5.0 version. If not, update it using this command:  
+If you have an existing project make sure your [@frontity/wp-source](frontity-head-tags.md) package is at least on the 1.5.0 version. If not, update it using this command:  
 `> npm install @frontity/wp-source@latest`
 {% endhint %}
 

@@ -1,8 +1,8 @@
-# `subscribe`
+# subscribe
 
 Suscribe to Frontity newsleter.
 
-```shell
+```text
 npx frontity subscribe [options] [email]
 ```
 
@@ -10,9 +10,10 @@ npx frontity subscribe [options] [email]
 
 ### **`[options]`**
 
-|            Option            | Description                                                                                                                                  |
-| :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-h`, `--help`  | Output usage information                                                                                                             |
+| Option | Description |
+| :---: | :--- |
+| `-h`, `--help` | Output usage information |
+
 ### **`[email]`**
 
 The Frontity newsletter will be sent to this _email_

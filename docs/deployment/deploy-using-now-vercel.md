@@ -1,13 +1,10 @@
 # Deploy Frontity using now \(Vercel\)
 
-In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow.
-It enables developers to host Jamstack sites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
+In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow. It enables developers to host Jamstack sites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
 
-We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up.
-It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your site speed.
+We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your site speed.
 
-To be able to deploy with now you need to have a Vercel account.
-You can [signup here](https://vercel.com/signup).
+To be able to deploy with now you need to have a Vercel account. You can [signup here](https://vercel.com/signup).
 
 Once you have an account you have to [login](https://vercel.com/docs/now-cli#commands/login) to Vercel from the terminal
 
@@ -80,7 +77,7 @@ To deploy your site under a custom domain you have to
 
 From the project settings URL provided in our previous deploy \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings) in our example\) we can set a custom domain
 
-![](../.gitbook/assets/now-projects-settings.png)
+![](../.gitbook/assets/now-projects-settings%20%281%29.png)
 
 Add it, and you will be provided by a [set a nameservers](https://vercel.com/docs/v2/custom-domains#step-4:-configuring-the-domain) you can use in your domain provider to point your custom domain to the Vercel nameservers
 
@@ -116,7 +113,6 @@ This will create a deploy and assign it to your real site url.
 ```
 
 {% hint style="info" %}
-Still have questions?
-Ask [the community](https://community.frontity.org/)!
-We are here to help 😊
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
+

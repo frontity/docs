@@ -6,18 +6,13 @@ This is where the fun begins. 🙌
 
 ## Edit the starter theme
 
-With Frontity you won't have your site code in the root folder as you would with `gatsbyjs` or `next.js`.
-Instead you work with Frontity packages and in order to personalize your site you'll edit a theme package.
+With Frontity you won't have your site code in the root folder as you would with `gatsbyjs` or `next.js`. Instead you work with Frontity packages and in order to personalize your site you'll edit a theme package.
 
-If you're just starting out with Frontity then the theme you should have selected when you ran `npx frontity create` will be `@frontity/mars-theme`.
-You can find it in `packages/mars-theme/`.
-Go ahead and edit any of its files while running Frontity and the site will refresh automatically.
+If you're just starting out with Frontity then the theme you should have selected when you ran `npx frontity create` will be `@frontity/mars-theme`. You can find it in `packages/mars-theme/`. Go ahead and edit any of its files while running Frontity and the site will refresh automatically.
 
 Move onto the [**Learning Frontity**](../learning-frontity/) section to dig in to the details of Frontity and how you can work with it.
 
-> `npx frontity create` will install the `mars-theme` in `packages/` so the theme can be edited by the developer.
-However, this theme doesn't need to reside in `packages/` if you don't want to edit it.
-It can be installed directly with `npm` inside `node_modules/` and it will work exactly the same.
+> `npx frontity create` will install the `mars-theme` in `packages/` so the theme can be edited by the developer. However, this theme doesn't need to reside in `packages/` if you don't want to edit it. It can be installed directly with `npm` inside `node_modules/` and it will work exactly the same.
 
 ## Production mode
 
@@ -29,8 +24,7 @@ npx frontity build
 
 To create a production-ready bundle.
 
-It will create a `/build` folder with a `server.js` file and a `/static` folder with all your JavaScript files and other assets.
-You can either
+It will create a `/build` folder with a `server.js` file and a `/static` folder with all your JavaScript files and other assets. You can either
 
 * Use `npx frontity serve` to run it like a normal Node.js app
 * Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](../deployment/deploy-using-now-vercel.md) or [Netlify](https://www.netlify.com/?ref=frontity)
@@ -38,8 +32,6 @@ You can either
 For more info on deploying your site please refer to the [Deployment](../deployment/) section.
 
 {% hint style="info" %}
-Still have questions?
-Come and join us in [the community](https://community.frontity.org/) and ask there!
-We are here to help 😊
+Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
 {% endhint %}
 

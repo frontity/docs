@@ -35,7 +35,7 @@ Like actions, libraries can be used either by their own packages or by other pac
 
 ## Array of processors from html2react
 
-Another example is the array of processors from [html2react](../api-reference-1/frontity-html2react.md). There are some processors defined by default, but you can also add any processor you want, and it will be executed without additional code being needed.
+Another example is the array of processors from [html2react](). There are some processors defined by default, but you can also add any processor you want, and it will be executed without additional code being needed.
 
 For example, there is a processor for images where each time it finds an `<img>` tag, it transforms it to an `<Image />` component with some props and functionalities added to it.
 

@@ -173,5 +173,5 @@ It changes `state.theme.isSearchModalOpen` to `false`, so it closes the search b
 
 ### Libraries
 
-This theme doesn't have its own libraries, but it includes the image processor of [@frontity/html2react](../api-reference-1/frontity-html2react.md), so all the `<img>` tags are converted into the [`<Image />` component](../api-reference-1/frontity-components.md#image).
+This theme doesn't have its own libraries, but it includes the image processor of [@frontity/html2react](), so all the `<img>` tags are converted into the [`<Image />` component]().
 

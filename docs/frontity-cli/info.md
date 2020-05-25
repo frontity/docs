@@ -1,8 +1,8 @@
-# `info`
+# info
 
 Get environment information for debugging and issue reporting.
 
-```shell
+```text
 npx frontity info [options]
 ```
 
@@ -10,16 +10,17 @@ npx frontity info [options]
 
 ### **`[options]`**
 
-|            Option            | Description                                                                                                                                  |
-| :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-h`, `--help`  | Output usage information                                                                                                             
+| Option | Description |
+| :---: | :--- |
+| `-h`, `--help` | Output usage information |
+
 ## Examples
 
-- Display info about my specific environment
+* Display info about my specific environment
 
-> When we ask in the [community forum](https://community.frontity.org/) about some issue we're having in development mode, it is very helpful to add this info to the post (so the community can check things like OS, Node version and so on)
+> When we ask in the [community forum](https://community.frontity.org/) about some issue we're having in development mode, it is very helpful to add this info to the post \(so the community can check things like OS, Node version and so on\)
 
-```shell
+```text
 > npx frontity info
 ...
 
@@ -44,3 +45,4 @@ npx frontity info [options]
   System info copied in the clipboard!
   You can now paste it in the Frontity Community or GitHub issue.
 ```
+
