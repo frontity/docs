@@ -85,12 +85,6 @@
         ],
         "severity": "warning"
       },
-      "spelling": {
-        "language": "en-au",
-        "wordDefinitionRegexp": "/[\\w']+/g",
-        "suggestCorrections": true,
-        "severity": "warning"
-      },
       "terminology": {
         "defaultTerms": true,
         "terms": [
