@@ -139,7 +139,7 @@ It's a React hook that returns the Frontity state, allowing the component to con
 
 {% hint style="warning" %}
 
-You still need to use `connect` to using `useConnect` properly.
+You still need to use `connect` when using `useConnect` properly.
 
 By using `connect`:
 - Your components get optimized with _memo_, so they won't re-render whenever a parent component re-renders
