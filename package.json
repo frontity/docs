@@ -54,17 +54,10 @@
         "allow": [],
         "severity": "warning"
       },
-      "common-misspellings": {
-        "ignore": [],
-        "severity": "warning"
-      },
       "en-capitalization": {
         "severity": "warning"
       },
       "no-empty-section": {
-        "severity": "warning"
-      },
-      "no-exclamation-question-mark": {
         "severity": "warning"
       },
       "one-sentence-per-line": {
@@ -89,7 +82,9 @@
         "defaultTerms": true,
         "terms": [
           "Frontity",
-          "PHP"
+          "PHP",
+          "Vercel",
+          ["zeit", "Vercel"]
         ],
         "exclude": [
           "HTTPS"
