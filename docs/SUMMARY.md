@@ -5,6 +5,7 @@
   * [Frontity features](about/frontity-features.md)
   * [Browser support](about/browser-support.md)
   * [Get involved](about/get-involved.md)
+* [🎤 Showcases](showcases/README.md)
 * [🚀 Getting started](getting-started/README.md)
   * [Quick start guide](getting-started/quick-start-guide.md)
   * [Connect Frontity to Your WordPress Site](getting-started/connecting-to-wordpress.md)
