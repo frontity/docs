@@ -29,14 +29,14 @@ So, if you do:
 npx frontity dev --production
 ```
 
-The webpack bundler internally will:
+The webpack bundler internally will do things like..
 
 - Enable certain webpack-specific optimizations and minify the code
 - Also disable hot-module reloading (HMR)
 - Not create source maps
-- Append hashes to filenames so for caching purposes (more info on the how create-react-app does it)
+- Append hashes to filenames so for caching purposes
 
-Normally, you would always use the development server in development mode, but sometimes you may want to check that everything works in production mode, or check the bundle analyzer (the files at `/build/analyze`) for the production bundle. You can do so by using `npx frontity dev --production`
+Normally, you would always use the development server in development mode, but sometimes you may want to check that everything works in production mode, or check the bundle analyzer (the files at `/build/analyze`) for the production bundle.
 
 ## Examples
 
