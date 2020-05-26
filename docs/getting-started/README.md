@@ -12,7 +12,7 @@ To get started with Frontity you will need:
 
   However, when you spin up your first Frontity project you will initially be connected to our test site so you won't be without content when you first try Frontity
 
-* **Node.js installed in your computer** - If you don't already have it you can get **Node.js** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node.
+* **Node.js installed in your computer** - If you don't already have it you can get **Node.js** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node.js.
 
   You will use these to run Frontity commands during the set-up and development of your project
 

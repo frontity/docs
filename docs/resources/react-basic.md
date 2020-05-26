@@ -26,7 +26,7 @@ JSX \(JavaScript XML\) is an extension to the JavaScript language syntax. This a
 * You **can't use the word `class`** to define HTML classes, as it is reserved for JavaScript. Instead, you have to use **`className`**.
 * The naming convention for **all HTML attributes and event references in JSX is camelCase**. For example, a click event in JSX is onClick, instead of onclick.
 
-Here you have an example of a React element using a Javascript variable \(between curly braces\) inside it.
+Here you have an example of a React element using a JavaScript variable \(between curly braces\) inside it.
 
 ```jsx
 const name = 'Jon';
@@ -327,9 +327,9 @@ const items = [
 {items.map(item => <Item key={item.id} item={item} />)}
 ```
 
-Imagine that we reorder the titles and the third object, with id 72, moves to the second place. If we don't define a key, React would interpret that both objects \(ids 45 and 72\) have changed, when they have just reordered, and React would re-render them.
+Imagine that we reorder the titles and the third object, with ID 72, moves to the second place. If we don't define a key, React would interpret that both objects \(IDs 45 and 72\) have changed, when they have just reordered, and React would re-render them.
 
-By defining a key with an unique id, React would be able to understand that the title of id 45 is still the same, as well as id 72, and they have just reordered. This may not seem useful, but if you are working with big objects, it can save a lot of resources.
+By defining a key with an unique id, React would be able to understand that the title of ID 45 is still the same, as well as ID 72, and they have just reordered. This may not seem useful, but if you are working with big objects, it can save a lot of resources.
 
 This is just an example of why it is important to assign keys properly to arrays. To learn more you can visit [React docs](https://reactjs.org/docs/lists-and-keys.html).
 

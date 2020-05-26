@@ -17,6 +17,6 @@ jobs:
       with:
         use-quiet-mode: 'yes'
         use-verbose-mode: 'yes'
-        config-file: 'mlc_config.json'
+        config-file: 'config/mlc.config.json'
         folder-path: 'docs'
         max-depth: 2

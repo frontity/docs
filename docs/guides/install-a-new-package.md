@@ -6,7 +6,7 @@ During the development of your project, you may want to install new Frontity pac
 2. Add it to `frontity.settings.js`.
 
 {% hint style="info" %}
-Please note that this process is only necessary for Frontity packages. If you want to install a npm package you can use the normal `npm install some-package` procedure.
+Please note that this process is only necessary for Frontity packages. If you want to install an npm package you can use the normal `npm install some-package` procedure.
 {% endhint %}
 
 ## 1. Install the package

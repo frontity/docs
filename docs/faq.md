@@ -12,7 +12,7 @@ It is really easy to start using Frontity, you just have to make sure you have N
 
 ## Do I need any specific knowledge or skills to use Frontity?
 
-You need to know how to use WordPress for your content management and some React knowledge for designing your frontend. The rest is already wired up for you: React, webpack, Babel, SSR, Routing, CSS-in-JS, WP REST API, TypeScript, Linting, Testing… This way, you can focus on building your website. 🚀
+You need to know how to use WordPress for your content management and some React knowledge for designing your frontend. The rest is already wired up for you: React, webpack, Babel, SSR, Routing, CSS-in-JS, WP REST API, TypeScript, Linting, Testing… This way, you can focus on building your site. 🚀
 
 ## How can I contribute to the project?
 
