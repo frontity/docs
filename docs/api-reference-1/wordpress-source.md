@@ -31,9 +31,9 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
-#### state.source.api \(required\)
+#### state.source.API \(required\)
 
-The url of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
+The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
 
 #### state.source.subdirectory
 
@@ -49,7 +49,7 @@ This option allows you to show a specific page when accessing the homepage of yo
 You have to configure your WordPress with the same setting.
 {% endhint %}
 
-![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35.png)
+![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35%20%283%29.png)
 
 #### state.source.postsPage
 
@@ -59,7 +59,7 @@ This option allows you to show the posts archive when accessing a specific URL o
 You have to configure your WordPress with the same setting.
 {% endhint %}
 
-![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35.png)
+![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35%20%283%29.png)
 
 #### state.source.categoryBase
 
@@ -114,7 +114,7 @@ This option allows you to show the Custom Post Types you create at WordPress whe
 
 Differentiating `type` and `endpoint` may be confusing as they are usually the same. You can confirm you are doing it correctly going to the CPT `endpoint` :
 
-![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_movies.png)
+![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_movies%20%282%29.png)
 
 So in this case, the settings would be:
 
@@ -139,7 +139,7 @@ Similar to `postTypes`setting, this one allows you to show the lists of posts of
 
 Again, differentiating `taxonomy` and `endpoint`may be confusing as they usually are the same too. You can confirm you are doing it correctly by going to the Custom Taxonomy `endpoint` :
 
-![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_actor.png)
+![](../.gitbook/assets/https___test_frontity_io__rest_route__wp_v2_actor%20%282%29.png)
 
 Note that in this case `taxonomy`and `endpoint`are different. In the next example, we will fetch CPT "movies" instead of "posts", and add some params. It would be something like this:
 

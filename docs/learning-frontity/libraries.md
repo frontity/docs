@@ -29,13 +29,13 @@ const prevPageLink = libraries.source.stringify({
 // Outputs: "/category/nature/page/3"
 ```
 
-As you can see, we are creating two new urls \(one for next posts and other for previous ones\) with the same code. This library accepts more params and you can perform more complex logic, but this is a good example of how to consume libraries and its reusability.
+As you can see, we are creating two new URLs \(one for next posts and other for previous ones\) with the same code. This library accepts more params and you can perform more complex logic, but this is a good example of how to consume libraries and its reusability.
 
 Like actions, libraries can be used either by their own packages or by other packages. For example, although `stringify` is defined inside `wp-source` package, it could also be use by your own theme.
 
 ## Array of processors from html2react
 
-Another example is the array of processors from [html2react](../api-reference-1/frontity-html2react.md). There are some processors defined by default, but you can also add any processor you want, and it will be executed without additional code being needed.
+Another example is the array of processors from [html2react](). There are some processors defined by default, but you can also add any processor you want, and it will be executed without additional code being needed.
 
 For example, there is a processor for images where each time it finds an `<img>` tag, it transforms it to an `<Image />` component with some props and functionalities added to it.
 

@@ -6,7 +6,7 @@ In order to understand how **Frontity** works and be able to modify its files an
 Note this guide's purpose is to give you a better understanding of which JavaScript concepts we use at **Frontity** and a brief explanation of them. If you want a more detailed way of learning JavaScript, you can check other guides like [freeCodeCamp](https://www.freecodecamp.org/) or [w3schools](https://www.w3schools.com/js/default.asp).
 {% endhint %}
 
-* [**Javascript concepts**](javascript-basics.md#javascript-concepts)
+* [**JavaScript concepts**](javascript-basics.md#javascript-concepts)
   * [Comments](javascript-basics.md#comments)
   * [Variables](javascript-basics.md#variables)
   * [Strings](javascript-basics.md#strings)
@@ -19,7 +19,7 @@ Note this guide's purpose is to give you a better understanding of which JavaScr
   * [Switch](javascript-basics.md#switch)
   * [For loops](javascript-basics.md#for-loops)
   * [While loops](javascript-basics.md#while-loops)
-  * [RegExp](javascript-basics.md#regexp)
+  * [Regular expression](javascript-basics.md#regexp)
 * [**ES6 concepts**](javascript-basics.md#es6-concepts)
   * [Variables \(let & const\)](javascript-basics.md#variables-let-and-const)
   * [Arrow functions](javascript-basics.md#arrow-functions)
@@ -260,14 +260,14 @@ do {
 while (condition);
 ```
 
-### Regular Expressions \(RegExp\)
+### Regular Expressions \(Regular expression\)
 
-The Regular Expressions \(RegExp\) are really useful in JavaScript as they let you match a pattern. They can be used, for example, for defining a more complex condition.
+The Regular Expressions \(Regular expression\) are really useful in JavaScript as they let you match a pattern. They can be used, for example, for defining a more complex condition.
 
 They can be overwhelming, so if you are not familiar with them don't worry. We would recommend you try to understand each particular case as you find them in our code and know that they exist as they could be useful in your code. Again, don't worry and just learn the concepts once you need them. This way, you will learn step by step and it will be easier.
 
 {% hint style="info" %}
-To learn the basics and help you understand or create some RegExps, you can use [w3schools guide](https://www.w3schools.com/js/js_regexp.asp), [freeCodeCamp regExp](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions) and also [RegExr](https://regexr.com/) to test them.
+To learn the basics and help you understand or create some RegExps, you can use [w3schools guide](https://www.w3schools.com/js/js_regexp.asp), [freeCodeCamp regular expression](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions) and also [RegExr](https://regexr.com/) to test them.
 {% endhint %}
 
 ## ES6 concepts
@@ -357,7 +357,7 @@ hello(); // It will return "Hi there, nice to meet you".
 
 ### Destructuring assignment
 
-This Javascript expression is used to unpack values from arrays or objects properties. It can seem a bit weird at the beginning, but once you get used to it, it will remove a lot of lines of code from your project.
+This JavaScript expression is used to unpack values from arrays or objects properties. It can seem a bit weird at the beginning, but once you get used to it, it will remove a lot of lines of code from your project.
 
 #### _Object destructuring_
 

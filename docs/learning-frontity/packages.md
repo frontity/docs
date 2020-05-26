@@ -128,7 +128,7 @@ Packages can export any of these elements in their `index.js` file:
 
 * **Roots:** React components that will be included in the app.
 * **Fills**: React components that will be included in the app, but injected after the roots.
-* **State:** A javascript object containing all the state exposed by your package.
+* **State:** A JavaScript object containing all the state exposed by your package.
 * **Actions:** A set of actions that your package needs to work or expose for other packages. 
 * **Libraries:** Any additional tools that your package exposes for other packages.
 

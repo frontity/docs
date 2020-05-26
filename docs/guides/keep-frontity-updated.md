@@ -13,7 +13,7 @@ npx npm-check-updates -u
 npm install
 ```
 
-With this, **you will update your package.json and all your dependencies in `node_modules`**, including the Frontity packages installed in **node\_modules**.
+With this, **you will update your package.json and all your dependencies in `node_modules`**, including the Frontity packages installed in **Node.js\_modules**.
 
 If you want to update just one package you can do it with this other command:
 

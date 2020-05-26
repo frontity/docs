@@ -2,7 +2,7 @@
 
 ## Description
 
-The **Twenty Twenty** default WordPress theme was included in WordPress 5.3 and we ported it over to Frontity so users can use it in a headless setup as well. You can check out its **code** and structure on our [GitHub repo](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme) and find it on [npm](https://www.npmjs.com/package/@frontity/twentytwenty-theme).
+The **Twenty Twenty** default WordPress theme was included in WordPress 5.3 and we ported it over to Frontity so users can use it in a headless setup as well. You can check out its **code** and structure on our [GitHub repository](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme) and find it on [npm](https://www.npmjs.com/package/@frontity/twentytwenty-theme).
 
 These are some of the key features included in this theme:
 
@@ -12,7 +12,7 @@ The theme is accessible and screen-reader friendly. We added the proper landmark
 
 **Custom Colors**
 
-You can give your website or blog a personal touch by changing the background colors, text colors and primary/accent color in the theme settings. You change the color in one place, all visual elements get updated.
+You can give your site or blog a personal touch by changing the background colors, text colors and primary/accent color in the theme settings. You change the color in one place, all visual elements get updated.
 
 **Search**
 
@@ -173,5 +173,5 @@ It changes `state.theme.isSearchModalOpen` to `false`, so it closes the search b
 
 ### Libraries
 
-This theme doesn't have its own libraries, but it includes the image processor of [@frontity/html2react](../api-reference-1/frontity-html2react.md), so all the `<img>` tags are converted into the [`<Image />` component](../api-reference-1/frontity-components.md#image).
+This theme doesn't have its own libraries, but it includes the image processor of [@frontity/html2react](), so all the `<img>` tags are converted into the [`<Image />` component]().
 

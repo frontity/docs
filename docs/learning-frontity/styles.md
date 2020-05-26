@@ -17,7 +17,7 @@ Let's learn some of the CSS in JS concepts to be able to use it with Frontity:
 
 ## Styled
 
-In order to style your app, you will usually create new React components from HTML tags (or even other React components) with new styles attached to them.
+In order to style your app, you will usually create new React components from HTML tags \(or even other React components\) with new styles attached to them.
 To do so, we will import `styled` from `frontity`, and create styled-components.
 
 When styling HTML tags, you just use `styled` followed by the HTML tag, and then a template string with the CSS, like this:
@@ -85,8 +85,9 @@ As you can see, it is really easy to work with, and you are still using common C
 There are some important things to note:
 
 * You can create styled-components from HTML tags or React components, although the syntax is slightly different
-* You can use JavaScript inside the template strings.
-In this case we are using a variable `linkColor` but you can do anything you want
+* You can use JavaScript inside the template strings
+
+  In this case we are using a variable `linkColor` but you can do anything you want
 
 ## The `CSS` prop
 
@@ -130,7 +131,7 @@ React has its own way of adding inline style, using the `style` prop, but **you 
 {% endhint %}
 
 **You should not use `style`!
-**
+** 
 
 ```jsx
 const Page = () => (
@@ -169,7 +170,7 @@ const StyledDiv = styled.div`
 `;
 ```
 
-## &lt;Global&gt;
+## `<Global>`
 
 There will be times when you want to add styles for the whole app.
 For example defining styles for the `h1` , `h2` or `body` tags.
@@ -214,7 +215,8 @@ But **avoid it for classes**.
 Use either the CSS prop or styled-components instead.
 {% endhint %}
 
-**You should not use `<Global>` for classes!**
+**You should not use `<Global>` for classes!
+**
 
 ```jsx
 const Component = () => (
@@ -354,7 +356,7 @@ Frontity is an "opinionated framework" because it comes with its own State Manag
 That's not common among the JS framework space, but it gives Frontity some advantages we deem crucial for its success: all the Frontity packages use the same system for state managing and styling.
 That means things like:
 
-* They are able to communicate between each other. 
+* They are able to communicate between each other 
 * They all use the same modules so the bundle size is not increased when you add a new package
 * We can offer out-of-the-box optimizations other frameworks can't
 
@@ -372,7 +374,9 @@ These are some resource you might find useful to make the transition to CSS-in-J
 
 {% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js " caption="" %}
 
-{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.HTML " caption="" %}
+<!-- textlint-disable terminology -->
+{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html " caption="" %}
+<!-- textlint-enable terminology -->
 
 ### Migrating from Sass to CSS in JS
 
