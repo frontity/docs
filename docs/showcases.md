@@ -1,9 +1,9 @@
 # 🎤 Showcases
 
-Want to see what the community is building with Frontity? Here you have some examples!
+Want to see what the community is building with Frontity? Here are some great examples of Frontity in action!
 
 {% hint style="info" %}
-If you have created a Frontity site, for a client or just your personal site, help us by sharing it in this [**Showcases section**](https://community.frontity.org/c/showcases/19) so others can learn, get inspired and see what can be accomplished with Frontity. Sometimes, an example is worth a thousand words. 🙂
+If you have created a Frontity site, whether for a client or as a personal project, you can help us and the rest of the community by sharing it. Sharing your project in our [**Showcases section**](https://community.frontity.org/c/showcases/19) means that others can learn, get inspired and see what can be accomplished with Frontity. An example is worth a thousand words. 🙂
 {% endhint %}
 
 ## I’m Oriol
