@@ -6,10 +6,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config mlc_config.json ';'",
-    "check-links:quiet": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check -q -v '{}' --config mlc_config.json ';'",
+    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config config/mlc.config.json ';'",
+    "check-links:quiet": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check -q -v '{}' --config config/mlc.config.json ';'",
     "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint '{}' ';'",
-    "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-terminology '{}' ';'",
+    "textlint:all:only-errors": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --quiet '{}' ';'",
+    "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint -c config/terminology.config.json '{}' ';'",
+    "textlint:all:terminology:fix": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --fix -c config/terminology.config.json '{}' ';'",
     "textlint:all:rousseau": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-rousseau '{}' ';'",
     "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'"
   },

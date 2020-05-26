@@ -4,10 +4,10 @@ If you are coming to Frontity from a different background, perhaps from the Word
 
 We have provided the following guides to help get you started if these areas are new to you.
 
-* [Javascript](javascript-basics.md)
+* [JavaScript](javascript-basics.md)
 * [React](react-basic.md)
 
 {% hint style="info" %}
-We are planning to add more guides on other important topics such as the Command Line and NPM. If you have suggestions or ideas for other guides then drop us a line on [our community forum](https://community.frontity.org/c/docs-and-tutorials).
+We are planning to add more guides on other important topics such as the command-line and npm. If you have suggestions or ideas for other guides then drop us a line on [our community forum](https://community.frontity.org/c/docs-and-tutorials).
 {% endhint %}
 

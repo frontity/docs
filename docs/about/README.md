@@ -4,7 +4,7 @@
 
 Frontity is a free and open source framework. It enables you to easily build a **React-based frontend** for a [**headless \(or decoupled\) WordPress**](https://www.elegantthemes.com/blog/wordpress/headless-wordpress) site. Your WordPress site serves its data via the [**REST API**](https://developer.wordpress.org/rest-api/), and the frontend that you build with Frontity consumes this data and renders it in the browser as a SPA \(Single Page Application\) which you can configure and style to your liking.
 
-The above approach, as exemplified by Frontity, has many advantages. But in order to build a website in this way without Frontity there are a lot of things that developers need to learn and configure: _bundling_, _transpiling_, _routing_, _server rendering_, _retrieving data from WordPress_, _managing state_, or _managing css_, among many others.
+The above approach, as exemplified by Frontity, has many advantages. But in order to build a site in this way without Frontity there are a lot of things that developers need to learn and configure: _bundling_, _transpiling_, _routing_, _server rendering_, _retrieving data from WordPress_, _managing state_, or _managing CSS_, among many others.
 
 Next.js and Gatsby.js are two great React frameworks that can work with WordPress in this way but none of them is exclusively focused on WordPress. Therefore, there’s still some complex configuration and additional tooling that the developer has to do.
 
@@ -27,7 +27,7 @@ One of those possibilities is to create frontend sites based on React. That’s 
 
 ## **Why WordPress and React?**
 
-As at time of writing \(April 2020\), WordPress powers [35% of all the websites](https://w3techs.com/technologies/details/cm-wordpress) on the Internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
+As at time of writing \(April 2020\), WordPress powers [35% of all the sites](https://w3techs.com/technologies/details/cm-wordpress) on the internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
 
 ![](https://w3techs.com/diagram/history_technology/cm-wordpress)
 
@@ -70,7 +70,7 @@ Here are the main ones:
 * [Lightning-fast loading](frontity-features.md#lightning-fast-loading)
 * [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
 * [Google AMP with the same codebase](frontity-features.md#google-amp-support-with-the-same-codebase)
-* [Server Side Rendering](frontity-features.md#server-side-rendering)
+* [Server-side Rendering](frontity-features.md#server-side-rendering)
 * [Extensible](frontity-features.md#less-than-greater-than-extensible)
 * [Best Lighthouse score](frontity-features.md#best-lighthouse-score)
 * [Perfect accessibility](frontity-features.md#perfect-accessibility)
@@ -95,7 +95,7 @@ Frontity is in a way similar to, and can be compared with, Gatsby.js. However, t
 
 In addition:
 
-* There is no need to learn GraphQL or the REST API. The data is available to you using Frontity's built in State Manager.
+* There is no need to learn GraphQL or the REST API. The data is available to you using Frontity's built-in State Manager.
 * Frontity can output HTML suitable for Google AMP with exactly the same React codebase.
 
 If you still have any questions about Frontity, do please join us in our [**community forum**](https://community.frontity.org) and feel free to ask them there. Our growing community of users and developers will be more than happy to help you out.

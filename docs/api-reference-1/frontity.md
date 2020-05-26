@@ -1,4 +1,6 @@
-# frontity
+<!-- textlint-disable terminology -->
+# `frontity`
+<!-- textlint-enable terminology -->
 
 ## Overview
 

@@ -31,15 +31,15 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
-#### state.source.api \(required\)
+#### `state.source.api` \(required\)
 
-The url of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
+The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
 
-#### state.source.subdirectory
+#### `state.source.subdirectory`
 
 A name or path indicating the subdirectory of your domain where your Frontity site lives. For example, if your site is in [https://mysite.com/blog](https://mysite.com/blog), you have to use it with the value of `blog` or `/blog`. It also transform links of the entities that come from the REST API.
 
-#### state.source.homepage
+#### `state.source.homepage`
 
 This option allows you to show a specific page when accessing the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access `/`.
 
@@ -51,7 +51,7 @@ You have to configure your WordPress with the same setting.
 
 ![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35%20%283%29.png)
 
-#### state.source.postsPage
+#### `state.source.postsPage`
 
 This option allows you to show the posts archive when accessing a specific URL of your site, instead of the homepage. For example, if you set this value to `/blog`, then the posts archive will be shown if you access `/blog` instead of `/`. It is useful when used in combination with `state.source.homepage`.
 
@@ -61,25 +61,25 @@ You have to configure your WordPress with the same setting.
 
 ![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35%20%283%29.png)
 
-#### state.source.categoryBase
+#### `state.source.categoryBase`
 
 Change the base prefix of URLs for category pages with the indicated one.
 
 > **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
 
-#### state.source.tagBase
+#### `state.source.tagBase`
 
 Change the base prefix of URLs for tag pages with the indicated one.
 
 > **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
 
-#### state.source.postEndpoint
+#### `state.source.postEndpoint`
 
 Set the endpoint against which calls to the REST API are made **when posts are requested**, i.e. when fetching a single post, the post archive, date archives, categories, tags, authors, etc. This is useful when you want to use another post type as your default, for example “products”.
 
 The default value is `"posts"`.
 
-#### state.source.params
+#### `state.source.params`
 
 Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. This is useful to filter fields from the REST API, change the default `per_page` value and so on. For example, if you set this value to
 
@@ -104,7 +104,7 @@ module.exports = {
 
 and then you visit a URL \(or use `actions.source.fetch`\), the query part of the HTTP call to the REST API will be `per_page=5&type[]=post&type[]=page`.
 
-#### state.source.postTypes
+#### `state.source.postTypes`
 
 This option allows you to show the Custom Post Types you create at WordPress when accessing their URLs. It is an array of objects, each object being a different CPT. It has three arguments:
 
@@ -128,7 +128,7 @@ postTypes: [
 ]
 ```
 
-#### state.source.taxonomies
+#### `state.source.taxonomies`
 
 Similar to `postTypes`setting, this one allows you to show the lists of posts of a Custom Taxonomies you create at WordPress when accessing their URLs. It is an array of objects, each object being a different Custom Taxonomy. It has four arguments:
 

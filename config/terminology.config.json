@@ -1,0 +1,19 @@
+{
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "terminology": {
+      "defaultTerms": true,
+      "terms": [
+        "Frontity",
+        "PHP",
+        "Vercel",
+        ["zeit", "Vercel"]
+      ],
+      "exclude": [
+        "HTTPS"
+      ]
+    }
+  }
+}

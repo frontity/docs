@@ -14,7 +14,7 @@ Here's a list of the main features included in Frontity's core:
 * [Zero setup development](frontity-features.md#zero-setup-development)
 * [Lightning-fast loading](frontity-features.md#lightning-fast-loading)
 * [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
-* [Server Side Rendering](frontity-features.md#server-side-rendering)
+* [Server-side Rendering](frontity-features.md#server-side-rendering)
 * [Extensible](frontity-features.md#less-than-greater-than-extensible)
 * [Best Lighthouse score](frontity-features.md#best-lighthouse-score)
 * [Perfect accessibility](frontity-features.md#perfect-accessibility)
@@ -37,19 +37,19 @@ Here's a list of the main features included in Frontity's core:
 
 ### ⚙ Zero setup development
 
-Everything is already wired up you can focus on building your site: React, Webpack, Babel, SSR, Routing, CSS-in-JS, WP REST API, TypeScript, Linting, Testing, and so on.
+Everything is already wired up you can focus on building your site: React, webpack, Babel, SSR, Routing, CSS-in-JS, WP REST API, TypeScript, Linting, Testing, and so on.
 
 ### 🚀 **Lightning-fast loading**
 
 Frontity sends an HTML that is ready to start navigating the site, so the initial load feels almost instant. No extra assets or round trips are necessary.
 
-This HTML is fully **functional** and **navigable** without Javascript. Once React loads, it takes control of the app and users don’t notice any change, it is 100% transparent.
+This HTML is fully **functional** and **navigable** without JavaScript. Once React loads, it takes control of the app and users don’t notice any change, it is 100% transparent.
 
 ### ⚡️ Instant in-app navigation
 
 Once React has loaded, our router prefetches other routes and data automatically. Users never have to wait when they navigate inside the app.
 
-### 🗄 Server Side Rendering
+### 🗄 server-side Rendering
 
 Frontity responds with a fully populated HTML file generated with React. This reduces the time required for the first contentful paint and ensures that the **SEO** is **not harmed**.
 
@@ -63,7 +63,7 @@ We are working on a lot of Frontity extensions which will be available soon. You
 
 Apart from these extensions, there are many other **interface tools** specifically created for Frontity: context routing, swipe navigation, infinite scrolling, html-to-react, gutenberg-to-react, etc.
 
-Our themes can also use any of the 80.000 React packages currently available in NPM.
+Our themes can also use any of the 80.000 React packages currently available in npm.
 
 ### 💯 Best Lighthouse score
 
@@ -71,7 +71,7 @@ Frontity is optimized to get the maximum score in Lighthouse, including performa
 
 ### 🌎 Perfect accessibility
 
-As part of our mission to make building websites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity is perfectly **accessible by default** and will provide tools that let the developers know if they break it.
+As part of our mission to make building sites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity is perfectly **accessible by default** and will provide tools that let the developers know if they break it.
 
 ### 🎖 Battle-tested framework
 
@@ -79,9 +79,9 @@ We’re open sourcing the internal framework we’ve been using to power big Wor
 
 ### 📈 Serverless and horizontal scaling
 
-The Frontity server is so small it suits perfectly the serverless requirements. That means infinite scaling for the front-end.
+The Frontity server is so small it suits perfectly the serverless requirements. That means infinite scaling for the frontend.
 
-All the server code is bundled in one file, ready to work with serverless services like [Vercel](https://vercel.com/docs) \(using its CLI `now`\) or [AWS Lambda](https://aws.amazon.com/es/lambda/). Frontity is also prepared to scale horizontally in any Node server.
+All the server code is bundled in one file, ready to work with serverless services like [Vercel](https://vercel.com/docs) \(using its CLI `now`\) or [AWS Lambda](https://aws.amazon.com/es/lambda/). Frontity is also prepared to scale horizontally in any Node.js server.
 
 ### {  } First class TypeScript support
 
@@ -98,7 +98,7 @@ Modern browsers that support ES6 modules will request the ES6 bundle, translatin
 
 ### 🔗 Support for Wordpress.com & WordPress.org
 
-Frontity can work with different “source” extensions. The first beta version includes a “wp-source” which works with the **REST API** of any [wordpress.com](https://developer.wordpress.com/docs/api/) or [wordpress.org](https://developer.wordpress.org/rest-api/) website. This way, whether you have a self-hosted site or it is hosted by Automattic, Frontity will suit your needs.
+Frontity can work with different “source” extensions. The first beta version includes a “wp-source” which works with the **REST API** of any [wordpress.com](https://developer.wordpress.com/docs/api/) or [wordpress.org](https://developer.wordpress.org/rest-api/) site. This way, whether you have a self-hosted site or it is hosted by Automattic, Frontity will suit your needs.
 
 Frontity has been designed so it can support **other sources** in the future \(like the [GraphQL API for WordPress](https://www.wpgraphql.com/)\). Actually, we are discussing possible future sources here in [the community](https://community.frontity.org/t/potential-supported-sources/18/3). Feel free to join the conversation and share any ideas you might have.
 
@@ -112,7 +112,7 @@ Frontity uses webpack to split the code and send the minimum code required for t
 
 ### **🌱 Smallest React bundle possible**
 
-Frontity helps build websites which are fast to deliver better user experiences. That's the reason why we have struggled to make the core smaller. It has finally been reduced by 60% and only weights 60kb \(gzipped\).
+Frontity helps build sites which are fast to deliver better user experiences. That's the reason why we have struggled to make the core smaller. It has finally been reduced by 60% and only weights 60kb \(gzipped\).
 
 ### **✅ Ready for React Concurrent and Suspense**
 
