@@ -20,7 +20,7 @@ npx frontity dev [options]
 | `--publicPath <path>` | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". |
 | `-h`, `--help` | Output usage information |
 
-> More info about the `--publicPath` option can be found in the [`frontity build` page]()
+> More info about the `--publicPath` option can be found in the [`frontity build` page](/frontity-cli/build#the-publicpath-option)
 
 ## Examples
 
