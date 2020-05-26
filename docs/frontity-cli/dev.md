@@ -17,10 +17,10 @@ npx frontity dev [options]
 | `-s`, `--https` | Runs the server using https. |
 | `--dont-open-browser` | Don't open a browser window with the localhost. |
 | `--target <target>` | create bundles with "es5" or "module". Default target is "module". |
-| `--publicPath <path>` | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". [Same behaviour as in `build`](build#the-publicpath-option)|
+| `--publicPath <path>` | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/".|
 | `-h`, `--help` | Output usage information |
 
-> More info about the `--publicPath` option can be found in the [`frontity build` page](/frontity-cli/build#the-publicpath-option)
+> More info about the `--publicPath` option can be found in the [`frontity build` page](build)
 
 ##### The `--production` option
 
