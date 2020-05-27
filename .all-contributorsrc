@@ -62,6 +62,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "DAreRodz",
+      "name": "David Arenas",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6917969?v=4",
+      "profile": "https://github.com/DAreRodz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
