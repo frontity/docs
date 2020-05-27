@@ -89,6 +89,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rodrigojimenezdencker",
+      "name": "Rodrigo Jiménez",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/50848700?v=4",
+      "profile": "https://github.com/rodrigojimenezdencker",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
