@@ -44,6 +44,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "luisherranz",
+      "name": "Luis Herranz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3305402?v=4",
+      "profile": "https://frontity.org",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
