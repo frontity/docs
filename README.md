@@ -39,6 +39,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/joannasaerom"><img src="https://avatars0.githubusercontent.com/u/22183476?v=4" width="100px;" alt=""/><br /><sub><b>Joanna Saerom</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=joannasaerom" title="Documentation">📖</a></td>
     <td align="center"><a href="http://czaplinski.io"><img src="https://avatars1.githubusercontent.com/u/5417266?v=4" width="100px;" alt=""/><br /><sub><b>Michal</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=michalczaplinski" title="Documentation">📖</a></td>
     <td align="center"><a href="https://frontity.org"><img src="https://avatars2.githubusercontent.com/u/3305402?v=4" width="100px;" alt=""/><br /><sub><b>Luis Herranz</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=luisherranz" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://frontity.org/"><img src="https://avatars3.githubusercontent.com/u/20700757?v=4" width="100px;" alt=""/><br /><sub><b>Reyes M.</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=rmartinezduque" title="Documentation">📖</a></td>
   </tr>
 </table>
 

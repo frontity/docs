@@ -53,6 +53,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rmartinezduque",
+      "name": "Reyes M.",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/20700757?v=4",
+      "profile": "https://frontity.org/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
