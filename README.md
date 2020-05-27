@@ -42,6 +42,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://frontity.org/"><img src="https://avatars3.githubusercontent.com/u/20700757?v=4" width="100px;" alt=""/><br /><sub><b>Reyes M.</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=rmartinezduque" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/DAreRodz"><img src="https://avatars3.githubusercontent.com/u/6917969?v=4" width="100px;" alt=""/><br /><sub><b>David Arenas</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=DAreRodz" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://davemackey.net/"><img src="https://avatars3.githubusercontent.com/u/8009774?v=4" width="100px;" alt=""/><br /><sub><b>Dave Mackey</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=davidshq" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->

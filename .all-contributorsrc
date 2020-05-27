@@ -71,6 +71,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "davidshq",
+      "name": "Dave Mackey",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8009774?v=4",
+      "profile": "https://davemackey.net/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
