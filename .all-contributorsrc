@@ -107,6 +107,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "orballo",
+      "name": "Eduardo Campaña",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13615057?v=4",
+      "profile": "http://orballo.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,

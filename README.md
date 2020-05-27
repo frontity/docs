@@ -47,6 +47,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.juananrodriguez.es/"><img src="https://avatars3.githubusercontent.com/u/34781220?v=4" width="100px;" alt=""/><br /><sub><b>Juanan Rodríguez Martínez</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=JuananRodriguez" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/rodrigojimenezdencker"><img src="https://avatars3.githubusercontent.com/u/50848700?v=4" width="100px;" alt=""/><br /><sub><b>Rodrigo Jiménez</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=rodrigojimenezdencker" title="Documentation">📖</a></td>
     <td align="center"><a href="http://ideaboxcreations.com/"><img src="https://avatars1.githubusercontent.com/u/1639806?v=4" width="100px;" alt=""/><br /><sub><b>Puneet Sahalot</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=psahalot" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://orballo.dev"><img src="https://avatars1.githubusercontent.com/u/13615057?v=4" width="100px;" alt=""/><br /><sub><b>Eduardo Campaña</b></sub></a><br /><a href="https://github.com/frontity/gitbook-docs/commits?author=orballo" title="Documentation">📖</a></td>
   </tr>
 </table>
 
