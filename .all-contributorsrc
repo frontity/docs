@@ -35,6 +35,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "michalczaplinski",
+      "name": "Michal",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5417266?v=4",
+      "profile": "http://czaplinski.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
