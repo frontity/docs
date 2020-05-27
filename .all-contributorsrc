@@ -17,8 +17,18 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mburridge",
+      "name": "Michael Burridge",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/20643925?v=4",
+      "profile": "https://frontity.org/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "commitConvention": "none"
 }
