@@ -80,6 +80,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "JuananRodriguez",
+      "name": "Juanan Rodríguez Martínez",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/34781220?v=4",
+      "profile": "https://www.juananrodriguez.es/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
