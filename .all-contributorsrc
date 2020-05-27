@@ -1,5 +1,5 @@
 {
-  "projectName": "frontity-docs",
+  "projectName": "gitbook-docs",
   "projectOwner": "frontity",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -8,5 +8,17 @@
   ],
   "imageSize": 100,
   "commit": true,
-  "contributors": []
+  "contributors": [
+    {
+      "login": "juanmaguitar",
+      "name": "JuanMa",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/422576?v=4",
+      "profile": "http://pixelovers.com",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "skipCi": true,
+  "contributorsPerLine": 7
 }
