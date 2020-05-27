@@ -98,6 +98,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "psahalot",
+      "name": "Puneet Sahalot",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1639806?v=4",
+      "profile": "http://ideaboxcreations.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
