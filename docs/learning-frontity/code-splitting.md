@@ -4,9 +4,22 @@ Code Splitting lets you split your code into various bundles, instead of using a
 
 The bundles can be loaded on demand or in parallel, which allows you to just load the code that is currently needed by the user. This way you can avoid loading heavy code until it is required and reduce the amount of code during the initial load.
 
-Frontity has configured everything to make Code Splitting really easy. To use it you just have to import `{ loadable }` module from `frontity` and make a dynamic import of the React component you don't want to be loaded until it is strictly needed.
+Frontity has configured everything to make Code Splitting really easy. To use it you just have to import `{ loadable }` module from `frontity` and make a dynamic import of the React component you don't want to be loaded until it is strictly needed. 
 
-## Example
+```jsx
+import { loadable } from "frontity";
+const OtherComponent = loadable(() => import('./OtherComponent'))
+
+function MyComponent() {
+  return (
+    <div>
+      <OtherComponent />
+    </div>
+  )
+}
+```
+
+## Code Splitting Use Case: Comments
 
 Imagine you are using a big library for showing your comments. You will want to load it just when it is needed, so it doesn't increase the bundle size if that React component is not loaded. Code splitting lets you do it.
 
@@ -54,17 +67,15 @@ If we don't use `loadable` , the `<HeavyComments>` component is included in the 
 
 For managing the Code Splitting, Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/).
 
-If you want to go deeper, you should take a look at their docs. You don't need to read the docs on how to install and configure Loadable Components since we have already done that work for you. Below are concepts that are interesting and helpful to read up on:
+![loadable components](../.gitbook/assets/loadable-components.png)
+ 
+If you want to go deeper, you should take a look at [**their docs**](https://loadable-components.com/docs/getting-started/). You don't need to read the docs on how to install and configure Loadable Components since we have already done that work for you. Below are concepts that are interesting and helpful to read up on:
 
-* [Code Splitting](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/)
-* [Prefetching](https://www.smooth-code.com/open-source/loadable-components/docs/prefetching/)
-* [Suspense](https://www.smooth-code.com/open-source/loadable-components/docs/suspense/)
-* [Fallback](https://www.smooth-code.com/open-source/loadable-components/docs/fallback/)
-* [Error Boundaries](https://www.smooth-code.com/open-source/loadable-components/docs/error-boundaries)
-* [Delay](https://www.smooth-code.com/open-source/loadable-components/docs/delay/)
-* [Timeout](https://www.smooth-code.com/open-source/loadable-components/docs/timeout/)
-* [Library Splitting](https://www.smooth-code.com/open-source/loadable-components/docs/library-splitting/)
-* [Dynamic Import](https://www.smooth-code.com/open-source/loadable-components/docs/dynamic-import/)
-
-That's it! You are now a master of Code Splitting.
-
+* What is [_Code Splitting_](https://loadable-components.com/docs/code-splitting/)?
+* Most of the time, you want to [_prefetch_](https://loadable-components.com/docs/prefetching/) a component, it means it will be loaded when the browser is idle. 
+* Specify a [_Fallback_](https://loadable-components.com/docs/fallback/) in loadable options. 
+* Handle loading errors with [_Error Boundaries_](https://www.smooth-code.com/open-source/loadable-components/docs/error-boundaries)
+* To avoid flashing a loader if the loading is very fast, you could implement a minimum [_Delay_](https://www.smooth-code.com/open-source/loadable-components/docs/delay/)
+* Infinite loading is not good for user experience, to avoid it implementing a [_timeout_](https://www.smooth-code.com/open-source/loadable-components/docs/timeout/) is a good workaround. 
+* Use [Library Splitting](https://www.smooth-code.com/open-source/loadable-components/docs/library-splitting/) to defer the loading of a library
+* Create a reusable Loadable Component by using a [_Dynamic Import_](https://www.smooth-code.com/open-source/loadable-components/docs/dynamic-import/)
