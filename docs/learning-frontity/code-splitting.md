@@ -8,7 +8,7 @@ The bundles can be loaded on demand or in parallel, which allows you to just loa
 
 Frontity has configured everything to make Code Splitting really easy.
 
-To use it you just have to import `{ loadable }` module from `frontity` and make a dynamic import of the React component you don't want to be loaded until it is strictly needed.
+To use it you just have to import the `{ loadable }` module from `frontity` and then dynamically import the React component that you don't want to be loaded until it is strictly needed.
 
 ```jsx
 import { loadable } from "frontity";
@@ -27,7 +27,7 @@ function MyComponent() {
 
 Imagine you are using a big library for showing your comments. You will want to load it just when it is needed, so it doesn't increase the bundle size if that React component is not loaded.
 
-Code splitting let you do it.
+Code splitting lets you do it.
 
 You have to use `loadable` with a dynamic `import()` inside:
 
@@ -68,7 +68,7 @@ export default connect(Post);
 
 By default, `state.comments.areOpened === false` .
 
-The heavy library used for comments won't be loaded until you change the state to `true`, like when, for example, you click a button to open the comments. At that moment, the code for that React component is downloaded and executed.
+The heavy library used for comments won't be loaded until you change the state to `true` such as when, for example, you click a button to open the comments. At that moment the code for that React component is downloaded and executed.
 
 If we don't use `loadable` , the `<HeavyComments>` component is included in the main bundle and loaded at the initial page load, even if the comments are never shown.
 
