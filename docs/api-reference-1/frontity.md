@@ -441,29 +441,29 @@ const fills = useFills("Slot Name");
 
 `Fill[]`
 
-A list of objects that you can use to create the fills.
-The values in those objects will come from the fills defined by the user of the slot in `state.fills`.
-Mind that a user might define more than one fill for a particular slot.
-Because of this, we always return a list of slots sorted in **ascending order** by their `priority`.
-Each object is of structure:
+An array of configuration objects for the fills that want to fill the slot passed by the `slotName` parameter. The values in those objects will come from the fills defined by the user of the slot in `state.fills`.
 
-| Name           | Type           | Description                                                                                                                                                                                                 |
-| -------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`Fill`**     | ReactComponent | The component that you can render.                                                                                                                                                                          |
-| **`slot`**     | string         | The name of the slot. Mind that a user can define multiple fills that fill the same slot, so there might exist more than one object with the same `slot` property. Defined in `state.fills[fillName].slot`. |
-| **`props`**    | object         | The props passed to the component. Defined in `state.fills[fillName].props`.                                                                                                                                |
-| **`library`**  | string         | The name of the library that is using the fill. defined in `state.fills[fillName].library`.                                                                                                                 |
-| **`priority`** | number         | The priority of the fill. By default, the fills are sorted in ascending order according to this value. Defined in `state.fills[fillName].priority`.                                                         |
-| **`key`**      | string         | This is a unique value that identifes the particular fill. It is the `fillName` in `state.fills[fillName]`.                                                                                                 |
+Mind that a user might define more than one fill for a particular slot. Because of this, we always return a list of slots sorted in **ascending order** by their `priority`.
+
+Each configuration object has this structure:
+
+| Name           | Type           | Description                                                                                                                                                                                                          |
+| -------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`Fill`**     | ReactComponent | The component that should be rendered for this fill.                                                                                                                                                                 |
+| **`slot`**     | string         | The name of the slot. Mind that a user can define multiple fills that fill the same slot, so there might exist more than one object with the same `slot` property. Defined in `state.fills.namespace.fillName.slot`. |
+| **`props`**    | object         | The props that should be passed down to the component. Defined in `state.fills.namespace.fillName.props`.                                                                                                            |
+| **`library`**  | string         | The name of the library that is using the fill. defined in `state.fills.namespace.fillName.library`.                                                                                                                 |
+| **`priority`** | number         | The priority of the fill. By default, the fills are sorted in ascending order according to this value. Defined in `state.fills.namespace.fillName.priority`.                                                         |
+| **`key`**      | string         | This is a unique value that identifes the particular fill. It's combination of the `namespace` and the `fillName`.                                                                                                   |
 
 #### Example
 
-Import the hook in your react component and use it to create a component:
+Import the hook in your React component and use it to create a component:
 
-```js
-import useFills from "@frontity/hooks/use-fills";
+```jsx
+import { useFills } from "frontity";
 
-const Component = connect(() => {
+const Comp = () => {
   const fills = useFills("slot 1");
 
   return (
@@ -473,11 +473,13 @@ const Component = connect(() => {
       ))}
     </>
   );
-});
+};
+
+export default connect(Comp);
 ```
 
 {% hint style="info" %}
-You need to wrap the component that uses the `useFills` hook with `connect()` in order for that component to work!
+You need to wrap the component that uses the `useFills` hook with `connect()` in order for that component to work.
 {% endhint %}
 
 ### `fetch`
