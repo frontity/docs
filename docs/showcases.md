@@ -6,6 +6,15 @@ Want to see what the community is building with Frontity? Here are some great ex
 If you have created a Frontity site, whether for a client or as a personal project, you can help us and the rest of the community by sharing it. Sharing your project in our [**Showcases section**](https://community.frontity.org/c/showcases/19) means that others can learn, get inspired and see what can be accomplished with Frontity. An example is worth a thousand words. 🙂
 {% endhint %}
 
+## Ignacio Cruz Blog
+
+* Site: https://igmoweb.com/
+* [Source Code](https://github.com/igmoweb/igmoweb.com)
+
+[![Igmoweb](.gitbook/assets/showcases/showcase-igmoweb.png)](https://igmoweb.com/)
+
+> I also enjoyed a lot working with Frontity, it’s a quite effective piece of software with an easy install and quite simple extensible system. [Read more](https://community.frontity.org/t/my-personal-blog-site/1962)
+
 ## I’m Oriol
 
 * Site: [https://www.oriol.im/](https://www.oriol.im/)
