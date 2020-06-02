@@ -36,6 +36,7 @@
       "pre-commit": "lint-staged -v"
     }
   },
+  "prettier": {},
   "textlint": {
     "filters": {
       "comments": true
