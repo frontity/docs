@@ -16,7 +16,6 @@ Here's a list of the main features included in Frontity's core:
 * [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
 * [Server-side Rendering](frontity-features.md#server-side-rendering)
 * [Extensible](frontity-features.md#less-than-greater-than-extensible)
-* [Best Lighthouse score](frontity-features.md#best-lighthouse-score)
 * [Perfect accessibility](frontity-features.md#perfect-accessibility)
 * [Battle-tested](frontity-features.md#battle-tested-framework)
 * [Serverless and horizontal scaling](frontity-features.md#serverless-and-horizontal-scaling)
@@ -65,9 +64,6 @@ Apart from these extensions, there are many other **interface tools** specifical
 
 Our themes can also use any of the 80.000 React packages currently available in npm.
 
-### 💯 Best Lighthouse score
-
-Frontity is optimized to get the maximum score in Lighthouse, including performance, SEO and accessibility. Theme developers start with **100/100** and they just need to maintain it while they add features to their theme.
 
 ### 🌎 Perfect accessibility
 
