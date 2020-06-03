@@ -482,6 +482,18 @@ export default connect(Comp);
 You need to wrap the component that uses the `useFills` hook with `connect()` in order for that component to work.
 {% endhint %}
 
+#### Debug mode
+
+If you want to see all the slots added to a theme/package without having to add fills for all of them, you can turn the debug mode on:
+
+```js
+state.frontity.debug = true;
+```
+
+If you want to do this on the console, remember that you need to access the `state` using `frontity.state`, like this:
+
+![Debug mode in the console](../.gitbook/assets/frontity-debug-in-console.png)
+
 ### `fetch`
 
 #### Syntax
