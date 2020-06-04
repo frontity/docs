@@ -95,7 +95,7 @@ If you don't want to inject the Frontity state props in your connected component
 {% code title="Page.js" %}
 ```jsx
 import React from "react";
-import { connect } from "connect";
+import { connect } from "frontity";
 import { Loading, List, Post, PageError } from "./components";
 
 const Page = ({ state }) => {
@@ -146,7 +146,7 @@ By using `connect`:
 {% code title="Page.js" %}
 ```jsx
 import React from "react";
-import { connect, useConnect } from "connect";
+import { connect, useConnect } from "frontity";
 import { Loading, List, Post, PageError } from "./components";
 
 const Page = () => {
