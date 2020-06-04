@@ -72,7 +72,6 @@ Here are the main ones:
 * [Google AMP with the same codebase](frontity-features.md#google-amp-support-with-the-same-codebase)
 * [Server-side Rendering](frontity-features.md#server-side-rendering)
 * [Extensible](frontity-features.md#less-than-greater-than-extensible)
-* [Best Lighthouse score](frontity-features.md#best-lighthouse-score)
 * [Perfect accessibility](frontity-features.md#perfect-accessibility)
 * [Battle-tested](frontity-features.md#battle-tested-framework)
 * [Serverless and horizontal scaling](frontity-features.md#serverless-and-horizontal-scaling)
