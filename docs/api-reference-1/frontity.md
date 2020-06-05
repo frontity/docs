@@ -1,4 +1,4 @@
-# Frontity
+# `frontity`
 
 ## Overview
 
@@ -103,7 +103,7 @@ For these components to access the state use the [`useConnect`](frontity.md#useC
 ```jsx
 import React from "react";
 import { connect } from "connect";
-import { Loading, List, Post, Page404 } from "./components";
+import { Loading, List, Post, PageError } from "./components";
 
 const Page = ({ state }) => {
   // The next line will trigger a re-render whenever
@@ -111,12 +111,12 @@ const Page = ({ state }) => {
   const data = state.source.get(state.router.link);
 
   return (
-    <>
-      {(data.isFetching && <Loading />) ||
-        (data.isArchive && <List />) ||
-        (data.isPostType && <Post />) ||
-        (data.is404 && <Page404 />)}
-    </>
+    <Switch>
+      <Loading when={data.isFetching} />
+      <List when={data.isArchive} />
+      <Post when={data.isPostType} />
+      <PageError when={data.isError} />
+    </Switch>
   );
 };
 
@@ -136,7 +136,16 @@ const { state, actions, libraries } = useConnect();
 
 It's a React hook that returns the Frontity state, allowing the component to consume `state`, `actions` and `libraries` in components without passing them as props.
 
-Note that `useConnect` must be used inside components connected to Frontity using [`connect`](frontity.md#connect) with the `injectProps` option set to `false`.
+{% hint style="warning" %}
+
+You still need to use `connect` when using `useConnect` properly.
+
+By using `connect`:
+
+- Your components get optimized with _memo_, so they won't re-render whenever a parent component re-renders
+- Your components get reactive, so they will re-render when the parts of state they use are changed
+
+{% endhint %}
 
 #### Return value
 
@@ -149,7 +158,7 @@ Note that `useConnect` must be used inside components connected to Frontity usin
 ```jsx
 import React from "react";
 import { connect, useConnect } from "connect";
-import { Loading, List, Post, Page404 } from "./components";
+import { Loading, List, Post, PageError } from "./components";
 
 const Page = () => {
   // Get state using useConnect hook.
@@ -160,20 +169,67 @@ const Page = () => {
   const data = state.source.get(state.router.link);
 
   return (
-    <>
-      {(data.isFetching && <Loading />) ||
-        (data.isArchive && <List />) ||
-        (data.isPostType && <Post />) ||
-        (data.is404 && <Page404 />)}
-    </>
+    <Switch>
+      <Loading when={data.isFetching} />
+      <List when={data.isArchive} />
+      <Post when={data.isPostType} />
+      <PageError when={data.isError} />
+    </Switch>
   );
 };
 
-// Connect Page to the Frontity state, without injecting props.
-export default connect(Page, { injectProps: false });
+// Connect Page to the Frontity state.
+export default connect(Page);
 ```
 
 {% endcode %}
+
+#### Use Case of `{ injectProps: false }` with `connect`
+
+Most of the times you'll use `useConnect` in this way:
+
+```jsx
+const Input = ({ name, type }) => {
+  const { state } = useConnect();
+  // Do something with `state`.
+
+  return <input name={name} type={type} />;
+};
+
+export default connect(Input);
+```
+
+But if you want to pass down props to a HTML tag, like in this case:
+
+```jsx
+const Input = ({ name, type, ...props }) => {
+  const { state } = useConnect();
+  // Do something with `state`.
+
+  return <input name={name} type={type} {...props} />;
+};
+
+export default connect(Input);
+```
+
+You'll end up passing `actions` and `libraries` to `<input>` as well, because they are injected by `connect`.
+
+To avoid this you can:
+
+- Add `{ injectProps: false }` to `connect`
+- Use `const { state, actions, libraries } = useConnect();`
+
+```jsx
+const Input = (props) => {
+  const { state } = useConnect();
+  // Do something with `state` (or `actions` and `libraries`).
+
+  return <input {...props} />;
+};
+
+// Avoid injecting `state`, `actions` and `libraries` so they are not present in `...props`.
+export default connect(Input, { injectProps: false });
+```
 
 ### `styled`
 

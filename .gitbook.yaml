@@ -1,10 +1,10 @@
 root: ./docs/
 
-​structure:  
-    readme: README.md  
+​structure:
+    readme: README.md
     summary: SUMMARY.md​
-    
-redirects:  
+
+redirects:
     javascript-and-and-react: ./resources/README.md
     javascript-and-and-react/: ./resources/README.md
     javascript-and-react: ./resources/README.md
@@ -17,5 +17,9 @@ redirects:
     installation-and-deploy/: ./deployment/README.md
     key-differences-with-gatsbyjs: ./about/README.md
     key-differences-with-gatsbyjs/: ./about/README.md
-    installation-and-deploy/possible-architectures: ./architecture.md
-    installation-and-deploy/possible-architectures/: ./architecture.md
+    installation-and-deploy/possible-architectures: ./architecture/README.md
+    installation-and-deploy/possible-architectures/: ./architecture/README.md
+    architecture: ./architecture/README.md
+    architecture/: ./architecture/README.md
+    faq: ./faq/README.md
+    faq/: .faq/README.md

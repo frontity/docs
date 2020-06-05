@@ -5,6 +5,14 @@
   "directories": {
     "doc": "docs"
   },
+  "scripts": {
+    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config mlc_config.json ';'",
+    "check-links:quiet": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check -q -v '{}' --config mlc_config.json ';'",
+    "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint '{}' ';'",
+    "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-terminology '{}' ';'",
+    "textlint:all:rousseau": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-rousseau '{}' ';'",
+    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontity/gitbook-docs.git"
@@ -14,6 +22,7 @@
     "dictionary-en-au": "^2.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
+    "markdown-link-check": "^3.8.1",
     "textlint": "^11.6.3",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-alex": "^1.3.1",
@@ -77,16 +86,11 @@
         ],
         "severity": "warning"
       },
-      "spelling": {
-        "language": "en-au",
-        "wordDefinitionRegexp": "/[\\w']+/g",
-        "suggestCorrections": true,
-        "severity": "warning"
-      },
       "terminology": {
         "defaultTerms": true,
         "terms": [
-          "Frontity"
+          "Frontity",
+          "PHP"
         ],
         "exclude": [
           "HTTPS"
