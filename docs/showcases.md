@@ -3,17 +3,17 @@
 Want to see what the community is building with Frontity? Here are some great examples of Frontity in action!
 
 {% hint style="info" %}
-If you have created a Frontity site, whether for a client or as a personal project, you can help us and the rest of the community by sharing it. Sharing your project in our [**Showcases section**](https://community.frontity.org/c/showcases/19) means that others can learn, get inspired and see what can be accomplished with Frontity. An example is worth a thousand words. 🙂
+If you have created a Frontity site, whether for a client or as a personal project, you can help us and the rest of the community by [sharing it](https://forms.gle/xThoNSyh6M6rgeM97). Sharing your project will not only allow you to get more visibility and recognition but also help others learn what can be accomplished with Frontity. 🙂
 {% endhint %}
 
 ## Ignacio Cruz Blog
 
 * Site: https://igmoweb.com/
-* [Source Code](https://github.com/igmoweb/igmoweb.com)
+* [Source code](https://github.com/igmoweb/igmoweb.com)
 
 [![Igmoweb](.gitbook/assets/showcases/showcase-igmoweb.png)](https://igmoweb.com/)
 
-> I also enjoyed a lot working with Frontity, it’s a quite effective piece of software with an easy install and quite simple extensible system. [Read more](https://community.frontity.org/t/my-personal-blog-site/1962)
+> I enjoyed a lot working with Frontity, it’s a quite effective piece of software with an easy install and quite simple extensible system. [Read more](https://community.frontity.org/t/my-personal-blog-site/1962).
 
 ## I’m Oriol
 
@@ -83,4 +83,4 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > I must admit I’m impressed with Frontity, I’ve hit hardly any errors, which for a brand new framework is quite an achievement. [Read more](https://community.frontity.org/t/some-frontity-based-monkey-business/655).
 
-## [Add your Frontity site](https://community.frontity.org/c/showcases/19)
+## [Add your Frontity site](https://forms.gle/xThoNSyh6M6rgeM97)
