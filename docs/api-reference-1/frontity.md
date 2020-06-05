@@ -42,7 +42,7 @@ You can read more in the [Styles](../learning-frontity/styles.md) page of our **
 
 ### Code Splitting
 
-Use **`loadable`** in order to separate you code into different bundles that will be dynamically loaded at runtime.
+Use **`loadable`** to separate your code into different bundles that will be dynamically loaded at runtime.
 This helps you to reduce your page size.
 
 You can read more in the [Code Splitting](../learning-frontity/code-splitting.md) page of our **Learning Frontity** section.
@@ -53,7 +53,7 @@ You can read more in the [Code Splitting](../learning-frontity/code-splitting.md
 
 ### `fetch` and `URL`
 
-Frontity exports `fetch` and `URL` with the same API they have in the browser, but working exactly the same both in the client and in the server.
+Frontity exports `fetch` and `URL` with the same API they have in the browser, but they work the same both in the client and in the server.
 
 #### **API reference:**
 
@@ -191,7 +191,7 @@ const StyledComponent = styled(Component)`
 `;
 ```
 
-It's a function that receives an HTML tag or a React component as argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
+It's a function that receives an HTML tag or a React component as the argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
 Inside, you write the CSS code for your component.
 The tag function returns a styled component with the CSS you wrote.
 Also, `styled` has built-in tag functions for every HTML tag so in those cases it is not necessary to call `styled` directly.
@@ -236,7 +236,7 @@ const styleObject = css`
 `;
 ```
 
-It's a tagged template literal to add inline style to React Components.
+It's a tagged template literal to add an inline style to React Components.
 The usage is quite similar to **`styled`** except that **`css`** doesn't return a React Component but a special object that can be passed to a component through the **`css`** prop.
 
 #### Arguments
@@ -454,7 +454,7 @@ Each configuration object has this structure:
 | **`props`**    | object         | The props that should be passed down to the component. Defined in `state.fills.namespace.fillName.props`.                                                                                                            |
 | **`library`**  | string         | The name of the library that is using the fill. defined in `state.fills.namespace.fillName.library`.                                                                                                                 |
 | **`priority`** | number         | The priority of the fill. By default, the fills are sorted in ascending order according to this value. Defined in `state.fills.namespace.fillName.priority`.                                                         |
-| **`key`**      | string         | This is a unique value that identifes the particular fill. It's combination of the `namespace` and the `fillName`.                                                                                                   |
+| **`key`**      | string         | This is a unique value that identifies the particular fill. It's a combination of the `namespace` and the `fillName`.                                                                                                |
 
 #### Example
 
@@ -503,7 +503,7 @@ const fetchResponsePromise = fetch(resource, init);
 ```
 
 It's a function with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for fetching a resource from the network.
-This function is safe to use both server and client side, but you have to import it first.
+This function is safe to use both server and client-side, but you have to import it first.
 
 #### Arguments
 
@@ -535,7 +535,7 @@ const url = new URL(url, base);
 ```
 
 It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)objects.
-This constructor is safe to use both server and client side, but you have to import it first.
+This constructor is safe to use both server and client-side, but you have to import it first.
 
 #### Arguments
 
