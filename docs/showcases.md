@@ -6,6 +6,16 @@ Want to see what the community is building with Frontity? Here are some great ex
 If you have created a Frontity site, whether for a client or as a personal project, you can help us and the rest of the community by [sharing it](https://forms.gle/xThoNSyh6M6rgeM97). Sharing your project will not only allow you to get more visibility and recognition but also help others learn what can be accomplished with Frontity. 🙂
 {% endhint %}
 
+## Frontity
+
+* Site: https://frontity.org/
+* [Source code](https://github.com/frontity/frontity.org)
+
+[![Frontity](.gitbook/assets/showcases/showcase-frontity.png)](https://frontity.org/)
+
+> For our new Frontity.org site did a stress test of Frontity + Gutenberg. All layouts were created using built-in blocks. The header and the footer are template parts. For the about page, we reused the same blocks, so no extra code/styles were needed (and it looks awesome). [Read more](https://twitter.com/luisherranz/status/1258757519654227968?s=20).
+
+
 ## Ignacio Cruz
 
 * Site: https://igmoweb.com/
