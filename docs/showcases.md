@@ -6,7 +6,7 @@ Want to see what the community is building with Frontity? Here are some great ex
 If you have created a Frontity site, whether for a client or as a personal project, you can help us and the rest of the community by [sharing it](https://forms.gle/xThoNSyh6M6rgeM97). Sharing your project will not only allow you to get more visibility and recognition but also help others learn what can be accomplished with Frontity. 🙂
 {% endhint %}
 
-## Ignacio Cruz Blog
+## Ignacio Cruz
 
 * Site: https://igmoweb.com/
 * [Source code](https://github.com/igmoweb/igmoweb.com)
@@ -33,6 +33,15 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > It’s essentially built off the mars-theme, with my own custom styling added and some of the structure rearranged. I’m still new to React and I’m primarily a designer \(though I call myself a “design technologist” to hint at that\), but I think there’s some nice stuff about it. [Read more](https://community.frontity.org/t/frontity-blog-portfolio-theme-desert-jackalope/1504).
 
+## Frontend Scrapbook
+
+* Site: https://codeinjavascript.com
+* [Source code](https://github.com/vimalkodoth/frontity)
+
+[![Frontend Scrapbook](.gitbook/assets/showcases/showcase-frontendscrapbook.png)](https://codeinjavascript.com)
+
+> Frontity is really exciting! I was looking around for a scalable solution for a WordPress based news portal project. Doing some search on Google took me to the Frontity website. I started exploring the architecture and found it something similar to what I had in my mind, having separation of concerns - frontend and backend api. Having myself working as a developer and having experience with React, I really liked the idea and decided to give it a try. As the news portal project was moved to later this year, I thought to build a personal blog on tech to learn about the framework. With some help from the community, I could successfully setup to run Frontity as a microservice on AWS and running the backend cms on another EC2 instance. I even configured backend to work with AWS Opsworks, there by able to horizontally scale the same time. It was easy to setup and had to tweak just the frontity templates for the frontend. I'm still to explore whole range of possibilities Frontity provides for my upcoming news portal project.
+
 ## 403page.com
 
 * Site: [https://403page.com/](https://403page.com/)
@@ -42,12 +51,17 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > My first Frontity project \(though plenty of Frankensteining different components from Mars and TwentyTwenty\). Just wanted to share it here though it's in a very early version - just super pumped to have a somewhat workable version. [Read more](https://community.frontity.org/t/first-frontity-jobby/1102).
 
+## Diariomotor Competición
+
+* Site: https://www.diariomotor.com/competicion/
+
+[![Diariomotor Competición](.gitbook/assets/showcases/showcase-diariomotorcompeticion.png)](https://www.diariomotor.com/competicion/)
+
 ## Színház Online
 
 * Site: https://szinhaz.online/
 
 [![Szinhaz Online](.gitbook/assets/showcases/showcase-szinhazonline.png)](https://szinhaz.online/)
-
 
 ## FORT
 
@@ -66,6 +80,18 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > I’ve been this weekend creating a Frontity theme with the api rest of wordpress.com and the feeling is fantastic. [Read more](https://community.frontity.org/t/personal-blog/360).
 
+## SupportLogic
+
+* Site: https://www.supportlogic.io/
+
+[![SupportLogic](.gitbook/assets/showcases/showcase-supportlogic.png)](https://www.supportlogic.io/)
+
+## CrowdFarming
+
+* Site: https://www.crowdfarming.com/es/blog
+
+[![CrowdFarming](.gitbook/assets/showcases/showcase-crowdfarmingblog.png)](https://www.crowdfarming.com/es/blog)
+
 ## Tus Juegos IO
 
 * Site: [http://tusjuegos.io/](http://tusjuegos.io/)
@@ -73,6 +99,15 @@ If you have created a Frontity site, whether for a client or as a personal proje
 [![Tus Juegos IO](.gitbook/assets/showcases/showcase-tusjuegosio.png)](http://tusjuegos.io/)
 
 > It’s not my best site, but I’m proud that I made it in one day. I think you can build almost everything with Frontity. So this is an example that shows the power of mixing WordPress + React. [Read more](https://community.frontity.org/t/frontity-is-more-than-just-blogs/1165).
+
+## Shaun Guimond
+
+* Site: https://shaunguimond.com/
+* [Source code](https://github.com/Tikio88/Shaun-Guimond)
+
+[![Shaun Guimond](.gitbook/assets/showcases/showcase-shaunguimond.png)](https://shaunguimond.com/)
+
+> I just wanted to share the test blog I created with the Twenty Nineteen theme for Frontity. I feel like this is an amazing platform and I hope to learn as much as I can to create my own custom theme for Frontity. [Read more](https://community.frontity.org/t/new-coder-learning-twenty-nineteen-theme/484).
 
 ## Primitive Digital
 
