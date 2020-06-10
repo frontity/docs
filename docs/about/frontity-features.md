@@ -64,7 +64,6 @@ Apart from these extensions, there are many other **interface tools** specifical
 
 Our themes can also use any of the 80.000 React packages currently available in npm.
 
-
 ### 🌎 Perfect accessibility
 
 As part of our mission to make building sites with WordPress and React easier and more accessible, we also want to develop the framework focused on this aspect. Frontity is perfectly **accessible by default** and will provide tools that let the developers know if they break it.
