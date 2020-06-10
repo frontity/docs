@@ -11,6 +11,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 * Site: https://frontity.org/
 * [Source code](https://github.com/frontity/frontity.org)
 
+[![Frontity](.gitbook/assets/showcases/showcase-frontity.png)](https://frontity.org/)
+
 > For our new Frontity.org site did a stress test of Frontity + Gutenberg. All layouts were created using built-in blocks. The header and the footer are template parts. For the about page, we reused the same blocks, so no extra code/styles were needed (and it looks awesome). [Read more](https://twitter.com/luisherranz/status/1258757519654227968?s=20).
 
 ## Ignacio Cruz
