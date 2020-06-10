@@ -144,7 +144,7 @@ First, this is what Frontity does in the server:
 
 The client browser paints the HTML received from the server. Then, this is what Frontity does once the JavaScript is run:
 
-1. It loads the `state` in the client using the initial state received from the server. This guarantees that when we render React again we will be in very same place where we left on the server.
+1. It loads the `state` in the client using the initial state received from the server. This guarantees that when we render React again we will be in the very same place where we left on the server.
 2. It renders React again. It should produce the very same HTML we've sent from the server.
 3. It gives each package the opportunity to run code with an `afterCSR` action. CSR stands for client-side Rendering.
 
