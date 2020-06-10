@@ -45,6 +45,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 * Site: https://codeinjavascript.com
 * [Source code](https://github.com/vimalkodoth/frontity)
 
+[![Frontend Scrapbook](.gitbook/assets/showcases/showcase-frontendscrapbook.png)](https://codeinjavascript.com)
+
 > Frontity is really exciting! I was looking around for a scalable solution for a WordPress based news portal project. Doing some search on Google took me to the Frontity website. I started exploring the architecture and found it something similar to what I had in my mind, having separation of concerns - frontend and backend api. Having myself working as a developer and having experience with React, I really liked the idea and decided to give it a try. As the news portal project was moved to later this year, I thought to build a personal blog on tech to learn about the framework. With some help from the community, I could successfully setup to run Frontity as a microservice on AWS and running the backend cms on another EC2 instance. I even configured backend to work with AWS Opsworks, there by able to horizontally scale the same time. It was easy to setup and had to tweak just the frontity templates for the frontend. I'm still to explore whole range of possibilities Frontity provides for my upcoming news portal project.
 
 ## 403page.com
@@ -59,6 +61,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 ## Diariomotor Competición
 
 * Site: https://www.diariomotor.com/competicion/
+
+[![Diariomotor Competición](.gitbook/assets/showcases/showcase-diariomotorcompeticion.png)](https://www.diariomotor.com/competicion/)
 
 ## Színház Online
 
@@ -87,9 +91,13 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 * Site: https://www.supportlogic.io/
 
+[![SupportLogic](.gitbook/assets/showcases/showcase-supportlogic.png)](https://www.supportlogic.io/)
+
 ## CrowdFarming
 
 * Site: https://www.crowdfarming.com/es/blog
+
+[![CrowdFarming](.gitbook/assets/showcases/showcase-crowdfarmingblog.png)](https://www.crowdfarming.com/es/blog)
 
 ## Tus Juegos IO
 
@@ -103,6 +111,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 * Site: https://shaunguimond.com/
 * [Source code](https://github.com/Tikio88/Shaun-Guimond)
+
+[![Shaun Guimond](.gitbook/assets/showcases/showcase-shaunguimond.png)](https://shaunguimond.com/)
 
 > I just wanted to share the test blog I created with the Twenty Nineteen theme for Frontity. I feel like this is an amazing platform and I hope to learn as much as I can to create my own custom theme for Frontity. [Read more](https://community.frontity.org/t/new-coder-learning-twenty-nineteen-theme/484).
 
