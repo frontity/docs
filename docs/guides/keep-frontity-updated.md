@@ -12,9 +12,8 @@ Essential packages such as `frontity`, `@frontity/core` or `@frontity/tiny-route
 npx npm-check-updates -u
 npm install
 ```
-<!-- textlint-disable terminology -->
-With this, **you will update your `package.json` and all your dependencies in `node_modules`**, including the Frontity packages installed in **`node_modules`**.
-<!-- textlint-enable terminology -->
+
+With this, **you will update your `package.json` and all your dependencies in `node_modules`**, including the Frontity packages installed in **`node_modules`**. 
 
 If you want to update just one package you can do it with this other command:
 
