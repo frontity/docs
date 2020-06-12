@@ -212,11 +212,11 @@ export default connect(CategoryNature);
 
 #### `source.fetch` 
 
-`{ (link: string, options: object) => Promise }`
-
 This action fetches all entities related to a `link`, i.e. the pathname of a URL in your site.
 
 {% hint style="info" %}
+
+`{ (link: string, options: object) => Promise }`
 
 - **Parameters**
   - `link { string }` Link representing a REST API endpoint or custom handler 
@@ -244,11 +244,11 @@ actions.source.fetch("/category/nature/", { force: true });
 
 #### `source.get`
 
-`{ (link: string ) => object }`
-
 Returns an object that gives you info about the type of that link and related entities.
 
 {% hint style="info" %}
+
+`{ (link: string ) => object }`
 
 - **Parameters**
   - `link { string }` Link representing a REST API endpoint or custom handler 
