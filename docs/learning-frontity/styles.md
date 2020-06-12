@@ -4,7 +4,7 @@ You should now know all the concepts needed to master **Frontity**, so let's see
 
 Frontity takes a different approach than WordPress when customizing themes. While in WordPress you have different `style.css` files and you add classes to your elements, **Frontity** uses **CSS in JS** instead. But don't worry, you don't have to learn a new language, it is CSS at the end.
 
-CSS-in-JS, apart from having a better developer experience while working with React, has many other advantages like:
+CSS in JS, apart from having a better developer experience while working with React, has many other advantages like:
 
 * **Only loads the CSS needed** for each page which improves the performance
 * You **don't have to worry about classes** and its problems with duplication, typos, etc
@@ -343,16 +343,16 @@ For a more in-depth explanation about the reasons we believe it's a good approac
 
 ### Sass to CSS in JS resources
 
-CSS in JS supports all the Sass features. If you are used to SASS, our recommendation is to learn CSS-in-JS. It won't take you more than 30 minutes to learn how to do the very same things you are used to doing in Sass.
+CSS in JS supports all the Sass features. If you are used to SASS, our recommendation is to learn CSS in JS. It won't take you more than 30 minutes to learn how to do the very same things you are used to doing in Sass.
 
-These are some resource you might find useful to make the transition to CSS-in-JS:
+These are some resource you might find useful to make the transition to CSS in JS:
+<!-- textlint-disable terminology -->
+{% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8 " caption="" %}
 
-{% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8" caption="" %}
+{% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js " caption="" %}
 
-{% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js" caption="" %}
-
-{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html" caption="" %}
-
+{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html " caption="" %}
+<!-- textlint-enable terminology -->
 ### Migrating from Sass to CSS in JS
 
 If you already have a base of Sass you want to migrate, you can use these tools to extract your variables and use them directly in JavaScript:
