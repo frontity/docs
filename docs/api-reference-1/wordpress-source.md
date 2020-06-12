@@ -31,9 +31,9 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
-#### `state.source.api` \(required\)
+#### `state.source.api` (required)
 
-The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
+The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)).
 
 #### `state.source.subdirectory`
 
@@ -102,7 +102,7 @@ module.exports = {
 }
 ```
 
-and then you visit a URL \(or use `actions.source.fetch`\), the query part of the HTTP call to the REST API will be `per_page=5&type[]=post&type[]=page`.
+and then you visit a URL (or use `actions.source.fetch`), the query part of the HTTP call to the REST API will be `per_page=5&type[]=post&type[]=page`.
 
 #### `state.source.postTypes`
 
@@ -110,7 +110,7 @@ This option allows you to show the Custom Post Types you create at WordPress whe
 
 * `type` : Type slug. The slug you configured for your Custom Post Type. e.g. `movies`
 * `endpoint` : REST API endpoint from where this post type can be fetched. e.g. `movies`
-* `archive` \(optional\): the URL of the archive of this Custom Post Type, where all of them are listed. e.g. `/movies_archive` .
+* `archive` (optional): the URL of the archive of this Custom Post Type, where all of them are listed. e.g. `/movies_archive` .
 
 Differentiating `type` and `endpoint` may be confusing as they are usually the same. You can confirm you are doing it correctly going to the CPT `endpoint` :
 
@@ -134,8 +134,8 @@ Similar to `postTypes`setting, this one allows you to show the lists of posts of
 
 * `taxonomy` : Taxonomy slug. The slug you configured for your Custom Taxonomy. 
 * `endpoint` : REST API endpoint from which this taxonomy can be fetched.
-* `postTypeEndpoint` \(optional\): REST API endpoint from which posts of this taxonomy can be fetched. Default is "posts", but if the Custom Taxonomy is meant to load Custom Post Types instead, you have to add its endpoint here.
-* `params` \(optional\): Extra params to be used while fetching the list of posts.
+* `postTypeEndpoint` (optional): REST API endpoint from which posts of this taxonomy can be fetched. Default is "posts", but if the Custom Taxonomy is meant to load Custom Post Types instead, you have to add its endpoint here.
+* `params` (optional): Extra params to be used while fetching the list of posts.
 
 Again, differentiating `taxonomy` and `endpoint`may be confusing as they usually are the same too. You can confirm you are doing it correctly by going to the Custom Taxonomy `endpoint` :
 
@@ -166,14 +166,18 @@ The state is designed so that you can know which entities correspond to which li
 > **NOTE:** for the data to exist, it will be necessary to request them previously using the `fetch` action.
 
 ```jsx
-import React from "react";
+import React, {useEffect} from "react";
 import { connect } from "frontity";
 
 // In a React component that uses "connect":
 const CategoryNature = ({ state, actions }) => {
 
+
   // 1. fetch data related to a path
-  actions.source.fetch("/category/nature/");
+  useEffect(() => {
+    actions.source.fetch("/category/nature/");
+  }, []);
+
 
   // 2. get data from frontity state
   const data = state.source.get("/category/nature/");
@@ -206,9 +210,23 @@ export default connect(CategoryNature);
 
 ### Actions
 
-#### `source.fetch`
+#### `source.fetch` 
+
+`{ (link: string, options: object) => Promise }`
 
 This action fetches all entities related to a `link`, i.e. the pathname of a URL in your site.
+
+{% hint style="info" %}
+
+- **Parameters**
+  - `link { string }` Link representing a REST API endpoint or custom handler 
+  - `options { object }`
+    - `force { boolean }`: The entities should be fetched again.
+
+- **Return value**
+  - `{ Promise }` Promise resolving to data fetched
+
+{% endhint %}
 
 All received data are populated in `state.source` and are accessible using the methods explained in the next section.
 
@@ -218,8 +236,6 @@ actions.source.fetch("/category/nature/");
 
 When `fetch` is called _again_ for the same `link` it does nothing, as all the entities have already been fetched and there is no need to request them again. If you do want to fetch them again, you can pass an options object to `source.fetch` with the following properties:
 
-* `force`: a boolean indicating if the entities should be fetched again.
-
 ```javascript
 actions.source.fetch("/category/nature/", { force: true });
 ```
@@ -228,7 +244,21 @@ actions.source.fetch("/category/nature/", { force: true });
 
 #### `source.get`
 
-Returns an object that gives you info about the type of that link and related entities. For example:
+`{ (link: string ) => object }`
+
+Returns an object that gives you info about the type of that link and related entities.
+
+{% hint style="info" %}
+
+- **Parameters**
+  - `link { string }` Link representing a REST API endpoint or custom handler 
+  
+- **Return value**
+  - `{ object }` Info about the type of data represented in the URL
+
+{% endhint %}
+
+For example:
 
 ```javascript
 state.source.get("/category/nature/");
@@ -279,12 +309,12 @@ The information to distinguish each type of link is based on the [WP Template Hi
     * deal: `isDeal`
   * author: `isAuthor`
   * postTypeArchive: `isPostTypeArchive`
-    * post: `isHome`, `isPostArchive` \(`isFrontPage` optional\)
+    * post: `isHome`, `isPostArchive` (`isFrontPage` optional)
     * product: `isProductArchive`
   * date: `isDate`
 * postTypes: `isPostType`
   * post: `isPost`
-  * page: `isPage` \(`isFrontPage` optional\)
+  * page: `isPage` (`isFrontPage` optional)
   * product: `isProduct`
   * media: `isMedia`, `isAttachment`
 * 404: `is404`
@@ -377,10 +407,10 @@ Request entity from the WordPress REST API.
 
 **arguments**
 
-* `endpoint`: name of the endpoint if is a `/wp/v2` endpoint \(e.g. `posts`\), or the full path of other REST endpoints \(e.g. `/frontity/v1/discovery`\).
+* `endpoint`: name of the endpoint if is a `/wp/v2` endpoint (e.g. `posts`), or the full path of other REST endpoints (e.g. `/frontity/v1/discovery`).
 * `params`: any parameter that will be included in the query params.
-* `api` \(optional\): overrides the value set with `api.set.`
-* `isWpCom` \(optional\): overrides the value set with `api.set.`
+* `api` (optional): overrides the value set with `api.set.`
+* `isWpCom` (optional): overrides the value set with `api.set.`
 
 #### return
 
@@ -416,7 +446,7 @@ Entities are normally never overwritten. So, if an entity already exists in the 
 
 * `response`: the response object returned by `api.get().`
 * `state`: the state object from the Frontity store.
-* `subdirectory` \(optional\): domain's subdirectory where your Frontity site is accessible. When this options is passed, this subdirectory is added to the entities' links. By default, it takes the value defined in `state.source.subdirectory`.
+* `subdirectory` (optional): domain's subdirectory where your Frontity site is accessible. When this options is passed, this subdirectory is added to the entities' links. By default, it takes the value defined in `state.source.subdirectory`.
 * `force`: boolean value indicating if the entities should be overwritten.`false` by default.
 
 #### return
@@ -426,8 +456,8 @@ Entities are normally never overwritten. So, if an entity already exists in the 
 #### example
 
 ```javascript
-const response = libraries.source.api.get({ endpoint: "posts" });
-libraries.source.populate({ response, state });
+const response = await libraries.source.api.get({ endpoint: "posts" });
+await libraries.source.populate({ response, state });
 ```
 
 #### `handlers`
@@ -500,7 +530,7 @@ Utility for parsing routes.
 
 **arguments**
 
-* `route`: any route that points to entities in your site \(links, custom lists, etc.\)
+* `route`: any route that points to entities in your site (links, custom lists, etc.)
 
 #### return
 
@@ -508,7 +538,7 @@ Utility for parsing routes.
   * `path`: pathname without the page
   * `page`: the page number
   * `query`: object with query parameters
-  * `hash`: the hash value \(with `#`\).
+  * `hash`: the hash value (with `#`).
 
 #### `stringify({ path, page?, query?, hash? })`
 
@@ -517,9 +547,9 @@ Utility for building routes from its attributes.
 **arguments**
 
 * `path`: pathname without the page
-* `page` \(optional\): the page number
-* `query` \(optional\): object with query parameters
-* `hash` \(optional\): the hash value \(with `#`\).
+* `page` (optional): the page number
+* `query` (optional): object with query parameters
+* `hash` (optional): the hash value (with `#`).
 
 #### return
 
@@ -529,7 +559,7 @@ Utility for building routes from its attributes.
 
 **arguments**
 
-* `route`: any route that points to entities in your site \(links, custom lists, etc.\)
+* `route`: any route that points to entities in your site (links, custom lists, etc.)
 
 #### return
 
