@@ -8,7 +8,7 @@ You can find a detailed guide, both to learn how Frontity and `mars-theme` work 
 
 ## Demo
 
-![](../.gitbook/assets/screen-shot-2020-02-26-at-17.23.06%20%283%29.png)
+![](../.gitbook/assets/screenshot-mars-theme-demo.png)
 
 You can check out all the features in this [**theme demo**](https://mars.frontity.org/)**.**
 
