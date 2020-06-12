@@ -54,7 +54,7 @@ If you have created a Frontity site, whether for a client or as a personal proje
 ## 403page.com
 
 * Site: [https://403page.com/](https://403page.com/)
-* [Source code](https://github.com/403pagelabs/403page_live/tree/master/packages/fourothree)
+* [Source code](https://github.com/403pagelabs/fourothree-theme)
 
 ![403page](.gitbook/assets/showcase-403page%20%281%29.png)
 
