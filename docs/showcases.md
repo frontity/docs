@@ -15,6 +15,21 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > For our new Frontity.org site did a stress test of Frontity + Gutenberg. All layouts were created using built-in blocks. The header and the footer are template parts. For the about page, we reused the same blocks, so no extra code/styles were needed \(and it looks awesome\). [Read more](https://twitter.com/luisherranz/status/1258757519654227968?s=20).
 
+
+## Frontity Dimension Theme
+
+* Demo: [https://dimension.matnard.now.sh/](https://dimension.matnard.now.sh/)
+* [Source code](https://github.com/Matnard/frontity-dimension-theme#readme)
+
+> I applied Frontity on a HTML5 up template and used react-transition-group to orchestrate the animations. It's a simple site but in my opinion it was a great way to get started with Frontity. I might do another one as it was pretty fun to make.[Read more](https://community.frontity.org/t/html5-up-dimension-template-for-frontity-matnard-dimension-theme/2123).
+
+## Ben Wright
+
+* Site: [https://benwrightdev.com/](https://benwrightdev.com/)
+* [Source code](https://github.com/ben-wright/ben-frontity)
+
+> Experience with Frontity has been very good, I haven’t had to dive deep into much functionality yet because it’s a very simple site but everything was super easy to get started and the docs are comprehensive. [Read more](https://community.frontity.org/t/personal-portfolio-site/2066).
+
 ## Ignacio Cruz
 
 * Site: [https://igmoweb.com/](https://igmoweb.com/)
@@ -51,6 +66,13 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > Frontity is really exciting! I was looking around for a scalable solution for a WordPress based news portal project. Doing some search on Google took me to the Frontity website. I started exploring the architecture and found it something similar to what I had in my mind, having separation of concerns - frontend and backend api. Having myself working as a developer and having experience with React, I really liked the idea and decided to give it a try. As the news portal project was moved to later this year, I thought to build a personal blog on tech to learn about the framework. With some help from the community, I could successfully setup to run Frontity as a microservice on AWS and running the backend cms on another EC2 instance. I even configured backend to work with AWS Opsworks, there by able to horizontally scale the same time. It was easy to setup and had to tweak just the frontity templates for the frontend. I'm still to explore whole range of possibilities Frontity provides for my upcoming news portal project.
 
+## Frontity Starter Theme
+
+* Demo: [https://frontity-starter-theme.alexadark.now.sh/](https://frontity-starter-theme.alexadark.now.sh/)
+* [Source code](https://github.com/alexadark/frontity-starter-theme)
+
+> The goal of this work was first to learn Frontity building something real, and also build a tool for myself and the community, simple enough to let creativity open, allowing to build something totally different on top of it. [Read more](https://community.frontity.org/t/frontity-starter-theme/1473).
+
 ## 403page.com
 
 * Site: [https://403page.com/](https://403page.com/)
@@ -71,6 +93,13 @@ If you have created a Frontity site, whether for a client or as a personal proje
 * Site: [https://szinhaz.online/](https://szinhaz.online/)
 
 ![Szinhaz Online](.gitbook/assets/showcase-szinhazonline.png)
+
+## Frontity Chakra Theme
+
+* Demo: [https://frontity-chakra.now.sh/](https://frontity-chakra.now.sh/)
+* [Source code](https://github.com/chakra-ui/frontity-chakra-ui-theme)
+
+> I had fun building this theme for Frontity using Chakra UI. It’s really interesting to see how headless Wordpress, Frontity and Component libraries can work together to create a great experience for a website or blog. [Read more](https://twitter.com/thesegunadebayo/status/1222236405780426754?s=20).
 
 ## FORT
 
@@ -126,6 +155,13 @@ If you have created a Frontity site, whether for a client or as a personal proje
 ![Primitive Digital](.gitbook/assets/showcase-primitivedigital.png)
 
 > I must admit I’m impressed with Frontity, I’ve hit hardly any errors, which for a brand new framework is quite an achievement. [Read more](https://community.frontity.org/t/some-frontity-based-monkey-business/655).
+
+## Twenty Nineteen Frontity Theme
+
+* Demo: [https://twentynineteen.frontity.org/](https://twentynineteen.frontity.org/)
+* [Source code](https://github.com/imranhsayed/frontity-twentynineteen)
+
+> We used Mars as a starter theme which gave us a kickstart. It made it very simple for us to customize the theme. We also added pagination. [Read more](https://community.frontity.org/t/twenty-nineteen-wordpress-theme-for-frontity/438).
 
 ## [Add your Frontity site](https://forms.gle/xThoNSyh6M6rgeM97)
 
