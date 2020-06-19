@@ -85,7 +85,7 @@ Add it, and you will be provided by a [set a nameservers](https://vercel.com/doc
 
 ### Add subdomain in your project settings
 
-A subdomain can be used to seperate your Wordpress and Frontity deployments. They can be created within Vercel dashboard from the [domains section](https://vercel.com/dashboard/domains/).
+A subdomain can be used to separate your Wordpress and Frontity deployments. They can be created within Vercel dashboard from the [domains section](https://vercel.com/dashboard/domains/).
 
 To setup a subdomain for your Wordpress source, simply select your desired domain from the [list](https://vercel.com/dashboard/domains/) and [add a new DNS Record](https://vercel.com/docs/v2/custom-domains#step-2:-add-dns-record) with type A and the IP address of your Wordpress server.
 
