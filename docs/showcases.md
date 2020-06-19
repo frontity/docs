@@ -21,12 +21,16 @@ If you have created a Frontity site, whether for a client or as a personal proje
 * Demo: [https://dimension.matnard.now.sh/](https://dimension.matnard.now.sh/)
 * [Source code](https://github.com/Matnard/frontity-dimension-theme#readme)
 
+![Frontity Dimension Theme](.gitbook/assets/theme-dimension.png)
+
 > I applied Frontity on a HTML5 up template and used react-transition-group to orchestrate the animations. It's a simple site but in my opinion it was a great way to get started with Frontity. I might do another one as it was pretty fun to make.[Read more](https://community.frontity.org/t/html5-up-dimension-template-for-frontity-matnard-dimension-theme/2123).
 
 ## Ben Wright
 
 * Site: [https://benwrightdev.com/](https://benwrightdev.com/)
 * [Source code](https://github.com/ben-wright/ben-frontity)
+
+![Ben Wright](.gitbook/assets/showcase-benwright.png)
 
 > Experience with Frontity has been very good, I haven’t had to dive deep into much functionality yet because it’s a very simple site but everything was super easy to get started and the docs are comprehensive. [Read more](https://community.frontity.org/t/personal-portfolio-site/2066).
 
@@ -71,6 +75,9 @@ If you have created a Frontity site, whether for a client or as a personal proje
 * Demo: [https://frontity-starter-theme.alexadark.now.sh/](https://frontity-starter-theme.alexadark.now.sh/)
 * [Source code](https://github.com/alexadark/frontity-starter-theme)
 
+![Frontity Starter Theme](.gitbook/assets/theme-frontity-starter.png)
+
+
 > The goal of this work was first to learn Frontity building something real, and also build a tool for myself and the community, simple enough to let creativity open, allowing to build something totally different on top of it. [Read more](https://community.frontity.org/t/frontity-starter-theme/1473).
 
 ## 403page.com
@@ -98,6 +105,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 * Demo: [https://frontity-chakra.now.sh/](https://frontity-chakra.now.sh/)
 * [Source code](https://github.com/chakra-ui/frontity-chakra-ui-theme)
+
+![Frontity Chakra Theme](.gitbook/assets/theme-frontity-chakra.png)
 
 > I had fun building this theme for Frontity using Chakra UI. It’s really interesting to see how headless Wordpress, Frontity and Component libraries can work together to create a great experience for a website or blog. [Read more](https://twitter.com/thesegunadebayo/status/1222236405780426754?s=20).
 
@@ -160,6 +169,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 * Demo: [https://twentynineteen.frontity.org/](https://twentynineteen.frontity.org/)
 * [Source code](https://github.com/imranhsayed/frontity-twentynineteen)
+
+![Twenty Nineteen Frontity Theme](.gitbook/assets/theme-twentynineteen.png)
 
 > We used Mars as a starter theme which gave us a kickstart. It made it very simple for us to customize the theme. We also added pagination. [Read more](https://community.frontity.org/t/twenty-nineteen-wordpress-theme-for-frontity/438).
 
