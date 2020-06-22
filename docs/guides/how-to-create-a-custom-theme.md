@@ -33,7 +33,7 @@ The suggested structure for developing new themes that works with frontity is th
 ```
 
 {% hint style="info" %}
-This is the structure we recommend you to upload to your remote git repository (Github, Bitbucket or any other)
+***This is the structure we recommend you to upload to your remote git repository*** (Github, Bitbucket or any other)
 {% endhint %}
 
 In  this structure, the theme you're developing is a local dependency of the main `package.json`
