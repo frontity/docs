@@ -34,6 +34,14 @@ The suggested structure for developing new themes that works with Frontity is th
 
 {% hint style="info" %}
 ***This is the structure we recommend you to upload to your remote git repository*** (Github, Bitbucket or any other)
+
+Examples:
+- https://github.com/chakra-ui/frontity-chakra-ui-theme
+- https://github.com/imranhsayed/frontity-twentynineteen
+- https://github.com/alexadark/frontity-starter-theme
+- https://github.com/igmoweb/igmoweb.com
+- https://github.com/goiblas/personal-blog
+
 {% endhint %}
 
 In  this structure, the theme you're developing is a local dependency of the main `package.json`
@@ -63,10 +71,8 @@ This structure implies having a main Frontity project (root `package.json`) and 
 ```
 
 So, to create a custom theme project we recommend you to:
-1.
-Create a Frontity project → `npx frontity create awesome-theme-project`
-1.
-Create a Frontity package (your theme) → `npx frontity create-package awesome-theme`
+1. Create a Frontity project → `npx frontity create awesome-theme-project`
+1. Create a Frontity package (your theme) → `npx frontity create-package awesome-theme`
 
 ### [The Project](https://docs.frontity.org/learning-frontity/project)
 
