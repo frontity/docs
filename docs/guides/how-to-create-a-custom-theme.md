@@ -168,7 +168,7 @@ npx frontity dev
 
 This will launch the Frontity project using this theme
 
-## Publishing the theme
+### Publish the theme (as NPM package)
 
 As we can see `frontity-chakra-theme` is published as [an NPM package](https://www.npmjs.com/package/frontity-chakra-theme)
 
