@@ -9,7 +9,7 @@ Whatever the case is, you may want the community:
 - to be able to install it locally so it can be debugged → this will help the community to help you with any issue you may have with your project/theme
 - to be able to install it as an NPM package (eventually) so it can be easily reused in some other projects
 
-So, there are a few things to consider to ease contributions and support from the community to your theme
+Here you have a few things to consider to ease contributions and support from the community to your theme
 
 ## A Frontity _theme_ project structure
 
@@ -97,7 +97,9 @@ This `package.json` is used when you publish a package in NPM, but this Frontity
 
 ### The Theme
 
-So, with this structure you can develop your theme as a package inside the `packages` folder. Each one of these _packages_ will have its own `package.json` and these packages are the ones meant to be published (`npm publish`)
+With this structure you can develop your theme as a package inside the `packages` folder. 
+
+Each one of these _packages_ will have its own `package.json` and these packages are the ones meant to be published (`npm publish`)
 
 > In frontity you can create a new package by doing `npx frontity  create-package <my package name>` (from the root of the Frontity project)
 
