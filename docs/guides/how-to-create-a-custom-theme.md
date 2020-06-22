@@ -53,8 +53,8 @@ In  this structure, the theme you're developing is a local dependency of the mai
 ```
 
 {% hint style="info" %}
-This type of dependency is automatically defined if you create the package (theme) w/ the Frontity command `npx frontity create-package awesome-theme`
-Read more about [`frontity create-package`](../frontity-cli/create-package.md)
+This type of dependency is automatically defined if you create the package (theme) w/ the Frontity command `npx frontity create-package awesome-theme`  
+» Read more about [`frontity create-package`](../frontity-cli/create-package.md)
 {% endhint %}
 
 This structure implies having a main Frontity project (root `package.json`) and some packages (each one with its own `package.json`) under the `packages` folder
@@ -119,8 +119,8 @@ With this structure you can develop your theme as a package inside the `packages
 Each one of these _packages_ will have its own `package.json` and these packages are the ones meant to be published (`npm publish`)
 
 {% hint style="info" %}
-In Frontity you can create a new package by doing `npx frontity  create-package <my package name>` (from the root of the Frontity project)
-Read more about [`frontity create-package`](../frontity-cli/create-package.md)
+In Frontity you can create a new package by doing `npx frontity  create-package <my package name>` (from the root of the Frontity project)  
+» Read more about [`frontity create-package`](../frontity-cli/create-package.md)
 {% endhint %}
 
 ### Why this structure?
@@ -180,8 +180,7 @@ So, as Frontity Chakra Theme is also one of the dependencies ([a local dependenc
 All needed dependencies (the ones defined for the Frontity project and the ones defined for the theme) are installed
 
 {% hint style="info" %}
-More info about this → `npm install <folder>`
-https://docs.npmjs.com/cli/install
+[Read more about](https://docs.npmjs.com/cli/install) `npm install <folder>`
 {% endhint %}
 
 Once we have all the dependencies installed you can do (from the root)
