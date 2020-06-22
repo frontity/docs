@@ -24,7 +24,7 @@ export default {
 
 Usually, a React app injects it's code in a `<div>` of the body, like this:
 
-{% code title="/index.html \(rendered by Frontity\)" %}
+{% code title="/index.HTML \(rendered by Frontity\)" %}
 ```markup
 <html>
   <head>...</head>
@@ -39,7 +39,7 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 
 **Frontity** uses that `<div id="root">` to inject the roots of all the packages that are installed:
 
-{% code title="/index.html \(rendered by Frontity\)" %}
+{% code title="/index.HTML \(rendered by Frontity\)" %}
 ```jsx
 <html>
   <head>...</head>
@@ -56,9 +56,11 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 
 Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it also. For example, let's imagine a _ShareModal_ package that has a modal like this:
 
-![](../.gitbook/assets/blog-frontity-org%20%281%29.jpg)
+![](../.gitbook/assets/screenshot-blog-mobile-share.jpg)
 
-This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme. The **root** could be something like this:
+This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme.
+
+The **root** could be something like this:
 
 {% code title="/packages/my-share-modal-package/src/components/index.js" %}
 ```jsx
@@ -100,7 +102,7 @@ export default {
 
 Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if there is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
 
-![](../.gitbook/assets/blog%20%282%29.jpg)
+![](../.gitbook/assets/screenshot-mobile-share.jpg)
 
 I hope you're starting to see how extensibility works in **Frontity**, but don't worry too much now, we'll talk in more detail later.
 
@@ -118,13 +120,15 @@ const MyPackage = () => (
 );
 ```
 
-So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`. For a more detailed explanation you can check [Head page](head.md).
+So even though **Frontity** only allows packages to insert React nodes in the `<div id="root">` of the body, they can also modify the `<head>` by adding tags inside a `<Head>`.
+
+For a more detailed explanation you can check [Head page](head.md).
 
 ## Fills
 
 **Frontity** uses an extensibility pattern called **Slot and Fill** to extend your themes. It works like this:
 
-1. In your theme, you include **Slots** where other packages can place content.
+1. In your theme, you include **Slots** where other packages can place content
 
 ```jsx
 import { Slot } from "frontity";
@@ -172,7 +176,7 @@ export default {
 
 Frontity will insert them after the **roots** to ensure they work correctly:
 
-{% code title="/index.html \(rendered by Frontity\)" %}
+{% code title="/index.HTML \(rendered by Frontity\)" %}
 ```markup
 <html>
   <head>...</head>

@@ -18,7 +18,7 @@ This section is the heart of our documentation. Once you've nailed the basics in
 
 ## **Architecture and Deployment**
 
-Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](https://github.com/frontity/gitbook-docs/tree/a6a79476ae299fdebf52cf13ddeaca9ede179f24/docs/architecture/README.md) section and, once you have a working application that you're happy with, how to deploy to live in the [**Deployment**](deployment/) section.
+Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**]() section and, once you have a working application that you're happy with, how to deploy to live in the [**Deployment**](deployment/) section.
 
 ## **Packages and Themes**
 
@@ -30,11 +30,15 @@ The included themes, namely Mars and TwentyTwenty, are dealt with separately fro
 
 ## **Guides**
 
-This is where you'll find an ever-growing series of [**Guides**](guides/). Some will help you in working with Frontity. Others will give you ideas for projects and provide you with the help you need to guide you from first steps to fully working project. This is where you can really have fun with Frontity and work toward your stretch goals.
+This is where you'll find an ever-growing series of [**Guides**](guides/). Some will help you in working with Frontity. Others will give you ideas for projects and provide you with the help you need to guide you from first steps to fully working project.
+
+This is where you can really have fun with Frontity and work toward your stretch goals.
 
 ## **Contributing**
 
-Frontity is an open source project and we welcome contributions from the community. The [**Contributing**](contributing/) section of the documentation will guide you whether you want to make a single contribution or whether you intend to become a fully fledged contributor to the Frontity project. We can't wait to see where you take Frontity in the future.
+Frontity is an open source project and we welcome contributions from the community. The [**Contributing**](contributing/) section of the documentation will guide you whether you want to make a single contribution or whether you intend to become a fully fledged contributor to the Frontity project.
+
+We can't wait to see where you take Frontity in the future.
 
 ## **And that's not all**
 

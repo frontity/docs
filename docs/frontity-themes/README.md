@@ -6,12 +6,22 @@ You can find all the Frontity themes looking for the tag [`frontity-theme`](http
 
 ## Frontity themes
 
-* [@frontity/twentytwenty-theme]()
-* [@frontity/mars-theme]()
+* [@frontity/twentytwenty-theme](frontity-twentytwenty-theme.md)
+* [@frontity/mars-theme](frontity-mars-theme.md)
 
 ## **Third Party themes**
 
-* [frontity-chakra-theme](https://github.com/chakra-ui/frontity-chakra-ui-theme)
-* [twentynineteen-theme](https://github.com/imranhsayed/frontity-twentynineteen)
-* [primitiveone](https://www.npmjs.com/package/primitiveone)
+Frontity Starter Theme by Alexandra Spalato:
 
+* [Live demo](https://frontity-starter-theme.alexadark.now.sh/)
+* [GitHub repo](https://github.com/alexadark/frontity-starter-theme)
+
+Frontity Chakra Theme by Segun Adebayo:
+
+* [Live demo](https://frontity-chakra.now.sh/)
+* [GitHub repo](https://github.com/chakra-ui/frontity-chakra-ui-theme)
+
+Twenty Nineteen Frontity Theme by Imran Sayed and Smit Patadiya:
+
+* [Live demo](https://twentynineteen.frontity.org/)
+* [GitHub repo](https://github.com/imranhsayed/frontity-twentynineteen)

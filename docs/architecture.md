@@ -2,32 +2,34 @@
 
 In the Frontity Architecture, WordPress is used as a [headless CMS](https://css-tricks.com/what-is-a-headless-cms/) and we use Frontity to generate the final HTML that is displayed in the browser. This means that WordPress is used just for managing the content.
 
-* Frontity uses the WordPress REST-API to retrieve content and it then generates the final HTML.
-* Frontity is also able to generate AMP pages with the same React code and CSS.
+* Frontity uses the WordPress REST-API to retrieve content and it then generates the final HTML
+* Frontity is also able to generate AMP pages with the same React code and CSS
 
 ![](.gitbook/assets/direct-to-frontity.png)
 
-This solution requires **a PHP Server for WordPress and a Node Server for Frontity**, as well as a new domain for your WordPress site as the main one will be used by Frontity, although you can use a sub-domain on your existing domain.
+This solution requires **a PHP Server for WordPress and a Node.js Server for Frontity**, as well as a new domain for your WordPress site as the main one will be used by Frontity, although you can use a sub-domain on your existing domain.
 
 Some advantages of this approach:
 
 * Perfect fit for users with free wordpress.com blogs \(e.g. myblog.wordpress.com\)
-* Fastest server side rendering \(no useless WordPress request needed\).
+* Fastest server-side rendering \(no useless WordPress request needed\)
 
 Some things to take into account:
 
-* Users need to change their WordPress domain.
-* A node server to run Frontity is needed \(besides the WP one\)
-* The server side rendering is still slow if the WordPress site is slow, so it may need a cache layer on top.
+* Users need to change their WordPress domain
+* A Node.js server to run Frontity is needed \(besides the WP one\)
+* The server-side rendering is still slow if the WordPress site is slow, so it may need a cache layer on top
 
 ### Server hostings
 
-You will need to have one or two servers. At the very least, you will need a PHP server to run your WordPress and, in most of the cases, you will also need a Node server to run Frontity.
+You will need to have one or two servers. At the very least, you will need a PHP server to run your WordPress and, in most of the cases, you will also need a Node.js server to run Frontity.
 
 **💡 Recommendation:**
 
-1. PHP Server: In this case, we recommend to **continue using your actual server** for WordPress site or select your preferred hosting service such as [Siteground](https://www.siteground.com), [Raiola Networks](https://raiolanetworks.es/), [Webempresa](https://www.webempresa.com/) or any other.
-2. Node Server: In case you need this one, we would recommend to choose a [**serverless**](https://about.gitlab.com/topics/serverless/) **solution** as it will make it cheap, easy and infinitely scalable. We would select [Vercel Now](https://vercel.com/docs/now-cli#commands/overview) because it is really easy to set up and includes a CDN too, but there are other good options like [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/).
+1. PHP Server: In this case, we recommend to **continue using your actual server** for WordPress site or select your preferred hosting service such as [Siteground](https://www.siteground.com), [Raiola Networks](https://raiolanetworks.es/), [Webempresa](https://www.webempresa.com/) or any other
+2. Node.js Server: In case you need this one, we would recommend to choose a [**serverless**](https://about.gitlab.com/topics/serverless/) **solution** as it will make it cheap, easy and infinitely scalable.
+
+   We would select [Vercel Now](https://vercel.com/docs/now-cli#commands/overview) because it is really easy to set up and includes a CDN too, but there are other good options like [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/)
 
 You can check out our documentation [how to deploy Frontity using `now` \(Vercel\)](https://docs.frontity.org/deployment/deploy-using-now-vercel).
 
@@ -39,13 +41,17 @@ If you want to know more about what Serverless means you should check out [this 
 
 You will need to have two different domains, or a separate sub-domain on your existing domain:
 
-* one for the WordPress dashboard
-* and the other one to show the content retrieved from the API. 
+* One for the WordPress dashboard
+* And the other one to show the content retrieved from the API. 
 
 **💡 Recommendation:**
 
-1. Point your main domain **www.mydomain.com to Frontity,** as it will be the domain your users will visit.
-2. **Create a new subdomain** for your admin dashboard, where you will access the UI to edit your content. Using a subdomain will prevent you from buying a new one. You could use, for example, **wp.mydomain.com**.
+1. Point your main domain **www.mydomain.com to Frontity,** as it will be the domain your users will visit
+2. **Create a new subdomain** for your admin dashboard, where you will access the UI to edit your content.
+
+   Using a subdomain will prevent you from buying a new one.
+
+   You could use, for example, **wp.mydomain.com**
 
 {% hint style="info" %}
 In case you use WordPress.com, you can use **mydomain.wordpress.com** to manage your content and point Frontity to **www.mydomain.com**.
@@ -67,10 +73,12 @@ If you use Vercel Now, the serverless option we recommend, you won't have to wor
 
 Although there are some other ways to have a have a Frontity site running in production and the final solution may be different depending on the website, for the majority of sites we recommend:
 
-1. Having the WordPress dashboard in a PHP server and Frontity in a Node Server.
-2. **Keep the actual PHP server** you are using for WordPress for your backend \(or select a new one\), and [**deploy Frontity using `now` \(Vercel\)**](https://docs.frontity.org/deployment/deploy-using-now-vercel), a serverless, cheap, infinitely scalable and easy to set up solution.
-3. Point your main domain www.myblog.com to Frontity and use a subdomain \(wp.myblog.com\) for WordPress.
-4. If you have selected Now as your Node server solution, you won't need to worry about this, as it offers a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering) as they name it\). If you selected another solution, we would recommend you to use [KeyCDN](https://www.keycdn.com) or [StackPath](https://www.stackpath.com/) as additional services.
+1. Having the WordPress dashboard in a PHP server and Frontity in a Node.js Server
+2. **Keep the actual PHP server** you are using for WordPress for your backend \(or select a new one\), and [**deploy Frontity using `now` \(Vercel\)**](https://docs.frontity.org/deployment/deploy-using-now-vercel), a serverless, cheap, infinitely scalable and easy to set up solution
+3. Point your main domain www.myblog.com to Frontity and use a subdomain \(wp.myblog.com\) for WordPress
+4. If you have selected Now as your Node.js server solution, you won't need to worry about this, as it offers a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering) as they name it\).
+
+   If you selected another solution, we would recommend you to use [KeyCDN](https://www.keycdn.com) or [StackPath](https://www.stackpath.com/) as additional services
 
 {% hint style="info" %}
 Still have questions? Ask in the [community](https://community.frontity.org)! We are here to help 😊

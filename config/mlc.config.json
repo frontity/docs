@@ -1,0 +1,8 @@
+{
+  "ignorePatterns": [
+      { "pattern": "http://localhost:3000" },
+      { "pattern": "https://github.com/_{YOURUSERNAME}_/frontity/" },
+      { "pattern": "https://mysite.com/blog" }
+
+  ]
+}

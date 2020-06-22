@@ -8,10 +8,15 @@ Frontity is a **React-based framework** that enables you to easily build a front
 
 To get started with Frontity you will need:
 
-* **A WordPress installation** - This can be hosted locally, on a web-server, or you can also use a site hosted on wordpress.com. However, when you spin up your first Frontity project you will initially be connected to our test site so you won't be without content when you first try Frontity.
-* **Node installed in your computer** - If you don't already have it you can get **Node** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node. You will use these to run Frontity commands during the set-up and development of your project.
+* **A WordPress installation** - This can be hosted locally, on a web-server, or you can also use a site hosted on wordpress.com.
 
-> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture.md) section of these docs.
+  However, when you spin up your first Frontity project you will initially be connected to our test site so you won't be without content when you first try Frontity
+
+* **Node.js installed in your computer** - If you don't already have it you can get **Node.js** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node.js.
+
+  You will use these to run Frontity commands during the set-up and development of your project
+
+> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](./) section arch these docs.
 
 ## Initial checks
 
@@ -33,9 +38,9 @@ For wordpress.com:
 https://public-api.wordpress.com/wp/v2/sites/your-wp-site.wordpress.com
 ```
 
-### Node
+### Node.js
 
-To test if you have Node installed open your terminal and run:
+To test if you have Node.js installed open your terminal and run:
 
 ```text
 node -v
@@ -45,7 +50,7 @@ node -v
 npm -v
 ```
 
-Once you have a WordPress site and Node you're good to go and all set to get up and running....
+Once you have a WordPress site and Node.js you're good to go and all set to get up and running....
 
 ## Get up and running
 

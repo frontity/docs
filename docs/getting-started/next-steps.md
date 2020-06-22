@@ -1,6 +1,8 @@
 # Next steps
 
-Now that you've set Frontity up and connected it to your WordPress site you're now ready to start customising Frontity to render the content and appearance that you want for your site. This is where the fun begins. 🙌
+Now that you've set Frontity up and connected it to your WordPress site you're now ready to start customising Frontity to render the content and appearance that you want for your site.
+
+This is where the fun begins. 🙌
 
 ## Edit the starter theme
 
@@ -20,12 +22,12 @@ Once you are happy with your site and are ready to deploy it to production you c
 npx frontity build
 ```
 
-to create a production-ready bundle.
+To create a production-ready bundle.
 
-It will create a `/build` folder with a `server.js` file and a `/static` folder with all your javascript files and other assets. You can either
+It will create a `/build` folder with a `server.js` file and a `/static` folder with all your JavaScript files and other assets. You can either
 
-* Use `npx frontity serve` to run it like a normal Node app.
-* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](https://github.com/frontity/gitbook-docs/tree/33bf814a531faac9b997b67c7d0557ba67116189/docs/installation-and-deploy/deploy-on-now.md) or [Netlify](https://www.netlify.com/?ref=frontity).
+* Use `npx frontity serve` to run it like a normal Node.js app
+* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](../deployment/deploy-using-now-vercel.md) or [Netlify](https://www.netlify.com/?ref=frontity)
 
 For more info on deploying your site please refer to the [Deployment](../deployment/) section.
 

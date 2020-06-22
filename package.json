@@ -5,14 +5,31 @@
   "directories": {
     "doc": "docs"
   },
+  "license": "Apache-2.0",
+  "scripts": {
+    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config config/mlc.config.json ';'",
+    "check-links:quiet": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check -q -v '{}' --config config/mlc.config.json ';'",
+    "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint '{}' ';'",
+    "textlint:all:only-errors": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --quiet '{}' ';'",
+    "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint -c config/terminology.config.json '{}' ';'",
+    "textlint:all:terminology:fix": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --fix -c config/terminology.config.json '{}' ';'",
+    "textlint:all:rousseau": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-rousseau '{}' ';'",
+    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'",
+    "all-contributors:generate": "all-contributors generate"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontity/gitbook-docs.git"
   },
   "homepage": "https://github.com/frontity/gitbook-docs#readme",
   "devDependencies": {
+    "all-contributors-cli": "^6.15.0",
     "dictionary-en-au": "^2.2.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "markdown-link-check": "^3.8.1",
     "textlint": "^11.6.3",
+    "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-alex": "^1.3.1",
     "textlint-rule-common-misspellings": "^1.0.1",
     "textlint-rule-en-capitalization": "^2.0.2",
@@ -24,5 +41,67 @@
     "textlint-rule-spelling": "^0.2.0",
     "textlint-rule-terminology": "^2.1.4",
     "textlint-rule-write-good": "^1.6.2"
-  }
+  },
+  "lint-staged": {
+    "*.md": "textlint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged -v"
+    }
+  },
+  "textlint": {
+    "filters": {
+      "comments": true
+    },
+    "rules": {
+      "alex": {
+        "allow": [],
+        "severity": "warning"
+      },
+      "en-capitalization": {
+        "severity": "warning"
+      },
+      "no-empty-section": {
+        "severity": "warning"
+      },
+      "one-sentence-per-line": {
+        "severity": "warning"
+      },
+      "period-in-list-item": {
+        "severity": "warning"
+      },
+      "rousseau": {
+        "showLevels": [
+          "suggestion",
+          "warning",
+          "error"
+        ],
+        "ignoreInlineNodeTypes": [
+          "Code",
+          "Html"
+        ],
+        "severity": "warning"
+      },
+      "terminology": {
+        "defaultTerms": true,
+        "terms": [
+          "Frontity",
+          "PHP",
+          "Vercel",
+          [
+            "zeit",
+            "Vercel"
+          ]
+        ],
+        "exclude": [
+          "HTTPS"
+        ]
+      },
+      "write-good": {
+        "severity": "warning"
+      }
+    }
+  },
+  "dependencies": {}
 }
