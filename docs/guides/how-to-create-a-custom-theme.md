@@ -1,25 +1,25 @@
 # Creating a custom theme for Frontity
 
 When you create a Frontity project most of the times you'll end up creating a custom theme:
-- because you need some specific design and features for your project
-- because you directly want to create a theme that can be reused by others (like [@frontity/mars-theme](https://www.npmjs.com/package/@frontity/mars-theme) or [@frontity/twentytwenty-theme](https://www.npmjs.com/package/@frontity/twentytwenty-theme))
+- Because you need some specific design and features for your project
+- Because you directly want to create a theme that can be reused by others (like [@frontity/mars-theme](https://www.npmjs.com/package/@frontity/mars-theme) or [@frontity/twentytwenty-theme](https://www.npmjs.com/package/@frontity/twentytwenty-theme))
 
 Whatever the case is, you may want the community:
-- to be able to check the code of your theme
-- to be able to install it locally so it can be debugged → this will help the community to help you with any issue you may have with your project/theme
-- to be able to install it as an NPM package (eventually) so it can be easily reused in some other projects
+- To be able to check the code of your theme
+- To be able to install it locally so it can be debugged → this will help the community to help you with any issue you may have with your project/theme
+- To be able to install it as an npm package (eventually) so it can be easily reused in some other projects
 
 Here you have a few things to consider to ease contributions and support from the community to your theme
 
 ## A Frontity _theme_ project structure
 
-In Frontity, _themes_ are packages that can be published in NPM so they can be installed and used in any other Frontity project
+In Frontity, _themes_ are packages that can be published in npm so they can be installed and used in any other Frontity project
 
 {% hint style="info" %}
 You can find all the Frontity themes looking for the tag [`frontity-theme`](https://www.npmjs.com/search?q=keywords:frontity-theme) at npm
 {% endhint %}
 
-The suggested structure for developing new themes that works with frontity is the following one
+The suggested structure for developing new themes that works with Frontity is the following one
 
 ```text
 /my-frontity-project
@@ -45,7 +45,8 @@ In  this structure, the theme you're developing is a local dependency of the mai
 ```
 
 {% hint style="info" %}
-This type of dependency is automatically defined if you create the package (theme) w/ the frontity command `npx frontity create-package awesome-theme`
+This type of dependency is automatically defined if you create the package (theme) w/ the Frontity command `npx frontity create-package awesome-theme`
+Read more about [`frontity create-package`](../frontity-cli/create-package.md)
 {% endhint %}
 
 This structure implies having a main Frontity project (root `package.json`) and some packages (each one with its own `package.json`) under the `packages` folder
@@ -62,8 +63,10 @@ This structure implies having a main Frontity project (root `package.json`) and 
 ```
 
 So, to create a custom theme project we recommend you to:
-1. Create a Frontity project → `npx frontity create awesome-theme-project`
-1. Create a Frontity package (your theme) → `npx frontity create-package awesome-theme`
+1.
+Create a Frontity project → `npx frontity create awesome-theme-project`
+1.
+Create a Frontity package (your theme) → `npx frontity create-package awesome-theme`
 
 ### [The Project](https://docs.frontity.org/learning-frontity/project)
 
@@ -97,7 +100,7 @@ A [`packages`](https://docs.frontity.org/learning-frontity/project#the-packages-
 
 And a [`package.json`](https://docs.frontity.org/learning-frontity/project#the-package-json-file) with the configuration & dependencies for the Frontity project. 
 
-This `package.json` is used when you publish a package in NPM, but this Frontity project is not meant to be published
+This `package.json` is used when you publish a package in npm, but this Frontity project is not meant to be published
 
 {% hint style="info" %}
 Notice the `"private": true` preventing this package (the main Frontity project defined in the root) being published
@@ -110,7 +113,8 @@ With this structure you can develop your theme as a package inside the `packages
 Each one of these _packages_ will have its own `package.json` and these packages are the ones meant to be published (`npm publish`)
 
 {% hint style="info" %}
-In frontity you can create a new package by doing `npx frontity  create-package <my package name>` (from the root of the Frontity project)
+In Frontity you can create a new package by doing `npx frontity  create-package <my package name>` (from the root of the Frontity project)
+Read more about [`frontity create-package`](../frontity-cli/create-package.md)
 {% endhint %}
 
 ### Why this structure?
@@ -127,7 +131,7 @@ And also, the owner of the theme still can publish those new updates independent
 
 Let's take [**Frontity Chakra Theme**](https://github.com/chakra-ui/frontity-chakra-ui-theme) as an example of a Frontity theme available:
 
-- As [an NPM package](https://www.npmjs.com/package/frontity-chakra-theme) ready to be installed and used as a theme in any Frontity project 
+- As [an npm package](https://www.npmjs.com/package/frontity-chakra-theme) ready to be installed and used as a theme in any Frontity project 
 - In a [GitHub repository](https://github.com/chakra-ui/frontity-chakra-ui-theme) ready to be cloned and launched locallly, and also ready to accept contributions from the community via Pull Requests
 
 {% hint style="info" %}
@@ -138,7 +142,7 @@ If you want to know more about Pull Requests you can take a look at:
 
 ### Clone and launch it locally
 
-Once we [clone the theme](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) we can see the project  follows the structure of a typical frontity project
+Once we [clone the theme](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) we can see the project  follows the structure of a typical Frontity project
 
 ```text
 /frontity-chakra-ui-theme
@@ -167,7 +171,7 @@ So, as Frontity Chakra Theme is also one of the dependencies ([a local dependenc
   }
 ```
 
-All needed dependencies (the ones defined for the frontity project and the ones defined for the theme) are installed
+All needed dependencies (the ones defined for the Frontity project and the ones defined for the theme) are installed
 
 {% hint style="info" %}
 More info about this → `npm install <folder>`
@@ -182,9 +186,9 @@ npx frontity dev
 
 This will launch the Frontity project using this theme
 
-### Publish the theme (as NPM package)
+### Publish the theme (as npm package)
 
-As we can see `frontity-chakra-theme` is published as [an NPM package](https://www.npmjs.com/package/frontity-chakra-theme)
+As we can see `frontity-chakra-theme` is published as [an npm package](https://www.npmjs.com/package/frontity-chakra-theme)
 
 ```
 > npm search frontity-chakra-theme
@@ -192,7 +196,8 @@ NAME                      | DESCRIPTION          | AUTHOR          | DATE       
 frontity-chakra-theme     | A frontity theme…    | =segunadebayo   | 2020-01-28 | 0.0.2    | wordpress frontity frontity-theme frontity
 ```
 
-How did [@segunadebayo](https://github.com/segunadebayo) published this theme once he finished it? Just by doing:
+How did [@segunadebayo](https://github.com/segunadebayo) published this theme once he finished it?
+Just by doing:
 
 ```
 cd packages/frontity-chakra-theme

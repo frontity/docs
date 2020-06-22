@@ -175,4 +175,3 @@ If you have created a Frontity site, whether for a client or as a personal proje
 > We used Mars as a starter theme which gave us a kickstart. It made it very simple for us to customize the theme. We also added pagination. [Read more](https://community.frontity.org/t/twenty-nineteen-wordpress-theme-for-frontity/438).
 
 ## [Add your Frontity site](https://forms.gle/xThoNSyh6M6rgeM97)
-
