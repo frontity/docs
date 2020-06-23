@@ -5,13 +5,17 @@
   "directories": {
     "doc": "docs"
   },
+  "license": "Apache-2.0",
   "scripts": {
-    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config mlc_config.json ';'",
-    "check-links:quiet": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check -q -v '{}' --config mlc_config.json ';'",
+    "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config config/mlc.config.json ';'",
+    "check-links:quiet": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check -q -v '{}' --config config/mlc.config.json ';'",
     "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint '{}' ';'",
-    "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-terminology '{}' ';'",
+    "textlint:all:only-errors": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --quiet '{}' ';'",
+    "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint -c config/terminology.config.json '{}' ';'",
+    "textlint:all:terminology:fix": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --fix -c config/terminology.config.json '{}' ';'",
     "textlint:all:rousseau": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-rousseau '{}' ';'",
-    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'"
+    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'",
+    "all-contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,7 @@
   },
   "homepage": "https://github.com/frontity/gitbook-docs#readme",
   "devDependencies": {
+    "all-contributors-cli": "^6.15.0",
     "dictionary-en-au": "^2.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
@@ -55,22 +60,13 @@
         "allow": [],
         "severity": "warning"
       },
-      "common-misspellings": {
-        "ignore": [],
-        "severity": "warning"
-      },
       "en-capitalization": {
         "severity": "warning"
       },
       "no-empty-section": {
         "severity": "warning"
       },
-      "no-exclamation-question-mark": {
-        "severity": "warning"
-      },
-      "one-sentence-per-line": {
-        "severity": "warning"
-      },
+      "one-sentence-per-line": false,
       "period-in-list-item": {
         "severity": "warning"
       },
@@ -90,7 +86,12 @@
         "defaultTerms": true,
         "terms": [
           "Frontity",
-          "PHP"
+          "PHP",
+          "Vercel",
+          [
+            "zeit",
+            "Vercel"
+          ]
         ],
         "exclude": [
           "HTTPS"
@@ -100,5 +101,6 @@
         "severity": "warning"
       }
     }
-  }
+  },
+  "dependencies": {}
 }

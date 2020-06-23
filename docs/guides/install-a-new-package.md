@@ -1,17 +1,17 @@
 # Install a new Frontity package
 
-During the development of your project, you may want to install new Frontity packages, or even change the ones you are using \(for example if you want to use a different theme or a different analytics service\). In order to do this, you'll need to:
+During the development of your project, you may want to install new Frontity packages, or even change the ones you are using (for example if you want to use a different theme or a different analytics service). In order to do this, you'll need to:
 
 1. Install the Frontity package.
 2. Add it to `frontity.settings.js`.
 
 {% hint style="info" %}
-Please note that this process is only necessary for Frontity packages. If you want to install a npm package you can use the normal `npm install some-package` procedure.
+Please note that this process is only necessary for Frontity packages. If you want to install an npm package you can use the normal `npm install some-package` procedure.
 {% endhint %}
 
 ## 1. Install the package
 
-At this point, you need to differentiate between the external packages \(which aren't meant to be modified\) and the local packages \(the ones you want to change at your will\), because its installation will be slightly different. If you want to understand better how external and local packages work you can check its [docs page](../learning-frontity/packages.md).
+At this point, you need to differentiate between the external packages (which aren't meant to be modified) and the local packages (the ones you want to change at your will), because its installation will be slightly different. If you want to understand better how external and local packages work you can check its [docs page](../learning-frontity/packages.md).
 
 ### External packages
 
@@ -54,7 +54,7 @@ We are planning to release a new command, that will take care of all these steps
 
 Once installed, the process it's the same for both external and local packages.
 
-You have to include it in your `frontity.settings.js` , inside the `packages` array to make it work. Remember to check if any settings are needed and include them as well \(You can check that at each specific [Frontity Package](../api-reference-1/) or [Frontity Theme](../frontity-themes/)\).
+You have to include it in your `frontity.settings.js` , inside the `packages` array to make it work. Remember to check if any settings are needed and include them as well (You can check that at each specific [Frontity Package](../api-reference-1/) or [Frontity Theme](../frontity-themes/)).
 
 ```javascript
 const settings = {

@@ -30,7 +30,7 @@ export default [
 
 One **Frontity** installation can serve content for multiple sites. This is useful if you have severals blogs and want to manage all of them with the same installation. Both the packages and settings of each site are independent.
 
-To distinguish between different sites, you must use a `match` setting. Each time a new request is received by **Frontity**, it tests the url against the `match` field to know which site it should load:
+To distinguish between different sites, you must use a `match` setting. Each time a new request is received by **Frontity**, it tests the URL against the `match` field to know which site it should load:
 
 ```javascript
 export default [
@@ -47,7 +47,7 @@ export default [
 ]
 ```
 
-For example, if the url is `https://www.site-1.com/my-post` the `"site-1"` settings are loaded and if the url is `https://www.site-2.com/category/some-cat` the `"site-2"` settings are loaded.
+For example, if the URL is `https://www.site-1.com/my-post` the `"site-1"` settings are loaded and if the URL is `https://www.site-2.com/category/some-cat` the `"site-2"` settings are loaded.
 
 In development, you can access a specific site using the `?name=` query:
 
@@ -83,7 +83,7 @@ export default [
 
 As you can see, they have an `active` prop. That means you can deactivate a package without having to delete it from your settings file.
 
-In **Frontity**, all the code is contained in packages. In a sense it is more similar to WordPress, where all the code is contained in your theme and plugins, than to other javascript frameworks. This is obviously on purpose, but we will explain the reasons later when we talk about packages and namespaces :\)
+In **Frontity**, all the code is contained in packages. In a sense it is more similar to WordPress, where all the code is contained in your theme and plugins, than to other JavaScript frameworks. This is obviously on purpose, but we will explain the reasons later when we talk about packages and namespaces :\)
 
 That's pretty much it about packages for now.
 
@@ -93,7 +93,7 @@ The last thing you need to know to work with your `frontity.settings.js` file ar
 
 As you have probably already noticed, we don't use `settings`, we use `state`. That's on purpose as well.
 
-If you come from a WordPress background, you can think of **Frontity** `state`as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or MobX. That `state` is accessible by your packages at run time.
+If you come from a WordPress background, you can think of **Frontity** `state`as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or MobX. That `state` is accessible by your packages at runtime.
 
 You have the opportunity to modify the initial `state` of your site in the `frontity.settings.js` file. You can do it in a general `state` object or inside packages.
 

@@ -5,7 +5,7 @@ Frontity, as an open source project, welcomes everyone to contribute to code, so
 The most common way to suggest improvements or changes to Frontity \(and most of the projects\) is to copy the Frontity project to your own repository and make there all the changes you want. Once you consider they are okay, make a pull request to submit your contribution to Frontity.
 
 {% hint style="info" %}
-Before starting, the only **prerequisite is to have Node 10 installed in your computer**.
+Before starting, the only **prerequisite is to have Node.js 10 installed in your computer**.
 {% endhint %}
 
 ## Quick guide
@@ -75,7 +75,7 @@ Once you have finished, for adding your changes to Frontity project, your fork m
 If you find some errors, you can try:
 
 * Run `npm test` on a package to detect where is the problem.
-* Run `npm run test` in the root to pass all tests without cache. It is useful for typescript tests.
+* Run `npm run test` in the root to pass all tests without cache. It is useful for TypeScript tests.
 
 **8. Commit and push to your fork:**
 
@@ -91,7 +91,7 @@ For opening one you have to go to [Frontity's pull requests](https://github.com/
 
 Select your own repository and **the dev branch** on Frontity, and **create the pull request**.
 
-![](../.gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
+![](../.gitbook/assets/compare_-_frontity_frontity-2.png)
 
 ## Commit messages
 
@@ -161,31 +161,31 @@ We use [Changesets](https://github.com/atlassian/changesets/) to manage our vers
 A changeset is a piece of information about changes made in a branch or commit. It holds three bits of information:
 
 * What we need to release.
-* What version we are releasing packages at \(using a [semver bump type](https://semver.org/)\).
+* What version we are releasing packages at \(using a [SemVer bump type](https://semver.org/)\).
 * A changelog entry for the released packages.
 
 If you pull request has changes that need to be released in a new version of some of the packages, you need to include a changeset file in the pull request.
 
 ### How to create a changeset
 
-1. Run the command line script `npx changeset`.
+1. Run the command-line script `npx changeset`.
 2. Select the packages you want to include in the changeset using ↑ and ↓ to navigate to packages, and hit `space` to select a package. Hit `enter` when all desired packages are selected.
 3. You will be prompted to select a bump type for each selected package. Select an appropriate bump type for the changes made. Those are:
    * **Major version**: when you make incompatible API changes.
-   * **Minor version:** when you add functionality in a backwards compatible manner.
-   * **Patch version:** when you make backwards compatible bug fixes. See [here](https://semver.org/) for information on semver versioning.
+   * **Minor version:** when you add functionality in a backward compatible manner.
+   * **Patch version:** when you make backward compatible bugfixes. See [here](https://semver.org/) for information on SemVer versioning.
 4. Your final prompt will be to provide a message to go alongside the changeset. This will be written into the changelog when the next release occurs.
 
-After this, a new changeset file will be added, which is a markdown file with YAML front matter.
+After this, a new changeset file will be added, which is a Markdown file with YAML front matter.
 
 ```text
 -| .changeset/
 -|-| some-unique-name.md
 ```
 
-#### **You can write as much markdown as you want**
+#### **You can write as much Markdown as you want**
 
-The message you typed can be found in the markdown file. If you want to expand on it, you can write as much markdown as you want, which will all be added to the changelog on publish. If you want to add more packages or change the bump types of any packages, that's also fine.
+The message you typed can be found in the Markdown file. If you want to expand on it, you can write as much Markdown as you want, which will all be added to the changelog on publish. If you want to add more packages or change the bump types of any packages, that's also fine.
 
 A good idea of what should be in a changeset is:
 

@@ -62,7 +62,7 @@ By the way, you can access the actions in the client console using:
 
 There are a set of special actions that Frontity runs at appropriate moments:
 
-![](../.gitbook/assets/screen-shot-2019-06-03-at-17.19.03.png)
+![](../.gitbook/assets/screen-shot-2019-06-03-at-17.19.03%20%283%29.png)
 
 ### `init` \(client & server\)
 
@@ -101,5 +101,5 @@ This action is run before React is hydrated. Be aware that the state that React 
 
 ### `afterCSR`  **\(client only\)**
 
-This action is run after React has been hydrated in the client and it has taken control of the page. This is where packages with client side logic can start doing their thing.
+This action is run after React has been hydrated in the client and it has taken control of the page. This is where packages with client-side logic can start doing their thing.
 

@@ -48,7 +48,7 @@ This is the folder where your **local packages** live. These are the packages wh
 
 ### The `package.json` file
 
-This is the file used for configuration in any Node project. There are many great articles about it like [this one](https://medium.com/beginners-guide-to-mobile-web-development/why-package-json-npm-basics-cab3e8cd150), [this one](https://flaviocopes.com/package-json/) or [this one](https://alligator.io/nodejs/package-json/), but its main purpose is to store the dependencies needed for your app to work. The basic dependencies added after a `npx frontity create` are:
+This is the file used for configuration in any Node.js project. There are many great articles about it like [this one](https://medium.com/beginners-guide-to-mobile-web-development/why-package-json-npm-basics-cab3e8cd150), [this one](https://flaviocopes.com/package-json/) or [this one](https://alligator.io/nodejs/package-json/), but its main purpose is to store the dependencies needed for your app to work. The basic dependencies added after a `npx frontity create` are:
 
 * **`frontity`** : this is the main package, where we can find all the methods we might need to use during development. It's also where the CLI lives.
 * **`@frontity/core`** : here is where the magic happens. Core takes care of all the bundling, rendering, merging, transpiling, serving, etc. We don't need to access it in order to develop a Frontity app.

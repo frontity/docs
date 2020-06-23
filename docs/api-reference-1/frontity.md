@@ -1,4 +1,4 @@
-# `frontity`
+# Frontity
 
 ## Overview
 
@@ -13,16 +13,16 @@ import { connect, styled, Head, ... } from "frontity";
 ### React
 
 Use **`connect`** to inject `state`, `actions` and `libraries` in your React components.
+
 If you are familiar with React hooks, you can use also **`useConnect`** to do the same.
 
-Use the **`Head`** component whenever you want to add HTML tags inside the `<head>` of any of your site's pages.
-You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
+Use the **`Head`** component whenever you want to add HTML tags inside the `<head>` of any of your site's pages. You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
 
 #### **API reference:**
 
-- [connect](frontity.md#connect)
-- [useConnect](frontity.md#useConnect)
-- [Head](frontity.md#head)
+* [connect](frontity.md#connect)
+* [useConnect](frontity.md#useConnect)
+* [Head](frontity.md#head)
 
 ### CSS in JS
 
@@ -35,21 +35,20 @@ You can read more in the [Styles](../learning-frontity/styles.md) page of our **
 
 #### **API reference:**
 
-- [styled](frontity.md#styled)
-- [CSS](frontity.md#css)
-- [Global](frontity.md#global)
-- [keyframes](frontity.md#keyframes)
+* [styled](frontity.md#styled)
+* [CSS](frontity.md#css)
+* [Global](frontity.md#global)
+* [keyframes](frontity.md#keyframes)
 
 ### Code Splitting
 
-Use **`loadable`** to separate your code into different bundles that will be dynamically loaded at runtime.
-This helps you to reduce your page size.
+Use **`loadable`** in order to separate you code into different bundles that will be dynamically loaded at runtime. This helps you to reduce your page size.
 
 You can read more in the [Code Splitting](../learning-frontity/code-splitting.md) page of our **Learning Frontity** section.
 
 #### **API reference:**
 
-- [loadable](frontity.md#loadable)
+* [loadable](frontity.md#loadable)
 
 ### `fetch` and `URL`
 
@@ -57,14 +56,14 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 
 #### **API reference:**
 
-- [fetch](frontity.md#fetch)
-- [URL](frontity.md#url)
+* [fetch](frontity.md#fetch)
+* [URL](frontity.md#url)
 
 ### Helpers
 
 #### API reference:
 
-- [decode](frontity.md#decode)
+* [decode](frontity.md#decode)
 
 ## API Reference
 
@@ -78,31 +77,33 @@ ConnectedComponent = connect(Component, options?);
 
 It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries.
 Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries.
+
 Also, that instance will re-render automatically whenever any value from the `state` which the component is using is changed.
 
-If you don't want to inject the Frontity state props in your connected components, you can use the `injectProps` option set to `false`.
-Components will still be reactive to changes in the state but without receiving more props.
+If you don't want to inject the Frontity state props in your connected components, you can use the `injectProps` option set to `false`. Components will still be reactive to changes in the state but without receiving more props.
+
 For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
 
 **Arguments**
 
-- `Component`: a React component
-- `options` (optional): object with the following properties:
-  - `injectProps`: Boolean.
+* `Component`: a React component
+* `options` \(optional\): object with the following properties:
+  * `injectProps`: Boolean
+
     If `false`, the `state`, `actions` and `libraries` won't be passed as props to the component.
+
     Default is `true`
 
 #### Return value
 
-- The same component as passed in as the first argument but connected to the Frontity state
+* The same component as passed in as the first argument but connected to the Frontity state
 
 #### Example
 
 {% code title="Page.js" %}
-
 ```jsx
 import React from "react";
-import { connect } from "connect";
+import { connect } from "frontity";
 import { Loading, List, Post, PageError } from "./components";
 
 const Page = ({ state }) => {
@@ -123,7 +124,6 @@ const Page = ({ state }) => {
 // Connect Page to the Frontity state.
 export default connect(Page);
 ```
-
 {% endcode %}
 
 ### `useConnect`
@@ -137,27 +137,24 @@ const { state, actions, libraries } = useConnect();
 It's a React hook that returns the Frontity state, allowing the component to consume `state`, `actions` and `libraries` in components without passing them as props.
 
 {% hint style="warning" %}
-
 You still need to use `connect` when using `useConnect` properly.
 
 By using `connect`:
 
-- Your components get optimized with _memo_, so they won't re-render whenever a parent component re-renders
-- Your components get reactive, so they will re-render when the parts of state they use are changed
-
+* Your components get optimized with _memo_, so they won't re-render whenever a parent component re-renders
+* Your components get reactive, so they will re-render when the parts of state they use are changed
 {% endhint %}
 
 #### Return value
 
-- The Frontity state (`state`, `actions` and `libraries`)
+* The Frontity state \(`state`, `actions` and `libraries`\)
 
 #### Example
 
 {% code title="Page.js" %}
-
 ```jsx
 import React from "react";
-import { connect, useConnect } from "connect";
+import { connect, useConnect } from "frontity";
 import { Loading, List, Post, PageError } from "./components";
 
 const Page = () => {
@@ -181,7 +178,6 @@ const Page = () => {
 // Connect Page to the Frontity state.
 export default connect(Page);
 ```
-
 {% endcode %}
 
 #### Use Case of `{ injectProps: false }` with `connect`
@@ -216,8 +212,8 @@ You'll end up passing `actions` and `libraries` to `<input>` as well, because th
 
 To avoid this you can:
 
-- Add `{ injectProps: false }` to `connect`
-- Use `const { state, actions, libraries } = useConnect();`
+* Add `{ injectProps: false }` to `connect`
+* Use `const { state, actions, libraries } = useConnect();`
 
 ```jsx
 const Input = (props) => {
@@ -247,18 +243,20 @@ const StyledComponent = styled(Component)`
 `;
 ```
 
-It's a function that receives an HTML tag or a React component as the argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
+`styled` is a function that receives an HTML tag or a React component as the argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
 Inside, you write the CSS code for your component.
-The tag function returns a styled component with the CSS you wrote.
+
+The `styled` tag function returns a styled component with the CSS you wrote.
+
 Also, `styled` has built-in tag functions for every HTML tag so in those cases it is not necessary to call `styled` directly.
 
 #### Arguments
 
-- A template literal containing CSS code
+* A template literal containing CSS code
 
 #### Return value
 
-- A React component with the styles defined
+* A React component with the styles defined
 
 #### Example
 
@@ -293,15 +291,16 @@ const styleObject = css`
 ```
 
 It's a tagged template literal to add an inline style to React Components.
+
 The usage is quite similar to **`styled`** except that **`css`** doesn't return a React Component but a special object that can be passed to a component through the **`css`** prop.
 
 #### Arguments
 
-- A template literal containing CSS code
+* A template literal containing CSS code
 
 #### Return value
 
-- A style object to be passed to a **`css`** prop or to the **`<Global>`**'s **`styles`** prop
+* A style object to be passed to a **`css`** prop or to the **`<Global>`**'s **`styles`** prop
 
 #### Example
 
@@ -338,7 +337,7 @@ Use either the CSS prop or styled-components instead.
 
 #### Props
 
-- **`styles`**: an style object created with [`css`](frontity.md#css)
+* **`styles`**: an style object created with [`css`](frontity.md#css)
 
 #### Example
 
@@ -374,11 +373,11 @@ It's a function used to define and use animations in your CSS.
 
 #### Arguments
 
-- A template literal containing [CSS @keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) code
+* A template literal containing [CSS @keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) code
 
 #### Return value
 
-- An animation object to be used inside a template literal passed to [`styled`](frontity.md#styled) or [`css`](frontity.md#css)
+* An animation object to be used inside a template literal passed to [`styled`](frontity.md#styled) or [`css`](frontity.md#css)
 
 #### Example
 
@@ -412,20 +411,20 @@ const Component = () => <Button>Styling my theme</Button>;
 const HeavyComponent = loadable(importFunction, options);
 ```
 
-It's a function that loads a component asynchronously generating a different bundle for it.
-Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/), in case you want to check its docs.
+It's a function that loads a component asynchronously generating a different bundle for it. Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/), in case you want to check its docs.
+
 You can also take a look at the [Code Splitting](../learning-frontity/code-splitting.md) page inside the Learning Frontity section.
 
 #### Arguments
 
-- **`importFunction`**: a function that executes a [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Import) and returns a `Promise` that will contain the imported module
-- **`options`**: an object with any of the following properties:
-  - `fallback`: component displayed until the `Promise` resolves
-  - `ssr`: if `false`, it will not be processed server-side \(default to `true`\)
+* **`importFunction`**: a function that executes a [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Import) and returns a `Promise` that will contain the imported module
+* **`options`**: an object with any of the following properties:
+  * `fallback`: component displayed until the `Promise` resolves
+  * `ssr`: if `false`, it will not be processed server-side \(default to `true`\)
 
 #### Return value
 
-- A React component
+* A React component
 
 #### Example
 
@@ -454,13 +453,13 @@ export default connect(Post);
 <Head>{children}</Head>
 ```
 
-It's a React component that injects their children in the HTML `<head>` tag.
-It allows you to change the title while navigating, add meta tags, scripts, etc.
+It's a React component that injects their children in the HTML `<head>` tag. It allows you to change the title while navigating, add meta tags, scripts, etc.
+
 As we use `react-helmet` under the hood, you may check its [reference guide](https://github.com/nfl/react-helmet#reference-guide).
 
 #### Props
 
-- **`children`**: the HTML tags you want to appear inside `<head>`
+* **`children`**: the HTML tags you want to appear inside `<head>`
 
 #### Example
 
@@ -497,9 +496,11 @@ const fills = useFills("Slot Name");
 
 `Fill[]`
 
-An array of configuration objects for the fills that want to fill the slot passed by the `slotName` parameter. The values in those objects will come from the fills defined by the user of the slot in `state.fills`.
+An array of configuration objects for the fills that want to fill the slot passed by the `slotName` parameter.
+The values in those objects will come from the fills defined by the user of the slot in `state.fills`.
 
-Mind that a user might define more than one fill for a particular slot. Because of this, we always return a list of slots sorted in **ascending order** by their `priority`.
+Mind that a user might define more than one fill for a particular slot.
+Because of this, we always return a list of slots sorted in **ascending order** by their `priority`.
 
 Each configuration object has this structure:
 
@@ -559,16 +560,17 @@ const fetchResponsePromise = fetch(resource, init);
 ```
 
 It's a function with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for fetching a resource from the network.
+
 This function is safe to use both server and client-side, but you have to import it first.
 
 #### Arguments
 
-- **`resource`**: a string containing the direct URL of the resource you want to fetch
-- **`init`**: an options object containing any custom settings that you want to apply to the request \(go to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) for the complete list of available settings\)
+* **`resource`**: a string containing the direct URL of the resource you want to fetch
+* **`init`**: an options object containing any custom settings that you want to apply to the request \(go to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) for the complete list of available settings\)
 
 #### Return value
 
-- A `Promise` that resolves to a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object
+* A `Promise` that resolves to a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object
 
 #### Example
 
@@ -590,18 +592,21 @@ const getFromSomeAPI = async (resource) => {
 const url = new URL(url, base);
 ```
 
-It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)objects.
-This constructor is safe to use both server and client-side, but you have to import it first.
+It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) objects. 
+
+This constructor is safe to use both server and client side, but you have to import it first.
 
 #### Arguments
 
-- **`url`**: a string representing an absolute or relative URL.
+* **`url`**: a string representing an absolute or relative URL
+
   If `url` is a relative URL, `base` is required
-- **`base`**: a string representing the base URL to use in case `url` is a relative URL
+
+* **`base`**: a string representing the base URL to use in case `url` is a relative URL
 
 #### Return value
 
-- A [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)object
+* A [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)object
 
 #### Example
 
@@ -627,11 +632,11 @@ const decodedText = decode(text);
 
 #### Arguments
 
-- **`text`**: a string representing the HTML to be escaped
+* **`text`**: a string representing the HTML to be escaped
 
 #### Return value
 
-- `string`
+* `string`
 
 #### Example
 
@@ -642,3 +647,4 @@ const decodedText = decode("milk &amp; cookies");
 
 console.log(decodedText); // "milk and cookies"
 ```
+

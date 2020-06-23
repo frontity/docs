@@ -82,19 +82,16 @@ export default myPackage;
 
 ### Create your own processors
 
-A processor is an object with four properties: `name` , `priority` , `test`,and `processor`.
+A processor is an object with four properties: `name` , `priority` , `test`,and `processor`. 
 
-* `name` : Just the name of your processor.
-* `priority` : A number that lets the package know in which order processors should be evaluated. The processors are evaluated in numeric order. For example, a processor with `priority` of `10` will be applied **before** a  processor with a `priority` of `20`.
-* `test` : It's a function that evaluate each [node](frontity-html2react.md#nodes), and if it returns `true`, this node will be passed down to the `processor` function.
-* `processor` : A function to apply some logic to the [node](frontity-html2react.md#nodes) that we want to modify. It could be substituting html tags for React component with some logic, as adding `lazy-loading` to images, or just modifying some attributes, like adding `target="_blank"` to the links.
-
-Both the `test` and the `processor` functions receive the same params `({ node, root, state, libraries })` :
-
-* `node` : It's the html node tag the processor is evaluating.
-* `root` : The top node of the node tree.
-* `state` : Access to Frontity's `state`  . This could be useful to use some parts of the `state` inside your processor. For example, using your `state.theme.colors` .
-* `libraries` : Access to Frontity's `libraries`. As it happens with the `state`, sometimes could be useful to access your `libraries` as well.
+* `name` : Just the name of your processor
+* `priority` : A number that lets the package know in which order processors should be evaluated. The processors are evaluated in numeric order. For example, a processor with `priority` of `10` will be applied **before** a  processor with a `priority` of `20`
+* `test` : It's a function that evaluate each [Node.js](frontity-html2react.md#nodes), and if it returns `true`, this Node.js will be passed down to the `processor` function
+* `processor` : A function to apply some logic to the [Node.js](frontity-html2react.md#nodes) that we want to modify. It could be substituting HTML tags for React component with some logic, as adding `lazy-loading` to images, or just modifying some attributes, like adding `target="_blank"` to the links. Both the `test` and the `processor` functions receive the same params `({ node, root, state, libraries })` :
+* `node` : It's the HTML Node.js tag the processor is evaluating
+* `root` : The top Node.js of the Node.js tree
+* `state` : Access to Frontity's `state`  . This could be useful to use some parts of the `state` inside your processor. For example, using your `state.theme.colors` 
+* `libraries` : Access to Frontity's `libraries`. As it happens with the `state`, sometimes could be useful to access your `libraries` as well
 
 Let's see some examples. This is how the `image` processor is implemented in `html2react`:
 
@@ -132,7 +129,7 @@ const image = {
 export default image;
 ```
 
-You don't need to return a React component, you can also modify the attributes \(props\) of the node. For example, this processor adds `target="_blank"` to the `<a>` tags with href starting with `http`:
+You don't need to return a React component, you can also modify the attributes \(props\) of the Node.js. For example, this processor adds `target="_blank"` to the `<a>` tags with href starting with `http`: 
 
 ```typescript
 const extAnchors = {
@@ -155,22 +152,22 @@ The object `node` received by both `test` and `processor`can be an `Element`, a 
 The common properties are:
 
 * **`type`** : `"element" | "text" | "comment"`
-* **`parent?`**: `Element` The parent of this node, which is always an `element` \(`text` or `comment` can't have children\).
-* **`ignore?`**: `boolean` If you set `ignore` to `true` for a node, it won't pass any `test`. This is useful in some situations when you don't want additional processors applied to this node. 
+* **`parent?`**: `Element` The parent of this node, which is always an `element` \(`text` or `comment` can't have children\)
+* **`ignore?`**: `boolean` If you set `ignore` to `true` for a node, it won't pass any `test`. This is useful in some situations when you don't want additional processors applied to this Node.js. 
 
-**Node: `Element`**
+  **Node: `Element`**
 
 An `Element` is an HTML tag or a React component.
 
 * **`type`** : `"element"`
-* **`component`** : `string | React.ComponentType` If it's a string, it's an HTML tag and if it's a function is a React component. You can change it at will and it is what you would usually do when you want to convert HTML tags to React components.
-* **`props`**: `object`  An object containing all the HTML attributes of that node or props of that React component. You can also change them at will. All the attributes are converted to the React equivalents, even for HTML tags. For example:
+* **`component`** : `string | React.ComponentType` If it's a string, it's an HTML tag and if it's a function is a React component. You can change it at will and it is what you would usually do when you want to convert HTML tags to React components
+* **`props`**: `object`  An object containing all the HTML attributes of that Node.js or props of that React component. You can also change them at will. All the attributes are converted to the React equivalents, even for HTML tags. For example:
   * `class` -&gt; `className`
-  * `style` -&gt; `css` \([frontity's css prop](../learning-frontity/styles.md#the-css-prop)\)
+  * `style` -&gt; `css` \([frontity's CSS prop](../learning-frontity/styles.md#the-css-prop)\)
   * `srcset` -&gt; `srcSet`
   * `onclick` -&gt; `onClick`
-  * ...
-* **`children?`**: `array of nodes` An array containing other nodes, children to this one. If you want to get rid of the children, just overwrite it with `null` or an empty array.
+  * ..
+* **`children?`**: `array of nodes` An array containing other nodes, children to this one. If you want to get rid of the children, just overwrite it with `null` or an empty array
 
 **Node: `Text`**
 
@@ -194,13 +191,13 @@ This are the current processors exposed in this package:
 
 React doesn’t execute the code inside a `<script>` tags. For that reason, html2react doesn’t execute the script tags included in the contents.
 
-The script processor, with a priority of `20`, processes `<script>` tags found in the html for execution. `<script>` type must either be `application/javascript`, `text/javascript` or `application/ecmascript` to pass the test of the processor.
+The script processor, with a priority of `20`, processes `<script>` tags found in the HTML for execution. `<script>` type must either be `application/javascript`, `text/javascript` or `application/ecmascript` to pass the test of the processor.
 
 **Usage:** The script processor is included by default in html2react. Therefore, no extra procedure is required to use the processor.
 
 ### Iframe
 
-Iframes can impact the loading time and performance of a site. The iframe processor adds lazy-loading to the `<iframe>` tags found in the html.
+Iframes can impact the loading time and performance of a site. The iframe processor adds lazy-loading to the `<iframe>` tags found in the HTML.
 
 **Usage:**
 
@@ -249,7 +246,7 @@ The React component used to render the parsed HTML.
 
 **Props**
 
-* **`html`** : `String` The HTML that needs to be rendered.
+* **`html`** : `String` The HTML that needs to be rendered
 
 ```jsx
 import React from 'react'
