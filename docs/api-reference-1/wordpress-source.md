@@ -216,15 +216,15 @@ This action fetches all entities related to a `link`, i.e. the pathname of a URL
 
 {% hint style="info" %}
 
-`{ (link: string, options: object) => Promise }`
+`(link: string, options: object) => Promise`
 
 - **Parameters**
-  - `link { string }` Link representing a REST API endpoint or custom handler 
-  - `options { object }`
-    - `force { boolean }`: The entities should be fetched again.
+  - `link: string` Link representing a REST API endpoint or custom handler 
+  - `options: object`
+    - `force: boolean`: The entities should be fetched again.
 
 - **Return value**
-  - `{ Promise }` Promise resolving to data fetched
+  - `Promise` Promise resolving to data fetched
 
 {% endhint %}
 
@@ -248,13 +248,13 @@ Returns an object that gives you info about the type of that link and related en
 
 {% hint style="info" %}
 
-`{ (link: string ) => object }`
+`(link: string) => object`
 
 - **Parameters**
-  - `link { string }` Link representing a REST API endpoint or custom handler 
+  - `link: string` Link representing a REST API endpoint or custom handler 
   
 - **Return value**
-  - `{ object }` Info about the type of data represented in the URL
+  - `object` Info about the type of data represented in the URL
 
 {% endhint %}
 
