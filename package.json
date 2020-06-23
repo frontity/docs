@@ -50,6 +50,7 @@
       "pre-commit": "lint-staged -v"
     }
   },
+  "prettier": {},
   "textlint": {
     "filters": {
       "comments": true
@@ -65,9 +66,7 @@
       "no-empty-section": {
         "severity": "warning"
       },
-      "one-sentence-per-line": {
-        "severity": "warning"
-      },
+      "one-sentence-per-line": false,
       "period-in-list-item": {
         "severity": "warning"
       },

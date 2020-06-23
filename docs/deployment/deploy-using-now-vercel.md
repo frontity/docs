@@ -2,7 +2,9 @@
 
 In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow. It enables developers to host Jamstack sites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
 
-We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up. It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your site speed.
+We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up.
+
+It also supports the cache technique stale-while-revalidate \(they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)\), a powerful way to improve your site speed.
 
 To be able to deploy with now you need to have a Vercel account. You can [signup here](https://vercel.com/signup).
 
@@ -85,9 +87,9 @@ Add it, and you will be provided by a [set a nameservers](https://vercel.com/doc
 
 ### Add subdomain in your project settings
 
-A subdomain can be used to separate your Wordpress and Frontity deployments. They can be created within Vercel dashboard from the [domains section](https://vercel.com/dashboard/domains/).
+A subdomain can be used to separate your WordPress and Frontity deployments. They can be created within Vercel dashboard from the [domains section](https://vercel.com/dashboard/domains/).
 
-To setup a subdomain for your Wordpress source, simply select your desired domain from the [list](https://vercel.com/dashboard/domains/) and [add a new DNS Record](https://vercel.com/docs/v2/custom-domains#step-2:-add-dns-record) with type A and the IP address of your Wordpress server.
+To setup a subdomain for your WordPress source, simply select your desired domain from the [list](https://vercel.com/dashboard/domains/) and [add a new DNS Record](https://vercel.com/docs/v2/custom-domains#step-2:-add-dns-record) with type A and the IP address of your WordPress server.
 
 ### Add Vercel nameservers in your domain provider
 
@@ -119,6 +121,8 @@ This will create a deploy and assign it to your real site url.
 ```
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+Still have questions?
+Ask [the community](https://community.frontity.org/)!
+We are here to help 😊
 {% endhint %}
 

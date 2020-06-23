@@ -1,4 +1,4 @@
-# frontity
+# Frontity
 
 ## Overview
 
@@ -12,7 +12,9 @@ import { connect, styled, Head, ... } from "frontity";
 
 ### React
 
-Use **`connect`** to inject `state`, `actions` and `libraries` in your React components. If you are familiar with React hooks, you can use also **`useConnect`** to do the same.
+Use **`connect`** to inject `state`, `actions` and `libraries` in your React components.
+
+If you are familiar with React hooks, you can use also **`useConnect`** to do the same.
 
 Use the **`Head`** component whenever you want to add HTML tags inside the `<head>` of any of your site's pages. You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
 
@@ -24,7 +26,10 @@ Use the **`Head`** component whenever you want to add HTML tags inside the `<hea
 
 ### CSS in JS
 
-**`styled`** creates new React components from HTML tags, or other React components, with styles attached to them. **`css`** lets you to add inline styles to an element if you don't want to create a new component. If you want to add styles for the whole app, use **`Global`**. And **`keyframes`** is used to define and use animations in your CSS.
+**`styled`** creates new React components from HTML tags, or other React components, with styles attached to them.
+**`css`** lets you to add inline styles to an element if you don't want to create a new component.
+If you want to add styles for the whole app, use **`Global`**.
+And **`keyframes`** is used to define and use animations in your CSS.
 
 You can read more in the [Styles](../learning-frontity/styles.md) page of our **Learning Frontity** section.
 
@@ -47,7 +52,7 @@ You can read more in the [Code Splitting](../learning-frontity/code-splitting.md
 
 ### `fetch` and `URL`
 
-Frontity exports `fetch` and `URL` with the same API they have in the browser, but working exactly the same both in the client and in the server.
+Frontity exports `fetch` and `URL` with the same API they have in the browser, but they work the same both in the client and in the server.
 
 #### **API reference:**
 
@@ -70,15 +75,20 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 ConnectedComponent = connect(Component, options?);
 ```
 
-It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries. Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries. Also, that instance will re-render automatically whenever any value from the `state` which the component is using is changed.
+It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries.
+Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries.
 
-If you don't want to inject the Frontity state props in your connected components, you can use the `injectProps` option set to `false`. Components will still be reactive to changes in the state but without receiving more props. For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
+Also, that instance will re-render automatically whenever any value from the `state` which the component is using is changed.
+
+If you don't want to inject the Frontity state props in your connected components, you can use the `injectProps` option set to `false`. Components will still be reactive to changes in the state but without receiving more props.
+
+For these components to access the state use the [`useConnect`](frontity.md#useConnect) hook.
 
 **Arguments**
 
 * `Component`: a React component
 * `options` \(optional\): object with the following properties:
-  * `injectProps`: Boolean.
+  * `injectProps`: Boolean
 
     If `false`, the `state`, `actions` and `libraries` won't be passed as props to the component.
 
@@ -176,10 +186,10 @@ Most of the times you'll use `useConnect` in this way:
 
 ```jsx
 const Input = ({ name, type }) => {
-    const { state } = useConnect();
-   // Do something with `state`.
+  const { state } = useConnect();
+  // Do something with `state`.
 
-  return <input name={name} type={type} />
+  return <input name={name} type={type} />;
 };
 
 export default connect(Input);
@@ -189,10 +199,10 @@ But if you want to pass down props to a HTML tag, like in this case:
 
 ```jsx
 const Input = ({ name, type, ...props }) => {
-   const { state } = useConnect();
-   // Do something with `state`.
+  const { state } = useConnect();
+  // Do something with `state`.
 
-  return <input name={name} type={type} {...props} />
+  return <input name={name} type={type} {...props} />;
 };
 
 export default connect(Input);
@@ -207,10 +217,10 @@ To avoid this you can:
 
 ```jsx
 const Input = (props) => {
-    const { state } = useConnect();
-   // Do something with `state` (or `actions` and `libraries`).
+  const { state } = useConnect();
+  // Do something with `state` (or `actions` and `libraries`).
 
-  return <input {...props} />
+  return <input {...props} />;
 };
 
 // Avoid injecting `state`, `actions` and `libraries` so they are not present in `...props`.
@@ -233,7 +243,12 @@ const StyledComponent = styled(Component)`
 `;
 ```
 
-It's a function that receives an HTML tag or a React component as argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates). Inside, you write the CSS code for your component. The tag function returns a styled component with the CSS you wrote. Also, `styled` has built-in tag functions for every HTML tag so in those cases it is not necessary to call `styled` directly.
+`styled` is a function that receives an HTML tag or a React component as the argument and returns a function that can be used as a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
+Inside, you write the CSS code for your component.
+
+The `styled` tag function returns a styled component with the CSS you wrote.
+
+Also, `styled` has built-in tag functions for every HTML tag so in those cases it is not necessary to call `styled` directly.
 
 #### Arguments
 
@@ -275,7 +290,9 @@ const styleObject = css`
 `;
 ```
 
-It's a tagged template literal to add inline style to React Components. The usage is quite similar to **`styled`** except that **`css`** doesn't return a React Component but a special object that can be passed to a component through the **`css`** prop.
+It's a tagged template literal to add an inline style to React Components.
+
+The usage is quite similar to **`styled`** except that **`css`** doesn't return a React Component but a special object that can be passed to a component through the **`css`** prop.
 
 #### Arguments
 
@@ -312,7 +329,10 @@ const Component = () => (
 It's a React component that creates global styles for the whole Frontity site.
 
 {% hint style="warning" %}
-**Using `<Global>` for other than HTML tags is not recommended** because Frontity is not able to optimize it. That means you can use it for tags like `html`, `body` , `a`, `img`, and so on... But **avoid it for classes**. Use either the CSS prop or styled-components instead.
+**Using `<Global>` for other than HTML tags is not recommended** because Frontity is not able to optimize it.
+That means you can use it for tags like `html`, `body` , `a`, `img`, and so on...
+But **avoid it for classes**.
+Use either the CSS prop or styled-components instead.
 {% endhint %}
 
 #### Props
@@ -391,7 +411,9 @@ const Component = () => <Button>Styling my theme</Button>;
 const HeavyComponent = loadable(importFunction, options);
 ```
 
-It's a function that loads a component asynchronously generating a different bundle for it. Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/), in case you want to check its docs. You can also take a look at the [Code Splitting](../learning-frontity/code-splitting.md) page inside the Learning Frontity section.
+It's a function that loads a component asynchronously generating a different bundle for it. Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/), in case you want to check its docs.
+
+You can also take a look at the [Code Splitting](../learning-frontity/code-splitting.md) page inside the Learning Frontity section.
 
 #### Arguments
 
@@ -431,7 +453,9 @@ export default connect(Post);
 <Head>{children}</Head>
 ```
 
-It's a React component that injects their children in the HTML `<head>` tag. It allows you to change the title while navigating, add meta tags, scripts, etc. As we use `react-helmet` under the hood, you may check its [reference guide](https://github.com/nfl/react-helmet#reference-guide).
+It's a React component that injects their children in the HTML `<head>` tag. It allows you to change the title while navigating, add meta tags, scripts, etc.
+
+As we use `react-helmet` under the hood, you may check its [reference guide](https://github.com/nfl/react-helmet#reference-guide).
 
 #### Props
 
@@ -452,6 +476,81 @@ const Theme = () => (
 );
 ```
 
+### `useFills`
+
+A React hook to ease the creation of `Slot` components.
+
+#### Syntax
+
+```javascript
+const fills = useFills("Slot Name");
+```
+
+#### Parameters
+
+| Name           | Type   | Default   | Required | Description                                   |
+| -------------- | ------ | --------- | -------- | --------------------------------------------- |
+| **`slotName`** | string | undefined | true     | A string that refers to the name of the Slot. |
+
+#### Return value
+
+`Fill[]`
+
+An array of configuration objects for the fills that want to fill the slot passed by the `slotName` parameter.
+The values in those objects will come from the fills defined by the user of the slot in `state.fills`.
+
+Mind that a user might define more than one fill for a particular slot.
+Because of this, we always return a list of slots sorted in **ascending order** by their `priority`.
+
+Each configuration object has this structure:
+
+| Name           | Type           | Description                                                                                                                                                                                                          |
+| -------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`Fill`**     | ReactComponent | The component that should be rendered for this fill.                                                                                                                                                                 |
+| **`slot`**     | string         | The name of the slot. Mind that a user can define multiple fills that fill the same slot, so there might exist more than one object with the same `slot` property. Defined in `state.fills.namespace.fillName.slot`. |
+| **`props`**    | object         | The props that should be passed down to the component. Defined in `state.fills.namespace.fillName.props`.                                                                                                            |
+| **`library`**  | string         | The name of the library that is using the fill. defined in `state.fills.namespace.fillName.library`.                                                                                                                 |
+| **`priority`** | number         | The priority of the fill. By default, the fills are sorted in ascending order according to this value. Defined in `state.fills.namespace.fillName.priority`.                                                         |
+| **`key`**      | string         | This is a unique value that identifies the particular fill. It's a combination of the `namespace` and the `fillName`.                                                                                                |
+
+#### Example
+
+Import the hook in your React component and use it to create a component:
+
+```jsx
+import { useFills } from "frontity";
+
+const Comp = () => {
+  const fills = useFills("slot 1");
+
+  return (
+    <>
+      {fills.map(({ Fill, props, key }) => (
+        <Fill key={key} {...props} />
+      ))}
+    </>
+  );
+};
+
+export default connect(Comp);
+```
+
+{% hint style="info" %}
+You need to wrap the component that uses the `useFills` hook with `connect()` in order for that component to work.
+{% endhint %}
+
+#### Debug mode
+
+If you want to see all the slots added to a theme/package without having to add fills for all of them, you can turn the debug mode on:
+
+```js
+state.frontity.debug = true;
+```
+
+If you want to do this on the console, remember that you need to access the `state` using `frontity.state`, like this:
+
+![Debug mode in the console](../.gitbook/assets/frontity-debug-in-console.png)
+
 ### `fetch`
 
 #### Syntax
@@ -460,7 +559,9 @@ const Theme = () => (
 const fetchResponsePromise = fetch(resource, init);
 ```
 
-It's a function with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for fetching a resource from the network. This function is safe to use both server and client side, but you have to import it first.
+It's a function with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for fetching a resource from the network.
+
+This function is safe to use both server and client-side, but you have to import it first.
 
 #### Arguments
 
@@ -491,11 +592,13 @@ const getFromSomeAPI = async (resource) => {
 const url = new URL(url, base);
 ```
 
-It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)objects. This constructor is safe to use both server and client side, but you have to import it first.
+It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) objects. 
+
+This constructor is safe to use both server and client side, but you have to import it first.
 
 #### Arguments
 
-* **`url`**: a string representing an absolute or relative URL.
+* **`url`**: a string representing an absolute or relative URL
 
   If `url` is a relative URL, `base` is required
 
@@ -518,7 +621,8 @@ const getApiPathname = ({ state }) => {
 
 ### `decode`
 
-An entity decoder that decodes HTML numeric entities and [XML named entities](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references). It works both in the server and the client and it's optimized to be both lightweight and performant.
+An entity decoder that decodes HTML numeric entities and [XML named entities](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+It works both in the server and the client and it's optimized to be both lightweight and performant.
 
 #### Syntax
 

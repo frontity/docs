@@ -35,7 +35,9 @@
   * [Deploy Frontity using now \(Vercel\)](deployment/deploy-using-now-vercel.md)
 * [👌 SEO](seo.md)
 * [⚙ Frontity Packages](api-reference-1/README.md)
+<!-- textlint-disable terminology -->
   * [frontity](api-reference-1/frontity.md)
+<!-- textlint-enable terminology -->
   * [@frontity/tiny-router](api-reference-1/router.md)
   * [@frontity/wp-source](api-reference-1/wordpress-source.md)
   * [@frontity/components](api-reference-1/frontity-components.md)
