@@ -62,11 +62,7 @@ const MyLazyElement = ({ children }) => {
   return <div ref={ref}>{inView ? children : <MyPlaceholder />}</div>;
 };
 ```
-<<<<<<< HEAD
-=======
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
-
->>>>>>> master
