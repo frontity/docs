@@ -51,7 +51,7 @@
   * [REST API - Head Tags](frontity-plugins/rest-api-head-tags.md)
 * [📖 Guides](guides/README.md)
   * [Install a new Frontity package](guides/install-a-new-package.md)
-  * [How to share your Frontity theme](guides/how-to-share-a-frontity-theme.md)
+  * [How to share your Frontity project](guides/how-to-share-a-frontity-project.md)
   * [Understanding a Frontity project](guides/understanding-mars-theme.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
   * [Keep Frontity Updated](guides/keep-frontity-updated.md)

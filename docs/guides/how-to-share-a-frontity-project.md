@@ -1,4 +1,4 @@
-# How to share your Frontity theme
+# How to share your Frontity project
 
 When you create a Frontity project most of the times you'll end up creating a custom theme:
 - Because you need some specific design and features for your project
