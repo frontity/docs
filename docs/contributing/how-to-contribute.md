@@ -33,7 +33,7 @@ There are several ways to support the project and get involved. Don't know how t
 ## 📖 Improve the documentation
 
 * Is something missing or not clear enough? Did you find any spelling mistakes?
-  * You can directly _suggest your changes by following our_ [_documentation contributing guidelines_](https://github.com/frontity/gitbook-docs/blob/master/CONTRIBUTING.md) 
+  * You can directly _suggest your changes by following our_ [_documentation contributing guidelines_](https://github.com/frontity/docs/blob/master/CONTRIBUTING.md) 
   * Or you can _report them using our_ [_community forum_](https://community.frontity.org/c/docs-and-tutorials). 
 * You can also help **translating** our documentation.
 

@@ -19,9 +19,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontity/gitbook-docs.git"
+    "url": "git+https://github.com/frontity/docs.git"
   },
-  "homepage": "https://github.com/frontity/gitbook-docs#readme",
+  "homepage": "https://github.com/frontity/docs#readme",
   "devDependencies": {
     "all-contributors-cli": "^6.15.0",
     "dictionary-en-au": "^2.2.1",
