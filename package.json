@@ -14,8 +14,7 @@
     "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint -c config/terminology.config.json '{}' ';'",
     "textlint:all:terminology:fix": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --fix -c config/terminology.config.json '{}' ';'",
     "textlint:all:rousseau": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-rousseau '{}' ';'",
-    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'",
-    "all-contributors:generate": "all-contributors generate"
+    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'"
   },
   "repository": {
     "type": "git",
