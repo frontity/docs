@@ -1,4 +1,4 @@
-# Creating a custom theme for Frontity
+# How to share your Frontity theme
 
 When you create a Frontity project most of the times you'll end up creating a custom theme:
 - Because you need some specific design and features for your project
@@ -71,6 +71,7 @@ This structure implies having a main Frontity project (root `package.json`) and 
 ```
 
 So, to create a custom theme project we recommend you to:
+
 1. Create a Frontity project → `npx frontity create awesome-theme-project`
 1. Create a Frontity package (your theme) → `npx frontity create-package awesome-theme`
 
@@ -138,13 +139,7 @@ And also, the owner of the theme still can publish those new updates independent
 Let's take [**Frontity Chakra Theme**](https://github.com/chakra-ui/frontity-chakra-ui-theme) as an example of a Frontity theme available:
 
 - As [an npm package](https://www.npmjs.com/package/frontity-chakra-theme) ready to be installed and used as a theme in any Frontity project 
-- In a [GitHub repository](https://github.com/chakra-ui/frontity-chakra-ui-theme) ready to be cloned and launched locallly, and also ready to accept contributions from the community via Pull Requests
-
-{% hint style="info" %}
-If you want to know more about Pull Requests you can take a look at:
-- [📑 "Opening a pull request" | opensource.guide ](https://opensource.guide/how-to-contribute/#opening-a-pull-request)
-- [📺 How to Contribute to an Open Source Project on GitHub | egghead.io ](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
-{% endhint%}
+- In a [GitHub repository](https://github.com/chakra-ui/frontity-chakra-ui-theme) ready to be cloned and launched locallly, and also ready to accept contributions from the community via [Pull Requests](https://opensource.guide/how-to-contribute/#opening-a-pull-request)
 
 ### Clone and launch it locally
 
