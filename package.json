@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/frontity/docs#readme",
   "devDependencies": {
-    "all-contributors-cli": "^6.15.0",
     "dictionary-en-au": "^2.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
