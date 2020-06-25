@@ -22,7 +22,7 @@
   * [1. Project](learning-frontity/project.md)
   * [2. Settings](learning-frontity/settings.md)
   * [3. Packages](learning-frontity/packages.md)
-  * [4. Roots and Fills](learning-frontity/roots-and-fills.md)
+  * [4. Roots](learning-frontity/roots.md)
   * [5. State](learning-frontity/state.md)
   * [6. Actions](learning-frontity/actions.md)
   * [7. Libraries](learning-frontity/libraries.md)
