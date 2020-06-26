@@ -283,12 +283,12 @@ All received data are populated in `state.source` and are accessible using the m
 actions.source.fetch("/category/nature/")
 ```
 
-Although `actions.source.fetch` triggers an asynchoronuus action we don't need to capture any returned value (no need to use `await` or `.then()`). The response of the `fetch` will be added to the state. If you React component is receiving the state via props (use of `connect`) it will be re-rendered with this new version of the state when it's ready
+Although `actions.source.fetch` triggers an asynchronous action we don't need to capture any returned value (no need to use `await`). The response of `fetch` will be added to the state. If you React component is receiving the state via props (use of `connect`) it will be re-rendered with this new version of the state when it's ready
 
 When `fetch` is called _again_ for the same `link` it does nothing, as all the entities have already been fetched and there is no need to request them again. If you do want to fetch them again, you can pass an options object to `source.fetch` with the following properties:
 
 ```javascript
-actions.source.fetch("/category/nature/", { force: true }).then(dataFetched => ...)
+actions.source.fetch("/category/nature/", { force: true })
 ```
 
 ### State
@@ -485,19 +485,16 @@ For more info, visit the [WP REST API reference](https://developer.wordpress.org
 const { api } = libraries.source;
 
 // Get posts from categories 2, 3 and 4
-api.get({ endpoint: "posts", params: { _embed: true, categories: '2,3,4' } })
-  .then(dataRequested => { /* do something with dataRequested */ })
+const postsCategories = await api.get({ endpoint: "posts", params: { _embed: true, categories: '2,3,4' } })
 
 // Get the page 14
-api.get({ endpoint: "pages", params: { _embed: true, include: '14' } });
-  .then(dataRequested => { /* do something with dataRequested */ })
+const page14 = await api.get({ endpoint: "pages", params: { _embed: true, include: '14' } });
 
 // Other endpoints: 
-api.get({ 
+const postBeautiesGullfoss = await api.get({ 
   endpoint: "/frontity/v1/discovery",
   params: { slug: "/the-beauties-of-gullfoss" }
 })
-.then(dataRequested => { /* do something with dataRequested */ })
 ```
 
 #### `libraries.source.populate()`
@@ -524,14 +521,12 @@ Entities are normally never overwritten. So, if an entity already exists in the 
 **Example**
 
 ```javascript
-libraries.source.api.get({ endpoint: "posts" })
-  .then(response => libraries.source.populate({ response, state }))
-  .then(entitiesAdded => {
-    entitiesAdded.forEach(({type, id, link}) => {
-      console.log({type, id, link}) 
-    })
-  })
-
+const response = await libraries.source.api.get({ endpoint: "posts" })
+const entitiesAdded = await libraries.source.populate({ response, state }))
+  
+entitiesAdded.forEach(({type, id, link}) => {
+  console.log({type, id, link}) 
+})
 ```
 
 #### `libraries.source.handlers`
