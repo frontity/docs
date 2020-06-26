@@ -1,5 +1,46 @@
 # @frontity/wp-source
 
+## Table of contents
+
+<!-- toc -->
+
+- [Installation](#installation)
+- [Settings](#settings)
+    + [`state.source.api` (required)](#statesourceapi-required)
+    + [`state.source.subdirectory`](#statesourcesubdirectory)
+    + [`state.source.homepage`](#statesourcehomepage)
+    + [`state.source.postsPage`](#statesourcepostspage)
+    + [`state.source.categoryBase`](#statesourcecategorybase)
+    + [`state.source.tagBase`](#statesourcetagbase)
+    + [`state.source.postEndpoint`](#statesourcepostendpoint)
+    + [`state.source.params`](#statesourceparams)
+    + [`state.source.postTypes`](#statesourceposttypes)
+    + [`state.source.taxonomies`](#statesourcetaxonomies)
+- [How to use](#how-to-use)
+- [API Reference](#api-reference)
+  * [Actions](#actions)
+    + [`actions.source.fetch`](#actionssourcefetch)
+  * [State](#state)
+    + [`state.source.get`](#statesourceget)
+    + [`source[taxonomy][id]`](#sourcetaxonomyid)
+    + [`source[type][id]`](#sourcetypeid)
+    + [`source.author[id]`](#sourceauthorid)
+  * [Libraries](#libraries)
+    + [`libraries.api.init()`](#librariesapiinit)
+    + [`libraries.api.get()`](#librariesapiget)
+    + [`libraries.api.populate()`](#librariesapipopulate)
+    + [`libraries.source.handlers`](#librariessourcehandlers)
+    + [`libraries.source.redirections`](#librariessourceredirections)
+    + [`parse(route)`](#parseroute)
+    + [return](#return)
+    + [`stringify({ path, page?, query?, hash? })`](#stringify-path-page-query-hash-)
+    + [return](#return-1)
+    + [`normalize(route)`](#normalizeroute)
+    + [return](#return-2)
+- [TypeScript](#typescript)
+
+<!-- tocstop -->
+
 ## Installation
 
 Add the `wp-source` package to your project:
@@ -216,7 +257,7 @@ export default connect(CategoryNature);
 
 ### Actions
 
-#### `source.fetch` 
+#### `actions.source.fetch` 
 
 This action fetches all entities related to a `link`, i.e. the pathname of a URL in your site.
 
@@ -225,9 +266,9 @@ This action fetches all entities related to a `link`, i.e. the pathname of a URL
 `(link: string, options: object) => Promise`
 
 - **Parameters**
-  - `link: string` Link representing a REST API endpoint or custom handler 
-  - `options: object`
-    - `force: boolean`: The entities should be fetched again.
+  - **`link`**: string` Link representing a REST API endpoint or custom handler 
+  - _`options`_: `object` _(optional)_
+    - _`force`_: `boolean` The entities should be fetched again.
 
 - **Return value**
   - `Promise` Promise resolving to data fetched
@@ -237,18 +278,18 @@ This action fetches all entities related to a `link`, i.e. the pathname of a URL
 All received data are populated in `state.source` and are accessible using the methods explained in the next section.
 
 ```javascript
-actions.source.fetch("/category/nature/");
+actions.source.fetch("/category/nature/").then(dataFetched => ...)
 ```
 
 When `fetch` is called _again_ for the same `link` it does nothing, as all the entities have already been fetched and there is no need to request them again. If you do want to fetch them again, you can pass an options object to `source.fetch` with the following properties:
 
 ```javascript
-actions.source.fetch("/category/nature/", { force: true });
+actions.source.fetch("/category/nature/", { force: true }).then(dataFetched => ...)
 ```
 
 ### State
 
-#### `source.get`
+#### `state.source.get`
 
 Returns an object that gives you info about the type of that link and related entities.
 
@@ -257,7 +298,7 @@ Returns an object that gives you info about the type of that link and related en
 `(link: string) => object`
 
 - **Parameters**
-  - `link: string` Link representing a REST API endpoint or custom handler 
+  - **`link`**: `string` Link representing a REST API endpoint or custom handler 
   
 - **Return value**
   - `object` Info about the type of data represented in the URL
@@ -348,7 +389,7 @@ Properties added to each type are also based on the [WP REST API](https://develo
 * date: `year`, `month`, `date`
 * postType: `type`, `id`
 
-#### `source[taxonomy][id]`
+#### `state.source[taxonomy][id]`
 
 Access category, tag, or custom taxonomy’s entities. These entities have the same schema as specified in the [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
@@ -360,7 +401,7 @@ source.tag[13]
 source.deal[3]
 ```
 
-#### `source[type][id]`
+#### `state.source[type][id]`
 
 Access posts, pages, attachments or custom post type’s entities. These entities have the same schema as specified in the [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
@@ -370,7 +411,7 @@ source.page[7]
 source.product[36]
 ```
 
-#### `source.author[id]`
+#### `state.source.author[id]`
 
 Access author entities. These entities have the same schema as specified in the [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
@@ -380,16 +421,22 @@ source.author[4]
 
 ### Libraries
 
-#### `api.init({ api, isWpCom })`
+#### `libraries.api.init()`
 
 Set the URL to the WordPress REST API.
 
-**arguments**
+{% hint style="info" %}
 
-* `api`: URL pointing to a valid WP REST route.
-* `isWpCom`: a boolean indicating if the WP REST route is from a WordPress.com hosted site.
+`(link: string, options: object) => Promise`
 
-**example**
+- **Parameters**
+  - `options: object`
+    * **`api`**: `string` URL pointing to a valid WP REST route.
+    * **`isWpCom`**: `boolean` if the WP REST route is from a WordPress.com hosted site.
+
+{% endhint %}
+
+**Example**
 
 ```javascript
 const { api } = libraries.source;
@@ -407,80 +454,108 @@ api.init({
 });
 ```
 
-#### `api.get({ endpoint, params, api?, isWpCom? })`
+#### `libraries.api.get()`
 
 Request entity from the WordPress REST API.
 
-**arguments**
+{% hint style="info" %}
 
-* `endpoint`: name of the endpoint if is a `/wp/v2` endpoint (e.g. `posts`), or the full path of other REST endpoints (e.g. `/frontity/v1/discovery`).
-* `params`: any parameter that will be included in the query params.
-* `api` (optional): overrides the value set with `api.set.`
-* `isWpCom` (optional): overrides the value set with `api.set.`
+`(options: object) => Promise`
 
-#### return
+- **Parameters**
+  - `options: object`
+    * **`endpoint`**: `string` Name of the endpoint if is a `/wp/v2` endpoint (e.g. `posts`), or the full path of other REST endpoints (e.g. `/frontity/v1/discovery`).
+    * **`params`**: `string` Any parameter that will be included in the query params.
+    * _`api`_: `string` _(optional)_ Overrides the value set with `api.set.`
+    * _`isWpCom`_: `boolean` _(optional)_ Overrides the value set with `api.set.`
+- **Return value**
+  - `Promise` Promise resolving to data requested
 
-* A promise of type `Response`
+{% endhint %}
 
 For more info, visit the [WP REST API reference](https://developer.wordpress.org/rest-api/reference).
 
-**example**
+**Example**
 
 ```javascript
 const { api } = libraries.source;
 
 // Get posts from categories 2, 3 and 4
-api.get({ endpoint: "posts", params: { _embed: true, categories: '2,3,4' } });
+api.get({ endpoint: "posts", params: { _embed: true, categories: '2,3,4' } })
+  .then(dataRequested => { /* do something with dataRequested */ })
 
 // Get the page 14
 api.get({ endpoint: "pages", params: { _embed: true, include: '14' } });
+  .then(dataRequested => { /* do something with dataRequested */ })
 
 // Other endpoints: 
 api.get({ 
   endpoint: "/frontity/v1/discovery",
   params: { slug: "/the-beauties-of-gullfoss" }
-});
+})
+.then(dataRequested => { /* do something with dataRequested */ })
 ```
 
-#### `populate({ response, state, subdirectory?, force? })`
+#### `libraries.api.populate()`
 
 Add entities to the Frontity state.
 
+{% hint style="info" %}
+
+`(options: object) => Promise`
+
+- **Parameters**
+  - `options: object`
+    * **`response`**: `object` The response object returned by `api.get().`
+    * **`state`**: `object` The state object from the Frontity store.
+    * _`subdirectory`_: `string` _(optional)_ Domain's subdirectory where your Frontity site is accessible. When this options is passed, this subdirectory is added to the entities' links. By default, it takes the value defined in `state.source.subdirectory`.
+    * _`force`_: `boolean` _(optional)_ Value indicating if the entities should be overwritten.`false` by default.
+- **Return value**
+  - `Array` An array of objects with attributes `type`, `id` and `link` representing the added entities.
+
+{% endhint %}
+
 Entities are normally never overwritten. So, if an entity already exists in the state and a new one is fetched, the one in the state will prevail. If you want to overwrite them, `populate` should be called with `force: true`.
 
-**arguments**
-
-* `response`: the response object returned by `api.get().`
-* `state`: the state object from the Frontity store.
-* `subdirectory` (optional): domain's subdirectory where your Frontity site is accessible. When this options is passed, this subdirectory is added to the entities' links. By default, it takes the value defined in `state.source.subdirectory`.
-* `force`: boolean value indicating if the entities should be overwritten.`false` by default.
-
-#### return
-
-* An array of objects with attributes `type`, `id` and `link` representing the added entities.
-
-#### example
+**Example**
 
 ```javascript
-const response = await libraries.source.api.get({ endpoint: "posts" });
-await libraries.source.populate({ response, state });
+libraries.source.api.get({ endpoint: "posts" })
+  .then(response => libraries.source.populate({ response, state }))
+  .then(entitiesAdded => {
+    entitiesAdded.forEach(({type, id, link}) => {
+      console.log({type, id, link}) 
+    })
+  })
+
 ```
 
-#### `handlers`
+#### `libraries.source.handlers`
 
-Handlers are objects that associate a path pattern with a function that gets the entities contained in that path. These `handlers` are used when `actions.source.fetch` is executed.
+Handlers are objects that associate a path pattern with a function that gets the entities contained in that path. These `handlers` are used when `actions.source.fetch` is called.
 
-* `name`: string that identify this handler.
-* `priority`: number that lets `fetch` to know in which order handlers should be evaluated.
-* `pattern`: pattern which paths are compared with. We use [path-to-regexp](https://github.com/pillarjs/path-to-regexp) under the hood, so check its documentation to know how to write patterns.
-* `func`:  function that retrieves entities and adds all info to the state. It receives the following arguments:
-  * `route`: the route that are being fetched.
-  * `params`: values obtained from the pattern after a match
-  * `state`: Frontity state.
-  * `libraries`: Frontity libraries.
-  * `force`: a boolean indicating if the entities should be fetched again. Internally, this parameter will be passed to the `actions.source.fetch` call.
+{% hint style="info" %}
 
-#### example
+A handler is defined by an object with the following properties:
+* **`name`**: `string` Identifier of the handler.
+* **`priority`**: `number` Number that lets `fetch` to know in which order handlers should be evaluated.
+* **`pattern`**: `regExp` Pattern which paths are compared with. We use [path-to-regexp](https://github.com/pillarjs/path-to-regexp) under the hood, so check its documentation to know how to write patterns.
+* **`func`**: `function`  Asynchronous function that retrieves entities and adds all info to the state.
+  - Arguments
+    - `options: object`
+      * **`route`**: `string` The route that are being fetched.
+      * **`params`**: values obtained from the pattern after a match
+      * **`state`**: `object` Frontity state.
+      * **`libraries`**: `object` Frontity libraries.
+      * **`force`**: `boolean` If the entities should be fetched again. Internally, this parameter will be passed to the `actions.source.fetch` call.
+  - Return value
+    - `Promise` Promise resolving to custom data
+
+{% endhint %}
+
+`libraries.source.handlers` is an array., so **to add new handlers we can use `libraries.source.handlers.push()`**
+
+**Example**
 
 ```javascript
 // A handler example to retrieve products
@@ -509,16 +584,27 @@ libraries.source.handlers.push({
 });
 ```
 
-#### `redirections`
+#### `libraries.source.redirections`
 
 Redirections are objects that associate a path pattern with a function that returns a new path. These `redirections` are used when `actions.source.fetch` is executed, before `handlers`.
 
-* `name`: string that identify this redirection.
-* `priority`: number that lets `fetch` to know in which order redirections should be evaluated.
-* `pattern`: pattern which paths are compared with.
-* `func`:  function that returns a new path. It receives an object with the params obtained after a match.
+{% hint style="info" %}
 
-#### example
+A redirection is defined by an object with the following properties:
+
+* **`name`**: `string` Identifier of the redirection.
+* **`priority`**: `number` Let `fetch` to know in which order redirections should be evaluated.
+* **`pattern`**: `regExp` Pattern which paths are compared with.
+* **`func`**:  Function that returns a new path. It receives an object with the params obtained after a match.
+  - Arguments
+      - `options: object`
+        * **`slug`**: `string` The route that is being fetched.        
+    - Return value
+      - `string` a new path
+
+{% endhint %}
+
+**Example**
 
 ```javascript
 // A redirection example to change tag base prefix
@@ -530,48 +616,58 @@ libraries.source.redirections.push({
 });
 ```
 
-#### `parse(route)`
+#### `libraries.source.parse()`
 
 Utility for parsing routes.
 
-**arguments**
+{% hint style="info" %}
 
-* `route`: any route that points to entities in your site (links, custom lists, etc.)
+`(route: string) => object`
 
-#### return
+- **Parameters**
+  * `route`: any route that points to entities in your site (links, custom lists, etc.)
 
-* An object with the following attributes:
-  * `path`: pathname without the page
-  * `page`: the page number
-  * `query`: object with query parameters
-  * `hash`: the hash value (with `#`).
+- **Return value**
+  - `object`
+    * **`path`**: `string` Pathname without the page
+    * **`page`**: `number` The page number
+    * **`query`**: `object` Object with query parameters
+    * **`hash`**: `string` The hash value (with `#`).
 
-#### `stringify({ path, page?, query?, hash? })`
+{% endhint %}
+
+#### `libraries.source.stringify()`
 
 Utility for building routes from its attributes.
 
-**arguments**
+{% hint style="info" %}
 
-* `path`: pathname without the page
-* `page` (optional): the page number
-* `query` (optional): object with query parameters
-* `hash` (optional): the hash value (with `#`).
+`(attributesRoute: object) => string`
 
-#### return
+- **Parameters**
+  * **`path`**: `string` pathname without the page
+  * _`page`_: `number` _(optional)_ The page number
+  * _`query`_: `object` _(optional)_ Object with query parameters
+  * _`hash`_: `string` _(optional)_ The hash value (with `#`).
 
-* `route`: normalized route 
 
-#### `normalize(route)`
+- **Return value**
+  * `route`: `string` Normalized route 
 
-**arguments**
+{% endhint %}
 
-* `route`: any route that points to entities in your site (links, custom lists, etc.)
+#### `libraries.source.normalize()`
 
-#### return
+{% hint style="info" %}
 
-* `route`: normalized route 
+`(route: string) => string`
 
-## TypeScript
+- **Parameters**
+  * `route`: `string` Any route that points to entities in your site (links, custom  lists, etc.)
+- **Return value**
+  * `route`: `string` Normalized route 
+
+{% endhint %}
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
