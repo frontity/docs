@@ -259,6 +259,9 @@ The [`wp-source` package](https://github.com/frontity/frontity/tree/dev/packages
 
 ### Actions
 
+Actions don't return data. Data is always accessed via the state.
+That's because Frontity is following the [Flux pattern](https://facebook.github.io/flux/) (like Redux).
+
 #### `actions.source.fetch` 
 
 This action fetches all entities related to a `link`, i.e. the pathname of a URL in your site.
@@ -272,16 +275,15 @@ This action fetches all entities related to a `link`, i.e. the pathname of a URL
   - _`options`_: `object` _(optional)_
     - _`force`_: `boolean` The entities should be fetched again.
 
-- **Return value**
-  - `Promise` Promise resolving to data fetched
-
 {% endhint %}
 
 All received data are populated in `state.source` and are accessible using the methods explained in the next section.
 
 ```javascript
-actions.source.fetch("/category/nature/").then(dataFetched => ...)
+actions.source.fetch("/category/nature/")
 ```
+
+Although `actions.source.fetch` triggers an asynchoronuus action we don't need to capture any returned value (no need to use `await` or `.then()`). The response of the `fetch` will be added to the state. If you React component is receiving the state via props (use of `connect`) it will be re-rendered with this new version of the state when it's ready
 
 When `fetch` is called _again_ for the same `link` it does nothing, as all the entities have already been fetched and there is no need to request them again. If you do want to fetch them again, you can pass an options object to `source.fetch` with the following properties:
 
@@ -471,7 +473,7 @@ Request entity from the WordPress REST API.
     * _`api`_: `string` _(optional)_ Overrides the value set with `api.set.`
     * _`isWpCom`_: `boolean` _(optional)_ Overrides the value set with `api.set.`
 - **Return value**
-  - `Promise` Promise resolving to data requested
+  - `Promise` Promise resolving to a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object from the fetch.
 
 {% endhint %}
 
