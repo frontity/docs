@@ -26,7 +26,7 @@
     + [`state.source[type][id]`](#statesourcetypeid)
     + [`state.source.author[id]`](#statesourceauthorid)
   * [Libraries](#libraries)
-    + [`libraries.api.init()`](#librariesapiinit)
+    + [`libraries.source.api.init()`](#librariessourceapiinit)
     + [`libraries.source.api.get()`](#librariessourceapiget)
     + [`libraries.source.populate()`](#librariessourcepopulate)
     + [`libraries.source.handlers`](#librariessourcehandlers)
@@ -423,7 +423,7 @@ source.author[4]
 
 ### Libraries
 
-#### `libraries.api.init()`
+#### `libraries.source.api.init()`
 
 Set the URL to the WordPress REST API.
 
