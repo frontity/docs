@@ -251,6 +251,12 @@ export default connect(CategoryNature);
 
 ## API Reference
 
+{% hint style="info" %}
+
+The [`wp-source` package](https://github.com/frontity/frontity/tree/dev/packages/wp-source) implements the [interface defined in the `source` package](https://github.com/frontity/frontity/blob/dev/packages/source/types.ts) and [adds some extra API](https://github.com/frontity/frontity/blob/dev/packages/wp-source/types.ts)
+
+{% endhint %}
+
 ### Actions
 
 #### `actions.source.fetch` 
@@ -450,7 +456,7 @@ api.init({
 });
 ```
 
-#### `libraries.api.get()`
+#### `libraries.source.api.get()`
 
 Request entity from the WordPress REST API.
 
@@ -492,7 +498,7 @@ api.get({
 .then(dataRequested => { /* do something with dataRequested */ })
 ```
 
-#### `libraries.api.populate()`
+#### `libraries.source.populate()`
 
 Add entities to the Frontity state.
 
