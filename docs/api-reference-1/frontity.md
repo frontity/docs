@@ -75,7 +75,7 @@ Frontity exports `fetch` and `URL` with the same API they have in the browser, b
 ConnectedComponent = connect(Component, options?);
 ```
 
-It's a function that receives a React component an returns the same component but connected to the Frontity state, actions and libraries.
+It's a function that receives a React component and returns the same component but connected to the Frontity state, actions and libraries.
 Any instance of that component will receive three new props: `state`, `actions` and `libraries`, allowing the component to read the state, manipulate it through actions or use any code other packages have exposed in libraries.
 
 Also, that instance will re-render automatically whenever any value from the `state` which the component is using is changed.
