@@ -82,21 +82,20 @@ A name or path indicating the subdirectory of your domain where your Frontity si
 
 This option allows you to show a specific page when accessing the homepage of your site. For example, if you set this value to `/about-us` then that page will be shown if you access `/`.
 
-> **NOTE:** As this option overrides the `/` route, you should set `state.source.postsPage` as well in order to be able to access the posts archive in a different route.
-
-{% hint style="warning" %}
 You have to configure your WordPress with the same setting.
-{% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35%20%283%29%20%281%29.png)
+
+{% hint style="warning" %}
+As this option overrides the `/` route, you should set `state.source.postsPage` as well in order to be able to access the posts archive in a different route.
+{% endhint %}
+
 
 #### `state.source.postsPage`
 
 This option allows you to show the posts archive when accessing a specific URL of your site, instead of the homepage. For example, if you set this value to `/blog`, then the posts archive will be shown if you access `/blog` instead of `/`. It is useful when used in combination with `state.source.homepage`.
 
-{% hint style="warning" %}
 You have to configure your WordPress with the same setting.
-{% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2019-08-30-at-13.08.35%20%283%29%20%282%29.png)
 
@@ -104,13 +103,17 @@ You have to configure your WordPress with the same setting.
 
 Change the base prefix of URLs for category pages with the indicated one.
 
-> **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
+{% hint style="warning" %}
+For this option to work well, you have to put the same value in the WordPress site options.
+{% endhint %}
 
 #### `state.source.tagBase`
 
 Change the base prefix of URLs for tag pages with the indicated one.
 
-> **NOTE:** for this option to work well, you have to put the same value in the WordPress site options.
+{% hint style="warning" %}
+For this option to work well, you have to put the same value in the WordPress site options.
+{% endhint %}
 
 #### `state.source.postEndpoint`
 
@@ -202,7 +205,9 @@ Let’s start by explaining how the state data is used and then how that data is
 
 The state is designed so that you can know which entities correspond to which link, and then access the data of these entities in a simple way.
 
-> **NOTE:** for the data to exist, it will be necessary to request them previously using the `fetch` action.
+{% hint style="warning" %}
+For the data to exist, it will be necessary to request them previously using the `fetch` action.
+{% endhint %}
 
 ```jsx
 import React, { useEffect } from "react";
@@ -433,7 +438,9 @@ Properties added to each type are also based on the [WP REST API](https://develo
 
 Access category, tag, or custom taxonomy’s entities. These entities have the same schema as specified in the [WP REST API](https://developer.wordpress.org/rest-api/reference/).
 
-> NOTE: we are actually changing the WP REST API response, but **only for tags**, in which we are replacing the `taxonomy` value from `post_tag` to `tag`.
+{% hint style="warning" %}
+We are actually changing the WP REST API response, but **only for tags**, in which we are replacing the `taxonomy` value from `post_tag` to `tag`.
+{% endhint %}
 
 ```text
 source.category[2]
