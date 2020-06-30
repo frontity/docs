@@ -6,7 +6,7 @@
 
 - [Installation](#installation)
 - [Settings](#settings)
-  - [`state.source.api` (required)](#statesourceapi-required)
+  - [`state.source.api`](#state-source-api)
   - [`state.source.subdirectory`](#statesourcesubdirectory)
   - [`state.source.homepage`](#statesourcehomepage)
   - [`state.source.postsPage`](#statesourcepostspage)
@@ -68,9 +68,13 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
-#### `state.source.api` (required)
+#### `state.source.api`
+
+![required]
 
 The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)).
+
+Setting this value is the minimal configuration this package needs to work 
 
 #### `state.source.subdirectory`
 
@@ -716,3 +720,5 @@ Utility for building links from its attributes.
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
+
+[required]: https://img.shields.io/badge/REQUIRED-red.svg
