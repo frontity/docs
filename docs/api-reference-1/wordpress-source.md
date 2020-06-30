@@ -251,16 +251,16 @@ export default connect(CategoryNature);
 
 ## API Reference
 
-{% hint style="info" %}
-
 The [`wp-source` package](https://github.com/frontity/frontity/tree/dev/packages/wp-source) implements the [interface defined in the `source` package](https://github.com/frontity/frontity/blob/dev/packages/source/types.ts) and [adds some extra API](https://github.com/frontity/frontity/blob/dev/packages/wp-source/types.ts)
-
-{% endhint %}
 
 ### Actions
 
 Actions don't return data. Data is always accessed via the state.
 That's because Frontity is following the [Flux pattern](https://facebook.github.io/flux/) (like Redux).
+
+{% hint style="info" %}
+Read more about actions [here](../learning-frontity/actions.md) 
+{% endhint %}
 
 #### `actions.source.fetch` 
 
@@ -274,6 +274,8 @@ This action fetches all entities related to a `link`, i.e. the pathname of a URL
   - **`link`**: string` Link representing a REST API endpoint or custom handler 
   - _`options`_: `object` _(optional)_
     - _`force`_: `boolean` The entities should be fetched again.
+- **Return value**
+  - `Promise` it doesn't return data but a promise that is resolved when the action is finished (and state is updated)
 
 {% endhint %}
 
@@ -283,9 +285,43 @@ All received data are populated in `state.source` and are accessible using the m
 actions.source.fetch("/category/nature/")
 ```
 
-Although `actions.source.fetch` triggers an asynchronous action we don't need to capture any returned value (no need to use `await`). The response of `fetch` will be added to the state. If you React component is receiving the state via props (use of `connect`) it will be re-rendered with this new version of the state when it's ready
+Even though actions don't return data, they return a promise that resolves when the action is finished.
 
-When `fetch` is called _again_ for the same `link` it does nothing, as all the entities have already been fetched and there is no need to request them again. If you do want to fetch them again, you can pass an options object to `source.fetch` with the following properties:
+So, you can do something like this:
+
+```js
+await actions.source.fetch("/some-post");
+```
+
+which is useful when you need to access the new state just after calling the action:
+
+```js
+await actions.source.fetch("/some-post"); // <- Wait until we fetch "/some-post".
+const somePost = state.source.get("/some-post"); // <- The data will exist.
+```
+
+In React components, you won't need to use `async/await` with `fetch` because:
+
+- [`useEffect` doesn't directly accept `async` functions](https://reactjs.org/docs/hooks-reference.html#useeffect) although [it can contain `async`](https://www.robinwieruch.de/react-hooks-fetch-data) functions
+- They re-render when the `state` accessed changes.
+
+```js
+const SomePost = ({ actions, state }) => {
+  useEffect(() => {
+    // No need to use `async/await` here
+    actions.source.fetch("/some-post");
+  }, []);
+
+  // The data will not exist at first, `dataPost.isReady` will be false.
+  // But then, it will rerender when `actions.source.fetch` is finished.
+  const dataPost = state.source.get("/some-post");
+
+  // This will work just fine.
+  return dataPost.isReady ? <Post link="/some-post" /> : <Loading />;
+};
+```
+
+When `fetch` is called _again_ for the same `link` it does nothing, as all the entities have already been fetched and there is no need to request them again. If you do want to fetch them again, you can pass an options object to `source.fetch` with `force: true`:
 
 ```javascript
 actions.source.fetch("/category/nature/", { force: true })
@@ -468,7 +504,7 @@ Request entity from the WordPress REST API.
 
 - **Parameters**
   - `options: object`
-    * **`endpoint`**: `string` Name of the endpoint if is a `/wp/v2` endpoint (e.g. `posts`), or the full path of other REST endpoints (e.g. `/frontity/v1/discovery`).
+    * **`endpoint`**: `string` Name of the endpoint if is a `/wp/v2` endpoint (e.g. `posts`), or the full path of other REST endpoints (e.g. `/acf/v3/posts`).
     * **`params`**: `string` Any parameter that will be included in the query params.
     * _`api`_: `string` _(optional)_ Overrides the value set with `api.set.`
     * _`isWpCom`_: `boolean` _(optional)_ Overrides the value set with `api.set.`
@@ -492,7 +528,7 @@ const page14 = await api.get({ endpoint: "pages", params: { _embed: true, includ
 
 // Other endpoints: 
 const postBeautiesGullfoss = await api.get({ 
-  endpoint: "/frontity/v1/discovery",
+  endpoint: "/acf/v3/posts",
   params: { slug: "/the-beauties-of-gullfoss" }
 })
 ```
