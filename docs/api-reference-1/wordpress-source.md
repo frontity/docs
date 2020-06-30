@@ -68,9 +68,7 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
-#### `state.source.api`
-
-<img src="https://img.shields.io/badge/REQUIRED-red.svg" />
+#### `state.source.api` <img src="https://img.shields.io/badge/REQUIRED-red.svg" />
 
 The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)).
 
