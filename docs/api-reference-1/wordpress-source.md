@@ -1,5 +1,7 @@
 # @frontity/wp-source
 
+This package is in charge of getting the data from self-hosted WordPress or WordPress.com sites, and make it available from our React components.
+
 ## Table of contents
 
 <!-- toc -->
@@ -252,6 +254,13 @@ const CategoryNature = ({ state, actions }) => {
 
 export default connect(CategoryNature);
 ```
+
+{% hint style="info" %}
+If you want to know more about how to use the `wp-source` package, here you have some videos where Frontity DevRel team talks about it:
+- 📺 [Frontity DevRel Talks 2020-01 - wp-source & CSS In JS [1:36]](https://www.youtube.com/watch?v=e-_66W8pfdY&t=1461s) 
+- 📺 [Frontity DevRel Talks 2020-02 - Pagination example & wp-source (state & fetch) [17:53]](https://www.youtube.com/watch?v=eW5xZlpcqQk&t=254s) 
+{% endhint %}
+
 
 ## API Reference
 
