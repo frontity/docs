@@ -20,6 +20,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 * Site: [https://www.reciclateya.com/](https://www.reciclateya.com/)
 * [Source code](https://github.com/ardillan/asociacion-reciclate-ya)
 
+![Asociación Recíclate YA](.gitbook/assets/showcase-reciclateya.png)
+
 > I've created this website with Frontity for two reasons. The first one was that I wanted to build a fast and scalable website. The other one was that the content needed to be easy to manage for people who doesn't know anything about tech. Frontity also allowed me to improve my skills as a software developer.
 
 ## Frontity Dimension Theme
@@ -34,6 +36,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 ## Michael Zaletskyi (Links for Instagram page)
 
 * Site: [https://insta.zaletskyi.com/](https://insta.zaletskyi.com/)
+
+![Michael Zaletskyi](.gitbook/assets/showcase-instazaletskyi.png)
 
 > Really easy and fast. I love it.
 
@@ -50,6 +54,8 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 * Site: [https://stream-hub.com/](https://stream-hub.com/)
 * [Source code](https://gitlab.com/concalahan/stream-hub-frontity)
+
+![Stream Hub](.gitbook/assets/showcase-streamhub.png)
 
 > Quick and easy framework to experience fast WordPress with React. I really love using it.
 
