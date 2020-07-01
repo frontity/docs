@@ -38,6 +38,11 @@ For wordpress.com:
 https://public-api.wordpress.com/wp/v2/sites/your-wp-site.wordpress.com
 ```
 
+Check also that you are using one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
+
+![](../.gitbook/assets/wordpress-permalink-setting.png)
+
+
 ### Node.js
 
 To test if you have Node.js installed open your terminal and run:
