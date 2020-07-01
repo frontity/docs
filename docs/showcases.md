@@ -15,6 +15,14 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > For our new Frontity.org site did a stress test of Frontity + Gutenberg. All layouts were created using built-in blocks. The header and the footer are template parts. For the about page, we reused the same blocks, so no extra code/styles were needed \(and it looks awesome\). [Read more](https://twitter.com/luisherranz/status/1258757519654227968?s=20).
 
+## Asociación Recíclate YA!
+
+* Site: [https://www.reciclateya.com/](https://www.reciclateya.com/)
+* [Source code](https://github.com/ardillan/asociacion-reciclate-ya)
+
+![Asociación Recíclate YA](.gitbook/assets/showcase-reciclateya.png)
+
+> I've created this website with Frontity for two reasons. The first one was that I wanted to build a fast and scalable website. The other one was that the content needed to be easy to manage for people who doesn't know anything about tech. Frontity also allowed me to improve my skills as a software developer.
 
 ## Frontity Dimension Theme
 
@@ -25,6 +33,14 @@ If you have created a Frontity site, whether for a client or as a personal proje
 
 > I applied Frontity on a HTML5 up template and used react-transition-group to orchestrate the animations. It's a simple site but in my opinion it was a great way to get started with Frontity. I might do another one as it was pretty fun to make.[Read more](https://community.frontity.org/t/html5-up-dimension-template-for-frontity-matnard-dimension-theme/2123).
 
+## Michael Zaletskyi (Links for Instagram page)
+
+* Site: [https://insta.zaletskyi.com/](https://insta.zaletskyi.com/)
+
+![Michael Zaletskyi](.gitbook/assets/showcase-instazaletskyi.png)
+
+> Really easy and fast. I love it.
+
 ## Ben Wright
 
 * Site: [https://benwrightdev.com/](https://benwrightdev.com/)
@@ -33,6 +49,15 @@ If you have created a Frontity site, whether for a client or as a personal proje
 ![Ben Wright](.gitbook/assets/showcase-benwright.png)
 
 > Experience with Frontity has been very good, I haven’t had to dive deep into much functionality yet because it’s a very simple site but everything was super easy to get started and the docs are comprehensive. [Read more](https://community.frontity.org/t/personal-portfolio-site/2066).
+
+## Stream Hub
+
+* Site: [https://stream-hub.com/](https://stream-hub.com/)
+* [Source code](https://gitlab.com/concalahan/stream-hub-frontity)
+
+![Stream Hub](.gitbook/assets/showcase-streamhub.png)
+
+> Quick and easy framework to experience fast WordPress with React. I really love using it.
 
 ## Ignacio Cruz
 
