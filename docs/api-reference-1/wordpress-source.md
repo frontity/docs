@@ -19,9 +19,9 @@
 - [How to use](#how-to-use)
 - [API Reference](#api-reference)
   - [Actions](#actions)
-    - [`actions.source.fetch`](#actions-source-fetch)
+    - [`actions.source.fetch()`](#actions-source-fetch)
   - [State](#state)
-    - [`state.source.get`](#state-source-get)
+    - [`state.source.get()`](#state-source-get)
     - [`state.source[taxonomy][id]`](#state-source-taxonomy-id)
     - [`state.source[type][id]`](#state-source-type-id)
     - [`state.source.author[id]`](#state-source-author-id)
@@ -266,7 +266,7 @@ That's because Frontity is following the [Flux pattern](https://facebook.github.
 Read more about actions [here](../learning-frontity/actions.md)
 {% endhint %}
 
-#### `actions.source.fetch`
+#### `actions.source.fetch()`
 
 This action fetches all entities related to a `link`, i.e. the pathname of a URL in your site.
 
@@ -333,7 +333,7 @@ actions.source.fetch("/category/nature/", { force: true });
 
 ### State
 
-#### `state.source.get`
+#### `state.source.get()`
 
 Returns an object that gives you info about the type of that link and related entities.
 
