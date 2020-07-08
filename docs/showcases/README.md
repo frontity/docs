@@ -3,7 +3,7 @@
 Want to see what the community is building with Frontity? Here are some great examples of Frontity in action!
 
 {% hint style="info" %}
-If you have created a Frontity site, whether for a client or as a personal project, you can help us and the rest of the community by [sharing it](https://forms.gle/xThoNSyh6M6rgeM97). Sharing your project will not only allow you to get more visibility and recognition but also help others learn what can be accomplished with Frontity. 🙂
+If you would like your site featured on our showcases page, please see [this page](how-to-add-your-site.md) for details of how to add your site.
 {% endhint %}
 
 ## Frontity
