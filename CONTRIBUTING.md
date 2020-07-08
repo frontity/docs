@@ -65,7 +65,7 @@ Our staff will review your suggestions and will take any actions necessary to im
 Want to do a [code contribution](https://docs.frontity.org/contributing/code-contribution-guide) that may require an update of the docs? 
 Follow our [code releases](https://github.com/frontity/docs/wiki/Code-Releases) workflow
 
-## Contributions Workfows
+## Contributions Workflows
 
 To suggest changes in Frontity's documentation **you'll need a GitHub account** (so create it if you don't have already one)
 
