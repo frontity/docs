@@ -11,7 +11,7 @@ If you would like your site featured on our showcases page, please see [this pag
 * Site: [https://frontity.org/](https://frontity.org/)
 * [Source code](https://github.com/frontity/frontity.org)
 
-![Frontity](../gitbook/assets/showcase-frontityWebsite.png)
+![Frontity](../.gitbook/assets/showcase-frontityWebsite.png)
 
 > For our new Frontity.org site did a stress test of Frontity + Gutenberg. All layouts were created using built-in blocks. The header and the footer are template parts. For the about page, we reused the same blocks, so no extra code/styles were needed \(and it looks awesome\). [Read more](https://twitter.com/luisherranz/status/1258757519654227968?s=20).
 
