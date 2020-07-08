@@ -8,7 +8,7 @@ You can find a detailed guide, both to learn how Frontity and `mars-theme` work 
 
 ## Demo
 
-![](../.gitbook/assets/screen-shot-2020-02-26-at-17.23.06.png)
+![](../.gitbook/assets/screenshot-mars-theme-demo.png)
 
 You can check out all the features in this [**theme demo**](https://mars.frontity.org/)**.**
 
@@ -63,5 +63,5 @@ It changes `state.theme.isMobileMenuOpen` to `false`, so it closes the mobile me
 
 ### Libraries
 
-This theme doesn't have its own libraries, but it includes the image and iframe processor of [@frontity/html2react](), so all the `<img>` tags are converted into the [`<Image />` component]() and the &lt;iframe&gt; tags into the [`<Iframe />` component]().
+This theme doesn't have its own libraries, but it includes the image and iframe processor of [@frontity/html2react](frontity-mars-theme.md), so all the `<img>` tags are converted into the [`<Image />` component](frontity-mars-theme.md) and the &lt;iframe&gt; tags into the [`<Iframe />` component](frontity-mars-theme.md).
 

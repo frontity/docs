@@ -14,16 +14,14 @@
     "textlint:all:terminology": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint -c config/terminology.config.json '{}' ';'",
     "textlint:all:terminology:fix": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --fix -c config/terminology.config.json '{}' ';'",
     "textlint:all:rousseau": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-rousseau '{}' ';'",
-    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'",
-    "all-contributors:generate": "all-contributors generate"
+    "textlint:all:write-good": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint --no-textlintrc --rule textlint-rule-write-good '{}' ';'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontity/gitbook-docs.git"
+    "url": "git+https://github.com/frontity/docs.git"
   },
-  "homepage": "https://github.com/frontity/gitbook-docs#readme",
+  "homepage": "https://github.com/frontity/docs#readme",
   "devDependencies": {
-    "all-contributors-cli": "^6.15.0",
     "dictionary-en-au": "^2.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
@@ -50,6 +48,7 @@
       "pre-commit": "lint-staged -v"
     }
   },
+  "prettier": {},
   "textlint": {
     "filters": {
       "comments": true
@@ -65,9 +64,7 @@
       "no-empty-section": {
         "severity": "warning"
       },
-      "one-sentence-per-line": {
-        "severity": "warning"
-      },
+      "one-sentence-per-line": false,
       "period-in-list-item": {
         "severity": "warning"
       },

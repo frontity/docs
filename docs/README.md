@@ -8,7 +8,7 @@ Let's kick things off by providing you with a roadmap so that you can find your 
 
 If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
 
-This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly.
+This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly. In particular we would like to draw your attention to the [**Initial checks**](https://docs.frontity.org/getting-started#initial-checks) section.
 
 Once you've followed the Quick Start Guide and have a working Frontity installation we'll show you how to [**connect Frontity up to your own WordPress site**](getting-started/connecting-to-wordpress.md) and also how to customise the menu to reflect the structure of your WordPress site.
 

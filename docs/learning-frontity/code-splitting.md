@@ -48,8 +48,7 @@ const Post = ({ state }) => (
 export default connect(Post);
 ```
 
-Instead of using the normal `import ...
-from`.
+Instead of using the normal `import ... from`.
 
 ```jsx
 import { loadable } from "frontity";
@@ -77,10 +76,8 @@ If we don't use `loadable` , the `<HeavyComments>` component is included in the 
 For managing the Code Splitting, Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/).
 
 [![loadable components](../.gitbook/assets/loadable-components.png)](https://loadable-components.com/docs/getting-started/)
- 
-If you want to go deeper, you should take a look at [**their docs**](https://loadable-components.com/docs/getting-started/).
-You don't need to read the docs on how to install and configure Loadable Components since we have already done that work for you.
-Below are concepts that are interesting and helpful to read up on:
+
+If you want to go deeper, you should take a look at [**their docs**](https://loadable-components.com/docs/getting-started/). You don't need to read the docs on how to install and configure Loadable Components since we have already done that work for you. Below are concepts that are interesting and helpful to read up on:
 
 * What is [_Code Splitting_](https://loadable-components.com/docs/code-splitting/)?
 * Most of the time, you want to [_prefetch_](https://loadable-components.com/docs/prefetching/) a component, it means it will be loaded when the browser is idle. 
@@ -90,3 +87,4 @@ Below are concepts that are interesting and helpful to read up on:
 * Infinite loading is not good for user experience, to avoid it implementing a [_timeout_](https://www.smooth-code.com/open-source/loadable-components/docs/timeout/) is a good workaround. 
 * Use [Library Splitting](https://www.smooth-code.com/open-source/loadable-components/docs/library-splitting/) to defer the loading of a library
 * Create a reusable Loadable Component by using a [_Dynamic Import_](https://www.smooth-code.com/open-source/loadable-components/docs/dynamic-import/)
+
