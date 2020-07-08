@@ -32,7 +32,7 @@ Frontity's theme has the same pagination as the original WordPress theme. This w
 
 ## Demo
 
-![Homepage view in Twenty Twenty Frontity Theme.](../.gitbook/assets/homepage-view-twentytwenty-frontity-theme.png)
+![Homepage view in Twenty Twenty Frontity Theme.](../.gitbook/assets/screenshot-homepage-view-twentytwenty-frontity-theme.png)
 
 You can check out all the features in this [**theme demo**](https://twentytwenty.frontity.org/), \_\*\*\_or even in our [Frontity blog](https://blog.frontity.org/).
 
@@ -133,7 +133,9 @@ All the settings and their description:
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left"><b>fontSets</b>
@@ -153,7 +155,7 @@ All the settings and their description:
     </tr>
   </thead>
   <tbody></tbody>
-</table>There are some actions used along the theme that you may need useful:
+</table>
 
 #### actions.theme.openMobileMenu
 
@@ -173,5 +175,5 @@ It changes `state.theme.isSearchModalOpen` to `false`, so it closes the search b
 
 ### Libraries
 
-This theme doesn't have its own libraries, but it includes the image processor of [@frontity/html2react](), so all the `<img>` tags are converted into the [`<Image />` component]().
+This theme doesn't have its own libraries, but it includes the image processor of [@frontity/html2react](frontity-twentytwenty-theme.md), so all the `<img>` tags are converted into the [`<Image />` component](frontity-twentytwenty-theme.md).
 

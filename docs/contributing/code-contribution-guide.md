@@ -91,7 +91,7 @@ For opening one you have to go to [Frontity's pull requests](https://github.com/
 
 Select your own repository and **the dev branch** on Frontity, and **create the pull request**.
 
-![](../.gitbook/assets/compare_-_frontity_frontity-2%20%281%29.png)
+![](../.gitbook/assets/compare_-_frontity_frontity-2.png)
 
 ## Commit messages
 

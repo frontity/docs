@@ -16,7 +16,6 @@ Here's a list of the main features included in Frontity's core:
 * [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
 * [Server-side Rendering](frontity-features.md#server-side-rendering)
 * [Extensible](frontity-features.md#less-than-greater-than-extensible)
-* [Best Lighthouse score](frontity-features.md#best-lighthouse-score)
 * [Perfect accessibility](frontity-features.md#perfect-accessibility)
 * [Battle-tested](frontity-features.md#battle-tested-framework)
 * [Serverless and horizontal scaling](frontity-features.md#serverless-and-horizontal-scaling)
@@ -59,15 +58,11 @@ The content is retrieved using the WordPress REST API. Once React is loaded in t
 
 One of the most amazing things about Frontity is its extensibility: it allows you to easily add new features to your theme via **extensions** and **NPM packages** without having to create them from scratch.
 
-We are working on a lot of Frontity extensions which will be available soon. You can check them out [here](https://github.com/frontity/gitbook-docs/tree/a6a79476ae299fdebf52cf13ddeaca9ede179f24/docs/frontity-features/extensions.md). Some examples are Yoast SEO, AdSense, SmartAds, DoubleClick for Publishers, OneSignal Push Notifications, Disqus, Google Analytics, Google Tag Manager, or ComScore.
+We are working on a lot of Frontity extensions which will be available soon. You can check them out [here](https://github.com/frontity/docs/tree/a6a79476ae299fdebf52cf13ddeaca9ede179f24/docs/frontity-features/extensions.md). Some examples are Yoast SEO, AdSense, SmartAds, DoubleClick for Publishers, OneSignal Push Notifications, Disqus, Google Analytics, Google Tag Manager, or ComScore.
 
 Apart from these extensions, there are many other **interface tools** specifically created for Frontity: context routing, swipe navigation, infinite scrolling, html-to-react, gutenberg-to-react, etc.
 
 Our themes can also use any of the 80.000 React packages currently available in npm.
-
-### 💯 Best Lighthouse score
-
-Frontity is optimized to get the maximum score in Lighthouse, including performance, SEO and accessibility. Theme developers start with **100/100** and they just need to maintain it while they add features to their theme.
 
 ### 🌎 Perfect accessibility
 

@@ -25,7 +25,7 @@ This document contains all the required information and links to resources neede
 
 ## Code of Conduct
 
-We provide a [**Code of Conduct**](https://github.com/frontity/gitbook-docs/tree/master/CODE_OF_CONDUCT.md) to make clear the behavior we expect from contributors and maintainers alike.
+We provide a [**Code of Conduct**](https://github.com/frontity/docs/tree/master/CODE_OF_CONDUCT.md) to make clear the behavior we expect from contributors and maintainers alike.
 We are committed to providing a welcoming and supportive environment and kindly request that you participate in these values also.
 
 Our Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org), version 1.4,
@@ -33,11 +33,11 @@ available at [http://contributor-covenant.org/version/1/4](http://contributor-co
 
 ## Platform
 
-We use [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our [`gitbook-docs`](https://github.com/frontity/gitbook-docs/) repository (every time the `master` branch is updated the whole [documentation site](https://docs.frontity.org/) is rebuilt).
+We use [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our [`gitbook-docs`](https://github.com/frontity/docs/) repository (every time the `master` branch is updated the whole [documentation site](https://docs.frontity.org/) is rebuilt).
 
 ![github-gitbook-connection](docs/.gitbook/assets/github-gitbook-connection.png)
 
-This `gitbook-docs` repository is the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/gitbook-docs/tree/master) branch).
+This `gitbook-docs` repository is the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/docs/tree/master) branch).
 
  
 ## Documentation Format
@@ -63,9 +63,9 @@ Our staff will review your suggestions and will take any actions necessary to im
 ## Code Releases
 
 Want to do a [code contribution](https://docs.frontity.org/contributing/code-contribution-guide) that may require an update of the docs? 
-Follow our [code releases](https://github.com/frontity/gitbook-docs/wiki/Code-Releases) workflow
+Follow our [code releases](https://github.com/frontity/docs/wiki/Code-Releases) workflow
 
-## Contributions Workfows
+## Contributions Workflows
 
 To suggest changes in Frontity's documentation **you'll need a GitHub account** (so create it if you don't have already one)
 
@@ -81,27 +81,27 @@ So you don't need to worry about breaking anything!
 
 Here you have the most important workflows you can use to suggest changes in our documentation:
 
-#### • [`Edit on Github`](https://github.com/frontity/gitbook-docs/wiki/Edit-on-Github)  📝 <a name="Edit-on-Github" />
+#### • [`Edit on Github`](https://github.com/frontity/docs/wiki/Edit-on-Github)  📝 <a name="Edit-on-Github" />
 
 This workflow is recommended for minor changes in just one file and for those who have little or no experience with git or github.
 With this workflow you can edit documentation directly online in your browser.
 
-Learn more about this workflow [here](https://github.com/frontity/gitbook-docs/wiki/Edit-on-Github).
+Learn more about this workflow [here](https://github.com/frontity/docs/wiki/Edit-on-Github).
 
-#### • [`Fork & Edit on Github`](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Edit-on-Github) 📝📝 <a name="Fork-&-Edit-on-Github" />
+#### • [`Fork & Edit on Github`](https://github.com/frontity/docs/wiki/Fork-&-Edit-on-Github) 📝📝 <a name="Fork-&-Edit-on-Github" />
 
 This workflow is recommended for changes in several files and for those who have some experience with git or github
 With this workflow you can also edit documentation directly online in your browser.
 
-Learn more about this workflow [here](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Edit-on-Github).
+Learn more about this workflow [here](https://github.com/frontity/docs/wiki/Fork-&-Edit-on-Github).
 
-#### • [`Fork, Local Edit & Push`](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Local-Edit-&-Push)  📝📝📝 <a name="Fork-&-Local-Edit-&-Push" />
+#### • [`Fork, Local Edit & Push`](https://github.com/frontity/docs/wiki/Fork-&-Local-Edit-&-Push)  📝📝📝 <a name="Fork-&-Local-Edit-&-Push" />
 
 If you are familiar with Git, you can use the `Fork, Local Edit & Push` workflow.
 This, in fact, is the preferred method for all but very minor changes.
 If you've previously contributed to other projects on GitHub via pull requests, you should already be familiar with this workflow.
 
-Learn more about this workflow [here](https://github.com/frontity/gitbook-docs/wiki/Fork-&-Local-Edit-&-Push).
+Learn more about this workflow [here](https://github.com/frontity/docs/wiki/Fork-&-Local-Edit-&-Push).
 
 > For minor changes, or if you're new to GitHub, we suggest that you use the `Edit on Github` workflow, because it's a quick and easy way to make changes. 
 

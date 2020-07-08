@@ -16,7 +16,7 @@ To get started with Frontity you will need:
 
   You will use these to run Frontity commands during the set-up and development of your project
 
-> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture]() section arch these docs.
+> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](./) section arch these docs.
 
 ## Initial checks
 
@@ -37,6 +37,11 @@ For wordpress.com:
 ```text
 https://public-api.wordpress.com/wp/v2/sites/your-wp-site.wordpress.com
 ```
+
+Check also that you are using one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
+
+![](../.gitbook/assets/wordpress-permalink-setting.png)
+
 
 ### Node.js
 
