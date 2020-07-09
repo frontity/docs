@@ -18,7 +18,7 @@ These are the instructions to deploy a Frontity project on Vercel using `now`, o
 
 ### Create a [`now.json`](https://vercel.com/docs/configuration?query=now.json#introduction/configuration-reference)
 
-1. Create this `now.json` file and save it in the r oot your Frontity project
+1. Create this `now.json` file and save it in the root your Frontity project
 
 ```text
 {
