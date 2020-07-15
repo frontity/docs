@@ -592,7 +592,7 @@ const getFromSomeAPI = async (resource) => {
 const url = new URL(url, base);
 ```
 
-It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) objects. 
+It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) objects.
 
 This constructor is safe to use both server and client side, but you have to import it first.
 
@@ -648,3 +648,179 @@ const decodedText = decode("milk &amp; cookies");
 console.log(decodedText); // "milk and cookies"
 ```
 
+### `Slot`
+
+The `<Slot />` component enables the use of a powerful pattern called Slot and Fill. This allows for  any React component to be inserted into, or hooked onto, different places within the app, thereby improving extensibility.
+
+This component allows a theme developer to insert named `<Slot>` components in various places in a theme. Other package developers are then able to add `<Fill>` components which will be hooked onto the named slots.
+
+More than one Fill can be hooked onto any single Slot, and these can be ordered according to a `priority` attribute assigned to the Fill.
+
+#### Syntax
+
+```tsx
+<Slot name="name of the slot" data={data} myprops={myprops} />
+```
+or
+```tsx
+<Slot name="name of the slot" data={data} myprops={myprops}>
+  {children}
+</Slot>
+```
+
+#### Props
+
+| Name             | Type      | Default     | Required | Description                                                                                                                                                           |
+| :--------------- | :-------- | :---------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`           | string    | `undefined` | true     | The name of the Slot. The user of this Slot will have to specify this name in order to insert a Fill component.                                                       |
+| `children`       | ReactNode | `undefined` | true     | The component that will be used as a fallback in case that no fill is specified for a particular Slot. You can use any type of data that is valid as a react element. |
+| `data`           | any       | `undefined` | false    | Any data that you might want to pass to the Fill. Normally used for passing route data fetched in the parent component.                                               |
+| `any other prop` | any       | undefined   | false    | Any other custom prop. The theme can specify other props and they will be passed down to the Fill.                                                                    |
+
+#### Examples
+
+The simplest example of a Slot would be:
+
+```tsx
+import { Slot } from "frontity";
+
+const Theme = ({ state }) => (
+  <>
+    <Slot name="Above Header" />
+    <Header />
+    <Slot name="Below Header" />
+    {/* ... */}
+  </>
+);
+```
+
+Slots can also pass data to the `Fill` components that will be inserted in place of those slots:
+
+```tsx
+import { Slot } from "frontity";
+
+const Carousel = ({ state }) => {
+
+  // Get latest posts.
+  const homeData = state.source.get("/");
+
+  return homeData.items.map((post, index) => {
+    const data = state.source.get(post.link);
+    return (
+      <>
+        <Slot data={data} name={`Before post ${index}`} />
+        <PostCard />
+        <Slot data={data} name={`After post ${index}`} />
+      </>
+    );
+  });
+
+};
+```
+
+Slots can also pass arbitrary props to the `Fill` components that will be inserted in place of those slots. In this example we're using 'index' to pass the value of `index` to the Fills:
+
+```tsx
+import { Slot } from "frontity";
+
+const Carousel = ({ state }) => {
+
+  // Get latest posts.
+  const homeData = state.source.get("/");
+
+  return homeData.items.map((post, index) => {
+    const data = state.source.get(post.link);
+    return (
+      <>
+        <Slot data={data} index={index} name="Before post" />
+        <PostCard />
+        <Slot data={data} index={index} name="After post" />
+      </>
+    );
+  });
+
+};
+```
+
+The Slot component supports optional children that are rendered if no fills are present. You can use any type of data that is valid as a react element:
+
+```tsx
+const Post = () => (
+  <>
+    {/* ... */}
+    <PostTitle />
+    <Slot name="Between post title and post meta">
+      <Separator />
+    </Slot>
+    <PostMeta />
+    {/* ... */}
+  </>
+);
+```
+
+#### Fills
+
+Fills are added to the `state`, to a common namespace called `fills`. Each fill consists of a configuration object that should be given a unique key and assigned to a namespace. To learn more about namespaces see [this secion](../learning-frontity/namespaces) of our docs.
+
+```tsx
+const state = {
+  fills: {
+    namespace: {
+      nameOfTheFill: {
+        slot: "Name of the slot they want to fill",
+        library: "libNamespace.ComponentName",
+        priority: 5,
+        props: {
+          // Object with props that will be passed to the component.
+        },
+      },
+    },
+  },
+};
+```
+
+Fills configuration objects structure:
+
+| Name             | Description      | Required                                                                                                                        |
+| :--- | :--- | :--- |
+| `object key`           | Name of your fill, must be unique.    | yes
+| `slot`           | Name of the slot they want to fill.    | yes
+| `library`           | Name of the component they want to use. This is obtained from `libraries.fills` (see below).    | yes
+| `priority`           | Priority of the fill. Default is 10. (lower value means higher priority)   | no
+| `props`           | Object with props that will be passed to the component.    | no
+
+Fills configuration objects can have a false value. This is useful if a package creates a fill by default and a user (or another package) wants to turn it off.
+
+```tsx
+const state = {
+  fills: {
+    namespace: {
+      nameOfTheFill: false,
+    },
+  },
+};
+```
+
+The actual components that will be hooked onto a `<Slot>` are exposed in `libraries.fills` by Frontity packages:
+
+```tsx
+import { MyFill1, MyFill2 } from "./fills";
+
+export default {
+  state: {
+    //...
+  },
+  actions: {
+    //...
+  },
+  libraries: {
+    fills: {
+      libNamespace: {
+        ComponentName: MyComponent
+      },
+    },
+  },
+};
+```
+
+Note that `libNamespace.ComponentName` here matches what is referenced in `state.fills.namespace.namOfTheFill.library` above. `MyComponent` here is the actual component which is defined elsewhere and may be imported. The return value of this component, i.e. `MyComponent`, is the content that will be inserted into HTML at the position of the `<Slot>` that it is attached to.
