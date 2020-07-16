@@ -672,10 +672,10 @@ or
 
 | Name             | Type      | Default     | Required | Description                                                                                                                                                           |
 | :--------------- | :-------- | :---------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`           | string    | `undefined` | true     | The name of the Slot. The user of this Slot will have to specify this name in order to insert a Fill component.                                                       |
-| `children`       | ReactNode | `undefined` | true     | The component that will be used as a fallback in case that no fill is specified for a particular Slot. You can use any type of data that is valid as a react element. |
-| `data`           | any       | `undefined` | false    | Any data that you might want to pass to the Fill. Normally used for passing route data fetched in the parent component.                                               |
-| `any other prop` | any       | undefined   | false    | Any other custom prop. The theme can specify other props and they will be passed down to the Fill.                                                                    |
+| `name`           | string    | `undefined` | yes     | The name of the Slot. The user of this Slot will have to specify this name in order to insert a Fill component.                                                       |
+| `children`       | ReactNode | `undefined` | yes     | The component that will be used as a fallback in case that no fill is specified for a particular Slot. You can use any type of data that is valid as a react element. |
+| `data`           | any       | `undefined` | no    | Any data that you might want to pass to the Fill. Normally used for passing route data fetched in the parent component.                                               |
+| `any other prop` | any       | undefined   | no    | Any other custom prop. The theme can specify other props and they will be passed down to the Fill.                                                                    |
 
 #### Examples
 
