@@ -18,11 +18,14 @@ If you are familiar with React hooks, you can use also **`useConnect`** to do th
 
 Use the **`Head`** component whenever you want to add HTML tags inside the `<head>` of any of your site's pages. You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
 
+Use the **`Slot`** component whenever you want to add a 'placeholder' to your theme which will be filled with a **`Fill`**. Fills are added to the state in the `state.fills` namespace.
+
 #### **API reference:**
 
 * [connect](frontity.md#connect)
 * [useConnect](frontity.md#useConnect)
 * [Head](frontity.md#head)
+* [Slot](frontity.md#slot)
 
 ### CSS in JS
 
