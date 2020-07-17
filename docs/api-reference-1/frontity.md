@@ -653,11 +653,36 @@ console.log(decodedText); // "milk and cookies"
 
 ### `Slot`
 
-The `<Slot />` component enables the use of a powerful pattern called Slot and Fill. This allows for  any React component to be inserted into, or hooked onto, different places within the app, thereby improving extensibility.
+The `<Slot />` component enables the use of a powerful pattern called Slot and Fill.
+This allows for  any React component to be inserted into, or hooked onto, different places within the app, thereby improving extensibility.
 
-This component allows a theme developer to insert named `<Slot>` components in various places in a theme. Other package developers are then able to add `<Fill>` components which will be hooked onto the named slots.
+This component allows a theme developer to insert named `<Slot>` components in various places in a theme.
+Other package developers are then able to add *'fill'* components which will be hooked onto the named slots.
 
-More than one Fill can be hooked onto any single Slot, and these can be ordered according to a `priority` attribute assigned to the Fill.
+#### Rationale
+
+When developing a site the developer is often required to make certain customisations to the structure and/or appearance of the site.
+This can be difficult to do and necessitates modifying the core code of the theme.
+
+Theme developers are able to facilitate such customisations by adding `<Slot />` components at various places in the theme, e.g. above the header, below the header, before the content, etc...
+
+These 'slots' can then be filled with custom components that have been added by the site developer and which are then 'hooked' onto a particular 'slot' to insert the content in that place on the page.
+
+An example might be as follows - the site developer wants to place a third party ad above the content of each page. The theme developer has thoughtfully provided a slot in that position in the theme:
+
+```tsx
+//...
+const Content = () => {
+  //...
+  <Slot name="Before Content">
+  <Container>
+  //...
+  </Container>
+  //...
+}
+```
+
+The site developer is now able to 'hook' a component that returns an ad onto that slot, so that the ad gets rendered in that position on the page. This component is referred to as a *'fill'*.
 
 #### Syntax
 
@@ -764,6 +789,8 @@ const Post = () => (
 #### Fills
 
 Fills are added to the `state`, to a common namespace called `fills`. Each fill consists of a configuration object that should be given a unique key and assigned to a namespace. To learn more about namespaces see [this secion](../learning-frontity/namespaces) of our docs.
+
+More than one Fill can be hooked onto any single Slot, and these can be ordered according to a `priority` attribute assigned to the Fill.
 
 ```tsx
 const state = {
