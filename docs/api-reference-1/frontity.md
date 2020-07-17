@@ -674,8 +674,8 @@ An example might be as follows - the site developer wants to place a third party
 //...
 const Content = () => {
   //...
-  <Slot name="Before Content">
   <Container>
+  <Slot name="Before Content">
   //...
   </Container>
   //...
@@ -788,7 +788,8 @@ const Post = () => (
 
 #### Fills
 
-Fills are added to the `state`, to a common namespace called `fills`. Each fill consists of a configuration object that should be given a unique key and assigned to a namespace. To learn more about namespaces see [this secion](../learning-frontity/namespaces) of our docs.
+Fills are added to the `state`, to a common namespace called `fills`.
+Each fill consists of a configuration object that should be given a unique key and assigned to a namespace. To learn more about namespaces see [this secion](../learning-frontity/namespaces) of our docs.
 
 More than one Fill can be hooked onto any single Slot, and these can be ordered according to a `priority` attribute assigned to the Fill.
 
