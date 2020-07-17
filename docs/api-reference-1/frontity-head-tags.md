@@ -34,9 +34,9 @@ If you have an existing project make sure your [@frontity/wp-source](frontity-he
 
 ## Settings
 
-As it works automatically, It doesn't have settings itself, but you it requires two Frontity parameters to work:
+As it works automatically, It doesn't have settings itself, but it requires two Frontity parameters to work:
 
-* `state.frontity.url` : The URL of your site. Usually defined at `frontity.settngs.js` file.
+* `state.frontity.url` : The URL of your site. Usually defined in the `frontity.settings.js` file.
 * `state.source.api`: The API where your project is pointing. Defined at [@frontity/wp-source](https://docs.frontity.org/api-reference-1/wordpress-source#state-source-api-required) if you haven't changed your Source.
 
 It needs `@frontity/wp-source` installed and updated to at least the `1.5.0` version.
