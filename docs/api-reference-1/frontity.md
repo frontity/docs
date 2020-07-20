@@ -698,12 +698,14 @@ or
 
 #### Props
 
-| Name             | Type      | Default     | Required | Description                                                                                                                                                           |
-| :--------------- | :-------- | :---------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`           | string    | `undefined` | yes     | The name of the Slot. The user of this Slot will have to specify this name in order to insert a Fill component.                                                       |
-| `children`       | ReactNode | `undefined` | yes     | The component that will be used as a fallback in case that no fill is specified for a particular Slot. You can use any type of data that is valid as a react element. |
-| `data`           | any       | `undefined` | no    | Any data that you might want to pass to the Fill. Normally used for passing route data fetched in the parent component.                                               |
-| `any other prop` | any       | undefined   | no    | Any other custom prop. The theme can specify other props and they will be passed down to the Fill.                                                                    |
+All the following props can be passed to the `<Slot/>` component.
+
+| Name             | Type                         | Default                               | Required | Description                                                                                                                                                                                                                                                                  |
+| :--------------- | :--------------------------- | :------------------------------------ | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`           | string                       | `undefined`                           | yes      | The name of the Slot. The user of this Slot will have to specify this name in order to insert a Fill component.                                                                                                                                                              |
+| `children`       | ReactNode                    | `undefined`                           | yes      | The component that will be used as a fallback in case that no fill is specified for a particular Slot. You can use any type of data that is a valid React element.                                                                                                           |
+| `data`           | ReturnType<state.source.get> | `state.source.get(state.router.link)` | no       | Any data that you might want to pass to the Fill. Normally used for passing route data fetched in the parent component. If you don't pass any value, the `<Slot/>` component will set the value of this prop to `state.source.get(state.router.link)` for you automatically. |
+| `any other prop` | any                          | undefined                             | no       | Any other custom prop. The theme can specify other props and they will be passed down to the Fill.                                                                                                                                                                           |
 
 #### Examples
 
@@ -789,16 +791,18 @@ const Post = () => (
 #### Fills
 
 Fills are added to the `state`, to a common namespace called `fills`.
-Each fill consists of a configuration object that should be given a unique key and assigned to a namespace. To learn more about namespaces see [this secion](../learning-frontity/namespaces) of our docs.
+Each fill consists of a configuration object that should be given a unique key and assigned to a namespace. To learn more about namespaces see [this section](../learning-frontity/namespaces) of our docs.
 
 More than one Fill can be hooked onto any single Slot, and these can be ordered according to a `priority` attribute assigned to the Fill.
 
 ```tsx
+// my-frontity-app/packages/my-theme/src/index.js
+
 const state = {
   fills: {
     namespace: {
       nameOfTheFill: {
-        slot: "Name of the slot they want to fill",
+        slot: "Name of the slot they want to fill", // This has to match the `name` prop passed to <Slot/>
         library: "libNamespace.ComponentName",
         priority: 5,
         props: {
@@ -812,17 +816,19 @@ const state = {
 
 Fills configuration objects structure:
 
-| Name             | Description      | Required                                                                                                                        |
-| :--- | :--- | :--- |
-| `object key`           | Name of your fill, must be unique.    | yes
-| `slot`           | Name of the slot they want to fill.    | yes
-| `library`           | Name of the component they want to use. This is obtained from `libraries.fills` (see below).    | yes
-| `priority`           | Priority of the fill. Default is 10. (lower value means higher priority)   | no
-| `props`           | Object with props that will be passed to the component.    | no
+| Name         | Description                                                                                  | Required |
+| :----------- | :------------------------------------------------------------------------------------------- | :------- |
+| `object key` | Name of your fill, must be unique.                                                           | yes      |
+| `slot`       | Name of the slot they want to fill.                                                          | yes      |
+| `library`    | Name of the component they want to use. This is obtained from `libraries.fills` (see below). | yes      |
+| `priority`   | Priority of the fill. Default is 10. (lower value means higher priority)                     | no       |
+| `props`      | Object with props that will be passed to the component.                                      | no       |
 
 Fills configuration objects can have a false value. This is useful if a package creates a fill by default and a user (or another package) wants to turn it off.
 
 ```tsx
+// my-frontity-app/packages/my-theme/src/index.js
+
 const state = {
   fills: {
     namespace: {
@@ -832,10 +838,31 @@ const state = {
 };
 ```
 
-The actual components that will be hooked onto a `<Slot>` are exposed in `libraries.fills` by Frontity packages:
+The actual components that will be hooked onto a `<Slot>` should be exposed in `libraries.fills` by Frontity packages. They can be defined anywhere you like, as long as you can import them and pass to `libraries.fills`. For example:
 
 ```tsx
-import { MyFill1, MyFill2 } from "./fills";
+// my-frontity-app/packages/my-theme/src/fills.js
+
+export const FillComponent = ({ 
+  // If the Slot creator has passed a `data` prop to the Slot, 
+  // you can access it here. Otherwise, this prop will be automatically
+  // populated with the value of `state.source.get(state.router.link)`
+  data,
+
+  // Any other props passed by the creator of the Slot will be available as well!
+  ...props 
+  }) => (
+    <div>
+      This is the fill content
+    </div>
+  )
+}
+```
+
+```tsx
+// my-frontity-app/packages/my-theme/src/index.js
+
+import { MyFillComponent } from "./fills"; // This is the component defined below
 
 export default {
   state: {
@@ -847,11 +874,11 @@ export default {
   libraries: {
     fills: {
       libNamespace: {
-        ComponentName: MyComponent
+        ComponentName: FillComponent
       },
     },
   },
 };
 ```
 
-Note that `libNamespace.ComponentName` here matches what is referenced in `state.fills.namespace.namOfTheFill.library` above. `MyComponent` here is the actual component which is defined elsewhere and may be imported. The return value of this component, i.e. `MyComponent`, is the content that will be inserted into HTML at the position of the `<Slot>` that it is attached to.
+Note that `libNamespace.ComponentName` here matches the value of `state.fills.namespace.nameOfTheFill.library` above. `FillComponent` here is the actual component which is defined elsewhere and may be imported. The return value of this component, i.e. `FillComponent`, is the content that will be inserted into HTML at the position of the `<Slot>` that it is attached to.
