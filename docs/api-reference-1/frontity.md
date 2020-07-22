@@ -843,14 +843,14 @@ The actual components that will be hooked onto a `<Slot>` should be exposed in `
 ```tsx
 // my-frontity-app/packages/my-theme/src/fills.js
 
-export const FillComponent = ({ 
-  // If the Slot creator has passed a `data` prop to the Slot, 
+export const FillComponent = ({
+  // If the Slot creator has passed a `data` prop to the Slot,
   // you can access it here. Otherwise, this prop will be automatically
   // populated with the value of `state.source.get(state.router.link)`
   data,
 
   // Any other props passed by the creator of the Slot will be available as well!
-  ...props 
+  ...props
   }) => (
     <div>
       This is the fill content
@@ -874,7 +874,7 @@ export default {
   libraries: {
     fills: {
       libNamespace: {
-        ComponentName: FillComponent
+        ComponentName: MyFillComponent
       },
     },
   },
