@@ -29,7 +29,7 @@ You will need to have one or two servers. At the very least, you will need a PHP
 1. PHP Server: In this case, we recommend to **continue using your actual server** for WordPress site or select your preferred hosting service such as [Siteground](https://www.siteground.com), [Raiola Networks](https://raiolanetworks.es/), [Webempresa](https://www.webempresa.com/) or any other
 2. Node.js Server: In case you need this one, we would recommend to choose a [**serverless**](https://about.gitlab.com/topics/serverless/) **solution** as it will make it cheap, easy and infinitely scalable.
 
-   We would select [Vercel Now](https://vercel.com/docs/now-cli#commands/overview) because it is really easy to set up and includes a CDN too, but there are other good options like [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/)
+   We would select [Vercel](https://vercel.com/docs/cli#commands/overview) because it is really easy to set up and includes a CDN too, but there are other good options like [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/)
 
 You can check out our documentation [how to deploy Frontity with Vercel](https://docs.frontity.org/deployment/deploy-using-vercel).
 
@@ -67,16 +67,16 @@ Furthermore, according to our experience working with media publishers, we sugge
 
 We have tested many solutions for CDN and stale-while-revalidate, and we consider that the best options for this approach are [KeyCDN](https://www.keycdn.com) and [StackPath](https://www.stackpath.com/).
 
-If you use Vercel Now, the serverless option we recommend, you won't have to worry about these as it offers both things: a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering) as they call it\). This way, you won't have to add anything else.
+If you use Vercel, the serverless option we recommend, you won't have to worry about these as it offers both things: a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering) as they call it\). This way, you won't have to add anything else.
 
 ## Our recommended solution
 
 Although there are some other ways to have a have a Frontity site running in production and the final solution may be different depending on the website, for the majority of sites we recommend:
 
 1. Having the WordPress dashboard in a PHP server and Frontity in a Node.js Server
-2. **Keep the actual PHP server** you are using for WordPress for your backend \(or select a new one\), and [**deploy Frontity using `now` \(Vercel\)**](https://docs.frontity.org/deployment/deploy-using-vercel), a serverless, cheap, infinitely scalable and easy to set up solution
+2. **Keep the actual PHP server** you are using for WordPress for your backend \(or select a new one\), and [**deploy Frontity using Vercel**](https://docs.frontity.org/deployment/deploy-using-vercel), a serverless, cheap, infinitely scalable and easy to set up solution
 3. Point your main domain www.myblog.com to Frontity and use a subdomain \(wp.myblog.com\) for WordPress
-4. If you have selected Now as your Node.js server solution, you won't need to worry about this, as it offers a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering) as they name it\).
+4. If you have selected Vercel as your Node.js server solution, you won't need to worry about this, as it offers a CDN and the stale-while-revalidate technique \(or [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering) as they name it\).
 
    If you selected another solution, we would recommend you to use [KeyCDN](https://www.keycdn.com) or [StackPath](https://www.stackpath.com/) as additional services
 
