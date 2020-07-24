@@ -9,10 +9,12 @@ redirects:
     javascript-and-and-react/: ./resources/README.md
     javascript-and-react: ./resources/README.md
     javascript-and-react/: ./resources/README.md
-    deployment/deploy-on-now: ./deployment/deploy-using-now-vercel.md
-    deployment/deploy-on-now/: ./deployment/deploy-using-now-vercel.md
-    installation-and-deploy/deploy-on-now: ./deployment/deploy-using-now-vercel.md
-    installation-and-deploy/deploy-on-now/: ./deployment/deploy-using-now-vercel.md
+    deployment/deploy-on-now: ./deployment/deploy-using-vercel.md
+    deployment/deploy-on-now/: ./deployment/deploy-using-vercel.md
+    installation-and-deploy/deploy-on-now: ./deployment/deploy-using-vercel.md
+    installation-and-deploy/deploy-on-now/: ./deployment/deploy-using-vercel.md
+    installation-and-deploy/deploy-using-now-vercel: ./deployment/deploy-using-vercel.md
+    installation-and-deploy/deploy-using-now-vercel/: ./deployment/deploy-using-vercel.md
     installation-and-deploy: ./deployment/README.md
     installation-and-deploy/: ./deployment/README.md
     key-differences-with-gatsbyjs: ./about/README.md

@@ -27,7 +27,7 @@ To create a production-ready bundle.
 It will create a `/build` folder with a `server.js` file and a `/static` folder with all your JavaScript files and other assets. You can either
 
 * Use `npx frontity serve` to run it like a normal Node.js app
-* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Now](../deployment/deploy-using-now-vercel.md) or [Netlify](https://www.netlify.com/?ref=frontity)
+* Upload your `static` folder to a CDN and your server.js file to a `serverless` service, like [Vercel](../deployment/deploy-using-vercel.md) or [Netlify](https://www.netlify.com/?ref=frontity)
 
 For more info on deploying your site please refer to the [Deployment](../deployment/) section.
 
