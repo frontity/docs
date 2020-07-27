@@ -25,3 +25,5 @@ redirects:
     architecture/: ./architecture/README.md
     faq: ./faq/README.md
     faq/: .faq/README.md
+    showcases: https://frontity.org/showcase/
+    showcases/: https://frontity.org/showcase/
