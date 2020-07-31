@@ -1,4 +1,9 @@
-# info
+# Extra Commands
+
+* [`info`](info.md)
+* [`subscribe`](subscribe.md)
+
+## Info
 
 Get environment information for debugging and issue reporting.
 
@@ -6,15 +11,15 @@ Get environment information for debugging and issue reporting.
 npx frontity info [options]
 ```
 
-## Arguments
+### Arguments
 
-### **`[options]`**
+#### **`[options]`**
 
 | Option | Description |
 | :---: | :--- |
 | `-h`, `--help` | Output usage information |
 
-## Examples
+### Examples
 
 * Display info about my specific environment
 
@@ -45,4 +50,25 @@ npx frontity info [options]
   System info copied in the clipboard!
   You can now paste it in the Frontity Community or GitHub issue.
 ```
+
+
+## Subscribe
+
+Suscribe to Frontity newsleter.
+
+```text
+npx frontity subscribe [options] [email]
+```
+
+### Arguments
+
+#### **`[options]`**
+
+| Option | Description |
+| :---: | :--- |
+| `-h`, `--help` | Output usage information |
+
+#### **`[email]`**
+
+The Frontity newsletter will be sent to this _email_
 
