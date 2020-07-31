@@ -43,6 +43,10 @@ From your WP, go to `Settings -> Permalinks` and check one of the pretty permali
 
 ![](./.gitbook/assets/wordpress-permalink-setting.png)
 
+**Related Threads**:
+
+- https://community.frontity.org/t/frontity-not-working-with-plain-permalinks/1428
+
 ## Frontity CLI
 
 ### 💻 Error: Cannot find module ‘@frontity/core’
