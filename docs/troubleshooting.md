@@ -21,7 +21,7 @@ These are the symbols used in this troubleshooting guide
 
 ## `@frontity/wp-source`
 
-### 💻 FetchError: invalid json response body at ... reason: Unexpected token < in JSON at position 0
+### 💻 FetchError: invalid json response body at ... Reason: Unexpected token < in JSON at position 0
 
 If you launch your site locally w/ `npx frontity dev` and you get this in the browser
 
