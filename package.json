@@ -54,32 +54,6 @@
       "comments": true
     },
     "rules": {
-      "alex": {
-        "allow": [],
-        "severity": "warning"
-      },
-      "en-capitalization": {
-        "severity": "warning"
-      },
-      "no-empty-section": {
-        "severity": "warning"
-      },
-      "one-sentence-per-line": false,
-      "period-in-list-item": {
-        "severity": "warning"
-      },
-      "rousseau": {
-        "showLevels": [
-          "suggestion",
-          "warning",
-          "error"
-        ],
-        "ignoreInlineNodeTypes": [
-          "Code",
-          "Html"
-        ],
-        "severity": "warning"
-      },
       "terminology": {
         "defaultTerms": true,
         "terms": [
@@ -94,9 +68,6 @@
         "exclude": [
           "HTTPS"
         ]
-      },
-      "write-good": {
-        "severity": "warning"
       }
     }
   },
