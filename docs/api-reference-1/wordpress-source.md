@@ -74,7 +74,7 @@ These are the settings you can change in your `frontity.settings.js` file:
 
 The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)).
 
-Setting this value is the minimal configuration this package needs to work 
+Setting this value is the minimal configuration this package needs to work
 
 #### `state.source.subdirectory`
 
@@ -178,7 +178,7 @@ Similar to `postTypes`setting, this one allows you to show the lists of posts of
 
 - `taxonomy` : Taxonomy slug. The slug you configured for your Custom Taxonomy.
 - `endpoint` : REST API endpoint from which this taxonomy can be fetched.
-- `postTypeEndpoint` (optional): REST API endpoint from which posts of this taxonomy can be fetched. Default is "posts", but if the Custom Taxonomy is meant to load Custom Post Types instead, you have to add its endpoint here.
+- `postTypeEndpoint` (optional): REST API endpoint from which posts of this taxonomy can be fetched. Defaults to "posts", but **please note** that if the Custom Taxonomy is meant to load Custom Post Types instead, you have to add its endpoint here. To clarify, although optional for posts in the case of a Custom Post Type this argument is **required**.
 - `params` (optional): Extra params to be used while fetching the list of posts.
 
 Again, differentiating `taxonomy` and `endpoint`may be confusing as they usually are the same too. You can confirm you are doing it correctly by going to the Custom Taxonomy `endpoint` :
@@ -257,8 +257,8 @@ export default connect(CategoryNature);
 
 {% hint style="info" %}
 If you want to know more about how to use the `wp-source` package, here you have some videos where Frontity DevRel team talks about it:
-- 📺 [Frontity DevRel Talks 2020-01 - wp-source & CSS In JS [1:36]](https://www.youtube.com/watch?v=e-_66W8pfdY&t=96s) 
-- 📺 [Frontity DevRel Talks 2020-02 - Pagination example & wp-source (state & fetch) [17:53]](https://www.youtube.com/watch?v=eW5xZlpcqQk&t=1073s) 
+- 📺 [Frontity DevRel Talks 2020-01 - wp-source & CSS In JS [1:36]](https://www.youtube.com/watch?v=e-_66W8pfdY&t=96s)
+- 📺 [Frontity DevRel Talks 2020-02 - Pagination example & wp-source (state & fetch) [17:53]](https://www.youtube.com/watch?v=eW5xZlpcqQk&t=1073s)
 {% endhint %}
 
 
