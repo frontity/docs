@@ -116,6 +116,26 @@ You should get something like this
 
 This will create a deploy and assign it to your real site url.
 
+### Vercel and HTTPS
+For some time now Vercel will force all apps to be server over HTTPS (See [here](https://github.com/vercel/vercel/issues/1745)), so you need to make sure you connect to your wp-json endpoint using HTTPS instead of HTTP.
+
+```...
+{
+      "name": "@frontity/wp-source",
+      "state": {
+        "source": {
+          "api": "https://your-wordpress-blog-url/wp-json",
+        }
+      }
+    },
+...
+```
+
+The effect of using a HTTP only connection on a frontity project deployed on vercel will result in navigation links not working/ getting stuck in the `data.isFetching` (but working on the local dev machine). The reason is that frontity won't be able to fetch the content from the wordpress backend over HTTP on a pure HTTPS site    
+
+
+
+
 > More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 ```
 
