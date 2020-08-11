@@ -121,7 +121,7 @@ This will create a deploy and assign it to your real site url.
 > More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 
 ### Vercel and HTTPS
-Vercel now forces all apps to be served over HTTPS, so you need to ensure that you connect to your WordPress API endpoint using HTTPS rather than HTTP.
+Vercel now forces all apps to be served over HTTPS. You therefore need to ensure that your WordPress site has a SSL certificate and that you connect to your WordPress API endpoint using HTTPS rather than HTTP.
 
 ```...
 {
