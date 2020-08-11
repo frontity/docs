@@ -114,10 +114,14 @@ You should get something like this
 🔍  Inspect: https://vercel.com/vercel-username/my-frontity-project/9ue4zsq9n [2s]
 ✅  Production: https://mycustomtomain.com [copied to clipboard] [4s]
 
+```
+
 This will create a deploy and assign it to your real site url.
 
+> More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
+
 ### Vercel and HTTPS
-For some time now Vercel will force all apps to be server over HTTPS (See [here](https://github.com/vercel/vercel/issues/1745)), so you need to make sure you connect to your wp-json endpoint using HTTPS instead of HTTP.
+Vercel now forces all apps to be served over HTTPS, so you need to ensure that you connect to your WordPress API endpoint using HTTPS rather than HTTP.
 
 ```...
 {
@@ -131,13 +135,8 @@ For some time now Vercel will force all apps to be server over HTTPS (See [here]
 ...
 ```
 
-The effect of using a HTTP only connection on a frontity project deployed on vercel will result in navigation links not working/ getting stuck in the `data.isFetching` (but working on the local dev machine). The reason is that frontity won't be able to fetch the content from the wordpress backend over HTTP on a pure HTTPS site    
+The effect of using a HTTP only connection on a Frontity project deployed on Vercel will result in navigation links not working and getting stuck in the `data.isFetching` state (although apparently working on the local dev machine). The reason is that Frontity won't be able to fetch the content from the WordPress backend over HTTP on a pure HTTPS site.   
 
-
-
-
-> More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
-```
 
 {% hint style="info" %}
 Still have questions?
