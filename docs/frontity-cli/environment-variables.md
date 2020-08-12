@@ -8,9 +8,9 @@ If some of these environments variables are detected the proper values will be s
 
 ### `FRONTITY_NAME` 
 
-If you pass the `--no-prompt` flag to the [`create`](./create) and [`create-package`](./create-package), the CLI will use the name from this `FRONTITY_NAME` environment variable.
+If you pass the [`--no-prompt`](#) flag to the [`create`](./create) and [`create-package`](./create-package), the CLI will use the name from this `FRONTITY_NAME` environment variable.
 
-More about this option [here](./create-commands)
+Read more about the [`--no-prompt`](#) option [here](./create-commands)
 
 ## [`dev`](./dev) 
 

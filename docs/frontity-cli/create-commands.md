@@ -32,7 +32,7 @@ It will also be the name of the folder that this command will create for you wit
 | `-h <theme>`, `--theme <theme>` | The theme to use |
 | `-t`, `--typescript` | Adds support for TypeScript |
 | `-c`, `--use-cwd` | Generates the project in the current directory |
-| `-n`, `--no-prompt` | Skips prompting the user for options.  </br> Related environment variable: `FRONTITY_NAME` </br> More details about this option [below](#)|
+| [`-n`, `--no-prompt`](#) | Skips prompting the user for options.  </br> Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME)  </br> Read more about this option [here](#)|
 | `-h`, `--help` | Output usage information |
 
 ##### The `--theme` option
@@ -104,7 +104,7 @@ It will also add the proper dependency in the `package.json` of your Frontity pr
 | Option | Description |
 | :---: | :--- |
 | `-n <value>`, `--namespace <value>` | Sets the [namespace](https://docs.frontity.org/learning-frontity/namespaces) for this package |
-| `--no-prompt` | Skips prompting the user for options </br> More details about this option [below](#)|
+| [`-n`, `--no-prompt`](#) | Skips prompting the user for options.  </br> Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME)  </br> Read more about this option [here](#)|
 | `-h`, `--open` | Output usage information |
 
 ### Examples
