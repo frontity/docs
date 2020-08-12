@@ -6,6 +6,11 @@ Mars theme is meant to be considered a starter theme or a theme to show people h
 
 You can find a detailed guide, both to learn how Frontity and `mars-theme` work on "[Understanding Mars Theme](../guides/understanding-mars-theme-1.md)".
 
+{% hint style="info" %}
+Have a look at this Frontity Talk where we talk about the `mars-theme`:
+- 📺 [Frontity Talks 2020-04 - mars-theme [27:52]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
+{% endhint %}
+
 ## Demo
 
 ![](../.gitbook/assets/screenshot-mars-theme-demo.png)

@@ -13,7 +13,7 @@ CSS in JS, apart from having a better developer experience while working with Re
 
 {% hint style="info" %}
 In this video the DevRel team talks about CSS In JS in Frontity:
-- 📺 [Frontity DevRel Talks 2020-01 - wp-source & CSS In JS [26:49]](https://www.youtube.com/watch?v=e-_66W8pfdY&t=1609s) 
+- 📺 [Frontity Talks 2020-01 - wp-source & CSS In JS [26:49]](https://www.youtube.com/watch?v=e-_66W8pfdY&t=1609s) 
 {% endhint %}
 
 Let's learn some of the CSS in JS concepts to be able to use it with Frontity:
