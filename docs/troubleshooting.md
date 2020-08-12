@@ -5,25 +5,26 @@ In this section we offer solutions to common issues detected in Frontity project
 <!-- toc -->
 
 - [`@frontity/wp-source`](#frontitywp-source)
-  * [💻 FetchError: invalid json response body at ... reason: Unexpected token < in JSON at position 0](#%F0%9F%92%BB-fetcherror-invalid-json-response-body-at--reason-unexpected-token--in-json-at-position-0)
+  - [💻 FetchError: invalid json response body at ... reason: Unexpected token < in JSON at position 0](#%F0%9F%92%BB-fetcherror-invalid-json-response-body-at--reason-unexpected-token--in-json-at-position-0)
 - [Frontity CLI](#frontity-cli)
-  * [💻 Error: Cannot find module ‘@frontity/core’](#%F0%9F%92%BB-error-cannot-find-module-frontitycore)
+  - [💻 Error: Cannot find module ‘@frontity/core’](#%F0%9F%92%BB-error-cannot-find-module-frontitycore)
 - [Styles](#styles)
-  * [👨‍💻 The pseudo class ":xxx-xxxxx" is potentially unsafe when doing server-side rendering. Try changing it to ":xxx-xxxxx"](#%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-the-pseudo-class-xxx-xxxxx-is-potentially-unsafe-when-doing-server-side-rendering-try-changing-it-to-xxx-xxxxx)
+  - [👨‍💻 The pseudo class ":xxx-xxxxx" is potentially unsafe when doing server-side rendering. Try changing it to ":xxx-xxxxx"](#%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-the-pseudo-class-xxx-xxxxx-is-potentially-unsafe-when-doing-server-side-rendering-try-changing-it-to-xxx-xxxxx)
 
 <!-- tocstop -->
 
 {% hint style="info" %}
 These are the symbols used in this troubleshooting guide
-- 💻 Terminal messages 
+
+- 💻 Terminal messages
 - 👨‍💻 Browser's console messages
-{% endhint %}
+  {% endhint %}
 
 ## `@frontity/wp-source`
 
 ### 💻 FetchError: invalid json response body at ... Reason: Unexpected token < in JSON at position 0
 
-If you launch your site locally w/ `npx frontity dev` and you get this in the browser
+If you launch your site locally with `npx frontity dev` and you get this in the browser
 
 ```
 Internal Server Error
@@ -66,17 +67,16 @@ This may be caused because you're not executing this command from the root of yo
 
 Run `npx frontity serve` from the root of your Frontity project
 
-
 **Related Threads**:
 
 - https://community.frontity.org/t/error-cannot-find-module-frontity-core/2180
 
-
-## Styles 
+## Styles
 
 ### 👨‍💻 The pseudo class ":xxx-xxxxx" is potentially unsafe when doing server-side rendering. Try changing it to ":xxx-xxxxx"
 
-If you are getting these type of warnings in the console 
+If you are getting these types of warnings in the console:
+
 ```
 The pseudo class ":nth-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-of-type"
 The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
@@ -86,11 +86,12 @@ This is caused by an [`emotion`](https://github.com/emotion-js/emotion) issue: h
 
 As [emotion is used internally](https://docs.frontity.org/learning-frontity/styles#emotion-documentation) by Frontity our code should take into account what can and cannot be done using CSS in JS with emotion
 
-#### Solution 1 
+#### Solution 1
 
 For this specific issue, there's [this solution](https://github.com/emotion-js/emotion/issues/1105#issuecomment-557726922) that seems to work pretty well to solve this issue in a Frontity project
 
 **`components/index`**
+
 ```
 import { CacheProvider } from '@emotion/core'
 import createCache from '@emotion/cache'
@@ -105,9 +106,10 @@ myCache.compat = true
 
 #### Solution 2
 
-You could also define functions to search and replace the selectors causing the warnings by the recommended ones 
+You could also define functions to search and replace the selectors causing the warnings by the recommended ones
 
 **`helpers/css`**
+
 ```
 export const nthChildToNthChildType = css => css.replace(/\:nth\-child/g, `:nth-type`)
 export const firstChildToFirstOfType = css => css.replace(/\:first\-child/g, `:first-of-type`)
@@ -118,6 +120,7 @@ export const fixCss = css => firstChildToFirstOfType(nthChildToNthChildType(css)
 So then you can do in your code...
 
 **`components/index`**
+
 ```
 import React from "react";
 import { Global, css, connect, styled, Head } from "frontity";
