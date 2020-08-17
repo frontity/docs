@@ -670,7 +670,7 @@ These 'slots' can then be filled with custom components that have been added by 
 
 An example might be as follows - the site developer wants to place a third party ad above the content of each page. The theme developer has thoughtfully provided a slot in that position in the theme:
 
-```tsx
+```jsx
 //...
 const Content = () => {
   //...
@@ -686,11 +686,11 @@ The site developer is now able to 'hook' a component that returns an ad onto tha
 
 #### Syntax
 
-```tsx
+```jsx
 <Slot name="name of the slot" data={data} myprops={myprops} />
 ```
 or
-```tsx
+```jsx
 <Slot name="name of the slot" data={data} myprops={myprops}>
   {children}
 </Slot>
@@ -711,7 +711,7 @@ All the following props can be passed to the `<Slot/>` component.
 
 The simplest example of a Slot would be:
 
-```tsx
+```jsx
 import { Slot } from "frontity";
 
 const Theme = ({ state }) => (
@@ -726,7 +726,7 @@ const Theme = ({ state }) => (
 
 Slots can also pass data to the `Fill` components that will be inserted in place of those slots:
 
-```tsx
+```jsx
 import { Slot } from "frontity";
 
 const Carousel = ({ state }) => {
@@ -750,7 +750,7 @@ const Carousel = ({ state }) => {
 
 Slots can also pass arbitrary props to the `Fill` components that will be inserted in place of those slots. In this example we're using 'index' to pass the value of `index` to the Fills:
 
-```tsx
+```jsx
 import { Slot } from "frontity";
 
 const Carousel = ({ state }) => {
@@ -774,7 +774,7 @@ const Carousel = ({ state }) => {
 
 The Slot component supports optional children that are rendered if no fills are present. You can use any type of data that is valid as a react element:
 
-```tsx
+```jsx
 const Post = () => (
   <>
     {/* ... */}
@@ -795,7 +795,7 @@ Each fill consists of a configuration object that should be given a unique key a
 
 More than one Fill can be hooked onto any single Slot, and these can be ordered according to a `priority` attribute assigned to the Fill.
 
-```tsx
+```jsx
 // my-frontity-app/packages/my-theme/src/index.js
 
 const state = {
@@ -826,7 +826,7 @@ Fills configuration objects structure:
 
 Fills configuration objects can have a false value. This is useful if a package creates a fill by default and a user (or another package) wants to turn it off.
 
-```tsx
+```jsx
 // my-frontity-app/packages/my-theme/src/index.js
 
 const state = {
@@ -840,7 +840,7 @@ const state = {
 
 The actual components that will be hooked onto a `<Slot>` should be exposed in `libraries.fills` by Frontity packages. They can be defined anywhere you like, as long as you can import them and pass to `libraries.fills`. For example:
 
-```tsx
+```jsx
 // my-frontity-app/packages/my-theme/src/fills.js
 
 export const FillComponent = ({
@@ -859,7 +859,7 @@ export const FillComponent = ({
 }
 ```
 
-```tsx
+```jsx
 // my-frontity-app/packages/my-theme/src/index.js
 
 import { MyFillComponent } from "./fills"; // This is the component defined below
