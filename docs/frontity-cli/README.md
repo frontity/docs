@@ -26,8 +26,13 @@ These commands will allow you to either create a Frontity project or a Frontity 
 These commands will allow you run a Frontity project in development or production mode
 
 * [`dev`](./run-commands#dev)
-* [`build`](./run-commands#build)
 * [`serve`](./run-commands#serve)
+
+#### Build commands
+
+These commands will allow you generate the code that can be used to run or analyze a Frontity project
+
+* [`build`](./run-commands#build)
 
 #### Extra commands
 
