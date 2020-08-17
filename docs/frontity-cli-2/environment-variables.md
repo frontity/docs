@@ -53,7 +53,7 @@ FRONTITY_DEV_HTTPS=true
 
 ### `FRONTITY_DEV_PRODUCTION`
 
-Builds the project for production.
+`frontity dev` by default runs the server in "development mode" (no optimizations, uses the dev build of react, etc.). Setting this variable makes it run in "production mode".
 
 _Example:_
 
@@ -102,7 +102,7 @@ FRONTITY_BUILD_TARGET=es
 
 #### `FRONTITY_BUILD_DEVELOPMENT`
 
-Builds the project for development.
+Frontity by default builds the server in "production mode". Setting this variable makes it run in "development mode" (with disabled optimizations, etc.)
 
 _Example:_
 
