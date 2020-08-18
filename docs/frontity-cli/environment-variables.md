@@ -96,7 +96,7 @@ FRONTITY_BUILD_TARGET=module
 FRONTITY_BUILD_TARGET=es
 ```
 
-#### `FRONTITY_BUILD_DEVELOPMENT`
+### `FRONTITY_BUILD_DEVELOPMENT`
 
 Frontity by default builds the server in "production mode". Setting this variable makes it run in "development mode" \(with disabled optimizations, etc.\)
 
@@ -106,7 +106,7 @@ _Example:_
 FRONTITY_BUILD_DEVELOPMENT=true
 ```
 
-#### `FRONTITY_BUILD_PUBLIC_PATH`
+### `FRONTITY_BUILD_PUBLIC_PATH`
 
 Set the public path for static assets. Default path is `/static/`.
 
