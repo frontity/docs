@@ -4,12 +4,12 @@ In this section we offer solutions to common issues detected in Frontity project
 
 <!-- toc -->
 
-- [`@frontity/wp-source`](#frontitywp-source)
-  - [💻 FetchError: invalid json response body at ... reason: Unexpected token < in JSON at position 0](#%F0%9F%92%BB-fetcherror-invalid-json-response-body-at--reason-unexpected-token--in-json-at-position-0)
+- [`@frontity/wp-source`](#frontity-wp-source)
+  - [💻 FetchError: invalid json response body at ... reason: Unexpected token < in JSON at position 0](#fetcherror-invalid-json-response-body-at-reason-unexpected-token-less-than-in-json-at-position-0)
 - [Frontity CLI](#frontity-cli)
-  - [💻 Error: Cannot find module ‘@frontity/core’](#%F0%9F%92%BB-error-cannot-find-module-frontitycore)
+  - [💻 Error: Cannot find module ‘@frontity/core’](#error-cannot-find-module-frontity-core)
 - [Styles](#styles)
-  - [👨‍💻 The pseudo class ":xxx-xxxxx" is potentially unsafe when doing server-side rendering. Try changing it to ":xxx-xxxxx"](#%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-the-pseudo-class-xxx-xxxxx-is-potentially-unsafe-when-doing-server-side-rendering-try-changing-it-to-xxx-xxxxx)
+  - [👨‍💻 The pseudo class ":xxx-xxxxx" is potentially unsafe when doing server-side rendering. Try changing it to ":xxx-xxxxx"](#the-pseudo-class-xxx-xxxxx-is-potentially-unsafe-when-doing-server-side-rendering-try-changing-it-to-xxx-xxxxx)
 
 <!-- tocstop -->
 
