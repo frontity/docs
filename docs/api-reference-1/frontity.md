@@ -1,4 +1,4 @@
-# frontity
+# `frontity`
 
 ## Overview
 
