@@ -12,13 +12,13 @@ If you pass the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-co
 
 Read more about the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) option in the [Create Commands page](https://docs.frontity.org/frontity-cli/create-commands)
 
-## [`dev`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/dev/README.md)
+## [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev)
 
 ### `FRONTITY_DEV_TARGET`
 
 Create bundles with `es5`, `module` or `both`. Default target is `both`.
 
-If detected, and no `--target <target>` option is defined for [`dev`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/dev/README.md) Frontity command, this environment variable value will be applied.
+If detected, and no `--target <target>` option is defined for [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev) Frontity command, this environment variable value will be applied.
 
 _Example:_
 
@@ -31,7 +31,7 @@ FRONTITY_DEV_TARGET=es
 
 Runs the server on a custom port. Default is `3000`.
 
-If detected, and no `--port <port>` option is defined for [`dev`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/dev/README.md) Frontity command, this environment variable value will be applied.
+If detected, and no `--port <port>` option is defined for [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev) Frontity command, this environment variable value will be applied.
 
 _Example:_
 
@@ -63,7 +63,7 @@ FRONTITY_DEV_PRODUCTION=true
 
 Set the public path for static assets. Default path is `/static/`.
 
-If detected, and no `--publicPath` flag is defined for [`dev`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/dev/README.md) Frontity command, this environment variable value will be applied.
+If detected, and no `--publicPath` flag is defined for [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev) Frontity command, this environment variable value will be applied.
 
 _Example:_
 
@@ -81,13 +81,13 @@ _Example:_
 FRONTITY_DEV_DONT_OPEN_BROWSER=true
 ```
 
-## [`build`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/build/README.md)
+## [`build`](https://docs.frontity.org/frontity-cli/build-commands#build)
 
 ### `FRONTITY_BUILD_TARGET`
 
 Create bundles with `es5`, `module` or `both`. Default target is `both`.
 
-If detected, and no `--target <target>` option is defined for [`build`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/build/README.md) Frontity command, this environment variable will be applied.
+If detected, and no `--target <target>` option is defined for [`build`](https://docs.frontity.org/frontity-cli/build-commands#build) Frontity command, this environment variable will be applied.
 
 _Example:_
 
@@ -110,7 +110,7 @@ FRONTITY_BUILD_DEVELOPMENT=true
 
 Set the public path for static assets. Default path is `/static/`.
 
-If detected, and no `--publicPath` flag is defined for [`build`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/build/README.md) Frontity command, this environment variable value will be applied.
+If detected, and no `--publicPath` flag is defined for [`build`](https://docs.frontity.org/frontity-cli/build-commands#build) Frontity command, this environment variable value will be applied.
 
 _Example:_
 
@@ -118,13 +118,13 @@ _Example:_
 FRONTITY_BUILD_PUBLIC_PATH=/assets/
 ```
 
-## [`serve`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/serve/README.md)
+## [`serve`](https://docs.frontity.org/frontity-cli/run-commands#serve)
 
 ### `FRONTITY_SERVE_PORT`
 
 Runs the server on a custom port. Default is `3000`.
 
-If detected, and no `--port <port>` option is defined for [`serve`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/serve/README.md) Frontity command, this environment variable value will be applied.
+If detected, and no `--port <port>` option is defined for [`serve`](https://docs.frontity.org/frontity-cli/run-commands#serve) Frontity command, this environment variable value will be applied.
 
 _Example:_
 
