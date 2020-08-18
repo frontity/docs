@@ -4,13 +4,13 @@ The Frontity CLI allows to define some options/flags for some of the Frontity co
 
 If some of these environment variables are detected the proper values will be set for the proper commands:
 
-## [`create`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/create/README.md) & [`create-package`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/create-package/README.md)
+## [`create`](https://docs.frontity.org/frontity-cli/create-commands#create) & [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package)
 
-### FRONTITY\_NAME
+### FRONTITY_NAME
 
-If you pass the [`--no-prompt`](environment-variables.md) flag to the [`create`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/create/README.md) and [`create-package`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/create-package/README.md), the CLI will use the name from this `FRONTITY_NAME` environment variable.
+If you pass the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) flag to the [`create`](https://docs.frontity.org/frontity-cli/create-commands#create) or [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package), the CLI will use the name from this `FRONTITY_NAME` environment variable.
 
-Read more about the [`--no-prompt`](environment-variables.md) option [here](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/create-commands/README.md)
+Read more about the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) option in the [Create Commands page](https://docs.frontity.org/frontity-cli/create-commands)
 
 ## [`dev`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/dev/README.md)
 
