@@ -134,7 +134,7 @@ This structure allows to:
 * Launch the project using the theme locally
 * Publish the theme independently 
 
-So any developer can clone this project, launch the Frontity project locally, have a look at how the theme looks like & behave and make contributions \(pull requests\) to your repository \(that can be eventually merged into the main repo\).
+So any developer can clone this project, launch the Frontity project locally, have a look at how the theme looks like & behave and make contributions \(pull requests\) to your repository \(that can be eventually merged into the main repository\).
 
 And also, the owner of the theme still can publish those new updates independently \(from the theme folder, `packages/awesome-theme` in this case\)
 
