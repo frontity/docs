@@ -2,11 +2,11 @@
 
 These commands will allow you to either create a Frontity project or a Frontity package
 
-* [`dev`](#dev)
-* [`serve`](#serve)
+* [`dev`](run-commands.md#dev)
+* [`serve`](run-commands.md#serve)
 
 {% hint style="info" %}
-Have a look at the [environment variables](./environment-variables) page to check which ones can be used with these commands
+Have a look at the [environment variables](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md) page to check which ones can be used with these commands
 {% endhint %}
 
 ## `dev`
@@ -23,12 +23,12 @@ npx frontity dev [options]
 
 | Option | Description |
 | :---: | :--- |
-| `-p`, `--production` | Builds the project for production. </br> Related environment variable: [`FRONTITY_DEV_PRODUCTION`](./environment-variables#FRONTITY_DEV_PRODUCTION)|
-| `--port <port>` | Runs the server on a custom port. Default is 3000. </br> Related environment variable: [`FRONTITY_DEV_PORT`](./environment-variables#FRONTITY_DEV_PORT)|
-| `-s`, `--https` | Runs the server using https. </br> Related environment variable: [`FRONTITY_DEV_HTTPS`](./environment-variables#FRONTITY_DEV_HTTPS)|
-| `--dont-open-browser` | Don't open a browser window with the localhost. </br> Related environment variable: [`FRONTITY_DEV_DONT_OPEN_BROWSER`](./environment-variables#FRONTITY_DEV_DONT_OPEN_BROWSER) |
-| `--target <target>` | Create bundles with "es5", "module" or "both". Default target is "both". </br> Related environment variable: [`FRONTITY_DEV_TARGET`](./environment-variables#FRONTITY_DEV_TARGET)|
-| `--publicPath <path>` | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is `/static/`. </br> Related environment variable: [`FRONTITY_DEV_PUBLIC_PATH`](./environment-variables#FRONTITY_DEV_PUBLIC_PATH)</br> More details about this option [below](#the-publicpath-option) |
+| `-p`, `--production` | Builds the project for production. &lt;/br&gt; Related environment variable: [`FRONTITY_DEV_PRODUCTION`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_DEV_PRODUCTION) |
+| `--port <port>` | Runs the server on a custom port. Default is 3000. &lt;/br&gt; Related environment variable: [`FRONTITY_DEV_PORT`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_DEV_PORT) |
+| `-s`, `--https` | Runs the server using https. &lt;/br&gt; Related environment variable: [`FRONTITY_DEV_HTTPS`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_DEV_HTTPS) |
+| `--dont-open-browser` | Don't open a browser window with the localhost. &lt;/br&gt; Related environment variable: [`FRONTITY_DEV_DONT_OPEN_BROWSER`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_DEV_DONT_OPEN_BROWSER) |
+| `--target <target>` | Create bundles with "es5", "module" or "both". Default target is "both". &lt;/br&gt; Related environment variable: [`FRONTITY_DEV_TARGET`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_DEV_TARGET) |
+| `--publicPath <path>` | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is `/static/`. &lt;/br&gt; Related environment variable: [`FRONTITY_DEV_PUBLIC_PATH`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_DEV_PUBLIC_PATH)&lt;/br&gt; More details about this option [below](run-commands.md#the-publicpath-option) |
 | `-h`, `--help` | Output usage information |
 
 **Examples**
@@ -45,26 +45,24 @@ npx frontity dev --https --port 3002
 npx frontity dev --publicPath="/assets"
 ```
 
-##### The `--production` option
+**The --production option**
 
 This flag correspond to [webpack’s mode parameter](https://webpack.js.org/configuration/mode/) so it will run webpack in the production mode as described [there](https://webpack.js.org/configuration/mode/) before launching the development server.
 
 So, if you do:
 
-```
+```text
 npx frontity dev --production
 ```
 
 The webpack bundler internally will do things like..
 
-- Enable certain webpack-specific optimizations and minify the code
-- Also disable hot-module reloading (HMR)
-- Not create source maps
-- Append hashes to filenames so for caching purposes
+* Enable certain webpack-specific optimizations and minify the code
+* Also disable hot-module reloading \(HMR\)
+* Not create source maps
+* Append hashes to filenames so for caching purposes
 
-Normally, you would always use the development server in development mode, but sometimes you may want to check that everything works in production mode, or check the bundle analyzer (the files at `/build/analyze`) for the production bundle.
-
-
+Normally, you would always use the development server in development mode, but sometimes you may want to check that everything works in production mode, or check the bundle analyzer \(the files at `/build/analyze`\) for the production bundle.
 
 ## `serve`
 
@@ -74,7 +72,7 @@ Starts a Frontity server in production mode.
 npx frontity serve [options]
 ```
 
-This `frontity serve` command will use the files generated by [`frontity build`](build.md)
+This `frontity serve` command will use the files generated by [`frontity build`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/build.md)
 
 ### Arguments
 
@@ -82,14 +80,15 @@ This `frontity serve` command will use the files generated by [`frontity build`]
 
 | Option | Description |
 | :---: | :--- |
-| `--port <port>` | Runs the server on a custom port. Default is 3000. </br> Related environment variable: [`FRONTITY_SERVE_PORT`](./environment-variables#FRONTITY_SERVE_PORT)|
-| `-s`, `--https` | Runs the server using https. </br> Related environment variable: [`FRONTITY_SERVE_HTTPS`](./environment-variables#FRONTITY_SERVE_HTTPS) |
+| `--port <port>` | Runs the server on a custom port. Default is 3000. &lt;/br&gt; Related environment variable: [`FRONTITY_SERVE_PORT`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_SERVE_PORT) |
+| `-s`, `--https` | Runs the server using https. &lt;/br&gt; Related environment variable: [`FRONTITY_SERVE_HTTPS`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/environment-variables/README.md#FRONTITY_SERVE_HTTPS) |
 | `-h`, `--help` | Output usage information |
 
 **Examples**
 
-* Starts a server (using the code in the `build` folder generated by the `npx frontity build` command) using https and port 3002
+* Starts a server \(using the code in the `build` folder generated by the `npx frontity build` command\) using https and port 3002
 
 ```text
 npx frontity serve --https --port 3002
 ```
+

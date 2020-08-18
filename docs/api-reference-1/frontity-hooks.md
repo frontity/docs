@@ -24,8 +24,7 @@ import useInView from "@frontity/hooks/use-in-view";
 
 It tracks when an element enters or leaves the viewport.
 
-The hook just wraps the [`react-intersection-observer`](https://github.com/thebuilder/react-intersection-observer) library which uses internally the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) API.
-As some old browsers don't support it, `useInView` also returns a `supported` prop indicating if it's supported or not.
+The hook just wraps the [`react-intersection-observer`](https://github.com/thebuilder/react-intersection-observer) library which uses internally the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) API. As some old browsers don't support it, `useInView` also returns a `supported` prop indicating if it's supported or not.
 
 #### Parameters
 
@@ -66,3 +65,4 @@ const MyLazyElement = ({ children }) => {
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
+

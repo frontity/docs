@@ -27,3 +27,4 @@ Twenty Nineteen Frontity Theme by Imran Sayed and Smit Patadiya:
 
 * [Live demo](https://twentynineteen.frontity.org/)
 * [GitHub repository](https://github.com/imranhsayed/frontity-twentynineteen)
+

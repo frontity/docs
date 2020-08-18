@@ -10,9 +10,9 @@ Mars theme is our starter theme and is installed by default on `frontity create`
 
 {% hint style="info" %}
 Have a look at this Frontity Talk where we talk about the `mars-theme`:
-- 📺 [Frontity Talks 2020-04 - mars-theme [27:52]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
-{% endhint %}
 
+* 📺 [Frontity Talks 2020-04 - mars-theme \[27:52\]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
+{% endhint %}
 
 ## Frontity Utilities
 

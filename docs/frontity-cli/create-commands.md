@@ -2,13 +2,12 @@
 
 These commands will allow you to either create a Frontity project or a Frontity package
 
-* [`create`](create.md)
-* [`create-package`](create-package.md)
+* [`create`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create.md)
+* [`create-package`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create-package.md)
 
 {% hint style="info" %}
-Have a look at the [environment variables](./environment-variables) page to check which ones can be used with these commands
+Have a look at the [environment variables](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/environment-variables/README.md) page to check which ones can be used with these commands
 {% endhint %}
-
 
 ## `create`
 
@@ -22,36 +21,65 @@ npx frontity create [project-name] [options]
 
 #### **`[project-name]`**
 
-The _name_ of your Frontity project.
-It will also be the name of the folder that this command will create for you with the files of your Frontity project inside
+The _name_ of your Frontity project. It will also be the name of the folder that this command will create for you with the files of your Frontity project inside
 
 #### **`[options]`**
 
-| Option | Description |
-| :---: | :--- |
-| `-h <theme>`, `--theme <theme>` | The theme to use |
-| `-t`, `--typescript` | Adds support for TypeScript |
-| `-c`, `--use-cwd` | Generates the project in the current directory |
-| [`-n`, `--no-prompt`](#) | Skips prompting the user for options.  Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME).  Read more about this option [here](#)|
-| `-h`, `--help` | Output usage information |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center"><code>-h &lt;theme&gt;</code>, <code>--theme &lt;theme&gt;</code>
+      </td>
+      <td style="text-align:left">The theme to use</td>
+    </tr>
+    <tr>
+      <td style="text-align:center"><code>-t</code>, <code>--typescript</code>
+      </td>
+      <td style="text-align:left">Adds support for TypeScript</td>
+    </tr>
+    <tr>
+      <td style="text-align:center"><code>-c</code>, <code>--use-cwd</code>
+      </td>
+      <td style="text-align:left">Generates the project in the current directory</td>
+    </tr>
+    <tr>
+      <td style="text-align:center"><a href="create-commands.md"><code>-n</code>, <code>--no-prompt</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Skips prompting the user for options.</p>
+        <p>Related environment variable: <a href="https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/environment-variables/README.md#FRONTITY_NAME"><code>FRONTITY_NAME</code></a> 
+        </p>
+        <p>Read more about this option <a href="create-commands.md">here</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center"><code>-h</code>, <code>--help</code>
+      </td>
+      <td style="text-align:left">Output usage information</td>
+    </tr>
+  </tbody>
+</table>
 
-##### The `--theme` option
+**The --theme option**
 
-You can pick one of Frontity's "official" two themes ([`--theme mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`--theme twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)).
-But you can also use any custom theme as long as it's published on npm.
-Just pass the theme name on the command-line like `--theme ThemesPackageNameInNPM`
+You can pick one of Frontity's "official" two themes \([`--theme mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`--theme twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)\). But you can also use any custom theme as long as it's published on npm. Just pass the theme name on the command-line like `--theme ThemesPackageNameInNPM`
 
-##### The `--no-prompt` option
+**The --no-prompt option**
 
-If you pass the `--no-prompt` flag to the [`create`](./create) or [`create-package`](./create-package) , the CLI will use the name from this `FRONTITY_NAME` environment variable.
+If you pass the `--no-prompt` flag to the [`create`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create/README.md) or [`create-package`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create-package/README.md) , the CLI will use the name from this `FRONTITY_NAME` environment variable.
 
 If the CLI cannot find a `FRONTITY_NAME` environmental variable, it will prompt for the name of the package
 
 This is the scheme followed by the CLI to get the name of the package
 
-![](../.gitbook/assets/cli-arguments.png)
-
-
+![](../.gitbook/assets/cli-arguments%20%281%29.png)
 
 ### Examples
 
@@ -96,8 +124,7 @@ For technical support and assistance please join our community at https://commun
 
 ## `create-package`
 
-The `create-package` command creates a new Frontity package in a project.
-Launch this command from the root of the Frontity project
+The `create-package` command creates a new Frontity package in a project. Launch this command from the root of the Frontity project
 
 ```text
 npx frontity create-package [package-name] [options]
@@ -107,16 +134,14 @@ npx frontity create-package [package-name] [options]
 
 #### **`[package-name]`**
 
-This argument sets the _name_ of your Frontity package.
-The `create-package` command will create a folder named `[package-name]` under `packages`.
-It will also add the proper dependency in the `package.json` of your Frontity project
+This argument sets the _name_ of your Frontity package. The `create-package` command will create a folder named `[package-name]` under `packages`. It will also add the proper dependency in the `package.json` of your Frontity project
 
 #### **`[options]`**
 
 | Option | Description |
 | :---: | :--- |
 | `-n <value>`, `--namespace <value>` | Sets the [namespace](https://docs.frontity.org/learning-frontity/namespaces) for this package |
-| [`-n`, `--no-prompt`](#) | Skips prompting the user for options.  </br> Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME)|
+| [`-n`, `--no-prompt`](create-commands.md) | Skips prompting the user for options.  &lt;/br&gt; Related environment variable: [`FRONTITY_NAME`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/environment-variables/README.md#FRONTITY_NAME) |
 | `-h`, `--open` | Output usage information |
 
 ### Examples
@@ -132,3 +157,4 @@ It will also add the proper dependency in the `package.json` of your Frontity pr
 
 New package "my-custom-theme" created.
 ```
+

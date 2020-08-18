@@ -2,23 +2,19 @@
 
 👋 Welcome! You've just taken your first step on the path to mastering Frontity.
 
-Frontity is a **React-based framework** that enables you to easily build a frontend for a headless (or decoupled) WordPress site. Your WordPress site serves its data via the REST-API. Frontity framework is open source and free to use.
+Frontity is a **React-based framework** that enables you to easily build a frontend for a headless \(or decoupled\) WordPress site. Your WordPress site serves its data via the REST-API. Frontity framework is open source and free to use.
 
 ## Table of Contents
 
-<!-- toc -->
-
-- [Installation requirements](#installation-requirements)
-- [Initial checks](#initial-checks)
-  * [WordPress](#wordpress)
-    + [Have a proper WordPress version](#have-a-proper-wordpress-version)
-    + [Have set the right REST API URL](#have-set-the-right-rest-api-url)
-    + [Have pretty permalinks activated](#have-pretty-permalinks-activated)
-  * [Node.js](#nodejs)
-    + [Have Node.js and npm installed](#have-nodejs-and-npm-installed)
-- [Get up and running](#get-up-and-running)
-
-<!-- tocstop -->
+* [Installation requirements](./#installation-requirements)
+* [Initial checks](./#initial-checks)
+  * [WordPress](./#wordpress)
+    * [Have a proper WordPress version](./#have-a-proper-wordpress-version)
+    * [Have set the right REST API URL](./#have-set-the-right-rest-api-url)
+    * [Have pretty permalinks activated](./#have-pretty-permalinks-activated)
+  * [Node.js](./#nodejs)
+    * [Have Node.js and npm installed](./#have-nodejs-and-npm-installed)
+* [Get up and running](./#get-up-and-running)
 
 ## Installation requirements
 
@@ -46,7 +42,7 @@ To check that the WordPress REST-API is working you can type one of the followin
 
 #### Have set the right REST API URL
 
-For a self-hosted WordPress site (i.e. local or web based):
+For a self-hosted WordPress site \(i.e. local or web based\):
 
 ```text
 http://your-wp-domain.com/wp-json
@@ -63,7 +59,6 @@ https://public-api.wordpress.com/wp/v2/sites/your-wp-site.wordpress.com
 Check also that you are using one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
 
 ![](../.gitbook/assets/wordpress-permalink-setting.png)
-
 
 ### Node.js
 

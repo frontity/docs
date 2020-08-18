@@ -8,12 +8,13 @@ You can find a detailed guide, both to learn how Frontity and `mars-theme` work 
 
 {% hint style="info" %}
 Have a look at this Frontity Talk where we talk about the `mars-theme`:
-- 📺 [Frontity Talks 2020-04 - mars-theme [27:52]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
+
+* 📺 [Frontity Talks 2020-04 - mars-theme \[27:52\]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
 {% endhint %}
 
 ## Demo
 
-![](../.gitbook/assets/screenshot-mars-theme-demo.png)
+![](../.gitbook/assets/screenshot-mars-theme-demo%20%281%29.png)
 
 You can check out all the features in this [**theme demo**](https://mars.frontity.org/)**.**
 

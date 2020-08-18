@@ -78,11 +78,11 @@ To deploy your site under a custom domain you have to
 
 From the project settings URL provided in our previous deploy \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings) in our example\) we can set a custom domain
 
-![](../.gitbook/assets/now-projects-settings%20%281%29.png)
+![](../.gitbook/assets/now-projects-settings%20%281%29%20%282%29.png)
 
 Add it, and you will be provided by a [set a nameservers](https://vercel.com/docs/v2/custom-domains#step-4:-configuring-the-domain) you can use in your domain provider to point your custom domain to the Vercel nameservers
 
-![vercel nameservers](../.gitbook/assets/vercel-nameservers.png)
+![vercel nameservers](../.gitbook/assets/vercel-nameservers%20%282%29.png)
 
 ### Add subdomain in your project settings
 
@@ -113,7 +113,6 @@ You should get something like this
 
 🔍  Inspect: https://vercel.com/vercel-username/my-frontity-project/9ue4zsq9n [2s]
 ✅  Production: https://mycustomtomain.com [copied to clipboard] [4s]
-
 ```
 
 This will create a deploy and assign it to your real site url.
@@ -121,9 +120,10 @@ This will create a deploy and assign it to your real site url.
 > More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 
 ### Vercel and HTTPS
+
 Vercel now forces all apps to be served over HTTPS. You therefore need to ensure that your WordPress site has a SSL certificate and that you connect to your WordPress API endpoint using HTTPS rather than HTTP.
 
-```...
+```text
 {
       "name": "@frontity/wp-source",
       "state": {
@@ -135,12 +135,9 @@ Vercel now forces all apps to be served over HTTPS. You therefore need to ensure
 ...
 ```
 
-The effect of using a HTTP only connection on a Frontity project deployed on Vercel will result in navigation links not working and getting stuck in the `data.isFetching` state (although apparently working on the local dev machine). The reason is that Frontity won't be able to fetch the content from the WordPress backend over HTTP on a pure HTTPS site.   
-
+The effect of using a HTTP only connection on a Frontity project deployed on Vercel will result in navigation links not working and getting stuck in the `data.isFetching` state \(although apparently working on the local dev machine\). The reason is that Frontity won't be able to fetch the content from the WordPress backend over HTTP on a pure HTTPS site.
 
 {% hint style="info" %}
-Still have questions?
-Ask [the community](https://community.frontity.org/)!
-We are here to help 😊
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
 

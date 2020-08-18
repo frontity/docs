@@ -18,7 +18,7 @@ This section is the heart of our documentation. Once you've nailed the basics in
 
 ## **Architecture and Deployment**
 
-Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](architecture/) section and, once you have a working application that you're happy with, how to deploy to live in the [**Deployment**](deployment/) section.
+Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](https://github.com/frontity/docs/tree/1a3f3a66fb661dd5b4c485006d09a9ea5caf7598/docs/architecture/README.md) section and, once you have a working application that you're happy with, how to deploy to live in the [**Deployment**](deployment/) section.
 
 ## **Packages and Themes**
 

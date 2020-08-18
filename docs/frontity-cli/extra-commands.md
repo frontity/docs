@@ -1,7 +1,7 @@
-# Extra Commands
+# Extra commands
 
-* [`info`](info.md)
-* [`subscribe`](subscribe.md)
+* [`info`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/info.md)
+* [`subscribe`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/subscribe.md)
 
 ## Info
 
@@ -50,7 +50,6 @@ npx frontity info [options]
   System info copied in the clipboard!
   You can now paste it in the Frontity Community or GitHub issue.
 ```
-
 
 ## Subscribe
 

@@ -79,10 +79,10 @@ const myPackage = {
 
 export default myPackage;
 ```
-<!-- textlint-disable terminology -->
+
 ### Create your own processors
 
-A processor is an object with four properties: `name` , `priority` , `test`,and `processor`. 
+A processor is an object with four properties: `name` , `priority` , `test`,and `processor`.
 
 * `name` : Just the name of your processor
 * `priority` : A number that lets the package know in which order processors should be evaluated. The processors are evaluated in numeric order. For example, a processor with `priority` of `10` will be applied **before** a  processor with a `priority` of `20`
@@ -92,8 +92,6 @@ A processor is an object with four properties: `name` , `priority` , `test`,and 
 * `root` : The top node of the node tree
 * `state` : Access to Frontity's `state`  . This could be useful to use some parts of the `state` inside your processor. For example, using your `state.theme.colors` 
 * `libraries` : Access to Frontity's `libraries`. As it happens with the `state`, sometimes could be useful to access your `libraries` as well
-
-<!-- textlint-enable terminology -->
 
 Let's see some examples. This is how the `image` processor is implemented in `html2react`:
 
@@ -130,9 +128,8 @@ const image = {
 
 export default image;
 ```
-<!-- textlint-disable terminology -->
 
-You don't need to return a React component, you can also modify the attributes \(props\) of the node. For example, this processor adds `target="_blank"` to the `<a>` tags with href starting with `http`: 
+You don't need to return a React component, you can also modify the attributes \(props\) of the node. For example, this processor adds `target="_blank"` to the `<a>` tags with href starting with `http`:
 
 ```typescript
 const extAnchors = {
@@ -150,14 +147,13 @@ const extAnchors = {
 
 ### Nodes
 
-
 The object `node` received by both `test` and `processor`can be an `Element`, a `Text` or a `Comment`. You can distinguish between them using `node.type`.
 
 The common properties are:
 
 * **`type`** : `"element" | "text" | "comment"`
 * **`parent?`**: `Element` The parent of this node, which is always an `element` \(`text` or `comment` can't have children\)
-* **`ignore?`**: `boolean` If you set `ignore` to `true` for a node, it won't pass any `test`. This is useful in some situations when you don't want additional processors applied to this node. 
+* **`ignore?`**: `boolean` If you set `ignore` to `true` for a node, it won't pass any `test`. This is useful in some situations when you don't want additional processors applied to this node.
 
   **Node: `Element`**
 
@@ -186,8 +182,6 @@ A **`Comment`** is just an HTML comment. Like this `<!-- comment -->`.
 
 * **`type`** : `"comment"`
 * **`content`** : `string`
-
-<!-- textlint-enable terminology -->
 
 ## Processors
 
@@ -269,3 +263,4 @@ const Post = ({ libraries }) => {
   );
 };
 ```
+
