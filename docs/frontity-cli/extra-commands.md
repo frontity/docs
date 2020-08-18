@@ -1,7 +1,7 @@
 # Extra commands
 
-* [`info`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/info.md)
-* [`subscribe`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/subscribe.md)
+* [`info`](extra-commands.md#info)
+* [`subscribe`](extra-commands.md#info)
 
 ## Info
 
