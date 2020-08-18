@@ -18,7 +18,7 @@ These are the symbols used in this troubleshooting guide
 
 - 💻 Terminal messages
 - 👨‍💻 Browser's console messages
-  {% endhint %}
+{% endhint %}
 
 ## `@frontity/wp-source`
 
@@ -85,6 +85,8 @@ The pseudo class ":first-child" is potentially unsafe when doing server-side ren
 This is caused by an [`emotion`](https://github.com/emotion-js/emotion) issue: https://github.com/emotion-js/emotion/issues/1105
 
 As [emotion is used internally](https://docs.frontity.org/learning-frontity/styles#emotion-documentation) by Frontity our code should take into account what can and cannot be done using CSS in JS with emotion
+
+This is NOT an issue that should be ignored or "fixed" under normal circumstances. We recommend you use the following solutions only if you're getting these messages because of some third-party CSS that you don't have no control over (e.g. from a CSS framework or a component library or another external source).
 
 #### Solution 1
 
