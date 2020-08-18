@@ -2,8 +2,8 @@
 
 These commands will allow you to either create a Frontity project or a Frontity package
 
-* [`create`](#create)
-* [`create-package`](#create-package)
+* [`create`](https://docs.frontity.org/frontity-cli/create-commands#create)
+* [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package)
 
 {% hint style="info" %}
 Have a look at the [environment variables](/frontity-cli/environment-variables) page to check which ones can be used with these commands
