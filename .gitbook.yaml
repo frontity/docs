@@ -29,7 +29,7 @@ redirects:
     showcases/: https://frontity.org/showcase/
     frontity-cli/create.md: ./frontity-cli/create-commands.md
     frontity-cli/create-package.md: ./frontity-cli/create-commands.md
-    frontity-cli/build.md: ./frontity-cli/run-commands.md
+    frontity-cli/build.md: ./frontity-cli/build-commands.md
     frontity-cli/dev.md: ./frontity-cli/run-commands.md
     frontity-cli/serve.md: ./frontity-cli/run-commands.md
     frontity-cli/info.md: ./frontity-cli/extra-commands.md
