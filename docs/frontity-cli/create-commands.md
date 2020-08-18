@@ -2,11 +2,11 @@
 
 These commands will allow you to either create a Frontity project or a Frontity package
 
-* [`create`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create.md)
-* [`create-package`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create-package.md)
+* [`create`](#create)
+* [`create-package`](#create-package)
 
 {% hint style="info" %}
-Have a look at the [environment variables](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/environment-variables/README.md) page to check which ones can be used with these commands
+Have a look at the [environment variables](/frontity-cli/environment-variables) page to check which ones can be used with these commands
 {% endhint %}
 
 ## `create`
@@ -25,47 +25,13 @@ The _name_ of your Frontity project. It will also be the name of the folder that
 
 #### **`[options]`**
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:center">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center"><code>-h &lt;theme&gt;</code>, <code>--theme &lt;theme&gt;</code>
-      </td>
-      <td style="text-align:left">The theme to use</td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><code>-t</code>, <code>--typescript</code>
-      </td>
-      <td style="text-align:left">Adds support for TypeScript</td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><code>-c</code>, <code>--use-cwd</code>
-      </td>
-      <td style="text-align:left">Generates the project in the current directory</td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><a href="create-commands.md"><code>-n</code>, <code>--no-prompt</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Skips prompting the user for options.</p>
-        <p>Related environment variable: <a href="https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/environment-variables/README.md#FRONTITY_NAME"><code>FRONTITY_NAME</code></a> 
-        </p>
-        <p>Read more about this option <a href="create-commands.md">here</a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><code>-h</code>, <code>--help</code>
-      </td>
-      <td style="text-align:left">Output usage information</td>
-    </tr>
-  </tbody>
-</table>
+| Option | Description |
+| :---: | :--- |
+| `-h <theme>`, `--theme <theme>` | The theme to use |
+| `-t`, `--typescript` | Adds support for TypeScript |
+| `-c`, `--use-cwd` | Generates the project in the current directory |
+| [`-n`, `--no-prompt`](#) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME). Read more about this option [here](#)|
+| `-h`, `--help` | Output usage information |
 
 **The --theme option**
 
