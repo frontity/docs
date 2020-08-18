@@ -26,7 +26,7 @@ The [`frontity serve`](https://docs.frontity.org/frontity-cli/run-commands#serve
 | :---: | :--- |
 | `-d`, `--development` | Builds the project for development. Related environment variable: [`FRONTITY_BUILD_DEVELOPMENT`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_development) |
 | `--target <target>` | Create bundles with "es5", "module" or "both". Default target is "both".  Related environment variable: [`FRONTITY_BUILD_TARGET`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_target) |
-| `--publicPath <path>` | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". Related environment variable: [`FRONTITY_BUILD_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_public_path)|
+| [`--publicPath <path>`](build-commands.md#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". Related environment variable: [`FRONTITY_BUILD_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_public_path)|
 | `-h`, `--help` | Output usage information |
 
 **Examples**

@@ -87,7 +87,7 @@ FRONTITY_DEV_DONT_OPEN_BROWSER=true
 
 Create bundles with `es5`, `module` or `both`. Default target is `both`.
 
-If detected, and no `--target <target>` option is defined for [`build`](https://docs.frontity.org/frontity-cli/build-commands#build) Frontity command, this environment variable will be applied.
+If detected, and no [`--publicPath`](https://docs.frontity.org/frontity-cli/build-commands#the-publicpath-option) option is defined for [`build`](https://docs.frontity.org/frontity-cli/build-commands#build) Frontity command, this environment variable will be applied.
 
 _Example:_
 
@@ -110,7 +110,7 @@ FRONTITY_BUILD_DEVELOPMENT=true
 
 Set the public path for static assets. Default path is `/static/`.
 
-If detected, and no `--publicPath` flag is defined for [`build`](https://docs.frontity.org/frontity-cli/build-commands#build) Frontity command, this environment variable value will be applied.
+If detected, and no [`--publicPath`](https://docs.frontity.org/frontity-cli/build-commands#the-publicpath-option) flag is defined for [`build`](https://docs.frontity.org/frontity-cli/build-commands#build) Frontity command, this environment variable value will be applied.
 
 _Example:_
 
