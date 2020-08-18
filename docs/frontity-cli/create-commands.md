@@ -32,7 +32,7 @@ It will also be the name of the folder that this command will create for you wit
 | `-h <theme>`, `--theme <theme>` | The theme to use |
 | `-t`, `--typescript` | Adds support for TypeScript |
 | `-c`, `--use-cwd` | Generates the project in the current directory |
-| [`-n`, `--no-prompt`](#) | Skips prompting the user for options.  </br> Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME)  </br> Read more about this option [here](#)|
+| [`-n`, `--no-prompt`](#) | Skips prompting the user for options.  Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME).  Read more about this option [here](#)|
 | `-h`, `--help` | Output usage information |
 
 ##### The `--theme` option
