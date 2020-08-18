@@ -13,7 +13,8 @@ CSS in JS, apart from having a better developer experience while working with Re
 
 {% hint style="info" %}
 In this video the DevRel team talks about CSS In JS in Frontity:
-- 📺 [Frontity DevRel Talks 2020-01 - wp-source & CSS In JS [26:49]](https://www.youtube.com/watch?v=e-_66W8pfdY&t=1609s) 
+
+* 📺 [Frontity Talks 2020-01 - wp-source & CSS In JS \[26:49\]](https://www.youtube.com/watch?v=e-_66W8pfdY&t=1609s) 
 {% endhint %}
 
 Let's learn some of the CSS in JS concepts to be able to use it with Frontity:
@@ -128,7 +129,7 @@ const Component = () => (
 React has its own way of adding inline style, using the `style` prop, but **you should not use it** because the CSS you write there won't be optimized by Frontity!
 {% endhint %}
 
-**You should not use `style`!** 
+**You should not use `style`!**
 
 ```jsx
 const Page = () => (
@@ -206,7 +207,7 @@ const Background = ({ state }) =>
 **Using `<Global>` for anything other than HTML tags is not recommended** because Frontity is not able to optimize it. That means you can use it for tags like `html`, `body` , `a`, `img`, and so on... But **avoid it for classes**. Use either the CSS prop or styled-components instead.
 {% endhint %}
 
-**You should not use `<Global>` for classes!** 
+**You should not use `<Global>` for classes!**
 
 ```jsx
 const Component = () => (
@@ -350,14 +351,14 @@ For a more in-depth explanation about the reasons we believe it's a good approac
 
 CSS in JS supports all the Sass features. If you are used to SASS, our recommendation is to learn CSS in JS. It won't take you more than 30 minutes to learn how to do the very same things you are used to doing in Sass.
 
-These are some resource you might find useful to make the transition to CSS in JS:
-<!-- textlint-disable terminology -->
-{% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8 " caption="" %}
+These are some resource you might find useful to make the transition to CSS in JS: 
 
-{% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js " caption="" %}
+{% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8" caption="" %}
 
-{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html " caption="" %}
-<!-- textlint-enable terminology -->
+{% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js" caption="" %}
+
+{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html" caption="" %}
+
 ### Migrating from Sass to CSS in JS
 
 If you already have a base of Sass you want to migrate, you can use these tools to extract your variables and use them directly in JavaScript:
