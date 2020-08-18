@@ -6,7 +6,7 @@ These commands will allow you to either create a Frontity project or a Frontity 
 * [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package)
 
 {% hint style="info" %}
-Have a look at the [environment variables](/frontity-cli/environment-variables) page to check which ones can be used with these commands
+Have a look at the [environment variables](https://docs.frontity.org/frontity-cli/environment-variables) page to check which ones can be used with these commands
 {% endhint %}
 
 ## `create`
@@ -30,14 +30,14 @@ The _name_ of your Frontity project. It will also be the name of the folder that
 | `-h <theme>`, `--theme <theme>` | The theme to use |
 | `-t`, `--typescript` | Adds support for TypeScript |
 | `-c`, `--use-cwd` | Generates the project in the current directory |
-| [`-n`, `--no-prompt`](#) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](./environment-variables#FRONTITY_NAME). Read more about this option [here](#)|
+| [`-n`, `--no-prompt`](#) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
 | `-h`, `--help` | Output usage information |
 
-**The --theme option**
+##### The --theme option
 
 You can pick one of Frontity's "official" two themes \([`--theme mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`--theme twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)\). But you can also use any custom theme as long as it's published on npm. Just pass the theme name on the command-line like `--theme ThemesPackageNameInNPM`
 
-**The --no-prompt option**
+##### The --no-prompt option
 
 If you pass the `--no-prompt` flag to the [`create`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create/README.md) or [`create-package`](https://github.com/frontity/docs/tree/ace2f79a98c44ff0c7ffc9ac00f23aab7e6b8086/docs/frontity-cli/create-package/README.md) , the CLI will use the name from this `FRONTITY_NAME` environment variable.
 
