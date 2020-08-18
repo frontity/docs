@@ -16,26 +16,26 @@ The `frontity` commands you have available are
 
 These commands will allow you to either create a Frontity project or a Frontity package
 
-* [`create`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/create-commands/README.md#create)
-* [`create-package`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/create-commands/README.md#create-package)
+* [`create`](https://docs.frontity.org/frontity-cli/create-commands#create)
+* [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package)
 
 #### Run commands
 
 These commands will allow you run a Frontity project in development or production mode
 
-* [`dev`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/run-commands/README.md#dev)
-* [`serve`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/run-commands/README.md#serve)
+* [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev)
+* [`serve`](https://docs.frontity.org/frontity-cli/run-commands#serve)
 
 #### Build commands
 
 These commands will allow you generate the code that can be used to run or analyze a Frontity project
 
-* [`build`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/run-commands/README.md#build)
+* [`build`](https://docs.frontity.org/frontity-cli/build-commands#build)
 
 #### Extra commands
 
-* [`subscribe`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/extra-commands/README.md#subscribe.md)
-* [`info`](https://github.com/frontity/docs/tree/0cac302e50492921e52b6af7888df35f3501f5d2/docs/frontity-cli/extra-commands/README.md#info)
+* [`subscribe`](https://docs.frontity.org/frontity-cli/extra-commands#subscribe)
+* [`info`](https://docs.frontity.org/frontity-cli/extra-commands#info)
 
 > You can also use `--help` with each one of these commands to get more info about them: `npx frontity dev --help`
 
