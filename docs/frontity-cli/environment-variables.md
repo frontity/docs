@@ -10,6 +10,13 @@ If some of these environment variables are detected the proper values will be se
 
 If you pass the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) flag to the [`create`](https://docs.frontity.org/frontity-cli/create-commands#create) or [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package), the CLI will use the name from this `FRONTITY_NAME` environment variable.
 
+If the CLI cannot find a [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) environmental variable, it will prompt for the name of the package
+
+This is the scheme followed by the CLI to get the name of the package
+
+![](../.gitbook/assets/cli-arguments%20%281%29.png)
+
+
 Read more about the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) option in the [Create Commands page](https://docs.frontity.org/frontity-cli/create-commands)
 
 ## [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev)

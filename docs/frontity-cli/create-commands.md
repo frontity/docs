@@ -30,22 +30,12 @@ The _name_ of your Frontity project. It will also be the name of the folder that
 | `-h <theme>`, `--theme <theme>` | The theme to use |
 | `-t`, `--typescript` | Adds support for TypeScript |
 | `-c`, `--use-cwd` | Generates the project in the current directory |
-| [`-n`, `--no-prompt`](create-commands.md#the-no-prompt-option) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
+| [`-n`, `--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
 | `-h`, `--help` | Output usage information |
 
 #### The `--theme` option
 
 You can pick one of Frontity's "official" two themes ([`--theme mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`--theme twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)). But you can also use any custom theme as long as it's published on npm. Just pass the theme name on the command-line like `--theme ThemesPackageNameInNPM`
-
-#### The `--no-prompt` option
-
-If you pass the `--no-prompt` flag to the [`create`](create-commands.md#create) or [`create-package`](create-commands,md#create-package), the CLI will use the name from this `FRONTITY_NAME` environment variable.
-
-If the CLI cannot find a [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) environmental variable, it will prompt for the name of the package
-
-This is the scheme followed by the CLI to get the name of the package
-
-![](../.gitbook/assets/cli-arguments%20%281%29.png)
 
 ### Examples
 
