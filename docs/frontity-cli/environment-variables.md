@@ -14,10 +14,7 @@ If the CLI cannot find a [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cl
 
 This is the scheme followed by the CLI to get the name of the package
 
-![](../.gitbook/assets/cli-arguments%20%281%29.png)
-
-
-Read more about the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) option in the [Create Commands page](https://docs.frontity.org/frontity-cli/create-commands)
+![](../.gitbook/assets/no-prompt.png)
 
 ## [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev)
 
