@@ -97,7 +97,7 @@ This argument sets the _name_ of your Frontity package. The `create-package` com
 | Option | Description |
 | :---: | :--- |
 | `-n <value>`, `--namespace <value>` | Sets the [namespace](https://docs.frontity.org/learning-frontity/namespaces) for this package |
-| [`-n`, `--no-prompt`](create-commands.md#the-no-prompt-option) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
+| [`-n`, `--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
 | `-h`, `--open` | Output usage information |
 
 ### Examples
