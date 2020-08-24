@@ -32,9 +32,14 @@ All _"unknown"_ props passed to the Link are passed down to an anchor `</a>` tag
 #### Usage
 
 ```jsx
-<Link link="/some-post">Some Post</Link>
-```
 
+import Link from "@frontity/components/link";
+
+const MyComponent = () => (
+    <Link link={linkUrl} onClick={e => console.log(e)}>This is a link</Link>
+)
+
+```
 
 #### Custom `<Link />` component
 
