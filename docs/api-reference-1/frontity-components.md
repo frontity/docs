@@ -14,6 +14,74 @@ import Image from "@frontity/components/image";
 
 ## Components
 
+### Link
+
+`<Link />` is a React component that you can use in your Frontity project to define links that works with the internal routing system. * Under the hood, this component uses the `actions.router.set(link)` method from `@frontity/tiny-router` and creates an `<a/>` tag. 
+
+#### Props
+
+| Name | Type | Default | Description | Optional |
+| :--- | :--- | :--- | :--- | :--- |
+| `link` | string | `_self` | The [target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) of the anchor. Possible values: `_self` or `_blank` | `true` | 
+| `onClick` | function | `null` | The `onClick` handler. Can be used to pass an optional callback that will be invoked on click. | `true` | 
+| `scroll` | boolean | `true` | Whether the browser should scroll up to the top upon navigating to a new page.  | `true` | 
+| `aria-current` | string | `null` | [Indicates the element that represents the current item within a container or set of related elements](https://www.w3.org/TR/wai-aria-1.1/#aria-current) | `true` | 
+
+All _"unknown"_ props passed to the Link are passed down to an anchor `</a>` tag.
+
+#### Usage
+
+```jsx
+<Link link="/some-post">Some Post</Link>
+```
+
+
+#### Custom `<Link />` component
+
+Using this `<Link />` component is optional. You can create your own `<Link />` component with your own logic. 
+
+_Example of a custom `<Link />` component implementation_
+
+```jsx
+import React from "react";
+import { connect } from "frontity";
+
+const Link = ({
+  state,
+  actions,
+  link,
+  className,
+  children,
+  "aria-current": ariaCurrent,
+}) => {
+  const onClick = (event) => {
+    // Do nothing if it's an external link
+    if (link.startsWith("http")) return;
+
+    event.preventDefault();
+    // Set the router to the new url.
+    actions.router.set(link);
+
+    // Scroll the page to the top
+    window.scrollTo(0, 0);
+  };
+
+  return (
+    <a
+      href={link}
+      onClick={onClick}
+      className={className}
+      aria-current={ariaCurrent}
+    >
+      {children}
+    </a>
+  );
+};
+
+export default connect(Link);
+```
+
+
 ### Image
 
 `<Image />` is a React component that adds `lazy-loading` to the native WordPress images. Combined with [`@html2react/processors`](frontity-html2react.md#processors) , you can add this functionality and optimize your images pretty easy.
@@ -70,10 +138,10 @@ const MyComponent = () => (
 | true | true | false | Intersection Observer |
 | true | false | true | Intersection Observer |
 | true | false | false | Intersection Observer |
-| false | true | true | \(not possible\) |
-| false | true | false | \(not possible\) |
-| false | false | true | Normal Load \(eager\) |
-| false | false | false | Normal Load \(eager\) |
+| false | true | true | (not possible) |
+| false | true | false | (not possible) |
+| false | false | true | Normal Load (eager) |
+| false | false | false | Normal Load (eager) |
 
 {% hint style="info" %}
 Native Lazy needs a height attribute. For that reason, we use the Intersection Observer when a height is not provided.
@@ -110,7 +178,7 @@ const MyComponent = () => (
 
 The `<Switch />` renders the first child component that returns `true` as the value of its `when` prop.
 
-The last child component \(which should not have a `when` prop\) will be rendered if no other component matches the condition.
+The last child component (which should not have a `when` prop) will be rendered if no other component matches the condition.
 
 You can use it for routing to different components in your theme:
 
