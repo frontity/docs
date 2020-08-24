@@ -24,10 +24,10 @@ The [`frontity serve`](https://docs.frontity.org/frontity-cli/run-commands#serve
 
 | Option | Description |
 | :---: | :--- |
-| `-d`, `--development` | Builds the project for development. Related environment variable: [`FRONTITY_BUILD_DEVELOPMENT`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_development) |
+| `--development` | Builds the project for development. Related environment variable: [`FRONTITY_BUILD_DEVELOPMENT`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_development) |
 | `--target <target>` | Create bundles with "es5", "module" or "both". Default target is "both".  Related environment variable: [`FRONTITY_BUILD_TARGET`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_target) |
 | [`--publicPath <path>`](build-commands.md#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". Related environment variable: [`FRONTITY_BUILD_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_public_path)|
-| `-h`, `--help` | Output usage information |
+| `--help` | Output usage information |
 
 **Examples**
 
@@ -58,6 +58,11 @@ With the `--publicPath` option you can change the path from where you are servin
 The [public path is included in the generated files by webpack](https://webpack.js.org/guides/public-path/) and cannot be changed after that.
 
 In case some people need to change it \(because of constrains in their site architecture\) they would need an option to do so just before generating the Frontity bundle with `npx frontity build`.
+
+{% hint style="info" %}
+This option is also available for [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev) command
+{% endhint %}
+
 
 _Example:_
 

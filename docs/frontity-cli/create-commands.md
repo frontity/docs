@@ -27,11 +27,11 @@ The _name_ of your Frontity project. It will also be the name of the folder that
 
 | Option | Description |
 | :---: | :--- |
-| `-h <theme>`, `--theme <theme>` | The theme to use |
-| `-t`, `--typescript` | Adds support for TypeScript |
-| `-c`, `--use-cwd` | Generates the project in the current directory |
-| [`-n`, `--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
-| `-h`, `--help` | Output usage information |
+| `--theme <theme>` | The theme to use |
+| `--typescript` | Adds support for TypeScript |
+| `--use-cwd` | Generates the project in the current directory |
+| [`--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
+| `--help` | Output usage information |
 
 #### The `--theme` option
 
@@ -96,9 +96,9 @@ This argument sets the _name_ of your Frontity package. The `create-package` com
 
 | Option | Description |
 | :---: | :--- |
-| `-n <value>`, `--namespace <value>` | Sets the [namespace](https://docs.frontity.org/learning-frontity/namespaces) for this package |
-| [`-n`, `--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
-| `-h`, `--open` | Output usage information |
+| `--namespace <value>` | Sets the [namespace](https://docs.frontity.org/learning-frontity/namespaces) for this package |
+| [`--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
+| `--open` | Output usage information |
 
 ### Examples
 
