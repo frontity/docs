@@ -28,7 +28,7 @@ npx frontity dev [options]
 | `-s`, `--https` | Runs the server using https. Related environment variable: [`FRONTITY_DEV_HTTPS`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_dev_https) |
 | `--dont-open-browser` | Don't open a browser window with the localhost. Related environment variable: [`FRONTITY_DEV_DONT_OPEN_BROWSER`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_dev_dont_open_browser) |
 | `--target <target>` | Create bundles with "es5", "module" or "both". Default target is "both". Related environment variable: [`FRONTITY_DEV_TARGET`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_dev_target) |
-| [`--publicPath <path>`](https://docs.frontity.org/frontity-cli/build-commands#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is `/static/`. Related environment variable: [`FRONTITY_DEV_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_dev_public_path). |
+| [`--public-path <path>`](https://docs.frontity.org/frontity-cli/build-commands#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is `/static/`. Related environment variable: [`FRONTITY_DEV_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_dev_public_path). |
 | `-h`, `--help` | Output usage information |
 
 **Examples**
@@ -42,7 +42,7 @@ npx frontity dev --https --port 3002
 * Starts a server in development mode using the folder `assets` as the path for statics
 
 ```text
-npx frontity dev --publicPath="/assets"
+npx frontity dev --public-path="/assets"
 ```
 
 **The --production option**

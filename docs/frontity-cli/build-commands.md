@@ -26,7 +26,7 @@ The [`frontity serve`](https://docs.frontity.org/frontity-cli/run-commands#serve
 | :---: | :--- |
 | `-d`, `--development` | Builds the project for development. Related environment variable: [`FRONTITY_BUILD_DEVELOPMENT`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_development) |
 | `--target <target>` | Create bundles with "es5", "module" or "both". Default target is "both".  Related environment variable: [`FRONTITY_BUILD_TARGET`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_target) |
-| [`--publicPath <path>`](build-commands.md#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". Related environment variable: [`FRONTITY_BUILD_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_public_path)|
+| [`--public-path <path>`](build-commands.md#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". Related environment variable: [`FRONTITY_BUILD_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_public_path)|
 | `-h`, `--help` | Output usage information |
 
 **Examples**
@@ -34,7 +34,7 @@ The [`frontity serve`](https://docs.frontity.org/frontity-cli/run-commands#serve
 * Builds the project for production using an external domain `https://external-domain.com/static` as the path for static files
 
 ```text
-npx frontity build --publicPath="https://external-domain.com/static"
+npx frontity build --public-path="https://external-domain.com/static"
 ```
 
 #### The `--development` option
@@ -49,11 +49,11 @@ npx frontity build --development
 
 So, it’s basically the same as just running `frontity dev` except that it will only build the project `once` and will **not run the development server**.
 
-#### The `--publicPath` option
+#### The `--public-path` option
 
 By default Frontity will look for static assets in the path `<YOUR-DOMAIN>/static`
 
-With the `--publicPath` option you can change the path from where you are serving the statics assets \(i.e. js chunk files, fonts, images, etc.\)
+With the `--public-path` option you can change the path from where you are serving the statics assets \(i.e. js chunk files, fonts, images, etc.\)
 
 The [public path is included in the generated files by webpack](https://webpack.js.org/guides/public-path/) and cannot be changed after that.
 
@@ -62,6 +62,6 @@ In case some people need to change it \(because of constrains in their site arch
 _Example:_
 
 ```text
-npx frontity build --publicPath="/other/folder"
+npx frontity build --public-path="/other/folder"
 ```
 
