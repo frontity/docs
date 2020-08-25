@@ -42,7 +42,7 @@ npx frontity dev --https --port 3002
 * Starts a server in development mode using the folder `assets` as the path for statics
 
 ```text
-npx frontity dev --publicPath="/assets"
+npx frontity dev --public-path="/assets"
 ```
 
 **The --production option**
