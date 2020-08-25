@@ -22,7 +22,7 @@ import Image from "@frontity/components/image";
 
 | Name | Type | Default | Description | Optional |
 | :--- | :--- | :--- | :--- | :--- |
-| `link` | string | `null` | The URL to link to. | `false` | 
+| `link` | string | `undefined` | The URL to link to. | `false` | 
 | `target` | string | `_self` | The [target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) of the anchor. Possible values: `_self` or `_blank` | `true` | 
 | `onClick` | function | `null` | The `onClick` handler. Can be used to pass an optional callback that will be invoked on click. | `true` | 
 | `scroll` | boolean | `true` | Whether the browser should scroll up to the top upon navigating to a new page.  | `true` | 
