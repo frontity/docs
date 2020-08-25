@@ -43,6 +43,39 @@ const MyComponent = () => (
 
 ```
 
+#### Auto Prefetch
+
+This component can help implementing some auto prefetching strategies. The configuration for this is stored in the `state` so final users can modify it in their sites using their `frontity.settings.js` file.
+
+Imagine that `my-awesome-theme` uses this component. Then, people can set the auto prefetch setting like this:
+
+```js
+const settings = {
+  // Other settings...
+  packages: [
+    {
+      name: "my-awesome-theme",
+      state: {
+        theme: {
+          autoPrefetch: "hover",
+        },
+      },
+    },
+    // Other packages...
+  ],
+};
+```
+
+The possible values for `state.theme.autoPrefetch` are:
+
+| Value     | Description                                       |
+| :-------- | :------------------------------------------------ |
+| `no`      | No auto prefetch.                                 |
+| `hover`   | Prefetches links on hover.                        |
+| `in-view` | Prefetch links currently visible in the viewport. |
+| `all`     | Prefetches all internal links on the page.        |
+
+
 #### Custom `<Link />` component
 
 Using this `<Link />` component is optional. You can create your own `<Link />` component with your own logic. 
