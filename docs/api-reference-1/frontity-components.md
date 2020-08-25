@@ -22,9 +22,10 @@ import Image from "@frontity/components/image";
 
 | Name | Type | Default | Description | Optional |
 | :--- | :--- | :--- | :--- | :--- |
-| `link` | string | `_self` | The [target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) of the anchor. Possible values: `_self` or `_blank` | `true` | 
+| `target` | string | `_self` | The [target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) of the anchor. Possible values: `_self` or `_blank` | `true` | 
 | `onClick` | function | `null` | The `onClick` handler. Can be used to pass an optional callback that will be invoked on click. | `true` | 
 | `scroll` | boolean | `true` | Whether the browser should scroll up to the top upon navigating to a new page.  | `true` | 
+| `prefetch` | boolean | `true` | Whether Frontity should automatically prefetch this link or not. The prefetching mode is controlled through `state.theme.prefetch`  | `true` | 
 | `aria-current` | string | `null` | [Indicates the element that represents the current item within a container or set of related elements](https://www.w3.org/TR/wai-aria-1.1/#aria-current) | `true` | 
 
 All _"unknown"_ props passed to the Link are passed down to an anchor `</a>` tag.
