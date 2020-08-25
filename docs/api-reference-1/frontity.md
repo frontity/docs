@@ -50,14 +50,13 @@ You can read more in the [Code Splitting](../learning-frontity/code-splitting.md
 
 * [loadable](frontity.md#loadable)
 
-### `fetch` and `URL`
+### `fetch` 
 
-Frontity exports `fetch` and `URL` with the same API they have in the browser, but they work the same both in the client and in the server.
+Frontity exports `fetch` with the same API it has in the browser, but it works the same both in the client and in the server.
 
 #### **API reference:**
 
 * [fetch](frontity.md#fetch)
-* [URL](frontity.md#url)
 
 ### Helpers
 
@@ -574,41 +573,6 @@ const getFromSomeAPI = async (resource) => {
   const response = await fetch("https://site.com/api/v1" + resource);
   const body = await response.json();
   return body;
-};
-```
-
-### `URL`
-
-#### Syntax
-
-```javascript
-const url = new URL(url, base);
-```
-
-It's a constructor with the [WHATWG API](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL) to create [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) objects.
-
-This constructor is safe to use both server and client side, but you have to import it first.
-
-#### Arguments
-
-* **`url`**: a string representing an absolute or relative URL
-
-  If `url` is a relative URL, `base` is required
-
-* **`base`**: a string representing the base URL to use in case `url` is a relative URL
-
-#### Return value
-
-* A [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL)object
-
-#### Example
-
-```jsx
-import { URL } from "frontity";
-
-const getApiPathname = ({ state }) => {
-  const { pathname } = new URL(state.source.api);
-  return pathname;
 };
 ```
 
