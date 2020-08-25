@@ -17,7 +17,7 @@ npx frontity info [options]
 
 | Option | Description |
 | :---: | :--- |
-| `-h`, `--help` | Output usage information |
+| `--help` | Output usage information |
 
 ### Examples
 
@@ -65,7 +65,7 @@ npx frontity subscribe [options] [email]
 
 | Option | Description |
 | :---: | :--- |
-| `-h`, `--help` | Output usage information |
+| `--help` | Output usage information |
 
 #### **`[email]`**
 
