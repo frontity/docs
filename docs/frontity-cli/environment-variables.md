@@ -8,7 +8,9 @@ If some of these environment variables are detected the proper values will be se
 
 ### FRONTITY_NAME
 
-If you pass the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) flag to the [`create`](https://docs.frontity.org/frontity-cli/create-commands#create) or [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package), the CLI will use the name from this `FRONTITY_NAME` environment variable.
+ The `FRONTITY_NAME` environment variable can be used to supply the name for a Frontity project or a Frontity package.
+
+If no value is supplied from the CLI when using the [`create`](https://docs.frontity.org/frontity-cli/create-commands#create) or [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package), and the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) flag is used, then the name of the project/package will be taken from the `FRONTITY_NAME` environment variable if it's defined.
 
 If the CLI cannot find a [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) environmental variable, it will prompt for the name of the package
 
