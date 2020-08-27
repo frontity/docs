@@ -27,11 +27,6 @@ Here's a list of the main features included in Frontity's core:
 * [Smallest React bundle possible](frontity-features.md#smallest-react-bundle-possible)
 * [Ready for React Concurrent and Suspense](frontity-features.md#ready-for-react-concurrent-and-suspense)
 
-### 🔜 Coming soon
-
-* [PWA and offline support](frontity-features.md#pwa-and-offline-support)
-* [Google AMP with the same codebase](frontity-features.md#google-amp-support-with-the-same-codebase)
-
 ## Frontity features
 
 ### ⚙ Zero setup development
@@ -113,23 +108,6 @@ Frontity helps build sites which are fast to deliver better user experiences. Th
 
 The React team is working hard to release an async, “no-CPU-blocking” version and Frontity will be compatible with it. It is expected for Q2 2019. Once it is released, we expect to see a rise in the use of the React animation libraries available that will get the user experience to the next level.
 
-## 🔜 Coming soon
-
-Frontity is continuously looking to improve, so we are already working on some major \(and awesome\) features which will be available very soon.
-
-### 📱 Google AMP support with the same codebase
-
-Themes made with Frontity are able to render an AMP compatible version with the same React code and CSS used for the HTML version.
-
-### ✨ PWA and offline support
-
-Our themes work with the WordPress manifest to get full PWA compatibility out of the box. Frontity also uses **service workers** for caching assets, which allows your users to access previously visited content even when they are disconnected from the internet **without** any **extra configuration**.
-
-{% hint style="warning" %}
-🛠 Feature still under construction. [Feel free to ask](https://community.frontity.org/) any questions you might have.
-{% endhint %}
-
-### \*\*\*\*
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
