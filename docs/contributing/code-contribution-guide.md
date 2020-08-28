@@ -2,75 +2,86 @@
 
 Frontity, as an open-source project, welcomes everyone to contribute to code, so we are trying to make it as easy as possible.
 
-The most common way to suggest improvements or changes to Frontity \(and most of the projects\) is to copy the Frontity project to your own repository and make there all the changes you want. Once you consider they are okay, make a pull request to submit your contribution to Frontity.
+The most common way to suggest improvements or changes to Frontity (and most of the projects) is to [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the Frontity project to your own repository and make there all the changes you want. Once you consider they are okay, make a [pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) to submit your contribution to Frontity.
 
 {% hint style="info" %}
 Before starting, the only **prerequisite is to have Node.js 10 installed in your computer**.
 {% endhint %}
 
+
 ## Quick guide
 
-1. Fork this [repository](https://github.com/frontity/frontity) and clone your fork.
-2. Run `npm install` in the root folder.
-3. Run `cd examples/mars-theme-example/` to go to the example directory.
-4. Run `npx frontity dev` to start Frontity with mars-theme on [localhost:3000](http://localhost:3000/).
-5. Make any changes you consider to the packages.
-
-   > **WARNING: After adding/removing dependencies to a package, go back to the root and do npm install again.**
-
-6. Run `npm test` in the root to check if the fork passes the tests.
-7. Commit and push to your fork.
-8. Open a Pull Request detailing the changes.
+1. Fork the official Frontity repository to your user account.
+1. Clone your fork to your local machine
+1. Run `npm install` from the root folder.
+1. Run `cd examples/mars-theme-example/` to go to the example directory.
+1. Run `npx frontity dev` to start Frontity with mars-theme on [localhost:3000](http://localhost:3000/).
+1. Make any changes you consider to the code.
+1. Run `npm test` from the root to check if the fork passes the tests.
+1. Run the e2e tests `cd e2e && npm i && node e2e.js --cypress run —prod`
+1. `commit` and `push` to your fork.
+1. Open a [Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) explaining your changes.
 
 ## Step by step guide
 
-**1. Fork this** [**repository**](https://github.com/frontity/frontity)**:**
+**1. Fork the [official Frontity repository](https://github.com/frontity/frontity):**
 
 You can go to [our repository](https://github.com/frontity/frontity/), click on **"Fork"** at the right-top corner and select your user.
 
 ![](../.gitbook/assets/frontity_frontity__-_frontity_-_create_amazing_sites_using_wordpress___react%20%286%29.png)
 
-After doing this, you will create Frontity project at your own repository so you can access and modify it at: [https://github.com/\_{YOURUSERNAME}\_/frontity/](https://github.com/_{YOURUSERNAME}_/frontity/).
+After doing this, you will create Frontity project at your own repository so you can access and modify it at: `https://github.com/YOUR_USERNAME/frontity/`
 
 **2. Clone your own fork:**
 
-This should be made to work on it on a local environment. If you are not using a Git Graphical User Interface \(like GitKraken or SourceTree\), you can clone your fork on the console by changing the current working directory to the location where you want the cloned directory to be made and running the following command:
+In order to run the code from your local machine you have to clone your forked "Frontity" repository.
+
+If you are not using a Git Graphical User Interface (like GitKraken or SourceTree), you can clone your fork from the console by doing the following:
 
 ```text
-git clone https://github.com/YOURUSERNAME/frontity.git
+git clone https://github.com/YOUR_USERNAME/frontity.git
 ```
 
-It will create a folder named “frontity” inside your current directory, and we will work on it from now on.
+This will create a folder named “frontity” inside the directory from where the `git clone` commmand was executed.
 
 **3. Run `npm install` on the root folder:**
 
-Make sure you are at the root folder of Frontity project and run `npm install`, don't do it on the packages.
+Run `npm install` from the root of the Frontity project ("frontity" folder)
 
-At this point, before starting your work, it is a good practice to have a place to see all the changes you are making, and check if your new code is working properly. For doing so, we have provided some tools to run mars-theme in your local server:
+>  Make sure you don't run this from any of the packages folders.
+{% hint style="warning" %}
+`frontity` respository is a monorepo multipackage. Because of this you don't need to run `npm install` on any package under `packages` folder. By running `npm install` from the root all dependencies packages under `packages` folder will be properly installed
+{% endhint %}
 
-**4. Go to /examples/mars-theme-example/** :
+**4. Check the behaviour of your changes from an example project**
 
-To access an example to test your changes you should run the command `cd examples/mars-theme-example/`.
+To view the result of your changes you can use some of the example projects that are under the `examples` folder
+
+These Frontity projects are also part of the monorepo multiplackage so:
+- You don't need to do `npm install` individually on these example projects. The intallacion of dependencies in all packages of the repo (including these example projects) are handled _globally_ by the `npm install` done from the root of `frontity` (step 3)
+- The dependencies are installed in a way that are linked to the proper portion of code in the repo. This means that changes in the code will be reflected in the project
+- You can use these projects to check the behaviour of the Frontity core code and the code of the packages used in the project 
+- If the package you want to check is not a dependency of the exmaple project you'll have to add it to be able to properly check it
+
 
 **5. Run your local server:**
 
-To check your modifications, being in the folder previously mentioned, run **`npx frontity dev`** and it will start Frontity with mars-theme on [localhost:3000](http://localhost:3000/). It will open automatically a new tab on your browser.
+To check your modifications, choose one of the projects in the `examples` folder and, for example `mars-theme-example`, and run **`npx frontity dev`**.
+This will start Frontity with mars-theme on [localhost:3000](http://localhost:3000/) and it will open automatically a new tab on your browser.
+
+You can also run `npm run build:watch` to automatically execute `npm run build` every time you save changes in the code of the packages that run before Webpack, like `file-settings`, `babel-plugin-frontity` or the scripts of `core`
 
 **6. Make any changes you consider**:
 
-At this point, you are able to make any improvements you want to any of the packages \(not only **mars-theme**\), and after saving your code changes, you should check if they are working by refreshing _localhost:3000_. For managing the files and the code, we strongly recommend to use a code editor like Visual Studio Code.
+Now you have the proper environment to do changes to the code (core and packages used by the example project) and check the behaviour. Changes you do in the code should be reflected in `localhost:3000`. 
 
 {% hint style="warning" %}
-_**WARNING: After adding/removing dependencies to a package, you must go back to the root and do `npm install` again**_
-{% endhint %}
-
-{% hint style="info" %}
-If you are doing modifications to the packages that run before Webpack, like `file-settings`, `babel-plugin-frontity` or the scripts of `core`, you need to run `npm run build` in that package folder after each change.
+After adding/removing dependencies to any `package.json` (on any package under `packages` folder), you must go back to the root and do `npm install` again as you're working in a monorepo multipackage.
 {% endhint %}
 
 **7. Run the unit tests:**
 
-Once you have finished adding changes to Frontity, your fork must pass all the unit tests. Run `npm test` **in the root folder**. This will tell you if the tests are okay and in case they are not, they will tell you which ones aren't.
+Once you have finished adding changes to Frontity, your code must pass all the unit tests. Run `npm test` **from the root folder**. This command will tell you if your code pass all the tests, or if there's some test failing.
 
 If you find some errors, you can try:
 
@@ -79,7 +90,7 @@ If you find some errors, you can try:
 
 **8. Run the e2e tests:**
 
-Your fork must also pass all the end-to-end tests.
+Your code must also pass all the end-to-end tests.
 
 Go to the `e2e` folder and run:
 
@@ -103,13 +114,13 @@ Complete information about the e2e test in [this README file](https://github.com
 
 **9. Commit and push to your fork:**
 
-Again, we recommend you to use a Git Graphical User Interface like GitKraken, but it can also be done in the console if wanted.
+Again, we recommend you to use a Git Graphical User Interface like GitKraken, but it can also be done from the command line if you want.
 
 **10. Open a Pull Request**
 
-At this point, your fork should be ready to be merged to Frontity, so you can open a Pull Request and we will review it. Make sure to select a descriptive name and follow the template.
+At this point, your fork should be ready to be merged to Frontity, so you can open a Pull Request (PR) and we can review it. Make sure to select a descriptive name and follow the template.
 
-For opening one you have to go to [Frontity's pull requests](https://github.com/frontity/frontity/compare) page and select **compare across forks.**
+For opening a PR you have to go to [Frontity's pull requests](https://github.com/frontity/frontity/compare) page and select **compare across forks.**
 
 ![](../.gitbook/assets/compare_-_frontity_frontity%20%284%29.png)
 
@@ -228,7 +239,7 @@ You can find more about TSDoc at the official repository: https://github.com/mic
 
 ## Coding Standards
 
-Most of the coding standards are enforced by our `Eslint` and `Prettier` configuration. Please make sure you have both installed in your editor. For VS Code, the extensions are:
+Most of the coding standards are enforced by our `EsLint` and `Prettier` configuration. Please make sure you have both installed in your editor. For VS Code, the extensions are:
 
 - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 - https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
@@ -359,7 +370,7 @@ We use [Changesets](https://github.com/atlassian/changesets/) to manage our vers
 A changeset is a piece of information about changes made in a branch or commit. It holds three bits of information:
 
 - What we need to release.
-- What version we are releasing packages at \(using a [SemVer bump type](https://semver.org/)\).
+- What version we are releasing packages at (using a [SemVer bump type](https://semver.org/)).
 - A changelog entry for the released packages.
 
 If you pull request has changes that need to be released in a new version of some of the packages, you need to include a changeset file in the pull request.
