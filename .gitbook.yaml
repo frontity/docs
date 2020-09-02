@@ -34,3 +34,7 @@ redirects:
     frontity-cli/serve.md: ./frontity-cli/run-commands.md
     frontity-cli/info.md: ./frontity-cli/extra-commands.md
     frontity-cli/subscribe.md: ./frontity-cli/extra-commands.md
+    resources: ./guides/README.md
+    key-concepts: ./guides/README.md
+    key-concepts/javascript: ./guides/javascript-basics.md
+    key-concepts/react: ./guides/react-basic.md

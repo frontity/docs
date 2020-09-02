@@ -54,7 +54,4 @@
 * [Contributing](contributing/README.md)
   * [How to contribute?](contributing/how-to-contribute.md)
   * [Contributing Guide](contributing/code-contribution-guide.md)
-* [Key Concepts](resources/README.md)
-  * [JavaScript](resources/javascript-basics.md)
-  * [React](resources/react-basic.md)
 * [FAQ](faq.md)
