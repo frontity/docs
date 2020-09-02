@@ -1,6 +1,6 @@
 # Table of contents
 
-* [» Welcome to Frontity](README.md)
+* [Welcome to Frontity](README.md)
 * [About Frontity](about/README.md)
   * [Frontity features](about/frontity-features.md)
   * [Browser support](about/browser-support.md)
