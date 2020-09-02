@@ -39,3 +39,4 @@ redirects:
     key-concepts/javascript: ./guides/javascript-basics.md
     key-concepts/react: ./guides/react-basic.md
     troubleshooting: ./guides/troubleshooting.md
+    seo: ./guides/seo.md

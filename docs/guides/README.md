@@ -13,10 +13,14 @@ Here you'll find some guides that will help you work with (and understand better
 *This guide will give through the process of installing and configuring new Frontity packages for your project.*
 
 ###### [Keep Frontity Updated](keep-frontity-updated.md)
-*This guide will give through the process of updating your Frontity project to use latest versions of the Frontity packages you're using in your project.*
+*This guide will take through the process of updating your Frontity project to use latest versions of the Frontity packages you're using in your project.*
 
 ###### [How to share your Frontity project](how-to-share-a-frontity-project.md)
 *This guide will give through the recommended workflow to work with a Frontity theme os package in a way it can be properly shared with the community.*
+
+###### [SEO in Frontity](seo.md)
+*This guide explains how you can optimize the SEO of your Frontity project.*
+
 
 ###### [Troubleshooting guide](troubleshooting-guide.md)
 *This guide will offer solutions to common issues detected in Frontity projects.*
