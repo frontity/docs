@@ -1,6 +1,6 @@
-# ⚽️ Troubleshooting
+# Troubleshooting
 
-In this section we offer solutions to common issues detected in Frontity projects
+In this guide we offer solutions to common issues detected in Frontity projects
 
 <!-- toc -->
 

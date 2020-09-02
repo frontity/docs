@@ -50,8 +50,6 @@
   * [Understanding a Frontity project](guides/understanding-mars-theme.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
   * [Keep Frontity Updated](guides/keep-frontity-updated.md)
-* [Troubleshooting](troubleshooting.md)
 * [Contributing](contributing/README.md)
   * [How to contribute?](contributing/how-to-contribute.md)
   * [Contributing Guide](contributing/code-contribution-guide.md)
-* [FAQ](faq.md)

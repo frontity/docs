@@ -18,6 +18,9 @@ Here you'll find some guides that will help you work with (and understand better
 ###### [How to share your Frontity project](how-to-share-a-frontity-project.md)
 *This guide will give through the recommended workflow to work with a Frontity theme os package in a way it can be properly shared with the community.*
 
+###### [Troubleshooting guide](troubleshooting-guide.md)
+*This guide will offer solutions to common issues detected in Frontity projects.*
+
 
 ### JavaScript & React
 
