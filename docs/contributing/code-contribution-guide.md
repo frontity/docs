@@ -270,11 +270,11 @@ type Something = {
 };
 ```
 
-### 2. Use an `interface` when functions have object arguments
+### 2. Use an `interface` when functions have object arguments or returns
 
 Instead of typing the objects inline, use a separate interface to be able to document the object using TSDoc. Use the `@link` tag to link the interface and function together.
 
-Use
+For function arguments use:
 
 ```ts
 /**
@@ -305,7 +305,7 @@ const validateEmail = (
 };
 ```
 
-Instead of
+Instead of:
 
 ```ts
 /**
@@ -318,6 +318,36 @@ Instead of
  * @returns True if the email is valid, false otherwise.
  */
 const someFunction = (link: string, options: { prop1: string }): void => {
+  // ...
+};
+```
+
+For function returns use:
+
+```ts
+/**
+ * Return object for the {@link validateEmail} function.
+ */
+interface ValidateEmailReturn {
+  /**
+   * The email address that was validated.
+   */
+  email: string;
+
+  /**
+   * True if the email was valid, false otherwise.
+   */
+  valid: boolean;
+}
+
+/**
+ * Validate an email address.
+ *
+ * @param email - The email address to be validated.
+ *
+ * @returns Defined in {@link ValidateEmailReturn}.
+ */
+const validateEmail = (email: string): ValidateEmailReturn => {
   // ...
 };
 ```
