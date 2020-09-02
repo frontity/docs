@@ -9,7 +9,7 @@
   * [Quick start guide](getting-started/quick-start-guide.md)
   * [Connect Frontity to Your WordPress Site](getting-started/connecting-to-wordpress.md)
   * [Next steps](getting-started/next-steps.md)
-* [💻 Commands](frontity-cli/README.md)
+* [💻 CLI Commands](frontity-cli/README.md)
   * [Create commands](frontity-cli/create-commands.md)
   * [Run commands](frontity-cli/run-commands.md)
   * [Build commands](frontity-cli/build-commands.md)
