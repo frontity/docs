@@ -19,9 +19,9 @@ Here you'll find some guides that will help you work with (and understand better
 *This guide will give through the recommended workflow to work with a Frontity theme os package in a way it can be properly shared with the community.*
 
 
-### Javascript & React
+### JavaScript & React
 
-If you are coming to Frontity from a different background, perhaps from the WordPress/PHP world, you may still not familiar with Javascript or React.
+If you are coming to Frontity from a different background, perhaps from the WordPress/PHP world, you may still not familiar with JavaScript or React.
 
 We have prepared for you some guides to help get you start working with them:
 
