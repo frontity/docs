@@ -22,7 +22,7 @@ Here you'll find some guides that will help you work with (and understand better
 *This guide explains how you can optimize the SEO of your Frontity project.*
 
 
-###### [Troubleshooting guide](troubleshooting-guide.md)
+###### [Troubleshooting guide](troubleshooting.md)
 *This guide will offer solutions to common issues detected in Frontity projects.*
 
 
