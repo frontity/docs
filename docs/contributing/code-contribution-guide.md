@@ -270,11 +270,11 @@ type Something = {
 };
 ```
 
-### 2. Use an `interface` when functions have object arguments or returns
+### 2. Use an `interface` when functions take an object as an argument or when functions return an object
 
 Instead of typing the objects inline, use a separate interface to be able to document the object using TSDoc. Use the `@link` tag to link the interface and function together.
 
-For function arguments use:
+For functions that take an object as an argument use:
 
 ```ts
 /**
@@ -322,7 +322,7 @@ const someFunction = (link: string, options: { prop1: string }): void => {
 };
 ```
 
-For function returns use:
+For functions that return an object use:
 
 ```ts
 /**
