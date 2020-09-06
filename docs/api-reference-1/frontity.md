@@ -691,7 +691,7 @@ All the following props can be passed to the `<Slot/>` component.
 | Name | Type | Default | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `name` | string | `undefined` | yes | The name of the Slot. The user of this Slot will have to specify this name in order to insert a Fill component. |
-| `children` | ReactNode | `undefined` | yes | The component that will be used as a fallback in case that no fill is specified for a particular Slot. You can use any type of data that is a valid React element. |
+| `children` | ReactNode | `undefined` | no | The component that will be used as a fallback in case that no fill is specified for a particular Slot. You can use any type of data that is a valid React element. |
 | `data` | ReturnType | `state.source.get(state.router.link)` | no | Any data that you might want to pass to the Fill. Normally used for passing route data fetched in the parent component. If you don't pass any value, the `<Slot/>` component will set the value of this prop to `state.source.get(state.router.link)` for you automatically. |
 | `any other prop` | any | undefined | no | Any other custom prop. The theme can specify other props and they will be passed down to the Fill. |
 
