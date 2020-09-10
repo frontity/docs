@@ -25,7 +25,7 @@ Frontity Chakra Theme by Segun Adebayo:
 
 Copacetic Frontity Theme by Taylor White:
 
-* [Live demo](https://taylorchasewhite.com)
+* [Live demo](https://copacetic-frontity.vercel.app/)
 * [GitHub repository](https://github.com/taylorchasewhite/copacetic-frontity)
 
 Twenty Nineteen Frontity Theme by Imran Sayed and Smit Patadiya:
