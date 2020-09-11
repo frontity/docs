@@ -75,7 +75,7 @@ All the server code is bundled in one file, ready to work with serverless servic
 
 ### {  } First class TypeScript support
 
-Frontity has amazing TypeScript support. Actually, we like it so much that Frontity itself is built using TypeScript. But don’t worry, it’s \_\*\*\_absolutely optional: if you don’t know or don’t want to learn it you can use regular JavaScript without problems!
+Frontity has amazing TypeScript support. Actually, we like it so much that Frontity itself is built using TypeScript. But don’t worry, it’s \_\*absolutely\*\_ optional: if you don’t know or don’t want to learn it you can use regular JavaScript without problems!
 
 ### **💻 Support for ES6 in modern browsers**
 
