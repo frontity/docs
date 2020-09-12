@@ -67,7 +67,7 @@ As you can see, packages can access the state exposed by other packages.
 
 Finally, what if you decide that the app should be run with the menu open by default? Then you'd only have to set `isMenuOpen` to `true` in your `frontity.settings.js` file. Yes, I know, that makes no sense, but I hope it gives you a sense of how flexible this pattern is.
 
-Another good example of `state` is `tiny-router`. It exposes three props:
+Another good example of `state` is `tiny-router`. It exposes two props:
 
 {% code title="/packages/tiny-router/src/index.js" %}
 ```javascript
