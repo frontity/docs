@@ -23,7 +23,7 @@ Once you've followed the Quick Start Guide and have a working Frontity installat
 
 ## **CLI Commands**
 
-If you've followed our [Getting Started] section then you've already used the Frontity CLI to create your first Frontity project. This section is a reference guide to all the other CLI commands that you can use and that can help you during the life-cycle of your project.
+If you've followed our Getting Started section then you've already used the Frontity CLI to create your first Frontity project. The [**CLI Commands**](frontity-cli/) section is a reference guide to all the other CLI commands that you can use and that can help you during the life-cycle of your project.
 
 ## **Core Concepts**
 
@@ -37,7 +37,7 @@ Find out about how the relationship between Frontity and WordPress is structured
 
 Once you've completed the development of your project and have a working application that you're happy with you can learn how to deploy to live in the [**Deployment**](deployment/) section.
 
-In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.md/), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
+In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.mdgit /), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
 
 ## **Packages**
 
