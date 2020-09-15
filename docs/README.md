@@ -31,13 +31,13 @@ This section is the heart of our documentation. Once you've nailed the basics in
 
 ## **Architecture and Deployment**
 
-Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](architecture/) section. This section will also tell you more about possible hosting solutions.
+Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](architecture.md/) section. This section will also tell you more about possible hosting solutions.
 
 ## **Deployment**
 
 Once you've completed the development of your project and have a working application that you're happy with you can learn how to deploy to live in the [**Deployment**](deployment/) section.
 
-In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel/), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
+In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.md/), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
 
 ## **Packages**
 
