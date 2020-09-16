@@ -127,3 +127,23 @@ actions.analytics.event({
   },
 });
 ```
+
+ The `actions.analytics.event()` must receive an event object with the following properties.
+
+
+  | Name          | Type   | Default | Required | Description                                                                                                                                                                                       |
+  | :------------ | :----- | :-----: | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+  | **`name`**    | string | -       | true     | The value of this property is mapped to the [`eventAction`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventAction) field of `analytics.js` events. |
+  | **`payload`** | Object | -       | true     | Event payload.                                                                                                                                                                                    |
+
+  The `payload` object has the following format:
+
+  | Name           | Type   | Default | Required | Description                                                                                                                                                                                           |
+  | :------------- | :----- | :-----: | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | **`category`** | string | -       | true     | The value of this property is mapped to the [`eventCategory`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventCategory) field of `analytics.js` events. |
+  | **`label`**    | string | -       | false    | The value of this property is mapped to the [`eventLabel`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventLabel) field of `analytics.js` events.       |
+  | **`value`**    | number | -       | false    | The value of this property is mapped to the [`eventValue`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventValue) field of `analytics.js` events.       |
+  | **`[key]`**    | any    | -       | false    | Any other property specified in [`analytics.js` field reference](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference).
+
+
+  These values will be properly transfomed into the proper format for Google Analytics before sending the data to the service
