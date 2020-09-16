@@ -3,9 +3,9 @@
 There is a set of official *Analytics Frontity packages* that you can use to easily add analytics tracking in your project.
 
 These packages are:
-- [`@frontity/google-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-analytics)
-- [`@frontity/google-tag-manager-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics)
-- [`@frontity/comscore-analytics`](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics)
+- [`@frontity/google-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-analytics) for trackings using [Google Analytics](https://analytics.google.com/)
+- [`@frontity/google-tag-manager-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics) for trackings using [Google Tag Manager](https://tagmanager.google.com/)
+- [`@frontity/comscore-analytics`](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics) for trackings using [Comscore](https://www.comscore.com/)
 
 ## Installation
 
@@ -25,27 +25,10 @@ Each package will require some custom configuration to add things such as tracki
 
 Once we have properly installed and configured these `analytics` packages, their actions will be centralized by the `analytics` namespace.
 
-In `frontity.settings.js` we can enable/disable specific analytic packages for pageviews or events through the following properties in the `state` under the `analytics` namespace
+In `frontity.settings.js` we can enable/disable specific analytic packages for pageviews or events through the following properties in the `state` (under the `analytics` namespace)
 
 - `state.analytics.pageviews`
 - `state.analytics.events`
-
-_Example:_
-
-```js
-export default {
-  state: {
-    analytics: {
-      pageviews: {
-        googleAnalytics: true
-      },
-      events: {
-        googleAnalytics: true
-      }
-    }
-  }
-};
-```
 
 
 #### `state.analytics.pageviews`
@@ -56,12 +39,34 @@ This object is used by `actions.analytics.pageview` to know which analytics pack
 
 If you want to disable sending pageviews for a specific analytics package, the respective namespace of that package should be set here to `false`.
 
-_Example:_
+{% hint style="info" %}
+All analytics namespaces will be `true` by default in this setting
+{% endhint %}
+
+_`frontity.settings.js`_
+
 ```js
-pageviews: {
-  googleAnalytics: false,
-  comscoreAnalytics: true
-}
+const settings = {
+  ...,
+  packages: [
+    {
+      name: "@frontity/analytics",
+      state: {
+        analytics: {
+          pageviews: {
+            googleAnalytics: true,
+            comscoreAnalytics: false,
+          },
+          events: {...}
+        },
+      },
+    },
+    ...
+  ],
+};
+
+export default settings;
+
 ```
 
 #### `state.analytics.events`
@@ -74,12 +79,34 @@ analytics packages should send the event to their respective services.
 If you want to disable sending events for a specific analytics
 package, the respective namespace of that package should be set here to `false`.
 
-_Example:_
+{% hint style="info" %}
+All analytics namespaces will be `true` by default in this setting
+{% endhint %}
+
+_`frontity.settings.js`_
+
 ```js
-events: {
-  googleAnalytics: true,
-  comscoreAnalytics: false,
-}
+const settings = {
+  ...,
+  packages: [
+    {
+      name: "@frontity/analytics",
+      state: {
+        analytics: {
+          pageviews: {...},
+          events: {
+            googleAnalytics: true,
+            comscoreAnalytics: false,
+          }
+        },
+      },
+    },
+    ...
+  ],
+};
+
+export default settings;
+
 ```
 
 ## How to use
@@ -113,7 +140,7 @@ actions.analytics.pageview({
 
 #### `actions.analytics.event`
 
-Send an event to all active analytics packages.
+Send an event to all enabled analytics packages.
 
 This action takes all namespaces defined in `state.analytics.events` that are `true` and calls the `event` action of each one with the specified `Event` object.
 
@@ -131,19 +158,13 @@ actions.analytics.event({
  The `actions.analytics.event()` must receive an event object with the following properties.
 
 
-  | Name          | Type   | Default | Required | Description                                                                                                                                                                                       |
-  | :------------ | :----- | :-----: | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-  | **`name`**    | string | -       | true     | The value of this property is mapped to the [`eventAction`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventAction) field of `analytics.js` events. |
-  | **`payload`** | Object | -       | true     | Event payload.                                                                                                                                                                                    |
+| Name          | Type   | Default | Required | Description                                                                                                                                                                                       |
+| :------------ | :----- | :-----: | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **`name`**    | string | -       | true     | The value of this property is mapped to the proper name event of each analytics package |
+| **`payload`** | Object | -       | true     | Event payload.                                                                                                                                                                                    |
+Each package will handle the information sent through this `actions.analytics.event()` in a different way:
 
-  The `payload` object has the following format:
-
-  | Name           | Type   | Default | Required | Description                                                                                                                                                                                           |
-  | :------------- | :----- | :-----: | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | **`category`** | string | -       | true     | The value of this property is mapped to the [`eventCategory`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventCategory) field of `analytics.js` events. |
-  | **`label`**    | string | -       | false    | The value of this property is mapped to the [`eventLabel`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventLabel) field of `analytics.js` events.       |
-  | **`value`**    | number | -       | false    | The value of this property is mapped to the [`eventValue`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#eventValue) field of `analytics.js` events.       |
-  | **`[key]`**    | any    | -       | false    | Any other property specified in [`analytics.js` field reference](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference).
-
-
-  These values will be properly transfomed into the proper format for Google Analytics before sending the data to the service
+- [How `@frontity/google-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-analytics#actions-analytics-event)
+- [How `@frontity/google-tag-manager-analytics`  handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics#actions-analytics-event)
+- [How `@frontity/comscore-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics#actions-analytics-event)
+  
