@@ -17,7 +17,7 @@ Install the analytics package you need for your project:
 
 ## Settings
 
-Each package will require some custom configuration to add things such as tracking ID's for the services behind. In the description of each package you'll find the details of each configuration:
+Each package will require some custom configuration to add things such as tracking IDs for the services behind. In the description of each package you'll find the details of each configuration:
 
 - [Settings for `@frontity/google-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-analytics#settings)
 - [Settings for `@frontity/google-tag-manager-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics#settings)
