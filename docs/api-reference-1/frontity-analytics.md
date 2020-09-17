@@ -111,7 +111,7 @@ export default settings;
 
 ## How to use
 
-Once everything is properly configured, the following `actions` under the namespace `analytics` will be ready for use
+Once everything is properly configured, the following `actions` under the namespace `analytics` will be ready to be used
 
 - `actions.analytics.pageview`
 - `actions.analytics.event`
@@ -126,17 +126,17 @@ This action takes all namespaces defined in `state.analytics.pageviews` that are
 `actions.analytics.pageview` is automatically launched every time link changes (or every time `action.router.set(link)` is launched)
 
 {% hint style="warning" %}
-This action is used by the `roots.analytics` component and is not meant to be called directly
-{% endhint %}
+This action is is not meant to be called directly but in case you still want to do this it would be something like this:
 
-
-_Example:_
 ```js
 actions.analytics.pageview({
   link: "/2016/the-beauties-of-gullfoss",
   title: "The Beauties Of Gullfoss",
 });
 ```
+{% endhint %}
+
+
 
 #### `actions.analytics.event`
 
@@ -144,7 +144,10 @@ Send an event to all enabled analytics packages.
 
 This action takes all namespaces defined in `state.analytics.events` that are `true` and calls the `event` action of each one with the specified `Event` object.
 
+This is the method you can call from any component of your React app to track specific events
+
 _Example:_
+
 ```js
 actions.analytics.event({
   name: "click",
@@ -162,9 +165,10 @@ actions.analytics.event({
 | :------------ | :----- | :-----: | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **`name`**    | string | -       | true     | The value of this property is mapped to the proper name event of each analytics package |
 | **`payload`** | Object | -       | true     | Event payload.                                                                                                                                                                                    |
+This method will send the event tracking information to all the packages enabled in `state.analytics.events`
+
 Each package will handle the information sent through this `actions.analytics.event()` in a different way:
 
 - [How `@frontity/google-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-analytics#actions-analytics-event)
 - [How `@frontity/google-tag-manager-analytics`  handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics#actions-analytics-event)
 - [How `@frontity/comscore-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics#actions-analytics-event)
-  
