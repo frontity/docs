@@ -30,6 +30,60 @@ In `frontity.settings.js` we can enable/disable specific analytic packages for p
 - `state.analytics.pageviews`
 - `state.analytics.events`
 
+These properties can be set directly in `frontity.settings.js` from `state.analytics`...
+
+```js
+
+const settings = {
+  name: ...,
+  state: {
+    frontity: {...},
+    analytics: {
+      pageviews: {
+        googleAnalytics: false,
+        comscoreAnalytics: true,
+      },
+      events: {
+        googleAnalytics: true,
+        comscoreAnalytics: false,
+      }
+    },
+  },
+  packages: [{...}, {...}]
+};
+
+export default settings;
+```
+
+Or from each Analytics package setting...
+
+```js
+const settings = {
+  ...,
+  packages: [
+    {
+      name: "@frontity/google-analytics",
+      state: {
+        analytics: {
+          pageviews: { googleAnalytics: true },
+          events: { googleAnalytics: true }
+        },
+      },
+    },
+    {
+      name: "@frontity/comscoreAnalytics",
+      state: {
+        analytics: {
+          pageviews: { comscoreAnalytics: false },
+          events: { comscoreAnalytics: false }
+        },
+      },
+    },
+    ...
+  ],
+};
+export default settings;
+```
 
 #### `state.analytics.pageviews`
 
@@ -42,32 +96,6 @@ If you want to disable sending pageviews for a specific analytics package, the r
 {% hint style="info" %}
 All analytics namespaces will be `true` by default in this setting
 {% endhint %}
-
-_`frontity.settings.js`_
-
-```js
-const settings = {
-  ...,
-  packages: [
-    {
-      name: "@frontity/analytics",
-      state: {
-        analytics: {
-          pageviews: {
-            googleAnalytics: true,
-            comscoreAnalytics: false,
-          },
-          events: {...}
-        },
-      },
-    },
-    ...
-  ],
-};
-
-export default settings;
-
-```
 
 #### `state.analytics.events`
 
@@ -82,32 +110,6 @@ package, the respective namespace of that package should be set here to `false`.
 {% hint style="info" %}
 All analytics namespaces will be `true` by default in this setting
 {% endhint %}
-
-_`frontity.settings.js`_
-
-```js
-const settings = {
-  ...,
-  packages: [
-    {
-      name: "@frontity/analytics",
-      state: {
-        analytics: {
-          pageviews: {...},
-          events: {
-            googleAnalytics: true,
-            comscoreAnalytics: false,
-          }
-        },
-      },
-    },
-    ...
-  ],
-};
-
-export default settings;
-
-```
 
 ## How to use
 
