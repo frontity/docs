@@ -277,3 +277,8 @@ export default {
 
 When users open the share modal, a new event is sent to the analytics service of the `analytics` package that is installed in the **Frontity** project, no matter which one it is 🎉🎉
 
+
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+

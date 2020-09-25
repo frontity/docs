@@ -70,3 +70,7 @@ That's basically all you need to know about libraries, a powerful way of reusing
 > frontity.libraries
 ```
 
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+

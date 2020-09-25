@@ -147,3 +147,8 @@ For now, let's leave it here. We will explain why the namespaces are important l
 
 The important takeaway here is: _in the settings file you have the opportunity to change the `state` of **Frontity**. Most of the time you will use this to configure the settings of each package._
 
+
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+
