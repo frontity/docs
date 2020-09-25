@@ -173,3 +173,7 @@ By the way, it's probably good to point out here that in Frontity all packages a
 
 Let's explore the **Roots** and **Fills** in the next section.
 
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+

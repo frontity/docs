@@ -194,3 +194,8 @@ The components `<Slot>` and `<Fill>` know about each other so everything ends up
 
 ![Fills get inserted where they find a Slot with the same name.](../.gitbook/assets/screen-shot-2019-06-03-at-12.08.01%20%282%29%20%282%29.png)
 
+
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+

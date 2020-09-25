@@ -397,3 +397,8 @@ And then consumed like this: `state.share.totalCountByRoute("/my-first-post")`, 
 
 These **derived state functions** are stripped out from the initial state we send to the client but don't worry, they are reinstantiated later in the client by Frontity to ensure everything is back to normal :\)
 
+
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+

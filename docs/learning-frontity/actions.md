@@ -107,3 +107,9 @@ This action is run before React is hydrated. Be aware that the state that React 
 
 This action is run after React has been hydrated in the client and it has taken control of the page. This is where packages with client-side logic can start doing their thing.
 
+
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+
+

@@ -366,3 +366,8 @@ If you already have a base of Sass you want to migrate, you can use these tools 
 * [https://github.com/adamgruber/sass-extract-js](https://github.com/adamgruber/sass-extract-js)
 * [https://github.com/jgranstrom/sass-extract](https://github.com/jgranstrom/sass-extract)
 
+
+{% hint style="info" %}
+Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+{% endhint %}
+
