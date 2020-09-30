@@ -11,9 +11,9 @@ These packages are:
 
 Install the analytics package you need for your project:
 
-- [Installation instructions for `@frontity/google-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-analytics#installation)
-- [Installation instructions for `@frontity/google-tag-manager-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics#installation)
-- [Installation instructions for `@frontity/comscore-analytics`](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics#installation)
+- [Installation instructions for `@frontity/google-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-analytics#install)
+- [Installation instructions for `@frontity/google-tag-manager-analytics`](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics#install)
+- [Installation instructions for `@frontity/comscore-analytics`](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics#install)
 
 ## Settings
 
@@ -171,6 +171,6 @@ This method will send the event tracking information to all the packages enabled
 
 Each package will handle the information sent through this `actions.analytics.event()` in a different way:
 
-- [How `@frontity/google-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-analytics#actions-analytics-event)
-- [How `@frontity/google-tag-manager-analytics`  handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics#actions-analytics-event)
-- [How `@frontity/comscore-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics#actions-analytics-event)
+- [How `@frontity/google-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-analytics#actionsanalyticsevent)
+- [How `@frontity/google-tag-manager-analytics`  handle this event object](https://github.com/frontity/frontity/tree/dev/packages/google-tag-manager-analytics#actionsanalyticsevent)
+- [How `@frontity/comscore-analytics` handle this event object](https://github.com/frontity/frontity/tree/dev/packages/comscore-analytics#actionsanalyticsevent)
