@@ -25,7 +25,7 @@ Each package will require some custom configuration to add things such as tracki
 
 Once we have properly installed and configured these `analytics` packages, their actions will be centralized by the `analytics` namespace.
 
-In `frontity.settings.js` we can enable/disable specific analytic packages for pageviews or events through the following properties in the `state` (under the `analytics` namespace)
+In `frontity.settings.js` we can enable/disable specific analytics packages for pageviews or events through the following properties in the `state` (under the `analytics` namespace)
 
 - `state.analytics.pageviews`
 - `state.analytics.events`
