@@ -33,7 +33,7 @@
 * [⚙ Packages](api-reference-1/README.md)
   * [frontity](api-reference-1/frontity.md)
   
-  * [Analytic packages](api-reference-1/frontity-analytics.md)
+  * [Analytics packages](api-reference-1/frontity-analytics.md)
   * [@frontity/tiny-router](api-reference-1/router.md)
   * [@frontity/wp-source](api-reference-1/wordpress-source.md)
   * [@frontity/components](api-reference-1/frontity-components.md)
