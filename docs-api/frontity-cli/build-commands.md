@@ -26,7 +26,7 @@ The [`frontity serve`](https://docs.frontity.org/frontity-cli/run-commands#serve
 | :---: | :--- |
 | `--development` | Builds the project for development. Related environment variable: [`FRONTITY_BUILD_DEVELOPMENT`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_development) |
 | `--target <target>` | Create bundles with "es5", "module" or "both". Default target is "both".  Related environment variable: [`FRONTITY_BUILD_TARGET`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_target) |
-| [`--publicPath <path>`](build-commands.md#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". Related environment variable: [`FRONTITY_BUILD_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_public_path)|
+| [`--publicPath <path>`](build-commands.md#the-publicpath-option) | Set the [public path](https://webpack.js.org/guides/public-path/) for static assets. Default path is "/static/". Related environment variable: [`FRONTITY_BUILD_PUBLIC_PATH`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_build_public_path) |
 | `--help` | Output usage information |
 
 **Examples**
@@ -62,7 +62,6 @@ In case some people need to change it \(because of constrains in their site arch
 {% hint style="info" %}
 This option is also available for [`dev`](https://docs.frontity.org/frontity-cli/run-commands#dev) command
 {% endhint %}
-
 
 _Example:_
 

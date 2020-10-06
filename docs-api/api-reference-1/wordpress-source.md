@@ -266,7 +266,7 @@ The [`wp-source` package](https://github.com/frontity/frontity/tree/dev/packages
 Actions don't return data. Data is always accessed via the state. That's because Frontity is following the [Flux pattern](https://facebook.github.io/flux/) \(like Redux\).
 
 {% hint style="info" %}
-Read more about actions [here](../learning-frontity/actions.md)
+Read more about actions [here]()
 {% endhint %}
 
 #### `actions.source.fetch()`

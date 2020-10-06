@@ -1,4 +1,4 @@
-# 🎨 Frontity Themes
+# 🎨 Themes
 
 With Frontity, you can build your own theme from scratch matching all your needs or use a ready-to-use one, which will make it much easier. You can even install a starter theme and keep working on top of that.
 

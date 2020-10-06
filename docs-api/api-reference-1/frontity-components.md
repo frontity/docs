@@ -16,31 +16,29 @@ import Image from "@frontity/components/image";
 
 ### Link
 
-`<Link />` is a React component that you can use in your Frontity project to define links that works with the internal routing system. * Under the hood, this component uses the `actions.router.set(link)` method from `@frontity/tiny-router` and creates an `<a/>` tag. 
+`<Link />` is a React component that you can use in your Frontity project to define links that works with the internal routing system. \* Under the hood, this component uses the `actions.router.set(link)` method from `@frontity/tiny-router` and creates an `<a/>` tag.
 
 #### Props
 
-| Name | Type | Required | Default | Description | 
+| Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `link` | string | Yes | --- | The URL to link to. |
-| `target` | string | No | `_self` | The [target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) of the anchor. Possible values: `_self` or `_blank` | 
-| `onClick` | function | No | `undefined` | The `onClick` handler. Can be used to pass an optional callback that will be invoked on click. | 
-| `scroll` | boolean | No | `true` | Whether the browser should scroll up to the top upon navigating to a new page.  | 
-| `prefetch` | boolean | No | `true` | Whether Frontity should automatically prefetch this link or not. The prefetching mode is controlled through [`state.theme.autoPrefetch`](frontity-components.md#auto-prefetch)  | 
-| `aria-current` | string | No | `undefined` | [Indicates the element that represents the current item within a container or set of related elements](https://www.w3.org/TR/wai-aria-1.1/#aria-current) | 
+| `target` | string | No | `_self` | The [target](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target) of the anchor. Possible values: `_self` or `_blank` |
+| `onClick` | function | No | `undefined` | The `onClick` handler. Can be used to pass an optional callback that will be invoked on click. |
+| `scroll` | boolean | No | `true` | Whether the browser should scroll up to the top upon navigating to a new page. |
+| `prefetch` | boolean | No | `true` | Whether Frontity should automatically prefetch this link or not. The prefetching mode is controlled through [`state.theme.autoPrefetch`](frontity-components.md#auto-prefetch) |
+| `aria-current` | string | No | `undefined` | [Indicates the element that represents the current item within a container or set of related elements](https://www.w3.org/TR/wai-aria-1.1/#aria-current) |
 
 All _"unknown"_ props passed to the Link are passed down to an anchor `</a>` tag.
 
 #### Usage
 
 ```jsx
-
 import Link from "@frontity/components/link";
 
 const MyComponent = () => (
     <Link link={linkUrl} onClick={e => console.log(e)}>This is a link</Link>
 )
-
 ```
 
 #### Auto Prefetch
@@ -49,7 +47,7 @@ This component can help implementing some auto prefetching strategies. The confi
 
 Imagine that `my-awesome-theme` uses this component. Then, people can set the auto prefetch setting like this:
 
-```js
+```javascript
 const settings = {
   // Other settings...
   packages: [
@@ -68,17 +66,16 @@ const settings = {
 
 The possible values for `state.theme.autoPrefetch` are:
 
-| Value     | Description                                       |
-| :-------- | :------------------------------------------------ |
-| `no`      | No auto prefetch.                                 |
-| `hover`   | Prefetches links on hover.                        |
+| Value | Description |
+| :--- | :--- |
+| `no` | No auto prefetch. |
+| `hover` | Prefetches links on hover. |
 | `in-view` | Prefetch links currently visible in the viewport. |
-| `all`     | Prefetches all internal links on the page.        |
-
+| `all` | Prefetches all internal links on the page. |
 
 #### Custom `<Link />` component
 
-Using this `<Link />` component is optional. You can create your own `<Link />` component with your own logic. 
+Using this `<Link />` component is optional. You can create your own `<Link />` component with your own logic.
 
 _Example of a custom `<Link />` component implementation_
 
@@ -120,7 +117,6 @@ const Link = ({
 
 export default connect(Link);
 ```
-
 
 ### Image
 
@@ -178,10 +174,10 @@ const MyComponent = () => (
 | true | true | false | Intersection Observer |
 | true | false | true | Intersection Observer |
 | true | false | false | Intersection Observer |
-| false | true | true | (not possible) |
-| false | true | false | (not possible) |
-| false | false | true | Normal Load (eager) |
-| false | false | false | Normal Load (eager) |
+| false | true | true | \(not possible\) |
+| false | true | false | \(not possible\) |
+| false | false | true | Normal Load \(eager\) |
+| false | false | false | Normal Load \(eager\) |
 
 {% hint style="info" %}
 Native Lazy needs a height attribute. For that reason, we use the Intersection Observer when a height is not provided.
@@ -218,7 +214,7 @@ const MyComponent = () => (
 
 The `<Switch />` renders the first child component that returns `true` as the value of its `when` prop.
 
-The last child component (which should not have a `when` prop) will be rendered if no other component matches the condition.
+The last child component \(which should not have a `when` prop\) will be rendered if no other component matches the condition.
 
 You can use it for routing to different components in your theme:
 

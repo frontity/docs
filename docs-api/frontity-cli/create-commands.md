@@ -30,12 +30,12 @@ The _name_ of your Frontity project. It will also be the name of the folder that
 | `--theme <theme>` | The theme to use |
 | `--typescript` | Adds support for TypeScript |
 | `--use-cwd` | Generates the project in the current directory |
-| [`--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
+| [`--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name). |
 | `--help` | Output usage information |
 
 #### The `--theme` option
 
-You can pick one of Frontity's "official" two themes ([`--theme @frontity/mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`--theme @frontity/twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)). But you can also use any custom theme as long as it's [published on npm](https://www.npmjs.com/search?q=keywords:frontity-theme). Just pass the theme name on the command-line like `--theme ThemesPackageNameInNPM`
+You can pick one of Frontity's "official" two themes \([`--theme @frontity/mars-theme`](https://github.com/frontity/frontity/tree/dev/packages/mars-theme) or [`--theme @frontity/twentytwenty-theme`](https://github.com/frontity/frontity/tree/dev/packages/twentytwenty-theme)\). But you can also use any custom theme as long as it's [published on npm](https://www.npmjs.com/search?q=keywords:frontity-theme). Just pass the theme name on the command-line like `--theme ThemesPackageNameInNPM`
 
 ### Examples
 
@@ -97,7 +97,7 @@ This argument sets the _name_ of your Frontity package. The `create-package` com
 | Option | Description |
 | :---: | :--- |
 | `--namespace <value>` | Sets the [namespace](https://docs.frontity.org/learning-frontity/namespaces) for this package |
-| [`--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name).|
+| [`--no-prompt`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name) | Skips prompting the user for options. Related environment variable: [`FRONTITY_NAME`](https://docs.frontity.org/frontity-cli/environment-variables#frontity_name). |
 | `--open` | Output usage information |
 
 ### Examples

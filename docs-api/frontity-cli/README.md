@@ -1,10 +1,10 @@
-# 💻 Frontity CLI
+# 💻 CLI Commands
 
-The Frontity command-line tool (CLI\) is the main entry point for getting up and running with a Frontity application. It provides functionality like running a development server or building your Frontity application for deployment.
+The Frontity command-line tool \(CLI\) is the main entry point for getting up and running with a Frontity application. It provides functionality like running a development server or building your Frontity application for deployment.
 
 ## How to use Frontity CLI
 
-The Frontity CLI (Frontity commands\) is available via [npm](https://www.npmjs.com/package/frontity). You can run any Frontity command by doing `npx frontity <frontity-command>`
+The Frontity CLI \(Frontity commands\) is available via [npm](https://www.npmjs.com/package/frontity). You can run any Frontity command by doing `npx frontity <frontity-command>`
 
 Run `npx frontity --help` for full help.
 
@@ -44,7 +44,7 @@ These commands will allow you generate the code that can be used to run or analy
 ### In Development
 
 1. Create a Frontity project: `npx frontity create my-cool-project`
-2. Add a custom theme (package\): `npx frontity create-package my-custom-theme`
+2. Add a custom theme \(package\): `npx frontity create-package my-custom-theme`
 3. Launch a development server: `npx frontity dev`
 
 ### In Production

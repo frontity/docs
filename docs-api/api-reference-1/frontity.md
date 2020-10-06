@@ -1,4 +1,4 @@
-# `frontity`
+# frontity
 
 ## Overview
 
@@ -16,7 +16,7 @@ Use **`connect`** to inject `state`, `actions` and `libraries` in your React com
 
 If you are familiar with React hooks, you can use also **`useConnect`** to do the same.
 
-Use the **`Head`** component whenever you want to add HTML tags inside the `<head>` of any of your site's pages. You can read more **Head** in the [Head page](../learning-frontity/head.md) of our **Learning Frontity** section.
+Use the **`Head`** component whenever you want to add HTML tags inside the `<head>` of any of your site's pages. You can read more **Head** in the [Head page]() of our **Learning Frontity** section.
 
 Use the **`Slot`** component whenever you want to add a 'placeholder' to your theme which will be filled with a **`Fill`**. Fills are added to the state in the `state.fills` namespace.
 
@@ -31,7 +31,7 @@ Use the **`Slot`** component whenever you want to add a 'placeholder' to your th
 
 **`styled`** creates new React components from HTML tags, or other React components, with styles attached to them. **`css`** lets you to add inline styles to an element if you don't want to create a new component. If you want to add styles for the whole app, use **`Global`**. And **`keyframes`** is used to define and use animations in your CSS.
 
-You can read more in the [Styles](../learning-frontity/styles.md) page of our **Learning Frontity** section.
+You can read more in the [Styles]() page of our **Learning Frontity** section.
 
 #### **API reference:**
 
@@ -44,7 +44,7 @@ You can read more in the [Styles](../learning-frontity/styles.md) page of our **
 
 Use **`loadable`** in order to separate you code into different bundles that will be dynamically loaded at runtime. This helps you to reduce your page size.
 
-You can read more in the [Code Splitting](../learning-frontity/code-splitting.md) page of our **Learning Frontity** section.
+You can read more in the [Code Splitting]() page of our **Learning Frontity** section.
 
 #### **API reference:**
 
@@ -408,7 +408,7 @@ const HeavyComponent = loadable(importFunction, options);
 
 It's a function that loads a component asynchronously generating a different bundle for it. Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/), in case you want to check its docs.
 
-You can also take a look at the [Code Splitting](../learning-frontity/code-splitting.md) page inside the Learning Frontity section.
+You can also take a look at the [Code Splitting]() page inside the Learning Frontity section.
 
 #### Arguments
 

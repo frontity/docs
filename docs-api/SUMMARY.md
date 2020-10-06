@@ -1,5 +1,6 @@
 # Table of contents
 
+* [Introduction](README.md)
 * [💻 CLI Commands](frontity-cli/README.md)
   * [Create commands](frontity-cli/create-commands.md)
   * [Run commands](frontity-cli/run-commands.md)
@@ -7,6 +8,8 @@
   * [Extra commands](frontity-cli/extra-commands.md)
   * [Environment Variables](frontity-cli/environment-variables.md)
 * [⚙ Packages](api-reference-1/README.md)
+  * [Analytics](api-reference-1/analytics/README.md)
+    * [@frontity/google-analytics](api-reference-1/analytics/frontity-google-analytics.md)
   * [frontity](api-reference-1/frontity.md)
   * [@frontity/tiny-router](api-reference-1/router.md)
   * [@frontity/wp-source](api-reference-1/wordpress-source.md)
@@ -19,3 +22,4 @@
   * [@frontity/mars-theme](frontity-themes/frontity-mars-theme.md)
 * [🔌 WordPress Plugins](frontity-plugins/README.md)
   * [REST API - Head Tags](frontity-plugins/rest-api-head-tags.md)
+

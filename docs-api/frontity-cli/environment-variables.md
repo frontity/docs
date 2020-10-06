@@ -6,7 +6,7 @@ If some of these environment variables are detected the proper values will be se
 
 ## [`create`](https://docs.frontity.org/frontity-cli/create-commands#create) & [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package)
 
-### FRONTITY_NAME
+### FRONTITY\_NAME
 
 If you pass the [`--no-prompt`](https://docs.frontity.org/frontity-cli/create-commands#the-no-prompt-option) flag to the [`create`](https://docs.frontity.org/frontity-cli/create-commands#create) or [`create-package`](https://docs.frontity.org/frontity-cli/create-commands#create-package), the CLI will use the name from this `FRONTITY_NAME` environment variable.
 

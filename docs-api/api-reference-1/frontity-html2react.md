@@ -163,7 +163,7 @@ An `Element` is an HTML tag or a React component.
 * **`component`** : `string | React.ComponentType` If it's a string, it's an HTML tag and if it's a function is a React component. You can change it at will and it is what you would usually do when you want to convert HTML tags to React components
 * **`props`**: `object`  An object containing all the HTML attributes of that node or props of that React component. You can also change them at will. All the attributes are converted to the React equivalents, even for HTML tags. For example:
   * `class` -&gt; `className`
-  * `style` -&gt; `css` \([frontity's CSS prop](../learning-frontity/styles.md#the-css-prop)\)
+  * `style` -&gt; `css` \([frontity's CSS prop]()\)
   * `srcset` -&gt; `srcSet`
   * `onclick` -&gt; `onClick`
   * ..
