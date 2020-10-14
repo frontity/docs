@@ -33,6 +33,8 @@ One **Frontity** installation can serve content for multiple sites. This is usef
 To distinguish between different sites, you must use a `match` setting. Each time a new request is received by **Frontity**, it tests the URL against the `match` field to know which site it should load:
 
 ```javascript
+// frontity.settings.js
+
 export default [
   {
     name: "site-1",
@@ -49,10 +51,12 @@ export default [
 
 For example, if the URL is `https://www.site-1.com/my-post` the `"site-1"` settings are loaded and if the URL is `https://www.site-2.com/category/some-cat` the `"site-2"` settings are loaded.
 
-In development, you can access a specific site using the `?name=` query:
+In development, you can access a specific site using the `?frontity_name=`
+query, which should match the `name` specified for your site. For example, using
+the `frontity.settings.js` file above, to access `site-2`, you should use:
 
 ```text
-https://localhost:3000/?name=site-2
+https://localhost:3000/?frontity_name=site-2
 ```
 
 ## Packages
