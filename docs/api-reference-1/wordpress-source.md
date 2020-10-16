@@ -562,7 +562,7 @@ Entities are normally never overwritten. So, if an entity already exists in the 
 
 ```javascript
 const response = await libraries.source.api.get({ endpoint: "posts" })
-const entitiesAdded = await libraries.source.populate({ response, state }))
+const entitiesAdded = await libraries.source.populate({ response, state })
 
 entitiesAdded.forEach(({type, id, link}) => {
   console.log({type, id, link})
