@@ -53,7 +53,7 @@ npx frontity info [options]
 
 ## Subscribe
 
-Suscribe to Frontity newsleter.
+Subscribe to Frontity newsleter.
 
 ```text
 npx frontity subscribe [options] [email]
