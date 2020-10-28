@@ -342,9 +342,9 @@ Returns an object that gives you info about the type of that link and related en
 `(link: string) => object`
 
 * **Parameters**
-  * **`link`**: `string` Link representing a REST API endpoint or custom handler
+  * **`link`**: `string` Link that points to a page in the Frontity site.
 * **Return value**
-  * `object` Info about the type of data represented in the URL
+  * `object` Info about the type of data represented in the link.
 {% endhint %}
 
 For example:
