@@ -42,7 +42,7 @@ If you are not using a Git Graphical User Interface (like GitKraken or SourceTre
 git clone https://github.com/YOUR_USERNAME/frontity.git
 ```
 
-This will create a folder named “frontity” inside the directory from where the `git clone` commmand was executed.
+This will create a folder named “frontity” inside the directory from where the `git clone` command was executed.
 
 **3. Run `npm install` on the root folder:**
 
@@ -50,18 +50,18 @@ Run `npm install` from the root of the Frontity project ("frontity" folder)
 
 >  Make sure you don't run this from any of the packages folders.
 {% hint style="warning" %}
-`frontity` respository is a monorepo multipackage. Because of this you don't need to run `npm install` on any package under `packages` folder. By running `npm install` from the root all dependencies packages under `packages` folder will be properly installed
+`frontity` repository is a monorepo multipackage. Because of this you don't need to run `npm install` on any package under `packages` folder. By running `npm install` from the root all dependencies packages under `packages` folder will be properly installed
 {% endhint %}
 
 **4. Check the behaviour of your changes from an example project**
 
 To view the result of your changes you can use some of the example projects that are under the `examples` folder
 
-These Frontity projects are also part of the monorepo multiplackage so:
-- You don't need to do `npm install` individually on these example projects. The intallacion of dependencies in all packages of the repo (including these example projects) are handled _globally_ by the `npm install` done from the root of `frontity` (step 3)
+These Frontity projects are also part of the monorepo multipackage so:
+- You don't need to do `npm install` individually on these example projects. The installation of dependencies in all packages of the repo (including these example projects) are handled _globally_ by the `npm install` done from the root of `frontity` (step 3)
 - The dependencies are installed in a way that are linked to the proper portion of code in the repo. This means that changes in the code will be reflected in the project
 - You can use these projects to check the behaviour of the Frontity core code and the code of the packages used in the project 
-- If the package you want to check is not a dependency of the exmaple project you'll have to add it to be able to properly check it
+- If the package you want to check is not a dependency of the example project you'll have to add it to be able to properly check it
 
 
 **5. Run your local server:**
