@@ -139,7 +139,7 @@ There are some cache plugins for the REST API that also use the same parameter. 
 
 * One possibility is that the WordPress theme or plugin generates those fields in a different action than `wp_head`. This is not easy to solve, you would have to find what hooks add the missing fields and attach them to `wp_head`, or write those hooks yourself.
 
-  A known case for this is the **NewsPaper theme**, wich adds the `<title>` tag in `header.php` directly - without using the `wp_head` action. You can take a look at [REST API - Head Tags Plugin error with NewsPaper theme](https://community.frontity.org/t/rest-api-head-tags-plugin-error-with-newspaper-theme/1593/14) for a specific solution if you are using this theme.
+  A known case for this is the **NewsPaper theme**, which adds the `<title>` tag in `header.php` directly - without using the `wp_head` action. You can take a look at [REST API - Head Tags Plugin error with NewsPaper theme](https://community.frontity.org/t/rest-api-head-tags-plugin-error-with-newspaper-theme/1593/14) for a specific solution if you are using this theme.
 
 * This problem could also happen if there is no theme at all in your WordPress site, because themes are normally what add those tags inside `<head>`. You can try using one that comes with WordPress by default to fix this.
 * Also, if you are using a plugin or any other system to cache the REST API responses you can try also clearing the cache.
