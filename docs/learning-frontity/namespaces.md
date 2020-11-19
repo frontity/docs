@@ -152,7 +152,7 @@ It's easier to understand with some examples.
 
 ### Example: `comments`
 
-Imagine a Frontity package for WordPress native comments that exports a `Comment` in its libraries. It is called `wp-comments` but its namespaces is `comments`. It may be something like this:
+Imagine a Frontity package for WordPress native comments that exports a `Comment` in its libraries. It is called `wp-comments` but its namespaces are `comments`. It may be something like this:
 
 {% code title="/packages/wp-comments/src/index.js" %}
 ```javascript
@@ -168,7 +168,7 @@ export default {
 ```
 {% endcode %}
 
-Now, all the `theme` packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If it is, they can include its React component after the post content.
+Now, all the `theme` packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If there is, they can include its React component after the post content.
 
 {% code title="/packages/my-awesome-theme/src/components/Post.js" %}
 ```jsx
@@ -207,7 +207,7 @@ export default {
 ```
 {% endcode %}
 
-But what if \(and now it is when this become interesting\) users don't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
+But what if \(and now it is when this becomes interesting\) users don't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
 
 Then they just have to install `disqus-comments` instead:
 
