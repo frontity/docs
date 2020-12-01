@@ -128,7 +128,7 @@ Vercel now forces all apps to be served over HTTPS. You therefore need to ensure
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://your-wordpress-blog-url/wp-json",
+          "url": "https://your-wordpress-blog-url/",
         }
       }
     },

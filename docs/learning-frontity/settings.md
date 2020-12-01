@@ -75,7 +75,7 @@ export default [
         active: true,
         state: {  // Some settings for this package.
           source: {
-            api: "https://wp.site.com/wp-json"
+            url: "https://wp.site.com/"
           }
         }
       }
@@ -118,7 +118,7 @@ export default [
         name: "@frontity/wp-source",
         state: {  // Some settings for this package.
           source: {
-            api: "https://wp.site.com/wp-json"
+            url: "https://wp.site.com/"
           }
         }
       }

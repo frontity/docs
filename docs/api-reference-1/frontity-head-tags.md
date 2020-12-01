@@ -28,7 +28,7 @@ packages: [
 ```
 
 {% hint style="warning" %}
-If you have an existing project make sure your [@frontity/wp-source](frontity-head-tags.md) package is at least on the 1.5.0 version. If not, update it using this command:  
+If you have an existing project make sure your [@frontity/wp-source](frontity-head-tags.md) package is at least on the 1.5.0 version. If not, update it using this command:
 `> npm install @frontity/wp-source@latest`
 {% endhint %}
 
@@ -37,7 +37,7 @@ If you have an existing project make sure your [@frontity/wp-source](frontity-he
 As it works automatically, It doesn't have settings itself, but it requires two Frontity parameters to work:
 
 * `state.frontity.url` : The URL of your site. Usually defined in the `frontity.settings.js` file.
-* `state.source.api`: The API where your project is pointing. Defined at [@frontity/wp-source](https://docs.frontity.org/api-reference-1/wordpress-source#state-source-api-required) if you haven't changed your Source.
+* `state.source.url` or `state.source.api`: The API where your project is pointing. Defined at [@frontity/wp-source](https://docs.frontity.org/api-reference-1/wordpress-source#settings) if you haven't changed your Source.
 
 It needs `@frontity/wp-source` installed and updated to at least the `1.5.0` version.
 
