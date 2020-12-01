@@ -115,7 +115,7 @@ You should get something like this
 ✅  Production: https://mycustomtomain.com [copied to clipboard] [4s]
 ```
 
-This will create a deploy and assign it to your real site url.
+This will create a deploy and assign it to your real site URL.
 
 > More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 
