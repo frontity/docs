@@ -352,45 +352,6 @@ const validateEmail = (email: string): ValidateEmailReturn => {
 };
 ```
 
-### 3. Add a line break between TSDoc comments
-
-Use
-
-```ts
-/**
- * Some interface.
- */
-interface Something {
-  /**
-   * A property of this interface.
-   */
-  prop1: string;
-
-  /**
-   * Another property of this interface.
-   */
-  prop2: string;
-}
-```
-
-Instead of
-
-```ts
-/**
- * Some interface.
- */
-interface Something {
-  /**
-   * A property of this interface.
-   */
-  prop1: string;
-  /**
-   * Another property of this interface.
-   */
-  prop2: string;
-}
-```
-
 ## Changelogs
 
 We use [Changesets](https://github.com/atlassian/changesets/) to manage our versioning and changelogs.
