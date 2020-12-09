@@ -115,7 +115,7 @@ You should get something like this
 ✅  Production: https://mycustomtomain.com [copied to clipboard] [4s]
 ```
 
-This will create a deploy and assign it to your real site url.
+This will create a deploy and assign it to your real site URL.
 
 > More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 
@@ -128,7 +128,7 @@ Vercel now forces all apps to be served over HTTPS. You therefore need to ensure
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://your-wordpress-blog-url/wp-json",
+          "url": "https://your-wordpress-blog-url/",
         }
       }
     },

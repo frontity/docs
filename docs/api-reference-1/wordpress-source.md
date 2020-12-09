@@ -54,7 +54,7 @@ module.exports = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          api: "https://site.com/wp-json",
+          url: "https://site.com/",
         },
       },
     },
@@ -66,11 +66,19 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
-#### `state.source.api` ![](https://img.shields.io/badge/REQUIRED-red.svg)
+#### `state.source.url`
+The URL of your API. It should be for a self-hosted WordPress site, like `https://site.com/`. If you have a WordPress.com site you should use `state.source.api` (see below).
 
-The URL of your API. It can be from a self-hosted WordPress, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
 
-Setting this value is the minimal configuration this package needs to work
+#### `state.source.api`
+
+The URL of your API. It can be from a self-hosted WordPress site, like `https://site.com/wp-json` or from a WordPress.com site, like`https://public-api.wordpress.com/wp/v2/sites/site.wordpress.com`\(see [WordPress REST API on WordPress.com](https://developer.wordpress.com/2016/11/11/wordpress-rest-api-on-wordpress-com/)\).
+
+Note that if you are using a self-hosted WordPress site you can use `state.source.url` (see above) which omits the `wp-json` part and only needs the URL of the WordPress site.
+
+{% hint style="danger" %}
+Note that you must set one, and only one, of either `state.source.url` or `state.source.api`. Setting this is the minimal configuration this package needs to work
+{% endhint %}
 
 #### `state.source.subdirectory`
 
@@ -129,7 +137,7 @@ module.exports = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          api: "https://site.com/wp-json",
+          url: "https://site.com/",
           params: {
             per_page: 5,
             type: ["post", "page"],
