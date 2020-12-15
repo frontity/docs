@@ -6,6 +6,7 @@ This package is in charge of getting the data from self-hosted WordPress or Word
 
 * [Installation](wordpress-source.md#installation)
 * [Settings](wordpress-source.md#settings)
+  * [`state.source.url`](wordpress-source.md#state-source-url)
   * [`state.source.api`](wordpress-source.md#state-source-api)
   * [`state.source.subdirectory`](wordpress-source.md#state-source-subdirectory)
   * [`state.source.homepage`](wordpress-source.md#state-source-homepage)
