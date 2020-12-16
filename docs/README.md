@@ -33,7 +33,7 @@ If you're a **project manager** or other **decision maker** that needs to choose
 
 ## **CLI Commands**
 
-If you've followed our Getting Started section then you've already used the Frontity CLI to create your first Frontity project. The [**CLI Commands**](frontity-cli/) section is a reference guide to all the other CLI commands that you can use and that can help you during the life-cycle of your project.
+If you've followed our Getting Started section then you've already used the Frontity CLI to create your first Frontity project. The [**CLI Commands**](frontity-cli/) section is a reference guide to all the other CLI commands that you can use and that can help you during the lifecycle of your project.
 
 ## **Core Concepts**
 
