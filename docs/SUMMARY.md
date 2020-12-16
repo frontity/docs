@@ -30,6 +30,7 @@
 * [🏗 Architecture](architecture.md)
 * [🌎 Deployment](deployment/README.md)
   * [Deploy Frontity using Vercel](deployment/deploy-using-vercel.md)
+  * [Deploy Frontity on Heroku](deployment/deploy-on-heroku.md)
 * [⚙ Packages](api-reference-1/README.md)
   * [frontity](api-reference-1/frontity.md)
   
