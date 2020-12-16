@@ -1,40 +1,47 @@
 # @frontity/wp-source
 
 This package is in charge of getting the data from self-hosted WordPress or WordPress.com sites, and make it available from our React components.
+## Table of Contents
 
-## Table of contents
+<!-- toc -->
 
-* [Installation](wordpress-source.md#installation)
-* [Settings](wordpress-source.md#settings)
-  * [`state.source.url`](wordpress-source.md#state-source-url)
-  * [`state.source.api`](wordpress-source.md#state-source-api)
-  * [`state.source.subdirectory`](wordpress-source.md#state-source-subdirectory)
-  * [`state.source.homepage`](wordpress-source.md#state-source-homepage)
-  * [`state.source.postsPage`](wordpress-source.md#state-source-postspage)
-  * [`state.source.categoryBase`](wordpress-source.md#state-source-categorybase)
-  * [`state.source.tagBase`](wordpress-source.md#state-source-tagbase)
-  * [`state.source.postEndpoint`](wordpress-source.md#state-source-postendpoint)
-  * [`state.source.params`](wordpress-source.md#state-source-params)
-  * [`state.source.postTypes`](wordpress-source.md#state-source-posttypes)
-  * [`state.source.taxonomies`](wordpress-source.md#state-source-taxonomies)
-* [How to use](wordpress-source.md#how-to-use)
-* [API Reference](wordpress-source.md#api-reference)
-  * [Actions](wordpress-source.md#actions)
-    * [`actions.source.fetch()`](wordpress-source.md#actions-source-fetch)
-  * [State](wordpress-source.md#state)
-    * [`state.source.get()`](wordpress-source.md#state-source-get)
-    * [`state.source[taxonomy][id]`](wordpress-source.md#state-source-taxonomy-id)
-    * [`state.source[type][id]`](wordpress-source.md#state-source-type-id)
-    * [`state.source.author[id]`](wordpress-source.md#state-source-author-id)
-  * [Libraries](wordpress-source.md#libraries)
-    * [`libraries.source.api.init()`](wordpress-source.md#libraries-source-api-init)
-    * [`libraries.source.api.get()`](wordpress-source.md#libraries-source-api-get)
-    * [`libraries.source.populate()`](wordpress-source.md#libraries-source-populate)
-    * [`libraries.source.handlers`](wordpress-source.md#libraries-source-handlers)
-    * [`libraries.source.redirections`](wordpress-source.md#libraries-source-redirections)
-    * [`libraries.source.parse()`](wordpress-source.md#libraries-source-parse)
-    * [`libraries.source.stringify()`](wordpress-source.md#libraries-source-stringify)
-    * [`libraries.source.normalize()`](wordpress-source.md#libraries-source-normalize)
+- [Installation](#installation)
+- [Settings](#settings)
+  * [REST API](#rest-api)
+    + [`state.source.url`](#state-source-url)
+    + [`state.source.api`](#state-source-api)
+  * [Custom paths](#custom-paths)
+    + [`state.source.subdirectory`](#state-source-subdirectory)
+    + [`state.source.homepage`](#state-source-homepage)
+    + [`state.source.postsPage`](#state-source-postspage)
+    + [`state.source.categoryBase`](#state-source-categorybase)
+    + [`state.source.tagBase`](#state-source-tagbase)
+    + [`state.source.postEndpoint`](#state-source-postendpoint)
+  * [Custom requests](#custom-requests)
+    + [`state.source.params`](#state-source-params)
+  * [Custom Post Types](#custom-post-types)
+    + [`state.source.postTypes`](#state-source-posttypes)
+    + [`state.source.taxonomies`](#state-source-taxonomies)
+- [How to use](#how-to-use)
+- [API Reference](#api-reference)
+  * [Actions](#actions)
+    + [`actions.source.fetch()`](#actions-source-fetch)
+  * [State](#state)
+    + [`state.source.get()`](#state-source-get)
+    + [`state.source[taxonomy][id]`](#state-source-taxonomy-id)
+    + [`state.source[type][id]`](#state-source-type-id)
+    + [`state.source.author[id]`](#state-source-author-id)
+  * [Libraries](#libraries)
+    + [`libraries.source.api.init()`](#libraries-source-api-init)
+    + [`libraries.source.api.get()`](#libraries-source-api-get)
+    + [`libraries.source.populate()`](#libraries-source-populate)
+    + [`libraries.source.handlers`](#libraries-source-handlers)
+    + [`libraries.source.redirections`](#libraries-source-redirections)
+    + [`libraries.source.parse()`](#libraries-source-parse)
+    + [`libraries.source.stringify()`](#libraries-source-stringify)
+    + [`libraries.source.normalize()`](#libraries-source-normalize)
+
+<!-- tocstop -->
 
 ## Installation
 
@@ -67,6 +74,8 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
+### REST API
+
 #### `state.source.url`
 The URL of your API. It should be for a self-hosted WordPress site, like `https://site.com/`. If you have a WordPress.com site you should use `state.source.api` (see below).
 
@@ -80,6 +89,8 @@ Note that if you are using a self-hosted WordPress site you can use `state.sourc
 {% hint style="danger" %}
 Note that you must set one, and only one, of either `state.source.url` or `state.source.api`. Setting this is the minimal configuration this package needs to work
 {% endhint %}
+
+### Custom paths
 
 #### `state.source.subdirectory`
 
@@ -127,6 +138,8 @@ Set the endpoint against which calls to the REST API are made **when posts are r
 
 The default value is `"posts"`.
 
+### Custom requests
+
 #### `state.source.params`
 
 Object of params that will be used in every call to the WP REST API when using `actions.source.fetch`. This is useful to filter fields from the REST API, change the default `per_page` value and so on. For example, if you set this value to
@@ -151,6 +164,8 @@ module.exports = {
 ```
 
 and then you visit a URL \(or use `actions.source.fetch`\), the query part of the HTTP call to the REST API will be `per_page=5&type[]=post&type[]=page`.
+
+### Custom Post Types
 
 #### `state.source.postTypes`
 
