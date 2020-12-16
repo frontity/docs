@@ -74,7 +74,7 @@ module.exports = {
 
 These are the settings you can change in your `frontity.settings.js` file:
 
-### REST API
+### REST API 
 
 #### `state.source.url`
 The URL of your API. It should be for a self-hosted WordPress site, like `https://site.com/`. If you have a WordPress.com site you should use `state.source.api` (see below).

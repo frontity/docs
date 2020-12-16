@@ -6,7 +6,7 @@ const fileToRead = process.argv[2]
 const fileToWrite = fileToRead
 
 const psReadFile = fileToRead => new Promise( function(resolve, reject) {
-
+  
   fs.readFile(fileToRead, 'utf8', (error, contentFile) => {
     if (error) reject(error)
     resolve(contentFile)
@@ -14,7 +14,7 @@ const psReadFile = fileToRead => new Promise( function(resolve, reject) {
 
 })
 
-const psWriteFile = contentToWrite =>
+const psWriteFile = contentToWrite => 
 new Promise(resolve => {
   fs.writeFile(fileToWrite, contentToWrite, error => {
     if (error) reject(error)
@@ -28,19 +28,19 @@ const customSlugParser = (headerDetected, optionsSlug ) => {
     .replace(/\./g, ' ')
     .replace(/[\[|\]]/g, ' ')
     .replace(/\<.*\>/g, '')
-
+  
   const headerToWrite = uslug(parsedHeader)
-
+  
   return headerToWrite
 }
 
 const parseMarkdownTOC = contentFile => {
-
-  return toc.insert(contentFile, {
+  
+  return toc.insert(contentFile, { 
     slugify: customSlugParser,
     maxdepth: 4
   });
-
+  
 }
 
 

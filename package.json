@@ -35,7 +35,7 @@
     "uslug": "^1.0.4"
   },
   "lint-staged": {
-    "*.md": "texlint"
+    "*.md": "textlint"
   },
   "husky": {
     "hooks": {
