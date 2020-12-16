@@ -1,10 +1,27 @@
 # » Welcome to Frontity
 
-**👋** Hi! Welcome to Frontity, and to our documentation pages. This is where you will find all the information you need to build something awesome with Frontity.
+**👋** Hi! Welcome to Frontity, and to our documentation. 
+
+We have our documentation distributed in 3 sites:
+
+- docs.frontity.org → Introduction, concepts and guides
+- api.frontity.org → API Reference
+- tutorial.frontity.org → Step by Step guide
+
+This site (docs.frontity.org) is where you will find all the information you need to start building something awesome with Frontity.
 
 Let's kick things off by providing you with a roadmap so that you can find your way around the documentation and zero in on the information you need right now.
 
-## **About Frontity**
+## **Quick Start**
+
+If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
+
+This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly. 
+
+Once you've followed the Quick Start Guide and have a working Frontity installationm you may want to continue learning by a creating a more elaborated project with our **[Step by Step guide](tutorial.frontity.org)** 
+
+
+## **Understanding Frontity**
 
 To learn about what Frontity is, how it works, and what features it has, visit the
 [**About Frontity**](about/) section.
@@ -13,13 +30,6 @@ If you're a **developer** this section will tell you all about what Frontity is 
 
 If you're a **project manager** or other **decision maker** that needs to choose or justify whether to use Frontity for your project then this section provides the information you need.
 
-## **Getting Started**
-
-If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
-
-This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly. In particular we would like to draw your attention to the [**Initial checks**](https://docs.frontity.org/getting-started#initial-checks) section. Make sure you read this <ins>before</ins> running the installer.
-
-Once you've followed the Quick Start Guide and have a working Frontity installation we'll show you how to [**connect Frontity up to your own WordPress site**](getting-started/connecting-to-wordpress.md) and also how to customise the menu to reflect the structure of your WordPress site.
 
 ## **CLI Commands**
 
