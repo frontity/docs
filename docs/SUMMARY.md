@@ -29,15 +29,16 @@
     * [Packages](learning-frontity/packages.md)
     * [Namespaces](learning-frontity/namespaces.md)
 
-* [Server Side Rendering](server-side-rendering/README.md)  
+* [Server Side](server-side-rendering/README.md)  
+  * [Server Side Rendering](server-side-rendering/README.md)  
+  * [MiddleWare](hosting-architecture/middleware.md)  
   * [Isomorphic Apps](server-side-rendering/isomorphic-apps.md)  
   
-* [Architecture](architecture/README.md)  
-  * [Frontity Modes](architecture/frontity-modes.md)  
-    * [Decoupled](architecture/decoupled.md)  
-    * [Embedded](architecture/embedded.md)  
-  * [Serverless](architecture/frontity-modes.md)  
-  * [MiddleWare](architecture/middleware.md)  
+* [Hosting Architecture](hosting-architecture/README.md)  
+  * [Frontity Modes](hosting-architecture/frontity-modes.md)  
+    * [Decoupled](hosting-architecture/decoupled.md)  
+    * [Embedded](hosting-architecture/embedded.md)  
+  * [Serverless](hosting-architecture/serverless.md)  
 
 * [Deployment](deployment/README.md)
   * [Deploy Frontity using Vercel](deployment/deploy-using-vercel.md)
@@ -56,6 +57,8 @@
 * [WordPress](wordpress/README.md)
   * [How to work with CPT](wordpress/how-to-work-with-cpt.md)
   * [Working with Gutenberg](wordpress/working-with-gutenberg.md)
+
+## Guides
 
 * [Guides](guides/README.md)
   * [Install a new Frontity package](guides/install-a-new-package.md)

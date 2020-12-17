@@ -7,6 +7,7 @@
   },
   "license": "Apache-2.0",
   "scripts": {
+    "toc": "node utils/gitbook-toc.js",
     "check-links": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check '{}' --config config/mlc.config.json ';'",
     "check-links:quiet": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec markdown-link-check -q -v '{}' --config config/mlc.config.json ';'",
     "textlint:all": "find docs -name '*.md' -not -path './node_modules/*' -maxdepth 2 -exec textlint '{}' ';'",
@@ -23,12 +24,15 @@
   "homepage": "https://github.com/frontity/docs#readme",
   "devDependencies": {
     "dictionary-en-au": "^2.2.1",
-    "husky": "^4.3.0",
+    "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
     "markdown-link-check": "^3.8.1",
+    "markdown-toc": "^1.2.0",
+    "prettier": "^2.2.1",
     "textlint": "^11.6.3",
     "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-rule-terminology": "^2.1.4"
+    "textlint-rule-terminology": "^2.1.4",
+    "uslug": "^1.0.4"
   },
   "lint-staged": {
     "*.md": "textlint"
@@ -61,6 +65,5 @@
         "severity": "warning"
       }
     }
-  },
-  "dependencies": {}
+  }
 }

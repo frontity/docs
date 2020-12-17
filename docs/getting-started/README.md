@@ -6,41 +6,44 @@ Frontity is a **React-based framework** that enables you to easily build a front
 
 ## Table of Contents
 
-* [Installation requirements](./#installation-requirements)
-* [Initial checks](./#initial-checks)
-  * [WordPress](./#wordpress)
-    * [Have a proper WordPress version](./#have-a-proper-wordpress-version)
-    * [Have set the right REST API URL](./#have-set-the-right-rest-api-url)
-    * [Have pretty permalinks activated](./#have-pretty-permalinks-activated)
-  * [Node.js](./#nodejs)
-    * [Have Node.js and npm installed](./#have-nodejs-and-npm-installed)
-* [Get up and running](./#get-up-and-running)
+<!-- toc -->
 
-## Installation requirements
+- [Requirements](#requirements)
+  * [WordPress](#wordpress)
+    + [Have a recent WordPress version](#have-a-recent-wordpress-version)
+    + [Set the right REST API URL](#set-the-right-rest-api-url)
+    + [Have pretty permalinks activated](#have-pretty-permalinks-activated)
+  * [Node.js](#node-js)
+    + [Have Node.js and npm installed](#have-node-js-and-npm-installed)
+- [Get up and running](#get-up-and-running)
+
+<!-- tocstop -->
+
+## Requirements
 
 To get started with Frontity you will need:
 
 * **A WordPress installation** - This can be hosted locally, on a web-server, or you can also use a site hosted on wordpress.com
 
-  However, when you spin up your first Frontity project you will initially be connected to our test site so you won't be without content when you first try Frontity
-
-* **Node.js installed in your computer** - If you don't already have it you can get **Node.js** from [the official site](https://nodejs.org/). This will also install **npm** and **npx** along with Node.js
+* **Node.js** - If you don't already have it you can get *Node.js* from [the official site](https://nodejs.org/). This will also install `npm` and `npx` along with Node.js
 
   You will use these to run Frontity commands during the set-up and development of your project
 
-> For those coming from WordPress it might be worth noting that **Frontity** runs on **Node**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture.md) section arch these docs.
 
-## Initial checks
+{% hint style="info" %}
+For those coming from WordPress it might be worth noting that *Frontity* runs on **Node.js**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture.md) section arch these docs.
+
+{% endhint %}
 
 ### WordPress
 
-#### Have a proper WordPress version
+#### Have a recent WordPress version
 
 Frontity depends on the WordPress REST-API. If you have a recent version of WordPress installed, or if you're using wordpress.com then you should be good to go.
 
 To check that the WordPress REST-API is working you can type one of the following into your browser's address bar. You should get a lot of complicated looking stuff in your browser. Don't worry, this is JSON and Frontity is very happy with this.
 
-#### Have set the right REST API URL
+#### Set the right REST API URL
 
 For a self-hosted WordPress site \(i.e. local or web based\):
 
@@ -73,6 +76,7 @@ node -v
 ```text
 npm -v
 ```
+----
 
 Once you have a WordPress site and Node.js you're good to go and all set to get up and running....
 
