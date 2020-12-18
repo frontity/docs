@@ -4,9 +4,9 @@
 
 We have our documentation distributed in 3 sites:
 
-- docs.frontity.org → Introduction, concepts and guides
-- api.frontity.org → API Reference
-- tutorial.frontity.org → Step by Step guide
+- [**docs.frontity.org**](https://docs.frontity.org) - Introduction, concepts and guides
+- [**api.frontity.org**](https://api.frontity.org) -  API Reference
+- [**tutorial.frontity.org**](https://tutorial.frontity.org) - Step by Step guide
 
 This site (docs.frontity.org) is where you will find all the information you need to start building something awesome with Frontity.
 
