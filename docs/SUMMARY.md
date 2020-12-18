@@ -29,7 +29,9 @@
     * [Packages](learning-frontity/packages.md)
     * [Namespaces](learning-frontity/namespaces.md)
 
-* [Server-side](server-side-rendering/README.md)  
+## Topic Guides
+
+* 🍽 [Server-side](server-side-rendering/README.md)  
   * [Server-side Rendering](server-side-rendering/README.md)  
   * [MiddleWare](hosting-architecture/middleware.md)  
   * [Isomorphic Apps](server-side-rendering/isomorphic-apps.md)  
@@ -58,7 +60,7 @@
   * [How to work with CPT](wordpress/how-to-work-with-cpt.md)
   * [Working with Gutenberg](wordpress/working-with-gutenberg.md)
 
-## Guides
+## How to Guides
 
 * [Guides](guides/README.md)
   * [Install a new Frontity package](guides/install-a-new-package.md)
