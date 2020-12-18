@@ -4,7 +4,30 @@
 
 We have our documentation distributed in 3 sites:
 
-- [**docs.frontity.org**](https://docs.frontity.org) - Introduction, concepts and guides
+<table>
+  <tr>
+    <td width="33%">
+      <h3>
+        <a href="https://docs.frontity.org">docs.frontity.org</a>
+      </h3>
+      <p>Introduction, concepts and guides</p>
+    </td>
+    <td width="33%">
+      <h3>
+        <a href="https://api.frontity.org">api.frontity.org</a>
+      </h3>
+      <p>API Reference</p>
+    </td>
+    <td width="33%">
+      <h3>
+        <a href="https://tutorial.frontity.org">tutorial.frontity.org</a>
+      </h3>
+      <p>Step by Step guide</p>
+    </td>
+  </tr>
+<table>
+
+
 - [**api.frontity.org**](https://api.frontity.org) -  API Reference
 - [**tutorial.frontity.org**](https://tutorial.frontity.org) - Step by Step guide
 
