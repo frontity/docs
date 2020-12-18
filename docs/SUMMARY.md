@@ -29,8 +29,8 @@
     * [Packages](learning-frontity/packages.md)
     * [Namespaces](learning-frontity/namespaces.md)
 
-* [Server Side](server-side-rendering/README.md)  
-  * [Server Side Rendering](server-side-rendering/README.md)  
+* [Server-side](server-side-rendering/README.md)  
+  * [Server-side Rendering](server-side-rendering/README.md)  
   * [MiddleWare](hosting-architecture/middleware.md)  
   * [Isomorphic Apps](server-side-rendering/isomorphic-apps.md)  
   
