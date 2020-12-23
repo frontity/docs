@@ -31,12 +31,12 @@
 
 ## Topic Guides
 
-* 🍽 [Server-side](server-side-rendering/README.md)  
+* 🍽  [Server-side](server-side-rendering/README.md)  
   * [Server-side Rendering](server-side-rendering/README.md)  
   * [MiddleWare](hosting-architecture/middleware.md)  
   * [Isomorphic Apps](server-side-rendering/isomorphic-apps.md)  
   
-* 🏗 [Hosting Architecture](hosting-architecture/README.md)  
+* 🏗  [Hosting Architecture](hosting-architecture/README.md)  
   * [Frontity Modes](hosting-architecture/frontity-modes.md)  
     * [Decoupled](hosting-architecture/decoupled.md)  
     * [Embedded](hosting-architecture/embedded.md)  
