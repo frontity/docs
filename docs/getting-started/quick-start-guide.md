@@ -45,7 +45,7 @@ A development server will be started. This server will be listening to http://lo
 
 Try editing the files under `packages/mars-theme` and save your changes. The browser will automatically reload when these changes are detected
 
-5- **Set your own WordPress installation** a the source of data 
+5- **Set your own WordPress installation** as the source of data 
 
 You can connect your own WordPress site to your Frontity project by setting the `state.source.url` property in the `frontity.settings.js` file
 
@@ -73,10 +73,26 @@ Your site at `http://localhost:3000` won't auto-update with this change as auto-
 
 You should now see your own posts in the Frontity project displayed in the browser.
 
+## What's next?
+
+### Deploy your site
+
+Follow the instructions in our **[Deployment](https://docs.frontity.org/deployment)** section to learn how to deploy your Frontity site. We recommend you to start by [deploying your site in Vercel](https://docs.frontity.org/deployment/deploy-using-vercel)
+
+### Follow the Step by Step Tutorial
+
+We have created for you a **[Step by Step Tutorial](#)** to create a more functional Frontity project that will help you to learn how to use some of the basic features of the framework
+
+### Check our guides
+
+We have several **[Guides](#)** prepared for you to help you understand and solve with Frontity some of the common challenges of Dynamic SSR (Server Side Rendering) in React apps connected to WordPress
+
+### Check the API Reference
+
+Let's cut to the chase! In the **[API Reference](#)** site you'll find specific details of Frontity CLI, packages, plugins and themes
+
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
 {% endhint %}
-
-## What's next?
 
 
