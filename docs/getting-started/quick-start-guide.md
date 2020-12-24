@@ -85,7 +85,7 @@ We have created for you a **[Step by Step Tutorial](#)** to create a more functi
 
 ### Check our guides
 
-We have several **[Guides](#)** prepared for you to help you understand and solve with Frontity some of the common challenges of Dynamic SSR (Server Side Rendering) in React apps connected to WordPress
+We have several **[Guides](#)** prepared for you to help you understand and solve with Frontity some of the common challenges of Dynamic SSR (server-side Rendering) in React apps connected to WordPress
 
 ### Check the API Reference
 
