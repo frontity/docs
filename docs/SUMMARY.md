@@ -6,7 +6,7 @@
   * [Quick start guide](getting-started/quick-start-guide.md)
 
 * [About Frontity](about-frontity/README.md)
-  * [What is Frontity?](about-frontity/what-is-frontity.md.md)
+  * [What is Frontity?](about-frontity/what-is-frontity.md)
   * [Frontity features](about-frontity/frontity-features.md)
   * [Foundational concepts](about-frontity/foundational-concepts.md)
   * [Frontity modes](about-frontity/frontity-modes.md)
