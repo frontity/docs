@@ -2,6 +2,10 @@
 
 **👋** Hi! Welcome to Frontity, and to our documentation pages. This is where you will find all the information you need to build something awesome with Frontity.
 
+{% hint style="info" %}
+If you're new to Frontity check out our brand new [step-by-step tutorial](https://tutorial.frontity.org/). It's the quickest way to get up to speed with Frontity.
+{% endhint %}
+
 Let's kick things off by providing you with a roadmap so that you can find your way around the documentation and zero in on the information you need right now.
 
 ## **About Frontity**
