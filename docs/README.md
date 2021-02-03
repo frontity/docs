@@ -25,6 +25,10 @@ This is where you'll find our [**Quick Start Guide**](getting-started/quick-star
 
 Once you've followed the Quick Start Guide and have a working Frontity installation we'll show you how to [**connect Frontity up to your own WordPress site**](getting-started/connecting-to-wordpress.md) and also how to customise the menu to reflect the structure of your WordPress site.
 
+{% hint style="info" %}
+This could also be a good time to run through our brand new [step-by-step tutorial](https://tutorial.frontity.org/).
+{% endhint %}
+
 ## **CLI Commands**
 
 If you've followed our Getting Started section then you've already used the Frontity CLI to create your first Frontity project. The [**CLI Commands**](frontity-cli/) section is a reference guide to all the other CLI commands that you can use and that can help you during the life-cycle of your project.
