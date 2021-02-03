@@ -4,6 +4,10 @@ Now that you've set Frontity up and connected it to your WordPress site you're n
 
 This is where the fun begins. 🙌
 
+{% hint style="info" %}
+Now might be a good time to run through our brand new [step-by-step tutorial](https://tutorial.frontity.org/).
+{% endhint %}
+
 ## Edit the starter theme
 
 With Frontity you won't have your site code in the root folder as you would with `gatsbyjs` or `next.js`. Instead you work with Frontity packages and in order to personalize your site you'll edit a theme package.
