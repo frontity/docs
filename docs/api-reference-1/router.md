@@ -2,10 +2,10 @@
 
 ## Installation
 
-Add the `tiny-source` package to your project:
+Add the `tiny-router` package to your project:
 
 ```text
-npm i @frontity/tiny-source
+npm i @frontity/tiny-router
 ```
 
 And include it in your `frontity.settings.js` file:
