@@ -11,8 +11,8 @@ Mars theme is our starter theme and is installed by default on `frontity create`
 {% hint style="info" %}
 Have a look at this Frontity Talk where we talk about the `mars-theme`:
 
-* 📺 [Frontity Talks 2020-04 - mars-theme \[27:52\]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
-{% endhint %}
+- 📺 [Frontity Talks 2020-04 - mars-theme \[27:52\]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
+  {% endhint %}
 
 ## Frontity Utilities
 
@@ -23,7 +23,7 @@ For example, our state manager `@frontity/connect` exposes a utility called `con
 ```jsx
 import { connect, styled } from "frontity";
 
-const HelloWorld = () => <Container>Hello World!</Container>
+const HelloWorld = () => <Container>Hello World!</Container>;
 
 export default connect(HelloWorld);
 
@@ -55,19 +55,19 @@ const marsTheme = {
       menu: [],
       featured: {
         showOnList: false,
-        showOnPost: false
-      }
-    }
+        showOnPost: false,
+      },
+    },
   },
   // The actions that the extension needs to create in order to work.
   // In our case, `mars-theme` doesn't export any actions.
   actions: {},
   // The libraries that the extension needs to create in order to work.
   // In our case, `mars-theme` doesn't export any actions.
-  libraries: {}
+  libraries: {},
 };
 
-export default marsTheme
+export default marsTheme;
 ```
 
 In each part of the exported object, what the extension defines needs to be inside its `namespace`. In our case, all the things we are defining are inside the `theme` namespace, but if our theme implemented, for example, a comments solution, that state, actions, etc., should be defined inside the `comments` namespace. So, in the case of `roots`, it would be something like:
@@ -121,7 +121,8 @@ Our main React component will be `Theme`, where we are deciding what kind of vie
 
 Here you have the code of `Theme` with some comments:
 
-{% code title="theme.js" %}
+{% code title="index.js" %}
+
 ```jsx
 import React from "react";
 import {
@@ -165,6 +166,7 @@ const Theme = ({ state }) => (
 
 export default connect(Theme);
 ```
+
 {% endcode %}
 
 Between the `Post` component and the `List` component there are a bunch of different things going on here. I'll start with `List`.
@@ -174,6 +176,7 @@ Between the `Post` component and the `List` component there are a bunch of diffe
 It is exported from `list/index.js`. There, we are using `loadable` from `frontity` \(which is actually an alias for the `default` export of `@loadable/components`\) to split the code of our `List` component, so it won't be loaded if a user access directly to a `Post` view, and instead the code will be requested when the user clicks on a list view. This is helpful to reduce the loading times and times to interactive of our site. The less code we have, the less time the browser spends evaluating it.
 
 {% code title="list/index.js" %}
+
 ```javascript
 import { loadable } from "frontity";
 
@@ -181,11 +184,13 @@ import { loadable } from "frontity";
 // load a post directly.
 export default loadable(() => import("./list"));
 ```
+
 {% endcode %}
 
 Now, our `List` component is the responsible to render a list of posts, and for that it needs to know what posts to render. We are using `state.source.get(link)` and its `items` field.
 
 {% code title="list/list.js" %}
+
 ```jsx
 const List = ({ state }) => {
   // Get the data of the current list.
@@ -216,6 +221,7 @@ const List = ({ state }) => {
   );
 };
 ```
+
 {% endcode %}
 
 The last detail we are going to explain is how we are doing pagination on `List`.
@@ -225,6 +231,7 @@ We are getting the total of pages for that list from `state.source.get(link)` an
 Depending on the page we are at the moment, we render different links to travel through the list. For that we are using our own `Link` component, which accepts the same parameters as `actions.source.fetch()` or `actions.router.set()`.
 
 {% code title="list/pagination.js" %}
+
 ```javascript
 const Pagination = ({ state, actions, libraries }) => {
   const { totalPages } = state.source.get(state.router.link);
@@ -236,13 +243,13 @@ const Pagination = ({ state, actions, libraries }) => {
   const nextPageLink = libraries.source.stringify({
     path,
     page: page + 1,
-    query
+    query,
   });
 
   const prevPageLink = libraries.source.stringify({
     path,
     page: page - 1,
-    query
+    query,
   });
 
   useEffect(() => {
@@ -267,6 +274,7 @@ const Pagination = ({ state, actions, libraries }) => {
   );
 };
 ```
+
 {% endcode %}
 
 ### Post component
@@ -274,6 +282,7 @@ const Pagination = ({ state, actions, libraries }) => {
 There is something new here, that we haven't done on `List`. We are doing a preload of the `List` component \(as it is a dynamic component and we don't have that code yet\). Once we have our site rendered and working, we preload the code for `List`, so the user won't need to wait for it later if she decides to visit a list of posts.
 
 {% code title="post.js" %}
+
 ```javascript
 import List from './list';
 
@@ -298,6 +307,7 @@ const Post = ({ state, actions }) => {
   ) : null;
 };
 ```
+
 {% endcode %}
 
 ### Link component
@@ -306,12 +316,13 @@ The `Link` component will use `@frontity/tiny-router` to handle the navigation w
 
 However, if JS is available, we are overriding the anchor behaviour with an `onClick` function. Inside that function, we are fetching the data needed to render our destination with `source.fetch(path)` and we are setting the URL to the new route with `router.set(path)`.
 
-Note that we are mapping also a prop called `className` to the `<a>` class. This is done in case we want to style `Link`, e.g.: ```const StyledLink = styled(Link)``;```.
+Note that we are mapping also a prop called `className` to the `<a>` class. This is done in case we want to style `Link`, e.g.: ` const StyledLink = styled(Link)``; `.
 
 {% code title="link.js" %}
+
 ```javascript
 const Link = ({ actions, link, className, children }) => {
-  const onClick = event => {
+  const onClick = (event) => {
     event.preventDefault();
     // Set the router to the new url.
     actions.router.set(link);
@@ -326,6 +337,7 @@ const Link = ({ actions, link, className, children }) => {
   );
 };
 ```
+
 {% endcode %}
 
 ### Defining the theme state
@@ -356,6 +368,7 @@ const marsTheme = {
 And we are using it as shown below:
 
 {% code title="nav.js" %}
+
 ```jsx
 const Nav = ({ state }) => (
   <Container>
@@ -367,6 +380,7 @@ const Nav = ({ state }) => (
   </Container>
 );
 ```
+
 {% endcode %}
 
 And when we create a new Frontity project where our theme is installed, that state can be changed in `frontity.settings.js`:
@@ -400,4 +414,3 @@ const settings = {
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
-
