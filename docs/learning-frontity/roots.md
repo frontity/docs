@@ -86,7 +86,7 @@ export default {
     },
     actions: {
         share: {
-            openModal: ({ state, actions }) => {
+            openModal: ({ state }) => {
                 state.share.isModalOpen = true;
             },
             closeModal: ({ state }) => {
