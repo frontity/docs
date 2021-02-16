@@ -1,14 +1,24 @@
 # » Welcome to Frontity
 
-**👋** Hi! Welcome to Frontity, and to our documentation pages. This is where you will find all the information you need to build something awesome with Frontity.
+**👋** Hi! Welcome to Frontity, and to our documentation. 
+
+We have our documentation distributed in 3 sites:
+
+- [**docs.frontity.org**](https://docs.frontity.org) - Introduction, concepts and guides
+- [**api.frontity.org**](https://api.frontity.org) -  API Reference
+- [**tutorial.frontity.org**](https://tutorial.frontity.org) - Step by Step guide
+
+This site (docs.frontity.org) is where you will find all the information you need to start building something awesome with Frontity.
 
 Let's kick things off by providing you with a roadmap so that you can find your way around the documentation and zero in on the information you need right now.
 
-## **Getting Started**
+## **Quick Start**
 
 If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
 
 This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly. 
+
+Once you've followed the Quick Start Guide and have a working Frontity installationm you may want to continue learning by a creating a more elaborated project with our **[Step by Step guide](tutorial.frontity.org)** 
 
 ## **About Frontity**
 
