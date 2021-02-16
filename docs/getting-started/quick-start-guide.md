@@ -81,15 +81,15 @@ Follow the instructions in our **[Deployment](https://docs.frontity.org/deployme
 
 ### Follow the Step by Step Tutorial
 
-We have created for you a **[Step by Step Tutorial](#)** to create a more functional Frontity project that will help you to learn how to use some of the basic features of the framework
+We have created for you a **[Step by Step Tutorial](https://tutorial.frontity.org)** to create a more functional Frontity project that will help you to learn how to use some of the basic features of the framework
 
 ### Check our guides
 
-We have several **[Guides](#)** prepared for you to help you understand and solve with Frontity some of the common challenges of Dynamic SSR (server-side Rendering) in React apps connected to WordPress
+We have several **[Guides](https://docs.frontity.org/guides)** prepared for you to help you understand and solve with Frontity some of the common challenges of Dynamic SSR (server-side Rendering) in React apps connected to WordPress
 
 ### Check the API Reference
 
-Let's cut to the chase! In the **[API Reference](#)** site you'll find specific details of Frontity CLI, packages, plugins and themes
+Let's cut to the chase! In the **[API Reference](https://api.frontity.org)** site you'll find specific details of Frontity CLI, packages, plugins and themes
 
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
