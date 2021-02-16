@@ -1,12 +1,28 @@
 # » Welcome to Frontity
 
-**👋** Hi! Welcome to Frontity, and to our documentation pages. This is where you will find all the information you need to build something awesome with Frontity.
+**👋** Hi! Welcome to Frontity, and to our documentation. 
+
+We have our documentation distributed in 3 sites:
+
+- [**docs.frontity.org**](https://docs.frontity.org) - Introduction, concepts and guides
+- [**api.frontity.org**](https://api.frontity.org) -  API Reference
+- [**tutorial.frontity.org**](https://tutorial.frontity.org) - Step by Step guide
+
+This site (docs.frontity.org) is where you will find all the information you need to start building something awesome with Frontity.
 
 {% hint style="info" %}
 If you're new to Frontity check out our brand new [step-by-step tutorial](https://tutorial.frontity.org/). It's the quickest way to get up to speed with Frontity.
 {% endhint %}
 
 Let's kick things off by providing you with a roadmap so that you can find your way around the documentation and zero in on the information you need right now.
+
+## **Quick Start**
+
+If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
+
+This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly. 
+
+Once you've followed the Quick Start Guide and have a working Frontity installationm you may want to continue learning by a creating a more elaborated project with our **[Step by Step guide](tutorial.frontity.org)** 
 
 ## **About Frontity**
 
@@ -17,21 +33,6 @@ If you're a **developer** this section will tell you all about what Frontity is 
 
 If you're a **project manager** or other **decision maker** that needs to choose or justify whether to use Frontity for your project then this section provides the information you need.
 
-## **Getting Started**
-
-If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
-
-This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly. In particular we would like to draw your attention to the [**Initial checks**](https://docs.frontity.org/getting-started#initial-checks) section. Make sure you read this <ins>before</ins> running the installer.
-
-Once you've followed the Quick Start Guide and have a working Frontity installation we'll show you how to [**connect Frontity up to your own WordPress site**](getting-started/connecting-to-wordpress.md) and also how to customise the menu to reflect the structure of your WordPress site.
-
-{% hint style="info" %}
-This could also be a good time to run through our brand new [step-by-step tutorial](https://tutorial.frontity.org/).
-{% endhint %}
-
-## **CLI Commands**
-
-If you've followed our Getting Started section then you've already used the Frontity CLI to create your first Frontity project. The [**CLI Commands**](frontity-cli/) section is a reference guide to all the other CLI commands that you can use and that can help you during the life-cycle of your project.
 
 ## **Core Concepts**
 
@@ -46,22 +47,6 @@ Find out about how the relationship between Frontity and WordPress is structured
 Once you've completed the development of your project and have a working application that you're happy with you can learn how to deploy to live in the [**Deployment**](deployment/) section.
 
 In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.mdgit /), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
-
-## **Packages**
-
-Frontity comes with a number of useful packages for routing, API source, and so on. You can learn all about each of them in the section entitled [**Packages**](api-reference-1/).
-
-## **Themes**
-
-Really **everything** is a package when you're working with Frontity.
-
-However a Frontity theme is a special instance of a Frontity package. The included themes, namely Mars and TwentyTwenty, are therefore dealt with separately from the other packages under the [**Themes**](frontity-themes/) section.
-
-## **WordPress Plugins**
-
-The team at Frontity are working on some WordPress plugins that you can install and activate in your WordPress installation. These will help you make the most of headless/decoupled WordPress by adding some useful functionality to the backend.
-
-Learn about the growing list of plugins that can help both enhance your site and make your development easier in the [**WordPress Plugins**](frontity-plugins/) section.
 
 ## **Guides**
 
