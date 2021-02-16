@@ -1,11 +1,11 @@
 # » Welcome to Frontity
 
-**👋** Hi! Welcome to Frontity, and to our documentation. 
+**👋** Hi! Welcome to Frontity, and to our documentation.
 
-We have our documentation distributed in 3 sites:
+Our documentation is distributed across three separate sites:
 
 - [**docs.frontity.org**](https://docs.frontity.org) - Introduction, concepts and guides
-- [**api.frontity.org**](https://api.frontity.org) -  API Reference
+- [**api.frontity.org**](https://api.frontity.org) - API Reference
 - [**tutorial.frontity.org**](https://tutorial.frontity.org) - Step by Step guide
 
 This site (docs.frontity.org) is where you will find all the information you need to start building something awesome with Frontity.
@@ -20,9 +20,9 @@ Let's kick things off by providing you with a roadmap so that you can find your 
 
 If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
 
-This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly. 
+This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly.
 
-Once you've followed the Quick Start Guide and have a working Frontity installationm you may want to continue learning by a creating a more elaborated project with our **[Step by Step guide](tutorial.frontity.org)** 
+Once you've followed the Quick Start Guide and have a working Frontity installationm you may want to continue learning by a creating a more elaborated project with our **[Step by Step guide](tutorial.frontity.org)**
 
 ## **About Frontity**
 
@@ -32,7 +32,6 @@ To learn about what Frontity is, how it works, and what features it has, visit t
 If you're a **developer** this section will tell you all about what Frontity is capable of and what you can do with it.
 
 If you're a **project manager** or other **decision maker** that needs to choose or justify whether to use Frontity for your project then this section provides the information you need.
-
 
 ## **Core Concepts**
 
@@ -58,20 +57,16 @@ In this section we also provide you with some foundational knowledge that will a
 
 Our troubleshooting guide is also here, for when you encounter problems. If your problem is not solved here then don't forget that you can also ask it in our [**Community Forum**](https://community.frontity.org).
 
-
 ## **Contributing**
 
 Frontity is an open source project and we welcome contributions from the community. The [**Contributing**](contributing/) section of the documentation will guide you whether you want to make a single contribution or whether you intend to become a fully fledged contributor to the Frontity project.
 
 We can't wait to see where you take Frontity in the future.
 
-
-___
-
+---
 
 By the way, we'd love to hear about what you're building with Frontity. Join us in our [**Community Forum**](https://community.frontity.org) and tell us about your project. You can also ask questions and get help and support from our growing community of users and developers there.
 
 {% hint style="info" %}
 **Subscribe** to our newsletter [here](https://frontity.org/#newsletter) to **get notified** of the latest news and updates.
 {% endhint %}
-
