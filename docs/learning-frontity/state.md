@@ -353,7 +353,7 @@ state: {
     },
     totalCount: ({ state }) => {
       let totalCount = 0;
-      const shareData = Object.values(data);
+      const shareData = Object.values(state.share.data);
       for (let i = 0; i < shareData.length; i +=1) {
         totalCount += shareData[i].facebook;
         totalCount += shareData[i].twitter;
@@ -384,8 +384,8 @@ state: {
     },
     totalCountByRoute: ({ state }) => route => {
       let totalCount = 0;
-      totalCount += data[route].facebook;
-      totalCount += data[route].twitter;
+      totalCount += state.share.data[route].facebook;
+      totalCount += state.share.data[route].twitter;
       return totalCount;
     }
     ...

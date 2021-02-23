@@ -27,7 +27,7 @@ One of those possibilities is to create frontend sites based on React. That’s 
 
 ## **Why WordPress and React?**
 
-As at time of writing \(April 2020\), WordPress powers [35% of all the sites](https://w3techs.com/technologies/details/cm-wordpress) on the internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
+As at time of writing \(February 2021\), WordPress powers [40% of all the sites](https://w3techs.com/technologies/details/cm-wordpress) on the internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
 
 ![](https://w3techs.com/diagram/history_technology/cm-wordpress)
 
