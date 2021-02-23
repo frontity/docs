@@ -77,7 +77,7 @@ import ShareRoot from "./components/";
 
 export default {
     roots: {
-        share: ShareRoot;
+        share: ShareRoot
     },
     state: {
         share: {
@@ -86,7 +86,7 @@ export default {
     },
     actions: {
         share: {
-            openModal: ({ state, actions }) => {
+            openModal: ({ state }) => {
                 state.share.isModalOpen = true;
             },
             closeModal: ({ state }) => {
