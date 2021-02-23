@@ -77,11 +77,11 @@ import ShareRoot from "./components/";
 
 export default {
     roots: {
-        share: ShareRoot,
+        share: ShareRoot
     },
     state: {
         share: {
-            isModalOpen: false,
+            isModalOpen: false
         }
     },
     actions: {
