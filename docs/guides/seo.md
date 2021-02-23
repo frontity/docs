@@ -2,7 +2,7 @@
 
 Frontity allows you to optimize the SEO performance of your site and customize how your site is indexed by search engine crawlers.
 
-By default, Frontity will deliver to your browser a fully populated and well-formed [HTML file generated from your React code](architecture.md). This reduces the time required for the first contentful paint and ensures a good SEO score.
+By default, Frontity will deliver to your browser a fully populated and well-formed [HTML file generated from your React code](../architecture.md). This reduces the time required for the first contentful paint and ensures a good SEO score.
 
 But that's not all. With Frontity you can also customize:
 
