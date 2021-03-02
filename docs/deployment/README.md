@@ -17,6 +17,7 @@ Which is used to launch the Frontity app in production.
 Here you have some guides about how to deploy a Frontity app in some popular hostings:
 
 * [Deploy Frontity using Vercel](deploy-using-vercel.md)
+* [Deploy Frontity on Moovweb XDN](deploy-on-moovweb-xdn.md)
 * [Deploy Frontity on Heroku](deploy-on-heroku.md)
 
 ## Serving Static files
