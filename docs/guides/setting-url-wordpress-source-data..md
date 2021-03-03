@@ -7,7 +7,6 @@ The format of the WordPress URL will be different depending on the type of WordP
 The main properties in the settings of this package that are implied in the URL of the WordPress source of data are:
 
 - `state.source.url`:  The URL of the WordPress
-- `state.source.api`:  The URL of the WordPress REST API
 - `state.wpSource.isWpCom`:  A flag to indicate a special use case of wordpress.com sites (Personal or Premium plans)
 
 `state.source.api` can be set manually but it can be computed from the value of `state.source.url` in most of the cases
