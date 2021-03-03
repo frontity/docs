@@ -89,17 +89,14 @@ As you can see, they have an `active` prop. That means you can deactivate a pack
 
 In **Frontity**, all the code is contained in packages. In a sense it is more similar to WordPress, where all the code is contained in your theme and plugins, than to other JavaScript frameworks. This is obviously on purpose, but we will explain the reasons later when we talk about packages and namespaces :\)
 
-That's pretty much it about packages for now.
-
 ## State
 
-The last thing you need to know to work with your `frontity.settings.js` file are the settings.
+The `settings` of a Frontity project are written in the `state`.
 
-As you have probably already noticed, we don't use `settings`, we use `state`. That's on purpose as well.
+If you come from a WordPress background, you can think of **Frontity** `state` as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or MobX. That `state` is accessible by your packages at runtime.
 
-If you come from a WordPress background, you can think of **Frontity** `state`as the database of your application. And if you come from a React background, well... it's the `state` that you usually find in Redux or MobX. That `state` is accessible by your packages at runtime.
+The initial _settings_ of a Frontity site can be set in the `frontity.settings.js` file
 
-You have the opportunity to modify the initial `state` of your site in the `frontity.settings.js` file. You can do it in a general `state` object or inside packages.
 
 {% code title="frontity.settings.js" %}
 ```javascript
@@ -128,9 +125,11 @@ export default [
 ```
 {% endcode %}
 
-In **Frontity**, the `state` is organized in what we call **namespaces**. It means that each package uses a specific part of the state: a **namespace**. For example, our `wp-source` package uses the `source` namespace to store its settings.
+The state is compartmentalized though namespaces. Each namespace usually corresponds to a Frontity package. 
 
-And our `tiny-router` package uses the `router` namespace:
+For example, our `wp-source` package uses the `source` namespace to store its settings. And our `tiny-router` package uses the `router` namespace:
+
+In this way, we keep organized the settings of each package.
 
 {% code title="frontity.settings.js" %}
 ```javascript
@@ -147,7 +146,14 @@ packages: [
 ```
 {% endcode %}
 
-For now, let's leave it here. We will explain why the namespaces are important later.
+There's also a special namespace called `frontity` that is the place to set the general properties of our site. There's a mandatory property we need to set under the `frontity` namespace: `state.frontity.url`
+
+### `state.frontity.url`
+
+
+
+
+
 
 The important takeaway here is: _in the settings file you have the opportunity to change the `state` of **Frontity**. Most of the time you will use this to configure the settings of each package._
 
