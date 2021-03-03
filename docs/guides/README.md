@@ -1,9 +1,9 @@
 ## Guides
 
-Here you'll find some guides that will help you work with (and understand better) different topics related to Frontity. 
+In this section we present a selection of guides that will help you to both work with, and to better understand, a variety of topics related to Frontity.
 
 ###### [Setting the URL of the WordPress source of data](setting-url-wordpress-source-data..md)
-*This guide will guide through the different WordPress scenarios that need to be taken into account in order to properly set the url of the WordPress source of data.*
+*This guide outlines the various different WordPress configuration scenarios that you might encounter and what needs to be taken into account in order to properly set the URL of the WordPress data source.*
 
 ###### [Understanding a Frontity project](understanding-mars-theme.md)
 *This guide will help you understand the structure of a Frontity project .*

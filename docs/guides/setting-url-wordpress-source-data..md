@@ -1,23 +1,26 @@
-# Setting the URL of the WordPress source of data
+# Setting the URL of the WordPress data source
 
-The most important setting in a Frontity project is the WordPress installation that can be used as the source of data
+The most important setting in a Frontity project is the WordPress installation that can be used as the source of data.
 
-The format of the WordPress URL will be different depending on the type of WordPress installation used with the Frontity project so the type of WordPress installation may require different ways of setting this url in the Frontity settings
+The format of the URL used to access the WordPress REST API varies depending on the type of WordPress installation used as the data source for the Frontity project, so the type of WordPress installation determines how this URL should be set in the Frontity configuration file `frontity.settings.js`
 
-The main properties in the settings of this package that are implied in the URL of the WordPress source of data are:
+The main properties in the settings of this package that are implied in determining the URL of the WordPress data source are:
 
-- `state.source.url`:  The URL of the WordPress
-- `state.wpSource.isWpCom`:  A flag to indicate a special use case of wordpress.com sites (Personal or Premium plans)
+- **`state.source.url`**:  The URL of the WordPress. Required.
+- **`state.wpSource.isWpCom`**:  A flag to indicate a special use case of wordpress.com sites (Personal or Premium plans). *It is not required for Free wordpress.com sites. Defaults to `false`.*
+- **`state.wpSource.prefix`**: The prefix of the API. *Defaults to `/wp-json`. It is not used if `isWpCom` is `true`.*
 
-`state.source.api` can be set manually but it can be computed from the value of `state.source.url` in most of the cases
+{% hint style="info" %}
+From [version 1.10](https://github.com/frontity/frontity/blob/dev/packages/wp-source/CHANGELOG.md#1100) of the `@frontity/wp-source` package, the property `state.source.api` _should never be set manually by the end-users_ (it will be computed from the properties mentioned above)
+{% endhint %}
 
 ## Wordpress scenarios
 
 ### A self-hosted WordPress site 
 
-Most of the Frontity projects will use a custom domain for a self-hosted WordPress site ([wp.org](http://wp.org/)) like for example `https://test.frontity.org/`
+Most Frontity projects will use a self-hosted WordPress site ([wp.org](http://wp.org/))  with a custom domain, such as, for example, `https://test.frontity.org/`.
 
-The recommended way for setting this URL is through the `state.source,url`
+The recommended way to set this URL is via the `state.source.url` property.
 
 ```javascript
 // frontity.settings.js
@@ -36,17 +39,17 @@ export default {
 ```
 
 In this example the computed values would be:
-- `state.source.api`:  `https://test.frontity.org/wp-json` (value computed from `state.source.url`)
-- `state.wpSource.isWpCom`: `false` (value derived `state.source.api`)
+- `state.source.api`:  `https://test.frontity.org/wp-json` _(value computed from `state.source.url` and `state.wpSource.prefix`)_.
+- `state.wpSource.isWpCom`: `false` _(value derived from `state.source.api`)_
 
 The same recommendation applies for custom domains used with a [Business wordpress.com plan](https://wordpress.com/support/business-plan/) 
 
 
 ### A Free wordpress.com plan 
 
-Some other Frontity projects will use a free wordpress.com installation with URL's pointing to subdomains of wordpress.com like for example  `https://frontitytest.wordpress.com/` 
+Some Frontity projects may use a free wordpress.com installation with the URL pointing to a subdomain of wordpress.com, such as: `https://frontitytest.wordpress.com/`.
 
-The recommended way for setting this URL is also through the `state.source,url`
+The recommended way to set this URL is also via the `state.source.url` property."
 
 ```javascript
 // frontity.settings.js
@@ -65,14 +68,14 @@ export default {
 ```
 
 In this example the computed values would be:
-- `state.source.api`:  `https://frontitytest.wordpress.com//wp-json` (value computed from `state.source.url`)
-- `state.wpSource.isWpCom`: `true` (value derived `state.source.api`)
+- `state.source.api`:  `https://frontitytest.wordpress.com//wp-json` _(value computed from `state.source.url`)_
+- `state.wpSource.isWpCom`: `true` _(value derived `state.source.api`)_
 
 ### A Personal or Premium wordpress.com plan 
 
-A less frequent use case is using a Personal or Premium wordpress.com. These plans allows you to use a custom domain but this a special case because the final REST API url is available through a special URL
+A less frequent use case is where a Personal or Premium wordpress.com site is used as the data source. These plans allow you to use a custom domain, but in these cases the REST API is available via a different URL format.
 
-The recommended way for setting this URL is also through the `state.source,url` but specifying it is a Personal or Premium wordpress.com plan installation by setting `state.wpSource.isWpCom` to `true`
+The recommended way to set this URL is also via the `state.source.url` property, but in addition to this you also need to specify that it is a Personal or Premium wordpress.com plan installation by setting `state.wpSource.isWpCom` to `true`."
 
 ```javascript
 // frontity.settings.js
@@ -94,20 +97,14 @@ export default {
 ```
 
 In this example the computed values would be:
-- `state.source.api`: ` https://public-api.wordpress.com/wp/v2/sites/test-premium-plan.frontity.org` (value computed from `state.source.url` & `state.wpSource.isWpCom`)
+- `state.source.api`: ` https://public-api.wordpress.com/wp/v2/sites/test-premium-plan.frontity.org` _(value computed from `state.source.url` & `state.wpSource.isWpCom`)_
 
 ---
 
-All these scenarios and their different combinations depending on how you set the values are described in detail in the following table
+All these scenarios and their different settings combinations are summarized in the following table
 
 
-|                                                                                           | state.frontity.url                    | state.source.url                                     | state.source.api                                                                         | state.source.isWpCom                     |
-| ----------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------- |
-| **Free WP com** - configured by state.source.url                                          | **Set by the user**: final-domain.com | **Set by the user**: sub.wordpress.com               | **Derived from state.source.url**: sub.wordpress.com/wp-json                             | **Derived from state.source.api**: true  |
-| **Free WP com** - configured by state.source.api                                          | **Set by the user**: final-domain.com | **Derived from state.source.api**: sub.wordpress.com | **Set by the user**: public-api.wordpress.com/wp/v2/sites/sub.wordpress.com              | **Derived from state.source.api**: true  |
-| **Personal and Premium WP com** - configured by state.source.url and state.wpSource.isWpCom | **Set by the user**: final-domain.com | **Set by the user**: final-domain.com                | **Derived from state.source.url**: public-api.wordpress.com/wp/v2/sites/final-domain.com | **Set by the user**: true                |
-| **Personal and Premium WP com** - configured by state.source.url and state.source.api     | **Set by the user**: final-domain.com | **Set by the user**: final-domain.com                | **Set by the user**: public-api.wordpress.com/wp/v2/sites/final-domain.com               | **Derived from state.source.api**: true  |
-| **Personal and Premium WP com** - configured by state.source.api                          | **Set by the user**: final-domain.com | **Derived from state.source.api**: final-domain.com  | **Set by the user**: public-api.wordpress.com/wp/v2/sites/final-domain.com               | **Derived from state.source.api**: true  |
-| **WP org and Business WP com** - configured by state.source.url                           | **Set by the user**: final-domain.com | **Set by the user**: wp-domain.com                   | **Derived from state.source.url**: wp-domain.com/wp-json                                 | **Derived from state.source.api**: false |
-| **WP org and Business WP com** - configured by state.source.api                           | **Set by the user**: final-domain.com | **Derived from state.source.api**: wp-domain.com     | **Set by the user**: wp-domain.com/wp-json                                               | **Derived from state.source.api**: false |
-
+||Free [wordpress.com](http://wordpress.com)|Personal or Premium [wordpress.com](http://wordpress.com)|Business [wordpress.com](http://wordpress.com) or [wp.org](http://wp.org)|
+| --- | --- | --- | --- |
+|needs `state.source.url`|YES|YES|YES|
+|needs `state.wpSource.isWpCom`|NO|YES|NO|
