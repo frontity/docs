@@ -35,7 +35,7 @@ export default {
 ```
 
 In this example the computed values would be:
-- `state.source.api`:  `https://test.frontity.org/wp-json` (value computed from `state.source.url`)
+- `state.source.api`:  `https://test.frontity.org/wp-json` (value computed from `state.source.url` and `state.wpSource.prefix`).
 - `state.wpSource.isWpCom`: `false` (value derived `state.source.api`)
 
 The same recommendation applies for custom domains used with a [Business wordpress.com plan](https://wordpress.com/support/business-plan/) 
