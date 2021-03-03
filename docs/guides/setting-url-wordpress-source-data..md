@@ -6,11 +6,9 @@ The format of the WordPress URL will be different depending on the type of WordP
 
 The main properties in the settings of this package that are implied in the URL of the WordPress source of data are:
 
-- `state.source.url`:  The URL of the WordPress
-- `state.source.api`:  The URL of the WordPress REST API
-- `state.wpSource.isWpCom`:  A flag to indicate a special use case of wordpress.com sites (Personal or Premium plans)
-
-`state.source.api` can be set manually but it can be computed from the value of `state.source.url` in most of the cases
+- `state.source.url`:  The URL of the WordPress. Required.
+- `state.wpSource.isWpCom`:  A flag to indicate a special use case of wordpress.com sites (Personal or Premium plans). It is not required for Free wordpress.com sites. Defaults to `false`.
+- `state.wpSource.prefix`: The prefix of the API. Defaults to `/wp-json`. It is not used if `isWpCom` is `true`.
 
 ## Wordpress scenarios
 
@@ -111,4 +109,3 @@ All these scenarios and their different combinations depending on how you set th
 | **Personal and Premium WP com** - configured by state.source.api                          | **Set by the user**: final-domain.com | **Derived from state.source.api**: final-domain.com  | **Set by the user**: public-api.wordpress.com/wp/v2/sites/final-domain.com               | **Derived from state.source.api**: true  |
 | **WP org and Business WP com** - configured by state.source.url                           | **Set by the user**: final-domain.com | **Set by the user**: wp-domain.com                   | **Derived from state.source.url**: wp-domain.com/wp-json                                 | **Derived from state.source.api**: false |
 | **WP org and Business WP com** - configured by state.source.api                           | **Set by the user**: final-domain.com | **Derived from state.source.api**: wp-domain.com     | **Set by the user**: wp-domain.com/wp-json                                               | **Derived from state.source.api**: false |
-
