@@ -68,7 +68,7 @@ export default {
 ```
 
 In this example the computed values would be:
-- `state.source.api`:  `https://frontitytest.wordpress.com//wp-json` _(value computed from `state.source.url`)_
+- `state.source.api`:  `https://frontitytest.wordpress.com/wp-json`_(value computed from `state.source.url` and `state.wpSource.prefix`)_.
 - `state.wpSource.isWpCom`: `true` _(value derived `state.source.api`)_
 
 ### A Personal or Premium wordpress.com plan 
