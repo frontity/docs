@@ -45,7 +45,7 @@ The same recommendation applies for custom domains used with a [Business wordpre
 
 Some other Frontity projects will use a free wordpress.com installation with URL's pointing to subdomains of wordpress.com like for example  `https://frontitytest.wordpress.com/` 
 
-The recommended way for setting this URL is also through the `state.source,url`
+The recommended way for setting this URL is also through the `state.source.url`
 
 ```javascript
 // frontity.settings.js
