@@ -4,7 +4,7 @@ The most important setting in a Frontity project is the WordPress installation t
 
 The format of the URL used to access the WordPress REST API varies depending on the type of WordPress installation used as the data source for the Frontity project, so the type of WordPress installation determines how this URL should be set in the Frontity configuration file `frontity.settings.js`.
 
-The main properties in the settings of this package that are implied in determining the URL of the WordPress data source are:
+The main properties in `frontity.settings.js` that are implied in determining the URL of the WordPress data source are:
 
 - **`state.source.url`**:  The URL of the WordPress. Required.
 - **`state.wpSource.isWpCom`**:  A flag to indicate a special use case of wordpress.com sites (Personal or Premium plans). *It is not required for Free wordpress.com sites. Defaults to `false`.*
