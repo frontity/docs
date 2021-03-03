@@ -71,7 +71,7 @@ In this example the computed values would be:
 
 A less frequent use case is using a Personal or Premium wordpress.com. These plans allows you to use a custom domain but this a special case because the final REST API url is available through a special URL
 
-The recommended way for setting this URL is also through the `state.source,url` but specifying it is a Personal or Premium wordpress.com plan installation by setting `state.wpSource.isWpCom` to `true`
+The recommended way for setting this URL is also through the `state.source.url` but specifying it is a Personal or Premium wordpress.com plan installation by setting `state.wpSource.isWpCom` to `true`
 
 ```javascript
 // frontity.settings.js
