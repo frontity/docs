@@ -16,7 +16,7 @@ The main properties in the settings of this package that are implied in the URL 
 
 Most of the Frontity projects will use a custom domain for a self-hosted WordPress site ([wp.org](http://wp.org/)) like for example `https://test.frontity.org/`
 
-The recommended way for setting this URL is through the `state.source,url`
+The recommended way for setting this URL is through the `state.source.url`
 
 ```javascript
 // frontity.settings.js
