@@ -66,11 +66,21 @@ const settings = {
 }
 ```
 
+{% hint style="info" %}
+Check the guide [**Setting the URL of the WordPress data source**](https://docs.frontity.org/guides/setting-url-wordpress-source-data) to learn more about how to properly set the URL of the WordPress data source taking into account the different WordPress scenarios
+{% endhint %}
+
 By default, `state.source.url` is set to `https://test.frontity.org/` (our demo WordPress site) but you can set this property to any valid URL pointing to a WordPress site.
 
 Your site at `http://localhost:3000` won't auto-update with this change as auto-updates only occur with changes to files in the packages directory, so you will need to manually refresh the page in your browser.
 
 You should now see your own posts in the Frontity project displayed in the browser.
+
+{% hint style="info" %}
+If you use your own WordPress installation take into account you need to use one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
+
+![](../.gitbook/assets/wordpress-permalink-setting.png)
+{% endhint %}
 
 ## What's next?
 

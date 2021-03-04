@@ -43,26 +43,6 @@ Frontity depends on the WordPress REST-API. If you have a recent version of Word
 
 To check that the WordPress REST-API is working you can type one of the following into your browser's address bar. You should get a lot of complicated looking stuff in your browser. Don't worry, this is JSON and Frontity is very happy with this.
 
-#### Set the right REST API URL
-
-For a self-hosted WordPress site \(i.e. local or web based\):
-
-```text
-http://your-wp-domain.com/wp-json
-```
-
-For wordpress.com:
-
-```text
-https://public-api.wordpress.com/wp/v2/sites/your-wp-site.wordpress.com
-```
-
-#### Have pretty permalinks activated
-
-Check also that you are using one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
-
-![](../.gitbook/assets/wordpress-permalink-setting.png)
-
 ### Node.js
 
 #### Have Node.js and npm installed
