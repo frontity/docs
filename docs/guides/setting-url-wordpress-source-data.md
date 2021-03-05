@@ -4,11 +4,14 @@ The most important setting in a Frontity project is the WordPress installation t
 
 The format of the URL used to access the WordPress REST API varies depending on the type of WordPress installation used as the data source for the Frontity project, so the type of WordPress installation determines how this URL should be set in the Frontity configuration file `frontity.settings.js`.
 
-The main properties in `frontity.settings.js` that are implied in determining the URL of the WordPress data source are:
+The main property in `frontity.settings.js` needed for determining the URL of the WordPress data source is:
 
-- **`state.source.url`**:  The URL of the WordPress. Required.
-- **`state.wpSource.isWpCom`**:  A flag to indicate a special use case of WordPress.com sites (Personal or Premium plans). *It is not required for Free WordPress.com sites. Defaults to `false`.*
-- **`state.wpSource.prefix`**: The prefix of the API. *Defaults to `/wp-json`. It is not used if `isWpCom` is `true`.*
+- **`state.source.url`**:  The URL of the WordPress. _Required_.
+
+There are some other properties implied in determining this URL of the WordPress data source, but they need to be set only for specific use cases:
+
+- `state.wpSource.isWpCom`:  A flag to indicate a special use case of WordPress.com sites (Personal or Premium plans). *It is not required for Free WordPress.com sites. Defaults to `false`.*
+- `state.wpSource.prefix`: The prefix of the API. *Defaults to `/wp-json`. It is not used if `isWpCom` is `true`.*
 
 {% hint style="info" %}
 From [version 1.10](https://github.com/frontity/frontity/blob/dev/packages/wp-source/CHANGELOG.md#1100) of the `@frontity/wp-source` package, the property `state.source.api` _should never be set manually by the end-users_ (it will be computed from the properties mentioned above)
