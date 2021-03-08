@@ -5,7 +5,7 @@ In this section we present a selection of guides that will help you to both work
 ###### [Setting the URL of the WordPress data source](setting-url-wordpress-source-data.md)
 *This guide outlines the various different WordPress configuration scenarios that you might encounter and what needs to be taken into account in order to properly set the URL of the WordPress data source.*
 
-###### [WordPres requirements for Frontity](what-are-the-requisites-of-wordpress-for-frontity.md)
+###### [WordPress requirements for Frontity](what-are-the-requisites-of-wordpress-for-frontity.md)
 *This guide highlight some basic WordPress requirements needed for Frontity projects.*
 
 ###### [Understanding a Frontity project](understanding-mars-theme.md)
