@@ -1,4 +1,4 @@
-# WordPres requirements for Frontity
+# WordPress requirements for Frontity
 
 To work with Frontity you will need a **WordPress installation**. This can be hosted locally, on a web-server, or you can also use a site hosted on wordpress.com
 
@@ -24,6 +24,6 @@ From that URL you should see a structure of data representing the content of you
 
 ### Have pretty permalinks activated
 
-Fronttiy require that the WordPress data source uses one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
+Frontiy requires that the WordPress data source uses one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
 
 ![](../.gitbook/assets/wordpress-permalink-setting.png)
