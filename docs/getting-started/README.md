@@ -23,6 +23,7 @@ You will use these to run Frontity commands during the set-up and development of
 
 {% hint style="info" %}
 For those coming from WordPress it might be worth noting that *Frontity* runs on **Node.js**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture.md) section arch these docs.
+{% endhint %}
 
 To test if you have Node.js installed open your terminal and run:
 
