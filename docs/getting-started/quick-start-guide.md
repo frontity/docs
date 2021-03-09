@@ -46,7 +46,7 @@ Open the project directory in your preferred code editor/IDE and try editing som
 
 5 - **Set your own WordPress installation** as data source
 
-You can connect your [_own WordPress site_](https://docs.frontity.org/guides/what-are-the-requisites-of-wordpress-for-frontity) to your Frontity project by setting the `state.source.url` property in the `frontity.settings.js` file.
+You can connect your [_own WordPress site_](https://docs.frontity.org/guides/what-are-the-requisites-of-wordpress-for-frontity) to your Frontity project by [setting the `state.source.url`](https://docs.frontity.org/guides/setting-url-wordpress-source-data) property in the `frontity.settings.js` file.
 
 ```javascript
 const settings = {
@@ -71,7 +71,6 @@ By default, `state.source.url` is set to `https://test.frontity.org/` (our demo 
 {% hint style="info" %}
 Setting `state.source.url` will be enough for most WordPress installations and plans. For specific use cases check the guide [*Setting the URL of the WordPress data source*](https://docs.frontity.org/guides/setting-url-wordpress-source-data)
 {% endhint %}
-
 
 > Your site at `http://localhost:3000` won't auto-update with this change as auto-updates only occur with changes to files in the packages directory, so you will need to manually refresh the page in your browser.
 
