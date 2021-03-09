@@ -69,9 +69,7 @@ const settings = {
 By default, `state.source.url` is set to `https://test.frontity.org/` (our demo WordPress site) but you can set this property to any valid URL pointing to a WordPress site.
 
 {% hint style="info" %}
-Setting `state.source.url` will be enough for most WordPress installations and plans. 
-
-For specific use cases check the guide [**Setting the URL of the WordPress data source**](https://docs.frontity.org/guides/setting-url-wordpress-source-data) to learn more about how to properly set the URL of the WordPress data source taking into account the different WordPress scenarios
+Setting `state.source.url` will be enough for most WordPress installations and plans. For specific use cases check the guide [**Setting the URL of the WordPress data source**](https://docs.frontity.org/guides/setting-url-wordpress-source-data)
 {% endhint %}
 
 
