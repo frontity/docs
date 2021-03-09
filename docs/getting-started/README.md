@@ -37,8 +37,6 @@ npm -v
 
 ---
 
-No time to waste? Then head straight over to our [**Quick start guide**](quick-start-guide.md) to get up and running right away.
-
 {% hint style="info" %}
 Do you have have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
 {% endhint %}
