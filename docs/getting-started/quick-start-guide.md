@@ -44,9 +44,11 @@ A development server will be started. This server will be listening on http://lo
 
 Open the project directory in your preferred code editor/IDE and try editing some of the files under `packages/mars-theme`. Each time you save a change the browser will automatically reload and display the new version as these changes are detected by the development server.
 
-5 - **Set your own WordPress installation** as the source of data
+## Set your own WordPress installation
 
-You can connect your own WordPress site to your Frontity project by setting the `state.source.url` property in the `frontity.settings.js` file.
+A good next step is **setting your own WordPress installation** as the data source
+
+You can connect your [_own WordPress site_](https://docs.frontity.org/guides/what-are-the-requisites-of-wordpress-for-frontity) to your Frontity project by [setting the `state.source.url`](https://docs.frontity.org/guides/setting-url-wordpress-source-data) property in the `frontity.settings.js` file.
 
 ```javascript
 const settings = {
@@ -66,21 +68,15 @@ const settings = {
 }
 ```
 
-{% hint style="info" %}
-Check the guide [**Setting the URL of the WordPress data source**](https://docs.frontity.org/guides/setting-url-wordpress-source-data) to learn more about how to properly set the URL of the WordPress data source taking into account the different WordPress scenarios
-{% endhint %}
-
 By default, `state.source.url` is set to `https://test.frontity.org/` (our demo WordPress site) but you can set this property to any valid URL pointing to a WordPress site.
 
-Your site at `http://localhost:3000` won't auto-update with this change as auto-updates only occur with changes to files in the packages directory, so you will need to manually refresh the page in your browser.
+{% hint style="info" %}
+Setting `state.source.url` should be sufficient for most WordPress.org installations and WordPress.com plans. For specific use cases check the guide [*Setting the URL of the WordPress data source*](https://docs.frontity.org/guides/setting-url-wordpress-source-data).
+{% endhint %}
+
+> Your site at `http://localhost:3000` won't auto-update with this change as auto-updates only occur with changes to files in the packages directory, so you will need to manually refresh the page in your browser.
 
 You should now see your own posts in the Frontity project displayed in the browser.
-
-{% hint style="info" %}
-If you use your own WordPress installation take into account you need to use one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
-
-![](../.gitbook/assets/wordpress-permalink-setting.png)
-{% endhint %}
 
 ## What's next?
 
