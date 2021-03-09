@@ -35,7 +35,7 @@ node -v
 npm -v
 ```
 
-## Get up and running
+---
 
 No time to waste? Then head straight over to our [**Quick start guide**](quick-start-guide.md) to get up and running right away.
 
