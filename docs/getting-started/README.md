@@ -10,15 +10,15 @@ To get started with Frontity you will need:
 
 ### A WordPress installation
 
-Frontity provides a [default WordPress site](https://test.frontity.org/) as source of data in every new project so for this Quick Start Guide we can work with this one
+By default Frontity provides an [example WordPress site](https://test.frontity.org/) as the data source for every new project, so for this Quick Start Guide we will work with this.
 
-You can also [set your own WordPress installation](use-your-wordpress-installation.md). This can be hosted locally, on a web-server, or you can also use a site hosted on wordpress.com. 
+You can also [configure your own WordPress installation](quick-start-guide#set-your-own-wordpress-installation) to be the data source. This can be hosted either locally on your development machine, or on a web-server. You can also use a site hosted on wordpress.com.
 
 ### Node.js
 
-If you don't already have it you can get *Node.js* from [the official site](https://nodejs.org/). This will also install `npm` and `npx` along with Node.js
+If you don't already have it you can get *Node.js* from [the official site](https://nodejs.org/). This will also install `npm` and `npx` along with Node.js.
 
-You will use these to run Frontity commands during the set-up and development of your project
+You will use these to run Frontity commands during the set-up and development of your project.
 
 
 {% hint style="info" %}
@@ -26,11 +26,11 @@ For those coming from WordPress it might be worth noting that *Frontity* runs on
 
 To test if you have Node.js installed open your terminal and run:
 
-```text
+```bash
 node -v
 ```
 
-```text
+```bash
 npm -v
 ```
 

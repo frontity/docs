@@ -44,7 +44,9 @@ A development server will be started. This server will be listening on http://lo
 
 Open the project directory in your preferred code editor/IDE and try editing some of the files under `packages/mars-theme`. Each time you save a change the browser will automatically reload and display the new version as these changes are detected by the development server.
 
-5 - **Set your own WordPress installation** as data source
+## Set your own WordPress installation
+
+A good next step is **setting your own WordPress installation** as the data source
 
 You can connect your [_own WordPress site_](https://docs.frontity.org/guides/what-are-the-requisites-of-wordpress-for-frontity) to your Frontity project by [setting the `state.source.url`](https://docs.frontity.org/guides/setting-url-wordpress-source-data) property in the `frontity.settings.js` file.
 
@@ -69,7 +71,7 @@ const settings = {
 By default, `state.source.url` is set to `https://test.frontity.org/` (our demo WordPress site) but you can set this property to any valid URL pointing to a WordPress site.
 
 {% hint style="info" %}
-Setting `state.source.url` will be enough for most WordPress installations and plans. For specific use cases check the guide [*Setting the URL of the WordPress data source*](https://docs.frontity.org/guides/setting-url-wordpress-source-data)
+Setting `state.source.url` should be sufficient for most WordPress.org installations and WordPress.com plans. For specific use cases check the guide [*Setting the URL of the WordPress data source*](https://docs.frontity.org/guides/setting-url-wordpress-source-data).
 {% endhint %}
 
 > Your site at `http://localhost:3000` won't auto-update with this change as auto-updates only occur with changes to files in the packages directory, so you will need to manually refresh the page in your browser.
