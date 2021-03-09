@@ -12,7 +12,7 @@ To get started with Frontity you will need:
 
 By default Frontity provides an [example WordPress site](https://test.frontity.org/) as the data source for every new project, so for this Quick Start Guide we will work with this.
 
-You can also [configure your own WordPress installation](quick-start-guide#set-your-own-wordpress-installation) to be the data source. This can be hosted either locally on your development machine, or on a web-server. You can also use a site hosted on wordpress.com.
+You can also [configure your own WordPress installation](quick-start-guide.md#set-your-own-wordpress-installation) to be the data source. This can be hosted either locally on your development machine, or on a web-server. You can also use a site hosted on wordpress.com.
 
 ### Node.js
 
