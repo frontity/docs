@@ -14,8 +14,8 @@ In this section we present a selection of guides that will help you to both work
 ###### [Understanding Mars Theme](understanding-mars-theme-1.md)
 *This guide will help you understand how `mars-theme` works.*
 
-###### [Install a new Frontity package](install-a-new-package.md)
-*This guide will give through the process of installing and configuring new Frontity packages for your project.*
+###### [Add a new Frontity package or theme to your project](install-a-new-package.md)
+*This guide will give through the process of installing and configuring new Frontity packages or themes for your project.*
 
 ###### [Keep Frontity Updated](keep-frontity-updated.md)
 *This guide will take through the process of updating your Frontity project to use latest versions of the Frontity packages you're using in your project.*
