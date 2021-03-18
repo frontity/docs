@@ -29,7 +29,7 @@ Click on "Next".
 
 ### 3. Add an application
 
-Click on "Create an application" then choose "I have an application" and select your GitHub or GitLab repository where your Frontify site is located.
+Click on "Create an application" then choose "I have an application" and select your GitHub or GitLab repository where your Frontify app is located.
 
 Click on "Next".
 
