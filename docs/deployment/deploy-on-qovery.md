@@ -1,6 +1,6 @@
 [Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS, GCP, Azure and Digital Ocean account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
 
-Static sites are **completely free** on Qovery and include the following:
+Qovery include the following features:
 
 - Continuous, automatic builds & deploys from GitHub, Bitbucket, and GitLab.
 - Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
