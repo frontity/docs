@@ -21,6 +21,7 @@
   * [11. Head](learning-frontity/head.md)
 * [🏗 Architecture](architecture.md)
 * [🌎 Deployment](deployment/README.md)
+  * [Deploy Frontity using Qovery](deployment/deploy-using-qovery.md)
   * [Deploy Frontity using Vercel](deployment/deploy-using-vercel.md)
   * [Deploy Frontity on Moovweb XDN](deployment/deploy-on-moovweb-xdn.md)
   * [Deploy Frontity on Heroku](deployment/deploy-on-heroku.md)
