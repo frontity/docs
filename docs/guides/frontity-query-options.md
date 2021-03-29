@@ -24,10 +24,16 @@ If Frontity Query Option parameters are present in the URL then they are added t
 
 > Only key names are transformed in this way, values remain unchanged.
 
-Some "Frontity Query Options" are used by core, such as:
+Some "Frontity Query Options" are used by [`@frontity/core`](https://api.frontity.org/frontity-packages/core-package), such as:
 
 - frontity_name -> state.frontity.options.name: The name of the site you want to load.
+
+>  Note that the `frontity_name` setting is used only in development and only in [Frontity multisite](https://docs.frontity.org/learning-frontity/settings#multiple-sites).
 
 However packages can also make use of them, for example:
 
 - frontity_source_auth -> state.frontity.options.sourceAuth: An authentication token for the [source package](https://api.frontity.org/frontity-packages/features-packages/wp-source#state-source-auth).
+
+{% hint style="info" %}
+Currently these are the only Frontity Query Options that Frontity itself uses but it's intended that more will be added in the future. However, you can also add your own Frontity Query Options if you want to use them in your package or theme.
+{% endhint %}
