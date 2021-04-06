@@ -31,6 +31,7 @@
   * [How to share your Frontity project](guides/how-to-share-a-frontity-project.md)
   * [Understanding a Frontity project](guides/understanding-mars-theme.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
+  * [Frontity Query Options](guides/frontity-query-options.md)
   * [Keep Frontity Updated](guides/keep-frontity-updated.md)
   * [SEO](guides/seo.md)
   * [Troubleshooting](guides/troubleshooting.md)
