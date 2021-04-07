@@ -1,10 +1,15 @@
-# Frontity Documentation
+# Frontity Documentation: Docs/Guides
 
-[![Check Markdown links](https://github.com/frontity/docs/workflows/Check%20Markdown%20links/badge.svg)](https://github.com/frontity/docs/actions?query=workflow%3A%22Check+Markdown+links%22)
+Our documentation is distributed across three separate sites:
 
-This is the public documentation for **Frontity**
 
-You can view this documentation at [Frontity Docs](https://docs.frontity.org/).
+Docs Site | Repository | Description
+---------|----------|---------
+ [**docs.frontity.org**](https://docs.frontity.org) | https://github.com/frontity/docs | Introduction, concepts and guides
+ [**api.frontity.org**](https://api.frontity.org) | https://github.com/frontity/api-reference | API Reference
+ [**tutorial.frontity.org**](https://tutorial.frontity.org) | https://github.com/frontity/step-by-step-tutorial | Step by Step guide
+
+This repo corresponds to the documentation available at [**docs.frontity.org**](https://docs.frontity.org), where you will find all the information you need to start building something awesome with Frontity.
 
 ## What is Frontity?
 
@@ -15,7 +20,7 @@ In other words, it allows to build a **React frontend** for a headless WordPress
 
 This repository contains:
 
-- [Documentation](https://github.com/frontity/docs/tree/master) - the source docs of the [documentation site for Frontity](https://docs.frontity.org/)
+- [Documentation](https://github.com/frontity/docs/tree/master) - the source docs of the [Docs/Guides documentation site for Frontity](https://docs.frontity.org/)
 - [Contributing Guidelines](https://github.com/frontity/docs/tree/master/CONTRIBUTING.md) - a guide on how to contribute to the Frontity documentation
 
 ## How to Contribute
