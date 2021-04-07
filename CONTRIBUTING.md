@@ -59,7 +59,7 @@ This docs repositories are the "source of truth" for Frontity's documentation an
  
 ## Documentation Format
 
-The documents in the `gitbook-docs` repository use [**Markdown syntax**](https://docs.gitbook.com/editing-content/markdown) to add format and structure to the texts.
+The documents in the different docs repositories use [**Markdown syntax**](https://docs.gitbook.com/editing-content/markdown) to add format and structure to the texts.
 
 > If you want to know more about Markdown then take a look at:
 > - https://commonmark.org/help/
