@@ -8,6 +8,9 @@ In this section we present a selection of guides that will help you to both work
 ###### [WordPress requirements for Frontity](what-are-the-requisites-of-wordpress-for-frontity.md)
 *This guide highlight some basic WordPress requirements needed for Frontity projects.*
 
+###### [Frontity Query Options](frontity-query-options.md)
+*This guide explains what "Frontity Query Options" are and how to use them.*
+
 ###### [Understanding a Frontity project](understanding-mars-theme.md)
 *This guide will help you understand the structure of a Frontity project .*
 
