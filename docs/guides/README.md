@@ -12,7 +12,7 @@ In this section we present a selection of guides that will help you to both work
 *This guide explains what "Frontity Query Options" are and how to use them.*
 
 ###### [Redirections with Frontity](redirections-with-frontity.md)
-*This guide explains what "Frontity Query Options" are and how to use them.*
+*This guide explains how to manage Wordpress redirections with Frontity.*
 
 
 ###### [Understanding a Frontity project](understanding-mars-theme.md)
