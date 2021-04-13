@@ -75,7 +75,7 @@ If we don't use `loadable` , the `<HeavyComments>` component is included in the 
 
 For managing the Code Splitting, Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/).
 
-[![loadable components](../.gitbook/assets/loadable-components%20%281%29.png)](https://loadable-components.com/docs/getting-started/)
+[![loadable components](../.gitbook/assets/loadable-components%20%281%29%20%281%29.png)](https://loadable-components.com/docs/getting-started/)
 
 If you want to go deeper, you should take a look at [**their docs**](https://loadable-components.com/docs/getting-started/). You don't need to read the docs on how to install and configure Loadable Components since we have already done that work for you. Below are concepts that are interesting and helpful to read up on:
 
