@@ -8,7 +8,7 @@ Have a look at this [Demo](redirections-with-frontity.md#demo) for a bit more in
 
 The redirections functionality works by making an additional request to the WordPress instance to check if a redirection exists for a particular URL. By WordPress instance, we mean the location of your WordPress installation, not the Frontity app. Normally the `state.source.url` points to that location.
 
-The setting `state.source.redirections` dictates under what circumstances should Frontity make that request to the check if a redirection exists.
+The setting [`state.source.redirections`](https://api.frontity.org/frontity-packages/features-packages/wp-source#state-source-redirections) dictates under what circumstances should Frontity make that request to the check if a redirection exists.
 
 The `state.source.redirections` accepts the following values:
 
@@ -42,7 +42,7 @@ An array of strings, which can contain the "404" value as well as any number of 
 In order for the redirections to work correctly you will need to set up CORS headers in your WordPress installation. If you are using the Redirections plugin, [it's quite simple](https://youtu.be/-ekz2JwHHmQ)
 {% endhint %}
 
-In order to use the redirections, there is no need to install any new npm package. There is a new property exposed by the `wp-source` package, `state.source.redirections` which is used to handle the redirections. The recommended way of using it is by setting it in your `frontity.settings.js` file.
+In order to use the redirections, there is no need to install any new npm package. There is a new property exposed by the `wp-source` package, [`state.source.redirections`](https://api.frontity.org/frontity-packages/features-packages/wp-source#state-source-redirections) which is used to handle the redirections. The recommended way of using it is by setting it in your `frontity.settings.js` file.
 
 `state.source.redirections` accepts the options outlined above.
 
