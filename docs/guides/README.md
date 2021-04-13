@@ -11,6 +11,10 @@ In this section we present a selection of guides that will help you to both work
 ###### [Frontity Query Options](frontity-query-options.md)
 *This guide explains what "Frontity Query Options" are and how to use them.*
 
+###### [Redirections with Frontity](redirections-with-frontity.md)
+*This guide explains how to manage Wordpress redirections with Frontity.*
+
+
 ###### [Understanding a Frontity project](understanding-mars-theme.md)
 *This guide will help you understand the structure of a Frontity project .*
 
