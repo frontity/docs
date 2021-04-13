@@ -20,13 +20,13 @@ The `state.source.redirections` accepts the following values:
 
 Always make an additional request to the WordPress instance to check if there exists a redirection. This means that every time you navigate to a new link, Frontity will make 2 requests: one to the REST API to try to fetch the content and another one to the WordPress instance to check if a redirection exists. Frontity will wait for both requests to finish before proceeding.
 
-![](../.gitbook/assets/redirections-all.png)
+![Redirections All](../.gitbook/assets/redirections-all.png)
   
 #### `"404"`
 
 Only send the additional request to the WordPress instance if the original request to the REST API has returned a 404. This would happen for example if try to access a post that has been renamed.
   
-![](../.gitbook/assets/redirections-404.png)
+![Redirections 404](../.gitbook/assets/redirections-404.png)
 
 #### RegEx pattern
 
@@ -125,7 +125,7 @@ A consequence of that is that [you can alternatively define redirections directl
 - You can define 301, 302, 307 or 308 Redirections.
 - We respect the settings of the Redirections plugin with respect to the query parameters:
 
-![](../.gitbook/assets/redirections-query-parameters.png)
+![Redirections Query Parameters](../.gitbook/assets/redirections-query-parameters.png)
 
 
 ## Technical details
@@ -146,8 +146,7 @@ On the **client**, we [listen to changes to the `state.source.data` object](http
 
 The above flow looks something like: 
 
-![](../.gitbook/assets/redirections-schema.jpeg)
-
+![Redirections Schema](../.gitbook/assets/redirections-schema.jpeg)
 
 ## Demo
 
