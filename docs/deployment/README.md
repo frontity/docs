@@ -6,7 +6,7 @@ Once you have your application working and ready to be deployed you can create a
 npx frontity build
 ```
 
-This command will generate a `build` folder containing both your \(isomorphic\) React app and your Frontity \(Node.js\) server. This folder can be deployed to any hosting that is prepared to serve a Node.js app. The content of this `build` folder will be used by the command:
+This command will [generate a `build` folder](https://api.frontity.org/frontity-cli/build-commands#the-build-process) containing both your \(isomorphic\) React app and your Frontity \(Node.js\) server. This folder can be deployed to any hosting that is prepared to serve a Node.js app. The content of this `build` folder will be used by the command:
 
 ```text
 npx frontity serve
