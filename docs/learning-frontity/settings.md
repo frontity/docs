@@ -51,9 +51,7 @@ export default [
 
 For example, if the URL is `https://www.site-1.com/my-post` the `"site-1"` settings are loaded and if the URL is `https://www.site-2.com/category/some-cat` the `"site-2"` settings are loaded.
 
-In development, you can access a specific site using the `?frontity_name=`
-query, which should match the `name` specified for your site. For example, using
-the `frontity.settings.js` file above, to access `site-2`, you should use:
+In development, you can access a specific site using the `?frontity_name=` query, which should match the `name` specified for your site. For example, using the `frontity.settings.js` file above, to access `site-2`, you should use:
 
 ```text
 https://localhost:3000/?frontity_name=site-2
@@ -97,7 +95,6 @@ If you come from a WordPress background, you can think of **Frontity** `state` a
 
 The initial _settings_ of a Frontity site can be set in the `frontity.settings.js` file
 
-
 {% code title="frontity.settings.js" %}
 ```javascript
 export default [
@@ -125,7 +122,7 @@ export default [
 ```
 {% endcode %}
 
-The state is compartmentalized though namespaces. Each namespace usually corresponds to a Frontity package. 
+The state is compartmentalized though namespaces. Each namespace usually corresponds to a Frontity package.
 
 For example, our `wp-source` package uses the `source` namespace to store its settings. And our `tiny-router` package uses the `router` namespace:
 
@@ -150,13 +147,7 @@ There's also a special namespace called `frontity` that is the place to set the 
 
 ### `state.frontity.url`
 
-
-
-
-
-
 The important takeaway here is: _in the settings file you have the opportunity to change the `state` of **Frontity**. Most of the time you will use this to configure the settings of each package._
-
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊

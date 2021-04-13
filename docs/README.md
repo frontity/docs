@@ -4,11 +4,11 @@
 
 Our documentation is distributed across three separate sites:
 
-- [**docs.frontity.org**](https://docs.frontity.org) - Introduction, concepts and guides
-- [**api.frontity.org**](https://api.frontity.org) - API Reference
-- [**tutorial.frontity.org**](https://tutorial.frontity.org) - Step by Step guide
+* [**docs.frontity.org**](https://docs.frontity.org) - Introduction, concepts and guides
+* [**api.frontity.org**](https://api.frontity.org) - API Reference
+* [**tutorial.frontity.org**](https://tutorial.frontity.org) - Step by Step guide
 
-This site (docs.frontity.org) is where you will find all the information you need to start building something awesome with Frontity.
+This site \(docs.frontity.org\) is where you will find all the information you need to start building something awesome with Frontity.
 
 {% hint style="info" %}
 If you're new to Frontity check out our [step-by-step tutorial](https://tutorial.frontity.org/). It's the quickest way to get up to speed with Frontity.
@@ -22,12 +22,11 @@ If you're new to Frontity then you can get started by heading over to, erm..., t
 
 This is where you'll find our [**Quick Start Guide**](getting-started/quick-start-guide.md) that will get you up and running with Frontity quickly.
 
-Once you've followed the Quick Start Guide and have a working Frontity installationm you may want to continue learning by a creating a more elaborated project with our **[Step by Step guide](tutorial.frontity.org)**
+Once you've followed the Quick Start Guide and have a working Frontity installationm you may want to continue learning by a creating a more elaborated project with our [**Step by Step guide**](https://github.com/frontity/docs/tree/c2586e3a601df487adc1c62bc6d4da02c6bedb8d/docs/tutorial.frontity.org)
 
 ## **About Frontity**
 
-To learn about what Frontity is, how it works, and what features it has, visit the
-[**About Frontity**](about/) section.
+To learn about what Frontity is, how it works, and what features it has, visit the [**About Frontity**](about/) section.
 
 If you're a **developer** this section will tell you all about what Frontity is capable of and what you can do with it.
 
@@ -39,13 +38,13 @@ This section is the heart of our documentation. Once you've nailed the basics in
 
 ## **Architecture and Deployment**
 
-Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](architecture.md/) section. This section will also tell you more about possible hosting solutions.
+Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](architecture.md) section. This section will also tell you more about possible hosting solutions.
 
 ## **Deployment**
 
 Once you've completed the development of your project and have a working application that you're happy with you can learn how to deploy to live in the [**Deployment**](deployment/) section.
 
-In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.mdgit /), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
+In particular we go into detail on how to [**deploy to Vercel**](https://github.com/frontity/docs/tree/c2586e3a601df487adc1c62bc6d4da02c6bedb8d/docs/deployment/deploy-using-vercel.mdgit), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
 
 ## **Guides**
 
@@ -63,10 +62,9 @@ Frontity is an open source project and we welcome contributions from the communi
 
 We can't wait to see where you take Frontity in the future.
 
----
-
 By the way, we'd love to hear about what you're building with Frontity. Join us in our [**Community Forum**](https://community.frontity.org) and tell us about your project. You can also ask questions and get help and support from our growing community of users and developers there.
 
 {% hint style="info" %}
 **Subscribe** to our newsletter [here](https://frontity.org/#newsletter) to **get notified** of the latest news and updates.
 {% endhint %}
+

@@ -108,7 +108,6 @@ Frontity helps build sites which are fast to deliver better user experiences. Th
 
 The React team is working hard to release an async, “no-CPU-blocking” version and Frontity will be compatible with it. It is expected for Q2 2019. Once it is released, we expect to see a rise in the use of the React animation libraries available that will get the user experience to the next level.
 
-
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}

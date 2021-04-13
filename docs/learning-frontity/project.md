@@ -74,7 +74,6 @@ This is the file used for configuration in any Node.js project. There are many g
 
 As you can see, our `mars-theme` dependency has no version but a path. This is how we need to add our local packages to our `package.json` so they will be treated as if they were living in `node_modules`.
 
-
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}

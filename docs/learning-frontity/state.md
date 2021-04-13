@@ -38,7 +38,7 @@ You can access the state in the client console with:
 
 State is a proxy, so you can see the original object clicking on `[[Target]]` :
 
-![Expand \[\[Target\]\] to see the real object behind the proxy.](../.gitbook/assets/screen-shot-2019-07-03-at-10.56.34%20%283%29%20%281%29.png)
+![Expand \[\[Target\]\] to see the real object behind the proxy.](../.gitbook/assets/screen-shot-2019-07-03-at-10.56.34%20%283%29%20%283%29.png)
 
 ## Why not separate settings and state?
 
@@ -396,7 +396,6 @@ state: {
 And then consumed like this: `state.share.totalCountByRoute("/my-first-post")`, so you should be able to create **derived state** pretty much for anything.
 
 These **derived state functions** are stripped out from the initial state we send to the client but don't worry, they are reinstantiated later in the client by Frontity to ensure everything is back to normal :\)
-
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊

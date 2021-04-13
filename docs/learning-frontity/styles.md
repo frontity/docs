@@ -351,7 +351,7 @@ For a more in-depth explanation about the reasons we believe it's a good approac
 
 CSS in JS supports all the Sass features. If you are used to SASS, our recommendation is to learn CSS in JS. It won't take you more than 30 minutes to learn how to do the very same things you are used to doing in Sass.
 
-These are some resource you might find useful to make the transition to CSS in JS: 
+These are some resource you might find useful to make the transition to CSS in JS:
 
 {% embed url="https://medium.com/styled-components/getting-sassy-with-sass-styled-theme-9a375cfb78e8" caption="" %}
 
@@ -365,7 +365,6 @@ If you already have a base of Sass you want to migrate, you can use these tools 
 
 * [https://github.com/adamgruber/sass-extract-js](https://github.com/adamgruber/sass-extract-js)
 * [https://github.com/jgranstrom/sass-extract](https://github.com/jgranstrom/sass-extract)
-
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊

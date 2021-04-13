@@ -16,13 +16,12 @@ You can also [configure your own WordPress installation](quick-start-guide.md#se
 
 ### Node.js
 
-If you don't already have it you can get *Node.js* from [the official site](https://nodejs.org/). This will also install `npm` and `npx` along with Node.js.
+If you don't already have it you can get _Node.js_ from [the official site](https://nodejs.org/). This will also install `npm` and `npx` along with Node.js.
 
 You will use these to run Frontity commands during the set-up and development of your project.
 
-
 {% hint style="info" %}
-For those coming from WordPress it might be worth noting that *Frontity* runs on **Node.js**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture.md) section arch these docs.
+For those coming from WordPress it might be worth noting that _Frontity_ runs on **Node.js**, so it needs to be deployed in a different server than your WordPress. If you want to learn more about this, visit our [GitHub repo](https://github.com/frontity/frontity#why-a-different-nodejs-server) or see the [Architecture](../architecture.md) section arch these docs.
 {% endhint %}
 
 To test if you have Node.js installed open your terminal and run:
@@ -35,8 +34,7 @@ node -v
 npm -v
 ```
 
----
-
 {% hint style="info" %}
 Do you have have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
 {% endhint %}
+

@@ -56,7 +56,7 @@ In this structure, the theme you're developing is a local dependency of the main
 
 {% hint style="info" %}
 This type of dependency is automatically defined if you create the package \(theme\) w/ the Frontity command `npx frontity create-package awesome-theme`  
-» Read more about [`frontity create-package`]()
+» Read more about [`frontity create-package`](how-to-share-a-frontity-project.md)
 {% endhint %}
 
 This structure implies having a main Frontity project \(root `package.json`\) and some packages \(each one with its own `package.json`\) under the `packages` folder
@@ -124,7 +124,7 @@ Each one of these _packages_ will have its own `package.json` and these packages
 
 {% hint style="info" %}
 In Frontity you can create a new package by doing `npx frontity create-package <my package name>` \(from the root of the Frontity project\)  
-» Read more about [`frontity create-package`]()
+» Read more about [`frontity create-package`](how-to-share-a-frontity-project.md)
 {% endhint %}
 
 ### Why this structure?

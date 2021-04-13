@@ -1,9 +1,8 @@
 # Add a new Frontity package or theme to your project
 
 {% hint style="info" %}
-In Frontity *themes* are just any other type of package, so the info explained in this guide can be applied to when you want to use an alternative theme in your project
+In Frontity _themes_ are just any other type of package, so the info explained in this guide can be applied to when you want to use an alternative theme in your project
 {% endhint %}
-
 
 During the development of your project, you may want to install new Frontity packages, or even change the ones you are using \(for example if you want to use a different theme or a different analytics service\). In order to do this, you'll need to:
 
@@ -21,7 +20,7 @@ At this point, you need to differentiate between the external packages \(which a
 ### External packages
 
 {% hint style="info" %}
-This is the typical way of using [Features Packages](https://api.frontity.org/frontity-packages/features-packages) 
+This is the typical way of using [Features Packages](https://api.frontity.org/frontity-packages/features-packages)
 {% endhint %}
 
 These packages will be treated like any `npm` package and stored in `node_modules` folder, where all your dependencies are installed. In order to install a package as external you just have to run this command in the root of your project:
@@ -37,7 +36,6 @@ It will be automatically added to your `node_modules` folder and your `package.j
 {% hint style="info" %}
 This is the typical way of using Frontity [Themes](https://api.frontity.org/frontity-themes)
 {% endhint %}
-
 
 The process to install a local package is pretty similar, but you'll have to make minor modifications.
 
@@ -95,3 +93,4 @@ And that's all, your package is installed and working now.
 {% hint style="info" %}
 Note that if you are changing your theme or any other package, you may want to remove the old one in your `package.json` and in your `frontity.settings.js`
 {% endhint %}
+
