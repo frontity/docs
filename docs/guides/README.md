@@ -32,7 +32,6 @@ In this section we present a selection of guides that will help you to both work
 ###### [SEO in Frontity](seo.md)
 *This guide explains how you can optimize the SEO of your Frontity project.*
 
-
 ###### [Troubleshooting guide](troubleshooting.md)
 *This guide will offer solutions to common issues detected in Frontity projects.*
 
