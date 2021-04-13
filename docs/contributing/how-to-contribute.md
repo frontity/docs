@@ -31,7 +31,6 @@ There are several ways to support the project and get involved. Don't know how t
   * Or you can report them using our [community forum](https://community.frontity.org/c/framework-development/docs-and-tutorials/29).
 * You can also help translating our documentation. Frontity is designed to be available for everyone, so if you think you can help on this, just let us know!
 
-
 ## 🗣 Spread the word
 
 * The easiest way \(but not less important\) to help us spread the word about the project can be **posting something on your social media pages**. If you enjoyed building something with Frontity, why not share it so others can learn about it?
@@ -39,7 +38,6 @@ There are several ways to support the project and get involved. Don't know how t
 * Help inspire others by writing **guides, tutorials or case studies** about how you're using Frontity. Let us know so that we can share them or help you! You can also share them with the community [here](https://community.frontity.org/c/community/resources/15).
 * Would you like to share your story and how Frontity helped solve your project's needs in our blog? Feel free to share your ideas by opening a new topic in the [Resources category](https://community.frontity.org/c/community/resources/15) of the forum and mention @Reyes.
 * Talk about how you used Frontity for your project or **demoing the framework** at any local meetup or any other relevant event. Don't hesitate to [get in touch](https://community.frontity.org/c/community/events/50) to get support and help.
-
 
 ## 👨‍👩‍👧‍👦 Help build up the community
 

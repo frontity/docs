@@ -2,51 +2,47 @@
 
 In this guide we offer solutions to common issues detected in Frontity projects
 
-<!-- toc -->
-
-- [`@frontity/wp-source`](#frontity-wp-source)
-  - [💻 FetchError: invalid json response body at ... reason: Unexpected token < in JSON at position 0](#fetcherror-invalid-json-response-body-at-reason-unexpected-token-less-than-in-json-at-position-0)
-- [Frontity CLI](#frontity-cli)
-  - [💻 Error: Cannot find module ‘@frontity/core’](#error-cannot-find-module-frontity-core)
-- [Styles](#styles)
-  - [👨‍💻 The pseudo class ":xxx-xxxxx" is potentially unsafe when doing server-side rendering. Try changing it to ":xxx-xxxxx"](#the-pseudo-class-xxx-xxxxx-is-potentially-unsafe-when-doing-server-side-rendering-try-changing-it-to-xxx-xxxxx)
-
-<!-- tocstop -->
+* [`@frontity/wp-source`](troubleshooting.md#frontity-wp-source)
+  * [💻 FetchError: invalid json response body at ... reason: Unexpected token &lt; in JSON at position 0](troubleshooting.md#fetcherror-invalid-json-response-body-at-reason-unexpected-token-less-than-in-json-at-position-0)
+* [Frontity CLI](troubleshooting.md#frontity-cli)
+  * [💻 Error: Cannot find module ‘@frontity/core’](troubleshooting.md#error-cannot-find-module-frontity-core)
+* [Styles](troubleshooting.md#styles)
+  * [👨‍💻 The pseudo class ":xxx-xxxxx" is potentially unsafe when doing server-side rendering. Try changing it to ":xxx-xxxxx"](troubleshooting.md#the-pseudo-class-xxx-xxxxx-is-potentially-unsafe-when-doing-server-side-rendering-try-changing-it-to-xxx-xxxxx)
 
 {% hint style="info" %}
 These are the symbols used in this troubleshooting guide
 
-- 💻 Terminal messages
-- 👨‍💻 Browser's console messages
+* 💻 Terminal messages
+* 👨‍💻 Browser's console messages
 {% endhint %}
 
 ## `@frontity/wp-source`
 
-### 💻 FetchError: invalid json response body at ... Reason: Unexpected token < in JSON at position 0
+### 💻 FetchError: invalid json response body at ... Reason: Unexpected token &lt; in JSON at position 0
 
 If you launch your site locally with `npx frontity dev` and you get this in the browser
 
-```
+```text
 Internal Server Error
 ```
 
 And you get something like this error in the terminal when attempting to load the page in the browser:
 
-```
+```text
 FetchError: invalid json response body at http://wptest.test/wp-json/wp/v2/posts/?_embed=true&page=1 reason: Unexpected token < in JSON at position 0
 ```
 
-It may be because your WP doesn't have permalinks activated (which is a requisite of the `@frontity/wp-source` package)
+It may be because your WP doesn't have permalinks activated \(which is a requisite of the `@frontity/wp-source` package\)
 
 #### Solution
 
 From your WP, go to `Settings -> Permalinks` and check one of the pretty permalinks options, rather than the plain one:
 
-![](./.gitbook/assets/wordpress-permalink-setting.png)
+![](https://github.com/frontity/docs/tree/84b096aa4e2f73930763a3ecea2559418d23d1f9/docs/guides/.gitbook/assets/wordpress-permalink-setting.png)
 
 **Related Threads**:
 
-- https://community.frontity.org/t/frontity-not-working-with-plain-permalinks/1428
+* [https://community.frontity.org/t/frontity-not-working-with-plain-permalinks/1428](https://community.frontity.org/t/frontity-not-working-with-plain-permalinks/1428)
 
 ## Frontity CLI
 
@@ -54,14 +50,14 @@ From your WP, go to `Settings -> Permalinks` and check one of the pretty permali
 
 If you get this error in the terminal when you do `npx frontity serve`:
 
-```
+```text
 Error: Cannot find module ‘@frontity/core’
 home/lib/node_modules/frontity/dist/src/cli/index.js
 home/lib/node_modules/frontity/dist/src/commands/serve.js
 home/lib/node_modules/frontity/dist/src/cli/serve.js
 ```
 
-This may be caused because you're not executing this command from the root of your Frontity project (maybe you're launching it from the `build` folder)
+This may be caused because you're not executing this command from the root of your Frontity project \(maybe you're launching it from the `build` folder\)
 
 #### Solution
 
@@ -69,7 +65,7 @@ Run `npx frontity serve` from the root of your Frontity project
 
 **Related Threads**:
 
-- https://community.frontity.org/t/error-cannot-find-module-frontity-core/2180
+* [https://community.frontity.org/t/error-cannot-find-module-frontity-core/2180](https://community.frontity.org/t/error-cannot-find-module-frontity-core/2180)
 
 ## Styles
 
@@ -77,16 +73,16 @@ Run `npx frontity serve` from the root of your Frontity project
 
 If you are getting these types of warnings in the console:
 
-```
+```text
 The pseudo class ":nth-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-of-type"
 The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
 ```
 
-This is caused by an [`emotion`](https://github.com/emotion-js/emotion) issue: https://github.com/emotion-js/emotion/issues/1105
+This is caused by an [`emotion`](https://github.com/emotion-js/emotion) issue: [https://github.com/emotion-js/emotion/issues/1105](https://github.com/emotion-js/emotion/issues/1105)
 
 As [emotion is used internally](https://docs.frontity.org/learning-frontity/styles#emotion-documentation) by Frontity our code should take into account what can and cannot be done using CSS in JS with emotion
 
-This is NOT an issue that should be ignored or "fixed" under normal circumstances. We recommend you use the following solutions only if you're getting these messages because of some third-party CSS that you don't have no control over (e.g. from a CSS framework or a component library or another external source).
+This is NOT an issue that should be ignored or "fixed" under normal circumstances. We recommend you use the following solutions only if you're getting these messages because of some third-party CSS that you don't have no control over \(e.g. from a CSS framework or a component library or another external source\).
 
 #### Solution 1
 
@@ -94,7 +90,7 @@ For this specific issue, there's [this solution](https://github.com/emotion-js/e
 
 **`components/index`**
 
-```
+```text
 import { CacheProvider } from '@emotion/core'
 import createCache from '@emotion/cache'
 
@@ -112,7 +108,7 @@ You could also define functions to search and replace the selectors causing the 
 
 **`helpers/css`**
 
-```
+```text
 export const nthChildToNthChildType = css => css.replace(/\:nth\-child/g, `:nth-type`)
 export const firstChildToFirstOfType = css => css.replace(/\:first\-child/g, `:first-of-type`)
 
@@ -123,7 +119,7 @@ So then you can do in your code...
 
 **`components/index`**
 
-```
+```text
 import React from "react";
 import { Global, css, connect, styled, Head } from "frontity";
 ...
@@ -153,4 +149,5 @@ const Theme = ({ state }) => {
 
 **Related Threads**:
 
-- https://community.frontity.org/t/bootstrap-the-pseudo-class-first-child-is-potentially-insecure-when-processed-on-the-server-side-try-changing-it-to-first-type/1811
+* [https://community.frontity.org/t/bootstrap-the-pseudo-class-first-child-is-potentially-insecure-when-processed-on-the-server-side-try-changing-it-to-first-type/1811](https://community.frontity.org/t/bootstrap-the-pseudo-class-first-child-is-potentially-insecure-when-processed-on-the-server-side-try-changing-it-to-first-type/1811)
+

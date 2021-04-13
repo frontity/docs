@@ -12,8 +12,6 @@ Once you have an account and the Heroku CLI installed you have to login from the
 > heroku login
 ```
 
----
-
 These are the instructions to deploy a Frontity project on Heroku, once you are ready to deploy your project:
 
 ### Create a [heroku app](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app)
@@ -24,7 +22,7 @@ Create an app on Heroku from the root of your project
 > heroku create
 ```
 
-Heroku will generate a random name for your app (`shielded-gorge-51896` in the example), or you can pass a parameter to specify your own app name.
+Heroku will generate a random name for your app \(`shielded-gorge-51896` in the example\), or you can pass a parameter to specify your own app name.
 
 ```text
 ⬢  my-frontity-project  master ⦾ heroku create
@@ -33,21 +31,21 @@ Creating app... done, ⬢ shielded-gorge-51896
 https://shielded-gorge-51896.herokuapp.com/ | https://git.heroku.com/shielded-gorge-51896.git
 ```
 
-When you create an app, a remote git repository (called `heroku`) is also created on Heroku and associated with your local git repository.
+When you create an app, a remote git repository \(called `heroku`\) is also created on Heroku and associated with your local git repository.
 
-```
+```text
 ⬢  my-frontity-project  master ⦾ git remote -v
-heroku	https://git.heroku.com/shielded-gorge-51896.git (fetch)
-heroku	https://git.heroku.com/shielded-gorge-51896.git (push)
-origin	git@github.com:frontity-demos/my-frontity-project.git (fetch)
-origin	git@github.com:frontity-demos/my-frontity-project.git (push)
+heroku    https://git.heroku.com/shielded-gorge-51896.git (fetch)
+heroku    https://git.heroku.com/shielded-gorge-51896.git (push)
+origin    git@github.com:frontity-demos/my-frontity-project.git (fetch)
+origin    git@github.com:frontity-demos/my-frontity-project.git (push)
 ```
 
 ### Add a `start` script
 
 Heroku will automatically execute your `start` script so add the following to your `scripts` section in the `package.json` file at the root of your project.
 
-```json
+```javascript
 "scripts": {
   "start": "frontity serve --port $PORT",
   "dev": "frontity dev",
@@ -70,7 +68,7 @@ git push heroku master
 
 You should get something like this
 
-```sh
+```bash
 ⬢  my-frontity-project  master ⦾ git push heroku master
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
@@ -152,9 +150,7 @@ To https://git.heroku.com/shielded-gorge-51896.git
    ee9c4d2..ab9b152  master -> master
 ```
 
-_Heroku_ will assign you a domain (something like _your-project-name.herokuapp.com_) that will allow you to check your site online
-
----
+_Heroku_ will assign you a domain \(something like _your-project-name.herokuapp.com_\) that will allow you to check your site online
 
 ## Deploy a production site
 
@@ -171,13 +167,13 @@ With the command `heroku domains:add` you can add a specific custom domain in yo
 
 for example by doing:
 
-```
+```text
 heroku domains:add heroku domains:add www.variables-demo.com
 ```
 
 you should get something like this
 
-```
+```text
 ⬢  my-frontity-project  master ⦾ heroku domains:add www.variables-demo.com
  ›   Warning: heroku update available from 7.25.0 to 7.38.2.
 Adding www.variables-demo.com to ⬢ shielded-gorge-51896... done
@@ -192,7 +188,7 @@ The domain www.variables-demo.com has been enqueued for addition
 
 Once you have added your domain to your Heroku app, you can use the command `heroku domains` to see the value for the `CNAME` record that you have to set in your domain settings.
 
-```
+```text
 ⬢  my-frontity-project  master ⦾ heroku domains
  ›   Warning: heroku update available from 7.25.0 to 7.38.2.
 === shielded-gorge-51896 Heroku Domain
@@ -207,22 +203,20 @@ www.variables-demo.com  CNAME            damp-whale-rln632baq4jdhcj5aw495bst.her
 With this info you can [add a CNAME](https://devcenter.heroku.com/articles/custom-domains) in your domain provider's DNS settings.
 
 {% hint style="info" %}
-If you don't know how to do this, contact your domain provider (GoDaddy, CloudFlare, etc)
+If you don't know how to do this, contact your domain provider \(GoDaddy, CloudFlare, etc\)
 {% endhint %}
 
 ### Deploy
 
-Then, deploy Frontity using this command (from the root of your project):
+Then, deploy Frontity using this command \(from the root of your project\):
 
 ```text
 > git push heroku master
 ```
 
-> If no changes are detected you may have to do:
-> `npx frontity build` → to generate a new build
-> `git commit --allow-empty` → to force a empty commit
-> `git push heroku master` → to push this lateste build into heroku and launch its deploy process
+> If no changes are detected you may have to do: `npx frontity build` → to generate a new build `git commit --allow-empty` → to force a empty commit `git push heroku master` → to push this lateste build into heroku and launch its deploy process
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
+

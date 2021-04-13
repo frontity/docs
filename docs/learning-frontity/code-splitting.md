@@ -75,7 +75,7 @@ If we don't use `loadable` , the `<HeavyComments>` component is included in the 
 
 For managing the Code Splitting, Frontity has integrated and configured [Loadable Components](https://www.smooth-code.com/open-source/loadable-components/docs/code-splitting/).
 
-[![loadable components](../.gitbook/assets/loadable-components.png)](https://loadable-components.com/docs/getting-started/)
+[![loadable components](../.gitbook/assets/loadable-components%20%281%29.png)](https://loadable-components.com/docs/getting-started/)
 
 If you want to go deeper, you should take a look at [**their docs**](https://loadable-components.com/docs/getting-started/). You don't need to read the docs on how to install and configure Loadable Components since we have already done that work for you. Below are concepts that are interesting and helpful to read up on:
 
@@ -87,7 +87,6 @@ If you want to go deeper, you should take a look at [**their docs**](https://loa
 * Infinite loading is not good for user experience, to avoid it implementing a [_timeout_](https://www.smooth-code.com/open-source/loadable-components/docs/timeout/) is a good workaround. 
 * Use [Library Splitting](https://www.smooth-code.com/open-source/loadable-components/docs/library-splitting/) to defer the loading of a library
 * Create a reusable Loadable Component by using a [_Dynamic Import_](https://www.smooth-code.com/open-source/loadable-components/docs/dynamic-import/)
-
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊

@@ -5,7 +5,7 @@ In the Frontity Architecture, WordPress is used as a [headless CMS](https://css-
 * Frontity uses the WordPress REST-API to retrieve content and it then generates the final HTML
 * Frontity is also able to generate AMP pages with the same React code and CSS
 
-![](./.gitbook/assets/frontity-architecture%20%282%29%20%281%29.png)
+![](.gitbook/assets/frontity-architecture%20%282%29%20%288%29.png)
 
 This solution requires **a PHP Server for WordPress and a Node.js Server for Frontity**, as well as a new domain for your WordPress site as the main one will be used by Frontity, although you can use a sub-domain on your existing domain.
 
