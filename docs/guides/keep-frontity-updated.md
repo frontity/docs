@@ -9,7 +9,7 @@ At this point, it is important to distinguish between your **dependencies** \(np
 Essential packages such as `frontity`, `@frontity/core` or `@frontity/tiny-router`, and all your dependencies, are included in this part. These can be treated as common npm packages, so you can use the following command to update your `package.json` to the latest versions:
 
 ```bash
-npx npm-check-updates -u
+npx npm-check-updates -u -t minor
 npm install
 ```
 
@@ -29,7 +29,7 @@ To update the dependencies of your local package dependencies, go to their folde
 
 ```bash
 cd package/my-local-package
-npx npm-check-updates -u
+npx npm-check-updates -u -t minor
 # DO NOT RUN "npm install" this time!
 ```
 
