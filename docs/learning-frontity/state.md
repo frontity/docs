@@ -387,7 +387,7 @@ state: {
 
 That's it! Now when you use `state.share.totalCount` in React everything will be updated without having to do anything additional on your end.
 
-You can also use derived state with additional custom parameters:
+You can also use derived state with additional custom parameters. Such a function works like a "getter" for a piece of state:
 
 ```javascript
 state: {
@@ -413,6 +413,8 @@ state: {
 }
 ```
 
+And then consumed like this: `state.share.totalCountByRoute("/my-first-post")`, so you should be able to create **derived state** for pretty much anything.
+
 Additionally, Frontity gives you access to both `state` as well as [`libraries`]('./libraries) in your derived state:
 
 ```javascript
@@ -425,15 +427,13 @@ state: {
       },
       ...
     },
-    // `html2react.processors` come from the @frontity/html2react package.
+    // `html2react.processors` comes from the @frontity/html2react package.
     processorsCount: ({ state, libraries }) => {
       return libraries.html2react.processors.length;
     };
   }
 }
 ```
-
-And then consumed like this: `state.share.totalCountByRoute("/my-first-post")`, so you should be able to create **derived state** pretty much for anything.
 
 These **derived state functions** are stripped out from the initial state we send to the client but don't worry, they are reinstantiated later in the client by Frontity to ensure everything is back to normal :\)
 
