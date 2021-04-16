@@ -60,29 +60,29 @@ Vercel will assign you a domain \(something like _your-project-name.vercel.app_\
 
 From this deploy example we have got the following URL's:
 
-* **Live URL** \([https://my-frontity-project.vercel.app](https://my-frontity-project.vercel.app)\) → Our temporary URL assigned automatically by Vercel, We can check \(and share\) our site online from this URL 
-* **Inspect** \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings)\) → Here we can check the status of our site and check the logs among other things
-* **Project Settings** \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings)\) → Here we can change domain and build settings among other things
+* **Live URL:** `https://my-frontity-project.vercel.app` → Our temporary URL assigned automatically by Vercel, We can check \(and share\) our site online from this URL
+* **Inspect:** `https://vercel.com/vercel-username/my-frontity-project/settings` → Here we can check the status of our site and check the logs among other things
+* **Project Settings:** `https://vercel.com/vercel-username/my-frontity-project/settings` → Here we can change domain and build settings among other things
 
 ## Deploy your site under a custom domain
 
 To deploy your site under a custom domain you have to
 
-* Configure your Frontity app to point to that custom domain 
+* Configure your Frontity app to point to that custom domain
 * Configure your custom domain for your project in the Vercel settings
-* Add Vercel nameservers for your custom domain from your domain provider 
+* Add Vercel nameservers for your custom domain from your domain provider
 
 ...before deploying it
 
 ### Add your custom domain in your project settings
 
-From the project settings URL provided in our previous deploy \([https://vercel.com/vercel-username/my-frontity-project/settings](https://vercel.com/vercel-username/my-frontity-project/settings) in our example\) we can set a custom domain
+From the project settings URL provided in our previous deploy \(`https://vercel.com/vercel-username/my-frontity-project/settings` in our example\) we can set a custom domain
 
-![](../.gitbook/assets/now-projects-settings%20%281%29%20%282%29.png)
+![](../.gitbook/assets/now-projects-settings%20%281%29%20%282%29%20%284%29.png)
 
 Add it, and you will be provided by a [set a nameservers](https://vercel.com/docs/v2/custom-domains#step-4:-configuring-the-domain) you can use in your domain provider to point your custom domain to the Vercel nameservers
 
-![vercel nameservers](../.gitbook/assets/vercel-nameservers%20%282%29.png)
+![vercel nameservers](../.gitbook/assets/vercel-nameservers%20%282%29%20%283%29.png)
 
 ### Add subdomain in your project settings
 
@@ -115,7 +115,7 @@ You should get something like this
 ✅  Production: https://mycustomtomain.com [copied to clipboard] [4s]
 ```
 
-This will create a deploy and assign it to your real site url.
+This will create a deploy and assign it to your real site URL.
 
 > More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 
@@ -128,7 +128,7 @@ Vercel now forces all apps to be served over HTTPS. You therefore need to ensure
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://your-wordpress-blog-url/wp-json",
+          "url": "https://your-wordpress-blog-url/",
         }
       }
     },

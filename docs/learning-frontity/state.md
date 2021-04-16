@@ -40,7 +40,7 @@ You can access the state in the client console with:
 
 State is a proxy, so you can see the original object clicking on `[[Target]]` :
 
-![Expand [[Target]] to see the real object behind the proxy.](../.gitbook/assets/screen-shot-2019-07-03-at-10.56.34%20%283%29%20%281%29.png)
+![Expand \[\[Target\]\] to see the real object behind the proxy.](../.gitbook/assets/screen-shot-2019-07-03-at-10.56.34%20%283%29%20%286%29%20%283%29.png)
 
 ## Why not separate settings and state?
 
@@ -142,7 +142,7 @@ Only objects, arrays and primitives \(strings, numbers...\) are allowed in the `
 
 Actually, it is converted to a JSON when it's sent to the client. We'll talk later about how server-side Rendering works, but it is something like this:
 
-![](../.gitbook/assets/screen-shot-2019-06-03-at-12.37.12%20%283%29%20%281%29.png)
+![](../.gitbook/assets/screen-shot-2019-06-03-at-12.37.12%20%283%29%20%281%29%20%285%29.png)
 
 First, this is what Frontity does in the server:
 
@@ -373,7 +373,7 @@ state: {
     },
     totalCount: ({ state }) => {
       let totalCount = 0;
-      const shareData = Object.values(data);
+      const shareData = Object.values(state.share.data);
       for (let i = 0; i < shareData.length; i +=1) {
         totalCount += shareData[i].facebook;
         totalCount += shareData[i].twitter;
@@ -404,8 +404,8 @@ state: {
     },
     totalCountByRoute: ({ state }) => route => {
       let totalCount = 0;
-      totalCount += data[route].facebook;
-      totalCount += data[route].twitter;
+      totalCount += state.share.data[route].facebook;
+      totalCount += state.share.data[route].twitter;
       return totalCount;
     }
     ...

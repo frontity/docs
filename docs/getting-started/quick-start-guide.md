@@ -2,39 +2,28 @@
 
 Right, let's get you set up with your very first Frontity project. This guide will take you from the very basics to feeling amazed at what you can do with Frontity!
 
-> Please check that you meet the [**Installation requirements**](./#installation-requirements) before following the steps below.
+> Please check that you meet the [**requirements**](./#requirements) before following the steps below.
 
 {% embed url="https://www.youtube.com/watch?v=OdiuVxjbh9A" caption="" %}
 
-## Create a new Frontity project
+## Getting started with Frontity
 
-Frontity has it's own CLI. You can create a new Frontity project with a single command:
+1 - **Create a new Frontity project** by entering the following command in your terminal:
 
-```text
-npx frontity create my-app
+```bash
+npx frontity create my-first-frontity-project
 ```
 
-> Replace "my-app" in the command above with your own name for your project.
->
-> For those wondering what **npx** is you can take a look at [this article](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).  
-> TL;DR It downloads an **npm** package to run just this one time and then removes it from your computer.
-
-You will be prompted to select a theme. You can choose between Mars theme and TwentyTwenty. If this is your first time trying out Frontity then we recommend that you select Mars theme.
-
-You'll also be asked if you want to sign up for the Frontity newsletter. Enter a valid email address if you wish to do so.
-
-The command above will create a new directory with the project name you used. Change into that directory with:
+2 - **Select a starter theme**. If it's your first time using Frontity we recommend that you select `@frontity/mars-theme` to start with.
 
 ```text
-cd my-app
+? Pick a starter theme to clone: @frontity/mars-theme (recommended)
 ```
 
-> Again you should replace "my-app" with your own project name.
-
-Your new Frontity project will have the following structure:
+A directory with the same name as the project name you used will be created. It will have a structure similar to this:
 
 ```text
-my-app/
+my-first-frontity-project/
 |__ node_modules/
 |__ package.json
 |__ frontity.settings.js
@@ -43,19 +32,69 @@ my-app/
     |__ mars-theme/
 ```
 
-## Start development
+3 - **Run the project locally** by executing this command from the terminal:
 
-Now you can start a development server with:
-
-```text
-npx frontity dev
+```bash
+cd my-first-frontity-project && npx frontity dev
 ```
 
-This server will be listening to `http://localhost:3000` and watching for any changes inside the `packages` folder.
+A development server will be started. This server will be listening on [http://localhost:3000](http://localhost:3000) and watching for any changes inside the packages directory.
 
-The page should open automatically in your browser. At first Frontity will connect to our starter blog and so you will initially see our demo content.
+4 - Now you’re **ready to make changes** to your site
 
-Of course you want to see your own content appearing in your new Frontity site, so let's move on to the next step - [**connecting Frontity up**](connecting-to-wordpress.md) to your own WordPress site.
+Open the project directory in your preferred code editor/IDE and try editing some of the files under `packages/mars-theme`. Each time you save a change the browser will automatically reload and display the new version as these changes are detected by the development server.
+
+## Set your own WordPress installation
+
+A good next step is **setting your own WordPress installation** as the data source
+
+You can connect your [_own WordPress site_](https://docs.frontity.org/guides/what-are-the-requisites-of-wordpress-for-frontity) to your Frontity project by [setting the `state.source.url`](https://docs.frontity.org/guides/setting-url-wordpress-source-data) property in the `frontity.settings.js` file.
+
+```javascript
+const settings = {
+  ...,
+  packages: [
+    ...,
+    {
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          // Change this url to point to your WordPress site.
+          url: "https://test.frontity.org/"
+        }
+      }
+    }
+  ]
+}
+```
+
+By default, `state.source.url` is set to `https://test.frontity.org/` \(our demo WordPress site\) but you can set this property to any valid URL pointing to a WordPress site.
+
+{% hint style="info" %}
+Setting `state.source.url` should be sufficient for most WordPress.org installations and WordPress.com plans. For specific use cases check the guide [_Setting the URL of the WordPress data source_](https://docs.frontity.org/guides/setting-url-wordpress-source-data).
+{% endhint %}
+
+> Your site at `http://localhost:3000` won't auto-update with this change as auto-updates only occur with changes to files in the packages directory, so you will need to manually refresh the page in your browser.
+
+You should now see your own posts in the Frontity project displayed in the browser.
+
+## What's next?
+
+### Follow the Step by Step Tutorial
+
+Our primary learning resource is the [**Step by Step Tutorial**](https://tutorial.frontity.org). This is the perfect place to start if you're new to Frontity, or even if you've previously used Frontity but feel that your knowledge is incomplete or fragmented.
+
+### Check our guides
+
+We have several [**Guides**](https://docs.frontity.org/guides) that will help you in your understanding of working with Frontity, and which will also assist you in solving some of the common challenges that come up when working with Dynamic SSR \(server-side Rendering\) in React apps connected to WordPress.
+
+### Check the API Reference
+
+Our main reference resource is the [**API Reference**](https://api.frontity.org). This is where you'll find detailed information about Frontity CLI, packages, plugins and themes. Once you've mastered the basics of working with Frontity this is where you're likely to spend most of your time when working on projects.
+
+### Deploy your site
+
+When you're done developing and are ready to launch your new site follow the instructions in our [**Deployment**](https://docs.frontity.org/deployment) section to learn how to deploy your finished Frontity site. We recommend that you start by [deploying your site to Vercel](https://docs.frontity.org/deployment/deploy-using-vercel).
 
 {% hint style="info" %}
 Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊

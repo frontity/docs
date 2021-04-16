@@ -1,7 +1,15 @@
 # Contributing to the Frontity Documentation
 
 Any member of the community is welcome to suggest changes to Frontity's official documentation at any time.
-Frontity's documentation can be found at https://docs.frontity.org/.
+Frontity's documentation can be found at:
+
+Docs Site | Repository | Description
+---------|----------|---------
+ [docs.frontity.org](https://docs.frontity.org) | https://github.com/frontity/docs | Introduction, concepts and guides
+ [api.frontity.org](https://api.frontity.org) | https://github.com/frontity/api-reference | API Reference
+ [tutorial.frontity.org](https://tutorial.frontity.org) | https://github.com/frontity/step-by-step-tutorial | Step by Step guide
+
+
 Any and all help is very much appreciated!
 
 The following describes how to contribute to the Frontity documentation.
@@ -33,16 +41,25 @@ available at [http://contributor-covenant.org/version/1/4](http://contributor-co
 
 ## Platform
 
-We use [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our [`gitbook-docs`](https://github.com/frontity/docs/) repository (every time the `master` branch is updated the whole [documentation site](https://docs.frontity.org/) is rebuilt).
+We use [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our docs repositories 
+
+Docs Site | Repository | Description
+---------|----------|---------
+ [docs.frontity.org](https://docs.frontity.org) | https://github.com/frontity/docs | Introduction, concepts and guides
+ [api.frontity.org](https://api.frontity.org) | https://github.com/frontity/api-reference | API Reference
+ [tutorial.frontity.org](https://tutorial.frontity.org) | https://github.com/frontity/step-by-step-tutorial | Step by Step guide
+
+
+Every time the `master` branch of each repo is updated the whole documentation site is rebuild
 
 ![github-gitbook-connection](docs/.gitbook/assets/github-gitbook-connection.png)
 
-This `gitbook-docs` repository is the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/docs/tree/master) branch).
+This docs repositories are the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/docs/tree/master) branch).
 
  
 ## Documentation Format
 
-The documents in the `gitbook-docs` repository use [**Markdown syntax**](https://docs.gitbook.com/editing-content/markdown) to add format and structure to the texts.
+The documents in the different docs repositories use [**Markdown syntax**](https://docs.gitbook.com/editing-content/markdown) to add format and structure to the texts.
 
 > If you want to know more about Markdown then take a look at:
 > - https://commonmark.org/help/

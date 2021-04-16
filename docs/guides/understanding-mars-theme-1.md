@@ -9,10 +9,10 @@ Mars theme is our starter theme and is installed by default on `frontity create`
 > If you yet don't understand the structure of a Frontity project, please read our guide [Understanding a Frontity project](understanding-mars-theme.md).
 
 {% hint style="info" %}
+
 Have a look at this Frontity Talk where we talk about the `mars-theme`:
 
 * 📺 [Frontity Talks 2020-04 - mars-theme \[27:52\]](https://www.youtube.com/watch?v=e6n1j4gwFjQ&t=1672s)
-{% endhint %}
 
 ## Frontity Utilities
 
@@ -23,7 +23,7 @@ For example, our state manager `@frontity/connect` exposes a utility called `con
 ```jsx
 import { connect, styled } from "frontity";
 
-const HelloWorld = () => <Container>Hello World!</Container>
+const HelloWorld = () => <Container>Hello World!</Container>;
 
 export default connect(HelloWorld);
 
@@ -55,19 +55,19 @@ const marsTheme = {
       menu: [],
       featured: {
         showOnList: false,
-        showOnPost: false
-      }
-    }
+        showOnPost: false,
+      },
+    },
   },
   // The actions that the extension needs to create in order to work.
   // In our case, `mars-theme` doesn't export any actions.
   actions: {},
   // The libraries that the extension needs to create in order to work.
   // In our case, `mars-theme` doesn't export any actions.
-  libraries: {}
+  libraries: {},
 };
 
-export default marsTheme
+export default marsTheme;
 ```
 
 In each part of the exported object, what the extension defines needs to be inside its `namespace`. In our case, all the things we are defining are inside the `theme` namespace, but if our theme implemented, for example, a comments solution, that state, actions, etc., should be defined inside the `comments` namespace. So, in the case of `roots`, it would be something like:
@@ -121,7 +121,7 @@ Our main React component will be `Theme`, where we are deciding what kind of vie
 
 Here you have the code of `Theme` with some comments:
 
-{% code title="theme.js" %}
+{% code title="index.js" %}
 ```jsx
 import React from "react";
 import {
@@ -236,13 +236,13 @@ const Pagination = ({ state, actions, libraries }) => {
   const nextPageLink = libraries.source.stringify({
     path,
     page: page + 1,
-    query
+    query,
   });
 
   const prevPageLink = libraries.source.stringify({
     path,
     page: page - 1,
-    query
+    query,
   });
 
   useEffect(() => {
@@ -311,7 +311,7 @@ Note that we are mapping also a prop called `className` to the `<a>` class. This
 {% code title="link.js" %}
 ```javascript
 const Link = ({ actions, link, className, children }) => {
-  const onClick = event => {
+  const onClick = (event) => {
     event.preventDefault();
     // Set the router to the new url.
     actions.router.set(link);

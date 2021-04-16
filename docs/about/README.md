@@ -27,7 +27,7 @@ One of those possibilities is to create frontend sites based on React. That’s 
 
 ## **Why WordPress and React?**
 
-As at time of writing \(April 2020\), WordPress powers [35% of all the sites](https://w3techs.com/technologies/details/cm-wordpress) on the internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
+As at time of writing \(February 2021\), WordPress powers [40% of all the sites](https://w3techs.com/technologies/details/cm-wordpress) on the internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
 
 ![](https://w3techs.com/diagram/history_technology/cm-wordpress)
 
@@ -46,7 +46,7 @@ Frontity apps require a Node.js server to run on. This runs in tandem with the W
 * Frontity requests content from the WordPress REST-API and uses it to generate the final HTML that is displayed in the browser.
 * Frontity is also capable of generating AMP pages using the same React code and CSS.
 
-![](../.gitbook/assets/frontity-architecture%20%282%29%20%281%29.png)
+![](../.gitbook/assets/frontity-architecture%20%282%29%20%288%29%20%281%29.png)
 
 **Why a different Node.js server?**
 

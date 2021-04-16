@@ -30,26 +30,29 @@ import Theme from "./components";
 
 export default {
   roots: {
-    theme: Theme
+    theme: Theme,
   },
   state: {
     theme: {
-      menu: [["Home", "/"], ["About", "/about"]],
+      menu: [
+        ["Home", "/"],
+        ["About", "/about"],
+      ],
       isMenuOpen: false,
       featuredImage: {
         showOnList: false,
-        showOnPost: false
-      }
-    }
+        showOnPost: false,
+      },
+    },
   },
   actions: {
     theme: {
       toggleMenu: ({ state }) => {
         state.theme.isMenuOpen = !state.theme.isMenuOpen;
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};
 ```
 {% endcode %}
 
@@ -63,19 +66,22 @@ export default {
   namespace: "theme",
   roots: Theme,
   state: {
-    menu: [["Home", "/"], ["About", "/about"]],
+    menu: [
+      ["Home", "/"],
+      ["About", "/about"],
+    ],
     isMenuOpen: false,
     featuredImage: {
       showOnList: false,
-      showOnPost: false
-    }
+      showOnPost: false,
+    },
   },
   actions: {
     toggleMenu: ({ state }) => {
       state.theme.isMenuOpen = !state.theme.isMenuOpen;
-    }
-  }
-}
+    },
+  },
+};
 ```
 {% endcode %}
 
@@ -152,18 +158,18 @@ It's easier to understand with some examples.
 
 ### Example: `comments`
 
-Imagine a Frontity package for WordPress native comments that exports a `Comment` in its libraries. It is called `wp-comments` but its namespaces is `comments`. It may be something like this:
+Imagine a Frontity package for WordPress native comments that exports a `Comment` in its libraries. It is called `wp-comments` but its namespace is `comments`. It may be something like this:
 
 {% code title="/packages/wp-comments/src/index.js" %}
 ```javascript
 import Comment from "./components/Comment";
 
 export default {
-    libraries: {
-        comments: {
-            Comment
-        }
-    }
+  libraries: {
+    comments: {
+      Comment,
+    },
+  },
 };
 ```
 {% endcode %}
@@ -201,13 +207,13 @@ export default {
     "my-awesome-theme",
     "@frontity/tiny-router",
     "@frontity/wp-source",
-    "@frontity/wp-comments" // <- That's it. You have native wp comments now.
-  ]
-}
+    "@frontity/wp-comments", // <- That's it. You have native wp comments now.
+  ],
+};
 ```
 {% endcode %}
 
-But what if \(and now it is when this become interesting\) users don't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
+But what if \(and now this is where things become interesting\) users don't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
 
 Then they just have to install `disqus-comments` instead:
 
@@ -218,9 +224,9 @@ export default {
     "my-awesome-theme",
     "@frontity/tiny-router",
     "@frontity/wp-source",
-    "@frontity/disqus-comments" // <- That's it. You have disqus now.
-  ]
-}
+    "@frontity/disqus-comments", // <- That's it. You have disqus now.
+  ],
+};
 ```
 {% endcode %}
 
@@ -232,7 +238,7 @@ Actually, the `theme` has no idea about what specific implementation of `comment
 
 Let's take a look at another example: two actions in the `analytics` namespace. All the packages that want to implement analytics need to have these two actions:
 
-* `actions.analytics.sendPageview`:  send a pageview to the analytics service.
+* `actions.analytics.sendPageview`: send a pageview to the analytics service.
 * `actions.analytics.sendEvent`: send an event to the analytics service.
 
 The first one, `actions.analytics.sendPageview`, is used by packages that implement `router`, each time `actions.router.set` is used.
@@ -256,27 +262,26 @@ export default connect(Post);
 {% code title="/packages/theme/src/index.js" %}
 ```jsx
 export default {
-    state: {
-        theme: {
-            shareOpen: false
-        }
+  state: {
+    theme: {
+      shareOpen: false,
     },
-    actions: {
-        theme: {
-            openShareModal: ({ state, actions }) => {
-                state.theme.shareOpen = true;
-                if (actions.analytics) {
-                  actions.analytics.sendEvent("share-modal-open");
-                }
-            }
+  },
+  actions: {
+    theme: {
+      openShareModal: ({ state, actions }) => {
+        state.theme.shareOpen = true;
+        if (actions.analytics) {
+          actions.analytics.sendEvent("share-modal-open");
         }
-    }
+      },
+    },
+  },
 };
 ```
 {% endcode %}
 
 When users open the share modal, a new event is sent to the analytics service of the `analytics` package that is installed in the **Frontity** project, no matter which one it is 🎉🎉
-
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊

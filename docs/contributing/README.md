@@ -20,8 +20,7 @@ Other reasons to contribute to open source? There are plenty of them:
 * **💪 Improve your skills and competences:** if you are looking to practice, there is always a task for you in open source projects. This will allow you improve your knowledge.
 * **🎓 Learn from mentors and share your thoughts:** it is an incredible way to share and get expertise, and it is really refreshing.
 * **🔝 Get recognition**: all your work is public so you can get more visibility and recognition from others. Apart from that, you are in the perfect spot to learn about forthcoming changes.
-* **👏 Your work matters**: you are able to make changes on a project - see how your improvements help others it is pretty gratifying. 
-* 🎁 **Get free swag:** this is a way to thank people who contribute to the project. If you make any contributions with Frontity, ask us about our free swag!
+* **👏 Your work matters**: you are able to make changes on a project - see how your improvements help others it is pretty gratifying.
 
 These are only some of the reasons, but we are aware that there are many more. We'd love to hear about your experience with open source projects, feel free to share it in [the community](https://community.frontity.org/c/community) or with us on [Twitter](https://twitter.com/frontity)!
 
