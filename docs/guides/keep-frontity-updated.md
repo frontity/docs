@@ -14,7 +14,7 @@ npm install
 ```
 
 {% hint style="info" %}
-Note that using the `-t minor` switch ensures that only minor updates will be applied. This avoids introducing potential breaking changes that a major update might introduce.
+Note that using the `-t minor` switch ensures that only minor updates will be applied. This avoids introducing potential breaking changes that a major update might introduce. [See here](https://github.com/raineorshine/npm-check-updates) for more info.
 {% endhint %}
 
 With this, **you will update your `package.json` and all your dependencies in `node_modules`**, including the Frontity packages installed in **`node_modules`**.
