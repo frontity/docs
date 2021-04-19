@@ -51,7 +51,7 @@ export default [
 
 For example, if the URL is `https://www.site-1.com/my-post` the `"site-1"` settings are loaded and if the URL is `https://www.site-2.com/category/some-cat` the `"site-2"` settings are loaded.
 
-**Multisites are encouraged to be defined always with a `match` property** so [the links can be properly processed from one site to another](https://github.com/frontity/frontity/pull/625#pullrequestreview-550228515). 
+**Multisites are encouraged to be defined always with a `match` property** so the internal links defined for the [`<Link>` component](https://api.frontity.org/frontity-packages/collections-packages/components#link) can be [properly processed from one site to another](https://github.com/frontity/frontity/pull/625#pullrequestreview-550228515). 
 
 A typical configuration of multisite with:
 -  The main site linked directly to the main domain 
