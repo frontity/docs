@@ -51,6 +51,31 @@ export default [
 
 For example, if the URL is `https://www.site-1.com/my-post` the `"site-1"` settings are loaded and if the URL is `https://www.site-2.com/category/some-cat` the `"site-2"` settings are loaded.
 
+**Multisites are encouraged to be defined always with a `match` property** so [the links can be properly processed from one site to another](https://github.com/frontity/frontity/pull/625#pullrequestreview-550228515). 
+
+A typical configuration of multisite with:
+-  The main site linked directly to the main domain 
+-  The blog site linked to a `/blog` folder below the main domain 
+
+can be defined like this...
+
+```js
+// ./frontity.settings.js
+
+export default [
+  {
+    name: "base", // main site
+    match: "(?!\/blog)",  // whatever URL that doesn't match with "/blog" 
+    ... 
+  },
+   {
+    name: "blog", // blog site
+    match: "\/blog", // whatever URL matches with "/blog" 
+    ... 
+  },
+]
+```
+
 In development, you can access a specific site using the `?frontity_name=` query, which should match the `name` specified for your site. For example, using the `frontity.settings.js` file above, to access `site-2`, you should use:
 
 ```text
