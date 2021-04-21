@@ -158,47 +158,23 @@ It's easier to understand with some examples.
 
 ### Example: `comments`
 
-Imagine a Frontity package for WordPress native comments that exports a `Comment` in its libraries. It is called `wp-comments` but its namespace is `comments`. It may be something like this:
+Take for example the [`@frontity/wp-comments`](https://api.frontity.org/frontity-packages/features-packages/wp-comments#actions-comments-submit) package which has an [`actions.comments.submit`](https://api.frontity.org/frontity-packages/features-packages/wp-comments#actions-comments-submit) method. As you can see this method is defined under the `comments` namespace.
 
-{% code title="/packages/wp-comments/src/index.js" %}
-```javascript
-import Comment from "./components/Comment";
+In the case of the `@frontity/wp-comments` package the `actions.comments.submit` is responsible for sending the content of the fields in the comment form to WordPress.
 
-export default {
-  libraries: {
-    comments: {
-      Comment,
-    },
-  },
-};
+Now, all the `theme` packages that want to submit a comments form can check if there is a package with the `comments` namespace with an `actions.comments.submit` method available. If there is, it can be used from any React component in the project to submit comment form data.
+
+```js
+// Submit the comment to the post with ID 60
+// using the values passed as the second argument.
+actions.comments.submit(60, {
+  content: "This is a comment example. Hi!",
+  authorName: "Frontibotito",
+  authorEmail: "frontibotito@frontity.com",
+});
 ```
-{% endcode %}
 
-Now, all the `theme` packages that want to include a comments section, can take a look and check if there is a `comments` package installed. If it is, they can include its React component after the post content.
-
-{% code title="/packages/my-awesome-theme/src/components/Post.js" %}
-```jsx
-const Post = ({ state, actions, libraries }) => {
-  const data = state.source.get(state.router.link);
-  const post = state.source.post[data.id];
-
-  // Check if libraries.comments exist and if it does get the Comments component.
-  const Comments = libraries.comments ? libraries.comments.Comments : null;
-
-  return (
-    <Container>
-      <Title title={post.title.rendered} />
-      <Content html={post.content.rendered} />
-      <Comments /> // <- Insert the Comments component in its place.
-    </Container>
-  );
-};
-
-export default connect(Post);
-```
-{% endcode %}
-
-Final users can use their `frontity.settings.js` to install and configure `wp-comments`:
+Users can use their `frontity.settings.js` to install and configure `wp-comments`:
 
 {% code title="frontity.settings.js" %}
 ```javascript
@@ -215,7 +191,7 @@ export default {
 
 But what if \(and now this is where things become interesting\) users don't want to use WordPress native comments but [Disqus](https://disqus.com/) comments?
 
-Then they just have to install `disqus-comments` instead:
+Then they just have to install a possible `disqus-comments` package instead:
 
 {% code title="frontity.settings.js" %}
 ```javascript
@@ -230,7 +206,7 @@ export default {
 ```
 {% endcode %}
 
-The `disqus-comments` package also exports a `Comments` component in `libraries.comments.Comments` so the theme inserts that instead.
+This possible `disqus-comments` package might define a different implementation of `actions.comments.submit` that instead of submitting the comment form data to WordPress it would instead submit it to be handled by Disqus.
 
 Actually, the `theme` has no idea about what specific implementation of `comments` you have installed. Everything works and the theme didn't need to change.
 
