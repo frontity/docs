@@ -158,7 +158,7 @@ It's easier to understand with some examples.
 
 ### Example: `comments`
 
-Take for example the [`@frontity/wp-comments`](https://api.frontity.org/frontity-packages/features-packages/wp-comments#actions-comments-submit) package which has an [`actions.comments.submit`](https://api.frontity.org/frontity-packages/features-packages/wp-comments#actions-comments-submit) method. As you can see this method is defined under the `comments` namespace.
+Take for example the [`@frontity/wp-comments`](https://api.frontity.org/frontity-packages/features-packages/wp-comments) package which has an [`actions.comments.submit`](https://api.frontity.org/frontity-packages/features-packages/wp-comments#actions-comments-submit) method. As you can see this method is defined under the `comments` namespace.
 
 In the case of the `@frontity/wp-comments` package the `actions.comments.submit` is responsible for sending the content of the fields in the comment form to WordPress.
 
