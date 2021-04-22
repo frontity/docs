@@ -46,7 +46,7 @@ Frontity apps require a Node.js server to run on. This runs in tandem with the W
 * Frontity requests content from the WordPress REST-API and uses it to generate the final HTML that is displayed in the browser.
 * Frontity is also capable of generating AMP pages using the same React code and CSS.
 
-![](../.gitbook/assets/frontity-architecture%20%282%29%20%288%29%20%281%29.png)
+![](https://frontity.org/wp-content/uploads/2021/04//frontity-architecture.png)
 
 **Why a different Node.js server?**
 
