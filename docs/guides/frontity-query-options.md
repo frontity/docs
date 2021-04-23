@@ -38,3 +38,7 @@ However packages can also make use of them, for example:
 Currently these are the only Frontity Query Options that Frontity itself uses but it's intended that more will be added in the future. However, you can also add your own Frontity Query Options if you want to use them in your package or theme.
 {% endhint %}
 
+{% hint style="info" %}
+**Please note:** Frontity Query Options should be treated as untrusted user input and should never ever be passed as parameters to arbitrary functions.
+{% endhint %}
+
