@@ -42,7 +42,7 @@ If you want to know more about what Serverless means you should check out [this 
 You will need to have two different domains, or a separate sub-domain on your existing domain:
 
 * One for the WordPress dashboard
-* And the other one to show the content retrieved from the API. 
+* And the other one to show the content retrieved from the API.
 
 **💡 Recommendation:**
 
@@ -52,6 +52,8 @@ You will need to have two different domains, or a separate sub-domain on your ex
    Using a subdomain will prevent you from buying a new one.
 
    You could use, for example, **wp.mydomain.com**
+
+Hint: https://wordpress.org/support/article/moving-wordpress/#changing-your-domain-name-and-urls
 
 {% hint style="info" %}
 In case you use WordPress.com, you can use **mydomain.wordpress.com** to manage your content and point Frontity to **www.mydomain.com**.
