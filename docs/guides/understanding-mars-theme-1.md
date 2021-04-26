@@ -300,34 +300,6 @@ const Post = ({ state, actions }) => {
 ```
 {% endcode %}
 
-### Link component
-
-The `Link` component will use `@frontity/tiny-router` to handle the navigation within the app. It will render the children passed to it inside an `<a>`. It will populate the `href` attribute so the link still works even if JavaScript is not available, which will provoke a call to the server and get the next page server-side rendered.
-
-However, if JS is available, we are overriding the anchor behaviour with an `onClick` function. Inside that function, we are fetching the data needed to render our destination with `source.fetch(path)` and we are setting the URL to the new route with `router.set(path)`.
-
-Note that we are mapping also a prop called `className` to the `<a>` class. This is done in case we want to style `Link`, e.g.: ```const StyledLink = styled(Link)``;```.
-
-{% code title="link.js" %}
-```javascript
-const Link = ({ actions, link, className, children }) => {
-  const onClick = (event) => {
-    event.preventDefault();
-    // Set the router to the new url.
-    actions.router.set(link);
-    // Move scroll to the top.
-    window.scrollTo(0, 0);
-  };
-
-  return (
-    <a href={link} onClick={onClick} className={className}>
-      {children}
-    </a>
-  );
-};
-```
-{% endcode %}
-
 ### Defining the theme state
 
 The last thing that might need to be explained is how we define `state` for our extension in order to use it within React and be able to set it with a `frontity.settings` file in a Frontity project.

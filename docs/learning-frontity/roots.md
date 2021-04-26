@@ -56,7 +56,7 @@ Usually, a React app injects it's code in a `<div>` of the body, like this:
 
 Most of the time only your `theme` will export a **root**, but if any other package needs something in the DOM, it can include it also. For example, let's imagine a _ShareModal_ package that has a modal like this:
 
-![](../.gitbook/assets/screenshot-blog-mobile-share%20%281%29%20%286%29.jpg)
+![](https://frontity.org/wp-content/uploads/2021/04//screenshot-blog-mobile-share.jpg)
 
 This package can export the React elements it needs in its **root** and expose an action like `actions.share.openModal()` to interact with the theme.
 
@@ -100,7 +100,7 @@ export default {
 
 Then the only thing the theme would have to do if they want to include share functionality is to check if there's a `share` package and if there is, use its `actions.share.openModal()` action when appropriate. For example in these buttons:
 
-![](../.gitbook/assets/screenshot-mobile-share%20%288%29%20%284%29.jpg)
+![](https://frontity.org/wp-content/uploads/2021/04//screenshot-mobile-share.jpg)
 
 I hope you're starting to see how extensibility works in **Frontity**, but don't worry too much now, we'll talk in more detail later.
 
