@@ -14,7 +14,7 @@ Any and all help is very much appreciated!
 
 The following describes how to contribute to the Frontity documentation.
 
-If you're stuck at any point, **don't hesitate to use our [Community Forum](https://community.frontity.org/c/docs-and-tutorials)** to ask for help or make your suggestions.
+If you're stuck at any point, **don't hesitate to use our [Community Forum](https://community.frontity.org/c/framework-development/docs-and-tutorials/29)** to ask for help or make your suggestions.
 
 
 ## What Does this Document Contain?
@@ -52,7 +52,7 @@ Docs Site | Repository | Description
 
 Every time the `master` branch of each repo is updated the whole documentation site is rebuild
 
-![github-gitbook-connection](docs/.gitbook/assets/github-gitbook-connection.png)
+![github-gitbook-connection](https://frontity.org/wp-content/uploads/2021/04/github-gitbook-connection.png)
 
 This docs repositories are the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/docs/tree/master) branch).
 
