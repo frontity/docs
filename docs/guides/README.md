@@ -12,6 +12,10 @@ _This guide highlight some basic WordPress requirements needed for Frontity proj
 
 ### [Frontity Query Options](frontity-query-options.md)
 
+_This guide explains what "link prefetching" is and how to use it in Frontity._
+
+### [Link prefetching](link-prefetching.md)
+
 _This guide explains what "Frontity Query Options" are and how to use them._
 
 ### [Redirections with Frontity](redirections-with-frontity.md)
