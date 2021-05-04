@@ -32,11 +32,15 @@ In addition to `prefetch` the `rel` attribute of the `<link>` element can take d
 Care should be taken when implementing prefetching and consideration should be given to the likelihood that the document or asset will be needed in the near future, i.e. how likely it is that a particular link will be the next one to be clicked.
 {% endhint %}
 
-## The <Link> component
+## Implementing link prefetching strategies with Frontity
 
 For JavaScript based SPA applications such as Frontity the situation is slightly different. No additional elements are needed in the markup, and the prefetching is performed with JavaScript. In such cases data is prefetched and stored in the application's "state".
 
-Frontity's [`<Link />` component](https://api.frontity.org/frontity-packages/collections-packages/components#link) supports this type of prefetching. The prefetching strategy that it adopts is determined by the value of the property `state.theme.autoPrefetch`.
+We will describe two methods for implementing link prefetching in Frontity. The first will use the `<Link />` component provided by Frontity. The second will demonstrate how to create your own component implementing link prefetching.
+
+### Frontity's <Link> component
+
+Frontity's [`<Link />` component](https://api.frontity.org/frontity-packages/collections-packages/components#link) supports prefetching. The prefetching strategy that it adopts is determined by the value of the property `state.theme.autoPrefetch`.
 
 The possible values for `state.theme.autoPrefetch` are:
 
@@ -66,6 +70,12 @@ const settings = {
 };
 ```
 
+A component that uses Frontity's `<Link />` component should import it from `@frontity/components`:
+
+```js
+import Link from "@frontity/components/link";
+```
+
 Here is a short video demonstrating prefetching with Frontity's `<Link>` component:
 
 {% embed url="https://www.youtube.com/watch?v=EUt8x5oglmI" caption="" %}
@@ -74,7 +84,7 @@ Here is a short video demonstrating prefetching with Frontity's `<Link>` compone
 **Note that** for links present in the content to benefit from the prefetching strategy of the `<Link>` component the content should be processed by the [`html2react` package](https://api.frontity.org/frontity-packages/features-packages/html2react). See [this page](https://tutorial.frontity.org/part7-finishing-touches/use-the-html2react-component) in our tutorial for a detailed example illustrating the steps that need to be taken.
 {% endhint %}
 
-## Creating your own link component with prefetching
+### Creating your own link component with prefetching
 
 If you wish to create your own link component that also implements auto-prefetching based on the value of a `state.theme.autoPrefetch` property then a possible implementation could look like this:
 
