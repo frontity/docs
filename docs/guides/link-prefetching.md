@@ -38,7 +38,7 @@ For JavaScript based SPA applications such as Frontity the situation is slightly
 
 We will describe two methods for implementing link prefetching in Frontity. The first will use the `<Link />` component provided by Frontity. The second will demonstrate how to create your own component implementing link prefetching.
 
-### Frontity's <Link> component
+### Frontity's `<Link>` component
 
 Frontity's [`<Link />` component](https://api.frontity.org/frontity-packages/collections-packages/components#link) supports prefetching. The prefetching strategy that it adopts is determined by the value of the property `state.theme.autoPrefetch`.
 
