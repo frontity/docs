@@ -2,7 +2,7 @@
 
 In this section we present a selection of guides that will help you to both work with, and to better understand, a variety of topics related to Frontity.
 
-### [Setting the URL of the WordPress data source](setting-url-wordpress-source-data.md)
+### [Setting the URL of the WordPress data source](setting-url-wordpress-source-data.md) ![](https://img.shields.io/badge/WORDPRESS-207399.svg) ![](https://img.shields.io/badge/SOURCE-0C7C59.svg)
 
 _This guide outlines the various different WordPress configuration scenarios that you might encounter and what needs to be taken into account in order to properly set the URL of the WordPress data source._
 
