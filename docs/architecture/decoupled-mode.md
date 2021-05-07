@@ -34,6 +34,8 @@ Faster execution - just a single call in SSR is made to the WP REST API, with no
 
 The Frontity app can be distributed across a network of CDN servers.
 
+Your WordPress site is more secure as it's not on the public-facing domain.
+
 ## Considerations to take into account
 
 For existing WP sites the domain will need changing. You will therefore need to change the `WordPress Address` and the 'Site Address' in the "Settings" page of the WordPress admin. Any URLs in the content stored in the database will also need to be updated to reflect the new domain.
