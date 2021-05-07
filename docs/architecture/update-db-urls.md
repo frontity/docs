@@ -12,7 +12,7 @@ To change the URLs in the content stored in the database you can use a plugin su
 
 You can also update the links manually by running the following SQL commands using either `phpMyAdmin` or an application such as [Sequel Pro](https://www.sequelpro.com/) or [Sequel Ace](https://sequel-ace.com/).
 
-% hint style="warn" %}
+{% hint style="warn" %}
 **IMPORTANT!!!** Before running the commands below ensure that you have **a backup of your database**!
 {% endhint %}
 
