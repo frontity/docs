@@ -1,6 +1,6 @@
 # Update the URLs in the content
 
-If you are using Frontity in [**Decoupled Mode](decoupled-mode.md) and are migrating an existing WordPress site to Frontity then you will need to change the URL of your WordPress site. You will need to do this as the primary domain (i.e. the one that site visitors use) will point to the Frontity site.
+If you are using Frontity in [**Decoupled Mode**](decoupled-mode.md) and are migrating an existing WordPress site to Frontity then you will need to change the URL of your WordPress site. You will need to do this as the primary domain (i.e. the one that site visitors use) will point to the Frontity site.
 
 You will therefore need to change the `WordPress Address` and the 'Site Address' in the "Settings" page of the WordPress admin. Any URLs in the content stored in the database will also need to be updated to reflect the new domain.
 
