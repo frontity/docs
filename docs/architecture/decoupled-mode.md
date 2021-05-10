@@ -60,6 +60,8 @@ If your site has special requirements, i.e. it needs custom code such as plugins
 
 If the functional requirements of your site fall within the restrictions imposed by wordpress.com then we recommend using that for your WordPress hosting. Frontity allows you to create a custom theme separate from the ones allowed by wordpress.com.
 
+To prevent your WordPress site from being accessed, and to direct all non-authorised traffic to the Frontity site, we recommend the [Headless Mode plugin](https://wordpress.org/plugins/headless-mode/).
+
 ### Node.js
 
 For node.js we recommend that you choose a [serverless](https://about.gitlab.com/topics/serverless/) solution as it will make it cheap, easy and infinitely scalable.
