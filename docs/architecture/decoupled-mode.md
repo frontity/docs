@@ -85,8 +85,3 @@ The addition of a [cache for the REST API](https://wordpress.org/plugins/wp-rest
 {% hint style="info" %}
 If you want to know more about what Serverless means you should check out [this article](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9).
 {% endhint %}
-
-{% hint style="info" %}
-Still have questions? Ask in the [community](https://community.frontity.org)!
-{% endhint %}
-

@@ -67,8 +67,3 @@ For node.js we recommend that you choose a [serverless](https://about.gitlab.com
 ### Caching
 
 Caches for both [WordPress]((https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/)) and for [the REST API](https://wordpress.org/plugins/wp-rest-cache/) are strongly recommended).
-
-
-{% hint style="info" %}
-Still have questions? Ask in the [community](https://community.frontity.org)!
-{% endhint %}

@@ -72,7 +72,3 @@ Whereas [a WordPress cache](https://www.wpbeginner.com/plugins/best-wordpress-ca
 Since, in embedded mode, the Frontity site is never directly accessed the secondary domain can be anything - including free domains allocated by the node.js hosting service.
 
 Furthermore, since in decoupled mode site visitors do not access the WordPress site directly a wordpress.com site with a your-site.wordpress.com type of address can be used if it's sufficient for your purposes. More complex backends may require a self-hosted wordpress.org site.
-
-{% hint style="info" %}
-Still have questions? Ask in the [community](https://community.frontity.org)!
-{% endhint %}
