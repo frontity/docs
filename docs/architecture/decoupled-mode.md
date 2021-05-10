@@ -6,18 +6,18 @@ In **Decoupled mode** the primary domain points to the nodejs server, or serverl
 
 This architecture requires:
 
-- two servers
-- two domains (or a domain and a sub-domain)
+- **two servers**
+- **two domains** (or a domain and a sub-domain)
 
 The two servers that are required are:
 
-- Apache/nginx + PHP (for WordPress)
-- Node.js/serverless function (for Frontity)
+- **Apache/nginx + PHP** - for WordPress
+- **Node.js/serverless function** - for Frontity
 
 You will also need two domains:
 
-- a primary domain - for the node.js server hosting Frontity
-- a secondary domain - for the Apache/nginx + PHP server hosting WordPress
+- **a primary domain** - for the node.js server hosting Frontity
+- **a secondary domain** - for the Apache/nginx + PHP server hosting WordPress
 
 In this mode site visitors access the site using the primary domain and are served HTML pages directly from Frontity. The secondary domain is used by content editors to access the WordPress admin pages.
 

@@ -4,18 +4,18 @@ In **Embedded mode** the primary domain points to the WordPress installation. Fr
 
 This architecture requires:
 
-- two servers
-- two domains (or a domain and a sub-domain)
+- **two servers**
+- **two domains** (or a domain and a sub-domain)
 
 The two servers that are required are:
 
-- Apache/nginx + PHP (for WordPress)
-- Node.js/serverless function (for Frontity)
+- **Apache/nginx + PHP** - for WordPress
+- **Node.js/serverless function** - for Frontity
 
 You will also need two domains:
 
-- a primary domain - for the Apache/nginx + PHP server hosting WordPress
-- a secondary domain - for the node.js server hosting Frontity
+- **a primary domain** - for the Apache/nginx + PHP server hosting WordPress
+- **a secondary domain** - for the node.js server hosting Frontity
 
 In this mode both site visitors and content editors use the same domain, i.e. the primary domain, to either visit the site or access the WordPress admin pages. The Frontity server on the secondary domain is never directly accessed.
 
@@ -25,9 +25,9 @@ This plugin uses a configuration setting that identifies the location of the Fro
 
 However, before Frontity can deliver the HTML it must request the content from the WordPress REST API, necessitating a two stage round trip. Caching is therefore a necessity in this architecture to ensure that site performance is optimal.
 
-## Advantages of Decoupled Mode
+## Advantages of £mbedded Mode
 
-Embedded Mode offers several advantages over Decoupled Mode.
+Embedded Mode offers a number of advantages over Decoupled Mode.
 
 - The WordPress site exists under the primary domain, thus ensuring that:
   - all the SEO benefits already built in to WordPress work as normal
@@ -45,28 +45,28 @@ In addition, since the Frontity site is never directly accessed the secondary do
 
 Embedded mode requires an additional plugin, namely the [Frontity embedded mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode).
 
-Will not work with wordpress.com sites as a plugin is required. Requires self-hosted wordpress.org based site.
+Embedded mode will not work with wordpress.com sites as a plugin is required. It requires a self-hosted wordpress.org based site.
 
-The two stage round trip means that caching is required to optimise performance - a REST API cache is strongly recommended.
+Slower execution - embedded mode is potentially slower than decoupled mode as Frontity requests the data from WP's REST API and returns the HTML to WordPress, and WordPress in turn serves it to the browser. This means that there are two transfers of data so caching is necessary to optimise performance. Caches for both [WordPress]((https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/)) and for [the REST API](https://wordpress.org/plugins/wp-rest-cache/) are strongly recommended).
 
-Slower execution - Frontity requests the data from WP's REST API and returns the HTML to WordPress which serves it to the browser
-  - two data transfers
-	- cache required (both normal and REST caches recommended)
+Frontity still needs to be hosted on a separate node server/serverless function (albeit on any domain you like including default domains provided by the hosting provider).
 
-- Frontity still needs to be hosted on a separate node server/serverless function (albeit on any domain you like including default domains provided by the hosting provider)
-- WordPress still needs to go through it's [bootstrap process](https://wordpress.tv/2017/06/22/alain-schlesser-demystifying-the-wordpress-bootstrap-process/) on initial page load
-- more routing is involved (WordPress makes a call to Frontity which returns the HTML to WordPress) so **a caching plugin is a necessity** rather than simply a nice to have.
+WordPress still needs to go through it's [bootstrap process](https://wordpress.tv/2017/06/22/alain-schlesser-demystifying-the-wordpress-bootstrap-process/) on initial page load.
 
 
 ## Recommendations
 
 ### WordPress
 
+A self-hosted wordpress.org site is needed. If you have an existing WordPress site that you're transitioning to Frontity we recommend that you continue using your existing hosting.
+
 ### Node.js
+
+For node.js we recommend that you choose a [serverless](https://about.gitlab.com/topics/serverless/) solution as it will make it cheap, easy and infinitely scalable.
 
 ### Caching
 
-
+Caches for both [WordPress]((https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/)) and for [the REST API](https://wordpress.org/plugins/wp-rest-cache/) are strongly recommended).
 
 
 {% hint style="info" %}
