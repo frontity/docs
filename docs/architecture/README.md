@@ -1,59 +1,61 @@
 # 🏗 Architecture
 
-## Introduction
+In Frontity projects, WordPress is used as a [headless CMS](https://css-tricks.com/what-is-a-headless-cms/) and _Frontity uses the WP REST-API to generate the final HTML_ that is displayed in the browser. This means that WordPress is merely used for managing the content.
 
-With Frontity, WordPress is used as a [headless CMS](https://css-tricks.com/what-is-a-headless-cms/) and Frontity generates the final HTML that is displayed in the browser. This means that WordPress is merely used for managing the content.
+Frontity runs a Node.js web server while WordPress requires a PHP server to work.
 
-- Frontity uses the WordPress REST-API to retrieve content and it then generates the final HTML
-- Frontity is also able to generate AMP pages with the same React code and CSS
-
-There are two possible architectures, or configurations, when using Frontity:
+Taking this into account, there are two main **Frontity Modes** (architectures or configurations), recommended for Frontity projects:
 
 - [Decoupled mode](decoupled-mode.md)
 - [Embedded mode](embedded-mode.md)
 
-With both of these two possible architectures you will require:
+Both of these architectures will require **two different servers** with **two different URLs** but the communication workflow between these two servers is different in each case
 
-- two servers
-- two domains (or a domain and a sub-domain)
+| Decoupled Mode | Embedded Mode |
+| --- | ---- |
+| ![](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png) | ![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png) |   
 
-### Servers
+## Servers and Domains
 
-In either case you will need two servers:
+A Frontity project will always require two servers:
 
-- Apache/nginx + PHP _(for WordPress)_
-- Node.js/serverless function _(for Frontity)_
+- A **WordPress Server (PHP)**
+  - Apache or Nginx web server running PHP
+  - Hosted software-as-a-service (SaaS) platform with WordPress such as WordPress.com
+- A **Frontity Server (Node.js)**
+  - Server running Node.js
+  - Hosted function-as-a-service (FaaS) platform allowing serverless computing such as AWS Lambda or Netlify functions
 
-One server will be the "main" server that delivers the site to the end user, the other will be a supporting, or "auxiliary" server. Which is the main server and which is the auxiliary server will depend on which of the two possible architectures is being used.
 
-### Domains
+Depending on the mode, the **primary domain** will be connected to the Wordpress/PHP Server (Embedded) or to the Frontity/Node.js server (Decoupled). The primary domain is the one used by users to access the HTML of the site.
 
-In either of the two architectures you will also need two domains:
+The other server will get a secondary role and its domain can be either a separate domain or a sub-domain of the primary domain.
 
-- a primary domain - _for the "main" server_
-- a secondary domain - _for the "auxiliary" server_
+## Caching
 
-In both the decoupled and embedded architectures the primary domain will be point to the main server, i.e. the one that the site visitor uses to access the public part of the site, and the secondary domain will point to the auxiliary server, i.e. the one that is not directly publicly accessible.
+With a good CDN caching strategy your Frontity project can be as performant as a static site. In Decoupled Mode there are two types of requests that can be cached to minimize the computing time and to take advantage of the proximity of CDN servers:
 
-The secondary domain can be either a separate domain or a sub-domain of the primary domain.
+- **URL requests**: Any URL of your Frontity site
+- **REST API requests**: Any endpoint of your Frontity site
 
-## Comparison of the architectures
 
-In this section we'll look at both the similarities in, and the differences between, these two possible architectures in order to compare them one against the other.
+## Overview of Frontity Modes
 
-### Similarities
+Any Frontity architecture (Decoupled or Embedded Mode) features:
 
-Both architectures feature:
-
-- a similar distribution of functionality across the servers
+- A _similar distribution of functionality across the servers_
   - WordPress is used as a CMS - to manage the content
   - Frontity is responsible for the presentation
 
-- similar operation
+- A _similar operation_
   - Frontity fetches the data from the WordPress REST API
   - Frontity generates the final HTML
 
-It is recommended that there should be [a WordPress cache](https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/) in both architectures.
+{% hint style="info" %}
+A [WordPress cache plugin](https://wordpress.org/plugins/simple-cache/) is recommended to cache the REST API requests in both architectures. 
+{% endhint %}
+
+
 
 ### Differences
 
