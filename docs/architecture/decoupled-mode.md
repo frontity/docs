@@ -2,12 +2,19 @@
 
 In **Decoupled mode** the _primary domain points to the Node.js server hosting Frontity_. This is the site that visitors access directly in order to view the content.
 
-![](../.gitbook/assets/frontity-architecture%20%282%29%20%288%29%20%288%29.png)
+Frontity will fetch the data from the REST API of the WordPress Server and will return the final HTML as an [Isomorphic](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905) React App
 
-[A Frontity architecture requires 2 servers](README.md#servers-and-domains). In this decoupled mode we have:
+![](https://frontity.org/wp-content/uploads/2021/04/frontity-architecture.png)
 
-- A main domain pointing to the Frontity Server (Node.js)
-- A secondary URL (or subdomain) pointing to the WordPress Server (PHP)
+Any Frontity architecture requires 2 servers. In this Decoupled Mode we have:
+
+- A **main domain** pointing to the **Frontity Server**
+  - Server running Node.js
+  - Hosted function-as-a-service (FaaS) platform allowing serverless computing such as AWS Lambda or Netlify functions
+
+- A **secondary URL** (or subdomain) pointing to the **WordPress Server**
+  - Apache or Nginx web server running PHP
+  - Hosted software-as-a-service (SaaS) platform with WordPress such as WordPress.com
 
 In this mode site visitors access the site using the primary domain and are served HTML pages directly from Frontity. The secondary domain is used by content editors to access the WordPress admin pages.
 
@@ -19,6 +26,17 @@ Frontity fetches data from the REST API located on the secondary domain, i.e. th
 The `state.source.url` property set in the `frontity.settings.js` file [configures the URL of the WordPress installation](../guides/setting-url-wordpress-source-data.md).
 {% endhint %}
 
+## Table of Contents
+
+<!-- toc -->
+
+- [Features of the Decoupled Mode](#features-of-the-decoupled-mode)
+    + [Technical considerations](#technical-considerations)
+- [Caching in Decoupled Mode](#caching-in-decoupled-mode)
+  * [Cache for URL requests](#cache-for-url-requests)
+  * [Cache for REST API requests](#cache-for-rest-api-requests)
+
+<!-- tocstop -->
 
 ## Features of the Decoupled Mode
 
