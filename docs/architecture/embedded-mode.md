@@ -1,6 +1,7 @@
 # Embedded Mode
 
-In **Embedded mode** the primary domain points to the WordPress installation. Frontity is on a non-public-facing secondary domain.
+In **Decoupled mode** the _primary domain points to the Node.js server hosting Frontity_. This is the site that visitors access directly in order to view the content.
+
 
 This architecture requires:
 
@@ -67,3 +68,7 @@ For node.js we recommend that you choose a [serverless](https://about.gitlab.com
 ### Caching
 
 Caches for both [WordPress]((https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/)) and for [the REST API](https://wordpress.org/plugins/wp-rest-cache/) are strongly recommended).
+
+
+
+![](https://frontity.org/wp-content/uploads/2021/05/embedded-mode-features-cache.png)
