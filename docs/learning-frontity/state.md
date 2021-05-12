@@ -9,23 +9,25 @@ The next thing we should look at is the `state`.
 We have defined it previously as _**"**A JavaScript object containing all the state exposed by your package"_. For example:
 
 {% code title="/packages/my-awesome-theme/src/index.js" %}
+
 ```javascript
 export default {
   state: {
     theme: {
       menu: [
         ["Home", "/"],
-        ["About", "/about"]
+        ["About", "/about"],
       ],
       featuredImage: {
         showOnList: true,
-        showOnPost: false
+        showOnPost: false,
       },
       isMenuOpen: false,
-    }
-  }
-}
+    },
+  },
+};
 ```
+
 {% endcode %}
 
 As you can see here, this theme needs some settings like the `menu` or settings to define if it should show featured images or not, and then some state that is useful while the app is running, like `isMenuOpen`.
@@ -38,20 +40,21 @@ You can access the state in the client console with:
 
 State is a proxy, so you can see the original object clicking on `[[Target]]` :
 
-![Expand \[\[Target\]\] to see the real object behind the proxy.](../.gitbook/assets/screen-shot-2019-07-03-at-10.56.34%20%283%29%20%286%29%20%283%29.png)
+![Expand \[\[Target\]\] to see the real object behind the proxy.](https://frontity.org/wp-content/uploads/2021/04//state-is-a-proxy.png)
 
 ## Why not separate settings and state?
 
 First, here at Frontity we think the less concepts the better. Second, imagine a `notifications` package wants to add an item to the `menu` only when the browser actually supports notifications. That's super easy to do by just using the `state`:
 
 {% code title="/packages/my-notifications-package/src/index.js" %}
+
 ```javascript
 export default {
   actions: {
     notifications: {
       init: ({ state }) => {
         // Only run this in the browser:
-        if (state.frontity.platform === "client") { 
+        if (state.frontity.platform === "client") {
           // Only add item to the menu if browser support notifications:
           if ("Notification" in window) {
             state.theme.menu.push(["Notifications", "/notification-settings"]);
@@ -61,6 +64,7 @@ export default {
     }
   }
 ```
+
 {% endcode %}
 
 As you can see, packages can access the state exposed by other packages.
@@ -70,16 +74,18 @@ Finally, what if you decide that the app should be run with the menu open by def
 Another good example of `state` is `tiny-router`. It exposes three props:
 
 {% code title="/packages/tiny-router/src/index.js" %}
+
 ```javascript
 export default {
   state: {
     router: {
       link: "/",
       autoFetch: true,
-    }
-  }
-}
+    },
+  },
+};
 ```
+
 {% endcode %}
 
 Here `link` represents the current URL of your app and it changes when you use the action `actions.router.set("/other-url")`in your theme.
@@ -87,6 +93,7 @@ Here `link` represents the current URL of your app and it changes when you use t
 If we were to create an analytics package, we could use `state.router.link` when sending pageviews:
 
 {% code title="/packages/my-analytics-package/src/index.js" %}
+
 ```javascript
 export default {
   actions: {
@@ -95,11 +102,12 @@ export default {
         ga('send', {
           hitType: 'pageview',
           page: state.router.link
-        });    
+        });
       }
     }
   }
 ```
+
 {% endcode %}
 
 Finally, `tiny-router` exposes a third prop called `autoFetch`. This is a setting and, by default, is `true`. If it's active, it fetches the data you need each time you navigate to a new route using: `actions.router.set(link)`.
@@ -107,21 +115,23 @@ Finally, `tiny-router` exposes a third prop called `autoFetch`. This is a settin
 Here the most common scenario is that you will use your `frontity.settings.js` file to set `autoFetch` to `false` when you want to control the fetching yourself:
 
 {% code title="frontity.settings.js" %}
+
 ```javascript
 export default {
   packages: [
-    ...
+    ...,
     {
       name: "@frontity/tiny-router",
       state: {
         router: {
-          autoFetch: false
-        }
-      }
-    }
-  ]
-}
+          autoFetch: false,
+        },
+      },
+    },
+  ],
+};
 ```
+
 {% endcode %}
 
 These are the most important things you need to know about the **Frontity** state:
@@ -132,12 +142,12 @@ Only objects, arrays and primitives \(strings, numbers...\) are allowed in the `
 
 Actually, it is converted to a JSON when it's sent to the client. We'll talk later about how server-side Rendering works, but it is something like this:
 
-![](../.gitbook/assets/screen-shot-2019-06-03-at-12.37.12%20%283%29%20%281%29%20%285%29.png)
+![](https://frontity.org/wp-content/uploads/2021/04//server-side-client-side.png)
 
 First, this is what Frontity does in the server:
 
 1. It gets the settings of the current site from `frontity.settings.js`.
-2. It merges the state exposed by each package with the state from `frontity.settings.js`. 
+2. It merges the state exposed by each package with the state from `frontity.settings.js`.
 3. It gives each package the opportunity to populate `state` with an async `beforeSSR` action. SSR stands for server-side Rendering. This is usually used to fetch content from the WP REST API.
 4. It renders React using that initial state.
 5. It sends both the HTML generated by React and the initial state to the client.
@@ -155,12 +165,13 @@ As we've seen in the previous point, the states from `frontity.settings.js` and 
 Let's imagine we have this setting file:
 
 {% code title="frontity.settings.js" %}
+
 ```javascript
 export default {
   state: {
     frontity: {
       url: "https://my-site.com",
-    }
+    },
   },
   packages: [
     "@frontity/wp-source",
@@ -170,26 +181,28 @@ export default {
         theme: {
           featuredImage: {
             showOnList: true,
-          }
-        }
-      }
+          },
+        },
+      },
     },
     {
       name: "@frontity/tiny-router",
       state: {
         router: {
-          autoFetch: false
-        }
-      }
-    }
-  ]
-}
+          autoFetch: false,
+        },
+      },
+    },
+  ],
+};
 ```
+
 {% endcode %}
 
 First, the states from `my-awesome-theme`, `tiny-router` and `wp-source` get merged:
 
 {% code title="" %}
+
 ```javascript
 state: {
   theme: {
@@ -210,11 +223,13 @@ state: {
   }
 }
 ```
+
 {% endcode %}
 
 Then, the state from `frontity.settings.js` file gets merged:
 
 {% code title="" %}
+
 ```javascript
 state: {
   frontity: {
@@ -238,25 +253,29 @@ state: {
   }
 }
 ```
+
 {% endcode %}
 
 Then Frontity executes `beforeSSR` to give each package the opportunity to modify the state. For example, the theme could use it to fetch content from the REST API:
 
 {% code title="/packages/my-awesome-theme/src/index.js" %}
+
 ```javascript
 actions: {
-    theme: {
-      beforeSSR: async ({ state, actions }) => {
-        await actions.source.fetch(state.router.link);
-      }
-    }
+  theme: {
+    beforeSSR: async ({ state, actions }) => {
+      await actions.source.fetch(state.router.link);
+    };
   }
+}
 ```
+
 {% endcode %}
 
 This populates `source` with some data. For example, if the URL is `/my-post`:
 
 {% code title="" %}
+
 ```javascript
 state: {
   ...,
@@ -266,7 +285,7 @@ state: {
         type: "post",
         id: 123,
         isPost: true
-      }  
+      }
     },
     post: {
       123: {
@@ -281,6 +300,7 @@ state: {
   }
 }
 ```
+
 {% endcode %}
 
 Now everything is ready for the React render in the server!
@@ -367,7 +387,7 @@ state: {
 
 That's it! Now when you use `state.share.totalCount` in React everything will be updated without having to do anything additional on your end.
 
-You can also use them with parameters like this:
+You can also use derived state with additional custom parameters. Such a function works like a "getter" for a piece of state:
 
 ```javascript
 state: {
@@ -393,11 +413,30 @@ state: {
 }
 ```
 
-And then consumed like this: `state.share.totalCountByRoute("/my-first-post")`, so you should be able to create **derived state** pretty much for anything.
+And then consumed like this: `state.share.totalCountByRoute("/my-first-post")`, so you should be able to create **derived state** for pretty much anything.
+
+Additionally, Frontity gives you access to both `state` as well as [`libraries`]('./libraries) in your derived state:
+
+```javascript
+state: {
+  share: {
+    data: {
+      "/my-first-post": {
+        "facebook": 15,
+        "twitter": 12,
+      },
+      ...
+    },
+    // `html2react.processors` comes from the @frontity/html2react package.
+    processorsCount: ({ state, libraries }) => {
+      return libraries.html2react.processors.length;
+    };
+  }
+}
+```
 
 These **derived state functions** are stripped out from the initial state we send to the client but don't worry, they are reinstantiated later in the client by Frontity to ensure everything is back to normal :\)
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
 {% endhint %}
-

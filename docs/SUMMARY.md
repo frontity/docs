@@ -34,6 +34,7 @@
   * [Understanding a Frontity project](guides/understanding-mars-theme.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
   * [Frontity Query Options](guides/frontity-query-options.md)
+  * [Link prefetching](guides/link-prefetching.md)
   * [Redirections with Frontity](guides/redirections-with-frontity.md)
   * [Keep Frontity Updated](guides/keep-frontity-updated.md)
   * [SEO](guides/seo.md)

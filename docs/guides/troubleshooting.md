@@ -38,7 +38,7 @@ It may be because your WP doesn't have permalinks activated \(which is a requisi
 
 From your WP, go to `Settings -> Permalinks` and check one of the pretty permalinks options, rather than the plain one:
 
-![](https://github.com/frontity/docs/tree/84b096aa4e2f73930763a3ecea2559418d23d1f9/docs/guides/.gitbook/assets/wordpress-permalink-setting.png)
+![](https://frontity.org/wp-content/uploads/2021/04/wordpress-permalink-setting.png)
 
 **Related Threads**:
 
