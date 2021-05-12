@@ -14,7 +14,7 @@ Any and all help is very much appreciated!
 
 The following describes how to contribute to the Frontity documentation.
 
-If you're stuck at any point, **don't hesitate to use our [Community Forum](https://community.frontity.org/c/docs-and-tutorials)** to ask for help or make your suggestions.
+If you're stuck at any point, **don't hesitate to use Frontity's [Community Forum](https://community.frontity.org/c/framework-development/docs-and-tutorials/29)** to ask for help or make your suggestions.
 
 
 ## What Does this Document Contain?
@@ -33,15 +33,15 @@ This document contains all the required information and links to resources neede
 
 ## Code of Conduct
 
-We provide a [**Code of Conduct**](https://github.com/frontity/docs/tree/master/CODE_OF_CONDUCT.md) to make clear the behavior we expect from contributors and maintainers alike.
-We are committed to providing a welcoming and supportive environment and kindly request that you participate in these values also.
+Frontity's framework provide a [**Code of Conduct**](https://github.com/frontity/docs/tree/master/CODE_OF_CONDUCT.md) to make clear the behavior we expect from contributors and maintainers alike.
+The people behind Frontity is committed to providing a welcoming and supportive environment and kindly request that you participate in these values also.
 
-Our Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org), version 1.4,
+Frontity's Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org), version 1.4,
 available at [http://contributor-covenant.org/version/1/4](http://contributor-covenant.org/version/1/4/).
 
 ## Platform
 
-We use [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our docs repositories 
+Frontity uses [gitbook](https://www.gitbook.com/) to generate the [documentation site](https://docs.frontity.org/) which is connected to our docs repositories 
 
 Docs Site | Repository | Description
 ---------|----------|---------
@@ -52,7 +52,7 @@ Docs Site | Repository | Description
 
 Every time the `master` branch of each repo is updated the whole documentation site is rebuild
 
-![github-gitbook-connection](docs/.gitbook/assets/github-gitbook-connection.png)
+![github-gitbook-connection](https://frontity.org/wp-content/uploads/2021/04/github-gitbook-connection.png)
 
 This docs repositories are the "source of truth" for Frontity's documentation and any suggested changes are managed through [Pull Requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) (to its [`master`](https://github.com/frontity/docs/tree/master) branch).
 
@@ -73,9 +73,9 @@ These Markdown documents are [used by gitbook](#platform) to generate the final 
 If you have found a bug or a spelling mistake, or if you consider that information is missing or that improvements can be made, or if you find anything related to the Frontity documentation that you feel is an issue that should be reported, you can:
 
 - Directly create a Pull Request with your suggested changes using one of the [Contributions Worflows](#contributions-workfows) as explained below
-- Use our [Community Forum](https://community.frontity.org/c/docs-and-tutorials) to tell us about it
+- Use our [Community Forum](https://community.frontity.org/c/framework-development/docs-and-tutorials/29) to tell us about it
 
-Our staff will review your suggestions and will take any actions necessary to improve our documentation taking your feedback into consideration.
+The maintainers of the framework will review your suggestions and will take any actions necessary to improve our documentation taking your feedback into consideration.
 
 ## Code Releases
 
@@ -93,10 +93,10 @@ All of them finish with the creation of a Pull Request.
 > - [📑 "Opening a pull request" | opensource.guide ](https://opensource.guide/how-to-contribute/#opening-a-pull-request)
 > - [📺 How to Contribute to an Open Source Project on GitHub | egghead.io ](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 
-Your changes will not be visible right away, the *Frontity Team* will first review them and then merge them if the suggested changes are approved.
+Your changes will not be visible right away, the maintainers of the framework will first review them and then merge them if the suggested changes are approved.
 So you don't need to worry about breaking anything!
 
-Here you have the most important workflows you can use to suggest changes in our documentation:
+Here you have the most important workflows you can use to suggest changes in Frontity's documentation:
 
 #### • [`Edit on Github`](https://github.com/frontity/docs/wiki/Edit-on-Github)  📝 <a name="Edit-on-Github" />
 

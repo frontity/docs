@@ -138,6 +138,19 @@ So any developer can clone this project, launch the Frontity project locally, ha
 
 And also, the owner of the theme still can publish those new updates independently \(from the theme folder, `packages/awesome-theme` in this case\)
 
+## Sharing your GitHub repository on CodeSandbox
+
+GitHub repositories containing Frontity projects with the structure explained above, can be directly opened in CodeSandbox by using one of the following URL structures:
+
+```
+https://githubbox.com/<%GITHUB_ACCOUNT%>/<%FRONTITY_PROJECT_REPOSITORY%>
+https://codesandbox.io/s/github/<%GITHUB_ACCOUNT%>/<%FRONTITY_PROJECT_REPOSITORY%>
+```
+
+For example this repo https://github.com/frontity-demos/demo-custom-homepage-categories can be opened directly in CodeSandbox with links like:
+- https://codesandbox.io/s/github/frontity-demos/demo-custom-homepage-categories
+- https://githubbox.com/frontity-demos/demo-custom-homepage-categories
+
 ## Example: Frontity Chakra Theme
 
 Let's take [**Frontity Chakra Theme**](https://github.com/chakra-ui/frontity-chakra-ui-theme) as an example of a Frontity theme available:

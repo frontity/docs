@@ -26,5 +26,5 @@ From that URL you should see a structure of data representing the content of you
 
 Frontiy requires that the WordPress data source uses one of the pretty permalinks options, rather than the plain one, in `Settings->Permalinks`.
 
-![](../.gitbook/assets/wordpress-permalink-setting%20%281%29.png)
+![](https://frontity.org/wp-content/uploads/2021/04//wordpress-permalink-setting.png)
 

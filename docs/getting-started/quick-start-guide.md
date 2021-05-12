@@ -40,13 +40,13 @@ cd my-first-frontity-project && npx frontity dev
 
 A development server will be started. This server will be listening on [http://localhost:3000](http://localhost:3000) and watching for any changes inside the packages directory.
 
-4 - Now you’re **ready to make changes** to your site
+4 - Now you’re **ready to make changes** to your site:
 
 Open the project directory in your preferred code editor/IDE and try editing some of the files under `packages/mars-theme`. Each time you save a change the browser will automatically reload and display the new version as these changes are detected by the development server.
 
 ## Set your own WordPress installation
 
-A good next step is **setting your own WordPress installation** as the data source
+A good next step is **setting your own WordPress installation** as the data source.
 
 You can connect your [_own WordPress site_](https://docs.frontity.org/guides/what-are-the-requisites-of-wordpress-for-frontity) to your Frontity project by [setting the `state.source.url`](https://docs.frontity.org/guides/setting-url-wordpress-source-data) property in the `frontity.settings.js` file.
 
@@ -68,7 +68,7 @@ const settings = {
 }
 ```
 
-By default, `state.source.url` is set to `https://test.frontity.org/` \(our demo WordPress site\) but you can set this property to any valid URL pointing to a WordPress site.
+By default, `state.source.url` is set to `https://test.frontity.org/` \(a demo WordPress site\) but you can set this property to any valid URL pointing to a WordPress site.
 
 {% hint style="info" %}
 Setting `state.source.url` should be sufficient for most WordPress.org installations and WordPress.com plans. For specific use cases check the guide [_Setting the URL of the WordPress data source_](https://docs.frontity.org/guides/setting-url-wordpress-source-data).
@@ -80,23 +80,29 @@ You should now see your own posts in the Frontity project displayed in the brows
 
 ## What's next?
 
-### Follow the Step by Step Tutorial
+### Follow the Step-by-Step Tutorial
 
-Our primary learning resource is the [**Step by Step Tutorial**](https://tutorial.frontity.org). This is the perfect place to start if you're new to Frontity, or even if you've previously used Frontity but feel that your knowledge is incomplete or fragmented.
+Frontity's primary learning resource is the [**Step-by-Step Tutorial**](https://tutorial.frontity.org). This is the perfect place to start if you're new to Frontity, or even if you've previously used Frontity but feel that your knowledge is incomplete or fragmented.
 
-### Check our guides
+### Check Frontity's guides
 
-We have several [**Guides**](https://docs.frontity.org/guides) that will help you in your understanding of working with Frontity, and which will also assist you in solving some of the common challenges that come up when working with Dynamic SSR \(server-side Rendering\) in React apps connected to WordPress.
+There are several [**Guides**](https://docs.frontity.org/guides) that will help you in your understanding of working with Frontity, and which will also assist you in solving some of the common challenges that come up when working with Dynamic SSR \(server-side Rendering\) in React apps connected to WordPress.
 
 ### Check the API Reference
 
-Our main reference resource is the [**API Reference**](https://api.frontity.org). This is where you'll find detailed information about Frontity CLI, packages, plugins and themes. Once you've mastered the basics of working with Frontity this is where you're likely to spend most of your time when working on projects.
+The main reference resource is the [**API Reference**](https://api.frontity.org). This is where you'll find detailed information about Frontity CLI, packages, plugins and themes. Once you've mastered the basics of working with Frontity this is where you're likely to spend most of your time when working on projects.
 
 ### Deploy your site
 
-When you're done developing and are ready to launch your new site follow the instructions in our [**Deployment**](https://docs.frontity.org/deployment) section to learn how to deploy your finished Frontity site. We recommend that you start by [deploying your site to Vercel](https://docs.frontity.org/deployment/deploy-using-vercel).
+When you're done developing and are ready to launch your new site follow the instructions in the [**Deployment**](https://docs.frontity.org/deployment) section to learn how to deploy your finished Frontity site. We recommend that you start by [deploying your site to Vercel](https://docs.frontity.org/deployment/deploy-using-vercel).
+
+### Additional resources
+
+If demos are more your thing, a number of different Frontity projects and examples can be found on this [GitHub repository](https://github.com/frontity-demos/frontity-examples).
+
+In addition, you can head over to Frontity's [Youtube channel](https://www.youtube.com/c/Frontity/) to watch a series of videos called [Frontity Talks](https://youtube.com/playlist?list=PLC9teX20GdrTBeOzSwE-bFW-MbBEUwowS), which are especially interesting to learn more about specific topics of Frontity.
 
 {% hint style="info" %}
-Still have questions? Come and join us in [the community](https://community.frontity.org/) and ask there! We are here to help 😊
+The [Frontity Community Forum](https://community.frontity.org/) is the best place to get community support while helping others with your own questions and solutions. To keep it running smoothly, we encourage you to read through this [Forum Guide](https://community.frontity.org/t/frontity-community-forum-users-guide/4399) and search the available learning resources before posting.
 {% endhint %}
 
