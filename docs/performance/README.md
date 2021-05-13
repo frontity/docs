@@ -1,4 +1,4 @@
-# 🌎 Deployment
+# ⚡️ Performance
 
 Frontity projects are fast by default. Frontity framework will help you to improve the performance and speed of your site built with the stack React + WordPress. But Frontity framework on its own cannot assure the best performance of your site because there are some elements involved in the final perfomance that are out of the scope of Frontity
 
