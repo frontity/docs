@@ -2,15 +2,15 @@
 
 In **Embedded Mode** the _primary domain points to the WordPress server_. This is the site that visitors access directly in order to view the content.
 
+WordPress (via the [Frontity Embedded Mode plugin ](https://api.frontity.org/frontity-plugins/embedded-mode)) will redirect the request to Frontity, which will get the data from the REST API to return the final HTML as an [Isomorphic](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905) React App that will be returned to the user from WordPress
+
 {% hint style="warning" %}
 This mode requires the installation, activation and configuration of the [Frontity embedded mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode) to work
 {% endhint %}
 
-WordPress (via the [Frontity Embedded Mode plugin ](https://api.frontity.org/frontity-plugins/embedded-mode)) will redirect the request to Frontity, which will get the data from the REST API to return the final HTML as an [Isomorphic](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905) React App that will be returned to the user from WordPress
-
 ![](https://frontity.org/wp-content/uploads/2021/05/frontity-embedded-mode.png)
 
-Any [Frontity architecture requires 2 servers](README.md). In this Decoupled Mode we have:
+Any [Frontity architecture requires 2 servers](README.md). In this Embedded Mode we have:
 
 - A **main domain** pointing to the **WordPress Server**
   - Apache or Nginx web server running PHP
@@ -22,14 +22,23 @@ Any [Frontity architecture requires 2 servers](README.md). In this Decoupled Mod
 
 In this mode _both site visitors and content editors use the same domain_, i.e. the main domain, to either visit the site or access the WordPress admin pages. The Frontity server on the secondary domain is never directly accessed.
 
-Embedded mode requires the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode). The plugin replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. However, before Frontity can deliver the HTML it must request the content from the WordPress REST API, necessitating a two stage round trip.
+Embedded mode requires the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode). This plugin replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. However, before Frontity can deliver the HTML it must request the content from the WordPress REST API, necessitating a two stage round trip.
  
 ![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png)
 
 {% hint style="info" %}
-Due to the "two stage round trip", caching is therefore a necessity in this architecture to ensure that site performance is optimal.
+Due to the "two stage round trip", **caching is therefore a necessity** in this architecture to ensure that site performance is optimal.
 {% endhint %}
 
+## Table of Contents
+
+<!-- toc -->
+
+  * [Features of the Embedded Mode](#features-of-the-embedded-mode)
+    + [Technical considerations](#technical-considerations)
+- [Caching in Embedded Mode](#caching-in-embedded-mode)
+
+<!-- tocstop -->
 
 ### Features of the Embedded Mode
 
@@ -44,53 +53,55 @@ Embedded Mode offers several **advantages** over Decoupled Mode.
   - _post/page preview_ remains available
   - the _admin bar_ is active for logged in users
 
+In addition, since the Frontity site is never directly accessed the secondary domain can be anything - including free domains allocated by the node.js hosting service - so there is no need to purchase an additional domain or configure DNS settings for sub-domains.
+
+{% hint style="info" %}
+In this mode, a [serverless](https://about.gitlab.com/topics/serverless/) solution to host the Frontity server is especially recommended as it will make it cheap, easy and infinitely scalable.
+{% endhint %}
+
 But there are some _things to be taken into account_ when using this Embedded Mode:
 
 - It requires an additional plugin, namely the [Frontity embedded mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode).
-- It will not work with free plans of wordpress.com sites as a plugin is required.
+- It will not work with free plans of wordpress.com sites as the installation of a plugin is required.
 - WordPress still needs to go through it's [bootstrap process](https://wordpress.tv/2017/06/22/alain-schlesser-demystifying-the-wordpress-bootstrap-process/) on initial page load
-- more routing is involved (slower execution) as WordPress makes a call to Frontity which returns the HTML to WordPress, so **a caching plugin is a necessity** rather than simply a nice to have.
-
-
-
-Slower execution - embedded mode is potentially slower than decoupled mode as Frontity requests the data from WP's REST API and returns the HTML to WordPress, and WordPress in turn serves it to the browser. This means that there are two transfers of data so caching is necessary to optimise performance. Caches for both [WordPress]((https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/)) and for [the REST API](https://wordpress.org/plugins/wp-rest-cache/) are strongly recommended).
-
-Frontity still needs to be hosted on a separate node server/serverless function (albeit on any domain you like including default domains provided by the hosting provider).
-
-
-
-
+- More routing is involved (potentially slower execution than Decoupled Mode) with the "two stage round trip" (WordPress → Frontity → WP REST API → Frontity → WordPress), so **a caching strategy is a necessity** rather than simply a nice to have.
 
 #### Technical considerations
 
-Due to the one-domain nature of this mode, _Embedded Mode_ offers a number of advantages over Decoupled Mode.:
+Due to the one-domain nature of this mode and the fact that the routing is managed by WordPress, the _developers don’t need to take care of any of the issues mentioned in the Decoupled Mode_, including:
+  - URL replacements
+  - Cross-domain 301 redirections
+  - CORS headers
+  - Purge page cache
+  - Proxy WordPress resources from the Frontity server
+  - WordPress posts 301 redirections
+  - Maintain the reverse proxy configuration
 
-- The WordPress site exists under the primary domain, thus ensuring that:
-  - all the SEO benefits already built in to WordPress work as normal
-  - existing SEO (for a site transitioning to Frontity) will not be affected
-  - sitemaps generated by WordPress/Yoast/All-in-one-SEO work as normal
-  - WordPress page cache plugins and hosting CDNs continue to work as normal
-- Content producers/editors continue to have the same experience
-  - post/page preview remains available
-  - the admin bar is active for logged in users
+In this mode we can also get a 100% transparent experience for the content editors, just like in the Reverse-Proxy mode:
 
-In addition, since the Frontity site is never directly accessed the secondary domain can be anything - including free domains allocated by the node.js hosting service - so there is no need to purchase an additional domain or configure DNS settings for sub-domains.
-
-
-## Recommendations
-
-### WordPress
-
-A self-hosted wordpress.org site is needed. If you have an existing WordPress site that you're transitioning to Frontity we recommend that you continue using your existing hosting.
-
-### Node.js
-
-For node.js we recommend that you choose a [serverless](https://about.gitlab.com/topics/serverless/) solution as it will make it cheap, easy and infinitely scalable.
-
-### Caching
-
-Caches for both [WordPress]((https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/)) and for [the REST API](https://wordpress.org/plugins/wp-rest-cache/) are strongly recommended).
+- Render the admin bar for logged in users.
+- Make 100% transparent post previews.
 
 
+## Caching in Embedded Mode
+
+In the **Embedded Mode**, the main domain is connected to the WordPress server which will redirect the to the Frontity Web Server to get the proper HTML based on the data of the WP REST API.
 
 ![](https://frontity.org/wp-content/uploads/2021/05/embedded-mode-features-cache.png)
+
+In this model the following cache layers are very recommended:
+- [CDN for caching URL requests made to WordPress](../performance/caching#cdn-for-wordpress-servers)
+- [Local caching for URL requests in WordPress servers](../performance/caching#local-caching-for-url-requests-in-wordpress-servers)
+- [Local caching for REST API requests in WordPress servers](../performance/caching#local-caching-for-rest-api-requests-in-wordpress-servers)
+
+
+{% hint style="warning" %}
+As there is more routing involved in the Embedded Mode (WordPress makes a call to Frontity which makes a call to the WP REST API to then return the HTML to WordPress) _a caching plugin for the HTML (caching the URL requests) is a necessity_ rather than simply a nice to have.
+{% endhint %}
+
+![](https://frontity.org/wp-content/uploads/2021/05/cache-embedded-mode.png)
+
+
+
+
+
