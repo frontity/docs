@@ -1,87 +1,85 @@
 # Decoupled Mode
 
-In **Decoupled mode** the primary domain points to the nodejs server, or serverless function, hosting Frontity. This is the site that visitors access directly in order to view the content.
+In **Decoupled mode** the _primary domain points to the Node.js server hosting Frontity_. This is the site that visitors access directly in order to view the content.
 
-![](../.gitbook/assets/frontity-architecture%20%282%29%20%288%29%20%288%29.png)
+Frontity will fetch the data from the REST API of the WordPress Server and will return the final HTML as an [Isomorphic](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905) React App
 
-This architecture requires:
+![](https://frontity.org/wp-content/uploads/2021/04/frontity-architecture.png)
 
-- **two servers**
-- **two domains** (or a domain and a sub-domain)
+Any Frontity architecture requires 2 servers. In this Decoupled Mode we have:
 
-The two servers that are required are:
+- A **main domain** pointing to the **Frontity Server**
+  - Server running Node.js
+  - Hosted function-as-a-service (FaaS) platform allowing serverless computing such as AWS Lambda or Netlify functions
 
-- **Apache/nginx + PHP** - for WordPress
-- **Node.js/serverless function** - for Frontity
-
-You will also need two domains:
-
-- **a primary domain** - for the node.js server hosting Frontity
-- **a secondary domain** - for the Apache/nginx + PHP server hosting WordPress
+- A **secondary URL** (or subdomain) pointing to the **WordPress Server**
+  - Apache or Nginx web server running PHP
+  - Hosted software-as-a-service (SaaS) platform with WordPress such as WordPress.com
 
 In this mode site visitors access the site using the primary domain and are served HTML pages directly from Frontity. The secondary domain is used by content editors to access the WordPress admin pages.
 
-Frontity fetches data from the REST API located on the secondary domain, i.e. the WordPress installation. The `state.source.url` property set in the `frontity.settings.js` file located at the root of your Frontity project configures the address of the WordPress installation.
+Frontity fetches data from the REST API located on the secondary domain, i.e. the WordPress installation, and uses that information to generate the HTML that is returned to the user.
 
-
-## Advantages of Decoupled Mode
-
-Decoupled mode needs no additional structural elements, such as extra plugins in the WordPress installation.
-
-It works happily with wordpress.com sites, so long as the WordPress installation doesn't have any requirements beyond the limitations imposed by wordpress.com.
-
-Faster execution - just a single call in SSR is made to the WP REST API, with no round-robin request for content and return of HTML.
-
-The Frontity app can be distributed across a network of CDN servers.
-
-Your WordPress site is more secure as it's not on the public-facing domain.
-
-## Considerations to take into account
-
-For existing WP sites the domain will need changing. You will therefore need to change the `WordPress Address` and the 'Site Address' in the "Settings" page of the WordPress admin. Any URLs in the content stored in the database will also need to be updated to reflect the new domain.
+![](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png)
 
 {% hint style="info" %}
-If you need information on how to change the URLs in the content stored in the database see [this page](update-db-urls.md).
+The `state.source.url` property set in the `frontity.settings.js` file [configures the URL of the WordPress installation](../guides/setting-url-wordpress-source-data.md).
 {% endhint %}
 
-wordpress.com sites have certain limitations, so if your WordPress installation has more complex requirements than a self-hosted wordpress.org site may be necessary.
+## Table of Contents
 
-A REST API cache is recommended to optimise requests to the REST API.
+<!-- toc -->
 
-A service offering the `stale-while-revalidate` caching directive is recommended as the best cache technique for this type of architecture - we recommend Vercel as a host for Frontity as they have this functionality built-in to their service.
+- [Features of the Decoupled Mode](#features-of-the-decoupled-mode)
+    + [Technical considerations](#technical-considerations)
+- [Caching in Decoupled Mode](#caching-in-decoupled-mode)
 
-## Recommendations
+<!-- tocstop -->
 
-### WordPress
+## Features of the Decoupled Mode
 
-If you have an existing WordPress site that you're transitioning to Frontity we recommend that you continue using your existing hosting.
+The Decoupled Mode offers several **advantages**:
 
-If your site has special requirements, i.e. it needs custom code such as plugins, then a self-hosted wordpress.org site is needed.
+- **No extra WordPress plugin** is required for this mode
+- It has the **fastest workflow to respond to the requests**: just a single call in SSR is made to the WP REST API, with no round-robin request for content and return of HTML.
+- It **provides an extra layer of security** as the WordPress site is not on the public-facing domain.
 
-If the functional requirements of your site fall within the restrictions imposed by wordpress.com then we recommend using that for your WordPress hosting. Frontity allows you to create a custom theme separate from the ones allowed by wordpress.com.
+Decoupled Mode uses two different domains. The main one ([www.domain.com](http://www.domain.com/)) for Frontity and a subdomain ([wp.domain.com](http://wp.domain.com/)) for WordPress.
 
-To prevent your WordPress site from being accessed, and to direct all non-authorised traffic to the Frontity site, we recommend the [Headless Mode plugin](https://wordpress.org/plugins/headless-mode/).
+#### Technical considerations
 
-### Node.js
+Due to the two-domains nature of this mode, _Decoupled Mode_ is the mode where developers need to be aware, test, and take care of most things:
 
-For node.js we recommend that you choose a [serverless](https://about.gitlab.com/topics/serverless/) solution as it will make it cheap, easy and infinitely scalable.
+- _URL replacements_ from [wp.domain.com](http://wp.domain.com/) to [www.domain.com](http://www.domain.com/).
+- _Cross-domain 301 redirections_ from Frontity to WordPress and vice-versa.
+- _301 redirections_ of individual URLs stored in the WordPress database.
+- _Proxying WordPress resources_ that need to be served from the [www.domain.com](http://www.domain.com/) domain.
+- Adding _CORS headers_ in the [wp.domain.com](http://wp.domain.com/) domain.
+- _Purging page cache_ of the [www.domain.com](http://www.domain.com/) domain.
 
-### Caching
-
-If your node.js/serverless function hosting service doesn't provide a cache, you may want to consider a separate solution \(such as a CDN\), as it is key to improving your web performance.
-
-Furthermore, based on our experience working with media publishers, we recommend that you select a service offering the[**stale-while-revalidate**](https://www.keycdn.com/blog/keycdn-supports-stale-while-revalidate) cache directive, which is the best cache technique for this type of architecture.
 
 {% hint style="info" %}
-We have tested many solutions for CDN and `stale-while-revalidate`, and we consider that the best options for this approach are [KeyCDN](https://www.keycdn.com) and [StackPath](https://www.stackpath.com/).
+In the guide [URLs in a Migration from WordPress to Frontity Decoupled Mode](#) you can learn more about why and how to change these URLs in the content of your WordPress site
 {% endhint %}
 
-Although options such as [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/), exist and you are free to select one of them or any other, our recommendation is that you host your Frontity site with [**Vercel**](https://vercel.com/). Vercel offer both a CDN and the `stale-while-revalidate` cache directive (which they call [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)). Their service is the quickest and easiest to set up, and you can follow our guide to [deploying Frontity using Vercel](../deployment/deploy-using-vercel).
 
-{% hint style="info" %}
-The addition of a [cache for the REST API](https://wordpress.org/plugins/wp-rest-cache/) is recommended to speed up the initial SSR.
-{% endhint %}
+Decoupled Mode is also the mode where, due again to the two-domains nature, it’s impossible to make it 100% transparent for the content editors because it’s not possible to:
 
-{% hint style="info" %}
-If you want to know more about what Serverless means you should check out [this article](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9).
-{% endhint %}
+- Render the _admin bar_ for logged in users.
+- Make 100% transparent _post previews_.
+
+![](https://frontity.org/wp-content/uploads/2021/05/decoupled-mode-features.png)
+
+## Caching in Decoupled Mode
+
+With a good [**caching strategy**](../performance/caching) your Frontity project can be as performant as a static site. 
+
+In the *Decoupled Mode*, the main domain is connected to the Node.js server executing the Frontity Web Server which will process the URL requests to return the proper HTML based on the data from the WP REST API. 
+
+In Decoupled Mode there are two types of requests that can be cached to minimize the computing time and to take advantage of the proximity of CDN servers:
+- [CDN for caching URL requests made to Frontity](../performance/caching#cdn-for-frontity-servers)
+- [Local caching for REST API requests in WordPress servers](../performance/caching#local-caching-for-rest-api-requests-in-wordpress-servers)
+
+
+![](https://frontity.org/wp-content/uploads/2021/05/cache-decoupled-mode.png)
+

@@ -16,7 +16,7 @@ Commonly documents and assets are prefetched using a `<link>` element containing
 
 The `rel="prefetch"` attribute is a 'hint' to the browser that the specified URL should be prefetched. It may or may not be prefetched depending on whether the browser has sufficient idle time to do so before the user actually clicks the link.
 
-This works well for traditional websites where each new URL involves an HTTP request and a page refresh. Performance is improved because prefetched documents and assets are already in the browser cache and so don't need to be fetched at the time that the link is clicked.
+This works well for traditional sites where each new URL involves an HTTP request and a page refresh. Performance is improved because prefetched documents and assets are already in the browser cache and so don't need to be fetched at the time that the link is clicked.
 
 In addition to `prefetch` the `rel` attribute of the `<link>` element can take different values depending on the type of prefetching required:
 
