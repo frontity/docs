@@ -1,6 +1,6 @@
 # URLs in a Migration from WordPress to Frontity Decoupled Mode
 
-If you are **migrating an existing WordPress site to Frontity** using [**Decoupled Mode**](decoupled-mode.md), you will need to change the URL of your WordPress site. You will need to do this as the primary domain (i.e. the one that site visitors use) will point to the Frontity site.
+If you are **migrating an existing WordPress site to Frontity** and you are using [**Decoupled Mode**](../architecture/decoupled-mode.md), you will need to change the URL of your WordPress site. You need to do this as the primary domain (i.e. the one that site visitors use) will point to the Frontity site, and the domain that points to the WordPress installation will need to be changed to the secondary domain (or subdomain).
 
 ![](https://frontity.org/wp-content/uploads/2021/05/decoupled-mode-features.png)
 
@@ -11,13 +11,13 @@ Let's take as an example a WordPress site under the domain `www.domain.com`. Let
 - `www.domain.com` will point to the Frontity server
 - `wp.domain.com` will point to the WordPress server
 
-In this scenario internal links that exist in the content when the WordPress URL is changed to `wp.domain.com` will still point to `www.domain.com`. However, if any content is added after the change then internal links will point to `wp.domain.com`. This creates a situation where internal links in the content are inconsistent with "old" links pointing to `wp.domain.com` and "new" links pointing to `www.domain.com`.
+In this scenario internal links that exist in the content when the WordPress URL is changed to `wp.domain.com` will still point to `www.domain.com`. However, if any content is added after the change then internal links will point to `wp.domain.com`. This creates a situation where internal links in the content are inconsistent, with "old" links pointing to `wp.domain.com` and "new" links pointing to `www.domain.com`.
 
 {% hint style="info" %}
 **Note that** WordPress always uses absolute links internally, rather than relative links. WordPress uses the [internal URL `Settings`](https://wordpress.org/support/article/changing-the-site-url/) to determine where the internal links should point to.
 {% endhint %}
 
-Also the [link processor](https://api.frontity.org/frontity-packages/collections-packages/components#the-link-processor) uses the same domain as the WordPress data source (which will now be `wp.domain.com`) to convert links to a <Link /> component. So if the internal links are left pointing to `www.domain.com` the link processor won't work on those links because it will only convert links pointing to `wp.domain.com`, i.e. the URL of the WordPress data source.
+In addition, the [link processor](https://api.frontity.org/frontity-packages/collections-packages/components#the-link-processor) uses the [domain configured as the WordPress data source](./setting-url-wordpress-source-data.md) (which will now be `wp.domain.com`) to convert links to a `<Link />` component. So if the internal links are left pointing to `www.domain.com` the link processor won't work on those links because it will only convert links pointing to `wp.domain.com`, i.e. the URL of the WordPress data source.
 
 ## Updating the URLs in WordPress
 
@@ -32,7 +32,10 @@ Also, for the reasons stated above, any URLs in the content stored in the databa
 
 ### Using a plugin
 
-To change the URLs in the content stored in the database you can use a plugin such as [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/), [Go Live Update Urls](https://en-gb.wordpress.org/plugins/go-live-update-urls/), or [Better Search Replace](https://wordpress.org/plugins/better-search-replace/).
+To change the URLs in the content stored in the database you can use a plugin such as one of the following:
+- [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/)
+- [Go Live Update Urls](https://en-gb.wordpress.org/plugins/go-live-update-urls/)
+- [Better Search Replace](https://wordpress.org/plugins/better-search-replace/).
 
 ### Updating manually
 
