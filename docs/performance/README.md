@@ -4,7 +4,7 @@ Frontity projects are fast by default. Frontity framework will help you to impro
 
 In this section, we'll provide guides to some of the strategies and patterns that you can apply to your Frontity sites in order to improve even more the performance of your Frontity site:
 
-* [Caching](caching.md)
-* [Link prefetching](link-prefetching.md)
+* [Caching](./caching.md)
+* [Link prefetching](./link-prefetching.md)
 
 
