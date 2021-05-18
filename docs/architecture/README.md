@@ -71,6 +71,10 @@ Decoupled mode needs no additional structural elements, such as plugins.
 
 In *Embedded mode* the main domain points to the WordPress installation, and the secondary domain points to the node.js server running Frontity. In this mode both site visitors and content editors use the same domain, i.e. the main domain, to either visit the site or access the admin pages. The secondary domain is never directly accessed.
 
-Embedded mode requires the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode). This plugin uses a configuration setting that identifies the location of the Frontity server. The plugin replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. However, before Frontity can deliver the HTML it must request the content from the WordPress REST API.
+
+{% hint style="info" %}
+Embedded mode requires the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode). This plugin replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. 
+{% endhint %}
+
 
 Since, in embedded mode, the Frontity site is never directly accessed the secondary domain can be anything - including free domains allocated by the node.js hosting service.
