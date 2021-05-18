@@ -4,10 +4,6 @@ In **Embedded Mode** the _primary domain points to the WordPress server_. This i
 
 WordPress (via the [Frontity Embedded Mode plugin ](https://api.frontity.org/frontity-plugins/embedded-mode)) will redirect the request to Frontity, which will get the data from the REST API to return the final HTML as an [Isomorphic](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905) React App that will be returned to the user by WordPress.
 
-{% hint style="warning" %}
-This mode requires the installation, activation and configuration of the [Frontity embedded mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode) to work.
-{% endhint %}
-
 ![](https://frontity.org/wp-content/uploads/2021/05/frontity-embedded-mode.png)
 
 Any [Frontity architecture requires 2 servers](README.md). In Embedded Mode you need to have:
@@ -22,7 +18,11 @@ Any [Frontity architecture requires 2 servers](README.md). In Embedded Mode you 
 
 In this mode _both site visitors and content editors use the same domain_, i.e. the main domain, to either visit the site or access the WordPress admin pages. The Frontity server on the secondary domain is never directly accessed.
 
-Embedded mode requires the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode). This plugin replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. However, before Frontity can deliver the HTML it must request the content from the WordPress REST API, necessitating a two stage round trip.
+{% hint style="warning" %}
+This mode requires the installation, activation and configuration of the [**Frontity embedded mode plugin**](https://api.frontity.org/frontity-plugins/embedded-mode) to work.
+{% endhint %}
+
+The [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode) required by this mode, replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. However, before Frontity can deliver the HTML it must request the content from the WordPress REST API, necessitating a two stage round trip.
 
 ![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png)
 
@@ -68,7 +68,7 @@ But there are some _things that should be taken into account_ when using Embedde
 
 #### Technical considerations
 
-Due to the one-domain nature of this mode and the fact that the routing is managed by WordPress, _developers don’t need to take care of any of the issues mentioned on the [Decoupled Mode](./decoupled-mode.md)_ page, including:
+Due to the one-domain nature of this mode and the fact that the routing is managed by WordPress, _developers don’t need to take care of any of the issues mentioned on the [Decoupled Mode](./decoupled-mode.md#technical-considerations)_ page, including:
   - URL replacements
   - Cross-domain 301 redirections
   - CORS headers
