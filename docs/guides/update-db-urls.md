@@ -34,7 +34,7 @@ Also, for the reasons stated above, any URLs in the content stored in the databa
 
 To change the URLs in the content stored in the database you can use a plugin such as one of the following:
 - [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/)
-- [Go Live Update Urls](https://en-gb.wordpress.org/plugins/go-live-update-urls/)
+- [Go Live Update URLs](https://en-gb.wordpress.org/plugins/go-live-update-urls/)
 - [Better Search Replace](https://wordpress.org/plugins/better-search-replace/).
 
 ### Updating manually
