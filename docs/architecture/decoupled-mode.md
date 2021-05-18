@@ -59,7 +59,7 @@ Due to the two-domains nature of this mode, in _Decoupled Mode_ e developers nee
 
 
 {% hint style="info" %}
-☝️ In the guide [URLs in a Migration from WordPress to Frontity Decoupled Mode](#) you can learn more about why you need to change these URLs in the content of your WordPress site. The guide also provides useful information on how to do so.
+☝️ In the guide [URLs in a Migration from WordPress to Frontity Decoupled Mode](../guides/update-db-urls.md) you can learn more about why you need to change these URLs in the content of your WordPress site. The guide also provides useful information on how to do so.
 {% endhint %}
 
 
@@ -72,13 +72,13 @@ Additionally, in Decoupled Mode it is impossible to replicate the editing experi
 
 ## Caching in Decoupled Mode
 
-With a good [**caching strategy**](../performance/caching) your Frontity project can be just as performant as a static site.
+With a good [**caching strategy**](../performance/caching.md) your Frontity project can be just as performant as a static site.
 
 In *Decoupled Mode*, the main domain is connected to the Node.js server executing the Frontity app which will process the URL requests to return the proper HTML based on the data from the WP REST API.
 
 In Decoupled Mode there are two types of requests that can be cached to minimize the computing time and to take advantage of the proximity of CDN servers:
-- [CDN for caching URL requests made to Frontity](../performance/caching#cdn-for-frontity-servers)
-- [Local caching for REST API requests in WordPress servers](../performance/caching#local-caching-for-rest-api-requests-in-wordpress-servers)
+- [CDN for caching URL requests made to Frontity](../performance/caching.md#cdn-for-frontity-servers)
+- [Local caching for REST API requests in WordPress servers](../performance/caching.md#local-caching-for-rest-api-requests-in-wordpress-servers)
 
 
 ![](https://frontity.org/wp-content/uploads/2021/05/cache-decoupled-mode.png)
