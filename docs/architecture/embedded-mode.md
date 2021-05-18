@@ -92,13 +92,13 @@ In **Embedded Mode** the main domain is connected to the WordPress server which 
 ![](https://frontity.org/wp-content/uploads/2021/05/embedded-mode-features-cache.png)
 
 In this model the following cache layers are **highly recommended**:
-- [CDN for caching URL requests made to WordPress](../performance/caching#cdn-for-wordpress-servers)
-- [Server caching for URL requests in WordPress servers](../performance/caching#server-caching-for-url-requests-in-wordpress-servers)
-- [Server caching for REST API requests in WordPress servers](../performance/caching#server-caching-for-rest-api-requests-in-wordpress-servers)
+- [CDN for caching URL requests made to WordPress](../performance/caching.md#cdn-for-wordpress-servers)
+- [Server caching for URL requests in WordPress servers](../performance/caching.md#server-caching-for-url-requests-in-wordpress-servers)
+- [Server caching for REST API requests in WordPress servers](../performance/caching.md#server-caching-for-rest-api-requests-in-wordpress-servers)
 
 
 {% hint style="warning" %}
-As there is more routing involved in Embedded Mode (WordPress makes a call to Frontity, which makes a request to the WP REST API, which then returns the JSON to Frontity, and which then returns the HTML to WordPress) _a caching plugin for the HTML (caching the URL requests) is a necessity_ rather than simply a nice to have.
+As there is more routing involved in Embedded Mode (WordPress makes a call to Frontity, which makes a request to the WP REST API, which then returns the JSON to Frontity, and which then returns the HTML to WordPress) a **caching plugin for the HTML (caching the URL requests) is a necessity** rather than simply a nice to have.
 {% endhint %}
 
 ![](https://frontity.org/wp-content/uploads/2021/05/cache-embedded-mode.png)

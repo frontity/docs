@@ -1,11 +1,14 @@
 # Caching 
 
+
+{% hint style="info" %}
 With a good CDN caching strategy your Frontity project can be as performant as a static site. 
+{% endhint %}
 
 In Frontity projects we can implement two main types of caching:
 
 - **Distributed Caching (CDN)**: The responses of requests are cached and distributed on a Network of Servers (CDN) so next requests for the same content can be directly delivered from the closest server from your location
-- **Server Caching (WordPress Cache Plugins)**: The responses of requests are cached and stored locally so next requests for the same content can be directly delivered from memory saving processing time. This strategy will mostly be managed by WordPress Cache Plugins in Frontity Architectures. 
+- **Server Caching (WordPress Cache Plugins)**: The responses of requests are cached and stored in the server so next requests for the same content can be directly delivered from memory saving processing time. This strategy will mostly be managed by WordPress Cache Plugins in Frontity Architectures. 
 
 ![](https://frontity.org/wp-content/uploads/2021/05/cdn-server-caches-embdeded-mode.png)
 
