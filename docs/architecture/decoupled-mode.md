@@ -78,7 +78,7 @@ In *Decoupled Mode*, the main domain is connected to the Node.js server executin
 
 In Decoupled Mode there are two types of requests that can be cached to minimize the computing time and to take advantage of the proximity of CDN servers:
 - [CDN for caching URL requests made to Frontity](../performance/caching.md#cdn-for-frontity-servers)
-- [Local caching for REST API requests in WordPress servers](../performance/caching.md#local-caching-for-rest-api-requests-in-wordpress-servers)
+- [Server caching for REST API requests in WordPress servers](../performance/caching.md#server-caching-for-rest-api-requests-in-wordpress-servers)
 
 
 ![](https://frontity.org/wp-content/uploads/2021/05/cache-decoupled-mode.png)

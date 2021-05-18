@@ -5,7 +5,7 @@ With a good CDN caching strategy your Frontity project can be as performant as a
 In Frontity projects we can implement two main types of caching:
 
 - **Distributed Caching (CDN)**: The responses of requests are cached and distributed on a Network of Servers (CDN) so next requests for the same content can be directly delivered from the closest server from your location
-- **Local Caching (WordPress Cache Plugins)**: The responses of requests are cached and stored locally so next requests for the same content can be directly delivered from memory saving processing time. This strategy will mostly be managed by WordPress Cache Plugins in Frontity Architectures. 
+- **Server Caching (WordPress Cache Plugins)**: The responses of requests are cached and stored locally so next requests for the same content can be directly delivered from memory saving processing time. This strategy will mostly be managed by WordPress Cache Plugins in Frontity Architectures. 
 
 ![](https://frontity.org/wp-content/uploads/2021/05/cdn-server-caches-embdeded-mode.png)
 
@@ -16,9 +16,9 @@ In Frontity projects we can implement two main types of caching:
 - [Distributed caching (CDN)](#distributed-caching-cdn)
   * [CDN for Frontity servers](#cdn-for-frontity-servers)
   * [CDN for WordPress servers](#cdn-for-wordpress-servers)
-- [Local caching](#local-caching)
-  * [Local caching for URL requests in WordPress servers](#local-caching-for-url-requests-in-wordpress-servers)
-  * [Local caching for REST API requests in WordPress servers](#local-caching-for-rest-api-requests-in-wordpress-servers)
+- [Server caching](#server-caching)
+  * [Server caching for URL requests in WordPress servers](#server-caching-for-url-requests-in-wordpress-servers)
+  * [Server caching for REST API requests in WordPress servers](#server-caching-for-rest-api-requests-in-wordpress-servers)
 
 <!-- tocstop -->
 
@@ -50,11 +50,11 @@ If you're using **Embedded Mode** your main domain will point to your WordPress 
 
 In WordPress there are several [solutions](https://wpbuffs.com/wordpress-cdn-plugins/) and [plugins](https://wordpress.org/plugins/tags/cdn/) to add a CDN Cache Layer to your site. This CDN implementation can be managed directly from your hosting provider or from a WordPress plugin
 
-## Local caching 
+## Server caching 
 
 Besides using a CDN to cache your requests, another cache layer can be added at a Server level. This cache will create a local copy of the requests so next time the same page is requested it will be delivered from the local copy (saving processing time)
 
-### Local caching for URL requests in WordPress servers
+### Server caching for URL requests in WordPress servers
 
 In the **Embedded Mode**, the main domain is connected to the WordPress server which will redirect the to the Frontity Web Server to get the proper HTML based on the data of the WP REST API.
 
@@ -62,7 +62,7 @@ In this case, a service to cache the URL requests managed by WordPress can be im
 
 If the URL requested is cached, the plugin will return the content and no further requests will be done to the Frontity Server (or the WP REST API)
 
-### Local caching for REST API requests in WordPress servers
+### Server caching for REST API requests in WordPress servers
 
 Caching REST API requests is highly recommended in both Decoupled & Embedded Mode asi it will also speed up the general response time of your site
 

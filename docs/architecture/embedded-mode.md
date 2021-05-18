@@ -93,8 +93,8 @@ In **Embedded Mode** the main domain is connected to the WordPress server which 
 
 In this model the following cache layers are **highly recommended**:
 - [CDN for caching URL requests made to WordPress](../performance/caching#cdn-for-wordpress-servers)
-- [Local caching for URL requests in WordPress servers](../performance/caching#local-caching-for-url-requests-in-wordpress-servers)
-- [Local caching for REST API requests in WordPress servers](../performance/caching#local-caching-for-rest-api-requests-in-wordpress-servers)
+- [Server caching for URL requests in WordPress servers](../performance/caching#server-caching-for-url-requests-in-wordpress-servers)
+- [Server caching for REST API requests in WordPress servers](../performance/caching#server-caching-for-rest-api-requests-in-wordpress-servers)
 
 
 {% hint style="warning" %}
