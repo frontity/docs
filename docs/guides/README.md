@@ -4,11 +4,15 @@ In this section we present a selection of guides that will help you to both work
 
 ### [Setting the URL of the WordPress data source](setting-url-wordpress-source-data.md) ![](https://img.shields.io/badge/WORDPRESS-207399.svg) ![](https://img.shields.io/badge/SOURCE-0C7C59.svg)
 
-_This guide outlines the various different WordPress configuration scenarios that you might encounter and what needs to be taken into account in order to properly set the URL of the WordPress data source._
+_This guide outlines the various different WordPress configuration scenarios that you might encounter and the things that need to be taken into account in order to properly set the URL of the WordPress data source._
 
 ### [WordPress requirements for Frontity](what-are-the-requisites-of-wordpress-for-frontity.md)
 
 _This guide highlights some basic WordPress requirements needed for Frontity projects._
+
+### [URLs in a Migration from WordPress to Frontity Decoupled Mode](guides/update-db-urls.md)
+
+_This guide explains the issue that arise with regard to URL's when migrating a WordPress site to Frontity Decoupled Mode and how to resolve them._
 
 ### [Frontity Query Options](frontity-query-options.md)
 
