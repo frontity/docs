@@ -10,7 +10,7 @@ _This guide outlines the various different WordPress configuration scenarios tha
 
 _This guide highlights some basic WordPress requirements needed for Frontity projects._
 
-### [URLs in a Migration from WordPress to Frontity Decoupled Mode](guides/update-db-urls.md)
+### [URLs in a Migration from WordPress to Frontity Decoupled Mode](update-db-urls.md)
 
 _This guide explains the issue that arise with regard to URL's when migrating a WordPress site to Frontity Decoupled Mode and how to resolve them._
 
