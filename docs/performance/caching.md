@@ -2,7 +2,7 @@
 
 
 {% hint style="info" %}
-With a good CDN caching strategy your Frontity project can be as performant as a static site. 
+With a good caching strategy your Frontity project can be as performant as a static site. 
 {% endhint %}
 
 In Frontity projects we can implement two main types of caching:

@@ -46,6 +46,12 @@ Once you've completed the development of your project and have a working applica
 
 In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.md), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
 
+## **Performance**
+
+With a good [caching strategy](performance/caching.md) your Frontity project can be as performant as a static site. 
+
+Also, applying mechanisms such as [Link prefetching](performance/link-prefetching.md) is highly recommended to improve the perceived performance.
+
 ## **Guides**
 
 This is where you'll find an ever-growing series of [**Guides**](guides/). Some will help you in working with Frontity. Others will give you ideas for projects and provide you with the help you need to guide you from first steps to fully working project.
