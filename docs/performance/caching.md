@@ -33,7 +33,7 @@ Based on our experience working with media publishers, we recommend that you sel
 
 ### CDN for Frontity servers
 
-If you're using **Decoupled Mode** (main domain pointing to the Frontity server) our recommendation is that you host your Frontity site with [**Vercel**](https://vercel.com/) that includes a distributed cache network. 
+If you're using **[Decoupled Mode](../architecture/decoupled-mode.md)** (main domain pointing to the Frontity server) our recommendation is that you host your Frontity site with [**Vercel**](https://vercel.com/) that includes a distributed cache network. 
 
 In [their own words about caching](https://vercel.com/docs/edge-network/caching):
 
@@ -49,7 +49,7 @@ We have tested many solutions for CDN and `stale-while-revalidate`, and we consi
 
 ### CDN for WordPress servers
 
-If you're using **Embedded Mode** your main domain will point to your WordPress installation. In this architecture all the Cache solutions you were using for your WordPress will still be valid for Frontity using this Embedded Mode.
+If you're using **[Embedded Mode](../architecture/embedded-mode.md)** your main domain will point to your WordPress installation. In this architecture all the Cache solutions you were using for your WordPress will still be valid for Frontity using this Embedded Mode.
 
 In WordPress there are several [solutions](https://wpbuffs.com/wordpress-cdn-plugins/) and [plugins](https://wordpress.org/plugins/tags/cdn/) to add a CDN Cache Layer to your site. This CDN implementation can be managed directly from your hosting provider or from a WordPress plugin
 
@@ -59,7 +59,7 @@ Besides using a CDN to cache your requests, another cache layer can be added at 
 
 ### Server caching for URL requests in WordPress servers
 
-In the **Embedded Mode**, the main domain is connected to the WordPress server which will redirect the to the Frontity Web Server to get the proper HTML based on the data of the WP REST API.
+In the **[Embedded Mode](../architecture/embedded-mode.md)**, the main domain is connected to the WordPress server which will redirect the to the Frontity Web Server to get the proper HTML based on the data of the WP REST API.
 
 In this case, a service to cache the URL requests managed by WordPress can be implemented via a WordPress plugin. This can be done easily though some of the [cache plugins available for WordPress](https://www.wpbeginner.com/plugins/best-wordpress-caching-plugins/)
 
@@ -68,7 +68,6 @@ If the URL requested is cached, the plugin will return the content and no furthe
 ### Server caching for REST API requests in WordPress servers
 
 Caching REST API requests is highly recommended in both Decoupled & Embedded Mode asi it will also speed up the general response time of your site
-
 
 This can also be done easily though a [cache plugin that supports REST API](https://wordpress.org/plugins/wp-rest-cache/) such as [Simple Cache plugin](https://wordpress.org/plugins/simple-cache/)
 

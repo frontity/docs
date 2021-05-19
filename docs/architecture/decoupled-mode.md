@@ -31,7 +31,7 @@ The `state.source.url` property set in the `frontity.settings.js` file [configur
 <!-- toc -->
 
 - [Features of the Decoupled Mode](#features-of-the-decoupled-mode)
-    + [Technical considerations](#technical-considerations)
+  * [Technical considerations](#technical-considerations)
 - [Caching in Decoupled Mode](#caching-in-decoupled-mode)
 
 <!-- tocstop -->
@@ -46,7 +46,7 @@ The Decoupled Mode offers a number of **advantages**:
 
 Decoupled Mode uses two different domains. The main one ([www.domain.com](http://www.domain.com/)) for Frontity and a subdomain ([wp.domain.com](http://wp.domain.com/)) for WordPress.
 
-#### Technical considerations
+### Technical considerations
 
 Due to the two-domains nature of this mode, in _Decoupled Mode_ e developers need to be aware of, test, and take care of many things that are normally handled for you by WordPress. For example:
 

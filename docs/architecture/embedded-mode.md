@@ -34,13 +34,13 @@ Due to the "two stage round trip", **[caching](#caching-in-embedded-mode) is the
 
 <!-- toc -->
 
-  * [Features of the Embedded Mode](#features-of-the-embedded-mode)
-    + [Technical considerations](#technical-considerations)
+- [Features of the Embedded Mode](#features-of-the-embedded-mode)
+  * [Technical considerations](#technical-considerations)
 - [Caching in Embedded Mode](#caching-in-embedded-mode)
 
 <!-- tocstop -->
 
-### Features of the Embedded Mode
+## Features of the Embedded Mode
 
 Embedded Mode offers several **advantages** over Decoupled Mode.
 
@@ -66,7 +66,7 @@ But there are some _things that should be taken into account_ when using Embedde
 - WordPress still needs to go through it's [bootstrap process](https://wordpress.tv/2017/06/22/alain-schlesser-demystifying-the-wordpress-bootstrap-process/) on initial page load
 - More routing is involved (resulting in potentially slower execution than Decoupled Mode) with the "two stage round trip" (WordPress → Frontity → WP REST API → Frontity → WordPress), so **a caching strategy is a necessity** rather than simply a nice to have.
 
-#### Technical considerations
+### Technical considerations
 
 Due to the one-domain nature of this mode and the fact that the routing is managed by WordPress, _developers don’t need to take care of any of the issues mentioned on the [Decoupled Mode](./decoupled-mode.md#technical-considerations)_ page, including:
   - URL replacements
