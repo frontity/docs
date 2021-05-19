@@ -27,7 +27,7 @@ The [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/em
 ![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png)
 
 {% hint style="info" %}
-Due to the "two stage round trip", **caching is therefore a necessity** in this architecture to ensure that site performance is optimal.
+Due to the "two stage round trip", **[caching](#caching-in-embedded-mode) is therefore a necessity** in this architecture to ensure that site performance is optimal.
 {% endhint %}
 
 ## Table of Contents
