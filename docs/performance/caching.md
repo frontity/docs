@@ -39,7 +39,7 @@ In [their own words about caching](https://vercel.com/docs/edge-network/caching)
 
 > The [Vercel Edge Network](https://vercel.com/docs/edge-network/overview) caches your content at the edge in order to serve data to your users as fast as possible.  
 
-Vercel includes both a CDN and the `stale-while-revalidate` cache directive (which they call [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)). Their service is the quickest and easiest to set up, and you can follow our guide to [deploying Frontity using Vercel](../deployment/deploy-using-vercel).
+Vercel includes both a CDN and the `stale-while-revalidate` cache directive (which they call [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)). Their service is the quickest and easiest to set up, and you can follow our guide to [deploying Frontity using Vercel](../deployment/deploy-using-vercel.md).
 
 If you prefer another hosting or want to deploy your Frontity site as a [Serverless](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9) function by using services such as [AWS Lambda](https://aws.amazon.com/lambda), [Netlify](https://www.netlify.com/) or [Google Functions](https://cloud.google.com/functions/), we highly recommend you to add a CDN (such as a [Cloudflare](https://www.cloudflare.com/es-es/)) as it is key to improve your web performance.
 
