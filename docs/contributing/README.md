@@ -13,7 +13,7 @@ As you may know, Frontity is an open source project, available and free for ever
 Here are some more good reasons to contribute to open source:
 
 * **Build new connections**: an open source community usually consists of people sharing similar interests, so contributing to a project will allow you to connect with amazing people.
-* **Improve your skills and competences**: if you are looking for practice, there is always a task for you in open source projects. This will allow you to improve your knowledge.
+* **Improve your skills and competences**: if you want to practice your programming skills, there is always a task for you in open source projects. This will allow you to improve your knowledge.
 * **Learn from mentors and teach others**: collaborating with others on a shared project means you'll have to ask people for help, as well as share your solutions and learnings with others. This can be a fulfilling activity for everyone involved.
 * **Get recognition**: all your work is public so you can get more visibility and recognition from others. Apart from that, you are in the perfect spot to learn about forthcoming changes.
 * **Your work matters**: you are able to make changes and improvements to a project - seeing how your work helps others is pretty gratifying.
