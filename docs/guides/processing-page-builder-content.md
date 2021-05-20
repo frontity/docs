@@ -12,7 +12,7 @@
 ### How do page builders work
 - visual interface (allows technically unskilled to create pages)
   -	generate html - stored in post content
-	- will have a generic stylesheet
+  - will have a generic stylesheet
 
 ### What we can do
 -	html can be detected, matched and processed with a processor - return a React component
