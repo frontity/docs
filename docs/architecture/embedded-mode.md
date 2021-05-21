@@ -79,7 +79,7 @@ Due to the one-domain nature of this mode and the fact that the routing is manag
 
 These are all either unnecessary (in the case of URL replacements), or continue to be handled by WordPress.
 
-In this mode content editors continue to have the same editing experience, just like in the Reverse-Proxy mode:
+In this mode content editors continue to have the same editing experience:
 
 - The admin bar is visible for logged in users.
 - Post previews work just the same as in a normal (non-headless) WordPress installation.
