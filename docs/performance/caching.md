@@ -67,7 +67,7 @@ If the URL requested is cached, the plugin will return the content and no furthe
 
 ### Server caching for REST API requests in WordPress servers
 
-Caching REST API requests is highly recommended in both Decoupled & Embedded Mode asi it will also speed up the general response time of your site
+Caching REST API requests is highly recommended in both **Decoupled & Embedded Mode** asi it will also speed up the general response time of your site
 
 This can also be done easily though a [cache plugin that supports REST API](https://wordpress.org/plugins/wp-rest-cache/) such as [Simple Cache plugin](https://wordpress.org/plugins/simple-cache/)
 
