@@ -4,7 +4,7 @@ Right, let's get you set up with your very first Frontity project. This guide wi
 
 > Please check that you meet the [**requirements**](./#requirements) before following the steps below.
 
-{% embed url="https://www.youtube.com/watch?v=OdiuVxjbh9A" caption="" %}
+{% embed url="https://youtu.be/FCnGfYfWulA" caption="" %}
 
 ## Getting started with Frontity
 
@@ -102,7 +102,8 @@ If demos are more your thing, a number of different Frontity projects and exampl
 
 In addition, you can head over to Frontity's [Youtube channel](https://www.youtube.com/c/Frontity/) to watch a series of videos called [Frontity Talks](https://youtube.com/playlist?list=PLC9teX20GdrTBeOzSwE-bFW-MbBEUwowS), which are especially interesting to learn more about specific topics of Frontity.
 
+
 {% hint style="info" %}
-The [Frontity Community Forum](https://community.frontity.org/) is the best place to get community support while helping others with your own questions and solutions. To keep it running smoothly, we encourage you to read through this [Forum Guide](https://community.frontity.org/t/frontity-community-forum-users-guide/4399) and search the available learning resources before posting.
+The [Frontity Community Forum](https://community.frontity.org/) is the best place to get community support while helping others with your own questions and solutions. To keep it running smoothly, we encourage you to read through this [Forum Guide](https://community.frontity.org/t/frontity-community-forum-users-guide/4399) and search the [available learning resources](https://frontity.org/learn/) before posting.
 {% endhint %}
 
