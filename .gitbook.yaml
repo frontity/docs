@@ -41,3 +41,4 @@ redirects:
     troubleshooting: ./guides/troubleshooting.md
     seo: ./guides/seo.md
     getting-started/connecting-to-wordpress: https://docs.frontity.org/getting-started/quick-start-guide#set-your-own-wordpress-installation
+    guides/link-prefetching: ./performance/link-prefetching.md
