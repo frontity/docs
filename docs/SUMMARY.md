@@ -17,7 +17,7 @@
   * [7. Libraries](learning-frontity/libraries.md)
   * [8. Namespaces](learning-frontity/namespaces.md)
   * [9. Styles](learning-frontity/styles.md)
-  * [11. Head](learning-frontity/head.md)
+  * [10. Head](learning-frontity/head.md)
 * [🏗 Architecture](architecture/README.md)
   * [Decoupled Mode](architecture/decoupled-mode.md)
   * [Embedded Mode](architecture/embedded-mode.md)
