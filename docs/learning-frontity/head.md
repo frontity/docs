@@ -1,4 +1,4 @@
-# 11. Head
+# 10. Head
 
 Taking control over your `<head>` tags is easy with Frontity because we have already configured it for you. It uses [React Helmet](https://github.com/nfl/react-helmet) internally, so you can work as if you were working with common HTML.
 

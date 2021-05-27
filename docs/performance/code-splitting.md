@@ -1,8 +1,8 @@
-# 10. Code Splitting
+# Code Splitting
 
 Code Splitting lets you split your code into various bundles, instead of using a single one with all the code. These smaller bundles are dynamically loaded at runtime depending on the URL.
 
-If used properly, this can mean important performance gains.
+**If used properly, this can mean important performance gains.**
 
 The bundles can be loaded on demand or in parallel, which allows you to just load the code that is currently needed by the user. This way you can avoid loading heavy code until it is required and reduce the amount of code during the initial load.
 

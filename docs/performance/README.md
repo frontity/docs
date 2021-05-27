@@ -6,5 +6,6 @@ In this section, we'll provide guides to some of the strategies and patterns tha
 
 * [Caching](./caching.md)
 * [Link prefetching](./link-prefetching.md)
+* [Code Splitting](./code-splitting.md)
 
 
