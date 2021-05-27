@@ -18,10 +18,6 @@ _This guide explains the issue that arise with regard to URL's when migrating a 
 
 _This guide explains what "Frontity Query Options" are and how to use them._
 
-### [Link prefetching](link-prefetching.md)
-
-_This guide explains what "link prefetching" is and how to use it in Frontity._
-
 ### [Redirections with Frontity](redirections-with-frontity.md)
 
 _This guide explains how to manage WordPress redirections with Frontity._
