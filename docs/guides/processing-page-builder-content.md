@@ -24,9 +24,9 @@ However, by using Frontity in the front end we lose the tight integration that e
 
 As already indicated, page builders present the content creator with a WYSIWYG visual interface such that the content creator or editor can layout and style their content with the assurance that what they see while they are editing the page or post will be precisely what the visitor to the site will see. This means that even technically unskilled people can enjoy a great deal of creative freedom when creating their pages or posts.
 
-The page builder will then generate HTML which is stored in the `post_content` field of the `wp_posts` table in the database. Enough styling information is included in the HTML, in the form of inline styles or classes, to allow the page or post to rendered in the browser accurately simulating the appearance as it was in the editor.
+The page builder will then generate HTML which is stored in the `post_content` field of the `wp_posts` table in the database. Enough styling information is included in the HTML, in the form of inline styles or classes, to allow the page or post to be rendered in the browser accurately simulating the appearance as it was in the editor.
 
-Usually the page builder will have one or more generic stylesheets, some of which are static and exist at the time that the page builder is installed into the WordPress installation, and some of which may be dynamically generated for a particular site, or even page/post.
+Usually the page builder will have one or more generic stylesheets, some of which are static and exist at the time that the page builder is installed into the WordPress installation, and some of which may be dynamically generated for a particular site, or even page/post, as the content is created.
 
 These style sheets need to be copied across to your Frontity project and added using the `<Global />` component.
 [see image here](https://frontity.org/blog/connecting-gutenberg-and-frontity/#adapt-frontity-to-gutenberg)
@@ -37,7 +37,7 @@ A cautionary note that should be borne in mind is that some page builders, such 
 
 There are a number of approaches that we as developers can take in order to solve the problem of pages and posts created with a page builder not appearing as intended in Frontity.
 
-The most straightforward approach would be to create the theme to reproduce the appearance of the pages/posts built with a page builder. This approach would require agreement up-front between content creators, designers, and developers and could restrict the creative freedom of content creators and designers as they must develop the pages and posts to work within the pre-defined constraints of the Frontity theme. That said, this approach could work for small or simple websites.
+The most straightforward approach would be to create the Frontity theme to reproduce the appearance of the pages/posts built with a page builder. This approach would require agreement up-front between content creators, designers, and developers and could restrict the creative freedom of content creators and designers as they must develop the pages and posts to work within the pre-defined constraints of the Frontity theme. That said, this approach could work for small or stylistically simple websites.
 
 A second approach would be to copy the style sheets that the page builder uses across to the Frontity site and import them into the project and use them with the `<Global />` component. In most cases this should result in a fairly accurate rendering of the pages or posts in Frontity. However, the benefits of CSS-in-JS are lost with this approach and adding several stylesheets to the project using the `<Global />` component will potentially result in reduced performance of the website.
 
