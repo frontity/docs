@@ -9,7 +9,7 @@ In this section, we'll provide guides to some of the strategies and patterns tha
 * [Code Splitting](./code-splitting.md)
 
 {% hint style="info" %}
-[These diagrams](https://excalidraw.com/#json=5527408018980864,1NK6kHYXXr1sP3UYp5gQaA) can help you understand how Frontity, the WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a good content creation and user experience) in both [Decoupled](../architecture/decoupled-mode.md) and [Embedded](../architecture/embedded-mode.md) Mode
+[These diagrams](https://excalidraw.com/#json=5527408018980864,1NK6kHYXXr1sP3UYp5gQaA) can help you understand how Frontity, the WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a great content creation, development and user experience) in both [Decoupled](../architecture/decoupled-mode.md) and [Embedded](../architecture/embedded-mode.md) Mode
 {% endhint %}
 
 
