@@ -8,4 +8,8 @@ In this section, we'll provide guides to some of the strategies and patterns tha
 * [Link prefetching](./link-prefetching.md)
 * [Code Splitting](./code-splitting.md)
 
+{% hint style="info" %}
+[These diagrams](https://excalidraw.com/#json=5527408018980864,1NK6kHYXXr1sP3UYp5gQaA) can help you understand how Frontity, the WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a good content creation and user experience) in both [Decoupled](https://excalidraw.com/#json=5717016476385280,Kb9bqmOGQ5adE9oTu7fQnw) and [Embedded](https://excalidraw.com/#json=5747703346626560,WnY2H6YSRdmuax05WqCA5Q) Mode
+{% endhint %}
+
 
