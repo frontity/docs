@@ -11,7 +11,7 @@ Let's take as an example a WordPress site under the domain `www.domain.com`. Let
 - `www.domain.com` will point to the Frontity server
 - `wp.domain.com` will point to the WordPress server
 
-In this scenario internal links that exist in the content when the WordPress URL is changed to `wp.domain.com` will still point to `www.domain.com`. However, if any content is added after the change then internal links will point to `wp.domain.com`. This creates a situation where internal links in the content are inconsistent, with "old" links pointing to `wp.domain.com` and "new" links pointing to `www.domain.com`.
+In this scenario internal links that exist in the content when the WordPress URL is changed to `wp.domain.com` will still point to `www.domain.com`. However, if any content is added after the change then internal links will point to `wp.domain.com`. This creates a situation where internal links in the content are inconsistent, with "old" links pointing to `www.domain.com` and "new" links pointing to `wp.domain.com`.
 
 {% hint style="info" %}
 **Note that** WordPress always uses absolute links internally, rather than relative links. WordPress uses the [internal URL `Settings`](https://wordpress.org/support/article/changing-the-site-url/) to determine where the internal links should point to.
