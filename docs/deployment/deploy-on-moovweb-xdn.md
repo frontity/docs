@@ -2,13 +2,13 @@
 
 [Layer0](https://layer0.co) is an all-in-one platform to develop, deploy, preview, experiment on, monitor, and run your headless frontend. It is focused on large, dynamic websites and best-in-class performance through EdgeJS (a JavaScript-based Content Delivery Network), predictive prefetching, and performance monitoring.
 
-Layer0's EdgeJS enables powerful and precise control of Edge based [caching](https://developer.layer0.co/guides/caching) and [routing](https://developer.layer0.co/guides/routing) that can improve the performance for Frontity sites.
+Layer0's EdgeJS enables powerful and precise control of Edge based [caching](https://docs.layer0.co/guides/caching) and [routing](https://docs.layer0.co/guides/routing) that can improve the performance for Frontity sites.
 
-For the full details on deploying Frontity on Layer0 refer to the [Frontity on Layer0 guide](https://developer.layer0.co/guides/frontity) in the developer documentation.
+For the full details on deploying Frontity on Layer0 refer to the [Frontity on Layer0 guide](https://docs.layer0.co/guides/frontity) in the developer documentation.
 
 ## Getting Started
 
-First start by installing the [Layer0 command line interface \(CLI\)](https://developer.layer0.co/guides/cli),
+First start by installing the [Layer0 command line interface \(CLI\)](https://docs.layer0.co/guides/cli),
 
 ```bash
 npm i -g @layer0/cli
