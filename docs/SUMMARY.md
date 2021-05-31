@@ -23,7 +23,7 @@
   * [Embedded Mode](architecture/embedded-mode.md)
 * [🌎 Deployment](deployment/README.md)
   * [Deploy Frontity using Vercel](deployment/deploy-using-vercel.md)
-  * [Deploy Frontity on Moovweb XDN](deployment/deploy-on-moovweb-xdn.md)
+  * [Deploy Frontity on Layer0](deployment/deploy-on-layer0.md)
   * [Deploy Frontity on Heroku](deployment/deploy-on-heroku.md)
 * [⚡️ Perfomance](performance/README.md)
   * [Caching](performance/caching.md)
