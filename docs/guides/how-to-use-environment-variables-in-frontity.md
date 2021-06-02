@@ -66,7 +66,7 @@ export default {
 
 In this example, there's a `API_TMDB` environment variable defined in a `.env` of that project
 
-This method (`beforeSSR` defined in the `server.js`) will assure that your API's are secure (will not be part of the client bundle) and only visible from the server-side. But take into account that this logic will be executed in the initialization (or bootstrapping of the Frontity app)  (for any page loaded the first time)
+This method (`beforeSSR` defined in the `server.js`) will assure that your API's are secure (will not be part of the client bundle) and only visible from the server-side. But take into account that this logic will be executed in the [initialization (or bootstrapping) of the Frontity app](../isomorphic-react.md#initialization-or-bootstraping-of-a-frontity-app)  (for any page loaded the first time)
 
 ### Generic access to the environment variables ![](https://img.shields.io/badge/SERVER-7950f2.svg) ![](https://img.shields.io/badge/CLIENT-fd7e14.svg)
 
