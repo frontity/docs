@@ -68,11 +68,11 @@ There are a set of special actions that Frontity runs at appropriate moments whe
 
 ![](https://frontity.org/wp-content/uploads/2021/04//actions-triggered-by-frontity.png)
 
-### `init` \(client & server\)
+### `init` (client & server)
 
 Packages can use this action to initialize their internal libraries. Packages should not use actions or libraries from other packages as they may not be properly initialized.
 
-### **`beforeSSR`** \(server only\) \_\_
+### `beforeSSR` (server only)
 
 The purpose of this action is to prepare the state for the React render made in the server. Packages can populate it with content fetched from external APIs, like the WP REST API. They can also interact with other packages if necessary.
 
@@ -95,15 +95,15 @@ You can _optionally_ use the [curried](https://en.wikipedia.org/wiki/Currying) v
 }
 ```
 
-### `afterSSR` \(server only\)
+### `afterSSR` (server only)
 
 This action runs when the HTML has been sent to the client. Packages should not rely on this action except for logging purposes because serverless providers sometimes kill the function after the HTML has been sent
 
-### `beforeCSR`  \(client only\)
+### `beforeCSR`  (client only)
 
 This action is run before React is hydrated. Be aware that the state that React needs for the hydration is already received from the server so you don't need to replicate the fetching done in `beforeSSR`.
 
-### `afterCSR`  **\(client only\)**
+### `afterCSR`  (client only)
 
 This action is run after React has been hydrated in the client and it has taken control of the page. This is where packages with client-side logic can start doing their thing.
 
