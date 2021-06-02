@@ -1,6 +1,6 @@
 Environment variables are a very useful way of managing API KEY's or custom data that doesn't belong to the code.
 
-Taking into account that Frontity apps are Isomorphic React apps we need to consider if we need to access these environment variables from only the server side or also from the client side
+Taking into account that [Frontity apps are Isomorphic React apps](../isomorphic-react.md) we need to consider if we need to access these environment variables from only the server side or also from the client side
 
 ## Adding environment variables to a Frontity Project 
 
@@ -30,7 +30,7 @@ MY_VARIABLE=xxx
 
 ### Private access to the environment variables ![](https://img.shields.io/badge/SERVER-7950f2.svg)
 
-As [we can create different entry points](#) for our Frontity theme package, we can create the `server.js` that will be executed only in the server side. In this way we can privately access the content of the environment variable (for example to perform a request to an external API and storing this data in the `state` so it can be accessed from your React components) 
+As [we can create different entry points](../isomorphic-react.md#creating-different-entry-points) for our Frontity theme package, we can create the `server.js` that will be executed only in the server side. In this way we can privately access the content of the environment variable (for example to perform a request to an external API and storing this data in the `state` so it can be accessed from your React components) 
 
 {% hint style="info" %}
 [Here a demo](https://github.com/frontity-juanmaguitar/demo-frontity-env-variables-server) of using an environment variable in `server.js`
@@ -114,4 +114,6 @@ export default {
 
 Either way, the ENV variable will be serialized with the rest of the `state` and it will be sent to the client for the React hydration.
 
+{% hint style="danger" %}
 Please note that any ENV variable exposed in `state` will end up in the client. *Do not expose any secret API KEY or password.*
+{% endhint %}
