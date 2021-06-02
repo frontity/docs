@@ -6,6 +6,10 @@ In this section we present a selection of guides that will help you to both work
 
 _This guide outlines the various different WordPress configuration scenarios that you might encounter and the things that need to be taken into account in order to properly set the URL of the WordPress data source._
 
+### [Using Environment Variables in a Frontity project](how-to-use-environment-variables-in-frontity.md)
+
+_This guide explains how to defined environment variables for a Frontity project and how to properly access these variables from the code._
+
 ### [WordPress requirements for Frontity](what-are-the-requisites-of-wordpress-for-frontity.md)
 
 _This guide highlights some basic WordPress requirements needed for Frontity projects._
