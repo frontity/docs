@@ -21,9 +21,9 @@ But if we enter the URL of the `pageA`, press Enter and from any some link in ou
 -  `pageA` was rendered in the server and served to the client
 -  `pageB` was rendered *in the client* and displayed to the user
 
-![Isomorphic Workflow](https://frontity.org/wp-content/uploads/2021/06/frontity-react-isomorphic-apps-.png) 
+![Isomorphic Workflow](https://frontity.org/wp-content/uploads/2021/06/frontity-react-isomorphic-apps-2.png) 
 
-*[Open drawing](https://excalidraw.com/#json=6616620059328512,rwp6fVWHxGIgvfE0aYZvFQ)*
+*[Open drawing](https://excalidraw.com/#json=6440731149336576,mft2mohsanjP6Uo-ahluiQ)*
 
 So, as you can see, we have to keep in mind this when developing a React theme with Frontity
 
