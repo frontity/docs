@@ -37,11 +37,13 @@ The initialization (or bootstraping) of a Frontity site happens when :
 - When we reload a URL of a Frontity site
 
 In this process (request of `/pageA` in the diagram above) Frontity does the following:
+
 1. Server generates the HTML of the requested page
 1. Server sends the HTML to the client
 1. Client hydrates the React app in top of the HTML rendered
 
 From that point, React can take full control of the app and the navigation in the site through clicks will be handled in the client-side (request of `/pageB` in the diagram above):
+
 1. Client (React) requests the data from the server 
 1. Client (React) displays the proper HTML with the proper data
 
