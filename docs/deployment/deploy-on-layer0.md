@@ -1,6 +1,6 @@
 # Deploy Frontity on Layer0
 
-[Layer0](https://layer0.co) is an all-in-one platform to develop, deploy, preview, experiment on, monitor, and run your headless frontend. It is focused on large, dynamic websites and best-in-class performance through EdgeJS (a JavaScript-based Content Delivery Network), predictive prefetching, and performance monitoring.
+[Layer0](https://layer0.co) is an all-in-one platform to develop, deploy, preview, experiment on, monitor, and run your headless frontend. It is focused on large, dynamic sites and best-in-class performance through EdgeJS (a JavaScript-based Content Delivery Network), predictive prefetching, and performance monitoring.
 
 Layer0's EdgeJS enables powerful and precise control of Edge based [caching](https://docs.layer0.co/guides/caching) and [routing](https://docs.layer0.co/guides/routing) that can improve the performance for Frontity sites.
 
@@ -8,7 +8,7 @@ For the full details on deploying Frontity on Layer0 refer to the [Frontity on L
 
 ## Getting Started
 
-First start by installing the [Layer0 command line interface \(CLI\)](https://docs.layer0.co/guides/cli),
+First start by installing the [Layer0 command-line interface \(CLI\)](https://docs.layer0.co/guides/cli),
 
 ```bash
 npm i -g @layer0/cli
@@ -75,7 +75,7 @@ const Header = ({ state }) => {
 }
 ```
 
-To prefetch data into the browser cache using the service worker, use the Prefetch component from @layer0/react. This component prefetches a specific url from the Layer0 edge when it becomes visible in the viewport. You typically wrap it around links. For example:
+To prefetch data into the browser cache using the service worker, use the Prefetch component from @layer0/react. This component prefetches a specific URL from the Layer0 edge when it becomes visible in the viewport. You typically wrap it around links. For example:
 
 ```javascript
 import { Prefetch } from '@layer0/react'
