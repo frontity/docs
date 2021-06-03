@@ -49,13 +49,16 @@ From that point, React can take full control of the app and the navigation in th
 
 ### Frontity Lifecycle Initialization Actions
 
-With Frontity you can define some actions ([Frontity Lifecycle Initialization Actions](https://docs.frontity.org/learning-frontity/actions#frontity-lifecycle-initialization-actions)) that will be executed at specific moments of this initialization process:
+With Frontity you can define some actions ([Frontity Lifecycle Initialization Actions](https://docs.frontity.org/learning-frontity/actions#frontity-lifecycle-initialization-actions)) that will be executed at specific moments of this initialization process.
 
+On the Server Side:
 1. Execution of the `init` action
 1. Execution of the `beforeSSR` action
 1. Server generates the HTML of the requested page
-1. Server sends the HTML to the client
 1. Execution of the `afterSSR` action
+1. Server sends the HTML to the client
+
+On the Client Side:
 1. Execution of the `init` action (again)
 1. Execution of the `beforeCSR` action
 1. Client hydrates the React app in top of the HTML rendered
