@@ -61,7 +61,7 @@ With Frontity you can define some actions ([Frontity Lifecycle Initialization Ac
 1. Client hydrates the React app in top of the HTML rendered
 1. Execution of the `afterCSR` action
 
-![Frontity Lifecycle Initialization Actions](https://frontity.org/wp-content/uploads/2021/04/actions-triggered-by-frontity.png)
+![Frontity Lifecycle Initialization Actions](https://frontity.org/wp-content/uploads/2021/06/Frontity-Lifecycle-Initialization-Actions.png)
 
 ## Creating different entry points
 
