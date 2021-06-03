@@ -34,7 +34,7 @@ Both of these architectures (or modes) require _two different servers_ with _two
 
 | Decoupled Mode | Embedded Mode |
 | --- | ---- |
-| ![](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png) | ![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png) |
+| [![](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png)](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png) | [![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png)](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png) |
 
 {% hint style="info" %}
 Implementing a [**caching strategy**](../performance/caching.md) in Frontity projects is highly recommended to improve response times. A [WordPress Cache plugin](https://wordpress.org/plugins/simple-cache/) is especially recommended to cache REST API requests in both architectures.
