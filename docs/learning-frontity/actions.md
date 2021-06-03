@@ -66,7 +66,7 @@ By the way, you can access the actions in the client console using:
 
 There are a set of special actions that Frontity runs at appropriate moments when initializing the app in either the Client and the Server Side :
 
-![](https://frontity.org/wp-content/uploads/2021/04//actions-triggered-by-frontity.png)
+![](https://frontity.org/wp-content/uploads/2021/06/Frontity-Lifecycle-Initialization-Actions.png)
 
 ### `init` (client & server)
 
