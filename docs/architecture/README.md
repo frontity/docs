@@ -28,7 +28,7 @@ Both of the two possible Frontity architectures (i.e. Decoupled or Embedded Mode
 
 - A _similar operation_
   - Frontity fetches the data from the WordPress REST API
-  - Frontity generates the final HTML as an [Isomorphic](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905) React App
+  - Frontity generates the final HTML as an [Isomorphic](../isomorphic-react.md) React App
 
 Both of these architectures (or modes) require _two different servers_ with _two different URLs_ but the communication workflow between these two servers differs in each case.
 

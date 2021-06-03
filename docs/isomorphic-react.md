@@ -12,18 +12,18 @@ Every time we access a page the first load is rendered from the server and from 
 
 Let's take an example of an isomorphic react app:
 
-If we enter the URL of the `pageA` and press Enter, then `pageA` is rendered in the server and served to the client
-If we enter the URL of the `pageB` and press Enter then `pageB` is rendered in the server and served to the client
+If we enter the URL `/home` and press Enter, then `home` page is rendered in the server and served to the client
+If we enter the URL `/contact` and press Enter then `contact` page is rendered in the server and served to the client
 
 In these two cases, a SSR (server-side Render) process has taken the React code and created the proper HTML with the proper content that is "served" to the client so it can be displayed to the user
 
-But if we enter the URL of the `pageA`, press Enter and from any some link in our app we go to `pageB` what is happening is:
--  `pageA` was rendered in the server and served to the client
--  `pageB` was rendered *in the client* and displayed to the user
+But if we enter the URL `/home`, press Enter and from any some link in our app we go to `/contact` what is happening is:
+-  `home` page was rendered in the server and served to the client
+-  `contact` page was rendered *in the client* and displayed to the user
 
-![Isomorphic Workflow](https://frontity.org/wp-content/uploads/2021/06/frontity-react-isomorphic-apps-.png) 
+![Isomorphic Workflow](https://frontity.org/wp-content/uploads/2021/06/frontity-react-isomorphic-apps-2.png) 
 
-*[Open drawing](https://excalidraw.com/#json=6616620059328512,rwp6fVWHxGIgvfE0aYZvFQ)*
+*[Open drawing](https://excalidraw.com/#json=4939822133149696,WM4aYk6GSv47pncKIs365Q)*
 
 So, as you can see, we have to keep in mind this when developing a React theme with Frontity
 
@@ -36,32 +36,37 @@ The initialization (or bootstraping) of a Frontity site happens when :
 - When we type a URL of a Frontity site in the browser and press Enter 
 - When we reload a URL of a Frontity site
 
-In this process (request of `/pageA` in the diagram above) Frontity does the following:
+In this process (request of `/home` in the diagram above) Frontity does the following:
 
 1. Server generates the HTML of the requested page
 1. Server sends the HTML to the client
 1. Client hydrates the React app in top of the HTML rendered
 
-From that point, React can take full control of the app and the navigation in the site through clicks will be handled in the client-side (request of `/pageB` in the diagram above):
+From that point, React can take full control of the app and the navigation in the site through clicks will be handled in the client-side (request of `/contact` in the diagram above):
 
 1. Client (React) requests the data from the server 
 1. Client (React) displays the proper HTML with the proper data
 
 ### Frontity Lifecycle Initialization Actions
 
-With Frontity you can define some actions ([Frontity Lifecycle Initialization Actions](https://docs.frontity.org/learning-frontity/actions#frontity-lifecycle-initialization-actions)) that will be executed at specific moments of this initialization process:
+With Frontity you can define some actions ([Frontity Lifecycle Initialization Actions](https://docs.frontity.org/learning-frontity/actions#frontity-lifecycle-initialization-actions)) that will be executed at specific moments of this initialization process.
+
+On the Server Side:
 
 1. Execution of the `init` action
 1. Execution of the `beforeSSR` action
 1. Server generates the HTML of the requested page
-1. Server sends the HTML to the client
 1. Execution of the `afterSSR` action
+1. Server sends the HTML to the client
+
+On the Client Side:
+
 1. Execution of the `init` action (again)
 1. Execution of the `beforeCSR` action
 1. Client hydrates the React app in top of the HTML rendered
 1. Execution of the `afterCSR` action
 
-![Frontity Lifecycle Initialization Actions](https://frontity.org/wp-content/uploads/2021/04/actions-triggered-by-frontity.png)
+![Frontity Lifecycle Initialization Actions](https://frontity.org/wp-content/uploads/2021/06/Frontity-Lifecycle-Initialization-Actions.png)
 
 ## Creating different entry points
 

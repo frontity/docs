@@ -102,11 +102,11 @@ Frontity uses webpack to split the code and send the minimum code required for t
 
 ### **🌱 Smallest React bundle possible**
 
-Frontity helps build sites which are fast to deliver better user experiences. That's the reason why we have struggled to make the core smaller. It has finally been reduced by 60% and only weights 60kb \(gzipped\).
+Frontity helps build sites which are fast to deliver better user experiences. That's the reason why we have tried very hard to make the core as small as possible. It has finally been reduced by 60% and only weights 60kb \(gzipped\).
 
 ### **✅ Ready for React Concurrent and Suspense**
 
-The React team is working hard to release an async, “no-CPU-blocking” version and Frontity will be compatible with it. It is expected for Q2 2019. Once it is released, we expect to see a rise in the use of the React animation libraries available that will get the user experience to the next level.
+The React team is working hard to release [Concurrent Mode](https://reactjs.org/docs/concurrent-mode-intro.html), which is a set of features that will improve the user experience of React apps and Frontity will be compatible with it.
 
 {% hint style="info" %}
 Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
