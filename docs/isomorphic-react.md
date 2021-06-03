@@ -23,7 +23,7 @@ But if we enter the URL `/home`, press Enter and from any some link in our app w
 
 ![Isomorphic Workflow](https://frontity.org/wp-content/uploads/2021/06/frontity-react-isomorphic-apps-2.png) 
 
-*[Open drawing](https://excalidraw.com/#json=6440731149336576,mft2mohsanjP6Uo-ahluiQ)*
+*[Open drawing](https://excalidraw.com/#json=4939822133149696,WM4aYk6GSv47pncKIs365Q)*
 
 So, as you can see, we have to keep in mind this when developing a React theme with Frontity
 
