@@ -2,7 +2,7 @@
 
 When developing a Frontity project or package the React code (used in your custom theme) should be [isomorphic](https://www.smashingmagazine.com/2015/04/react-to-the-future-with-isomorphic-apps/) (also called universal) 
 
-This means that **all the code in a Frontity project should be prepared to be executed both on the server-side and in the client-side**.
+This means that **all the code in a Frontity project should be prepared to be executed in both the server-side and the client-side**.
 
 {% hint style="info" %}
 This is specially important when we import npm packages to use them in our Frontity project. For example, [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) is native in client-side but not in Server Side, so [a `fetch` that works in both Client & server-side](https://api.frontity.org/frontity-packages/core-package/frontity#fetch) is recommended
