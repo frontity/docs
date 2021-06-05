@@ -12,14 +12,22 @@ Every time we access a page the first load is rendered from the server and from 
 
 Let's take an example of an isomorphic react app:
 
+**Scenario A (SSR)**
+
 If we enter the URL `/home` and press Enter, then `home` page is rendered in the server and served to the client
 If we enter the URL `/contact` and press Enter then `contact` page is rendered in the server and served to the client
 
-In these two cases, a SSR (server-side Render) process has taken the React code and created the proper HTML with the proper content that is "served" to the client so it can be displayed to the user
+In these two cases, a SSR (Server-Side Render) process has taken the React code and created the proper HTML with the proper content that is "served" to the client so it can be displayed to the user. 
+
+**Scenario B (SSR & CSR)**
 
 But if we enter the URL `/home`, press Enter and from any some link in our app we go to `/contact` what is happening is:
 -  `home` page was rendered in the server and served to the client
 -  `contact` page was rendered *in the client* and displayed to the user
+
+In this "Scenario B", we can call the navigation process to get to the `home` page as *Server Side Navigation* and the navigation process to get to the `contact` page as *Client Side Navigation*
+
+We can also talk about getting the `home` page through a *Server-Side Render* process (SSR) , and getting the `contact` page through a *Client-Side Render* process (CSR)
 
 ![Isomorphic Workflow](https://frontity.org/wp-content/uploads/2021/06/frontity-react-isomorphic-apps-2.png) 
 
