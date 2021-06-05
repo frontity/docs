@@ -10,12 +10,12 @@ This is specially important when we import npm packages to use them in our Front
 
 Every time we access a page the first load is rendered from the server and from there the navigation is done in the client-side ([this allows a SEO friendly behavior while maintaining a good UX](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905))
 
-Let's take an example of an isomorphic react app:
+Let's take some navigation examples in an Isomorphic React App:
 
 **Scenario A (SSR)**
 
-If we enter the URL `/home` and press Enter, then `home` page is rendered in the server and served to the client
-If we enter the URL `/contact` and press Enter then `contact` page is rendered in the server and served to the client
+If we enter the URL `/home` and press Enter, then `home` page is rendered in the server and served to the client. 
+If we enter the URL `/contact` and press Enter then `contact` page is rendered in the server and served to the client. 
 
 In these two cases, a SSR (Server-Side Render) process has taken the React code and created the proper HTML with the proper content that is "served" to the client so it can be displayed to the user. 
 
