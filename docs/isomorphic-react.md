@@ -21,7 +21,7 @@ In these two cases, a SSR (Server-Side Render) process has taken the React code 
 
 **Scenario B (SSR & CSR)**
 
-But if we enter the URL `/home`, press Enter and from any some link in our app we go to `/contact` what is happening is:
+But if we enter the `/home` URL, press Enter and then from some link in our app we go to the `/contact` URL what is happening is:
 -  `home` page was rendered in the server and served to the client
 -  `contact` page was rendered *in the client* and displayed to the user
 
