@@ -96,4 +96,4 @@ The only moment where you may want to divide between two separate  `client.js`  
 
 * If you need to access Node.js libraries, like  `"fs"`  or  `"path"` , because that will fail if it’s present in the client bundle. For example, when using `dot-env`.
 * If the code contains something that cannot be exposed to the client. For example, a hardcoded API key.
-* If you are using a heavy library on the server that will increase the size of the client bundle unnecessarily. For example, we use  `he`  to decode entities in the server, but it [weights 73Kbs](https://bundlephobia.com/result?p=he@1.2.0) so we use the  `new DOMParser().parseFromString`  in the client, which is available in the browser and essentially free.
+* If you are using a heavy library on the server that will increase the size of the client bundle unnecessarily. For example, you can use  [`he`](https://github.com/mathiasbynens/he)  to decode entities in the `server.js`, but it [weights 73Kbs](https://bundlephobia.com/result?p=he@1.2.0) so you can use the  `new DOMParser().parseFromString`  in the `client.js`, which is available in the browser and essentially free.
