@@ -1,12 +1,12 @@
-Environment variables are a very useful way of managing API KEY's or custom data that doesn't belong to the code.
+Environment variables are a very useful way of managing custom data that shouldn't be in the code. A prime example would be API KEYs or other authentication credentials for external APIs.
 
-Taking into account that [Frontity apps are Isomorphic React apps](../isomorphic-react.md) we need to consider if we need to access these environment variables from only the server-side or also from the client-side
+Since a [Frontity app is an Isomorphic React app](../isomorphic-react.md) we need to consider whether these environment variables should be accessible only to the code running server-side, or whether they should also be accessible to the code running client-side.
 
-## Adding environment variables to a Frontity Project 
+## Adding environment variables to a Frontity Project
 
-To do that, you can use packages like [`cross-env`](https://www.npmjs.com/package/cross-env) or [`dot-env`](https://github.com/motdotla/dotenv). Whatever approach you prefer.
+In order to access environment variables from your Frontity project you can use a package such as [`cross-env`](https://www.npmjs.com/package/cross-env) or [`dot-env`](https://github.com/motdotla/dotenv).
 
-If you use `cross-env`, you don't have to do anything special in Frontity, just add it to your `package.json` scripts:
+If you use `cross-env`, you will not have to do anything special in Frontity. You just need to add it to your `package.json` scripts thus:
 
 ```json
 {
@@ -18,7 +18,11 @@ If you use `cross-env`, you don't have to do anything special in Frontity, just 
 }
 ```
 
-`dotenv` can only run in Node, so you must [divide your `index.js` file in two files: `client.js` and `server.js`](https://docs.frontity.org/learning-frontity/packages#entry-points).
+`dotenv` only runs in Node, so rather than using an `index.js` file you should instead [divide the content of your `index.js` file across two files, namely `client.js` and `server.js`](https://docs.frontity.org/learning-frontity/packages#entry-points).
+
+{% hint style="info" %}
+If `client.js` and `server.js` exist, the `index.js` file can also still exist but it will be ignored by both the server and the client.
+{% endhint %}
 
 So for `dotenv` we must create a `.env` file:
 
@@ -26,20 +30,20 @@ So for `dotenv` we must create a `.env` file:
 MY_VARIABLE=xxx
 ```
 
-## Accessing the environment variables 
+## Accessing the environment variables
 
 ### Private access to the environment variables ![](https://img.shields.io/badge/SERVER-7950f2.svg)
 
-As [we can create different entry points](../isomorphic-react.md#creating-different-entry-points) for our Frontity theme package, we can create the `server.js` that will be executed only in the server-side. In this way we can privately access the content of the environment variable (for example to perform a request to an external API and storing this data in the `state` so it can be accessed from your React components) 
+As [we can create different entry points](../isomorphic-react.md#creating-different-entry-points) for our Frontity theme package by creating separate `server.js` and `client.js` files (that will each only be executed in the appropriate environment), we are therefore able to privately access the content of the environment variable on the server (for example to perform a request to an external API and storing this data in the `state` so it can be accessed from your React components).
 
 {% hint style="info" %}
-[Here a demo](https://github.com/frontity-juanmaguitar/demo-frontity-env-variables-server) of using an environment variable in `server.js`
+[Here a demo](https://github.com/frontity-juanmaguitar/demo-frontity-env-variables-server) illustrating the use of an environment variable in `server.js`.
 {% endhint %}
 
 
-The `server.js` could be something like this... 
+The content of the `server.js` file could be something like this:
 
-```
+```js
 import { config } from "dotenv";
 import { fetch } from "frontity";
 import packageClient from "./client";
@@ -64,15 +68,15 @@ export default {
 };
 ```
 
-In this example, there's a `API_TMDB` environment variable defined in a `.env` of that project
+In this example a `API_TMDB` environment variable is defined in a `.env` file included in that project
 
-This method (`beforeSSR` defined in the `server.js`) will assure that your APIs are secure (will not be part of the client bundle) and only visible from the server-side. But take into account that this logic will be executed in the [initialization (or bootstrapping) of the Frontity app](../isomorphic-react.md#initialization-or-bootstraping-of-a-frontity-app)  (for any page loaded the first time)
+This method (`beforeSSR` defined in the `server.js`) will ensure that your API credentials are secure (i.e. they will not be part of the client bundle) and are only visible to the code running server-side. However, remember to take into account that this logic will be executed in the [initialization (or bootstrapping) of the Frontity app](../isomorphic-react.md#initialization-or-bootstraping-of-a-frontity-app) (i.e. for any page loaded the first time).
 
 ### Generic access to the environment variables ![](https://img.shields.io/badge/SERVER-7950f2.svg) ![](https://img.shields.io/badge/CLIENT-fd7e14.svg)
 
 If you need to use the ENV variable also in the client, the best way is to add it to the `state`.
 
-You can use `frontity.settings.js` or your package `state` for that, whatever is more appropriate for your situation.
+You can use `frontity.settings.js` or your package `state` for that, whichever is more appropriate for your situation.
 
 `frontity.settings.js`:
 
