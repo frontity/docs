@@ -1,6 +1,6 @@
 Environment variables are a very useful way of managing custom data that shouldn't be in the code. A prime example would be API KEYs or other authentication credentials for external APIs.
 
-Since a [Frontity app is an Isomorphic React app](../isomorphic-react.md) we need to consider whether these environment variables should be accessible only from the server-side, or whether they should also be accessible from the client-side.
+Since a [Frontity app is an Isomorphic React app](../isomorphic-react.md) we need to consider whether these environment variables should be accessible only to the code running server-side, or whether they should also be accessible to the code running client-side.
 
 ## Adding environment variables to a Frontity Project
 
