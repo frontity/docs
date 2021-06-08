@@ -120,7 +120,7 @@ Due to this isomorphic nature of Frontity apps/sites there will be parts of the 
 During the initialization of a Frontity app, the following parts are executed only in the server
 
 - The [`server.js` file](#creating-different-entry-points) 
-- The [`beforeSSR`](learning-frontity/actions#beforessr-server-only) and [`afterSSR`](learning-frontity/actions#beforessr-server-only) actions
+- The [`beforeSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) and [`afterSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) actions
 
 As [`frontity.settings.js` file](learning-frontity/settings.md) is executed in Build Time, this file also has also access to server-side packages and environment variables
 
@@ -136,7 +136,7 @@ This means that we could safely make use of environment variables inside of the 
 During the initialization of a Frontity app, the following parts are executed only in the client-side (in the Browser)
 
 - The [`client.js` file](#creating-different-entry-points) 
-- The [`beforeCSR`](learning-frontity/actions.md#beforecsr-client-only) and [`afterCSR`](learning-frontity/actions.md#aftercsr-client-only) actions
+- The [`beforeCSR`](https://docs.frontity.org/learning-frontity/actions#beforecsr-client-only) and [`afterCSR`](https://docs.frontity.org/learning-frontity/actions#aftercsr-client-only) actions
 
 In the hydration process of the components rendered and on _Client-side Navigation_, any hook defined in React components (like `useEffect`) will also be executed only on the client-side
 
@@ -149,7 +149,7 @@ This means that we could safely make use of the [`window` object](https://develo
 ### Both Client-side and Server-side code
 
 During the initialization of a Frontity app, the following parts are executed in both the server and the client side, including:
-- The [`init`](learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) 
+- The [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) 
 
 The rest of the code inside the React components will be executed in server-side or in client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation
 
