@@ -12,6 +12,21 @@ This is especially important when we import npm packages for use in our Frontity
 Another example is the [`window` object](https://developer.mozilla.org/en-US/docs/Web/API/Window). You should not try to access any of the properties or methods available in the `window` object from code that is going to be executed on the server, as the code will fail since the `window` object is only available in the browser.
 {% endhint %}
 
+## Table of Contents
+
+<!-- toc -->
+
+- [Server-side Navigation & client-side Navigation](#server-side-navigation-client-side-navigation)
+- [Initialization of a Frontity app](#initialization-of-a-frontity-app)
+  * [Frontity Lifecycle Initialization Actions](#frontity-lifecycle-initialization-actions)
+- [Creating different entry points](#creating-different-entry-points)
+- [Server-side code and Client-side code](#server-side-code-and-client-side-code)
+  * [Server-side only code](#server-side-only-code)
+  * [Client-side only code](#client-side-only-code)
+  * [Both Client-side and Server-side code](#both-client-side-and-server-side-code)
+
+<!-- tocstop -->
+
 ## Server-side Navigation & client-side Navigation
 
 Every time we access a page on a Frontity site the first load is rendered on the server. Once the initial server-side render (SSR) is complete the HTML is sent to the client (along with React hydration) and then the ensuing navigation is done in the client-side (CSR). ([This enables your site to remain SEO friendly, while also maintaining a good UX](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905)).
