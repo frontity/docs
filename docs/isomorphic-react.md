@@ -12,7 +12,9 @@ This is especially important when we import npm packages for use in our Frontity
 Another example is the [`window` object](https://developer.mozilla.org/en-US/docs/Web/API/Window). You should not try to access any of the properties or methods available in the `window` object from code that is going to be executed on the server, as the code will fail since the `window` object is only available in the browser.
 {% endhint %}
 
-Every time we access a page on a Frontity site the first load is rendered on the server. Once the initial server-side render is complete the HTML is sent to the client (along with React hydration) and then the ensuing navigation is done in the client-side. ([This enables your site to remain SEO friendly, while also maintaining a good UX](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905)).
+## Server Side Navigation & Client Side Navigation
+
+Every time we access a page on a Frontity site the first load is rendered on the server. Once the initial server-side render (SSR) is complete the HTML is sent to the client (along with React hydration) and then the ensuing navigation is done in the client-side (CSR). ([This enables your site to remain SEO friendly, while also maintaining a good UX](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905)).
 
 Let's take a look at some possible navigation examples as they would occur in an Isomorphic React App:
 
@@ -46,7 +48,7 @@ Luckily, **ALL** the tools included with Frontity provide this isomorphic behavi
 
 ## Initialization of a Frontity app
 
-The initialization (or Bootstraping) of a Frontity site happens when we either:
+The initialization (or Bootstraping) of a Frontity site happens when we do _Server Side Navigation_ (Server-Side Render, SSR), this when we do either:
 
 - type a URL of a Frontity site in the browser's address bar and press Enter, or
 - reload a URL of a Frontity site (e.g. by hitting the `refresh` button in the browser on a page that has been rendered in CSR)
@@ -103,7 +105,53 @@ Using  `beforeSSR`  is independent of using a  `server.js`  file. You can add a 
 
 The main use cases where you may want to use two separate  `client.js`  and  `server.js`  files are:
 
-* If you need to access Node.js libraries, such as `"fs"` or `"path"` , because they will fail if present in the client bundle.
-* If you need to access environment variables using, for example, `dot-env`.
+* If you need to access Node.js libraries, such as `"fs"` or `"path"` , because they will fail if present in the client bundle (`"dot-env"` for accessing environment variables, for example).
 * If the code contains something that cannot be exposed to the client, for example authentication details such as a hardcoded API key.
 * If you are using a heavy library on the server that will increase the size of the client bundle unnecessarily. For example, you can use  [`he`](https://github.com/mathiasbynens/he)  to decode entities in the `server.js`, but it [weighs in at 73Kbs](https://bundlephobia.com/result?p=he@1.2.0). You can therefore use [`new DOMParser().parseFromString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser), which is available in the browser and so is essentially free, in the `client.js` instead.
+
+## Server-side code and Client-side code
+
+Due to this isomorphic nature of Frontity apps/sites there will be parts of the code of your Frontity project that will be executed only in the server, only in the client (the browser) or in both
+
+[_Open diagram_](https://excalidraw.com/#json=5101565044064256,fH-YZ9augphZgj4jF_u4IQ)
+
+### Server-side only code
+
+During the initialization of a Frontity app, the following parts are executed only in the server
+
+- The [`server.js` file](#creating-different-entry-points) 
+- The [`beforeSSR`](learning-frontity/actions#beforessr-server-only) and [`afterSSR`]((learning-frontity/actions#beforessr-server-only)) actions
+
+As [`frontity.settings.js` file](learning-frontity/settings.md) is executed in Build Time, this file also has also access to server-side packages and environment variables
+
+{% hint style="info" %}
+This means that we could safely make use of environment variables inside of the `beforeSSR` action, for example
+{% endhint %}
+
+![Server-side only code](https://frontity.org/wp-content/uploads/2021/06/server-side-code.png)
+
+
+### Client-side only code
+
+During the initialization of a Frontity app, the following parts are executed only in the client-side (in the Browser)
+
+- The [`client.js` file](#creating-different-entry-points) 
+- The [`beforeCSR`](learning-frontity/actions#beforecsr-client-only) and [`afterCSR`](learning-frontity/actions#aftercsr-client-only) actions
+
+In the hydration process of the components rendered and on _Client Side Navigation_, any hook defined in React components (like `useEffect`) will also be executed only on the client-side
+
+{% hint style="info" %}
+This means that we could safely make use of the [`window` object](https://developer.mozilla.org/en-US/docs/Web/API/Window) and the native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) inside of the `useEffect` hook, for example
+{% endhint %}
+
+![Client-side only code](https://frontity.org/wp-content/uploads/2021/06/server-client-side-code.png)
+
+### Both Client-side and Server-side code
+
+During the initialization of a Frontity app, the following parts are executed in both the server and the client side, including:
+- The [`init`](learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) 
+
+The rest of the code inside the React components will be executed in server-side or in client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation
+
+![Both Client-side and Server-side code](https://frontity.org/wp-content/uploads/2021/06/client-side-code.png)
+
