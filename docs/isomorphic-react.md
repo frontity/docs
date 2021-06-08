@@ -144,7 +144,7 @@ In the hydration process of the components rendered and on _Client-side Navigati
 This means that we could safely make use of the [`window` object](https://developer.mozilla.org/en-US/docs/Web/API/Window) and the native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) inside of the `useEffect` hook, for example
 {% endhint %}
 
-![Client-side only code](https://frontity.org/wp-content/uploads/2021/06/server-client-side-code.png)
+![Client-side only code](https://frontity.org/wp-content/uploads/2021/06/client-side-code.png)
 
 ### Both Client-side and Server-side code
 
@@ -153,5 +153,5 @@ During the initialization of a Frontity app, the following parts are executed in
 
 The rest of the code inside the React components will be executed in server-side or in client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation
 
-![Both Client-side and Server-side code](https://frontity.org/wp-content/uploads/2021/06/client-side-code.png)
+![Both Client-side and Server-side code](https://frontity.org/wp-content/uploads/2021/06/server-client-side-code.png)
 
