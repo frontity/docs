@@ -137,7 +137,7 @@ During the initialization of a Frontity app, the following parts of the code are
 - The [`server.js` file](#creating-different-entry-points)
 - Functions "hooked" onto the [`beforeSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) and [`afterSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) actions
 
-As the [`frontity.settings.js` file](learning-frontity/settings.md) is executed at Build Time, this file also has also access to server-side packages and environment variables.
+As the [`frontity.settings.js` file](learning-frontity/settings.md) is executed at Build Time, this file also has access to server-side packages and environment variables.
 
 {% hint style="info" %}
 As the code only runs on the server we can safely make use of environment variables inside of, for example, the `beforeSSR` action.
