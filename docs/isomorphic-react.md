@@ -16,18 +16,18 @@ Another example is the [`window` object](https://developer.mozilla.org/en-US/doc
 
 <!-- toc -->
 
-- [Server-side Navigation & client-side Navigation](#server-side-navigation-client-side-navigation)
+- [Server-side Navigation and client-side Navigation](#server-side-navigation-and-client-side-navigation)
 - [Initialization of a Frontity app](#initialization-of-a-frontity-app)
   * [Frontity Lifecycle Initialization Actions](#frontity-lifecycle-initialization-actions)
 - [Creating different entry points](#creating-different-entry-points)
-- [Server-side code and Client-side code](#server-side-code-and-client-side-code)
+- [Server-side code and client-side code](#server-side-code-and-client-side-code)
   * [Server-side only code](#server-side-only-code)
   * [Client-side only code](#client-side-only-code)
-  * [Both Client-side and Server-side code](#both-client-side-and-server-side-code)
+  * [Both server-side and client-side code](#both-server-side-and-client-side-code)
 
 <!-- tocstop -->
 
-## Server-side Navigation & client-side Navigation
+## Server-side Navigation and client-side Navigation
 
 Every time we access a page on a Frontity site the first load is rendered on the server. Once the initial server-side render (SSR) is complete the HTML is sent to the client (along with React hydration) and then the ensuing navigation is done in the client-side (CSR). ([This enables your site to remain SEO friendly, while also maintaining a good UX](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905)).
 
@@ -124,7 +124,7 @@ The main use cases where you may want to use two separate  `client.js`  and  `se
 * If the code contains something that cannot be exposed to the client, for example authentication details such as a hardcoded API key.
 * If you are using a heavy library on the server that will increase the size of the client bundle unnecessarily. For example, you can use  [`he`](https://github.com/mathiasbynens/he)  to decode entities in the `server.js`, but it [weighs in at 73Kbs](https://bundlephobia.com/result?p=he@1.2.0). You can therefore use [`new DOMParser().parseFromString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser), which is available in the browser and so is essentially free, in the `client.js` instead.
 
-## Server-side code and Client-side code
+## Server-side code and client-side code
 
 Due to this isomorphic nature of Frontity apps/sites there will be parts of the code of your Frontity project that will be executed only in the server, only in the client (the browser) or in both
 
@@ -161,7 +161,7 @@ This means that we could safely make use of the [`window` object](https://develo
 
 ![Client-side only code](https://frontity.org/wp-content/uploads/2021/06/client-side-code.png)
 
-### Both Client-side and Server-side code
+### Both server-side and client-side code
 
 During the initialization of a Frontity app, the following parts are executed in both the server and the client side, including:
 - The [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) 
