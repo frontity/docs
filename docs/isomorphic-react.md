@@ -163,7 +163,7 @@ This means that we could safely make use of the [`window` object](https://develo
 
 ### Both server-side and client-side code
 
-During the initialization of a Frontity app the [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) is executed in both the server and the client side.
+During the initialization of a Frontity app the [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) is executed in both the server and the client-side.
 
 The rest of the code inside the React components will be executed in server-side or in client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation
 
