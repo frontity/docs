@@ -19,7 +19,7 @@ There are some other properties implied in determining this URL of the WordPress
 * `state.wpSource.prefix`: The prefix of the API. _Defaults to `/wp-json`. It is not used if `isWpCom` is `true`._
 
 {% hint style="info" %}
-From [version 1.10](https://github.com/frontity/frontity/blob/dev/packages/wp-source/CHANGELOG.md#1100) of the `@frontity/wp-source` package, the property `state.source.api` _should never be set manually by the end-users_ \(it will be computed from the properties mentioned above\)
+From [version 1.10](https://github.com/frontity/frontity/blob/dev/packages/wp-source/CHANGELOG.md#1100) of the `@frontity/wp-source` package, the property `state.source.api` _should never be set manually by the end users_ \(it will be computed from the properties mentioned above\)
 {% endhint %}
 
 ## WordPress scenarios
