@@ -126,21 +126,21 @@ The main use cases where you may want to use two separate  `client.js`  and  `se
 
 ## Server-side code and client-side code
 
-Due to this isomorphic nature of Frontity apps/sites there will be parts of the code of your Frontity project that will be executed only in the server, only in the client (the browser) or in both
+Due to the isomorphic nature of sites built with Frontity there will be some parts of the code of your Frontity project that will be executed only on the server, some parts that will be executed only on the client (i.e. the browser), and some parts that will be executed on both.
 
 [_Open diagram_](https://excalidraw.com/#json=5101565044064256,fH-YZ9augphZgj4jF_u4IQ)
 
 ### Server-side only code
 
-During the initialization of a Frontity app, the following parts are executed only in the server
+During the initialization of a Frontity app, the following parts of the code are executed only on the server
 
-- The [`server.js` file](#creating-different-entry-points) 
-- The [`beforeSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) and [`afterSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) actions
+- The [`server.js` file](#creating-different-entry-points)
+- Functions "hooked" onto the [`beforeSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) and [`afterSSR`](https://docs.frontity.org/learning-frontity/actions#beforessr-server-only) actions
 
-As [`frontity.settings.js` file](learning-frontity/settings.md) is executed in Build Time, this file also has also access to server-side packages and environment variables
+As the [`frontity.settings.js` file](learning-frontity/settings.md) is executed at Build Time, this file also has access to server-side packages and environment variables.
 
 {% hint style="info" %}
-This means that we could safely make use of environment variables inside of the `beforeSSR` action, for example
+As the code only runs on the server we can safely make use of environment variables inside of, for example, the `beforeSSR` action.
 {% endhint %}
 
 ![Server-side only code](https://frontity.org/wp-content/uploads/2021/06/server-side-code.png)
@@ -148,24 +148,24 @@ This means that we could safely make use of environment variables inside of the 
 
 ### Client-side only code
 
-During the initialization of a Frontity app, the following parts are executed only in the client-side (in the Browser)
+During the initialization of a Frontity app, the following parts of the code are executed only on the client-side (i.e. in the Browser).
 
-- The [`client.js` file](#creating-different-entry-points) 
-- The [`beforeCSR`](https://docs.frontity.org/learning-frontity/actions#beforecsr-client-only) and [`afterCSR`](https://docs.frontity.org/learning-frontity/actions#aftercsr-client-only) actions
+- The [`client.js` file](#creating-different-entry-points)
+- Functions "hooked" onto the [`beforeCSR`](https://docs.frontity.org/learning-frontity/actions#beforecsr-client-only) and [`afterCSR`](https://docs.frontity.org/learning-frontity/actions#aftercsr-client-only) actions
 
-In the hydration process of the components rendered and on _Client-side Navigation_, any hook defined in React components (like `useEffect`) will also be executed only on the client-side
+When components are “hydrated”, and also whenever any _Client-side Navigation_ occurs, any hook defined in a React component (such as  `useEffect`) will also be executed only on the client-side.
 
 {% hint style="info" %}
-This means that we could safely make use of the [`window` object](https://developer.mozilla.org/en-US/docs/Web/API/Window) and the native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) inside of the `useEffect` hook, for example
+This means that we can safely make use of, for example, the [`window` object](https://developer.mozilla.org/en-US/docs/Web/API/Window) or the native [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) inside of the `useEffect` hook.
 {% endhint %}
 
 ![Client-side only code](https://frontity.org/wp-content/uploads/2021/06/client-side-code.png)
 
 ### Both server-side and client-side code
 
-During the initialization of a Frontity app the [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) is executed in both the server and the client-side.
+During the initialization of a Frontity app the function "hooked" onto the [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) is executed in both the server and the client-side.
 
-The rest of the code inside the React components will be executed in server-side or in client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation
+The rest of the code inside the React components in the project will be executed either server-side or client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation.
 
 {% hint style="info" %}
 This means that in this part of the code we should use isomorphic versions of libraries, for example using the isomorphic [`fetch`](https://api.frontity.org/frontity-packages/core-package/frontity#fetch) (provided by the [`frontity`](https://api.frontity.org/frontity-packages/core-package/frontity) package) to fetch resources from the network as it'll work in both server and client-side.
