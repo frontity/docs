@@ -39,14 +39,20 @@ We believe this JavaScript-based approach is gaining traction in the WordPress e
 
 ## **How does Frontity work?**
 
-With Frontity you still use your WordPress dashboard to edit and manage your content in exactly the same way that you are accustomed to. As you make changes content is automatically updated in your Frontity site, just as it is when using a traditional WordPress theme.
+In a Frontity project, WordPress is used as a headless or decoupled CMS, just for managing the content. Frontity uses data from the WordPress REST API and generates the final HTML that is displayed in the browser using React.
 
-Frontity apps require a Node.js server to run on. This runs in tandem with the WordPress site which is now relegated to providing content to the frontend that is based on Frontity.
+You still use your WordPress dashboard to edit and create content in exactly the same way that you are accustomed to. As you make changes content is automatically updated in your Frontity site, just as it is when using a traditional WordPress theme.
 
-* Frontity requests content from the WordPress REST-API and uses it to generate the final HTML that is displayed in the browser.
-* Frontity is also capable of generating AMP pages using the same React code and CSS.
+Frontity apps require both a Node.js server and a WordPress server (PHP) to run on. And there are two main Frontity Modes (architectures or configurations):
 
-![](https://frontity.org/wp-content/uploads/2021/04//frontity-architecture.png)
+- **[Decoupled Mode](../architecture/decoupled-mode.md)**: in this mode Frontity fetches the data from the REST API of the WordPress Server and returns the final HTML to the visitor as an Isomorphic React App.
+- **[Embedded Mode](../architecture/embedded-mode.md)**: in this mode the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode) replaces the PHP theme and makes a request to the Frontity server to retrieve the HTML as an Isomorphic React App, which is returned to the visitor by WordPress.
+
+Depending on the mode used, the main domain (e.g. `www.domain.com`) will be connected either to the WordPress/PHP Server (in Embedded mode) or to the Frontity/Node.js server (in Decoupled mode).
+
+{% hint style="info" %}
+Head over to the [**Architecture**](../architecture) page to learn more about how Frontity works.
+{% endhint %}
 
 **Why a different Node.js server?**
 
@@ -56,9 +62,6 @@ React is a JavaScript library. In order to generate HTML for site visitors or fo
 
 **Frontity** can be hosted either on a regular Node.js server or in a **serverless** environment. That makes it both super cheap and infinitely scalable.
 
-{% hint style="info" %}
-We are working on other possible installations, although for the time being this is the one that we most strongly recommend.
-{% endhint %}
 
 ## **Frontity features**
 
