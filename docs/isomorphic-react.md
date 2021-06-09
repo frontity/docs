@@ -163,10 +163,14 @@ This means that we could safely make use of the [`window` object](https://develo
 
 ### Both server-side and client-side code
 
-During the initialization of a Frontity app, the following parts are executed in both the server and the client side, including:
-- The [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) 
+During the initialization of a Frontity app the [`init`](https://docs.frontity.org/learning-frontity/actions#init-client-and-server) action of the [`index.js` file](#creating-different-entry-points) is executed in both the server and the client side.
 
 The rest of the code inside the React components will be executed in server-side or in client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation
+
+{% hint style="info" %}
+This means that in this part of the code we should use isomorphic versions of libraries, for example using the isomorphic [`fetch`](https://api.frontity.org/frontity-packages/core-package/frontity#fetch) (provided by the [`frontity`](https://api.frontity.org/frontity-packages/core-package/frontity) package) to fetch resources from the network as it'll work in both server and client-side.
+{% endhint %}
+
 
 ![Both Client-side and Server-side code](https://frontity.org/wp-content/uploads/2021/06/server-client-side-code.png)
 
