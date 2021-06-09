@@ -8,6 +8,11 @@ The main property in `frontity.settings.js` needed for determining the URL of th
 
 * **`state.source.url`**:  The URL of the WordPress. _Required_.
 
+{% hint style="warning" %}
+Mind how `state.source.url` should point to just the URL of your WordPress (i.e. `https://test.frontity.org`) and not the URL of your WordPress REST API (i.e. `https://test.frontity.org/wp-json`). The URL of of the REST API will be calculated by Frontity depending on each use case.
+{% endhint %}
+
+
 There are some other properties implied in determining this URL of the WordPress data source, but they need to be set only for specific use cases:
 
 * `state.wpSource.isWpCom`:  A flag to indicate a special use case of WordPress.com sites \(Personal or Premium plans\). _It is not required for Free WordPress.com sites. Defaults to `false`._
