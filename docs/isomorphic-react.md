@@ -168,7 +168,7 @@ During the initialization of a Frontity app the function "hooked" onto the [`ini
 The rest of the code inside the React components in the project will be executed either server-side or client-side depending on if we're doing Server-Side Navigation or Client-Side Navigation.
 
 {% hint style="info" %}
-This means that in this part of the code we should use isomorphic versions of libraries, for example using the isomorphic [`fetch`](https://api.frontity.org/frontity-packages/core-package/frontity#fetch) (provided by the [`frontity`](https://api.frontity.org/frontity-packages/core-package/frontity) package) to fetch resources from the network as it'll work in both server and client-side.
+This means that in this part of the code we should use isomorphic versions of libraries, for example using an isomorphic [`fetch`](https://api.frontity.org/frontity-packages/core-package/frontity#fetch) (as [the one](https://api.frontity.org/frontity-packages/core-package/frontity#fetch) provided by the [`frontity`](https://api.frontity.org/frontity-packages/core-package/frontity) package) to fetch resources from the network as it'll work in both server and client-side.
 {% endhint %}
 
 
