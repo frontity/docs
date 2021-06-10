@@ -22,5 +22,5 @@ Here you have some guides about how to deploy a Frontity app in some popular hos
 
 ## Serving Static files
 
-Sometimes you will want to serve your assets \(also called "static files" like images, fonts, JS chunk files\) from another domain or from a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). In this case, you can modify the [`publicPath` parameter](./) when you run `npx frontity build`.
+Sometimes you will want to serve your assets \(also called "static files" like images, fonts, JS chunk files\) from another domain or from a [CDN](../performance/caching.md#distributed-caching-cdn). In this case, you can modify the [`publicPath` parameter](./) when you run `npx frontity build`.
 
