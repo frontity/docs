@@ -1,6 +1,6 @@
 # 📚 Core Concepts
 
-Frontity was designed to be as simple as possible, but you still need to familiarize yourself with some concepts. In this section you'll learn the very basic ideas behind Frontity Projects
+Frontity was designed to be as simple as possible, but you still need to familiarize yourself with some concepts. In this **Core Concepts** you'll learn the very basic ideas behind Frontity Projects
 
 
 [Frontity projects](project.md) are basically the sum of several packages bundled in some final files under the direction of a settings file (`frontity.settings.js`). In the [**Project**](project.md) section you'll learn about the structure of a Frontity project and the purpose of each folder or file in it
