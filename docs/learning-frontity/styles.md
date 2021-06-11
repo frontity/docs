@@ -367,6 +367,6 @@ If you already have a base of Sass you want to migrate, you can use these tools 
 * [https://github.com/jgranstrom/sass-extract](https://github.com/jgranstrom/sass-extract)
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Styles in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
 

@@ -1,9 +1,5 @@
 # 3. Packages
 
-{% hint style="info" %}
-This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
-{% endhint %}
-
 ## Local Packages
 
 As we have already explained, this is the place where you will add code and functionality to your sites.
@@ -174,6 +170,6 @@ By the way, it's probably good to point out here that in Frontity all packages a
 Let's explore the **Roots** and **Fills** in the next section.
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Packages in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
 

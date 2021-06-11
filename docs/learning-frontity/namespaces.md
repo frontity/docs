@@ -1,9 +1,5 @@
 # 8. Namespaces
 
-{% hint style="info" %}
-This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
-{% endhint %}
-
 Now, let's talk about **namespaces** and how we, as a community, can use them to extend Frontity and create a better tool for everyone.
 
 In **Frontity** `state`, `actions` and `libraries` belong to a shared space among all packages, so each package needs to use its own namespace.
@@ -260,6 +256,5 @@ export default {
 When users open the share modal, a new event is sent to the analytics service of the `analytics` package that is installed in the **Frontity** project, no matter which one it is 🎉🎉
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Namespaces in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
-

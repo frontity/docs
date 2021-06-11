@@ -49,6 +49,6 @@ export default connect(Theme);
 That's all, you just have to configure it at your will. Frontity uses [React Helmet](https://github.com/nfl/react-helmet) internally. You should check its docs out in case you want to understand it better.
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Head in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
 

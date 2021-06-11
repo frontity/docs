@@ -1,9 +1,5 @@
 # 4. Roots
 
-{% hint style="info" %}
-This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
-{% endhint %}
-
 ## Roots
 
 Each package has the opportunity to include any number of React nodes in the final HTML.
@@ -123,6 +119,6 @@ So even though **Frontity** only allows packages to insert React nodes in the `<
 For a more detailed explanation you can check [Head page](head.md).
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Roots in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
 

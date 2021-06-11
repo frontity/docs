@@ -1,9 +1,5 @@
 # 6. Actions
 
-{% hint style="info" %}
-This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
-{% endhint %}
-
 Actions are a set of functions that your package needs to work or expose for other packages. They can modify the state and don't return anything.
 
 {% hint style="info" %}
@@ -108,6 +104,6 @@ This action is run before React is hydrated. Be aware that the state that React 
 This action is run after React has been hydrated in the client and it has taken control of the page. This is where packages with client-side logic can start doing their thing.
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Actions in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
 
