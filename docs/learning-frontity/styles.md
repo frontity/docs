@@ -357,7 +357,7 @@ These are some resource you might find useful to make the transition to CSS in J
 
 {% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js" caption="" %}
 
-{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html" caption="" %}
+{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.HTML" caption="" %}
 
 ### Migrating from Sass to CSS in JS
 
