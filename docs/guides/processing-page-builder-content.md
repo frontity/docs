@@ -6,7 +6,7 @@ Video: https://www.youtube.com/watch?v=qOfENWKR7EE&list=PLC9teX20GdrTBeOzSwE-bFW
 
 ### Introduction
 
-Page builders are becoming increasingly popular with content creators and content editors. They allow the content creators and editors to work in a visual way and to lay out their content and style it with a WYSIWYG interface.
+Page builders are becoming increasingly popular with content creators and content editors. They allow people who are not developers, namely content creators and editors, to work in a visual way and to lay out their content and style it with a WYSIWYG interface.
 
 Page builders can either be page building themes such as [Divi](https://www.elegantthemes.com/gallery/divi/), or plugins such as [Elementor](https://elementor.com/), [WP Bakery](https://wpbakery.com/), and [Beaver Builder](https://www.wpbeaverbuilder.com/).
 
@@ -18,13 +18,13 @@ Whichever type of page builder is opted for, whether theme, plugin, or Gutenberg
 
 Ideally we want to have the performance benefits of Frontity by adopting it in the front end for our WordPress sites, yet at the same time retain the WYSIWYG content editing experience that page builders do so well.
 
-However, by using Frontity in the front end we lose the tight integration that exists between a page builder and WordPress, and so the appearance of the page or post as it appears in the page builder's editor, and when viewed using the WordPress theme, is not as accurately reproduced by Frontity. At least not without some additional work on the developer's part.
+However, by using a decoupled front end (such as Frontity) we lose the tight integration that exists between a page builder and WordPress, and so the appearance of the page or post as it appears in the page builder's editor, and when viewed using the WordPress theme, is not as accurately reproduced by Frontity. At least not without some additional work on the developer's part.
 
 ### How do page builders work
 
 As already indicated, page builders present the content creator with a WYSIWYG visual interface such that the content creator or editor can layout and style their content with the assurance that what they see while they are editing the page or post will be precisely what the visitor to the site will see. This means that even technically unskilled people can enjoy a great deal of creative freedom when creating their pages or posts.
 
-The page builder will then generate HTML which is stored in the `post_content` field of the `wp_posts` table in the database. Enough styling information is included in the HTML, in the form of inline styles or classes, to allow the page or post to be rendered in the browser accurately simulating the appearance as it was in the editor.
+The page builder will then generate HTML which is stored in the `post_content` field of the `wp_posts` table in the database. Enough styling information is included in the HTML, in the form of classes or inline styles, to allow the page or post to be rendered in the browser accurately simulating the appearance as it was in the editor.
 
 Usually the page builder will have one or more generic stylesheets, some of which are static and exist at the time that the page builder is installed into the WordPress installation, and some of which may be dynamically generated for a particular site, or even page/post, as the content is created.
 
