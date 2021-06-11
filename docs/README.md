@@ -16,7 +16,7 @@ If you're new to Frontity check out the [step-by-step tutorial](https://tutorial
 
 Let's kick things off by providing you with a roadmap so that you can find your way around the documentation and zero in on the information you need right now.
 
-## **Quick Start**
+## [Quick Start](getting-started/README.md)
 
 If you're new to Frontity then you can get started by heading over to, erm..., the [**Getting Started**](getting-started/) section.
 
@@ -24,7 +24,7 @@ This is where you'll find the [**Quick Start Guide**](getting-started/quick-star
 
 Once you've followed the Quick Start Guide and have a working Frontity installation you may want to continue learning by creating a more elaborated project with the [**step-by-step guide**](https://tutorial.frontity.org/).
 
-## **About Frontity**
+## [About Frontity](about/README.md)
 
 To learn about what Frontity is, how it works, and what features it has, visit the [**About Frontity**](about/) section.
 
@@ -32,27 +32,32 @@ If you're a **developer** this section will tell you all about what Frontity is 
 
 If you're a **project manager** or other **decision maker** that needs to choose or justify whether to use Frontity for your project then this section provides the information you need.
 
-## **Core Concepts**
+## [Core Concepts](learning-frontity/README.md)
 
 This section is the heart of the Frontity documentation. Once you've nailed the basics in the Getting Started section you should head over to the [**Core Concepts**](learning-frontity/) section to really dig in to the detail and learn how to work with Frontity.
 
-## **Architecture**
+## [Architecture](architecture/README.md)
 
 Find out about how the relationship between Frontity and WordPress is structured in the [**Architecture**](architecture.md) section, where you will also learn about possible hosting solutions.
 
-## **Deployment**
+## [Deployment](deployment/README.md)
 
 Once you've completed the development of your project and have a working application that you're happy with you can learn how to deploy to live in the [**Deployment**](deployment/) section.
 
 In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.md), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
 
-## **Performance**
+## [Performance](performance/README.md)
 
 With a good [caching strategy](performance/caching.md) your Frontity project can be as performant as a static site. 
 
 Also, applying mechanisms such as [Link prefetching](performance/link-prefetching.md) is highly recommended to improve the perceived performance.
 
-## **Guides**
+## [Isomorphic React](isomorphic-react.md)
+
+Frontity sites are [Isomorphic React](isomorphic-react.md) apps which are executed both on the server-side and on the client-side. In this section you'll learn how the isomorphic approach works in Frontity and how you can customize your site accordingly.
+
+
+## [Guides](guides/README.md)
 
 This is where you'll find an ever-growing series of [**Guides**](guides/). Some will help you in working with Frontity. Others will give you ideas for projects and provide you with the help you need to guide you from first steps to fully working project.
 
@@ -62,7 +67,7 @@ In this section we also provide you with some foundational knowledge that will a
 
 The [troubleshooting guide](guides/troubleshooting.md) is also here, for when you encounter problems. If your problem is not solved here then don't forget that you can also ask the community in the [**Frontity Community Forum**](https://community.frontity.org).
 
-## **Contributing**
+## [Contributing](contributing/README.md)
 
 Frontity is an open source project and welcomes contributions in all forms. The [**Contributing**](contributing/) section of the documentation will guide you whether you want to make a single contribution or whether you intend to become a fully fledged contributor to the Frontity project.
 
