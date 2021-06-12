@@ -1,24 +1,40 @@
 # 📚 Core Concepts
 
-Frontity was designed to be as simple as possible, but you still need to familiarize yourself with some concepts. In this **Core Concepts** you'll learn the very basic ideas behind Frontity Projects
+Frontity was designed to make it as simple as possible for developers to create websites using decoupled (or headless) WordPress.
 
+However, in order to have the best possible experience when developing with Frontity you still need to become familiar with certain concepts.
 
-[Frontity projects](project.md) are basically the sum of several packages bundled in some final files under the direction of a settings file (`frontity.settings.js`). In the [**Project**](project.md) section you'll learn about the structure of a Frontity project and the purpose of each folder or file in it
+In this **Core Concepts** section you'll learn the basic ideas that underlie a Frontity Project.
 
-The `frontity.settings.js` file is the orchestrator of Frontity projects. In the [**Settings**](settings.md) section you'll learn more about how to add setings for your Frontity project to define things such as how many sites is Frontity managing, the packages required of Frontity sites, the theme, the URL of the WordPress source of data, the initial data of the Frontity state and more
+A [Frontity project](project.md) basically consists of several packages installed into the project's directory and which are configured in the settings file (`frontity.settings.js`). In the [**Project**](project.md) section you'll learn about the structure of a Frontity project and the purpose of each directory or file contained within it.
 
-Frontity projects are built around the idea of [packages](https://api.frontity.org/frontity-packages) that encapsulate logic that can be reused across projects. You'll find in the [**Packages**](packages.md) section some topics related to packages such as: local packages, folder structure, publishing and more
+The `frontity.settings.js` file is where the Frontity project is configured. It contains the definition of, and the configuration for, each package included in the project. In the [**Settings**](settings.md) section you'll learn more about how to add settings for your Frontity project, to define such things as:
 
-Every Frontity package share a public API consisting in these four main elements:
+- how many sites are being managed by this instance of Frontity,
+- the packages required by each site,
+- the theme to be used,
+- the URL of the WordPress data source,
+- any initial data for the Frontity state,
 
-- [**Roots**](roots.md): Packages in Frontity can define they're `roots` that is the HTML point where React Node.js is inserted for that package. This is usually only needed for Theme packages but can be defined for any package. 
-- [**State**](state.md): Frontity State is a JavaScript object containing all the data (state) exposed by the project and its packages. 
-- [**Actions**](actions.md):  Actions are a set of functions that your package needs to work or to expose data for other packages. They can modify the state and don't return anything.
-- [**Libraries**](libraries.md): Libraries are a set of tools that are not aimed to change the state, but rather other parts of the application. 
+as well as much more.
 
+Frontity projects are built around the concept of [packages](https://api.frontity.org/frontity-packages). A package is, in essence, code that instatiates logic that can be reused across many projects. In the [**Packages**](packages.md) section you will find various concepts and topics related to packages, such as:
 
-As the Frontity state, actions and libraries belong to a shared space among all packages, each package needs to be defined under its own namespace to avoid conflicts. In  the [**Namespaces**](namespaces.md) section you'll learn more about how using namespaces make Frontity projects very flexible and extensible.
+- local packages,
+- directory structure,
+- publishing,
 
-Frontity uses CSS in JS for adding styles to the React components. This approach allows to improve the performance of Frontity sites and improve the developer experience. In the [**Styles**](styles.md) section you can learn some of the CSS in JS concepts needed to style Frontity projects.
+and more.
 
-Due to the Isomorphic nature of React apps in Frontity, the first load of a page will be rendered by the server using the React components in the project. With Frontity you can define your `<head>` tags from React to improve the SEO of your project. Learn how to do this in the [**Head**](head.md) section
+Every Frontity package shares a common API which consists of these four main elements:
+
+- [**Roots**](roots.md): A package in Frontity can define a `root` which is an HTML element representing the point where React is inserted for that package. This is usually only needed for Theme packages but can be defined for any package.
+- [**State**](state.md): Frontity's State is a JavaScript object containing all the data (state) exposed by the project and its packages.
+- [**Actions**](actions.md):  Actions are a set of functions that your package needs to work. They can also be used to expose data so that other packages can get access to that data. They can modify the state but don't return anything.
+- [**Libraries**](libraries.md): Libraries are a set of tools that are not intended to change the state, but rather other parts of the application.
+
+As these elements, namely the Frontity state, actions and libraries, all belong to a common space shared among all the packages in a project, each package needs to be defined under its own namespace in order to avoid conflicts. In the [**Namespaces**](namespaces.md) section you'll learn more about how using namespaces can make Frontity projects very flexible and extensible.
+
+Frontity uses CSS in JS for adding styles to the React components. This approach improves the performance of Frontity sites and also makes for a better developer experience. In the [**Styles**](styles.md) section you can learn some of the CSS in JS concepts needed to style Frontity projects.
+
+Due to the Isomorphic nature of React apps in Frontity, the first request for a page will result in it being rendered by the server using the React components in the project. This ensures that SEO is not compromised when using Frontity for your decoupled/headless CMS project. In addition, Frontity enables you to define `<head>` tags to further improve the SEO of your project. Learn more about how to do this in the [**Head**](head.md) section.
