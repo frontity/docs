@@ -1,6 +1,6 @@
 # 📚 Core Concepts
 
-Frontity was designed to make it as simple as possible for developers to create websites using decoupled (or headless) WordPress.
+Frontity was designed to make it as simple as possible for developers to create sites using decoupled (or headless) WordPress.
 
 However, in order to have the best possible experience when developing with Frontity you still need to become familiar with certain concepts.
 
