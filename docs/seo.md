@@ -5,7 +5,7 @@ Due to the Isomorphic nature of React apps in Frontity, the first load of any si
 By default, Frontity will deliver to your browser a fully populated and well-formed [HTML file generated from your React code](../architecture.md). This reduces the time required for the first contentful paint and ensures a good SEO score.
 
 {% hint style="info" %}
-To take advantage of all the SEO benefits you already have in your Wordpress (sitemaps, cache plugins, CORS headers, redirections, etc...) the [Embedded Mode of Frontity](https://docs.frontity.org/architecture/embedded-mode#features-of-the-embedded-mode) is recommended
+To take advantage of all the SEO benefits you already have in your WordPress (sitemaps, cache plugins, CORS headers, redirections, etc...) the [Embedded Mode of Frontity](https://docs.frontity.org/architecture/embedded-mode#features-of-the-embedded-mode) is recommended
 {% endhint %}
 
 But that's not all. With Frontity you can also customize:

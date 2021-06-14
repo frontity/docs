@@ -16,7 +16,7 @@ _This guide highlights some basic WordPress requirements needed for Frontity pro
 
 ### [URLs in a Migration from WordPress to Frontity Decoupled Mode](./update-db-urls.md)
 
-_This guide explains the issue that arise with regard to URL's when migrating a WordPress site to Frontity Decoupled Mode and how to resolve them._
+_This guide explains the issue that arise with regard to URLs when migrating a WordPress site to Frontity Decoupled Mode and how to resolve them._
 
 ### [Frontity Query Options](frontity-query-options.md)
 
