@@ -46,10 +46,6 @@ _This guide will take through the process of updating your Frontity project to u
 
 _This guide will give through the recommended workflow to work with a Frontity theme os package in a way it can be properly shared with the community._
 
-### [SEO in Frontity](seo.md)
-
-_This guide explains how you can optimize the SEO of your Frontity project._
-
 ### [Troubleshooting guide](troubleshooting.md)
 
 _This guide offers solutions to common issues detected in Frontity projects._

@@ -20,5 +20,3 @@ Every Frontity package share a public API consisting in these four main elements
 As the Frontity state, actions and libraries belong to a shared space among all packages, each package needs to be defined under its own namespace to avoid conflicts. In  the [**Namespaces**](namespaces.md) section you'll learn more about how using namespaces make Frontity projects very flexible and extensible.
 
 Frontity uses CSS in JS for adding styles to the React components. This approach allows to improve the performance of Frontity sites and improve the developer experience. In the [**Styles**](styles.md) section you can learn some of the CSS in JS concepts needed to style Frontity projects.
-
-Due to the Isomorphic nature of React apps in Frontity, the first load of a page will be rendered by the server using the React components in the project. With Frontity you can define your `<head>` tags from React to improve the SEO of your project. Learn how to do this in the [**Head**](head.md) section
