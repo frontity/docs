@@ -8,6 +8,10 @@ By default, Frontity will deliver to your browser a fully populated and well-for
 To take advantage of all the SEO benefits you already have in your WordPress (sitemaps, cache plugins, CORS headers, redirections, etc...) the [Embedded Mode of Frontity](https://docs.frontity.org/architecture/embedded-mode#features-of-the-embedded-mode) is recommended
 {% endhint %}
 
+{% hint style="info" %}
+[These diagrams](https://excalidraw.com/#json=6167540090798080,cvhnsErHXsqarOVT82YgLw) can help you understand how Frontity, the WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a great content creation, development and user experience) in both [Decoupled](../architecture/decoupled-mode.md) and [Embedded](../architecture/embedded-mode.md) Mode
+{% endhint %}
+
 But that's not all. With Frontity you can also customize:
 
 * Meta tags 
