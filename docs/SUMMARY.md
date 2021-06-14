@@ -30,7 +30,7 @@
   * [Caching](performance/caching.md)
   * [Link prefetching](performance/link-prefetching.md)
   * [Code Splitting](performance/code-splitting.md)
-* [🔎 SEO](guides/seo.md)
+* [🔎 SEO](seo.md)
 * [📖 Guides](guides/README.md)
   * [Setting the URL of the WordPress data source](guides/setting-url-wordpress-source-data.md)
   * [Using Environment Variables in a Frontity project](guides/how-to-use-environment-variables-in-frontity.md)
