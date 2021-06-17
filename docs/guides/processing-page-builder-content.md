@@ -20,6 +20,18 @@ As already indicated, page builders present the content creator with a WYSIWYG v
 
 The page builder will then generate HTML which is stored in the `post_content` field of the `wp_posts` table in the database. Enough styling information is included in the HTML, in the form of classes or inline styles, to allow the page or post to be rendered in the browser accurately simulating the appearance as it was in the editor.
 
+{% hint style="info" %}
+Virtually all page builders will structure the post/page using the _three C's_, which are Container, Column, and Content.
+
+Top level elements are Containers. These will variously be called "rows" or "sections" depending on the page builder you are using. Whatever they're called in your particular page builder they divide the page/post up into distinct areas and are stacked vertically.
+
+Each Container will have one or more Columns. These are arrayed horizontally - at least in large viewports on devices with large screens, but on devices with small screens or if the viewport is narrow then these could be arrayed vertically.
+
+Content, i.e. what is visually seen on the screen, is then presented within a Column.
+
+Whichever page builder you are using, you will find that this structure is common and can be seen reflected in the final HTML markup.
+{% endhint %}
+
 Usually the page builder will have one or more generic stylesheets which define styles for the classes added by the page builder. Some of these stylesheets are static and exist at the time that the page builder is installed in WordPress, and some of them may be dynamically generated for a particular site, or even for a particular page/post, as the content is created.
 
 These style sheets need to be copied across to your Frontity project and added using the `<Global />` component.
