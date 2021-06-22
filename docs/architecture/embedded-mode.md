@@ -85,7 +85,7 @@ In this mode content editors continue to have the same editing experience:
 - Post previews work just the same as in a normal (non-headless) WordPress installation.
 
 {% hint style="warning" %}
-In order to access post previews from the REST API, revisions need to be activated for all your custom post types. You can read more about revisions on the [official WordPress docs](https://wordpress.org/support/article/revisions/).
+In order to access post previews from the REST API revisions need to be activated. You can read more about revisions on the [official WordPress docs](https://wordpress.org/support/article/revisions/). And if you are using custom post types, remember to [add support for revisions](https://developer.wordpress.org/reference/functions/register_post_type/#supports) when you register them.
 {% endhint %}
 
 ## Caching in Embedded Mode
