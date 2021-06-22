@@ -84,6 +84,9 @@ In this mode content editors continue to have the same editing experience:
 - The admin bar is visible for logged in users.
 - Post previews work just the same as in a normal (non-headless) WordPress installation.
 
+{% hint style="warning" %}
+In order to access post previews from the REST API, revisions need to be activated for all your custom post types. You can read more about revisions on the [official WordPress docs](https://wordpress.org/support/article/revisions/).
+{% endhint %}
 
 ## Caching in Embedded Mode
 
