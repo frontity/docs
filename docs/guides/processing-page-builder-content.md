@@ -379,13 +379,13 @@ However, Elementor is an immensely popular page-builder plugin, so it's worth go
 
 There are a few things that need to be taken into account.
 
-CSS files
+Like with Gutenberg, it's necessary to copy Elementor's CSS files over to your Frontity project. However, with Elementor there are several files in two different locations.
 
-wp-content/plugins/elementor/assets/css/frontend.min.CSS
+You will need Elementor's `frontend.min.CSS` file which is located in the `wp-content/plugins/elementor/assets/css/` directory.
 
-Elementor also puts files in
-  wp-content/uploads/elementor/css
-which you will need to copy across to your Frontity project and import
+Elementor also puts files in `wp-content/uploads/elementor/css`. In particular you will need `global.css` from this directory.
+
+Copy these two files across to your Frontity project and import them into your main `<Theme>` component in your theme's `index.js` file:
 
 ```js
 import ElementorStyles from "../assets/frontend.min.css"
@@ -406,9 +406,9 @@ const Theme = ({ state }) => {
 }
 ```
 
-Elementor may put other post or page specific stylesheets in wp-content/uploads/elementor/css
+Elementor may put other post or page specific stylesheets in the `wp-content/uploads/elementor/css` directory.
 
-You should copy them all to your Frontity project and import them into your Frontity theme, for example _(the filenames in your project may differ)_:
+You should copy any that you find there to your Frontity project and import them into your Frontity theme, for example _(the filenames in your project may differ)_:
 
 ```js
 import ElementorPost6Styles from "../assets/post-6.css"
@@ -429,7 +429,7 @@ const Theme = ({ state }) => {
 }
 ```
 
-In addition, Elementor adds classes to the `<body>` tag. You can add these to the `<body>` tag of your Frontity project using the `<Head>` component.
+In addition, Elementor adds classes to the `<body>` tag. You can add these to the `<body>` tag of your Frontity project using the [`<Head>` component](https://api.frontity.org/frontity-packages/core-package/frontity#head).
 
 First import the `<Head>` component into your theme's `index.js` file and then use it in your main `<Theme>` component passing it a `bodyAttributes` prop containing an object with the classes that you want in your `<body>` tag.
 
