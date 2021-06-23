@@ -2,9 +2,26 @@
 
 Video: https://www.youtube.com/watch?v=qOfENWKR7EE&list=PLC9teX20GdrTBeOzSwE-bFW-MbBEUwowS&index=6&t=159s
 
+## Table of Contents
 
+<!-- toc -->
 
-### Introduction
+- [Introduction](#introduction)
+- [How do page builders work](#how-do-page-builders-work)
+- [The problem with page builders](#the-problem-with-page-builders)
+- [What can we do to solve the problem](#what-can-we-do-to-solve-the-problem)
+- [Processors](#processors)
+  * [What is a processor?](#what-is-a-processor)
+  * [Configure Frontity to use processors](#configure-frontity-to-use-processors)
+  * [How to use processors](#how-to-use-processors)
+- [Examples](#examples)
+  * [Basic example](#basic-example)
+  * [Gutenberg](#gutenberg)
+  * [Elementor](#elementor)
+
+<!-- tocstop -->
+
+## Introduction
 
 Page builders are becoming increasingly popular with content creators and content editors. They allow people who are not developers, namely content creators and editors, to work in a visual way and to lay out their content and style it with a WYSIWYG interface.
 
@@ -14,7 +31,7 @@ In addition [Gutenberg](https://wordpress.org/gutenberg/), the new block editor 
 
 Whichever type of page builder is opted for, whether theme, plugin, or Gutenberg, it can be used for both posts and pages, and even custom post types if they have been [configured with the necessary support](https://www.cloudways.com/blog/gutenberg-wordpress-custom-post-type/).
 
-### How do page builders work
+## How do page builders work
 
 As already indicated, page builders present the content creator with a WYSIWYG visual interface such that the content creator or editor can layout and style their content with the assurance that what they see while they are editing the page or post will be precisely what the visitor to the site will see. This means that even technically unskilled people can enjoy a great deal of creative freedom when creating their pages or posts.
 
@@ -32,7 +49,7 @@ Content, i.e. what is visually seen on the screen, is then presented within a Co
 Whichever page builder you are using, you will find that this structure is common and can be seen reflected in the final HTML markup.
 {% endhint %}
 
-Usually the page builder will have one or more generic stylesheets which define styles for the classes added by the page builder. Some of these stylesheets are static and exist at the time that the page builder is installed in WordPress, and some of them may be dynamically generated for a particular site, or even for a particular page/post, as the content is created.
+Usually the page builder will have one or more generic style sheets which define styles for the classes added by the page builder. Some of these style sheets are static and exist at the time that the page builder is installed in WordPress, and some of them may be dynamically generated for a particular site, or even for a particular page/post, as the content is created.
 
 These style sheets need to be copied across to your Frontity project and added using the `<Global />` component.
 [see image here](https://frontity.org/blog/connecting-gutenberg-and-frontity/#adapt-frontity-to-gutenberg)
@@ -41,27 +58,27 @@ These style sheets need to be copied across to your Frontity project and added u
 A cautionary note that should be borne in mind is that some page builders, such as Divi and WP Bakery, populate the content with a large number of shortcodes. Ideally these should result in rendered HTML appearing in the content delivered by the REST API, but unfortunately some of these shortcodes can appear verbatim in the content that comes from the REST API.
 {% endhint %}
 
-### The problem with page builders
+## The problem with page builders
 
-Ideally we want to have the performance, and other, benefits of a decoupled front end for our WordPress sites, yet at the same time retain the WYSIWYG content editing experience that page builders do so well.
+Ideally we want to have the performance, and other, benefits of a decoupled frontend for our WordPress sites, yet at the same time retain the WYSIWYG content editing experience that page builders do so well.
 
-However, by using a decoupled front end (such as Frontity) we lose the tight integration that exists between a page builder and WordPress, and so the appearance of the page or post as it appears in the page builder's editor, and also when viewed using the WordPress theme, is not as accurately reproduced by Frontity. At least not without some additional work on the developer's part.
+However, by using a decoupled frontend (such as Frontity) we lose the tight integration that exists between a page builder and WordPress, and so the appearance of the page or post as it appears in the page builder's editor, and also when viewed using the WordPress theme, is not as accurately reproduced by Frontity. At least not without some additional work on the developer's part.
 
-### What can we do to solve the problem
+## What can we do to solve the problem
 
 There are a number of approaches that we as developers can take in order to solve the problem of pages and posts created with a page builder not appearing as intended in Frontity.
 
-The most straightforward approach would be to create the Frontity theme to reproduce the appearance of the pages/posts built with a page builder. This approach would require agreement up-front between content creators, designers, and developers and could restrict the creative freedom of content creators and designers as they must develop the pages and posts to work within the pre-defined constraints of the Frontity theme. That said, this approach could work for small or stylistically simple websites.
+The most straightforward approach would be to create the Frontity theme to reproduce the appearance of the pages/posts built with a page builder. This approach would require agreement up-front between content creators, designers, and developers and could restrict the creative freedom of content creators and designers as they must develop the pages and posts to work within the predefined constraints of the Frontity theme. That said, this approach could work for small or stylistically simple sites.
 
-A second approach would be to copy the style sheets that the page builder uses across to the Frontity site and import them into the project and use them with the [`<Global />` component](https://api.frontity.org/frontity-packages/core-package/frontity#global). In most cases this should result in a fairly accurate rendering of the pages or posts in Frontity. However, the benefits of CSS-in-JS are lost with this approach and adding several stylesheets to the project using the `<Global />` component will potentially result in reduced performance of the website.
+A second approach would be to copy the style sheets that the page builder uses across to the Frontity site and import them into the project and use them with the [`<Global />` component](https://api.frontity.org/frontity-packages/core-package/frontity#global). In most cases this should result in a fairly accurate rendering of the pages or posts in Frontity. However, the benefits of CSS in JS are lost with this approach and adding several style sheets to the project using the `<Global />` component will potentially result in reduced performance of the site.
 
-In theory it's possible to reproduce the page builders' stylesheets in CSS-in-JS but this would be onerously difficult and time-consuming.
+In theory it's possible to reproduce the page builders' style sheets in CSS in JS but this would be onerously difficult and time-consuming.
 
 Another approach is to use processors that detect matching elements in the HTML and "process" them, i.e. modify or alter them in some way, or indeed completely replace them with something else entirely, such as a React component.
 
-### Processors
+## Processors
 
-#### What is a processor?
+### What is a processor?
 
 A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object with the following defined properties:
 
@@ -72,14 +89,14 @@ A [processor](https://api.frontity.org/frontity-packages/features-packages/html2
 
 The values of `test` and `processor` are functions.
 
-In the case of `test` the function simply returns a boolean value depending on whether a condition is matched. In this example the function returns `true` if the received node (i.e. an HTML element) is an `<img>` tag. For all other elements in the DOM tree it will return `false`.
+In the case of `test` the function simply returns a boolean value depending on whether a condition is matched. In this example the function returns `true` if the received Node.js (i.e. an HTML element) is an `<img>` tag. For all other elements in the DOM tree it will return `false`.
 
 ```jsx
 test: ({ node }) => node.component === "img"
 ```
 
 {% hint style="info" %}
-A node here is an HTML element represented in a JavaScript object. So for example, this HTML:
+A Node.js here is an HTML element represented in a JavaScript object. So for example, this HTML:
 
 ```html
 <div class="wp-block-group jsforwp">
@@ -103,11 +120,11 @@ would be represented in JavaScript as follows:
 ```
 {% endhint %}
 
-The `processor` property is a function that "processes" the received node (remember that a node is a JavaScript object representing an HTML element). It can return a modified version of the element or something entirely different, such as a React compontent. This returned value will replace the original element in the DOM tree. The execution of the `processor` function is dependent on the value returned by the `test` function. The `processor` function will only be executed if the `test` function returns `true`.
+The `processor` property is a function that "processes" the received Node.js (remember that a Node.js is a JavaScript object representing an HTML element). It can return a modified version of the element or something entirely different, such as a React compontent. This returned value will replace the original element in the DOM tree. The execution of the `processor` function is dependent on the value returned by the `test` function. The `processor` function will only be executed if the `test` function returns `true`.
 
 So, in the example above the processor function will only be executed if the element being tested by the `test` function is an `<img>`.
 
-#### Configure Frontity to use processors
+### Configure Frontity to use processors
 
 In order to use a processor you need to take these steps:
 
@@ -152,9 +169,9 @@ For more info please see [the documentation](https://api.frontity.org/frontity-p
 
 With those steps accomplished your project now has the ability to use processors.
 
-#### How to use processors
+### How to use processors
 
-Whenever you use the `html2react` component to render the HTML for the post/page the `test` function will be evaluated for each element in the DOM tree and the `processor` function will execute if the test on that node passes, i.e. returns `true`.
+Whenever you use the `html2react` component to render the HTML for the post/page the `test` function will be evaluated for each element in the DOM tree and the `processor` function will execute if the test on that Node.js passes, i.e. returns `true`.
 
 You add processors in the array at `libraries.html2react.processors` in the theme's `index.js`.
 
@@ -179,21 +196,21 @@ test: ({ node }) => node.component === "div" && node.props?.className?.split(" "
 
 Then in place of the element that meets this condition the processor returns either a processed version of it (hence the name "processor") or even something else entirely, such as a React component.
 
-Both of the functions, i.e. the `processor` and the `test`, receive the node as a prop. They also receive the other properties of the Frontity object, i.e. `root`, `state` and `libraries`
+Both of the functions, i.e. the `processor` and the `test`, receive the Node.js as a prop. They also receive the other properties of the Frontity object, i.e. `root`, `state` and `libraries`
 
 {% hint style="info" %}
 Documentation on the `html2react` component can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react).
 
 More information about processors can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react#processors).
 
-[The repository for the Frontity.org website](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme) contains a [large number of examples of processors](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme/src/processors) that you can examine both for ideas and for details of technical implementation in specific cases.
+[The repository for the Frontity.org site](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme) contains a [large number of examples of processors](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme/src/processors) that you can examine both for ideas and for details of technical implementation in specific cases.
 {% endhint %}
 
-### Examples
+## Examples
 
 In this section we will look at some examples to demonstrate how you might implement a processor. We will show a basic example first, and then illustrate how you might process elements from Gutenberg and from Elementor.
 
-#### Basic example
+### Basic example
 
 Our first example shows how to process an HTML element that might be found in the content from a WordPress site. In this example we will show you how to replace a `<blockquote>` element with a React component.
 
@@ -270,12 +287,12 @@ any element of this type:
 
 will be processed.
 
-####	Gutenberg
+###	Gutenberg
 
 Our second example will illustrate how a processor can work on an element created by Gutenberg.
 
 {% hint style="info" %}
-As mentioned earlier [the repository for the Frontity.org website](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme) contains a [large number of examples of processors](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme/src/processors) that you can examine for the details of technical implementation in various cases.
+As mentioned earlier [the repository for the Frontity.org site](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme) contains a [large number of examples of processors](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme/src/processors) that you can examine for the details of technical implementation in various cases.
 {% endhint %}
 
 Let's use as our example here one of the processors from that repository. We will choose [the `webBrowser` processor](https://github.com/frontity/frontity.org/blob/dev/packages/frontity-org-theme/src/processors/web-browser.tsx).
@@ -320,9 +337,9 @@ export const webBrowser = {
 };
 ```
 
-The processor then merely adds some styling, using the [`<css>` object](https://api.frontity.org/frontity-packages/core-package/frontity#css), before returning the node.
+The processor then merely adds some styling, using the [`<css>` object](https://api.frontity.org/frontity-packages/core-package/frontity#css), before returning the Node.js.
 
-One additional important thing that we need to do to ensure that our Gutenberg content is rendered correctly is to import Gutenberg's stylesheets into our Frontity project.
+One additional important thing that we need to do to ensure that our Gutenberg content is rendered correctly is to import Gutenberg's style sheets into our Frontity project.
 
 Gutenberg uses two stylesheets, `theme.css` and `style.css`. These files can be found in the `./wp-includes/css/dist/block-library` directory of your WordPress installation. Copy them across to a location in your Frontity theme, e.g. to a sub-directory called `styles`.
 
@@ -351,10 +368,10 @@ const Theme = ({ state }) => {
 ```
 
 {% hint style="info" %}
-See [this blog post](https://frontity.org/blog/connecting-gutenberg-and-frontity/) which discusses some of the considerations that went into making Gutenberg and Frontity work together in the development of the frontity.org website. The [section on `html2react`](https://frontity.org/blog/connecting-gutenberg-and-frontity/#frontity-html2react) is particularly pertinent here and contains further examples.
+See [this blog post](https://frontity.org/blog/connecting-gutenberg-and-frontity/) which discusses some of the considerations that went into making Gutenberg and Frontity work together in the development of the frontity.org site. The [section on `html2react`](https://frontity.org/blog/connecting-gutenberg-and-frontity/#frontity-html2react) is particularly pertinent here and contains further examples.
 {% endhint %}
 
-####	Elementor
+###	Elementor
 
 Getting Elementor content to appear as desired in a Frontity project is a bit clunkier and less elegant that working with Gutenberg content.
 
@@ -364,7 +381,7 @@ There are a few things that need to be taken into account.
 
 CSS files
 
-wp-content/plugins/elementor/assets/css/frontend.min.css
+wp-content/plugins/elementor/assets/css/frontend.min.CSS
 
 Elementor also puts files in
   wp-content/uploads/elementor/css
