@@ -2,20 +2,19 @@
 
 <!-- toc -->
 
-- [Processors](#processors)
-  * [What is a processor?](#what-is-a-processor)
-  * [Configure Frontity to use processors](#configure-frontity-to-use-processors)
-  * [How to use processors](#how-to-use-processors)
+- [What is a processor?](#what-is-a-processor)
+- [Configure Frontity to use processors](#configure-frontity-to-use-processors)
+- [How to use processors](#how-to-use-processors)
 - [Examples](#examples)
   * [Basic example](#basic-example)
 
 <!-- tocstop -->
 
-## Processors
+## What is a processor?
 
-### What is a processor?
+A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object used by the `<html2react>` package that, among other things, ccontains a function that is executed if a certain test condition evaluates as true. The test condition is used to match elements (or nodes) in the HTML markup of the content. The _processor_ function will in some way process or alter the markup of that element and return either the modified markup or even something else in it's place.
 
-A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object with the following defined properties:
+A processor is a JavaScript object with the following defined properties:
 
 - name
 - priority
@@ -24,14 +23,16 @@ A [processor](https://api.frontity.org/frontity-packages/features-packages/html2
 
 The values of `test` and `processor` are functions.
 
-In the case of `test` the function simply returns a boolean value depending on whether a condition is matched. In this example the function returns `true` if the received Node.js (i.e. an HTML element) is an `<img>` tag. For all other elements in the DOM tree it will return `false`.
+In the case of `test` the function simply returns a boolean value depending on whether a condition is matched. The condition checks against each node in the DOM tree. Normally it will test whether a node has a particular HTML tag or a particular class, or other property.
+
+In this example the function returns `true` if the received node (i.e. an HTML element) is an `<img>` tag. For all other elements in the DOM tree it will return `false`.
 
 ```jsx
 test: ({ node }) => node.component === "img"
 ```
 
 {% hint style="info" %}
-A Node.js here is an HTML element represented in a JavaScript object. So for example, this HTML:
+A node here is an HTML element represented in a JavaScript object. So for example, this HTML:
 
 ```html
 <div class="wp-block-group jsforwp">
@@ -55,11 +56,11 @@ would be represented in JavaScript as follows:
 ```
 {% endhint %}
 
-The `processor` property is a function that "processes" the received Node.js (remember that a Node.js is a JavaScript object representing an HTML element). It can return a modified version of the element or something entirely different, such as a React compontent. This returned value will replace the original element in the DOM tree. The execution of the `processor` function is dependent on the value returned by the `test` function. The `processor` function will only be executed if the `test` function returns `true`.
+The `processor` property is a function that "processes" the received node (remember that a node is a JavaScript object representing an HTML element). It can return a modified version of the element or something entirely different, such as a React compontent. This returned value will replace the original element in the DOM tree. The execution of the `processor` function is dependent on the value returned by the `test` function. The `processor` function will only be executed if the `test` function returns `true`.
 
 So, in the example above the processor function will only be executed if the element being tested by the `test` function is an `<img>`.
 
-### Configure Frontity to use processors
+## Configure Frontity to use processors
 
 In order to use a processor you need to take these steps:
 
@@ -104,9 +105,9 @@ For more info please see [the documentation](https://api.frontity.org/frontity-p
 
 With those steps accomplished your project now has the ability to use processors.
 
-### How to use processors
+## How to use processors
 
-Whenever you use the `html2react` component to render the HTML for the post/page the `test` function will be evaluated for each element in the DOM tree and the `processor` function will execute if the test on that Node.js passes, i.e. returns `true`.
+Whenever you use the `html2react` component to render the HTML for the post/page the `test` function will be evaluated for each element in the DOM tree and the `processor` function will execute if the test on that node passes, i.e. returns `true`.
 
 You add processors in the array at `libraries.html2react.processors` in the theme's `index.js`.
 
@@ -131,7 +132,7 @@ test: ({ node }) => node.component === "div" && node.props?.className?.split(" "
 
 Then in place of the element that meets this condition the processor returns either a processed version of it (hence the name "processor") or even something else entirely, such as a React component.
 
-Both of the functions, i.e. the `processor` and the `test`, receive the Node.js as a prop. They also receive the other properties of the Frontity object, i.e. `root`, `state` and `libraries`
+Both of the functions, i.e. the `processor` and the `test`, receive the node as a prop. They also receive the other properties of the Frontity object, i.e. `root`, `state` and `libraries`
 
 {% hint style="info" %}
 Documentation on the `html2react` component can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react).
@@ -143,7 +144,7 @@ More information about processors can be found [here](https://api.frontity.org/f
 
 ## Examples
 
-In this section we will look at some examples to demonstrate how you might implement a processor. We will show a basic example first, and then illustrate how you might process elements from Gutenberg and from Elementor.
+In this section we will look at some examples to demonstrate how you might implement a processor.
 
 ### Basic example
 
@@ -222,4 +223,8 @@ any element of this type:
 
 will be processed.
 
-Video: https://www.youtube.com/watch?v=qOfENWKR7EE&list=PLC9teX20GdrTBeOzSwE-bFW-MbBEUwowS&index=6&t=159s
+{% hint style="info" %}
+Documentation for the `<html2react>` component and processors can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react).
+
+There is also a discussion about processors in [a video in the Frontity Talks series](https://www.youtube.com/watch?v=qOfENWKR7EE&list=PLC9teX20GdrTBeOzSwE-bFW-MbBEUwowS&index=10&t=1272s).
+{% endhint %}

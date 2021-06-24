@@ -71,6 +71,8 @@ Another approach is to use processors that detect matching elements in the HTML 
 
 ## Examples
 
+In these examples we will illustrate how you might process elements from Gutenberg and from Elementor.
+
 ###	Gutenberg
 
 Our second example will illustrate how a processor can work on an element created by Gutenberg.
@@ -121,7 +123,7 @@ export const webBrowser = {
 };
 ```
 
-The processor then merely adds some styling, using the [`<css>` object](https://api.frontity.org/frontity-packages/core-package/frontity#css), before returning the Node.js.
+The processor then merely adds some styling, using the [`<css>` object](https://api.frontity.org/frontity-packages/core-package/frontity#css), before returning the node.
 
 One additional important thing that we need to do to ensure that our Gutenberg content is rendered correctly is to import Gutenberg's style sheets into our Frontity project.
 
