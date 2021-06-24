@@ -39,6 +39,7 @@
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
   * [Frontity Query Options](guides/frontity-query-options.md)
   * [Redirections with Frontity](guides/redirections-with-frontity.md)
+  * [Working with processors](guides/using-processors.md)
   * [How to process page-builder content in Frontity](guides/processing-page-builder-content.md)
   * [Keep Frontity Updated](guides/keep-frontity-updated.md)
   * [SEO](guides/seo.md)
