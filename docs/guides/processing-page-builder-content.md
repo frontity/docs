@@ -254,7 +254,7 @@ First import the `<Head>` component into your theme's `index.js` file and then u
 ```js
 import { Head } from "frontity";
 
-onst Theme = ({ state }) => {
+const Theme = ({ state }) => {
 
   // ...
 
