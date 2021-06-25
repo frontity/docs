@@ -2,9 +2,9 @@
 
 In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow. It enables developers to host Jamstack sites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
 
-We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up.
+We strongly recommend this service as it is serverless, cheap, includes a CDN, and is really easy to set up.
 
-It also supports the cache technique stale-while-revalidate (they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)), a powerful way to improve your site speed.
+It also supports the cache technique stale-while-revalidate (which they call [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)). This is a powerful way to improve your site speed.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ It also supports the cache technique stale-while-revalidate (they name it [Serve
   * [Create a `vercel.json` file](#create-a-vercel-json-file)
   * [Run deployment](#run-deployment)
 - [Deploy your site under a custom domain](#deploy-your-site-under-a-custom-domain)
-  * [Add your custom domain from your Vercel project settings](#add-your-custom-domain-from-your-vercel-project-settings)
+  * [Add your custom domain from your Vercel project settings](#add-your-custom-domain-to-your-vercel-project-settings)
     + [Add a subdomain for your WordPress source](#add-a-subdomain-for-your-wordpress-source)
   * [Add Vercel nameservers in your domain provider](#add-vercel-nameservers-in-your-domain-provider)
   * [Deploy](#deploy)
@@ -27,7 +27,7 @@ It also supports the cache technique stale-while-revalidate (they name it [Serve
 
 To be able to deploy with `vercel` you need to have a Vercel account. You can [signup here](https://vercel.com/signup).
 
-Once you have an account you have to [login](https://vercel.com/docs/cli#commands/login) to Vercel from the terminal
+Once you have an account you have to [login](https://vercel.com/docs/cli#commands/login) to Vercel from the terminal.
 
 ```text
 > npx vercel login
@@ -35,9 +35,9 @@ Once you have an account you have to [login](https://vercel.com/docs/cli#command
 
 ## Deploy your site under a Vercel domain
 
-Deploying to Vercel is really easy and through the `vercel.json` file, all the required configuration for Frontity projects is automatically set for you.
+Deploying to Vercel is really easy and all the required configuration for Frontity projects is automatically set for you via a `vercel.json` file.
 
-So, to deploy your Frontity site under a Vercel domain you have to to:
+So, to deploy your Frontity site under a Vercel domain you have to:
 
 1. [Signup and Login](#signup-and-login-into-vercel) (if you haven't already).
 1. [Create a `vercel.json` file](#create-a-vercel-json-file).
@@ -46,7 +46,7 @@ So, to deploy your Frontity site under a Vercel domain you have to to:
 
 ### Create a `vercel.json` file
 
-Create this [`vercel.json`](https://vercel.com/docs/configuration#introduction/configuration-reference) file and save it in the root your Frontity project
+Create this [`vercel.json`](https://vercel.com/docs/configuration#introduction/configuration-reference) file and save it in the root of your Frontity project.
 
 ```text
 {
@@ -84,9 +84,9 @@ Vercel CLI 19.2.0
 
 > More about Vercel [scopes ](https://vercel.com/docs/v2/platform/users-and-teams)
 
-Vercel will assign you a domain (something like _your-project-name.vercel.app_) that that will allow you to check your site online
+Vercel will assign you a domain (something like _your-project-name.vercel.app_) that that will allow you to check your site online.
 
-From this deploy example we have got the following URL's:
+From the above deployment example we got the following URL's:
 
 * **Live URL:** `https://my-frontity-project.vercel.app` → Our temporary URL assigned automatically by Vercel, We can check (and share) our site online from this URL
 * **Inspect:** `https://vercel.com/vercel-username/my-frontity-project/settings` → Here we can check the status of our site and check the logs among other things
@@ -97,29 +97,29 @@ From this deploy example we have got the following URL's:
 To deploy your site in Vercel under a custom domain you have to:
 
 1. [Deploy your site under a Vercel domain](#deploy-your-site-under-a-vercel-domain) (if you haven't already).
-1. [Add your custom domain in your Vercel project settings](#add-your-custom-domain-in-your-project-settings).
+1. [Add your custom domain to your Vercel project settings](#add-your-custom-domain-to-your-vercel-project-settings).
 1. [Add Vercel nameservers for your custom domain from your domain provider](#add-vercel-nameservers-in-your-domain-provider)
 1. [Run deployment](#deploy).
 
-### Add your custom domain from your Vercel project settings
+### Add your custom domain to your Vercel project settings
 
-From the project settings URL provided in our previous deploy (`https://vercel.com/vercel-username/my-frontity-project/settings` in our example) we can set a custom domain
+By visiting the project settings URL provided in our previous deployment (`https://vercel.com/vercel-username/my-frontity-project/settings` in our example above) we can set a custom domain.
 
 ![](https://frontity.org/wp-content/uploads/2021/04//now-projects-settings.png)
 
-Add it, and you will be provided by a [set of nameservers](https://vercel.com/docs/v2/custom-domains#step-4:-configuring-the-domain) you can use in your domain provider to point your custom domain to the Vercel nameservers
+Add it, and you will be provided with a [set of nameservers](https://vercel.com/docs/v2/custom-domains#step-4:-configuring-the-domain) that you can use in your domain provider's configuration to point your custom domain to the Vercel nameservers.
 
 ![vercel nameservers](https://frontity.org/wp-content/uploads/2021/04//vercel-nameservers.png)
 
 #### Add a subdomain for your WordPress source
 
-A subdomain can be used to separate your WordPress and Frontity deployments. They can be created within Vercel dashboard from the [domains section](https://vercel.com/dashboard/domains/).
+A subdomain can be used to separate your WordPress and Frontity deployments. They can be created within the Vercel dashboard under the [domains section](https://vercel.com/dashboard/domains/).
 
 To setup a subdomain for your WordPress source, simply select your desired domain from the [list](https://vercel.com/dashboard/domains/) and [add a new DNS Record](https://vercel.com/docs/v2/custom-domains#step-2:-add-dns-record) with type A and the IP address of your WordPress server.
 
 ### Add Vercel nameservers in your domain provider
 
-You need to set [Vercel nameservers](https://vercel.com/docs/v2/custom-domains/#option-2:-using-external-nameservers) as custom DNS of your custom domain from your domain provider site
+You need to set [Vercel nameservers](https://vercel.com/docs/v2/custom-domains/#option-2:-using-external-nameservers) as custom DNS of your custom domain from your domain provider site.
 
 {% hint style="info" %}
 If you don't know how to do this, contact your domain provider (GoDaddy, CloudFlare, etc)
@@ -127,7 +127,7 @@ If you don't know how to do this, contact your domain provider (GoDaddy, CloudFl
 
 ### Deploy
 
-Then, deploy Frontity using this command (from the root of your project):
+Finally, deploy Frontity using this command (from the root of your project):
 
 ```text
 > npx vercel --prod
@@ -142,7 +142,7 @@ You should get something like this
 ✅  Production: https://mycustomtomain.com [copied to clipboard] [4s]
 ```
 
-This will create a deploy and assign it to your real site URL.
+This will create a deployment and assign it to your real site URL.
 
 > More about Vercel [deployments](https://vercel.com/docs/v2/platform/deployments)
 
