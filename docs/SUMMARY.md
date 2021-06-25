@@ -41,6 +41,8 @@
   * [Add a new Frontity package or theme to your project](guides/install-a-new-package.md)
   * [How to share your Frontity project](guides/how-to-share-a-frontity-project.md)
   * [Understanding Mars Theme](guides/understanding-mars-theme-1.md)
+  * [Working with processors](guides/using-processors.md)
+  * [How to process page-builder content in Frontity](guides/processing-page-builder-content.md)
   * [Keep Frontity Updated](guides/keep-frontity-updated.md)
   * [Troubleshooting](guides/troubleshooting.md)
   * [JavaScript](guides/javascript-basics.md)
