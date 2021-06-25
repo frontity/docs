@@ -42,7 +42,7 @@ Top level elements are _Containers_. These will variously be called "rows" or "s
 
 Each Container will have one or more _Columns_. These are arrayed horizontally - at least in large viewports on devices with large screens, but on devices with small screens or if the viewport is narrow then these could be arrayed vertically.
 
-_Content_, i.e. what is visually seen on the screen, is then presented within a Column.
+_Content_, i.e. what is visually seen on the screen (such as headings, paragraphs, and images), is then presented within a Column.
 
 Whichever page builder you are using, you will find that this structure is common and can be seen reflected in the final HTML markup.
 {% endhint %}
