@@ -2,7 +2,7 @@
 
 In [their own words](https://vercel.com/docs) : _Vercel is a cloud platform for static sites and **Serverless Functions** that fits perfectly with your workflow. It enables developers to host Jamstack sites and web services that **deploy instantly**, **scale automatically**, and **requires no supervision**, all with **no configuration**._
 
-We strongly recommend this service as it is serverless, cheap, includes CDN, and really easy to set up.
+We strongly recommend this service as it is serverless, cheap, [includes CDN](../performance/caching.md#cdn-for-frontity-servers), and really easy to set up.
 
 It also supports the cache technique stale-while-revalidate (they name it [Serverless Pre-Rendering](https://vercel.com/blog/serverless-pre-rendering)), a powerful way to improve your site speed.
 
