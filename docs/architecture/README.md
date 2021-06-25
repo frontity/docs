@@ -28,16 +28,16 @@ Both of the two possible Frontity architectures (i.e. Decoupled or Embedded Mode
 
 - A _similar operation_
   - Frontity fetches the data from the WordPress REST API
-  - Frontity generates the final HTML as an [Isomorphic](https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905) React App
+  - Frontity generates the final HTML as an [Isomorphic](../isomorphic-react.md) React App
 
 Both of these architectures (or modes) require _two different servers_ with _two different URLs_ but the communication workflow between these two servers differs in each case.
 
 | Decoupled Mode | Embedded Mode |
 | --- | ---- |
-| ![](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png) | ![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png) |
+| [![](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png)](https://frontity.org/wp-content/uploads/2021/05/workflow-decoupled-mode.png) | [![](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png)](https://frontity.org/wp-content/uploads/2021/05/workflow-embedded-mode.png) |
 
 {% hint style="info" %}
-Implementing a caching strategy in Frontity projects is highly recommended to improve response times. A [WordPress Cache plugin](https://wordpress.org/plugins/simple-cache/) is especially recommended to cache REST API requests in both architectures.
+Implementing a [**caching strategy**](../performance/caching.md) in Frontity projects is highly recommended to improve response times. A [WordPress Cache plugin](https://wordpress.org/plugins/simple-cache/) is especially recommended to cache REST API requests in both architectures.
 {% endhint %}
 
 
@@ -71,6 +71,10 @@ Decoupled mode needs no additional structural elements, such as plugins.
 
 In *Embedded mode* the main domain points to the WordPress installation, and the secondary domain points to the node.js server running Frontity. In this mode both site visitors and content editors use the same domain, i.e. the main domain, to either visit the site or access the admin pages. The secondary domain is never directly accessed.
 
-Embedded mode requires the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode). This plugin uses a configuration setting that identifies the location of the Frontity server. The plugin replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. However, before Frontity can deliver the HTML it must request the content from the WordPress REST API.
+
+{% hint style="info" %}
+Embedded mode requires the [Frontity Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode). This plugin replaces the WordPress theme with its own template file which fetches the HTML from the Frontity server. 
+{% endhint %}
+
 
 Since, in embedded mode, the Frontity site is never directly accessed the secondary domain can be anything - including free domains allocated by the node.js hosting service.

@@ -1,8 +1,8 @@
-# 10. Code Splitting
+# Code Splitting
 
 Code Splitting lets you split your code into various bundles, instead of using a single one with all the code. These smaller bundles are dynamically loaded at runtime depending on the URL.
 
-If used properly, this can mean important performance gains.
+**If used properly, this can mean important performance gains.**
 
 The bundles can be loaded on demand or in parallel, which allows you to just load the code that is currently needed by the user. This way you can avoid loading heavy code until it is required and reduce the amount of code during the initial load.
 
@@ -82,13 +82,9 @@ If you want to go deeper, you should take a look at [**their docs**](https://loa
 * What is [_Code Splitting_](https://loadable-components.com/docs/code-splitting/)?
 * Most of the time, you want to [_prefetch_](https://loadable-components.com/docs/prefetching/) a component, it means it will be loaded when the browser is idle. 
 * Specify a [_Fallback_](https://loadable-components.com/docs/fallback/) in loadable options. 
-* Handle loading errors with [_Error Boundaries_](https://www.smooth-code.com/open-source/loadable-components/docs/error-boundaries)
+* Handle loading errors with [_Error Boundaries_](https://www.smooth-code.com/open-source/loadable-components/docs/error-boundaries).
 * To avoid flashing a loader if the loading is very fast, you could implement a minimum [_Delay_](https://www.smooth-code.com/open-source/loadable-components/docs/delay/)
 * Infinite loading is not good for user experience, to avoid it implementing a [_timeout_](https://www.smooth-code.com/open-source/loadable-components/docs/timeout/) is a good workaround. 
-* Use [Library Splitting](https://www.smooth-code.com/open-source/loadable-components/docs/library-splitting/) to defer the loading of a library
-* Create a reusable Loadable Component by using a [_Dynamic Import_](https://www.smooth-code.com/open-source/loadable-components/docs/dynamic-import/)
-
-{% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
-{% endhint %}
+* Use [Library Splitting](https://www.smooth-code.com/open-source/loadable-components/docs/library-splitting/) to defer the loading of a library.
+* Create a reusable Loadable Component by using a [_Dynamic Import_](https://www.smooth-code.com/open-source/loadable-components/docs/dynamic-import/).
 

@@ -357,7 +357,7 @@ These are some resource you might find useful to make the transition to CSS in J
 
 {% embed url="https://egghead.io/courses/convert-scss-sass-to-css-in-js" caption="" %}
 
-{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html" caption="" %}
+{% embed url="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.HTML" caption="" %}
 
 ### Migrating from Sass to CSS in JS
 
@@ -367,6 +367,6 @@ If you already have a base of Sass you want to migrate, you can use these tools 
 * [https://github.com/jgranstrom/sass-extract](https://github.com/jgranstrom/sass-extract)
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Styles in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
 

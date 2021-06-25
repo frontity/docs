@@ -6,21 +6,21 @@ In this section we present a selection of guides that will help you to both work
 
 _This guide outlines the various different WordPress configuration scenarios that you might encounter and the things that need to be taken into account in order to properly set the URL of the WordPress data source._
 
+### [Using Environment Variables in a Frontity project](how-to-use-environment-variables-in-frontity.md)
+
+_This guide explains how to defined environment variables for a Frontity project and how to properly access these variables from the code._
+
 ### [WordPress requirements for Frontity](what-are-the-requisites-of-wordpress-for-frontity.md)
 
 _This guide highlights some basic WordPress requirements needed for Frontity projects._
 
-### [URLs in a Migration from WordPress to Frontity Decoupled Mode](guides/update-db-urls.md)
+### [URLs in a Migration from WordPress to Frontity Decoupled Mode](./update-db-urls.md)
 
-_This guide explains the issue that arise with regard to URL's when migrating a WordPress site to Frontity Decoupled Mode and how to resolve them._
+_This guide explains the issue that arise with regard to URLs when migrating a WordPress site to Frontity Decoupled Mode and how to resolve them._
 
 ### [Frontity Query Options](frontity-query-options.md)
 
 _This guide explains what "Frontity Query Options" are and how to use them._
-
-### [Link prefetching](link-prefetching.md)
-
-_This guide explains what "link prefetching" is and how to use it in Frontity._
 
 ### [Redirections with Frontity](redirections-with-frontity.md)
 
@@ -51,10 +51,6 @@ _This guide will take through the process of updating your Frontity project to u
 ### [How to share your Frontity project](how-to-share-a-frontity-project.md)
 
 _This guide will give through the recommended workflow to work with a Frontity theme os package in a way it can be properly shared with the community._
-
-### [SEO in Frontity](seo.md)
-
-_This guide explains how you can optimize the SEO of your Frontity project._
 
 ### [Troubleshooting guide](troubleshooting.md)
 

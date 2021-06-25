@@ -1,9 +1,5 @@
 # 7. Libraries
 
-{% hint style="info" %}
-This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
-{% endhint %}
-
 Do you remember [Actions](actions.md)? Libraries are pretty similar. Actions have been defined as a reusable set of functions aimed to change the state of the application. Similarly, **libraries** are a reusable set of tools. However, it is NOT aimed to change the state, but rather other parts of the application and is available for use by many packages.
 
 Let's see two different examples: `stringify` and the array of processors of `html2react`.
@@ -71,6 +67,7 @@ That's basically all you need to know about libraries, a powerful way of reusing
 ```
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about Libraries in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
+
 

@@ -11,7 +11,7 @@ Let's take as an example a WordPress site under the domain `www.domain.com`. Let
 - `www.domain.com` will point to the Frontity server
 - `wp.domain.com` will point to the WordPress server
 
-In this scenario internal links that exist in the content when the WordPress URL is changed to `wp.domain.com` will still point to `www.domain.com`. However, if any content is added after the change then internal links will point to `wp.domain.com`. This creates a situation where internal links in the content are inconsistent, with "old" links pointing to `wp.domain.com` and "new" links pointing to `www.domain.com`.
+In this scenario internal links that exist in the content when the WordPress URL is changed to `wp.domain.com` will still point to `www.domain.com`. However, if any content is added after the change then internal links will point to `wp.domain.com`. This creates a situation where internal links in the content are inconsistent, with "old" links pointing to `www.domain.com` and "new" links pointing to `wp.domain.com`.
 
 {% hint style="info" %}
 **Note that** WordPress always uses absolute links internally, rather than relative links. WordPress uses the [internal URL `Settings`](https://wordpress.org/support/article/changing-the-site-url/) to determine where the internal links should point to.
@@ -34,15 +34,15 @@ Also, for the reasons stated above, any URLs in the content stored in the databa
 
 To change the URLs in the content stored in the database you can use a plugin such as one of the following:
 - [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/)
-- [Go Live Update Urls](https://en-gb.wordpress.org/plugins/go-live-update-urls/)
+- [Go Live Update URLs](https://en-gb.wordpress.org/plugins/go-live-update-urls/)
 - [Better Search Replace](https://wordpress.org/plugins/better-search-replace/).
 
 ### Updating manually
 
 You can also update the links manually by running the following SQL commands using either `phpMyAdmin` or an application such as [Sequel Pro](https://www.sequelpro.com/) or [Sequel Ace](https://sequel-ace.com/).
 
-{% hint style="warn" %}
-**IMPORTANT!!!** Before running the commands below ensure that you have **a backup of your database**!
+{% hint style="danger" %}
+Before running the commands below ensure that you have **a backup of your database**!
 {% endhint %}
 
 ```sql
