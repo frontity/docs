@@ -240,7 +240,7 @@ const Theme = ({ state }) => {
 }
 ```
 
-{% hint style="warn" %}
+{% hint style="warning" %}
 Remember that the preferred way of styling a Frontity project is to use CSS in JS, and the benefits of CSS in JS are lost when adding style sheets to the project using the `<Global />` component. Adding stylesheets in this way can potentially affect the performance of the site.
 
 You may need to add several `.css` files from Elementor in this way in order to accurately reproduce the look and feel of the content in your Frontity project, so keep in mind the potentially adverse effect of this on the performance of your site.
