@@ -106,6 +106,7 @@ Gutenberg stores the content for a page/post as HTML in the database, adding thi
 This HTML is then available to us in the `content.rendered` property received from the REST API. We can therefore simply parse this HTML with the `html2react` component to identify the elements we want to process.
 
 The `webBrowser` processor tests whether the element has the `has-browser-window` class and if so executes the processor function which adds a top bar to the element to create the effect of being in a browser window:
+
 ![](https://frontity.org/wp-content/uploads/2021/06/processing-page-builder-content-img02.png)
 
 The processor first imports a [`<Topbar>` component](https://github.com/frontity/frontity.org/blob/dev/packages/frontity-org-theme/src/components/window-top-bar.tsx) which renders the actual top-bar. It then adds it as the first element in the node's `children` array (using [unshift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)). Adding it as the first element in the array ensures that it will appear above the remaining child elements, creating the browser window effect.
