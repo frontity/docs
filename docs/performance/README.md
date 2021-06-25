@@ -4,7 +4,12 @@ Frontity projects are fast by default. Frontity framework will help you to impro
 
 In this section, we'll provide guides to some of the strategies and patterns that you can apply to your Frontity sites in order to improve even more the performance of your Frontity site:
 
-* [Caching](caching.md)
-* [Link prefetching](link-prefetching.md)
+* [Caching](./caching.md)
+* [Link prefetching](./link-prefetching.md)
+* [Code Splitting](./code-splitting.md)
+
+{% hint style="info" %}
+[These diagrams](https://excalidraw.com/#json=6167540090798080,cvhnsErHXsqarOVT82YgLw) can help you understand how Frontity, the WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a great content creation, development and user experience) in both [Decoupled](../architecture/decoupled-mode.md) and [Embedded](../architecture/embedded-mode.md) Mode
+{% endhint %}
 
 

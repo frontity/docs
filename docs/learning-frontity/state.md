@@ -1,9 +1,5 @@
 # 5. State
 
-{% hint style="info" %}
-This "Learning Frontity" guide is intended to be read in order so please start from the [first section](settings.md) if you haven't done so already.
-{% endhint %}
-
 The next thing we should look at is the `state`.
 
 We have defined it previously as _**"**A JavaScript object containing all the state exposed by your package"_. For example:
@@ -438,5 +434,6 @@ state: {
 These **derived state functions** are stripped out from the initial state we send to the client but don't worry, they are reinstantiated later in the client by Frontity to ensure everything is back to normal :\)
 
 {% hint style="info" %}
-Still have questions? Ask [the community](https://community.frontity.org/)! We are here to help 😊
+If you still have any questions about State in Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
 {% endhint %}
+

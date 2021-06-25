@@ -40,3 +40,7 @@ redirects:
     key-concepts/react: ./guides/react-basic.md
     troubleshooting: ./guides/troubleshooting.md
     seo: ./guides/seo.md
+    getting-started/connecting-to-wordpress.md: https://docs.frontity.org/getting-started/quick-start-guide#set-your-own-wordpress-installation
+    getting-started/connecting-to-wordpress: https://docs.frontity.org/getting-started/quick-start-guide#set-your-own-wordpress-installation
+    guides/link-prefetching.md: ./performance/link-prefetching.md
+    learning-frontity/code-splitting.md: ./performance/code-splitting.md
