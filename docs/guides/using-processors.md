@@ -1,12 +1,13 @@
 # Working with processors
 
+## Table of Contents
+
 <!-- toc -->
 
 - [What is a processor?](#what-is-a-processor)
 - [Configure Frontity to use processors](#configure-frontity-to-use-processors)
 - [How to use processors](#how-to-use-processors)
-- [Examples](#examples)
-  * [Basic example](#basic-example)
+- [An Example](#an-example)
 
 <!-- tocstop -->
 
@@ -56,13 +57,15 @@ would be represented in JavaScript as follows:
 ```
 {% endhint %}
 
-The `processor` property is a function that "processes" the received node (remember that a node is a JavaScript object representing an HTML element). It can return a modified version of the element or something entirely different, such as a React compontent. This returned value will replace the original element in the DOM tree. The execution of the `processor` function is dependent on the value returned by the `test` function. The `processor` function will only be executed if the `test` function returns `true`.
+The `processor` property is a function that in some way "processes" the received node (remember that a node is a JavaScript object representing an HTML element). It can return a modified version of the element or something entirely different, such as a React compontent. This returned value will replace the original element in the DOM tree.
 
-So, in the example above the processor function will only be executed if the element being tested by the `test` function is an `<img>`.
+The execution of the `processor` function is dependent on the value returned by the `test` function. The `processor` function will only be executed if the `test` function returns `true`, therefore the `processor` function will only operate on nodes that match the `test` condition.
+
+So, in the example above the `processor` function will only be executed if the element being tested by the `test` function is an `<img>`, and it will then _process_ that element in a defined way.
 
 ## Configure Frontity to use processors
 
-In order to use a processor you need to take these steps:
+In order to use a processor you need to take these steps in your Frontity project:
 
 {% hint style="info" %}
 Note that if you are using an existing theme such as `mars-theme` or `twentytwenty-theme` then the `html2react` package is already installed and you don't need to follow these steps.
@@ -101,13 +104,13 @@ export default connect(MyComponent)
 
 You can see an example of it's use in the [`post.js` file in `mars-theme`](https://github.com/frontity/frontity/blob/dev/packages/mars-theme/src/components/post.js).
 
-For more info please see [the documentation](https://api.frontity.org/frontity-packages/features-packages/html2react) for the `html2react` package.
+For more info please see [the documentation for the `html2react` package](https://api.frontity.org/frontity-packages/features-packages/html2react).
 
 With those steps accomplished your project now has the ability to use processors.
 
 ## How to use processors
 
-Whenever you use the `html2react` component to render the HTML for the post/page the `test` function will be evaluated for each element in the DOM tree and the `processor` function will execute if the test on that node passes, i.e. returns `true`.
+Whenever you use the `html2react` component to render the HTML for the post/page content the `test` function will be evaluated for each element in the DOM tree and the `processor` function will execute and _process_ that element if the test on that node passes, i.e. returns `true`.
 
 You add processors in the array at `libraries.html2react.processors` in the theme's `index.js`.
 
@@ -132,29 +135,19 @@ test: ({ node }) => node.component === "div" && node.props?.className?.split(" "
 
 Then in place of the element that meets this condition the processor returns either a processed version of it (hence the name "processor") or even something else entirely, such as a React component.
 
-Both of the functions, i.e. the `processor` and the `test`, receive the node as a prop. They also receive the other properties of the Frontity object, i.e. `root`, `state` and `libraries`
+Both of the functions, i.e. the `processor` and the `test`, receive the node (i.e. a JavaScript object representing an HTML element) as a prop. They also receive the other properties of the Frontity object, i.e. `root`, `state` and `libraries`.
+
+## An Example
+
+In this section we will look at an example that demonstrates how you might implement a processor.
+
+This example shows how to process an HTML element that might be found in the content from a WordPress site. In this example we will show you how to replace a `<blockquote>` element with a React component.
 
 {% hint style="info" %}
-Documentation on the `html2react` component can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react).
-
-More information about processors can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react#processors).
-
-[The repository for the Frontity.org site](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme) contains a [large number of examples of processors](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme/src/processors) that you can examine both for ideas and for details of technical implementation in specific cases.
+The full code for this example can be found in [this repository](https://github.com/frontity-demos/frontity-examples/tree/master/processor-blockquote).
 {% endhint %}
 
-## Examples
-
-In this section we will look at some examples to demonstrate how you might implement a processor.
-
-### Basic example
-
-Our first example shows how to process an HTML element that might be found in the content from a WordPress site. In this example we will show you how to replace a `<blockquote>` element with a React component.
-
-{% hint style="info" %}
-The example can be found in [this repository](https://github.com/frontity-demos/frontity-examples/tree/master/processor-blockquote).
-{% endhint %}
-
-We first define our processor `quote` in a file `./processors/quote.js`. This file also includes the React component `<Quote>` that will replace any `<blockquote>` element that also has the class `wp-block-quote`. However, a more complex example might import this from a separate file.
+We first define our processor, to be named "quote", in a file `./processors/quote.js`. This file also includes the React component `<Quote>` that will replace any `<blockquote>` element that also has the class `wp-block-quote`. However, a more complex example might import this from a separate file.
 
 ```jsx
 import React from 'react'
@@ -223,8 +216,16 @@ any element of this type:
 
 will be processed.
 
+Another, more elaborate, example that illustrates the use of a processor can be found [in the guide on processing page builder content](./processing-page-builder-content.md#gutenberg).
+
 {% hint style="info" %}
-Documentation for the `<html2react>` component and processors can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react).
+**Further information**
+
+Documentation on the `html2react` component can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react).
+
+More information about processors can be found [here](https://api.frontity.org/frontity-packages/features-packages/html2react#processors).
+
+[The repository for the Frontity.org site](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme) contains a [large number of examples of processors](https://github.com/frontity/frontity.org/tree/dev/packages/frontity-org-theme/src/processors) that you can examine both for ideas and for details of technical implementation in specific cases.
 
 There is also a discussion about processors in [a video in the Frontity Talks series](https://www.youtube.com/watch?v=qOfENWKR7EE&list=PLC9teX20GdrTBeOzSwE-bFW-MbBEUwowS&index=10&t=1272s).
 {% endhint %}
