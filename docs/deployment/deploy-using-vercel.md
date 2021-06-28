@@ -60,6 +60,11 @@ Create this [`vercel.json`](https://vercel.com/docs/configuration#introduction/c
 }
 ```
 
+{% hint style="info" %}
+[`@frontity/now`](https://github.com/frontity/now-builder) is a Frontity builder created especifically for Vercel. It encapsulates all the actions that need to be triggered on Vercel servers when deploying a Frontity project 
+{% endhint %}
+
+
 ### Run deployment
 
 Deploy Frontity using the [`vercel` command](https://vercel.com/docs/cli#getting-started) (from the root of your project):
