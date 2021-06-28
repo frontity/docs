@@ -13,7 +13,7 @@
 
 ## What is a processor?
 
-A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object used by the `<html2react>` package that, among other things, ccontains a function that is executed if a certain test condition evaluates as true. The test condition is used to match elements (or nodes) in the HTML markup of the content. The _processor_ function will in some way process or alter the markup of that element and return either the modified markup or even something else in it's place.
+A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object used by the `<html2react>` package that, among other things, contains a function that is executed if a certain test condition evaluates as true. The test condition is used to match elements (or nodes) in the HTML markup of the content. The _processor_ function will in some way process or alter the markup of that element and return either the modified markup or even something else in it's place.
 
 A processor is a JavaScript object with the following defined properties:
 
