@@ -7,7 +7,7 @@ As [defined by MDN](https://developer.mozilla.org/en-US/docs/Web/Performance/Laz
 
 So, by applying lazy-loading strategies your page will load much faster as it will load only the minimum assets needed for the initial load and the rest of the assets will be loaded only when really needed (when they first appear in the viewable area for the user).
 
-A good example of this are images: you won't probably need to load all the images in your page as you only those images that appear in the viewable area for the user on first load. A better strategy would be loading only the images that are in the viewable area for the user, and then load those images as they enter the this viewable area (if the user do not scroll, those images will never be loaded).
+A good example of this are images: you won't probably need to load all the images in your page as you only need those images that appear in the viewable area for the user on first load. A better strategy is to load only the images that are in the viewable area for the user, and then load those images as they enter the this viewable area (if the user do not scroll, those images will never be loaded).
 
 The same strategy can be applied to iframes and other resources that require a request to the server.
 
