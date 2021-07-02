@@ -19,4 +19,4 @@ Frontity provides the [`<Image />`](https://api.frontity.org/frontity-packages/c
 
 The [`<Link>`](https://api.frontity.org/frontity-packages/collections-packages/components#link) component provides a sort-of lazy-loading behaviour called **link prefeching**. This [_link prefeching_ strategy is explained in this other performance section](https://docs.frontity.org/performance/link-prefetching#frontitys-less-than-link-greater-than-component).
 
-Finally, with the [Intersection Observer Hooks](https://api.frontity.org/frontity-packages/collections-packages/hooks/intersection-observer-hooks) provided by the [`@frontity/hooks`](https://api.frontity.org/frontity-packages/collections-packages/hooks) you can create your custom login to be triggered only when the React element reaches the viewable area.
+Finally, with the [Intersection Observer Hooks](https://api.frontity.org/frontity-packages/collections-packages/hooks/intersection-observer-hooks) provided by the [`@frontity/hooks`](https://api.frontity.org/frontity-packages/collections-packages/hooks) package you can create your custom logic to be triggered only when the React element reaches the viewable area.
