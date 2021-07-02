@@ -5,7 +5,7 @@ As [defined by MDN](https://developer.mozilla.org/en-US/docs/Web/Performance/Laz
 
 > Lazy loading is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of [the critical rendering path](https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
 
-So, by applying lazy-loading strategies your page will load much faster as it will load only the minimum assets needed for the initial load and the rest of the assets will be loaded only when needed.
+So, by applying lazy-loading strategies your page will load much faster as it will load only the minimum assets needed for the initial load and the rest of the assets will be loaded only when really needed (when they first appear in the viewable area for the user).
 
 A good example of this are images: you won't probably need to load all the images in your page as you only those images that appear in the viewable area for the user on first load. A better strategy would be loading only the images that are in the viewable area for the user, and then load those images as they enter the this viewable area (if the user do not scroll, those images will never be loaded).
 
