@@ -17,6 +17,6 @@ The same strategy can be applied to iframes and other resources that require a r
 Frontity provides the [`<Image />`](https://api.frontity.org/frontity-packages/collections-packages/components#image) and [`<Iframe />`](https://api.frontity.org/frontity-packages/collections-packages/components#iframe)  React components that adds lazy-loading to them. They're available through the [`@frontity/components`](https://api.frontity.org/frontity-packages/collections-packages/components) package.
 
 
-The [`<Link>`](https://api.frontity.org/frontity-packages/collections-packages/components#link) component provides a sort-of lazy-loading behaviour called **link prefeching**. This [_link prefeching_ strategy is explained in this other performance section](https://docs.frontity.org/performance/link-prefetching#frontitys-less-than-link-greater-than-component).
+The [`<Link>`](https://api.frontity.org/frontity-packages/collections-packages/components#link) component provides a sort-of lazy-loading behaviour called [**link prefeching**](https://docs.frontity.org/performance/link-prefetching#frontitys-less-than-link-greater-than-component). 
 
 Finally, with the [Intersection Observer Hooks](https://api.frontity.org/frontity-packages/collections-packages/hooks/intersection-observer-hooks) provided by the [`@frontity/hooks`](https://api.frontity.org/frontity-packages/collections-packages/hooks) package you can create your custom logic to be triggered only when the React element reaches the viewable area.
