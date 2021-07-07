@@ -16,6 +16,7 @@ Which is used to launch the Frontity app in production.
 
 Here you have some guides about how to deploy a Frontity app in some popular hostings:
 
+* [Deploy Frontity using Qovery](deploy-using-qovery.md)
 * [Deploy Frontity using Vercel](deploy-using-vercel.md)
 * [Deploy Frontity on Layer0](deploy-on-layer0.md)
 * [Deploy Frontity on Heroku](deploy-on-heroku.md)
