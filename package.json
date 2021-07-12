@@ -61,7 +61,8 @@
           ]
         ],
         "exclude": [
-          "HTTPS"
+          "HTTPS",
+          "node"
         ],
         "severity": "warning"
       }
