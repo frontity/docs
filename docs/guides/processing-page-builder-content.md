@@ -9,15 +9,17 @@
 - [The problem with page builders](#the-problem-with-page-builders)
 - [What can we do to solve the problem](#what-can-we-do-to-solve-the-problem)
 - [Examples](#examples)
-  * [Gutenberg](#gutenberg)
-    + [Processing Gutenberg content](#processing-gutenberg-content)
-    + [Gutenberg stylesheets](#gutenberg-stylesheets)
-  * [Elementor](#elementor)
-    + [Processing Elementor content](#processing-elementor-content)
-    + [Elementor stylesheets](#elementor-stylesheets)
-    + [Elementor classes](#elementor-classes)
+  - [Gutenberg](#gutenberg)
+    - [Processing Gutenberg content](#processing-gutenberg-content)
+    - [Gutenberg stylesheets](#gutenberg-stylesheets)
+  - [Elementor](#elementor)
+    - [Processing Elementor content](#processing-elementor-content)
+    - [Elementor stylesheets](#elementor-stylesheets)
+    - [Elementor classes](#elementor-classes)
 
 <!-- tocstop -->
+
+<!-- textlint-disable terminology -->
 
 ## Introduction
 
@@ -83,7 +85,7 @@ In addition our documentation contains a [guide to working with processors](./us
 
 In these examples we will illustrate how you might work with content from Gutenberg and from Elementor in a Frontity project. We will look at what we might need to include in our Frontity project, which is mainly copying `.css` files that the page builder uses, and also illustrate using a processor to dynamically process elements.
 
-###	Gutenberg
+### Gutenberg
 
 #### Processing Gutenberg content
 
@@ -131,7 +133,7 @@ export const webBrowser = {
 
     node.props.css = css`
       // styles go here
-    `
+    `;
 
     return node;
   },
@@ -174,7 +176,7 @@ const Theme = ({ state }) => {
 See [this blog post](https://frontity.org/blog/connecting-gutenberg-and-frontity/) which discusses some of the considerations that went into making Gutenberg and Frontity work together in the development of the frontity.org site. The [section on `html2react`](https://frontity.org/blog/connecting-gutenberg-and-frontity/#frontity-html2react) is particularly pertinent here and contains further examples.
 {% endhint %}
 
-###	Elementor
+### Elementor
 
 Getting Elementor content to appear as desired in a Frontity project is a bit clunkier and less elegant that working with Gutenberg content.
 
@@ -283,3 +285,4 @@ So you will need to identify which are the Elementor classes. This should be pre
 **Note also** that live reload doesn't work when you add or edit `<Head>` components to your theme. You will need to manually refresh your browser in order to see the new classes added to the `<body>` tag.
 {% endhint %}
 
+<!-- textlint-enable terminology -->

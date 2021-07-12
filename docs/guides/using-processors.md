@@ -11,6 +11,8 @@
 
 <!-- tocstop -->
 
+<!-- textlint-disable terminology -->
+
 ## What is a processor?
 
 A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object used by the `<html2react>` package that, among other things, ccontains a function that is executed if a certain test condition evaluates as true. The test condition is used to match elements (or nodes) in the HTML markup of the content. The _processor_ function will in some way process or alter the markup of that element and return either the modified markup or even something else in it's place.
@@ -29,7 +31,7 @@ In the case of `test` the function simply returns a boolean value depending on w
 In this example the function returns `true` if the received node (i.e. an HTML element) is an `<img>` tag. For all other elements in the DOM tree it will return `false`.
 
 ```jsx
-test: ({ node }) => node.component === "img"
+test: ({ node }) => node.component === "img";
 ```
 
 {% hint style="info" %}
@@ -55,6 +57,7 @@ would be represented in JavaScript as follows:
  ]
 }
 ```
+
 {% endhint %}
 
 The `processor` property is a function that in some way "processes" the received node (remember that a node is a JavaScript object representing an HTML element). It can return a modified version of the element or something entirely different, such as a React compontent. This returned value will replace the original element in the DOM tree.
@@ -80,26 +83,26 @@ Note that if you are using an existing theme such as `mars-theme` or `twentytwen
 2. Add `@frontity/html2react` to the `packages` array in `frontity.settings.js`
 
 ```js
-    packages: [
-      // ...
-      "@frontity/html2react"
-    ]
+packages: [
+  // ...
+  "@frontity/html2react",
+];
 ```
 
 3. In the component that you wish to use it get `html2react` from the `libraries` object, which must be passed via props to the component connected via `connect`.
 
 ```js
 const MyComponent = ({ libraries }) => {
-    const Html2React = libraries.html2react.Component
-    // ...
-}
-export default connect(MyComponent)
+  const Html2React = libraries.html2react.Component;
+  // ...
+};
+export default connect(MyComponent);
 ```
 
 4. Use it in that component where you might otherwise use [`dangerouslySetInnerHTML`](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml), passing it an `html` prop with the content that you wish to be rendered - this will usually be `post.content.rendered`.
 
 ```jsx
-    <Html2React html={post.content.rendered} />
+<Html2React html={post.content.rendered} />
 ```
 
 You can see an example of it's use in the [`post.js` file in `mars-theme`](https://github.com/frontity/frontity/blob/dev/packages/mars-theme/src/components/post.js).
@@ -130,7 +133,9 @@ You can also [define your own processor](https://api.frontity.org/frontity-packa
 As previously stated, a processor is a function that runs at render time when the HTML is parsed by the `html2react` component and a specific condition, as defined by the `test` function, is met. The condition is specified by a pattern, such as a specific element type which has a specific class. For example:
 
 ```jsx
-test: ({ node }) => node.component === "div" && node.props?.className?.split(" ").includes("some-class")
+test: ({ node }) =>
+  node.component === "div" &&
+  node.props?.className?.split(" ").includes("some-class");
 ```
 
 Then in place of the element that meets this condition the processor returns either a processed version of it (hence the name "processor") or even something else entirely, such as a React component.
@@ -150,32 +155,33 @@ The full code for this example can be found in [this repository](https://github.
 We first define our processor, to be named "quote", in a file `./processors/quote.js`. This file also includes the React component `<Quote>` that will replace any `<blockquote>` element that also has the class `wp-block-quote`. However, a more complex example might import this from a separate file.
 
 ```jsx
-import React from 'react'
+import React from "react";
 
-const Quote = ({quote, author}) => {
-  console.log('Quote')
-  console.log({quote, author})
+const Quote = ({ quote, author }) => {
+  console.log("Quote");
+  console.log({ quote, author });
   return (
-    <div style={ { background: 'red' , color: 'white', padding: '10px'} }>
+    <div style={{ background: "red", color: "white", padding: "10px" }}>
       <h3>{quote}</h3>
       <h5>{author}</h5>
     </div>
-  )
-}
+  );
+};
 
 const quote = {
-  name: 'quote',
+  name: "quote",
   priority: 20,
-  test: ({ component, props }) => component === "blockquote" && props?.className === "wp-block-quote",
+  test: ({ component, props }) =>
+    component === "blockquote" && props?.className === "wp-block-quote",
   processor: ({ node }) => {
-    const quote = node.children[0].children[0].content
-    const author = node.children[1].children[0].children[0].content
+    const quote = node.children[0].children[0].content;
+    const author = node.children[1].children[0].children[0].content;
     return {
       component: Quote,
       props: { quote, author },
-    }
+    };
   },
-}
+};
 
 export default quote;
 ```
@@ -203,7 +209,7 @@ libraries: {
 Now, in any component that uses the `<Html2React>` component to render the content, as follows:
 
 ```jsx
-  <Html2React html={post.content.rendered} />
+<Html2React html={post.content.rendered} />
 ```
 
 any element of this type:
@@ -229,3 +235,5 @@ More information about processors can be found [here](https://api.frontity.org/f
 
 There is also a discussion about processors in [a video in the Frontity Talks series](https://www.youtube.com/watch?v=qOfENWKR7EE&list=PLC9teX20GdrTBeOzSwE-bFW-MbBEUwowS&index=10&t=1272s).
 {% endhint %}
+
+<!-- textlint-enable terminology -->
