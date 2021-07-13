@@ -46,16 +46,21 @@ Once you've completed the development of your project and have a working applica
 
 In particular we go into detail on how to [**deploy to Vercel**](deployment/deploy-using-vercel.md), our recommended hosting platform. Why do we recommend it? Because it's serverless, cheap, includes a CDN, and is really easy to set up.
 
+## [Isomorphic React](isomorphic-react.md)
+
+Frontity sites are [Isomorphic React](isomorphic-react.md) apps which are executed both on the server-side and on the client-side. In this section you'll learn how the isomorphic approach works in Frontity and how you can customize your site accordingly.
+
 ## [Performance](performance/README.md)
 
 With a good [caching strategy](performance/caching.md) your Frontity project can be as performant as a static site. 
 
 Also, applying mechanisms such as [Link prefetching](performance/link-prefetching.md) is highly recommended to improve the perceived performance.
 
-## [Isomorphic React](isomorphic-react.md)
+## [SEO](seo.md)
 
-Frontity sites are [Isomorphic React](isomorphic-react.md) apps which are executed both on the server-side and on the client-side. In this section you'll learn how the isomorphic approach works in Frontity and how you can customize your site accordingly.
+By default, Frontity will deliver to your browser a fully populated and well-formed HTML file generated from your React code that ensures a good SEO score.
 
+But it also allows you to optimize the SEO performance of your site and customize how your site is indexed by search engine crawlers through the use of [Header meta tags](seo.md#header-meta-tags) and [`robots.txt`](seo.md#robots-txt). 
 
 ## [Guides](guides/README.md)
 

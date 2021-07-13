@@ -15,7 +15,7 @@
 
 ## What is a processor?
 
-A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object used by the `<html2react>` package that, among other things, ccontains a function that is executed if a certain test condition evaluates as true. The test condition is used to match elements (or nodes) in the HTML markup of the content. The _processor_ function will in some way process or alter the markup of that element and return either the modified markup or even something else in it's place.
+A [processor](https://api.frontity.org/frontity-packages/features-packages/html2react#processors) is a JavaScript object used by the `<html2react>` package that, among other things, contains a function that is executed if a certain test condition evaluates as true. The test condition is used to match elements (or nodes) in the HTML markup of the content. The _processor_ function will in some way process or alter the markup of that element and return either the modified markup or even something else in it's place.
 
 A processor is a JavaScript object with the following defined properties:
 
@@ -68,7 +68,11 @@ So, in the example above the `processor` function will only be executed if the e
 
 ## Configure Frontity to use processors
 
-In order to use a processor you need to take these steps in your Frontity project:
+Frontity provides the [`@frontity/html2react`](https://api.frontity.org/frontity-packages/features-packages/html2react) as the Frontity-way of converting HTML to React
+
+The main advantage of using the `Html2React` component (an improved version of React's [`dangerouslySetInnerHTML`](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml)) provided by the [`@frontity/html2react`](https://api.frontity.org/frontity-packages/features-packages/html2react) package is that you can add processors to parse all the HTML rendered by this component
+
+So, in order to use a processor you need to take these steps in your Frontity project:
 
 {% hint style="info" %}
 Note that if you are using an existing theme such as `mars-theme` or `twentytwenty-theme` then the `html2react` package is already installed and you don't need to follow these steps.

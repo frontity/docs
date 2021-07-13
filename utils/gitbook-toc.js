@@ -4,9 +4,10 @@ const uslug = require('uslug')
 
 const fileToRead = process.argv[2]
 const fileToWrite = fileToRead
+const MAX_DEPTH = 3
 
+// @begin promisifyin fs operations
 const psReadFile = fileToRead => new Promise( function(resolve, reject) {
-  
   fs.readFile(fileToRead, 'utf8', (error, contentFile) => {
     if (error) reject(error)
     resolve(contentFile)
@@ -21,8 +22,9 @@ new Promise(resolve => {
     resolve(`Results written succesfully`)
   })
 })
+// @end promisifyin fs operations
 
-const customSlugParser = (headerDetected, optionsSlug ) => {
+const customSlugParser = (headerDetected /*, optionsSlug */) => {
   const parsedHeader = headerDetected
     .replace(/html2react/g, 'html 2 react')
     .replace(/\./g, ' ')
@@ -35,10 +37,9 @@ const customSlugParser = (headerDetected, optionsSlug ) => {
 }
 
 const parseMarkdownTOC = contentFile => {
-  
   return toc.insert(contentFile, { 
     slugify: customSlugParser,
-    maxdepth: 4
+    maxdepth: MAX_DEPTH
   });
   
 }

@@ -28,6 +28,7 @@
 * [⚡️ Perfomance](performance/README.md)
   * [Caching](performance/caching.md)
   * [Link prefetching](performance/link-prefetching.md)
+  * [Lazy Loading](performance/lazy-loading.md)
   * [Code Splitting](performance/code-splitting.md)
 * [🔎 SEO](seo.md)
 * [📖 Guides](guides/README.md)
