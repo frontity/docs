@@ -5,14 +5,14 @@
 <!-- toc -->
 
 - [What is Frontity?](#what-is-frontity)
-  * [An alternative rendering engine for WordPress](#an-alternative-rendering-engine-for-wordpress)
+  - [An alternative rendering engine for WordPress](#an-alternative-rendering-engine-for-wordpress)
 - [How does Frontity work?](#how-does-frontity-work)
-  * [Why a different Node.js server?](#why-a-different-node-js-server)
+  - [Why a different Node.js server?](#why-a-different-node-js-server)
 - [Why WordPress and React?](#why-wordpress-and-react)
 - [Why Frontity?](#why-frontity)
-  * [Benefits of using React and WordPress with Frontity](#benefits-of-using-react-and-wordpress-with-frontity)
-  * [Frontity features](#frontity-features)
-  * [Key differences from other React frameworks](#key-differences-from-other-react-frameworks)
+  - [Benefits of using React and WordPress with Frontity](#benefits-of-using-react-and-wordpress-with-frontity)
+  - [Frontity features](#frontity-features)
+  - [Key differences from other React frameworks](#key-differences-from-other-react-frameworks)
 
 <!-- tocstop -->
 
@@ -26,8 +26,8 @@ Next.js and Gatsby.js are two great React frameworks that can work with WordPres
 
 Frontity, on the other hand, is an opinionated framework based on React and focused on WordPress. It aims to make everything simpler, even for developers who are not familiar with React:
 
-* **Focused on WordPress**: each part of the framework has been simplified and optimized to be used with WordPress.
-* **Opinionated framework**: developers don’t need to figure out or make decisions about what tools to use for things like CSS or State Management.
+- **Focused on WordPress**: each part of the framework has been simplified and optimized to be used with WordPress.
+- **Opinionated framework**: developers don’t need to figure out or make decisions about what tools to use for things like CSS or State Management.
 
 This means that everything is ready-to-go out of the box, so to speak, so that you can jump straight in and start creating an amazing new site with WordPress and React right away.
 
@@ -40,7 +40,6 @@ Traditionally WordPress generates HTML using a theme based on **PHP** template f
 When the [**REST API**](https://developer.wordpress.org/rest-api/) was merged into core in WordPress 4.7, developers were no longer limited to the PHP rendering engine. They could query WordPress for the stored content which WordPress then sent in JSON format. The developer could then use it wherever and however they wanted. This opened up a new world of possibilities for web developers.
 
 One of those possibilities is to create frontend sites based on React. That’s where Frontity comes into play.
-
 
 ## How does Frontity work?
 
@@ -69,7 +68,7 @@ React is a JavaScript library. In order to generate HTML for site visitors or fo
 
 ## Why WordPress and React?
 
-As at time of writing \(February 2021\), WordPress powers [40% of all the sites](https://w3techs.com/technologies/details/cm-wordpress) on the internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
+As at time of writing \(July 2021\), WordPress powers [40% of all the sites](https://w3techs.com/technologies/details/cm-wordpress) on the internet. Its market share has been growing over the last few years and it shows no sign of slowing down.
 
 ![](https://w3techs.com/diagram/history_technology/cm-wordpress)
 
@@ -79,26 +78,23 @@ If **WordPress** is great and **React** is too, then why not **combine** the two
 
 We believe this JavaScript-based approach is gaining traction in the WordPress ecosystem, so there’s no better time to start getting familiar with it.
 
-
 ## Why Frontity?
 
-Going with Frontity in the stack React + WordPress means you get the best of WordPress and the best of React while the framework does the heavy lifting. Therea are several important benefits/reasons for using Frontity.
+Going with Frontity in the stack React + WordPress means you get the best of WordPress and the best of React while the framework does the heavy lifting. There are several important benefits/reasons for using Frontity.
 
 ### Benefits of using React and WordPress with Frontity
 
 #### The Developer Experience
 
-Frontity makes your life easier through a zero setup frameworkf and several tools and features, that typically require custom engineering, available out of the box.
+Frontity makes your life easier through a zero setup framework and several tools and features, that typically require custom engineering, available out of the box.
 
 #### The Extensibility
 
-Frontity framework helps minimize both development and maintenance times. The extensibility through packages and the ability to reuse them helps reduces the time and effort necessary to create and maintain a project.
-
+Frontity framework helps minimize both development and maintenance times. The extensibility through packages and the ability to reuse them helps reduce the time and effort necessary to create and maintain a project.
 
 #### Easy to get started with
 
 There is a small learning curve but even developers new to React can get up and running relatively quickly.
-
 
 #### Strong performance-oriented approach
 
@@ -106,7 +102,7 @@ Frontity’s infrastructure is designed to be as efficient and performant as pos
 
 #### SEO optimized
 
-Frontity is Search Engine Optimized. The SSR approach will generate HTML from your React code making your pages perfectly indexable bt SEO engines. With Frontity you can have complete SEO control through some Frontity packages that will add support for WordPress SEO plugins.
+Frontity is Search Engine Optimized. The SSR approach will generate HTML from your React code making your pages perfectly indexable by SEO engines. With Frontity you can have complete SEO control through some Frontity packages that will add support for WordPress SEO plugins.
 
 #### The Editing Experience
 
@@ -114,7 +110,7 @@ With WordPress the editing experience is great. Marketing teams can benefit from
 
 #### The User Experience
 
-Users will get meaningful content as soon as possible. Then, the Hydration process will make React to take control of the App so following pages will load instantaneously because of pre-fetching and some other strategies integrated with Frontity. Having pages loading instantaneously help to create a great User Experience
+Users get meaningful content as quickly as possible. The Hydration process enables React to take control of the App so that subsequent pages load instantaneously. This is due to pre-fetching and other strategies employed by Frontity. Having pages load instantaneously helps to create a great User Experience.
 
 {% hint style="info" %}
 [These diagrams](https://excalidraw.com/#json=6167540090798080,cvhnsErHXsqarOVT82YgLw) can help you understand how Frontity, the WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a great content creation, development and user experience) in both [Decoupled](../architecture/decoupled-mode.md) and [Embedded](../architecture/embedded-mode.md) Mode
@@ -126,21 +122,21 @@ Frontity and its extensions will help save you a lot of development time and eff
 
 Here are the main ones:
 
-* [Zero setup development](frontity-features.md#zero-setup-development)
-* [Lightning-fast loading](frontity-features.md#lightning-fast-loading)
-* [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
-* [Server-side Rendering](frontity-features.md#server-side-rendering)
-* [Extensible](frontity-features.md#less-than-greater-than-extensible)
-* [Perfect accessibility](frontity-features.md#perfect-accessibility)
-* [Battle-tested](frontity-features.md#battle-tested-framework)
-* [Serverless and horizontal scaling](frontity-features.md#serverless-and-horizontal-scaling)
-* [First class TypeScript support](frontity-features.md#first-class-typescript-support)
-* [Support for ES6 in modern browsers](frontity-features.md#support-for-es6-in-modern-browsers)
-* [Support for Wordpress.com & WordPress.org](frontity-features.md#support-for-wordpress-com-and-wordpress-org)
-* [Support for multiple sites with a single installation](frontity-features.md#support-for-multiple-sites-with-a-single-installation)
-* [Code Splitting](frontity-features.md#code-splitting)
-* [Smallest React bundle possible](frontity-features.md#smallest-react-bundle-possible)
-* [Ready for React Concurrent and Suspense](frontity-features.md#ready-for-react-concurrent-and-suspense)
+- [Zero setup development](frontity-features.md#zero-setup-development)
+- [Lightning-fast loading](frontity-features.md#lightning-fast-loading)
+- [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
+- [Server-side Rendering](frontity-features.md#server-side-rendering)
+- [Extensible](frontity-features.md#less-than-greater-than-extensible)
+- [Perfect accessibility](frontity-features.md#perfect-accessibility)
+- [Battle-tested](frontity-features.md#battle-tested-framework)
+- [Serverless and horizontal scaling](frontity-features.md#serverless-and-horizontal-scaling)
+- [First class TypeScript support](frontity-features.md#first-class-typescript-support)
+- [Support for ES6 in modern browsers](frontity-features.md#support-for-es6-in-modern-browsers)
+- [Support for Wordpress.com & WordPress.org](frontity-features.md#support-for-wordpress-com-and-wordpress-org)
+- [Support for multiple sites with a single installation](frontity-features.md#support-for-multiple-sites-with-a-single-installation)
+- [Code Splitting](frontity-features.md#code-splitting)
+- [Smallest React bundle possible](frontity-features.md#smallest-react-bundle-possible)
+- [Ready for React Concurrent and Suspense](frontity-features.md#ready-for-react-concurrent-and-suspense)
 
 ### Key differences from other React frameworks
 
@@ -172,7 +168,7 @@ Because of its dynamic approach, Frontity provides a great power and reliability
 
 In addition:
 
-* There is no need to learn GraphQL or the REST API. The data is available to you using Frontity's built-in State Manager.
-* Frontity can output HTML suitable for Google AMP with exactly the same React codebase.
+- There is no need to learn GraphQL or the REST API. The data is available to you using Frontity's built-in State Manager.
+- Frontity can output HTML suitable for Google AMP with exactly the same React codebase.
 
 If you still have any questions about Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
