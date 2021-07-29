@@ -80,40 +80,54 @@ We believe this JavaScript-based approach is gaining traction in the WordPress e
 
 ## Why Frontity?
 
-Going with Frontity in the stack React + WordPress means you get the best of WordPress and the best of React while the framework does the heavy lifting. There are several important benefits/reasons for using Frontity.
+Going with Frontity in the stack means you get the best of WordPress and the best of React while the framework does the heavy lifting. In addition to its feature set, there are other advantages and reasons why you might want to use Frontity.
 
 ### Benefits of using React and WordPress with Frontity
 
-#### The Developer Experience
+#### The developer experience
 
-Frontity makes your life easier through a zero setup framework and several tools and features, that typically require custom engineering, available out of the box.
+Frontity requires zero setup configuration, allows you to keep the simplicity of some of the most common WordPress workflows, and includes features that typically require custom engineering such as routing, caching, and integration with third-party services like Analytics (among others).
 
-#### The Extensibility
+On the other hand, because Frontity is based on React, it allows you to build great user experiences with all the tools and benefits you expect from this component-based library:
 
-Frontity framework helps minimize both development and maintenance times. The extensibility through packages and the ability to reuse them helps reduce the time and effort necessary to create and maintain a project.
+- It gives you the ability to create layouts and complex UIs using components and hooks which are highly reusable.
+- React's declarative code makes the code more predictable and easier to debug.
+- Having a single codebase means less code to maintain and a big advantage for performance.
 
-#### Easy to get started with
+The ease of getting started as well as the improved developer experience are some of the biggest benefits that you can gain from using Frontity, allowing you to save an amount of development time and resources.
 
-There is a small learning curve but even developers new to React can get up and running relatively quickly.
+#### The extensibility
 
-#### Strong performance-oriented approach
+Frontity has been designed to be extensible by default. Similar to how plugins work in WordPress, the framework provides a powerful and flexible package management interface that enables you to easily extend Frontity according to your project needs.
 
-Frontity’s infrastructure is designed to be as efficient and performant as possible. Strategies directly available with Frontity such as WordPress data normalization, lazy loading, prefetching or code splitting will have a positive impact on the performance and UX of your projects
+The ability to reuse [packages and themes](https://api.frontity.org/frontity-packages) across projects will also help you reduce both development and maintenance times.
 
-#### SEO optimized
+#### It has a strong performance-oriented approach
 
-Frontity is Search Engine Optimized. The SSR approach will generate HTML from your React code making your pages perfectly indexable by SEO engines. With Frontity you can have complete SEO control through some Frontity packages that will add support for WordPress SEO plugins.
+Frontity’s infrastructure is designed to be as efficient and performant as possible. There are different strategies directly available with Frontity (such as WordPress data normalization, lazy loading, pre-fetching, code splitting) which you can also use to impact positively both on the performance and the UX of your projects.
 
-#### The Editing Experience
+Head over to the [Performance section](../performance) to learn more.
 
-With WordPress the editing experience is great. Marketing teams can benefit from real-time content updates, preview support with Embedded Mode and much more.
+#### It’s SEO optimized
 
-#### The User Experience
+Frontity does Server Side Rendering. It uses [Isomorphic rendering](../isomorphic-react.md), you need a Node server to render the pages but this means the browser will get fully formed HTML for pages (ready to be indexed). This makes it optimized for search engines right out of the box.
 
-Users get meaningful content as quickly as possible. The Hydration process enables React to take control of the App so that subsequent pages load instantaneously. This is due to pre-fetching and other strategies employed by Frontity. Having pages load instantaneously helps to create a great User Experience.
+For more fine-grained SEO control, there are Frontity packages that add support for some of the most popular WordPress SEO plugins.
+
+#### The editing experience
+
+Marketing and content teams like tools that help them write, create, and manage pages easily. That's why they choose WordPress.
+
+Frontity allows them experience no interruption to their usual WordPress publishing workflow and get their work done easily without having to rely on a technical team.
+
+Teams can also benefit from real-time content updates (thanks to Frontity's dynamic architecture) and post preview support with Frontity's [Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode), which allows them to keep the preview mode as it currently works in WordPress. In addition, Frontity works great with Gutenberg, not only for creating new content areas but also for site-wide editing.
+
+#### The user experience
+
+With Frontity users get meaningful content as quickly as possible. The Hydration process enables React to take control of the app so that subsequent pages load instantaneously. This is due to pre-fetching and other strategies employed by the framework. Having pages load instantaneously helps to create a great user experience.
 
 {% hint style="info" %}
-[These diagrams](https://excalidraw.com/#json=6167540090798080,cvhnsErHXsqarOVT82YgLw) can help you understand how Frontity, the WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a great content creation, development and user experience) in both [Decoupled](../architecture/decoupled-mode.md) and [Embedded](../architecture/embedded-mode.md) Mode
+[These diagrams](https://excalidraw.com/#json=6167540090798080,cvhnsErHXsqarOVT82YgLw) can help you understand how Frontity, a WordPress + React stack and the proper performance strategies may improve the final performance of your project (besides having a great development, content creation, and user experience) in both [Decoupled](../architecture/decoupled-mode.md) and [Embedded](../architecture/embedded-mode.md) Mode.
 {% endhint %}
 
 ### Frontity features
