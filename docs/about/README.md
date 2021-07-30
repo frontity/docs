@@ -118,7 +118,7 @@ For more fine-grained SEO control, there are Frontity packages that add support 
 
 Marketing and content teams like tools that help them write, create, and manage pages easily. That's why they choose WordPress.
 
-Frontity allows them experience no interruption to their usual WordPress publishing workflow and get their work done easily without having to rely on a technical team.
+Frontity allows them to experience no interruption to their usual WordPress publishing workflow and get their work done easily without having to rely on a technical team.
 
 Teams can also benefit from real-time content updates (thanks to Frontity's dynamic architecture) and post preview support with Frontity's [Embedded Mode plugin](https://api.frontity.org/frontity-plugins/embedded-mode), which allows them to keep the preview mode as it currently works in WordPress. In addition, Frontity works great with Gutenberg, not only for creating new content areas but also for site-wide editing.
 
@@ -141,7 +141,6 @@ Here are the main ones:
 - [Instant in-app navigation](frontity-features.md#instant-in-app-navigation)
 - [Server-side Rendering](frontity-features.md#server-side-rendering)
 - [Extensible](frontity-features.md#less-than-greater-than-extensible)
-- [Perfect accessibility](frontity-features.md#perfect-accessibility)
 - [Battle-tested](frontity-features.md#battle-tested-framework)
 - [Serverless and horizontal scaling](frontity-features.md#serverless-and-horizontal-scaling)
 - [First class TypeScript support](frontity-features.md#first-class-typescript-support)
@@ -185,4 +184,6 @@ In addition:
 - There is no need to learn GraphQL or the REST API. The data is available to you using Frontity's built-in State Manager.
 - Frontity can output HTML suitable for Google AMP with exactly the same React codebase.
 
+{% hint style="info" %}
 If you still have any questions about Frontity, please check out the [**community forum**](https://community.frontity.org), which is packed full of answers and solutions to all sorts of Frontity questions. If you don't find what you're looking for, feel free to start a new post.
+{% endhint %}
