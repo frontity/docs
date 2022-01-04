@@ -178,7 +178,7 @@ See [this blog post](https://frontity.org/blog/connecting-gutenberg-and-frontity
 
 ### Elementor
 
-Getting Elementor content to appear as desired in a Frontity project is a bit clunkier and less elegant that working with Gutenberg content.
+Getting Elementor content to appear as desired in a Frontity project is a bit clunkier and less elegant than working with Gutenberg content.
 
 However, Elementor is an immensely popular page-builder plugin, so it's worth going over the steps needed to get Element content to render properly in a Frontity project.
 
