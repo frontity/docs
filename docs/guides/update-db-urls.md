@@ -46,7 +46,7 @@ Before running the commands below ensure that you have **a backup of your databa
 {% endhint %}
 
 ```sql
-UPDATE wp_options SET option_value = replace(option_value, 'https://www.domain.com', 'https://wp.domain.com') WHERE option_name = 'home' OR option_name = 'siteurl’;
+UPDATE wp_options SET option_value = replace(option_value, 'https://www.domain.com', 'https://wp.domain.com') WHERE option_name = 'home' OR option_name = 'siteurl';
 ```
 
 ```sql
