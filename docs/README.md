@@ -1,3 +1,9 @@
+⚠️ **Frontity Framework [is not under active development anymore.](https://frontity.org/blog/frontity-is-joining-automattic/)**
+
+**The team is now working on [the WordPress Interactivity API](https://make.wordpress.org/core/2024/03/04/interactivity-api-dev-note/). This unblocks the same UX Frontity framework enabled but directly in WordPress Core, fully compatible with the new Site Editor.**
+
+---
+
 # » Welcome to Frontity
 
 **👋** Hi! Welcome to the Frontity documentation.
